@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -244,6 +245,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -389,7 +391,13 @@
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801131918051_FirstEntity.cs" />
+    <Compile Include="Migrations\201801131918051_FirstEntity.Designer.cs">
+      <DependentUpon>201801131918051_FirstEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Entities\LoopedRegion.cs" />
+    <Compile Include="Models\EntitityModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -407,6 +415,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TripExplorer\Explore.aspx.cs">
+      <DependentUpon>Explore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TripExplorer\Explore.aspx.designer.cs">
+      <DependentUpon>Explore.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,6 +446,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801131725141_InitialCreate.resx">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801131918051_FirstEntity.resx">
+      <DependentUpon>201801131918051_FirstEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
