@@ -391,9 +391,9 @@
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801131918051_FirstEntity.cs" />
-    <Compile Include="Migrations\201801131918051_FirstEntity.Designer.cs">
-      <DependentUpon>201801131918051_FirstEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201801141052150_FirstEntity.cs" />
+    <Compile Include="Migrations\201801141052150_FirstEntity.Designer.cs">
+      <DependentUpon>201801141052150_FirstEntity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\LoopedRegion.cs" />
@@ -447,8 +447,8 @@
     <EmbeddedResource Include="Migrations\201801131725141_InitialCreate.resx">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801131918051_FirstEntity.resx">
-      <DependentUpon>201801131918051_FirstEntity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801141052150_FirstEntity.resx">
+      <DependentUpon>201801141052150_FirstEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

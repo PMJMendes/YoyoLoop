@@ -13,7 +13,7 @@ namespace MVP.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201801131918051_FirstEntity"; }
+            get { return "201801141052150_FirstEntity"; }
         }
         
         string IMigrationMetadata.Source

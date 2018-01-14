@@ -7,9 +7,9 @@ using System.Web;
 
 namespace MVP.Models
 {
-    public class EntitityModel : DbContext
+    public class EntitityModel : ApplicationDbContext
     {
-        public EntitityModel() : base("DefaultConnection")
+        public EntitityModel()
         {
 
         }
