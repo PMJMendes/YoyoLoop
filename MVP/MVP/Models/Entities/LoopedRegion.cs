@@ -7,7 +7,7 @@ namespace MVP.Models.Entities
 {
     public class LoopedRegion
     {
-        Guid Id { get; set; }
-        string Name { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
     }
 }
