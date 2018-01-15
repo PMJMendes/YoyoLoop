@@ -7,9 +7,9 @@ using System.Web;
 
 namespace MVP.Models
 {
-    public class EntitityModel : ApplicationDbContext
+    public class EntityModel : ApplicationDbContext
     {
-        public EntitityModel()
+        public EntityModel()
         {
 
         }
