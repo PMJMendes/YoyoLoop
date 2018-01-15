@@ -395,8 +395,18 @@
     <Compile Include="Migrations\201801141052150_FirstEntity.Designer.cs">
       <DependentUpon>201801141052150_FirstEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801151803053_InitialEntityCreation.cs" />
+    <Compile Include="Migrations\201801151803053_InitialEntityCreation.Designer.cs">
+      <DependentUpon>201801151803053_InitialEntityCreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Entities\AccessPoint.cs" />
+    <Compile Include="Models\Entities\AccessPointHost.cs" />
+    <Compile Include="Models\Entities\Driver.cs" />
     <Compile Include="Models\Entities\LoopedRegion.cs" />
+    <Compile Include="Models\Entities\Route.cs" />
+    <Compile Include="Models\Entities\Trip.cs" />
+    <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -449,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801141052150_FirstEntity.resx">
       <DependentUpon>201801141052150_FirstEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801151803053_InitialEntityCreation.resx">
+      <DependentUpon>201801151803053_InitialEntityCreation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
