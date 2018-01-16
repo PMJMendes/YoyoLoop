@@ -15,6 +15,12 @@ namespace MVP.Models
         }
 
         DbSet<LoopedRegion> LoopedRegion {get; set;}
+        DbSet<AccessPoint> AccessPoint { get; set; }
+        DbSet<AccessPointHost> AccessPointHost { get; set; }
+        DbSet<Route> Route { get; set; }
+        DbSet<Trip> Trip { get; set; }
+        DbSet<Vehicle> Vehicle { get; set; }
+        DbSet<Driver> Driver { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
