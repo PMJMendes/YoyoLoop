@@ -7,7 +7,10 @@ namespace MVP.Models.Entities
 {
     public class AccessPoint
     {
-        public Guid Id { get; set; }
+        public Guid AccessPointId { get; set; }
         public string Name { get; set; }
+
+        public LoopedRegion Region { get; set; }
+
     }
 }

@@ -7,13 +7,13 @@ namespace MVP.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialEntityCreation : IMigrationMetadata
+    public sealed partial class InitialDataModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialEntityCreation));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialDataModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801151803053_InitialEntityCreation"; }
+            get { return "201801171715308_InitialDataModel"; }
         }
         
         string IMigrationMetadata.Source

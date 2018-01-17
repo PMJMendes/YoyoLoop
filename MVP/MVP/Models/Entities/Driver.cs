@@ -7,7 +7,8 @@ namespace MVP.Models.Entities
 {
     public class Driver
     {
-        public Guid Id { get; set; }
+        public Guid DriverId { get; set; }
         public string Name { get; set; }
+
     }
 }

@@ -7,7 +7,15 @@ namespace MVP.Models.Entities
 {
     public class Route
     {
-        public Guid Id { get; set; }
+        public Guid RouteId { get; set; }
         public string Name { get; set; }
+
+        public LoopedRegion StartRegion { get; set; }
+        public LoopedRegion EndRegion { get; set; }
+
+        public TimeSpan MinStartTime { get; set; }
+        public TimeSpan MaxEndTime { get; set; }
+        public TimeSpan Duration { get; set; }
+
     }
 }
