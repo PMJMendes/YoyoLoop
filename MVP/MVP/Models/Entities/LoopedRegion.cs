@@ -11,10 +11,5 @@ namespace MVP.Models.Entities
         public string Name { get; set; }
 
         public ICollection<AccessPoint> AccessPoint { get; set; }
-
-        public static implicit operator LoopedRegion(Guid v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
