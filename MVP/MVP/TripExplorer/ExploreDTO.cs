@@ -1,4 +1,5 @@
-﻿using MVP.Models.Entities;
+﻿using System;
+using MVP.Models.Entities;
 using System.Collections.Generic;
 
 namespace MVP.TripExplorer
@@ -8,5 +9,9 @@ namespace MVP.TripExplorer
         public List<Route> Routes { get; set; }
 
         public Route SelectedRoute { get; set; }
+
+        public DateTime SelectedDate { get; set; }
+
+        public List<Trip> AvailableTrips { get; set; }
     }
 }

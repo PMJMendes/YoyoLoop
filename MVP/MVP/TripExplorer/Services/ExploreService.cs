@@ -21,6 +21,7 @@ namespace MVP.Services
 
         public void GetMoreData(ExploreDTO state)
         {
+
         }
     }
 }

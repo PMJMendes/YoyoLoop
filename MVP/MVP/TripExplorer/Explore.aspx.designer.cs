@@ -22,15 +22,6 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlStartRegion;
         
         /// <summary>
-        /// DropDownList2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
-        
-        /// <summary>
         /// DdlEndRegion control.
         /// </summary>
         /// <remarks>
@@ -40,30 +31,21 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlEndRegion;
         
         /// <summary>
-        /// DropDownList4 control.
+        /// DdlDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.Calendar DdlDate;
         
         /// <summary>
-        /// Calendar1 control.
+        /// DdlTripList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
-        
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView DdlTripList;
     }
 }

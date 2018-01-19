@@ -1,36 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Explore.aspx.cs" Inherits="MVP.TripExplorer.Explore" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+    
     <br />
     <br />
     From
     <asp:DropDownList ID="DdlStartRegion" runat="server" SelectMethod="DdlStartRegion_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartRegion_SelectedIndexChanged">
     </asp:DropDownList>
     &nbsp;&nbsp;
-    <asp:DropDownList ID="DropDownList2" runat="server">
-    </asp:DropDownList>
-    <br />
     To
     <asp:DropDownList ID="DdlEndRegion" runat="server" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndRegion_SelectedIndexChanged" SelectMethod="DdlEndRegion_GetData">
     </asp:DropDownList>
-    &nbsp;&nbsp;
-    <asp:DropDownList ID="DropDownList4" runat="server">
-    </asp:DropDownList>
-    <br />
-    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
-        <AlternatingRowStyle BackColor="#F7F7F7" />
-        <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-        <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <SortedAscendingCellStyle BackColor="#F4F4FD" />
-        <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-        <SortedDescendingCellStyle BackColor="#D8D8F0" />
-        <SortedDescendingHeaderStyle BackColor="#3E3277" />
+        <asp:Calendar ID="DdlDate" runat="server" AutoPostBack="True" OnSelectionChanged="DdlDate_SelectionChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
+        <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+        <NextPrevStyle VerticalAlign="Bottom" />
+        <OtherMonthDayStyle ForeColor="#808080" />
+        <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+        <SelectorStyle BackColor="#CCCCCC" />
+        <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+        <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+        <WeekendDayStyle BackColor="#FFFFCC" />
+    </asp:Calendar>
+    <br />
+    <asp:GridView ID="DdlTripList" runat="server">
     </asp:GridView>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
 </asp:Content>
