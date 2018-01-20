@@ -8,10 +8,11 @@ namespace MVP.TripExplorer
     {
         public List<Route> Routes { get; set; }
 
+        public DateTime SelectedDate { get; set; }
         public Route SelectedRoute { get; set; }
 
-        public DateTime SelectedDate { get; set; }
-
-        public List<Trip> AvailableTrips { get; set; }
+        public List<TimeSpan> DepartureTimes { get; set; }
+        public List<AccessPoint> SourceAccessPoints { get; set; }
+        public List<AccessPoint> DestinationAccessPoints { get; set; }
     }
 }

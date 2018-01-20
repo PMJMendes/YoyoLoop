@@ -3,6 +3,7 @@ using MVP.Models.Entities;
 using System;
 using System.Linq;
 using System.Web.UI.WebControls;
+using System.Collections.Generic;
 
 namespace MVP.TripExplorer
 {
@@ -49,6 +50,17 @@ namespace MVP.TripExplorer
             ).AsQueryable();
         }
 
+        public IQueryable<object> GvTripSlots_GetData()
+        {
+            return pageData.DepartureTimes.Where(dt => pageData.SelectedRoute != null).SelectMany(dt => pageData.SourceAccessPoints.SelectMany(sap => pageData.DestinationAccessPoints.Select(dap => new
+            {
+                DepartureTime = dt,
+                ArrivalTime = dt + pageData.SelectedRoute.Duration,
+                SourceAccessPoint = sap.Name,
+                DestinationAccessPoint = dap.Name
+            }))).AsQueryable();
+        }
+
         private void InitData()
         {
             pageData = null;
@@ -69,34 +81,12 @@ namespace MVP.TripExplorer
             pageData.SelectedRoute = pageData.Routes.Where(r => r.RouteId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
             pageData.SelectedDate = DdlDate.SelectedDate;
 
-            if (pageData.SelectedRoute != null)
-            {
-                service.GetMoreData(pageData);
-            }
-
             if (pageData.SelectedRoute != null && pageData.SelectedDate != null)
             {
-                //build list of available trips - put this as a method somewhere that makes sense - as Class Trip method?
-                pageData.AvailableTrips = null;
-
-                DateTime date = pageData.SelectedDate;
-                TimeSpan starttime = pageData.SelectedRoute.MinStartTime;
-                TimeSpan endtime = pageData.SelectedRoute.MaxEndTime - pageData.SelectedRoute.Duration;
-                TimeSpan interval = pageData.SelectedRoute.DepartureInterval;
-                
-                while (starttime < endtime)
-                {
-                    pageData.AvailableTrips.Add(new Trip() { StartTime = date.Add(starttime) }); // add remaining data later
-                    starttime += interval;
-                }
-
-                //end of available trip list builder
-
-                //Display trip list
-
-                DdlTripList.DataSource = pageData.AvailableTrips;
-                DdlTripList.DataBind();
+                service.GetAvailableTripSlots(pageData);
             }
+
+            GvTripSlots.DataBind();
         }
     }
 }

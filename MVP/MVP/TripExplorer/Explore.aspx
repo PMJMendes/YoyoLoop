@@ -24,7 +24,7 @@
         <WeekendDayStyle BackColor="#FFFFCC" />
     </asp:Calendar>
     <br />
-    <asp:GridView ID="DdlTripList" runat="server">
+    <asp:GridView ID="GvTripSlots" runat="server" DataKeyNames="DepartureTime,ArrivalTime,SourceAccessPoint,DestinationAccessPoint" EnablePersistedSelection="True" SelectMethod="GvTripSlots_GetData">
     </asp:GridView>
     <br />
     <br />
