@@ -7,7 +7,7 @@ namespace MVP.Models.Entities
 {
     public class AccessPointHost
     {
-        public Guid Id { get; set; }
+        public Guid AccessPointHostId { get; set; }
         public string Name { get; set; }
     }
 }

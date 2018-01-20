@@ -391,13 +391,9 @@
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801141052150_FirstEntity.cs" />
-    <Compile Include="Migrations\201801141052150_FirstEntity.Designer.cs">
-      <DependentUpon>201801141052150_FirstEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801151803053_InitialEntityCreation.cs" />
-    <Compile Include="Migrations\201801151803053_InitialEntityCreation.Designer.cs">
-      <DependentUpon>201801151803053_InitialEntityCreation.cs</DependentUpon>
+    <Compile Include="Migrations\201801200236263_InitialDataModel.cs" />
+    <Compile Include="Migrations\201801200236263_InitialDataModel.Designer.cs">
+      <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
@@ -410,6 +406,15 @@
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TripExplorer\Explore.aspx.cs">
+      <DependentUpon>Explore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TripExplorer\Explore.aspx.designer.cs">
+      <DependentUpon>Explore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TripExplorer\ExploreDTO.cs" />
+    <Compile Include="TripExplorer\Services\ExploreService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -425,13 +430,6 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="TripExplorer\Explore.aspx.cs">
-      <DependentUpon>Explore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TripExplorer\Explore.aspx.designer.cs">
-      <DependentUpon>Explore.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -457,11 +455,8 @@
     <EmbeddedResource Include="Migrations\201801131725141_InitialCreate.resx">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801141052150_FirstEntity.resx">
-      <DependentUpon>201801141052150_FirstEntity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801151803053_InitialEntityCreation.resx">
-      <DependentUpon>201801151803053_InitialEntityCreation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801200236263_InitialDataModel.resx">
+      <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
