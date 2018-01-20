@@ -51,10 +51,10 @@ namespace MVP.Migrations
                 c => new
                     {
                         RouteId = c.Guid(nullable: false),
-                        Name = c.String(),
                         MinStartTime = c.Time(nullable: false, precision: 6),
                         MaxEndTime = c.Time(nullable: false, precision: 6),
                         Duration = c.Time(nullable: false, precision: 6),
+                        DepartureInterval = c.Time(nullable: false, precision: 6),
                         EndRegion_LoopedRegionId = c.Guid(),
                         StartRegion_LoopedRegionId = c.Guid(),
                     })

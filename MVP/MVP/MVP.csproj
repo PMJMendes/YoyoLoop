@@ -391,13 +391,9 @@
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801171715308_InitialDataModel.cs" />
-    <Compile Include="Migrations\201801171715308_InitialDataModel.Designer.cs">
-      <DependentUpon>201801171715308_InitialDataModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801192225044_TripExplorer.cs" />
-    <Compile Include="Migrations\201801192225044_TripExplorer.Designer.cs">
-      <DependentUpon>201801192225044_TripExplorer.cs</DependentUpon>
+    <Compile Include="Migrations\201801200236263_InitialDataModel.cs" />
+    <Compile Include="Migrations\201801200236263_InitialDataModel.Designer.cs">
+      <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
@@ -459,11 +455,8 @@
     <EmbeddedResource Include="Migrations\201801131725141_InitialCreate.resx">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801171715308_InitialDataModel.resx">
-      <DependentUpon>201801171715308_InitialDataModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801192225044_TripExplorer.resx">
-      <DependentUpon>201801192225044_TripExplorer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801200236263_InitialDataModel.resx">
+      <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
