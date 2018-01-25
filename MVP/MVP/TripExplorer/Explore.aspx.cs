@@ -21,73 +21,42 @@ namespace MVP.TripExplorer
 
         protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DdlStartRegion.SelectedValue != null || DdlStartRegion.SelectedValue != Guid.Empty.ToString())
-            {
-                pageData.SourceRegion = pageData.Regions.Where(r => r.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
-                DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
-                DdlEndRegion.DataBind();
-                service.GetAccessPoints(pageData);
-                DdlStartAP.DataBind();
-            }
-            else
-            {
-                pageData.SourceRegion = null;
-                pageData.SelectedRoute = null;
-                pageData.SelectedSAP = null;
-            }
-            CheckRoute();
+            DdlEndRegion.DataBind();
+            DdlStartAP.DataBind();
+
+            CheckParams();
         }
 
         protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DdlEndRegion.SelectedValue != null || DdlEndRegion.SelectedValue != Guid.Empty.ToString())
-            {
-                pageData.DestinationRegion = pageData.Regions.Where(r => r.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
-                DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
-                service.GetAccessPoints(pageData);
-                DdlEndAP.DataBind();
-            }
-            else
-            {
-                pageData.DestinationRegion = null;
-                pageData.SelectedRoute = null;
-                pageData.SelectedDAP = null;
-            }
-            CheckRoute();
+            DdlEndAP.DataBind();
+
+            CheckParams();
         }
 
         protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DdlStartAP.SelectedValue == Guid.Empty.ToString()) pageData.SelectedSAP = null;
-            else pageData.SelectedSAP = pageData.SourceAccessPoints.Where(sap => sap.AccessPointId.ToString() == DdlStartAP.SelectedValue).FirstOrDefault();
-            CheckRoute();
+            CheckParams();
         }
 
         protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DdlEndAP.SelectedValue == Guid.Empty.ToString()) pageData.SelectedDAP = null;
-            else pageData.SelectedDAP = pageData.DestinationAccessPoints.Where(dap => dap.AccessPointId.ToString() == DdlEndAP.SelectedValue).FirstOrDefault();
-            CheckRoute();
+            CheckParams();
         }
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
         {
-            CheckRoute();
+            CheckParams();
+        }
+
+        protected void BtnSearch_Click(object sender, EventArgs e)
+        {
+            service.GetAvailableTripSlots(pageData);
+            GvTripSlots.DataBind();
         }
 
         public IQueryable<ListItem> DdlStartRegion_GetData()
         {
-            DdlStartRegion.Items.Clear();
-            DdlStartRegion.SelectedIndex = -1;
-            DdlStartRegion.SelectedValue = null;
-            DdlStartAP.Items.Clear();
-            DdlStartAP.SelectedIndex = -1;
-            DdlStartAP.SelectedValue = null;
-            pageData.SourceRegion = null;
-            pageData.SelectedRoute = null;
-            pageData.TripSlots.Clear();
-            GvTripSlots.DataBind();
-
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
                 pageData.Routes.Select(r => r.StartRegion).Distinct().
                 Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
@@ -96,58 +65,41 @@ namespace MVP.TripExplorer
 
         public IQueryable<ListItem> DdlEndRegion_GetData()
         {
-            DdlEndRegion.Items.Clear();
-            DdlEndRegion.SelectedIndex = -1;
-            DdlEndRegion.SelectedValue = null;
-            DdlEndAP.Items.Clear();
-            DdlEndAP.SelectedIndex = -1;
-            DdlEndAP.SelectedValue = null;
-            pageData.DestinationRegion = null;
-            pageData.SelectedRoute = null;
-            pageData.TripSlots.Clear();
-            GvTripSlots.DataBind();
-
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
                 pageData.Routes.Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).
-                Select(r => new ListItem(r.EndRegion.Name, r.EndRegion.LoopedRegionId.ToString()))
+                Select(r => new ListItem(r.EndRegion.Name, r.RouteId.ToString()))
             ).AsQueryable();
         }
 
         public IQueryable<ListItem> DdlStartAP_GetData()
         {
-            DdlStartAP.Items.Clear();
-            DdlStartAP.SelectedIndex = -1;
-            DdlStartAP.SelectedValue = null;
-            pageData.SelectedSAP = null;
-
-            return new[] { new ListItem("Any", Guid.Empty.ToString()) }.Concat(
-                pageData.SourceAccessPoints.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString()))
+            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
+                GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
             ).AsQueryable();
         }
 
         public IQueryable<ListItem> DdlEndAP_GetData()
         {
-            DdlEndAP.Items.Clear();
-            DdlEndAP.SelectedIndex = -1;
-            DdlEndAP.SelectedValue = null;
-            pageData.SelectedDAP = null;
-
-            return new[] { new ListItem("Any", Guid.Empty.ToString()) }.Concat(
-                pageData.DestinationAccessPoints.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString()))
+            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
+                GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
             ).AsQueryable();
         }
 
         public IQueryable<object> GvTripSlots_GetData()
         {
-            return pageData.TripSlots.Select(ts => new
+            var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
+            var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
+
+            return pageData.DepartureTimes.Where(dt => pageData.SelectedRoute != null).
+                SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new
             {
-                Departure = ts.Departure,
-                SourceRegion = ts.SourceRegion.Name,
-                SourceAccessPoint = ts.SourceAccessPoint.Name,
-                DestinationRegion = ts.DestinationRegion.Name,
-                DestinationAccessPoint = ts.DestinationAccessPoint.Name,
-                Arrival = ts.Arrival
-            }).AsQueryable();
+                Departure = dt,
+                SourceRegion = sap.Region.Name,
+                SourceAccessPoint = sap.Name,
+                DestinationRegion = dap.Region.Name,
+                DestinationAccessPoint = dap.Name,
+                Arrival = dt + pageData.SelectedRoute.Duration
+            }))).AsQueryable();
         }
 
         private void InitData()
@@ -157,34 +109,42 @@ namespace MVP.TripExplorer
             {
                 pageData = (ExploreDTO)Session["explore.data"];
             }
-
-            if (pageData == null)
+            else
             {
-                pageData = service.GetInitialData();
-                pageData.SelectedSAP = null;
-                pageData.SelectedDAP = null;
-                Session["explore.data"] = pageData;
                 DateTime dt = DateTime.Today.AddDays(1);
                 CalDate.VisibleDate = dt;
                 CalDate.SelectedDate = dt;
             }
+
+            if (pageData == null)
+            {
+                pageData = service.GetInitialData();
+                Session["explore.data"] = pageData;
+            }
         }
 
-        private void CheckRoute()
+        private void CheckParams()
         {
-            if (pageData.SourceRegion != null && pageData.DestinationRegion != null)
-            {
-                pageData.SelectedRoute = pageData.Routes.Where(s => s.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).
-                                                         Where(e => e.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
-            }
+            pageData.SelectedRoute = pageData.Routes.Where(r => r.RouteId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
+
+            pageData.SelectedSAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
+
+            pageData.SelectedDAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
 
             pageData.SelectedDate = CalDate.SelectedDate;
+        }
 
-            if (pageData.SelectedRoute != null)
-            {
-                service.GetAvailableTripSlots(pageData);
-                GvTripSlots.DataBind();
-            }
+        private IEnumerable<AccessPoint> GetPossibleSAPs()
+        {
+            return pageData.Routes.Select(r => r.StartRegion).
+                Where(lr => lr.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).
+                FirstOrDefault()?.AccessPoints;
+        }
+
+        private IEnumerable<AccessPoint> GetPossibleDAPs()
+        {
+            return pageData.Routes.Where(r => r.RouteId.ToString() == DdlEndRegion.SelectedValue).
+                FirstOrDefault()?.EndRegion?.AccessPoints;
         }
     }
 }

@@ -16,97 +16,42 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
-                result.Routes = model.Route.Include(r => r.StartRegion).Include(r => r.EndRegion).ToList();
-                result.Regions = model.LoopedRegion.ToList();
+                result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints).Include(r => r.EndRegion.AccessPoints).ToList();
             }
 
-            //Initialize collections that will be needed later, to avoid Null Pointer Exceptions
-            result.SourceRegion = new LoopedRegion();
-            result.DestinationRegion = new LoopedRegion();
-            result.SelectedSAP = new AccessPoint();
-            result.SelectedDAP = new AccessPoint();
-            result.SourceAccessPoints = new List<AccessPoint>();
-            result.DestinationAccessPoints = new List<AccessPoint>();
-            result.TripSlots = new List<ExploreDTO.TripSlot>();
+            result.DepartureTimes = new List<TimeSpan>();
 
             return result;
         }
 
-        public void GetAccessPoints (ExploreDTO state)
+        public void GetAvailableTripSlots(ExploreDTO state)
         {
-            using (var model = new EntityModel())
+            if (state.SelectedRoute == null)
             {
-                if(state.SourceRegion != null) state.SourceAccessPoints = model.AccessPoint.Where(ap => ap.Region.LoopedRegionId == state.SourceRegion.LoopedRegionId).ToList();
-                if(state.DestinationRegion != null) state.DestinationAccessPoints = model.AccessPoint.Where(ap => ap.Region.LoopedRegionId == state.DestinationRegion.LoopedRegionId).ToList();
+                return;
+            }
+
+            TimeSpan starttime = state.SelectedRoute.MinStartTime;
+            TimeSpan endtime = state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
+            TimeSpan interval = state.SelectedRoute.DepartureInterval;
+
+            state.DepartureTimes = new List<TimeSpan>();
+
+            while (starttime < endtime)
+            {
+                if (CheckAvailable(state, starttime))
+                {
+                    state.DepartureTimes.Add(starttime);
+                }
+
+                starttime += interval;
             }
         }
 
-        public void GetAvailableTripSlots(ExploreDTO state)
+        private bool CheckAvailable(ExploreDTO state, TimeSpan starttime)
         {
-            if (state.SelectedRoute != null && state.SelectedDate != null)
-            {
-                TimeSpan starttime = state.SelectedRoute.MinStartTime;
-                TimeSpan endtime = state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
-                TimeSpan interval = state.SelectedRoute.DepartureInterval;
-
-                state.TripSlots = new List<ExploreDTO.TripSlot>();
-
-                while (starttime < endtime)
-                {
-                    if(state.SelectedSAP == null)
-                    {
-                        foreach (AccessPoint sap in state.SourceAccessPoints)
-                        {
-                            if(state.SelectedDAP == null)
-                            {
-                                foreach (AccessPoint dap in state.DestinationAccessPoints)
-                                {
-                                    state.TripSlots.Add(new ExploreDTO.TripSlot(state.SelectedDate + starttime,
-                                                                                state.SourceRegion,
-                                                                                state.DestinationRegion,
-                                                                                sap,
-                                                                                dap,
-                                                                                state.SelectedDate + starttime + state.SelectedRoute.Duration));
-                                }
-                            }
-                            else
-                            {
-                                state.TripSlots.Add(new ExploreDTO.TripSlot(state.SelectedDate + starttime,
-                                                                            state.SourceRegion,
-                                                                            state.DestinationRegion,
-                                                                            sap,
-                                                                            state.SelectedDAP,
-                                                                            state.SelectedDate + starttime + state.SelectedRoute.Duration));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if(state.SelectedDAP == null)
-                        {
-                            foreach (AccessPoint dap in state.DestinationAccessPoints)
-                            {
-                                state.TripSlots.Add(new ExploreDTO.TripSlot(state.SelectedDate + starttime,
-                                                                            state.SourceRegion,
-                                                                            state.DestinationRegion,
-                                                                            state.SelectedSAP,
-                                                                            dap,
-                                                                            state.SelectedDate + starttime + state.SelectedRoute.Duration));
-                            }
-                        }
-                        else
-                        {
-                            state.TripSlots.Add(new ExploreDTO.TripSlot(state.SelectedDate + starttime,
-                                                                state.SourceRegion,
-                                                                state.DestinationRegion,
-                                                                state.SelectedSAP,
-                                                                state.SelectedDAP,
-                                                                state.SelectedDate + starttime + state.SelectedRoute.Duration));
-                        }
-                    }
-                    starttime += interval;
-                }
-            }
+            //This is where we check whether we have an available car
+            return true;
         }
     }
 }

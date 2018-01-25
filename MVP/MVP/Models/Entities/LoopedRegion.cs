@@ -10,6 +10,6 @@ namespace MVP.Models.Entities
         public Guid LoopedRegionId { get; set; }
         public string Name { get; set; }
 
-        public ICollection<AccessPoint> AccessPoint { get; set; }
+        public ICollection<AccessPoint> AccessPoints { get; set; }
     }
 }
