@@ -13,6 +13,6 @@ namespace MVP.TripExplorer
         public AccessPoint SelectedSAP { get; set; }
         public AccessPoint SelectedDAP { get; set; }
 
-        public List<TimeSpan> DepartureTimes { get; set; }
+        public List<DateTime> Departure { get; set; }
     }
 }

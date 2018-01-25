@@ -19,7 +19,7 @@ namespace MVP.Services
                 result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints).Include(r => r.EndRegion.AccessPoints).ToList();
             }
 
-            result.DepartureTimes = new List<TimeSpan>();
+            result.Departure = new List<DateTime>();
 
             return result;
         }
@@ -31,24 +31,24 @@ namespace MVP.Services
                 return;
             }
 
-            TimeSpan starttime = state.SelectedRoute.MinStartTime;
-            TimeSpan endtime = state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
+            DateTime starttime = state.SelectedDate + state.SelectedRoute.MinStartTime;
+            DateTime endtime = state.SelectedDate + state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
             TimeSpan interval = state.SelectedRoute.DepartureInterval;
 
-            state.DepartureTimes = new List<TimeSpan>();
+            state.Departure = new List<DateTime>();
 
             while (starttime < endtime)
             {
                 if (CheckAvailable(state, starttime))
                 {
-                    state.DepartureTimes.Add(starttime);
+                    state.Departure.Add(starttime);
                 }
 
                 starttime += interval;
             }
         }
 
-        private bool CheckAvailable(ExploreDTO state, TimeSpan starttime)
+        private bool CheckAvailable(ExploreDTO state, DateTime starttime)
         {
             //This is where we check whether we have an available car
             return true;

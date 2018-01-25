@@ -90,7 +90,7 @@ namespace MVP.TripExplorer
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
 
-            return pageData.DepartureTimes.Where(dt => pageData.SelectedRoute != null).
+            return pageData.Departure.Where(dt => pageData.SelectedRoute != null).
                 SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new
             {
                 Departure = dt,
