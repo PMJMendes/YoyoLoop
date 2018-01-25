@@ -66,8 +66,8 @@ namespace MVP.TripExplorer
         public IQueryable<ListItem> DdlEndRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                pageData.Routes.Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).
-                Select(r => new ListItem(r.EndRegion.Name, r.RouteId.ToString()))
+                GetPossibleRoutes().Select(r => r.EndRegion).Distinct().
+                Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
             ).AsQueryable();
         }
 
@@ -125,7 +125,7 @@ namespace MVP.TripExplorer
 
         private void CheckParams()
         {
-            pageData.SelectedRoute = pageData.Routes.Where(r => r.RouteId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
+            pageData.SelectedRoute = GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
 
             pageData.SelectedSAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
 
@@ -134,17 +134,19 @@ namespace MVP.TripExplorer
             pageData.SelectedDate = CalDate.SelectedDate;
         }
 
+        private IEnumerable<Route> GetPossibleRoutes()
+        {
+            return pageData.Routes.Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue);
+        }
+
         private IEnumerable<AccessPoint> GetPossibleSAPs()
         {
-            return pageData.Routes.Select(r => r.StartRegion).
-                Where(lr => lr.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).
-                FirstOrDefault()?.AccessPoints;
+            return GetPossibleRoutes().Select(r => r.StartRegion).Distinct().FirstOrDefault()?.AccessPoints;
         }
 
         private IEnumerable<AccessPoint> GetPossibleDAPs()
         {
-            return pageData.Routes.Where(r => r.RouteId.ToString() == DdlEndRegion.SelectedValue).
-                FirstOrDefault()?.EndRegion?.AccessPoints;
+            return GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault()?.EndRegion?.AccessPoints;
         }
     }
 }
