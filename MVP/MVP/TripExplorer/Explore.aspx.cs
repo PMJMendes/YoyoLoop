@@ -55,37 +55,58 @@ namespace MVP.TripExplorer
             GvTripSlots.DataBind();
         }
 
-        public IQueryable<ListItem> DdlStartRegion_GetData()
+        public IEnumerable<ListItem> DdlStartRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
                 pageData.Routes.Select(r => r.StartRegion).Distinct().
                 Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-            ).AsQueryable();
+            );
         }
 
-        public IQueryable<ListItem> DdlEndRegion_GetData()
+        public IEnumerable<ListItem> DdlEndRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
                 GetPossibleRoutes().Select(r => r.EndRegion).Distinct().
                 Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-            ).AsQueryable();
+            );
         }
 
-        public IQueryable<ListItem> DdlStartAP_GetData()
+        public IEnumerable<ListItem> DdlStartAP_GetData()
         {
             return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
                 GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
-            ).AsQueryable();
+            );
         }
 
-        public IQueryable<ListItem> DdlEndAP_GetData()
+        public IEnumerable<ListItem> DdlEndAP_GetData()
         {
             return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
                 GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
-            ).AsQueryable();
+            );
         }
 
-        public IQueryable<object> GvTripSlots_GetData()
+        public IEnumerable<TimeSpan> TimeThingie_GetData()
+        {
+            var route = pageData.SelectedRoute;
+
+            if (route == null)
+            {
+                yield break;
+            }
+
+            TimeSpan starttime = route.MinStartTime;
+            TimeSpan endtime = route.MaxEndTime - route.Duration;
+            TimeSpan interval = route.DepartureInterval;
+
+            while (starttime <= endtime)
+            {
+                yield return starttime;
+
+                starttime += interval;
+            }
+        }
+
+        public IEnumerable<object> GvTripSlots_GetData()
         {
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
@@ -99,7 +120,7 @@ namespace MVP.TripExplorer
                 DestinationRegion = dap.Region.Name,
                 DestinationAccessPoint = dap.Name,
                 Arrival = dt + pageData.SelectedRoute.Duration
-            }))).AsQueryable();
+            })));
         }
 
         private void InitData()
