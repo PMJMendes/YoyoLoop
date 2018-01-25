@@ -22,6 +22,15 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlStartRegion;
         
         /// <summary>
+        /// DdlStartAP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DdlStartAP;
+        
+        /// <summary>
         /// DdlEndRegion control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,22 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlEndRegion;
         
         /// <summary>
-        /// DdlDate control.
+        /// DdlEndAP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar DdlDate;
+        protected global::System.Web.UI.WebControls.DropDownList DdlEndAP;
+        
+        /// <summary>
+        /// CalDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalDate;
         
         /// <summary>
         /// GvTripSlots control.
