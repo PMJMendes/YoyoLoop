@@ -120,4 +120,7 @@
   <data name="AnyPlace" xml:space="preserve">
     <value>Qualquer Sítio</value>
   </data>
+  <data name="AnyTime" xml:space="preserve">
+    <value>Qualquer Hora</value>
+  </data>
 </root>

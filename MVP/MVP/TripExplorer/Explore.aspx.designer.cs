@@ -58,6 +58,15 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.Calendar CalDate;
         
         /// <summary>
+        /// DdlTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DdlTime;
+        
+        /// <summary>
         /// BtnSearch control.
         /// </summary>
         /// <remarks>

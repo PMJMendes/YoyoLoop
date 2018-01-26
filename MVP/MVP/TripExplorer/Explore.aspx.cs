@@ -21,6 +21,8 @@ namespace MVP.TripExplorer
 
         protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(DdlStartRegion.SelectedValue != Guid.Empty.ToString()) DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
+
             DdlEndRegion.DataBind();
             DdlStartAP.DataBind();
 
@@ -29,9 +31,13 @@ namespace MVP.TripExplorer
 
         protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (DdlEndRegion.SelectedValue != Guid.Empty.ToString()) DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
+
             DdlEndAP.DataBind();
 
             CheckParams();
+            DdlTime.DataBind(); //needs CheckParams to set the selected route
+
         }
 
         protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,6 +51,11 @@ namespace MVP.TripExplorer
         }
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
+        {
+            CheckParams();
+        }
+
+        protected void DdlTime_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckParams();
         }
@@ -85,8 +96,10 @@ namespace MVP.TripExplorer
             );
         }
 
-        public IEnumerable<TimeSpan> TimeThingie_GetData()
+        public IEnumerable<String> DdlTime_GetData()
         {
+            yield return Properties.Strings.AnyTime;
+
             var route = pageData.SelectedRoute;
 
             if (route == null)
@@ -100,7 +113,7 @@ namespace MVP.TripExplorer
 
             while (starttime <= endtime)
             {
-                yield return starttime;
+                yield return starttime.ToString("hh\\:mm");
 
                 starttime += interval;
             }
@@ -153,6 +166,9 @@ namespace MVP.TripExplorer
             pageData.SelectedDAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
 
             pageData.SelectedDate = CalDate.SelectedDate;
+
+            if (DdlTime.SelectedIndex == 0) pageData.SelectedTime = TimeSpan.Zero;
+            else pageData.SelectedTime = TimeSpan.Parse(DdlTime.SelectedValue);
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

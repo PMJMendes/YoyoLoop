@@ -37,7 +37,11 @@ namespace MVP.Services
 
             state.Departure = new List<DateTime>();
 
-            while (starttime < endtime)
+            if(state.SelectedTime != TimeSpan.Zero)
+            {
+                if (CheckAvailable(state, state.SelectedDate + state.SelectedTime)) state.Departure.Add(state.SelectedDate + state.SelectedTime);
+            }
+            else while (starttime <= endtime)
             {
                 if (CheckAvailable(state, starttime))
                 {
@@ -45,6 +49,11 @@ namespace MVP.Services
                 }
 
                 starttime += interval;
+            }
+
+            if(state.Departure.Count() == 0)
+            {
+                // Oops, no trips with selected criteria; Show alternatives.
             }
         }
 
