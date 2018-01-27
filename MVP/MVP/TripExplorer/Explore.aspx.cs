@@ -167,8 +167,14 @@ namespace MVP.TripExplorer
 
             pageData.SelectedDate = CalDate.SelectedDate;
 
-            if (DdlTime.SelectedIndex == 0) pageData.SelectedTime = TimeSpan.Zero;
-            else pageData.SelectedTime = TimeSpan.Parse(DdlTime.SelectedValue);
+            if (DdlTime.SelectedIndex == 0)
+            {
+                pageData.SelectedTime = new TimeSpan(-1);
+            }
+            else
+            {
+                pageData.SelectedTime = TimeSpan.Parse(DdlTime.SelectedValue);
+            }
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

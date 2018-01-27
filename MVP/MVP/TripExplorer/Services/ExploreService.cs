@@ -37,18 +37,20 @@ namespace MVP.Services
 
             state.Departure = new List<DateTime>();
 
-            if(state.SelectedTime != TimeSpan.Zero)
+            if (state.SelectedTime >= TimeSpan.Zero)
             {
                 if (CheckAvailable(state, state.SelectedDate + state.SelectedTime)) state.Departure.Add(state.SelectedDate + state.SelectedTime);
             }
-            else while (starttime <= endtime)
+            else
             {
-                if (CheckAvailable(state, starttime))
+                while (starttime <= endtime)
                 {
-                    state.Departure.Add(starttime);
+                    if (CheckAvailable(state, starttime))
+                    {
+                        state.Departure.Add(starttime);
+                    }
+                    starttime += interval;
                 }
-
-                starttime += interval;
             }
 
             if(state.Departure.Count() == 0)
