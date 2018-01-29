@@ -1,4 +1,5 @@
 ﻿using MVP.Services;
+using MVP.Models;
 using MVP.Models.Entities;
 using System;
 using System.Linq;
@@ -20,45 +21,125 @@ namespace MVP.TripExplorer
 
         protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (DdlStartRegion.SelectedValue != Guid.Empty.ToString())
+            {
+                DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
+            }
+
             DdlEndRegion.DataBind();
-            CheckRoute();
+            DdlStartAP.DataBind();
+
+            CheckParams();
         }
 
         protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckRoute();
+            if (DdlEndRegion.SelectedValue != Guid.Empty.ToString())
+            {
+                DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
+            }
+
+            DdlEndAP.DataBind();
+
+            CheckParams();
+            DdlTime.DataBind(); //needs CheckParams to set the selected route
+
         }
 
-        protected void DdlDate_SelectionChanged(object sender, EventArgs e)
+        protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckRoute();
+            CheckParams();
         }
-        
-        public IQueryable<ListItem> DdlStartRegion_GetData()
+
+        protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckParams();
+        }
+
+        protected void CalDate_SelectionChanged(object sender, EventArgs e)
+        {
+            CheckParams();
+        }
+
+        protected void DdlTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckParams();
+        }
+
+        protected void BtnSearch_Click(object sender, EventArgs e)
+        {
+            service.GetAvailableTripSlots(pageData);
+            GvTripSlots.DataBind();
+        }
+
+        public IEnumerable<ListItem> DdlStartRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
                 pageData.Routes.Select(r => r.StartRegion).Distinct().
                 Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-            ).AsQueryable();
+            );
         }
 
-        public IQueryable<ListItem> DdlEndRegion_GetData()
+        public IEnumerable<ListItem> DdlEndRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                pageData.Routes.Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).
-                Select(r => new ListItem(r.EndRegion.Name, r.RouteId.ToString()))
-            ).AsQueryable();
+                GetPossibleRoutes().Select(r => r.EndRegion).Distinct().
+                Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
+            );
         }
 
-        public IQueryable<object> GvTripSlots_GetData()
+        public IEnumerable<ListItem> DdlStartAP_GetData()
         {
-            return pageData.DepartureTimes.Where(dt => pageData.SelectedRoute != null).SelectMany(dt => pageData.SourceAccessPoints.SelectMany(sap => pageData.DestinationAccessPoints.Select(dap => new
+            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
+                GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
+            );
+        }
+
+        public IEnumerable<ListItem> DdlEndAP_GetData()
+        {
+            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
+                GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
+            );
+        }
+
+        public IEnumerable<String> DdlTime_GetData()
+        {
+            yield return Properties.Strings.AnyTime;
+
+            var route = pageData.SelectedRoute;
+
+            if (route == null)
             {
-                DepartureTime = dt,
-                ArrivalTime = dt + pageData.SelectedRoute.Duration,
+                yield break;
+            }
+
+            TimeSpan starttime = route.MinStartTime;
+            TimeSpan endtime = route.MaxEndTime - route.Duration;
+            TimeSpan interval = route.DepartureInterval;
+
+            while (starttime <= endtime)
+            {
+                yield return starttime.ToString("hh\\:mm");
+
+                starttime += interval;
+            }
+        }
+
+        public IEnumerable<object> GvTripSlots_GetData()
+        {
+            var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
+            var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
+
+            return pageData.Departure.Where(dt => pageData.SelectedRoute != null).
+                SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new
+            {
+                Departure = dt,
+                SourceRegion = sap.Region.Name,
                 SourceAccessPoint = sap.Name,
-                DestinationAccessPoint = dap.Name
-            }))).AsQueryable();
+                DestinationRegion = dap.Region.Name,
+                DestinationAccessPoint = dap.Name,
+                Arrival = dt + pageData.SelectedRoute.Duration
+            })));
         }
 
         private void InitData()
@@ -68,6 +149,12 @@ namespace MVP.TripExplorer
             {
                 pageData = (ExploreDTO)Session["explore.data"];
             }
+            else
+            {
+                DateTime dt = DateTime.Today.AddDays(1);
+                CalDate.VisibleDate = dt;
+                CalDate.SelectedDate = dt;
+            }
 
             if (pageData == null)
             {
@@ -76,17 +163,39 @@ namespace MVP.TripExplorer
             }
         }
 
-        private void CheckRoute()
+        private void CheckParams()
         {
-            pageData.SelectedRoute = pageData.Routes.Where(r => r.RouteId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
-            pageData.SelectedDate = DdlDate.SelectedDate;
+            pageData.SelectedRoute = GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
 
-            if (pageData.SelectedRoute != null && pageData.SelectedDate != null)
+            pageData.SelectedSAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
+
+            pageData.SelectedDAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
+
+            pageData.SelectedDate = CalDate.SelectedDate;
+
+            if (DdlTime.SelectedIndex == 0)
             {
-                service.GetAvailableTripSlots(pageData);
+                pageData.SelectedTime = new TimeSpan(-1);
             }
+            else
+            {
+                pageData.SelectedTime = TimeSpan.Parse(DdlTime.SelectedValue);
+            }
+        }
 
-            GvTripSlots.DataBind();
+        private IEnumerable<Route> GetPossibleRoutes()
+        {
+            return pageData.Routes.Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue);
+        }
+
+        private IEnumerable<AccessPoint> GetPossibleSAPs()
+        {
+            return GetPossibleRoutes().Select(r => r.StartRegion).Distinct().FirstOrDefault()?.AccessPoints;
+        }
+
+        private IEnumerable<AccessPoint> GetPossibleDAPs()
+        {
+            return GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault()?.EndRegion?.AccessPoints;
         }
     }
 }

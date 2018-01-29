@@ -10,9 +10,10 @@ namespace MVP.TripExplorer
 
         public DateTime SelectedDate { get; set; }
         public Route SelectedRoute { get; set; }
+        public AccessPoint SelectedSAP { get; set; }
+        public AccessPoint SelectedDAP { get; set; }
+        public TimeSpan SelectedTime { get; set; }
 
-        public List<TimeSpan> DepartureTimes { get; set; }
-        public List<AccessPoint> SourceAccessPoints { get; set; }
-        public List<AccessPoint> DestinationAccessPoints { get; set; }
+        public List<DateTime> Departure { get; set; }
     }
 }

@@ -16,38 +16,56 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
-                result.Routes = model.Route.Include(r => r.StartRegion).Include(r => r.EndRegion).ToList();
+                result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints).Include(r => r.EndRegion.AccessPoints).ToList();
             }
 
-            //Initialize collections that will be needed later, to avoid Null Pointer Exceptions
-            result.DepartureTimes = new List<TimeSpan>();
-            result.SourceAccessPoints = new List<AccessPoint>();
-            result.DestinationAccessPoints = new List<AccessPoint>();
+            result.Departure = new List<DateTime>();
 
             return result;
         }
 
         public void GetAvailableTripSlots(ExploreDTO state)
         {
-            if (state.SelectedRoute != null && state.SelectedDate != null)
+            if (state.SelectedRoute == null)
             {
-                TimeSpan starttime = state.SelectedRoute.MinStartTime;
-                TimeSpan endtime = state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
-                TimeSpan interval = state.SelectedRoute.DepartureInterval;
+                return;
+            }
 
-                state.DepartureTimes = new List<TimeSpan>();
-                while (starttime < endtime)
-                {
-                    state.DepartureTimes.Add(starttime); // add remaining data later
-                    starttime += interval;
-                }
+            DateTime starttime = state.SelectedDate + state.SelectedRoute.MinStartTime;
+            DateTime endtime = state.SelectedDate + state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
+            TimeSpan interval = state.SelectedRoute.DepartureInterval;
 
-                using (var model = new EntityModel())
+            state.Departure = new List<DateTime>();
+
+            if (state.SelectedTime >= TimeSpan.Zero)
+            {
+                if (CheckAvailable(state, state.SelectedDate + state.SelectedTime))
                 {
-                    state.SourceAccessPoints = model.AccessPoint.Where(ap => ap.Region.LoopedRegionId == state.SelectedRoute.StartRegion.LoopedRegionId).ToList();
-                    state.DestinationAccessPoints = model.AccessPoint.Where(ap => ap.Region.LoopedRegionId == state.SelectedRoute.EndRegion.LoopedRegionId).ToList();
+                    state.Departure.Add(state.SelectedDate + state.SelectedTime);
                 }
             }
+            else
+            {
+                while (starttime <= endtime)
+                {
+                    if (CheckAvailable(state, starttime))
+                    {
+                        state.Departure.Add(starttime);
+                    }
+                    starttime += interval;
+                }
+            }
+
+            if(state.Departure.Count() == 0)
+            {
+                // Oops, no trips with selected criteria; Show alternatives.
+            }
+        }
+
+        private bool CheckAvailable(ExploreDTO state, DateTime starttime)
+        {
+            //This is where we check whether we have an available car
+            return true;
         }
     }
 }
