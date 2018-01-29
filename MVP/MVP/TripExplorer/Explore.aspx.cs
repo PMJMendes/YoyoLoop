@@ -21,7 +21,10 @@ namespace MVP.TripExplorer
 
         protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(DdlStartRegion.SelectedValue != Guid.Empty.ToString()) DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
+            if (DdlStartRegion.SelectedValue != Guid.Empty.ToString())
+            {
+                DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
+            }
 
             DdlEndRegion.DataBind();
             DdlStartAP.DataBind();
@@ -31,7 +34,10 @@ namespace MVP.TripExplorer
 
         protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DdlEndRegion.SelectedValue != Guid.Empty.ToString()) DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
+            if (DdlEndRegion.SelectedValue != Guid.Empty.ToString())
+            {
+                DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
+            }
 
             DdlEndAP.DataBind();
 

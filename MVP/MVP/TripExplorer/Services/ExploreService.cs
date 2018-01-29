@@ -39,7 +39,10 @@ namespace MVP.Services
 
             if (state.SelectedTime >= TimeSpan.Zero)
             {
-                if (CheckAvailable(state, state.SelectedDate + state.SelectedTime)) state.Departure.Add(state.SelectedDate + state.SelectedTime);
+                if (CheckAvailable(state, state.SelectedDate + state.SelectedTime))
+                {
+                    state.Departure.Add(state.SelectedDate + state.SelectedTime);
+                }
             }
             else
             {
