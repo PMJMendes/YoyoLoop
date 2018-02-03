@@ -42,6 +42,19 @@
         <td style="vertical-align:top">
             <asp:DropDownList ID="DdlTime" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlTime_SelectedIndexChanged" SelectMethod="DdlTime_GetData">
             </asp:DropDownList></td>
+        <td style="width:20px"></td>
+
+        <%-- Debug labels --%>
+        <td style="vertical-align:top">
+            <asp:Label ID="LbDeparture" runat="server"></asp:Label><br />
+            <asp:Label ID="LbSourceRegion" runat="server"></asp:Label><br />
+            <asp:Label ID="LbSourceAccessPoint" runat="server"></asp:Label><br />
+            <asp:Label ID="LbDestinationRegion" runat="server"></asp:Label><br />
+            <asp:Label ID="LbDestinationAccessPoint" runat="server"></asp:Label><br />
+            <asp:Label ID="LbArrival" runat="server"></asp:Label>
+        </td>
+
+
     </tr>
     </table>
     <br />
@@ -50,7 +63,16 @@
     </p>
     <br />
     <br />
-    <asp:GridView ID="GvTripSlots" runat="server" EnablePersistedSelection="True" DataKeyNames="Departure,SourceRegion,SourceAccessPoint,DestinationRegion,DestinationAccessPoint,Arrival" SelectMethod="GvTripSlots_GetData">
+    <asp:GridView ID="GvTripSlots" runat="server" AutoGenerateColumns="false" SelectMethod="GvTripSlots_GetData" OnRowCommand="GvTripSlots_RowCommand">
+        <Columns>
+            <asp:BoundField DataField="Departure" HeaderText="Departure" />
+            <asp:BoundField DataField="SourceRegion" HeaderText="Origin" />
+            <asp:BoundField DataField="SourceAccessPoint" HeaderText="Origin AP" />
+            <asp:BoundField DataField="DestinationRegion" HeaderText="Destination" />
+            <asp:BoundField DataField="DestinationAccessPoint" HeaderText="Destination AP" />
+            <asp:BoundField DataField="Arrival" HeaderText="Arrival" />
+            <asp:buttonfield ButtonType="Button" CommandName="Select" ShowHeader="false" Text="Book"/>
+        </Columns>
     </asp:GridView>
     <br />
     <br />

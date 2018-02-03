@@ -72,6 +72,34 @@ namespace MVP.TripExplorer
             GvTripSlots.DataBind();
         }
 
+        protected void GvTripSlots_RowCommand(Object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "Select")
+            {
+                //check login
+
+                GridViewRow row = GvTripSlots.Rows[Convert.ToInt32(e.CommandArgument)];
+
+                //Debug Label
+                LbDeparture.Text = row.Cells[0].Text;
+                LbSourceRegion.Text = row.Cells[1].Text;
+                LbSourceAccessPoint.Text = row.Cells[2].Text;
+                LbDestinationRegion.Text = row.Cells[3].Text;
+                LbDestinationAccessPoint.Text = row.Cells[4].Text;
+                LbArrival.Text = row.Cells[5].Text;
+
+                /*Create Selected Trip
+                Currently the GvTripSlots only has the name properties for each element;
+                Thinking of adding hidden GUIDs for each element to the Gv, get them here and pass the necessary GUIDs
+                to a CreateTrip service.
+                */
+
+                //Process Payment
+
+                //Validate Selected Trip
+            }
+        }
+
         public IEnumerable<ListItem> DdlStartRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
