@@ -88,12 +88,8 @@ namespace MVP.TripExplorer
                 LbDestinationAccessPoint.Text = row.Cells[4].Text;
                 LbArrival.Text = row.Cells[5].Text;
 
-                /*Create Selected Trip
-                Currently the GvTripSlots only has the name properties for each element;
-                Thinking of adding hidden GUIDs for each element to the Gv, get them here and pass the necessary GUIDs
-                to a CreateTrip service.
-                */
-
+                //Create Selected Trip
+                
                 //Process Payment
 
                 //Validate Selected Trip
@@ -155,19 +151,32 @@ namespace MVP.TripExplorer
 
         public IEnumerable<object> GvTripSlots_GetData()
         {
+            /* AvailableTripSlots - needs to be moved to the GetAvailableTripSlots service but currently depends on page methods
+             (GetPossibleSAPs/DAPs) that depend on pagecontrols selected values */
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
 
-            return pageData.Departure.Where(dt => pageData.SelectedRoute != null).
-                SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new
+            pageData.AvailableTripSlots = pageData.Departure.Where(dt => pageData.SelectedRoute != null).
+                SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new TripSlot
+            (
+                dt,
+                sap.Region,
+                dap.Region,
+                sap,
+                dap,
+                dt + pageData.SelectedRoute.Duration
+            ))));
+            /* /AvailableTripSlots */
+
+            return pageData.AvailableTripSlots.Select(ts => new
             {
-                Departure = dt,
-                SourceRegion = sap.Region.Name,
-                SourceAccessPoint = sap.Name,
-                DestinationRegion = dap.Region.Name,
-                DestinationAccessPoint = dap.Name,
-                Arrival = dt + pageData.SelectedRoute.Duration
-            })));
+                ts.Departure,
+                SourceRegion = ts.SourceRegion.Name,
+                SourceAccessPoint = ts.SourceAccessPoint.Name,
+                DestinationRegion = ts.DestinationRegion.Name,
+                DestinationAccessPoint = ts.DestinationAccessPoint.Name,
+                ts.Arrival
+            });
         }
 
         private void InitData()

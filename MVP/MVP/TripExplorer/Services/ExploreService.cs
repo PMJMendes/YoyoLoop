@@ -35,8 +35,6 @@ namespace MVP.Services
             DateTime endtime = state.SelectedDate + state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
             TimeSpan interval = state.SelectedRoute.DepartureInterval;
 
-            state.Departure = new List<DateTime>();
-
             if (state.SelectedTime >= TimeSpan.Zero)
             {
                 if (CheckAvailable(state, state.SelectedDate + state.SelectedTime))
@@ -56,7 +54,7 @@ namespace MVP.Services
                 }
             }
 
-            if(state.Departure.Count() == 0)
+            if (state.Departure.Count() == 0)
             {
                 // Oops, no trips with selected criteria; Show alternatives.
             }
@@ -64,8 +62,11 @@ namespace MVP.Services
 
         private bool CheckAvailable(ExploreDTO state, DateTime starttime)
         {
+            // expire validating trips
+
             //This is where we check whether we have an available car
             return true;
         }
+
     }
 }
