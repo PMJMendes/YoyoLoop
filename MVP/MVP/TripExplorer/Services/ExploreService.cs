@@ -31,6 +31,7 @@ namespace MVP.Services
                 return;
             }
 
+            /*
             DateTime starttime = state.SelectedDate + state.SelectedRoute.MinStartTime;
             DateTime endtime = state.SelectedDate + state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
             TimeSpan interval = state.SelectedRoute.DepartureInterval;
@@ -53,7 +54,7 @@ namespace MVP.Services
                     starttime += interval;
                 }
             }
-
+            */
             if (state.Departure.Count() == 0)
             {
                 // Oops, no trips with selected criteria; Show alternatives.

@@ -413,12 +413,18 @@
     <Compile Include="Migrations\201801200236263_InitialDataModel.Designer.cs">
       <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803011227227_ModelReworkWireframeApproval.cs" />
+    <Compile Include="Migrations\201803011227227_ModelReworkWireframeApproval.Designer.cs">
+      <DependentUpon>201803011227227_ModelReworkWireframeApproval.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
+    <Compile Include="Models\Entities\Booking.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
     <Compile Include="Models\Entities\LoopedRegion.cs" />
     <Compile Include="Models\Entities\Route.cs" />
+    <Compile Include="Models\Entities\Settings.cs" />
     <Compile Include="Models\Entities\Trip.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
@@ -480,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801200236263_InitialDataModel.resx">
       <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803011227227_ModelReworkWireframeApproval.resx">
+      <DependentUpon>201803011227227_ModelReworkWireframeApproval.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

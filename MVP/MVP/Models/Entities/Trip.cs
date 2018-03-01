@@ -8,12 +8,25 @@ namespace MVP.Models.Entities
     public class Trip
     {
         public Guid TripId { get; set; }
+        public TripStatus Status { get; set; }
 
         public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public TimeSpan Duration { get; set; }
 
         public AccessPoint StartAccessPoint { get; set; }
         public AccessPoint EndAccessPoint { get; set; }
 
+        public ICollection<Booking> Bookings { get; set; }
+
+        public Vehicle Vehicle { get; set; }
+        public Driver Driver { get; set; }
+
+        public enum TripStatus
+        {
+            CANCELLED,
+            PENDING,
+            BOOKED,
+            COMPLETED
+        }
     }
 }

@@ -19,19 +19,6 @@ namespace MVP.TripExplorer
             InitData();
         }
 
-        protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (DdlStartRegion.SelectedValue != Guid.Empty.ToString())
-            {
-                DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
-            }
-
-            DdlEndRegion.DataBind();
-            DdlStartAP.DataBind();
-
-            CheckParams();
-        }
-
         protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (DdlEndRegion.SelectedValue != Guid.Empty.ToString())
@@ -39,19 +26,31 @@ namespace MVP.TripExplorer
                 DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
             }
 
+            DdlStartRegion.DataBind();
             DdlEndAP.DataBind();
 
             CheckParams();
-            DdlTime.DataBind(); //needs CheckParams to set the selected route
-
         }
 
-        protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
+        protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DdlStartRegion.SelectedValue != Guid.Empty.ToString())
+            {
+                DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
+            }
+
+            DdlStartAP.DataBind();
+
+            CheckParams();
+            DdlTime.DataBind(); //needs CheckParams to set the selected route
+        }
+
+        protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckParams();
         }
 
-        protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
+        protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckParams();
         }
@@ -96,26 +95,26 @@ namespace MVP.TripExplorer
             }
         }
 
+        public IEnumerable<ListItem> DdlEndRegion_GetData()
+        {
+            if (pageData.Routes.Where(r => r.EndRegion.Name == Request.QueryString["Dest"]).Count() != 0)
+            {
+                return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
+            }
+            else
+            {
+                return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
+                    pageData.Routes.Select(r => r.EndRegion).Distinct().
+                    Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
+                );
+            }
+        }
+
         public IEnumerable<ListItem> DdlStartRegion_GetData()
         {
             return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                pageData.Routes.Select(r => r.StartRegion).Distinct().
+                GetPossibleRoutes().Select(r => r.StartRegion).Distinct().
                 Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-            );
-        }
-
-        public IEnumerable<ListItem> DdlEndRegion_GetData()
-        {
-            return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                GetPossibleRoutes().Select(r => r.EndRegion).Distinct().
-                Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-            );
-        }
-
-        public IEnumerable<ListItem> DdlStartAP_GetData()
-        {
-            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
-                GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
             );
         }
 
@@ -123,6 +122,13 @@ namespace MVP.TripExplorer
         {
             return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
                 GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
+            );
+        }
+
+        public IEnumerable<ListItem> DdlStartAP_GetData()
+        {
+            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
+                GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
             );
         }
 
@@ -137,6 +143,12 @@ namespace MVP.TripExplorer
                 yield break;
             }
 
+            foreach (Route.Departure d in route.Departures)
+            {
+                yield return d.Time.ToString("hh\\:mm");
+            }
+
+            /*
             TimeSpan starttime = route.MinStartTime;
             TimeSpan endtime = route.MaxEndTime - route.Duration;
             TimeSpan interval = route.DepartureInterval;
@@ -147,6 +159,7 @@ namespace MVP.TripExplorer
 
                 starttime += interval;
             }
+            */
         }
 
         public IEnumerable<object> GvTripSlots_GetData()
@@ -166,7 +179,7 @@ namespace MVP.TripExplorer
                 dap,
                 dt + pageData.SelectedRoute.Duration
             ))));
-            /* /AvailableTripSlots */
+            /* AvailableTripSlots */
 
             return pageData.AvailableTripSlots.Select(ts => new
             {
@@ -197,6 +210,17 @@ namespace MVP.TripExplorer
             {
                 pageData = service.GetInitialData();
                 Session["explore.data"] = pageData;
+                
+                //check query string
+                string dest = Request.QueryString["Dest"];
+
+                if (dest != null && dest != string.Empty)
+                {
+                    if (pageData.Routes.Where(r => r.EndRegion.Name == dest).Count() != 0)
+                    {
+                        DdlEndRegion.SelectedValue = pageData.Routes.Where(r => r.EndRegion.Name == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
+                    }
+                }
             }
         }
 
@@ -222,7 +246,7 @@ namespace MVP.TripExplorer
 
         private IEnumerable<Route> GetPossibleRoutes()
         {
-            return pageData.Routes.Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue);
+            return pageData.Routes.Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue);
         }
 
         private IEnumerable<AccessPoint> GetPossibleSAPs()

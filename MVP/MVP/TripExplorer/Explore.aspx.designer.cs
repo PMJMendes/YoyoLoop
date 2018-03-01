@@ -13,24 +13,6 @@ namespace MVP.TripExplorer {
     public partial class Explore {
         
         /// <summary>
-        /// DdlStartRegion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlStartRegion;
-        
-        /// <summary>
-        /// DdlStartAP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlStartAP;
-        
-        /// <summary>
         /// DdlEndRegion control.
         /// </summary>
         /// <remarks>
@@ -47,6 +29,24 @@ namespace MVP.TripExplorer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DdlEndAP;
+        
+        /// <summary>
+        /// DdlStartRegion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DdlStartRegion;
+        
+        /// <summary>
+        /// DdlStartAP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DdlStartAP;
         
         /// <summary>
         /// CalDate control.
