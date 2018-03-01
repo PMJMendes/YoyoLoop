@@ -13,21 +13,16 @@ namespace MVP.Models.Entities
         
         public LoopedRegion StartRegion { get; set; }
         public LoopedRegion EndRegion { get; set; }
-        public List<Departure> Departures { get; set; }
+        public ICollection<Departure> Departures { get; set; }
 
         public TimeSpan Duration { get; set; }
+    }
 
-        public class Departure
-        {
-            public int Id { get; set; }
-            public DayOfWeek Day { get; set; }
-            public TimeSpan Time { get; set; }
-
-            public Departure(DayOfWeek d, TimeSpan t)
-            {
-                Day = d;
-                Time = t;
-            }
-        }
+    public class Departure
+    {
+        public Guid DepartureId { get; set; }
+        public Route Route { get; set; }
+        public DayOfWeek Day { get; set; }
+        public TimeSpan Time { get; set; }
     }
 }

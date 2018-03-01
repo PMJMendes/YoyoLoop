@@ -179,83 +179,109 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("D58C109A-26A4-4578-8996-79859089A0AC"),
                 Active = true,
                 Name = "El-Leclerc de São Domingos de Rana",
-                Region = cas });
+                Region = cas
+            });
 
-
-            context.Route.AddOrUpdate(new Route()
+            Route lis_lei = new Route()
             {
                 RouteId = Guid.Parse("3D3D5026-D6CC-423B-A61C-999EF28B5DD9"),
                 Active = true,
                 StartRegion = lis,
                 EndRegion = lei,
-                Departures = new List<Route.Departure>
-                {
-                    new Route.Departure(DayOfWeek.Sunday, new TimeSpan(10, 0, 0))
-                },
                 Duration = new TimeSpan(1, 30, 0)
+            };
+            context.Route.AddOrUpdate(lis_lei);
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("C239AFC3-3854-4373-B037-53B65ED38F85"),
+                Route = lis_lei,
+                Day = DayOfWeek.Sunday,
+                Time = new TimeSpan (10,0,0)
             });
-            context.Route.AddOrUpdate(new Route()
+
+            Route lis_cas = new Route()
             {
                 RouteId = Guid.Parse("D25B4B83-1F6D-4314-B007-598866BD8215"),
                 Active = true,
                 StartRegion = lis,
                 EndRegion = cas,
-                Departures = new List<Route.Departure>
-                {
-                    new Route.Departure(DayOfWeek.Sunday, new TimeSpan(10, 0, 0))
-                },
                 Duration = new TimeSpan(0, 30, 0)
+            };
+            context.Route.AddOrUpdate(lis_cas);
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("218F0008-C0D6-4FBF-990E-BF3AA66FAA82"),
+                Route = lis_cas,
+                Day = DayOfWeek.Sunday,
+                Time = new TimeSpan(10, 0, 0)
             });
-            context.Route.AddOrUpdate(new Route()
+
+            Route lis_coi = new Route()
             {
                 RouteId = Guid.Parse("C88E07DD-49C4-4A14-9D9D-BFE0D39E4473"),
                 Active = true,
                 StartRegion = lis,
                 EndRegion = coi,
-                Departures = new List<Route.Departure>
-                {
-                    new Route.Departure(DayOfWeek.Sunday, new TimeSpan(10, 0, 0))
-                },
                 Duration = new TimeSpan(1, 30, 0)
+            };
+            context.Route.AddOrUpdate(lis_coi);
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("B20B7C94-C784-450E-B6C2-251B8BD2EAC1"),
+                Route = lis_coi,
+                Day = DayOfWeek.Sunday,
+                Time = new TimeSpan(10, 0, 0)
             });
-            
-            context.Route.AddOrUpdate(new Route()
+
+            Route lei_lis = new Route()
             {
                 RouteId = Guid.Parse("55B5856C-89B3-4272-9CD5-2C54B6DB918B"),
                 Active = true,
                 StartRegion = lei,
                 EndRegion = lis,
-                Departures = new List<Route.Departure>
-                {
-                    new Route.Departure(DayOfWeek.Sunday, new TimeSpan(10, 0, 0))
-                },
                 Duration = new TimeSpan(1, 30, 0)
+            };
+            context.Route.AddOrUpdate(lei_lis);
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("DF0EF468-BB50-49CE-946C-3CC8CC5B1A8B"),
+                Route = lei_lis,
+                Day = DayOfWeek.Sunday,
+                Time = new TimeSpan(10, 0, 0)
             });
 
-            context.Route.AddOrUpdate(new Route()
+            Route coi_lis = new Route()
             {
                 RouteId = Guid.Parse("BF361E97-54DE-4ED3-949F-AF1FDB5E95C6"),
                 Active = true,
                 StartRegion = coi,
                 EndRegion = lis,
-                Departures = new List<Route.Departure>
-                {
-                    new Route.Departure(DayOfWeek.Sunday, new TimeSpan(10, 0, 0))
-                },
                 Duration = new TimeSpan(1, 30, 0)
+            };
+            context.Route.AddOrUpdate(coi_lis);
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("37ABE582-7061-4C75-A9D5-40A621810EF3"),
+                Route = coi_lis,
+                Day = DayOfWeek.Sunday,
+                Time = new TimeSpan(10, 0, 0)
             });
 
-            context.Route.AddOrUpdate(new Route()
+            Route cas_lis = new Route()
             {
                 RouteId = Guid.Parse("9AE2CC7C-00C3-442F-98AC-74EAF5EBBDC6"),
                 Active = true,
                 StartRegion = cas,
                 EndRegion = lis,
-                Departures = new List<Route.Departure>
-                {
-                    new Route.Departure(DayOfWeek.Sunday, new TimeSpan(10, 0, 0))
-                },
                 Duration = new TimeSpan(0, 30, 0)
+            };
+            context.Route.AddOrUpdate(cas_lis);
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("9A916926-CB02-4225-8AC3-920F378D4403"),
+                Route = cas_lis,
+                Day = DayOfWeek.Sunday,
+                Time = new TimeSpan(10, 0, 0)
             });
 
             base.Seed(context);

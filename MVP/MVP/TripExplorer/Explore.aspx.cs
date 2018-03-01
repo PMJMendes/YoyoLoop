@@ -143,7 +143,7 @@ namespace MVP.TripExplorer
                 yield break;
             }
 
-            foreach (Route.Departure d in route.Departures)
+            foreach (Departure d in route.Departures)
             {
                 yield return d.Time.ToString("hh\\:mm");
             }
