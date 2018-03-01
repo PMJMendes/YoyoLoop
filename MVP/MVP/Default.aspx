@@ -18,7 +18,7 @@
             </td>
             <td style="width:20px"></td>
             <td>
-            <a href="/TripExplorer/Explore?Dest=Fátima" class="btn btn-primary btn-lg">Fátima &raquo;</a>
+            <a href="/TripExplorer/Explore?Dest=Coimbra" class="btn btn-primary btn-lg">Coimbra &raquo;</a>
             </td>
         </tr></Table>
     </div>

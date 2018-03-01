@@ -16,7 +16,10 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
-                result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints).Include(r => r.EndRegion.AccessPoints).ToList();
+                result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints)
+                                           .Include(r => r.EndRegion.AccessPoints)
+                                           .Include(d => d.Departures)
+                                           .ToList();
             }
 
             result.Departure = new List<DateTime>();

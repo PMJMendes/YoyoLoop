@@ -147,19 +147,6 @@ namespace MVP.TripExplorer
             {
                 yield return d.Time.ToString("hh\\:mm");
             }
-
-            /*
-            TimeSpan starttime = route.MinStartTime;
-            TimeSpan endtime = route.MaxEndTime - route.Duration;
-            TimeSpan interval = route.DepartureInterval;
-
-            while (starttime <= endtime)
-            {
-                yield return starttime.ToString("hh\\:mm");
-
-                starttime += interval;
-            }
-            */
         }
 
         public IEnumerable<object> GvTripSlots_GetData()
@@ -169,6 +156,7 @@ namespace MVP.TripExplorer
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
 
+            
             pageData.AvailableTripSlots = pageData.Departure.Where(dt => pageData.SelectedRoute != null).
                 SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new TripSlot
             (
@@ -179,7 +167,8 @@ namespace MVP.TripExplorer
                 dap,
                 dt + pageData.SelectedRoute.Duration
             ))));
-            /* AvailableTripSlots */
+
+            // AvailableTripSlots
 
             return pageData.AvailableTripSlots.Select(ts => new
             {
@@ -190,6 +179,9 @@ namespace MVP.TripExplorer
                 DestinationAccessPoint = ts.DestinationAccessPoint.Name,
                 ts.Arrival
             });
+
+            
+
         }
 
         private void InitData()
@@ -198,12 +190,6 @@ namespace MVP.TripExplorer
             if (IsPostBack)
             {
                 pageData = (ExploreDTO)Session["explore.data"];
-            }
-            else
-            {
-                DateTime dt = DateTime.Today.AddDays(1);
-                CalDate.VisibleDate = dt;
-                CalDate.SelectedDate = dt;
             }
 
             if (pageData == null)
@@ -226,7 +212,7 @@ namespace MVP.TripExplorer
 
         private void CheckParams()
         {
-            pageData.SelectedRoute = GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault();
+            pageData.SelectedRoute = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
 
             pageData.SelectedSAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
 
