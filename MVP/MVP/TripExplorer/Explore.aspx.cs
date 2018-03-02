@@ -152,11 +152,10 @@ namespace MVP.TripExplorer
         public IEnumerable<object> GvTripSlots_GetData()
         {
             /* AvailableTripSlots - needs to be moved to the GetAvailableTripSlots service but currently depends on page methods
-             (GetPossibleSAPs/DAPs) that depend on pagecontrols selected values */
+             (GetPossibleSAPs/DAPs) that depend on pagecontrols selected values 
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
 
-            
             pageData.AvailableTripSlots = pageData.Departure.Where(dt => pageData.SelectedRoute != null).
                 SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new TripSlot
             (
@@ -167,8 +166,7 @@ namespace MVP.TripExplorer
                 dap,
                 dt + pageData.SelectedRoute.Duration
             ))));
-
-            // AvailableTripSlots
+            */
 
             return pageData.AvailableTripSlots.Select(ts => new
             {
@@ -179,9 +177,6 @@ namespace MVP.TripExplorer
                 DestinationAccessPoint = ts.DestinationAccessPoint.Name,
                 ts.Arrival
             });
-
-            
-
         }
 
         private void InitData()

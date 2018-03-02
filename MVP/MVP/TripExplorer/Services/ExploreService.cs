@@ -22,7 +22,7 @@ namespace MVP.Services
                                            .ToList();
             }
 
-            result.Departure = new List<DateTime>();
+            result.AvailableTripSlots = new List<TripSlot>();
 
             return result;
         }
@@ -34,31 +34,37 @@ namespace MVP.Services
                 return;
             }
 
-            /*
-            DateTime starttime = state.SelectedDate + state.SelectedRoute.MinStartTime;
-            DateTime endtime = state.SelectedDate + state.SelectedRoute.MaxEndTime - state.SelectedRoute.Duration;
-            TimeSpan interval = state.SelectedRoute.DepartureInterval;
+            state.AvailableTripSlots.Clear();
 
             if (state.SelectedTime >= TimeSpan.Zero)
             {
                 if (CheckAvailable(state, state.SelectedDate + state.SelectedTime))
                 {
-                    state.Departure.Add(state.SelectedDate + state.SelectedTime);
+                    state.AvailableTripSlots.Add(new TripSlot(state.SelectedDate + state.SelectedTime,
+                                                              state.SelectedRoute.StartRegion,
+                                                              state.SelectedRoute.EndRegion,
+                                                              state.SelectedSAP,
+                                                              state.SelectedDAP,
+                                                              state.SelectedDate + state.SelectedTime + state.SelectedRoute.Duration));
                 }
             }
             else
             {
-                while (starttime <= endtime)
+                foreach (Departure d in state.SelectedRoute.Departures)
                 {
-                    if (CheckAvailable(state, starttime))
+                    if (CheckAvailable(state, state.SelectedDate + d.Time))
                     {
-                        state.Departure.Add(starttime);
+                        state.AvailableTripSlots.Add(new TripSlot(state.SelectedDate + d.Time,
+                                                                  state.SelectedRoute.StartRegion,
+                                                                  state.SelectedRoute.EndRegion,
+                                                                  state.SelectedSAP,
+                                                                  state.SelectedDAP,
+                                                                  state.SelectedDate + d.Time + state.SelectedRoute.Duration));
                     }
-                    starttime += interval;
                 }
             }
-            */
-            if (state.Departure.Count() == 0)
+
+            if (state.AvailableTripSlots.Count() == 0)
             {
                 // Oops, no trips with selected criteria; Show alternatives.
             }

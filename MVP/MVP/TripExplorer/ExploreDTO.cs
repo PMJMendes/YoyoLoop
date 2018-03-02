@@ -14,8 +14,7 @@ namespace MVP.TripExplorer
         public AccessPoint SelectedDAP { get; set; }
         public TimeSpan SelectedTime { get; set; }
 
-        public List<DateTime> Departure { get; set; }
-        public IEnumerable<TripSlot> AvailableTripSlots { get; set; }
+        public List<TripSlot> AvailableTripSlots { get; set; }
     }
 
     public class TripSlot
