@@ -153,20 +153,20 @@ namespace MVP.TripExplorer
         {
             /* AvailableTripSlots - needs to be moved to the GetAvailableTripSlots service but currently depends on page methods
              (GetPossibleSAPs/DAPs) that depend on pagecontrols selected values 
+            */
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
 
-            pageData.AvailableTripSlots = pageData.Departure.Where(dt => pageData.SelectedRoute != null).
+            pageData.AvailableTripSlots = pageData.AvailableTripSlots.Where(dt => pageData.SelectedRoute != null).
                 SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new TripSlot
             (
-                dt,
+                dt.Departure,
                 sap.Region,
                 dap.Region,
                 sap,
                 dap,
-                dt + pageData.SelectedRoute.Duration
-            ))));
-            */
+                dt.Departure + pageData.SelectedRoute.Duration
+            )))).ToList();
 
             return pageData.AvailableTripSlots.Select(ts => new
             {
