@@ -16,13 +16,16 @@ namespace MVP.Models.Entities
         public ICollection<Departure> Departures { get; set; }
 
         public TimeSpan Duration { get; set; }
+
+        public Decimal StandardFare { get; set; }
+        public Decimal LastMinuteFare { get; set; }
     }
 
     public class Departure
     {
         public Guid DepartureId { get; set; }
         public Route Route { get; set; }
-        public DayOfWeek Day { get; set; }
+        public DayType DayType { get; set; }
         public TimeSpan Time { get; set; }
     }
 }

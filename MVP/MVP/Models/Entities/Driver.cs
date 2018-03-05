@@ -19,7 +19,7 @@ namespace MVP.Models.Entities
     {
         public Guid DriverAvailabilityId { get; set; }
         public Driver Driver { get; set; }
-        public DayOfWeek DayOfWeek { get; set; }
+        public DayType DayType { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
     }

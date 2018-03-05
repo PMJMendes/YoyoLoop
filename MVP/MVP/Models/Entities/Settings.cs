@@ -11,5 +11,19 @@ namespace MVP.Models.Entities
         public TimeSpan BookTimeout { get; set; } // Timeout for a booking to get processed by the payment provider
         public Decimal MemberGetMemberPrice { get; set; }
         public int VehicleCapacity { get; set; } // To be moved to Vehicle at a later date
+        public int LastMinuteThreshold { get; set; } // In days
+    }
+
+    public enum DayType
+    {
+        SUNDAY,
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        HOLIDAY,
+        HOLIDAYEVE
     }
 }

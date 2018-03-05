@@ -19,7 +19,8 @@ namespace MVP.Migrations
                 Id = 0,
                 BookTimeout = new TimeSpan (0, 10, 0),
                 MemberGetMemberPrice = 3,
-                VehicleCapacity = 7
+                VehicleCapacity = 7,
+                LastMinuteThreshold = 2
             });
 
             LoopedRegion lis = new LoopedRegion()
@@ -188,15 +189,59 @@ namespace MVP.Migrations
                 Active = true,
                 StartRegion = lis,
                 EndRegion = lei,
-                Duration = new TimeSpan(1, 30, 0)
+                Duration = new TimeSpan(1, 30, 0),
+                StandardFare = 10,
+                LastMinuteFare = 12
             };
             context.Route.AddOrUpdate(lis_lei);
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("C239AFC3-3854-4373-B037-53B65ED38F85"),
                 Route = lis_lei,
-                Day = DayOfWeek.Sunday,
+                DayType = DayType.SUNDAY,
                 Time = new TimeSpan (10,0,0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("1D674DC2-4907-4249-937A-5A3979C6118C"),
+                Route = lis_lei,
+                DayType = DayType.MONDAY,
+                Time = new TimeSpan(11, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("C1C75C5B-8510-4EF8-8B17-862384029BE6"),
+                Route = lis_lei,
+                DayType = DayType.TUESDAY,
+                Time = new TimeSpan(12, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("A19FFEC7-B3A9-455A-B1A8-EE87D8A9581A"),
+                Route = lis_lei,
+                DayType = DayType.WEDNESDAY,
+                Time = new TimeSpan(13, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("397D9687-F64D-4637-855E-492951F82EF1"),
+                Route = lis_lei,
+                DayType = DayType.THURSDAY,
+                Time = new TimeSpan(14, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("C1C9095B-6FE6-4B83-8B50-1C58F652CDA2"),
+                Route = lis_lei,
+                DayType = DayType.FRIDAY,
+                Time = new TimeSpan(15, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("E2F63ECE-9BB7-431D-965D-B0B3D8BFA21A"),
+                Route = lis_lei,
+                DayType = DayType.SATURDAY,
+                Time = new TimeSpan(16, 0, 0)
             });
 
             Route lis_cas = new Route()
@@ -205,15 +250,59 @@ namespace MVP.Migrations
                 Active = true,
                 StartRegion = lis,
                 EndRegion = cas,
-                Duration = new TimeSpan(0, 30, 0)
+                Duration = new TimeSpan(0, 30, 0),
+                StandardFare = 5,
+                LastMinuteFare = 7
             };
             context.Route.AddOrUpdate(lis_cas);
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("218F0008-C0D6-4FBF-990E-BF3AA66FAA82"),
                 Route = lis_cas,
-                Day = DayOfWeek.Sunday,
+                DayType = DayType.SUNDAY,
                 Time = new TimeSpan(10, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("483A2B51-A1A5-4D3A-B1CC-1EE2D1411A4B"),
+                Route = lis_cas,
+                DayType = DayType.MONDAY,
+                Time = new TimeSpan(11, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("7D1E0FFF-A70A-4ABB-9B12-7D8DAB1976CD"),
+                Route = lis_cas,
+                DayType = DayType.TUESDAY,
+                Time = new TimeSpan(12, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("7053C002-90E6-4FEF-9A8F-EECA6ADC6EC0"),
+                Route = lis_cas,
+                DayType = DayType.WEDNESDAY,
+                Time = new TimeSpan(13, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("CE5D2039-BEC7-4CD9-859B-A54C3EF176D9"),
+                Route = lis_cas,
+                DayType = DayType.THURSDAY,
+                Time = new TimeSpan(14, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("C0FAAD96-7651-4094-8093-D0F74D68FC25"),
+                Route = lis_cas,
+                DayType = DayType.FRIDAY,
+                Time = new TimeSpan(15, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("7A691E52-64C3-4497-B437-D22EDA31F87F"),
+                Route = lis_cas,
+                DayType = DayType.SATURDAY,
+                Time = new TimeSpan(16, 0, 0)
             });
 
             Route lis_coi = new Route()
@@ -222,15 +311,59 @@ namespace MVP.Migrations
                 Active = true,
                 StartRegion = lis,
                 EndRegion = coi,
-                Duration = new TimeSpan(1, 30, 0)
+                Duration = new TimeSpan(1, 30, 0),
+                StandardFare = 12,
+                LastMinuteFare = 15
             };
             context.Route.AddOrUpdate(lis_coi);
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B20B7C94-C784-450E-B6C2-251B8BD2EAC1"),
                 Route = lis_coi,
-                Day = DayOfWeek.Sunday,
+                DayType = DayType.SUNDAY,
                 Time = new TimeSpan(10, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("6E653093-1261-4CE8-8911-C4B3933DFADA"),
+                Route = lis_coi,
+                DayType = DayType.MONDAY,
+                Time = new TimeSpan(11, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("23CB9AA1-9286-4580-9843-6B8ED4675CF7"),
+                Route = lis_coi,
+                DayType = DayType.TUESDAY,
+                Time = new TimeSpan(12, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("378EA9E6-7F55-46CA-BAA9-A224C3A671DC"),
+                Route = lis_coi,
+                DayType = DayType.WEDNESDAY,
+                Time = new TimeSpan(13, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("F56BA714-394D-42A4-9046-797360FAE28D"),
+                Route = lis_coi,
+                DayType = DayType.THURSDAY,
+                Time = new TimeSpan(14, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("FB1E0E52-019C-48BB-9BD9-6A066BA83A29"),
+                Route = lis_coi,
+                DayType = DayType.FRIDAY,
+                Time = new TimeSpan(15, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("DBD69A11-E57D-414E-9F2B-6685522FAD92"),
+                Route = lis_coi,
+                DayType = DayType.SATURDAY,
+                Time = new TimeSpan(16, 0, 0)
             });
 
             Route lei_lis = new Route()
@@ -239,15 +372,59 @@ namespace MVP.Migrations
                 Active = true,
                 StartRegion = lei,
                 EndRegion = lis,
-                Duration = new TimeSpan(1, 30, 0)
+                Duration = new TimeSpan(1, 30, 0),
+                StandardFare = 10,
+                LastMinuteFare = 12
             };
             context.Route.AddOrUpdate(lei_lis);
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("DF0EF468-BB50-49CE-946C-3CC8CC5B1A8B"),
                 Route = lei_lis,
-                Day = DayOfWeek.Sunday,
+                DayType = DayType.SUNDAY,
                 Time = new TimeSpan(10, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("93E50282-4509-4A5D-B7E0-FFB96E2A8501"),
+                Route = lei_lis,
+                DayType = DayType.MONDAY,
+                Time = new TimeSpan(11, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("7E2A874A-276D-4742-AB66-676EB86BF027"),
+                Route = lei_lis,
+                DayType = DayType.TUESDAY,
+                Time = new TimeSpan(12, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("AF0FA82C-C67A-4BD5-B315-16C1793FE80F"),
+                Route = lei_lis,
+                DayType = DayType.WEDNESDAY,
+                Time = new TimeSpan(13, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("1B7D2284-8EEF-4C0E-8EEF-F42D2D7F4F00"),
+                Route = lei_lis,
+                DayType = DayType.THURSDAY,
+                Time = new TimeSpan(14, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("4AB95A73-2CD4-48A3-BBE2-24CDB40A2E97"),
+                Route = lei_lis,
+                DayType = DayType.FRIDAY,
+                Time = new TimeSpan(15, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("FF87760E-42D8-446A-AFE3-F3246B873FA4"),
+                Route = lei_lis,
+                DayType = DayType.SATURDAY,
+                Time = new TimeSpan(16, 0, 0)
             });
 
             Route coi_lis = new Route()
@@ -256,15 +433,59 @@ namespace MVP.Migrations
                 Active = true,
                 StartRegion = coi,
                 EndRegion = lis,
-                Duration = new TimeSpan(1, 30, 0)
+                Duration = new TimeSpan(1, 30, 0),
+                StandardFare = 12,
+                LastMinuteFare = 15
             };
             context.Route.AddOrUpdate(coi_lis);
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("37ABE582-7061-4C75-A9D5-40A621810EF3"),
                 Route = coi_lis,
-                Day = DayOfWeek.Sunday,
+                DayType = DayType.SUNDAY,
                 Time = new TimeSpan(10, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("4C20A9C3-EACB-40FA-A5E9-67D88F1DBFF2"),
+                Route = coi_lis,
+                DayType = DayType.MONDAY,
+                Time = new TimeSpan(11, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("8D36E85F-0475-46B7-8201-B504EB156E90"),
+                Route = coi_lis,
+                DayType = DayType.TUESDAY,
+                Time = new TimeSpan(12, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("23CC650A-CD4D-4DB1-8B49-B02F9239B2FF"),
+                Route = coi_lis,
+                DayType = DayType.WEDNESDAY,
+                Time = new TimeSpan(13, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("1CB2BDB3-E32C-495E-9EC5-EE83AFA3D417"),
+                Route = coi_lis,
+                DayType = DayType.THURSDAY,
+                Time = new TimeSpan(14, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("2B388801-3BCD-4829-AFF7-189E09B2E658"),
+                Route = coi_lis,
+                DayType = DayType.FRIDAY,
+                Time = new TimeSpan(15, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("991F915B-1C4F-451E-840F-4359269FA068"),
+                Route = coi_lis,
+                DayType = DayType.SATURDAY,
+                Time = new TimeSpan(16, 0, 0)
             });
 
             Route cas_lis = new Route()
@@ -273,15 +494,59 @@ namespace MVP.Migrations
                 Active = true,
                 StartRegion = cas,
                 EndRegion = lis,
-                Duration = new TimeSpan(0, 30, 0)
+                Duration = new TimeSpan(0, 30, 0),
+                StandardFare = 5,
+                LastMinuteFare = 7
             };
             context.Route.AddOrUpdate(cas_lis);
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("9A916926-CB02-4225-8AC3-920F378D4403"),
                 Route = cas_lis,
-                Day = DayOfWeek.Sunday,
+                DayType = DayType.SUNDAY,
                 Time = new TimeSpan(10, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("18DC1646-C35D-4466-B26A-F794D5EA3CA4"),
+                Route = cas_lis,
+                DayType = DayType.MONDAY,
+                Time = new TimeSpan(11, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("A01BAD88-A95D-470D-93CA-8BD0BAFEFC51"),
+                Route = cas_lis,
+                DayType = DayType.TUESDAY,
+                Time = new TimeSpan(12, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("EBA95F31-7B7C-4D51-B29D-A0F7B6E7328D"),
+                Route = cas_lis,
+                DayType = DayType.WEDNESDAY,
+                Time = new TimeSpan(13, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("216EEDC4-67B4-4482-92E4-E38C4AE6E02B"),
+                Route = cas_lis,
+                DayType = DayType.THURSDAY,
+                Time = new TimeSpan(14, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("0470E81E-ADA7-4623-AFE8-D2AC34A8BB65"),
+                Route = cas_lis,
+                DayType = DayType.FRIDAY,
+                Time = new TimeSpan(15, 0, 0)
+            });
+            context.Departure.AddOrUpdate(new Departure()
+            {
+                DepartureId = Guid.Parse("05634868-06E6-4DE2-85CD-8959A4FEA1B6"),
+                Route = cas_lis,
+                DayType = DayType.SATURDAY,
+                Time = new TimeSpan(16, 0, 0)
             });
 
             base.Seed(context);

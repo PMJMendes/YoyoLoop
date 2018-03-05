@@ -421,6 +421,10 @@
     <Compile Include="Migrations\201803011734211_ModelReworkCorrection.Designer.cs">
       <DependentUpon>201803011734211_ModelReworkCorrection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803051046512_ModelUpdateBuildCalendar.cs" />
+    <Compile Include="Migrations\201803051046512_ModelUpdateBuildCalendar.Designer.cs">
+      <DependentUpon>201803051046512_ModelUpdateBuildCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -496,6 +500,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803011734211_ModelReworkCorrection.resx">
       <DependentUpon>201803011734211_ModelReworkCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803051046512_ModelUpdateBuildCalendar.resx">
+      <DependentUpon>201803051046512_ModelUpdateBuildCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
