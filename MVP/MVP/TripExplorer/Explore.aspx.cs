@@ -42,7 +42,6 @@ namespace MVP.TripExplorer
             DdlStartAP.DataBind();
 
             CheckParams();
-            DdlTime.DataBind(); //needs CheckParams to set the selected route
         }
 
         protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,41 +56,43 @@ namespace MVP.TripExplorer
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
         {
-            CheckParams();
+            // Validate selected date first (nothing in the past, we have something to show, etc)
+
+            pageData.Selection.Date = CalDate.SelectedDate;
+
+            DrawTimePopup();   
         }
 
-        protected void DdlTime_SelectedIndexChanged(object sender, EventArgs e)
+        protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
+        {
+            //Debug
+            LbDebug.Visible = true;
+            LbDebug.Text = e.NewDate.Month.ToString();
+
+            pageData.MonthDaySlots = service.GetAvailableMonthDaySlots(pageData, CalDate.VisibleDate);
+            DrawCalendar();
+        }
+
+        protected void DdlTime_SelectedIndexChanged(object sender, EventArgs e) // [OBSOLETE]
         {
             CheckParams();
         }
 
-        protected void BtnSearch_Click(object sender, EventArgs e)
+        protected void BtnDebug_Click(object sender, EventArgs e)
         {
-            service.GetAvailableTripSlots(pageData);
-            GvTripSlots.DataBind();
+            GvDebug.DataBind();
+            GvDebug.Visible = !GvDebug.Visible;
         }
 
-        protected void GvTripSlots_RowCommand(Object sender, GridViewCommandEventArgs e)
+        protected void GvDebug_RowCommand(Object sender, GridViewCommandEventArgs e)
         {
             if(e.CommandName == "Select")
             {
-                //check login
 
-                GridViewRow row = GvTripSlots.Rows[Convert.ToInt32(e.CommandArgument)];
+                GridViewRow row = GvDebug.Rows[Convert.ToInt32(e.CommandArgument)];
 
                 //Debug Label
-                LbDeparture.Text = row.Cells[0].Text;
-                LbSourceRegion.Text = row.Cells[1].Text;
-                LbSourceAccessPoint.Text = row.Cells[2].Text;
-                LbDestinationRegion.Text = row.Cells[3].Text;
-                LbDestinationAccessPoint.Text = row.Cells[4].Text;
-                LbArrival.Text = row.Cells[5].Text;
-
-                //Create Selected Trip
-                
-                //Process Payment
-
-                //Validate Selected Trip
+                LbDebug.Text = row.Cells[0].Text;
             }
         }
 
@@ -120,23 +121,19 @@ namespace MVP.TripExplorer
 
         public IEnumerable<ListItem> DdlEndAP_GetData()
         {
-            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
-                GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
-            );
+            return GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
         }
 
         public IEnumerable<ListItem> DdlStartAP_GetData()
         {
-            return new[] { new ListItem(Properties.Strings.AnyPlace, Guid.Empty.ToString()) }.Concat(
-                GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>()
-            );
+            return GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
         }
 
-        public IEnumerable<String> DdlTime_GetData()
+        public IEnumerable<String> DdlTime_GetData()  // [OBSOLETE]
         {
             yield return Properties.Strings.AnyTime;
 
-            var route = pageData.SelectedRoute;
+            var route = pageData.Selection.Route;
 
             if (route == null)
             {
@@ -149,11 +146,14 @@ namespace MVP.TripExplorer
             }
         }
 
-        public IEnumerable<object> GvTripSlots_GetData()
+        public IEnumerable<object> GvDebug_GetData()
         {
-            /* AvailableTripSlots - needs to be moved to the GetAvailableTripSlots service but currently depends on page methods
+            return pageData.MonthDaySlots;
+        
+
+            /* [OBSOLETE] AvailableTripSlots - needs to be moved to the GetAvailableTripSlots service but currently depends on page methods
              (GetPossibleSAPs/DAPs) that depend on pagecontrols selected values 
-            */
+            
             var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
             var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
 
@@ -177,6 +177,7 @@ namespace MVP.TripExplorer
                 DestinationAccessPoint = ts.DestinationAccessPoint.Name,
                 ts.Arrival
             });
+            */
         }
 
         private void InitData()
@@ -207,22 +208,32 @@ namespace MVP.TripExplorer
 
         private void CheckParams()
         {
-            pageData.SelectedRoute = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
-
-            pageData.SelectedSAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
-
-            pageData.SelectedDAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
-
-            pageData.SelectedDate = CalDate.SelectedDate;
-
-            if (DdlTime.SelectedIndex == 0)
+            if (pageData.Selection.Route != GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault())
             {
-                pageData.SelectedTime = new TimeSpan(-1);
+                // We have a new route selection
+                pageData.Selection.Route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
+                pageData.MonthDaySlots = service.GetAvailableMonthDaySlots(pageData, CalDate.VisibleDate);
+
+                DrawCalendar();
             }
-            else
-            {
-                pageData.SelectedTime = TimeSpan.Parse(DdlTime.SelectedValue);
-            }
+
+            pageData.Selection.SAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
+
+            pageData.Selection.DAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
+
+        }
+        private void DrawCalendar()
+        {
+
+            LbDate.Visible = true;
+            CalDate.Visible = true;
+
+            return;
+        }
+
+        private void DrawTimePopup()
+        {
+            return;
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

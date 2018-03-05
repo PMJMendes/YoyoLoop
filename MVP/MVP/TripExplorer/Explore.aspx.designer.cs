@@ -49,6 +49,24 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlStartAP;
         
         /// <summary>
+        /// LbDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDate;
+        
+        /// <summary>
+        /// LbTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbTime;
+        
+        /// <summary>
         /// CalDate control.
         /// </summary>
         /// <remarks>
@@ -67,75 +85,30 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlTime;
         
         /// <summary>
-        /// LbDeparture control.
+        /// LbDebug control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbDeparture;
+        protected global::System.Web.UI.WebControls.Label LbDebug;
         
         /// <summary>
-        /// LbSourceRegion control.
+        /// BtnDebug control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbSourceRegion;
+        protected global::System.Web.UI.WebControls.Button BtnDebug;
         
         /// <summary>
-        /// LbSourceAccessPoint control.
+        /// GvDebug control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbSourceAccessPoint;
-        
-        /// <summary>
-        /// LbDestinationRegion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbDestinationRegion;
-        
-        /// <summary>
-        /// LbDestinationAccessPoint control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbDestinationAccessPoint;
-        
-        /// <summary>
-        /// LbArrival control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbArrival;
-        
-        /// <summary>
-        /// BtnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSearch;
-        
-        /// <summary>
-        /// GvTripSlots control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GvTripSlots;
+        protected global::System.Web.UI.WebControls.GridView GvDebug;
     }
 }

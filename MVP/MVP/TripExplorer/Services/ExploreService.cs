@@ -22,13 +22,32 @@ namespace MVP.Services
                                            .ToList();
             }
 
-            result.AvailableTripSlots = new List<TripSlot>();
+            result.Selection = new Selection { Date = DateTime.Today,
+                                               Route = null,
+                                               SAP = null,
+                                               DAP = null,
+                                               Time = new TimeSpan(-1)
+                                              };
+            result.MonthDaySlots = new List<DaySlot>();
 
             return result;
         }
 
-        public void GetAvailableTripSlots(ExploreDTO state)
+        public List<DaySlot> GetAvailableMonthDaySlots(ExploreDTO state, DateTime date)
         {
+            var result = new List<DaySlot>();
+
+            if (date.Month < DateTime.Today.Month) // Month in the past
+            {
+                return result;
+            }
+
+            // Loop through days, checking trips table and route departures for each, validating on each iteration
+
+            return result;
+
+            /* [OBSOLETE]
+            
             if (state.SelectedRoute == null)
             {
                 return;
@@ -68,9 +87,10 @@ namespace MVP.Services
             {
                 // Oops, no trips with selected criteria; Show alternatives.
             }
+            */
         }
 
-        private bool CheckAvailable(ExploreDTO state, DateTime starttime)
+        private bool CheckAvailable(ExploreDTO state, DateTime day)
         {
             // expire validating trips
 

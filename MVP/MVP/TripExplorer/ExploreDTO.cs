@@ -7,33 +7,30 @@ namespace MVP.TripExplorer
     public class ExploreDTO
     {
         public List<Route> Routes { get; set; }
-
-        public DateTime SelectedDate { get; set; }
-        public Route SelectedRoute { get; set; }
-        public AccessPoint SelectedSAP { get; set; }
-        public AccessPoint SelectedDAP { get; set; }
-        public TimeSpan SelectedTime { get; set; }
-
-        public List<TripSlot> AvailableTripSlots { get; set; }
+        public Selection Selection { get; set; }
+        public List<DaySlot> MonthDaySlots { get; set; }
     }
 
-    public class TripSlot
+    public class Selection
     {
-        public DateTime Departure { get; set; }
-        public LoopedRegion SourceRegion { get; set; }
-        public LoopedRegion DestinationRegion { get; set; }
-        public AccessPoint SourceAccessPoint { get; set; }
-        public AccessPoint DestinationAccessPoint { get; set; }
-        public DateTime Arrival { get; set; }
+        public DateTime Date { get; set; }
+        public Route Route { get; set; }
+        public AccessPoint SAP { get; set; }
+        public AccessPoint DAP { get; set;}
+        public TimeSpan Time { get; set; } // this is probably no longer needed
+    }
+
+    public class DaySlot
+    {
+        public DateTime Day { get; set; }
+        public DayStatus Status { get; set; }
+        public Decimal Price { get; set; }
  
-        public TripSlot(DateTime d, LoopedRegion sr, LoopedRegion dr, AccessPoint sap, AccessPoint dap, DateTime at)
+        public enum DayStatus
         {
-            this.Departure = d;
-            this.SourceRegion = sr;
-            this.DestinationRegion = dr;
-            this.SourceAccessPoint = sap;
-            this.DestinationAccessPoint = dap;
-            this.Arrival = at;
+            GREEN,      // Available trips with selected parameters
+            YELLOW,     // Available trips with different parameters
+            RED         // No available trips
         }
     }
 }
