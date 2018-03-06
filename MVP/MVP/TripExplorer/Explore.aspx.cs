@@ -254,12 +254,14 @@ namespace MVP.TripExplorer
 
         private IEnumerable<AccessPoint> GetPossibleSAPs()
         {
-            return GetPossibleRoutes().Select(r => r.StartRegion).Distinct().FirstOrDefault()?.AccessPoints;
+            return GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue)
+                                      .Select(r => r.StartRegion).Distinct().FirstOrDefault()?.AccessPoints;
         }
 
         private IEnumerable<AccessPoint> GetPossibleDAPs()
         {
-            return GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue).FirstOrDefault()?.EndRegion?.AccessPoints;
+            return GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == DdlEndRegion.SelectedValue)
+                                      .Select(r => r.EndRegion).Distinct().FirstOrDefault()?.AccessPoints;
         }
     }
 }
