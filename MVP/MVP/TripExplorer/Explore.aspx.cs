@@ -183,7 +183,7 @@ namespace MVP.TripExplorer
             if (pageData == null)
             {
                 pageData = service.GetInitialData();
-                pageData.QueryString = service.GetQueryString(Request.QueryString);
+                pageData.QueryString = GetQueryString();
                 Session["explore.data"] = pageData;
                 
                 string dest = pageData.QueryString.Dest;
@@ -202,6 +202,20 @@ namespace MVP.TripExplorer
                 }
             }
         }
+
+        public QueryString GetQueryString()
+        {
+            var query = Request.QueryString;
+            var result = new QueryString();
+
+            if (query["Dest"] != null && query["Dest"] != string.Empty)
+            {
+                result.Dest = query["Dest"];
+            }
+
+            return result;
+        }
+
 
         private void CheckParams()
         {

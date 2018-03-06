@@ -35,18 +35,6 @@ namespace MVP.Services
             return result;
         }
 
-        public QueryString GetQueryString(System.Collections.Specialized.NameValueCollection query)
-        {
-            var result = new QueryString();
-
-            if (query["Dest"] != null && query["Dest"] != string.Empty)
-            {
-                result.Dest = query["Dest"];
-            }
-
-            return result;
-        }
-
         public List<DaySlot> GetAvailableMonthDaySlots(ExploreDTO state, DateTime date)
         {
             var result = new List<DaySlot>();
