@@ -425,6 +425,22 @@
     <Compile Include="Migrations\201803051046512_ModelUpdateBuildCalendar.Designer.cs">
       <DependentUpon>201803051046512_ModelUpdateBuildCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803060948458_ModelUpdateSettingsMinTimeBook.cs" />
+    <Compile Include="Migrations\201803060948458_ModelUpdateSettingsMinTimeBook.Designer.cs">
+      <DependentUpon>201803060948458_ModelUpdateSettingsMinTimeBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061017002_ModelUpdateFares.cs" />
+    <Compile Include="Migrations\201803061017002_ModelUpdateFares.Designer.cs">
+      <DependentUpon>201803061017002_ModelUpdateFares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061139498_ModelUpdateDefaultAP.cs" />
+    <Compile Include="Migrations\201803061139498_ModelUpdateDefaultAP.Designer.cs">
+      <DependentUpon>201803061139498_ModelUpdateDefaultAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.cs" />
+    <Compile Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.Designer.cs">
+      <DependentUpon>201803061208087_ModelUpdateDepartureVehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -503,6 +519,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803051046512_ModelUpdateBuildCalendar.resx">
       <DependentUpon>201803051046512_ModelUpdateBuildCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803060948458_ModelUpdateSettingsMinTimeBook.resx">
+      <DependentUpon>201803060948458_ModelUpdateSettingsMinTimeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061017002_ModelUpdateFares.resx">
+      <DependentUpon>201803061017002_ModelUpdateFares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061139498_ModelUpdateDefaultAP.resx">
+      <DependentUpon>201803061139498_ModelUpdateDefaultAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.resx">
+      <DependentUpon>201803061208087_ModelUpdateDepartureVehicles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

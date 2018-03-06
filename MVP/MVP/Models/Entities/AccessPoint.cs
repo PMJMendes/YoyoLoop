@@ -12,6 +12,7 @@ namespace MVP.Models.Entities
 
         public string Name { get; set; }
         public LoopedRegion Region { get; set; }
+        public bool Default { get; set; }
         public string GoogleLocation { get; set; }
     }
 }

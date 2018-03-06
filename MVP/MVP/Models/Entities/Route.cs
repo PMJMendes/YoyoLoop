@@ -17,8 +17,7 @@ namespace MVP.Models.Entities
 
         public TimeSpan Duration { get; set; }
 
-        public Decimal StandardFare { get; set; }
-        public Decimal LastMinuteFare { get; set; }
+        public ICollection<Fare> Fares { get; set; }
     }
 
     public class Departure
@@ -27,5 +26,22 @@ namespace MVP.Models.Entities
         public Route Route { get; set; }
         public DayType DayType { get; set; }
         public TimeSpan Time { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
+    }
+
+    public class Fare
+    {
+        public Guid FareId { get; set; }
+        public Route Route { get; set; }
+        public FareType FareType { get; set; }
+        public Decimal Price { get; set; }
+    }
+
+    public enum FareType
+    {
+        STANDARD,
+        LASTMINUTE,
+        MEMBERGETMEMBER,
+        PROMOTIONAL
     }
 }
