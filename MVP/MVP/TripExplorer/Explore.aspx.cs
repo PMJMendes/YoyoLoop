@@ -207,6 +207,11 @@ namespace MVP.TripExplorer
                     if (pageData.Routes.Where(r => r.EndRegion.Name == dest).Count() != 0)
                     {
                         DdlEndRegion.SelectedValue = pageData.Routes.Where(r => r.EndRegion.Name == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
+                        DdlEndAP.SelectedValue = pageData.Routes.Where(r => r.EndRegion.Name == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
+                                                                .Where(ap => ap.Default)
+                                                                .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
+                        LbEndAP.Visible = true;
+                        DdlEndAP.Visible = true;
                     }
                 }
             }
