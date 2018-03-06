@@ -62,26 +62,23 @@
                 <WeekendDayStyle BackColor="#FFFFCC" />
             </asp:Calendar></td>
         <td style="width:20px"></td>
-
         <td style="vertical-align:top">
             <asp:DropDownList ID="DdlTime" runat="server" Visible="false" AutoPostBack="True" OnSelectedIndexChanged="DdlTime_SelectedIndexChanged" SelectMethod="DdlTime_GetData">
             </asp:DropDownList></td>
-        <td style="width:20px"></td>
-
-        <%-- Debug label --%>
-        <td style="vertical-align:top">
-            <asp:Label ID="LbDebug" visible="false" runat="server"></asp:Label><br />
-        </td>
     </tr>
     </table>
 
     <br />
+
+    <%-- Debug label --%>
+            <asp:Label ID="LbDebug" visible="false" runat="server"></asp:Label><br />
+
     <%-- Debug gridview --%>
     <br /><asp:Button ID="BtnDebug" runat="server" Text="Debug" OnClick="BtnDebug_Click" />
     <br />
     <br />
 
-    <asp:GridView ID="GvDebug" runat="server" Visible="true" AutoGenerateColumns="true" SelectMethod="GvDebug_GetData" OnRowCommand="GvDebug_RowCommand">
+    <asp:GridView ID="GvDebug" runat="server" Visible="true" AutoGenerateColumns="true" SelectMethod="GvDebug_GetData">
     </asp:GridView>
     <br />
     <br />

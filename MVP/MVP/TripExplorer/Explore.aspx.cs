@@ -66,17 +66,12 @@ namespace MVP.TripExplorer
         {
             // Validate selected date first (nothing in the past, we have something to show, etc)
 
-            pageData.Selection.Date = CalDate.SelectedDate;
-
+            CheckParams();
             DrawTimePopup();   
         }
 
         protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
         {
-            //Debug
-            LbDebug.Visible = true;
-            LbDebug.Text = e.NewDate.Month.ToString();
-
             pageData.MonthDaySlots = service.GetAvailableMonthDaySlots(pageData, CalDate.VisibleDate);
             DrawCalendar();
         }
@@ -90,18 +85,7 @@ namespace MVP.TripExplorer
         {
             GvDebug.DataBind();
             GvDebug.Visible = !GvDebug.Visible;
-        }
-
-        protected void GvDebug_RowCommand(Object sender, GridViewCommandEventArgs e)
-        {
-            if(e.CommandName == "Select")
-            {
-
-                GridViewRow row = GvDebug.Rows[Convert.ToInt32(e.CommandArgument)];
-
-                //Debug Label
-                LbDebug.Text = row.Cells[0].Text;
-            }
+            LbDebug.Visible = !LbDebug.Visible;
         }
 
         public IEnumerable<ListItem> DdlEndRegion_GetData()
@@ -228,10 +212,8 @@ namespace MVP.TripExplorer
                 pageData.Selection.Route = null;
                 LbDate.Visible = false;
                 CalDate.Visible = false;
-                return;
             }
-
-            if (pageData.Selection.Route != route)
+            else if (pageData.Selection.Route != route)
             {
                 // We have a new route selection
                 pageData.Selection.Route = route;
@@ -244,7 +226,23 @@ namespace MVP.TripExplorer
 
             pageData.Selection.DAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
 
+            pageData.Selection.Date = CalDate.SelectedDate;
+
+            //Debug label
+            if (pageData.Selection.Route == null)
+            {
+                LbDebug.Text = "No route selected";
+            }
+            else
+            {
+                LbDebug.Text = "Route: " + pageData.Selection.Route.StartRegion.Name + " to " + pageData.Selection.Route.EndRegion.Name + "<br />" +
+                               "SAP: " + pageData.Selection.SAP.Name + "<br />" +
+                               "DAP: " + pageData.Selection.DAP.Name + "<br />" +
+                               "Date: " + pageData.Selection.Date.Date.ToString() + "<br />" +
+                               "Time: " + pageData.Selection.Time.ToString();
+            }
         }
+
         private void DrawCalendar()
         {
 
