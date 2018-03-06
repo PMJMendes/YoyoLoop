@@ -6,9 +6,15 @@ namespace MVP.TripExplorer
 {
     public class ExploreDTO
     {
+        public QueryString QueryString { get; set; }
         public List<Route> Routes { get; set; }
         public Selection Selection { get; set; }
         public List<DaySlot> MonthDaySlots { get; set; }
+    }
+
+    public class QueryString
+    {
+        public string Dest { get; set; }
     }
 
     public class Selection

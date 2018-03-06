@@ -14,6 +14,8 @@ namespace MVP.Services
         {
             var result = new ExploreDTO();
 
+            result.QueryString = new QueryString();
+
             using (var model = new EntityModel())
             {
                 result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints)
@@ -29,6 +31,18 @@ namespace MVP.Services
                                                Time = new TimeSpan(-1)
                                               };
             result.MonthDaySlots = new List<DaySlot>();
+
+            return result;
+        }
+
+        public QueryString GetQueryString(System.Collections.Specialized.NameValueCollection query)
+        {
+            var result = new QueryString();
+
+            if (query["Dest"] != null && query["Dest"] != string.Empty)
+            {
+                result.Dest = query["Dest"];
+            }
 
             return result;
         }

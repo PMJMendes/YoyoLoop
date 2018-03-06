@@ -104,7 +104,7 @@ namespace MVP.TripExplorer
 
         public IEnumerable<ListItem> DdlEndRegion_GetData()
         {
-            if (pageData.Routes.Where(r => r.EndRegion.Name == Request.QueryString["Dest"]).Count() != 0)
+            if (pageData.Routes.Where(r => r.EndRegion.Name == pageData.QueryString.Dest).Count() != 0)
             {
                 return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
             }
@@ -197,10 +197,10 @@ namespace MVP.TripExplorer
             if (pageData == null)
             {
                 pageData = service.GetInitialData();
+                pageData.QueryString = service.GetQueryString(Request.QueryString);
                 Session["explore.data"] = pageData;
                 
-                //check query string
-                string dest = Request.QueryString["Dest"];
+                string dest = pageData.QueryString.Dest;
 
                 if (dest != null && dest != string.Empty)
                 {
