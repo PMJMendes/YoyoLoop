@@ -225,6 +225,7 @@ namespace MVP.TripExplorer
 
             if (route == null)
             {
+                pageData.Selection.Route = null;
                 LbDate.Visible = false;
                 CalDate.Visible = false;
                 return;
