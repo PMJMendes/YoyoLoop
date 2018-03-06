@@ -6,7 +6,7 @@
     <tr>
         <td>To</td>
         <td style="width:40px"></td>
-        <td>Stop</td>
+        <td><asp:Label ID="LbEndAP" Visible="false" Text="Stop" runat="server"></asp:Label></td>
     </tr>
     <tr>
         <td>
@@ -16,7 +16,7 @@
         </td>
         <td style="width:40px"></td>
         <td>
-            <asp:DropDownList ID="DdlEndAP" runat="server" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndAP_SelectedIndexChanged" SelectMethod="DdlEndAP_GetData"
+            <asp:DropDownList ID="DdlEndAP" runat="server" Visible="false" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndAP_SelectedIndexChanged" SelectMethod="DdlEndAP_GetData"
                 style="width: 250px; max-width: 250px">
             </asp:DropDownList>
         </td>
@@ -25,7 +25,7 @@
     <tr>
         <td>From</td>
         <td style="width:40px"></td>
-        <td>Stop</td>
+        <td><asp:Label ID="LbStartAP" Visible="false" Text="Stop" runat="server"></asp:Label></td>
     </tr>
     <tr>
         <td>
@@ -35,7 +35,7 @@
         </td>
         <td style="width:40px"></td>
         <td>
-            <asp:DropDownList ID="DdlStartAP" runat="server" SelectMethod="DdlStartAP_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartAP_SelectedIndexChanged"
+            <asp:DropDownList ID="DdlStartAP" runat="server" Visible="false" SelectMethod="DdlStartAP_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartAP_SelectedIndexChanged"
                 style="width: 250px; max-width: 250px">
             </asp:DropDownList>
         </td>

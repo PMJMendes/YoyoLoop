@@ -28,6 +28,9 @@ namespace MVP.TripExplorer
 
             DdlStartRegion.DataBind();
             DdlEndAP.DataBind();
+            DdlEndAP.SelectedValue = GetPossibleDAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
+            LbEndAP.Visible = true;
+            DdlEndAP.Visible = true;
 
             CheckParams();
         }
@@ -40,6 +43,9 @@ namespace MVP.TripExplorer
             }
 
             DdlStartAP.DataBind();
+            DdlStartAP.SelectedValue = GetPossibleSAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
+            LbStartAP.Visible = true;
+            DdlStartAP.Visible = true;
 
             CheckParams();
         }
