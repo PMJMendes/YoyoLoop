@@ -29,6 +29,8 @@ namespace MVP.TripExplorer
             DdlStartRegion.DataBind();
             DdlEndAP.DataBind();
             DdlEndAP.SelectedValue = GetPossibleDAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
+            LbStartAP.Visible = false;
+            DdlStartAP.Visible = false;
             LbEndAP.Visible = true;
             DdlEndAP.Visible = true;
 
@@ -219,10 +221,19 @@ namespace MVP.TripExplorer
 
         private void CheckParams()
         {
-            if (pageData.Selection.Route != GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault())
+            var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
+
+            if (route == null)
+            {
+                LbDate.Visible = false;
+                CalDate.Visible = false;
+                return;
+            }
+
+            if (pageData.Selection.Route != route)
             {
                 // We have a new route selection
-                pageData.Selection.Route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
+                pageData.Selection.Route = route;
                 pageData.MonthDaySlots = service.GetAvailableMonthDaySlots(pageData, CalDate.VisibleDate);
 
                 DrawCalendar();
