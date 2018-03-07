@@ -13,14 +13,14 @@ namespace MVP.Models.Entities
 
         public string Name { get; set; }
         public List<DriverAvailability> Availability { get; set; }
-    }
 
-    public class DriverAvailability
-    {
-        public Guid DriverAvailabilityId { get; set; }
-        public Driver Driver { get; set; }
-        public DayType DayType { get; set; }
-        public TimeSpan StartTime { get; set; }
-        public TimeSpan EndTime { get; set; }
+        public class DriverAvailability
+        {
+            public Guid DriverAvailabilityId { get; set; }
+            public Driver Driver { get; set; }
+            public DayType DayType { get; set; }
+            public TimeSpan StartTime { get; set; }
+            public TimeSpan EndTime { get; set; }
+        }
     }
 }

@@ -19,9 +19,9 @@ namespace MVP.Models
         public DbSet<Booking> Booking { get; set; }
         public DbSet<Trip> Trip { get; set; }
         public DbSet<Vehicle> Vehicle { get; set; }
-            public DbSet<VehicleAvailability> VehicleAvailability { get; set; }
+            public DbSet<Vehicle.VehicleAvailability> VehicleAvailability { get; set; }
         public DbSet<Driver> Driver { get; set; }
-            public DbSet<DriverAvailability> DriverAvailability { get; set; }
+            public DbSet<Driver.DriverAvailability> DriverAvailability { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -199,28 +199,28 @@ namespace MVP.Migrations
             {
                 FareId = Guid.Parse("8E0E9BE3-CDF5-4670-A99C-1C0EFB39980A"),
                 Route = lis_lei,
-                FareType = FareType.STANDARD,
+                Type = Fare.FareType.STANDARD,
                 Price = 10
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("92875EFD-837A-4504-842A-7FE385F16467"),
                 Route = lis_lei,
-                FareType = FareType.LASTMINUTE,
+                Type = Fare.FareType.LASTMINUTE,
                 Price = 12
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("11D00BF6-C0CA-498D-AC94-14869EA30177"),
                 Route = lis_lei,
-                FareType = FareType.MEMBERGETMEMBER,
+                Type = Fare.FareType.MEMBERGETMEMBER,
                 Price = 3
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("83E1808F-D27A-400F-91E1-29DFAEE24752"),
                 Route = lis_lei,
-                FareType = FareType.PROMOTIONAL,
+                Type = Fare.FareType.PROMOTIONAL,
                 Price = 8
             });
             context.Departure.AddOrUpdate(new Departure()
@@ -286,28 +286,28 @@ namespace MVP.Migrations
             {
                 FareId = Guid.Parse("4313F641-9C93-4523-B896-D1050D902636"),
                 Route = lis_cas,
-                FareType = FareType.STANDARD,
+                Type = Fare.FareType.STANDARD,
                 Price = 5
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("5A3F5D88-CC6F-44B7-ABA0-D61596288206"),
                 Route = lis_cas,
-                FareType = FareType.LASTMINUTE,
+                Type = Fare.FareType.LASTMINUTE,
                 Price = 7
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("BA500341-C9F0-4A36-8748-4B3A3C33089E"),
                 Route = lis_cas,
-                FareType = FareType.MEMBERGETMEMBER,
+                Type = Fare.FareType.MEMBERGETMEMBER,
                 Price = 3
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("A77FBB98-62D0-450B-BDF4-96E85B6CB816"),
                 Route = lis_cas,
-                FareType = FareType.PROMOTIONAL,
+                Type = Fare.FareType.PROMOTIONAL,
                 Price = 4
             });
             context.Departure.AddOrUpdate(new Departure()
@@ -373,28 +373,28 @@ namespace MVP.Migrations
             {
                 FareId = Guid.Parse("FFB0B53A-FE2A-41EB-AE71-E520C7C900C3"),
                 Route = lis_coi,
-                FareType = FareType.STANDARD,
+                Type = Fare.FareType.STANDARD,
                 Price = 12
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("451D51C8-7F4A-410C-A385-FAEC1B865937"),
                 Route = lis_coi,
-                FareType = FareType.LASTMINUTE,
+                Type = Fare.FareType.LASTMINUTE,
                 Price = 15
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("0D69BC8B-381A-4D92-8008-8B90DC4E922D"),
                 Route = lis_coi,
-                FareType = FareType.MEMBERGETMEMBER,
+                Type = Fare.FareType.MEMBERGETMEMBER,
                 Price = 3
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("6693A59A-9CF1-4219-AED5-4F6AA1E9D5F6"),
                 Route = lis_coi,
-                FareType = FareType.PROMOTIONAL,
+                Type = Fare.FareType.PROMOTIONAL,
                 Price = 9
             });
             context.Departure.AddOrUpdate(new Departure()
@@ -460,28 +460,28 @@ namespace MVP.Migrations
             {
                 FareId = Guid.Parse("F8D86668-774D-432A-A2C4-18AC83BAACB4"),
                 Route = lei_lis,
-                FareType = FareType.STANDARD,
+                Type = Fare.FareType.STANDARD,
                 Price = 10
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("7C5F7EDA-7A82-4ADB-952D-C0827198AB10"),
                 Route = lei_lis,
-                FareType = FareType.LASTMINUTE,
+                Type = Fare.FareType.LASTMINUTE,
                 Price = 12
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("C15FDC88-58B4-47EB-BDB6-5321B61DF510"),
                 Route = lei_lis,
-                FareType = FareType.MEMBERGETMEMBER,
+                Type = Fare.FareType.MEMBERGETMEMBER,
                 Price = 3
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("44D16C71-6077-4145-9605-7C732F2D7246"),
                 Route = lei_lis,
-                FareType = FareType.PROMOTIONAL,
+                Type = Fare.FareType.PROMOTIONAL,
                 Price = 8
             });
             context.Departure.AddOrUpdate(new Departure()
@@ -547,28 +547,28 @@ namespace MVP.Migrations
             {
                 FareId = Guid.Parse("E6D943B2-D8F4-461F-B394-7EF0C72838B0"),
                 Route = coi_lis,
-                FareType = FareType.STANDARD,
+                Type = Fare.FareType.STANDARD,
                 Price = 12
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("D0DD4700-BB26-4F3E-8170-A475E78D1ABA"),
                 Route = coi_lis,
-                FareType = FareType.LASTMINUTE,
+                Type = Fare.FareType.LASTMINUTE,
                 Price = 15
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("DB90C275-FB19-48EE-85C3-885AB2E9DC0D"),
                 Route = coi_lis,
-                FareType = FareType.MEMBERGETMEMBER,
+                Type = Fare.FareType.MEMBERGETMEMBER,
                 Price = 3
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("E112F2AF-3E7E-4F10-BB72-235377926B57"),
                 Route = coi_lis,
-                FareType = FareType.PROMOTIONAL,
+                Type = Fare.FareType.PROMOTIONAL,
                 Price = 9
             });
             context.Departure.AddOrUpdate(new Departure()
@@ -634,28 +634,28 @@ namespace MVP.Migrations
             {
                 FareId = Guid.Parse("2BC8BE70-3FD9-46CA-B26D-A69452BD3CB5"),
                 Route = cas_lis,
-                FareType = FareType.STANDARD,
+                Type = Fare.FareType.STANDARD,
                 Price = 5
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("6D5D7C3D-32A6-4FA7-AB1C-4322E92F1356"),
                 Route = cas_lis,
-                FareType = FareType.LASTMINUTE,
+                Type = Fare.FareType.LASTMINUTE,
                 Price = 7
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("47C7EEE6-BEE4-4B4D-89C7-D17D1FDF74D8"),
                 Route = cas_lis,
-                FareType = FareType.MEMBERGETMEMBER,
+                Type = Fare.FareType.MEMBERGETMEMBER,
                 Price = 3
             });
             context.Fare.AddOrUpdate(new Fare()
             {
                 FareId = Guid.Parse("6E332D73-2BCE-4C85-8F8D-8BC773AC11DF"),
                 Route = cas_lis,
-                FareType = FareType.PROMOTIONAL,
+                Type = Fare.FareType.PROMOTIONAL,
                 Price = 4
             });
             context.Departure.AddOrUpdate(new Departure()

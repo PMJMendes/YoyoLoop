@@ -441,11 +441,18 @@
     <Compile Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.Designer.cs">
       <DependentUpon>201803061208087_ModelUpdateDepartureVehicles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803071359569_ModelReworkMinorClassFiles.cs" />
+    <Compile Include="Migrations\201803071359569_ModelReworkMinorClassFiles.Designer.cs">
+      <DependentUpon>201803071359569_ModelReworkMinorClassFiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
+    <Compile Include="Models\Entities\DayType.cs" />
+    <Compile Include="Models\Entities\Departure.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
+    <Compile Include="Models\Entities\Fare.cs" />
     <Compile Include="Models\Entities\LoopedRegion.cs" />
     <Compile Include="Models\Entities\Route.cs" />
     <Compile Include="Models\Entities\Settings.cs" />
@@ -531,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.resx">
       <DependentUpon>201803061208087_ModelUpdateDepartureVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803071359569_ModelReworkMinorClassFiles.resx">
+      <DependentUpon>201803071359569_ModelReworkMinorClassFiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

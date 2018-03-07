@@ -15,14 +15,14 @@ namespace MVP.Models.Entities
 
         public int Capacity { get; set; }
         public List<VehicleAvailability> Availability { get; set; }
-    }
 
-    public class VehicleAvailability
-    {
-        public Guid VehicleAvailabilityId { get; set; }
-        public Vehicle Vehicle { get; set; }
-        public DayType DayType { get; set; }
-        public TimeSpan StartTime { get; set; }
-        public TimeSpan EndTime { get; set; }
+        public class VehicleAvailability
+        {
+            public Guid VehicleAvailabilityId { get; set; }
+            public Vehicle Vehicle { get; set; }
+            public DayType DayType { get; set; }
+            public TimeSpan StartTime { get; set; }
+            public TimeSpan EndTime { get; set; }
+        }
     }
 }

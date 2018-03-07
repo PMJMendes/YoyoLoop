@@ -19,29 +19,4 @@ namespace MVP.Models.Entities
 
         public ICollection<Fare> Fares { get; set; }
     }
-
-    public class Departure
-    {
-        public Guid DepartureId { get; set; }
-        public Route Route { get; set; }
-        public DayType DayType { get; set; }
-        public TimeSpan Time { get; set; }
-        public ICollection<Vehicle> Vehicles { get; set; }
-    }
-
-    public class Fare
-    {
-        public Guid FareId { get; set; }
-        public Route Route { get; set; }
-        public FareType FareType { get; set; }
-        public Decimal Price { get; set; }
-    }
-
-    public enum FareType
-    {
-        STANDARD,
-        LASTMINUTE,
-        MEMBERGETMEMBER,
-        PROMOTIONAL
-    }
 }
