@@ -1,0 +1,474 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: #F05F40;
+}
+
+hr.light {
+  border-color: #fff;
+}
+
+a {
+  color: #F05F40;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #f05f40;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.bg-primary {
+  background-color: #F05F40 !important;
+}
+
+.bg-dark {
+  background-color: #212529 !important;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+section {
+  padding: 8rem 0;
+}
+
+.section-heading {
+  margin-top: 0;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #212529;
+  text-shadow: none;
+}
+
+::selection {
+  color: #fff;
+  background: #212529;
+  text-shadow: none;
+}
+
+img::selection {
+  color: #fff;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: #fff;
+  background: transparent;
+}
+
+header.master-header {
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+header.master-header .col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+header.master-header img.logo {
+  width: 150px;
+  height: 150px;
+}
+
+header.master-header h1 {
+  margin-top: 94px;
+  font-weight: 900;
+  font-size: 42px;
+  letter-spacing: 2.1px;
+  color: #ff5f6d;
+}
+
+header.master-header #wip {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.77;
+  letter-spacing: 1.6px;
+  color: #9aa1b7;
+}
+
+header.master-header #description {
+  font-size: 16.1px;
+  line-height: 1.38;
+  color: #535e7b;
+}
+
+section.yoyoloops {
+  padding-bottom: 0;
+}
+
+section.yoyoloops #city {
+  background-color: #eff1f6;
+  padding: 5% 0% 5% 8%;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.yoyoloops #city .loop {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.60;
+  letter-spacing: 1.8px;
+  color: #838da7;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section.yoyoloops #city .loop img {
+  width: 30px;
+  height: auto;
+  margin-right: 2%;
+}
+
+section.yoyoloops #city .name {
+  font-size: 74px;
+  color: #ff5f6d;
+}
+
+@media (max-width: 1200px) {
+  section.yoyoloops #city .name {
+    font-size: 50px;
+  }
+}
+
+section.yoyoloops #city .price {
+  font-size: 38px;
+  color: #535e7b;
+}
+
+@media (max-width: 1200px) {
+  section.yoyoloops #city .price {
+    font-size: 20px;
+  }
+}
+
+section.yoyoloops #city p {
+  margin-bottom: 4%;
+}
+
+section.yoyoloops #city p:last-child {
+  margin-bottom: 0px;
+}
+
+section.yoyoloops #city.right-side {
+  padding: 5% 8% 5% 0%;
+}
+
+section.yoyoloops #city.right-side p:first-child {
+  display: block;
+}
+
+section.yoyoloops .cascais {
+  background-image: url("../img/cascais.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+section.yoyoloops .coimbra {
+  background-image: url("../img/coimbra.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+section.yoyoloops .leiria {
+  background-image: url("../img/leiria.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+section.yoyoloops #city-details {
+  padding: 1% 5% 0% 5%;
+}
+
+@media (max-width: 1200px) {
+  section.yoyoloops #city-details {
+    padding-bottom: 2%;
+  }
+}
+
+section.yoyoloops #city-details .directions {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.yoyoloops #city-details .directions div:first-child {
+  margin-left: 10%;
+}
+
+section.yoyoloops #city-details .directions div:last-child {
+  margin-right: 10%;
+}
+
+section.yoyoloops #city-details img {
+  margin: 5%;
+}
+
+section.yoyoloops #city-details img.stop {
+  width: 40px;
+  height: 50px;
+  margin-bottom: 0%;
+}
+
+section.yoyoloops #city-details img.arrow {
+  width: 125px;
+  height: 40px;
+  margin: 0% 5%;
+}
+
+@media (max-width: 992px) {
+  section.yoyoloops #city-details img.arrow {
+    width: 80px;
+    height: 25px;
+  }
+}
+
+section.yoyoloops #city-details p.city-name {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: 2px;
+}
+
+section.yoyoloops #city-details #access-points {
+  color: white;
+  font-size: 10px;
+  line-height: 1.89;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.yoyoloops #city-details #access-points p {
+  margin-bottom: 0;
+}
+
+section.yoyoloops #city-details #access-points p.ap-right {
+  margin-left: 30%;
+}
+
+@media (max-width: 768px) {
+  section.yoyoloops #city-details #access-points p.ap-right {
+    margin-left: 20%;
+  }
+}
+
+section.yoyoloops #city-details #access-points p.timeline-left {
+  color: #ff5f6d;
+}
+
+section.yoyoloops #city-details #access-points p.timeline-right {
+  color: #ffcc66;
+}
+
+section.yoyoloops #city-details #access-points p.day-of-week {
+  color: #ffffff;
+}
+
+section.yoyoloops #city-details .departures-1,
+section.yoyoloops #city-details .departures-2 {
+  font-size: 12px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.89;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+section.yoyoloops #city-details .departures-1 {
+  padding-right: 15%;
+}
+
+section.yoyoloops #city-details .departures-1 p {
+  padding-right: 0;
+}
+
+@media (max-width: 1200px) {
+  section.yoyoloops #city-details .departures-1 {
+    padding-right: 5%;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  section.yoyoloops #city-details .departures-1 {
+    padding-right: 10%;
+  }
+}
+
+section.yoyoloops #city-details .departures-2 {
+  padding-left: 20%;
+}
+
+@media (max-width: 1200px) {
+  section.yoyoloops #city-details .departures-2 {
+    padding-left: 10%;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  section.yoyoloops #city-details .departures-2 {
+    padding-left: 15%;
+  }
+}
+
+section.yoyoloops #city-details .half {
+  width: 50%;
+}
+
+section.why h2 {
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.0;
+  letter-spacing: normal;
+  color: #535e7b;
+}
+
+section.why img {
+  width: 55px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 10%;
+}
+
+section.why h3 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.39;
+  color: #535e7b;
+}
+
+section.why p {
+  font-size: 14.2px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.17;
+  color: #3b3b3b;
+}
+
+section.contacts {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  background-image: url("../img/road.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+section.contacts h2 {
+  font-size: 35px;
+  line-height: 1.0;
+}
+
+section.contacts p {
+  font-size: 56px;
+  line-height: 1.1;
+}
+
+section.contacts .btn {
+  border-radius: 17.6px;
+}
+
+section.contacts span {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+section.contacts a {
+  font-weight: normal;
+  font-size: 14px;
+  color: #ff5f6d;
+}
+
+section.footer {
+  background-color: #eff1f6;
+  margin: 0;
+  padding: 3%;
+}
+
+section.footer p {
+  font-size: 12px;
+  color: #535e7b;
+}
+
+section.footer img {
+  width: 42px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.navbar {
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  font-stretch: normal;
+}
+
+.navbar p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+  color: #ff5f6d;
+}
+
+.navbar .language {
+  font-size: 14px;
+  color: #535e7b;
+  line-height: 1.3;
+}
+
+.navbar .navbar-brand {
+  padding-left: 3%;
+}
+
+.navbar .navbar-brand.navbar-right {
+  padding-right: 3%;
+}
