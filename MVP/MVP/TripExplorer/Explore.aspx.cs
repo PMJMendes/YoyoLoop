@@ -64,10 +64,11 @@ namespace MVP.TripExplorer
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
         {
-            // Validate selected date first (nothing in the past, we have something to show, etc)
-
             CheckParams();
-            DrawTimePopup();   
+
+            List<TimeSpan> departures = service.GetDepartureTimes(pageData);
+
+            DrawTimeSelectionPopup(pageData.Selection.Date, departures);
         }
 
         protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
@@ -77,7 +78,7 @@ namespace MVP.TripExplorer
                 return;
             }
 
-            DrawCalendar();
+            GetCalendarData();
         }
 
         protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
@@ -107,11 +108,6 @@ namespace MVP.TripExplorer
             {
                 e.Day.IsSelectable = false;
             }
-        }
-
-        protected void DdlTime_SelectedIndexChanged(object sender, EventArgs e) // [OBSOLETE]
-        {
-            CheckParams();
         }
 
         protected void BtnDebug_Click(object sender, EventArgs e)
@@ -154,23 +150,6 @@ namespace MVP.TripExplorer
             return GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
         }
 
-        public IEnumerable<String> DdlTime_GetData()  // [OBSOLETE]
-        {
-            yield return Properties.Strings.AnyTime;
-
-            var route = pageData.Selection.Route;
-
-            if (route == null)
-            {
-                yield break;
-            }
-
-            foreach (Departure d in route.Departures)
-            {
-                yield return d.Time.ToString("hh\\:mm");
-            }
-        }
-
         public IEnumerable<object> GvDebug_GetData()
         {
             return pageData.DaySlots;
@@ -205,6 +184,7 @@ namespace MVP.TripExplorer
                     }
                 }
 
+                PnTime.Visible = false;
                 CalDate.VisibleDate = DateTime.Today;
             }
         }
@@ -230,6 +210,8 @@ namespace MVP.TripExplorer
             if (route == null)
             {
                 pageData.Selection.Route = null;
+                pageData.DaySlots.Clear();
+                PnTime.Visible = false;
                 LbDate.Visible = false;
                 CalDate.Visible = false;
             }
@@ -238,7 +220,7 @@ namespace MVP.TripExplorer
                 // We have a new route selection
                 pageData.Selection.Route = route;
                 
-                DrawCalendar();
+                GetCalendarData();
             }
 
             pageData.Selection.SAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
@@ -262,7 +244,7 @@ namespace MVP.TripExplorer
             }
         }
 
-        private void DrawCalendar()
+        private void GetCalendarData()
         {
             DateTime d = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
    
@@ -279,8 +261,6 @@ namespace MVP.TripExplorer
             }
 
             lastdate = firstdate + TimeSpan.FromDays(41);
-            LbDebug.Text = "First day: " + firstdate.ToString() + "<br />" +
-                           "Last day: " + lastdate.ToString();
 
             pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
 
@@ -293,9 +273,32 @@ namespace MVP.TripExplorer
             return;
         }
 
-        private void DrawTimePopup()
+        private void DrawTimeSelectionPopup(DateTime date, List<TimeSpan> times)
         {
-            return;
+            LbPnTimeTextDate.Text = date.ToString("dd") + " de " + date.ToString("MMMM") + "<br />";
+
+            times.Sort();
+            int i = 0;
+            foreach(TimeSpan t in times)
+            { 
+                var button = new Button();
+                button.Click += BtnDepartureClick;
+                button.ID = t.ToString();
+                button.Text = t.ToString("hh\\:mm");
+                button.Visible = true;
+                var id = "PH" + i.ToString();
+                PnTime.FindControl(id).Controls.Add(button);
+                i++;
+            }
+
+            PnTime.Visible = true;
+        }
+
+        private void BtnDepartureClick(object sender, EventArgs e)
+        {
+            LbDebug.Text = "Time: " + sender.ToString();
+            PnTime.Visible = false;
+            CalDate.SelectedDate = DateTime.MinValue;
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

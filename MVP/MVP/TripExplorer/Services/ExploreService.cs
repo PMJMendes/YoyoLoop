@@ -18,8 +18,6 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
-                result.Settings = model.Settings.FirstOrDefault();
-
                 result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints)
                                            .Include(r => r.EndRegion.AccessPoints)
                                            .Include(d => d.Departures)
@@ -58,11 +56,12 @@ namespace MVP.Services
         public DaySlot GetDay(ExploreDTO state, DateTime date)
         {
             var result = new DaySlot();
+            var model = new EntityModel();
             var daytype = GetDayType(date);
 
             result.Day = date;
 
-            bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < state.Settings.LastMinuteThreshold;
+            bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
 
             if (state.Selection.Route.Departures.Where(dt => dt.DayType == daytype).Count() > 0 && !lastminute)
             {
@@ -90,6 +89,17 @@ namespace MVP.Services
             // right now only returns day of week, eventually will check for holidays/eves
 
             return (DayType)date.DayOfWeek;
+        }
+
+        public List<TimeSpan> GetDepartureTimes(ExploreDTO state)
+        {
+            var result = new List<TimeSpan>();
+
+            foreach(Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
+            {
+                result.Add(d.Time);
+            }
+            return result;
         }
     }
 }

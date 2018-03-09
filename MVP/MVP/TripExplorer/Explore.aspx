@@ -51,7 +51,7 @@
         <td><asp:Label ID="LbTime" Visible="false" Text="At" runat="server"></asp:Label></td>
     </tr>
     <tr>
-        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
+        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                 <NextPrevStyle VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#808080" />
@@ -63,11 +63,31 @@
             </asp:Calendar></td>
         <td style="width:20px"></td>
         <td style="vertical-align:top">
-            <asp:DropDownList ID="DdlTime" runat="server" Visible="false" AutoPostBack="True" OnSelectedIndexChanged="DdlTime_SelectedIndexChanged" SelectMethod="DdlTime_GetData">
-            </asp:DropDownList></td>
+            
+            <asp:Panel ID="PnTime" runat="server" Visible="false" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center">
+                <asp:Label ID="LbPnTimeTextDate" runat="server"></asp:Label>
+                <br />
+                <table>
+                    <tr>
+                        <td><asp:PlaceHolder runat="server" ID="PH0"></asp:PlaceHolder></td>
+                        <td style="width:10px"></td>
+                        <td><asp:PlaceHolder runat="server" ID="PH1"></asp:PlaceHolder></td>
+                    </tr>
+                    <tr>
+                        <td><asp:PlaceHolder runat="server" ID="PH2"></asp:PlaceHolder></td>
+                        <td style="width:10px"></td>
+                        <td><asp:PlaceHolder runat="server" ID="PH3"></asp:PlaceHolder></td>
+                    </tr>
+                    <tr>
+                        <td><asp:PlaceHolder runat="server" ID="PH4"></asp:PlaceHolder></td>
+                        <td style="width:10px"></td>
+                        <td><asp:PlaceHolder runat="server" ID="PH5"></asp:PlaceHolder></td>
+                    </tr>
+                </table>
+            </asp:Panel>
+        </td>
     </tr>
     </table>
-
     <br />
 
     <%-- Debug label --%>
