@@ -7,7 +7,7 @@ namespace MVP.Models.Entities
 {
     public class Settings
     {
-        public int Id { get; set; }
+        public Guid SettingsId { get; set; }
         public TimeSpan BookTimeout { get; set; } // Timeout for a booking to get processed by the payment provider
         public int VehicleCapacity { get; set; } // To be moved to Vehicle at a later date
         public int LastMinuteThreshold { get; set; } // in days

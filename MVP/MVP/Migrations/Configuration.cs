@@ -16,7 +16,7 @@ namespace MVP.Migrations
         {
             context.Settings.AddOrUpdate(new Settings()
             {
-                Id = 0,
+                SettingsId = Guid.Parse("0771CC70-AF4A-452B-AE8F-F96314C31C55"),
                 BookTimeout = new TimeSpan (0, 10, 0),
                 VehicleCapacity = 7,
                 LastMinuteThreshold = 2,
