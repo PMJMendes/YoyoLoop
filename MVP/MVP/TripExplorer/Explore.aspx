@@ -51,7 +51,7 @@
         <td><asp:Label ID="LbTime" Visible="false" Text="At" runat="server"></asp:Label></td>
     </tr>
     <tr>
-        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
+        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                 <NextPrevStyle VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#808080" />
@@ -78,7 +78,7 @@
     <br />
     <br />
 
-    <asp:GridView ID="GvDebug" runat="server" Visible="true" AutoGenerateColumns="true" SelectMethod="GvDebug_GetData">
+    <asp:GridView ID="GvDebug" runat="server" Visible="false" AutoGenerateColumns="true" SelectMethod="GvDebug_GetData">
     </asp:GridView>
     <br />
     <br />

@@ -18,9 +18,12 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
+                result.Settings = model.Settings.FirstOrDefault();
+
                 result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints)
                                            .Include(r => r.EndRegion.AccessPoints)
                                            .Include(d => d.Departures)
+                                           .Include(f => f.Fares)
                                            .ToList();
             }
 
@@ -30,75 +33,63 @@ namespace MVP.Services
                                                DAP = null,
                                                Time = new TimeSpan(-1)
                                               };
-            result.MonthDaySlots = new List<DaySlot>();
+            result.DaySlots = new List<DaySlot>();
 
             return result;
         }
 
-        public List<DaySlot> GetAvailableMonthDaySlots(ExploreDTO state, DateTime date)
+        public List<DaySlot> GetDaySlots(ExploreDTO state, DateTime startdate, DateTime enddate)
         {
             var result = new List<DaySlot>();
+            var date = startdate;
 
-            if (date.Month < DateTime.Today.Month) // Month in the past
+            while(date <= enddate)
             {
-                return result;
+                if(date >= DateTime.Today)
+                {
+                    result.Add(GetDay(state, date));
+                }
+                date = date + TimeSpan.FromDays(1);
             }
-
-            // Loop through days, checking trips table and route departures for each, validating on each iteration
 
             return result;
+        }
 
-            /* [OBSOLETE]
-            
-            if (state.SelectedRoute == null)
+        public DaySlot GetDay(ExploreDTO state, DateTime date)
+        {
+            var result = new DaySlot();
+            var daytype = GetDayType(date);
+
+            result.Day = date;
+
+            bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < state.Settings.LastMinuteThreshold;
+
+            if (state.Selection.Route.Departures.Where(dt => dt.DayType == daytype).Count() > 0 && !lastminute)
             {
-                return;
-            }
-
-            state.AvailableTripSlots.Clear();
-
-            if (state.SelectedTime >= TimeSpan.Zero)
-            {
-                if (CheckAvailable(state, state.SelectedDate + state.SelectedTime))
-                {
-                    state.AvailableTripSlots.Add(new TripSlot(state.SelectedDate + state.SelectedTime,
-                                                              state.SelectedRoute.StartRegion,
-                                                              state.SelectedRoute.EndRegion,
-                                                              state.SelectedSAP,
-                                                              state.SelectedDAP,
-                                                              state.SelectedDate + state.SelectedTime + state.SelectedRoute.Duration));
-                }
+                result.Status = DaySlot.DayStatus.GREEN;
             }
             else
             {
-                foreach (Departure d in state.SelectedRoute.Departures)
-                {
-                    if (CheckAvailable(state, state.SelectedDate + d.Time))
-                    {
-                        state.AvailableTripSlots.Add(new TripSlot(state.SelectedDate + d.Time,
-                                                                  state.SelectedRoute.StartRegion,
-                                                                  state.SelectedRoute.EndRegion,
-                                                                  state.SelectedSAP,
-                                                                  state.SelectedDAP,
-                                                                  state.SelectedDate + d.Time + state.SelectedRoute.Duration));
-                    }
-                }
+                result.Status = DaySlot.DayStatus.RED;
             }
 
-            if (state.AvailableTripSlots.Count() == 0)
+            if (lastminute)
             {
-                // Oops, no trips with selected criteria; Show alternatives.
+                result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
             }
-            */
+            else
+            {
+                result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.STANDARD).Select(p => p.Price).FirstOrDefault();
+            }
+
+            return result;
         }
 
-        private bool CheckAvailable(ExploreDTO state, DateTime day)
+        public DayType GetDayType(DateTime date)
         {
-            // expire validating trips
+            // right now only returns day of week, eventually will check for holidays/eves
 
-            //This is where we check whether we have an available car
-            return true;
+            return (DayType)date.DayOfWeek;
         }
-
     }
 }

@@ -72,8 +72,41 @@ namespace MVP.TripExplorer
 
         protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
         {
-            pageData.MonthDaySlots = service.GetAvailableMonthDaySlots(pageData, CalDate.VisibleDate);
+            if (CalDate.VisibleDate.Month < DateTime.Today.Month)
+            {
+                return;
+            }
+
             DrawCalendar();
+        }
+
+        protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
+        {
+            var dayslot = pageData.DaySlots.Where(d => d.Day == e.Day.Date).FirstOrDefault();
+
+            if (dayslot != null)
+            {
+                e.Day.IsSelectable = true;
+                Label lb = new Label();
+                lb.Text = " <br>" + dayslot.Price.ToString() + "€";
+                switch (dayslot.Status)
+                {
+                    case DaySlot.DayStatus.RED:
+                        lb.ForeColor = System.Drawing.Color.Red;
+                        break;
+                    case DaySlot.DayStatus.GREEN:
+                        lb.ForeColor = System.Drawing.Color.Green;
+                        break;
+                    case DaySlot.DayStatus.YELLOW:
+                        lb.ForeColor = System.Drawing.Color.Yellow;
+                        break;
+                }
+                e.Cell.Controls.Add(lb);
+            }
+            else
+            {
+                e.Day.IsSelectable = false;
+            }
         }
 
         protected void DdlTime_SelectedIndexChanged(object sender, EventArgs e) // [OBSOLETE]
@@ -140,36 +173,7 @@ namespace MVP.TripExplorer
 
         public IEnumerable<object> GvDebug_GetData()
         {
-            return pageData.MonthDaySlots;
-        
-
-            /* [OBSOLETE] AvailableTripSlots - needs to be moved to the GetAvailableTripSlots service but currently depends on page methods
-             (GetPossibleSAPs/DAPs) that depend on pagecontrols selected values 
-            
-            var sourceAccessPoints = pageData.SelectedSAP == null ? GetPossibleSAPs() : new[] { pageData.SelectedSAP };
-            var destinationAccessPoints = pageData.SelectedDAP == null ? GetPossibleDAPs() : new[] { pageData.SelectedDAP };
-
-            pageData.AvailableTripSlots = pageData.AvailableTripSlots.Where(dt => pageData.SelectedRoute != null).
-                SelectMany(dt => sourceAccessPoints.SelectMany(sap => destinationAccessPoints.Select(dap => new TripSlot
-            (
-                dt.Departure,
-                sap.Region,
-                dap.Region,
-                sap,
-                dap,
-                dt.Departure + pageData.SelectedRoute.Duration
-            )))).ToList();
-
-            return pageData.AvailableTripSlots.Select(ts => new
-            {
-                ts.Departure,
-                SourceRegion = ts.SourceRegion.Name,
-                SourceAccessPoint = ts.SourceAccessPoint.Name,
-                DestinationRegion = ts.DestinationRegion.Name,
-                DestinationAccessPoint = ts.DestinationAccessPoint.Name,
-                ts.Arrival
-            });
-            */
+            return pageData.DaySlots;
         }
 
         private void InitData()
@@ -200,6 +204,8 @@ namespace MVP.TripExplorer
                         DdlEndAP.Visible = true;
                     }
                 }
+
+                CalDate.VisibleDate = DateTime.Today;
             }
         }
 
@@ -231,8 +237,7 @@ namespace MVP.TripExplorer
             {
                 // We have a new route selection
                 pageData.Selection.Route = route;
-                pageData.MonthDaySlots = service.GetAvailableMonthDaySlots(pageData, CalDate.VisibleDate);
-
+                
                 DrawCalendar();
             }
 
@@ -259,6 +264,28 @@ namespace MVP.TripExplorer
 
         private void DrawCalendar()
         {
+            DateTime d = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
+   
+            DateTime firstdate = new DateTime();
+            DateTime lastdate = new DateTime();
+
+            if (d.DayOfWeek == DayOfWeek.Sunday)
+            {
+                firstdate = d - TimeSpan.FromDays(6);
+            }
+            else
+            {
+                firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);    
+            }
+
+            lastdate = firstdate + TimeSpan.FromDays(41);
+            LbDebug.Text = "First day: " + firstdate.ToString() + "<br />" +
+                           "Last day: " + lastdate.ToString();
+
+            pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
+
+            //Debug
+            GvDebug.DataBind();
 
             LbDate.Visible = true;
             CalDate.Visible = true;
