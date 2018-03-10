@@ -76,15 +76,6 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.Label LbDate;
         
         /// <summary>
-        /// LbTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbTime;
-        
-        /// <summary>
         /// CalDate control.
         /// </summary>
         /// <remarks>
@@ -112,58 +103,67 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.Label LbPnTimeTextDate;
         
         /// <summary>
-        /// PH0 control.
+        /// TbDepartures control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PH0;
+        protected global::System.Web.UI.WebControls.Table TbDepartures;
         
         /// <summary>
-        /// PH1 control.
+        /// BtnDeparture1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PH1;
+        protected global::System.Web.UI.WebControls.Button BtnDeparture1;
         
         /// <summary>
-        /// PH2 control.
+        /// BtnDeparture2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PH2;
+        protected global::System.Web.UI.WebControls.Button BtnDeparture2;
         
         /// <summary>
-        /// PH3 control.
+        /// BtnDeparture3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PH3;
+        protected global::System.Web.UI.WebControls.Button BtnDeparture3;
         
         /// <summary>
-        /// PH4 control.
+        /// BtnDeparture4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PH4;
+        protected global::System.Web.UI.WebControls.Button BtnDeparture4;
         
         /// <summary>
-        /// PH5 control.
+        /// BtnDeparture5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PH5;
+        protected global::System.Web.UI.WebControls.Button BtnDeparture5;
+        
+        /// <summary>
+        /// BtnDeparture6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDeparture6;
         
         /// <summary>
         /// LbDebug control.

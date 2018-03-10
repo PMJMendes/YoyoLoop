@@ -25,7 +25,7 @@ namespace MVP.Services
                                            .ToList();
             }
 
-            result.Selection = new Selection { Date = DateTime.Today,
+            result.Selection = new Selection { Date = DateTime.MinValue,
                                                Route = null,
                                                SAP = null,
                                                DAP = null,

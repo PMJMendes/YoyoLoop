@@ -64,6 +64,7 @@ namespace MVP.TripExplorer
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
         {
+            pageData.Selection.Time = new TimeSpan(-1); // date changed, we need to clear selected time
             CheckParams();
 
             List<TimeSpan> departures = service.GetDepartureTimes(pageData);
@@ -168,7 +169,7 @@ namespace MVP.TripExplorer
                 pageData = service.GetInitialData();
                 pageData.QueryString = GetQueryString();
                 Session["explore.data"] = pageData;
-                
+
                 string dest = pageData.QueryString.Dest;
 
                 if (dest != null && dest != string.Empty)
@@ -219,7 +220,7 @@ namespace MVP.TripExplorer
             {
                 // We have a new route selection
                 pageData.Selection.Route = route;
-                
+
                 GetCalendarData();
             }
 
@@ -227,7 +228,10 @@ namespace MVP.TripExplorer
 
             pageData.Selection.DAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
 
-            pageData.Selection.Date = CalDate.SelectedDate;
+            if (CalDate.SelectedDate != DateTime.MinValue)
+            {
+                pageData.Selection.Date = CalDate.SelectedDate;
+            }
 
             //Debug label
             if (pageData.Selection.Route == null)
@@ -238,16 +242,30 @@ namespace MVP.TripExplorer
             {
                 LbDebug.Text = "Route: " + pageData.Selection.Route.StartRegion.Name + " to " + pageData.Selection.Route.EndRegion.Name + "<br />" +
                                "SAP: " + pageData.Selection.SAP.Name + "<br />" +
-                               "DAP: " + pageData.Selection.DAP.Name + "<br />" +
-                               "Date: " + pageData.Selection.Date.Date.ToString() + "<br />" +
-                               "Time: " + pageData.Selection.Time.ToString();
+                               "DAP: " + pageData.Selection.DAP.Name + "<br />";
+                if (pageData.Selection.Date != DateTime.MinValue)
+                {
+                    LbDebug.Text += "Date: " + pageData.Selection.Date.ToString("dd-MMM-yyyy") + "<br />";
+                }
+                else
+                {
+                    LbDebug.Text += "Date: <br />";
+                }
+                if (pageData.Selection.Time != new TimeSpan(-1))
+                {
+                    LbDebug.Text += "Time: " + pageData.Selection.Time.ToString();
+                }
+                else
+                {
+                    LbDebug.Text += "Time: ";
+                }
             }
         }
 
         private void GetCalendarData()
         {
             DateTime d = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
-   
+
             DateTime firstdate = new DateTime();
             DateTime lastdate = new DateTime();
 
@@ -257,7 +275,7 @@ namespace MVP.TripExplorer
             }
             else
             {
-                firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);    
+                firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);
             }
 
             lastdate = firstdate + TimeSpan.FromDays(41);
@@ -275,30 +293,39 @@ namespace MVP.TripExplorer
 
         private void DrawTimeSelectionPopup(DateTime date, List<TimeSpan> times)
         {
-            LbPnTimeTextDate.Text = date.ToString("dd") + " de " + date.ToString("MMMM") + "<br />";
+            IEnumerable<Button> buttons = new List<Button>() { BtnDeparture1,
+                                                               BtnDeparture2,
+                                                               BtnDeparture3,
+                                                               BtnDeparture4,
+                                                               BtnDeparture5,
+                                                               BtnDeparture6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
+
+            foreach(Button b in buttons)
+            {
+                b.Visible = false;
+            }
 
             times.Sort();
-            int i = 0;
-            foreach(TimeSpan t in times)
-            { 
-                var button = new Button();
-                button.Click += BtnDepartureClick;
-                button.ID = t.ToString();
-                button.Text = t.ToString("hh\\:mm");
+
+            LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
+
+            for (int i = 1; i <= Math.Min(times.Count(), buttons.Count()); i++ )
+            {
+                Button button = buttons.Where(b => b.ID == "BtnDeparture" + i.ToString()).First();
+                button.Text = times.ElementAt(i-1).ToString("hh\\:mm");
                 button.Visible = true;
-                var id = "PH" + i.ToString();
-                PnTime.FindControl(id).Controls.Add(button);
-                i++;
             }
 
             PnTime.Visible = true;
         }
 
-        private void BtnDepartureClick(object sender, EventArgs e)
+        protected void BtnDeparture_Click(object sender, EventArgs e)
         {
-            LbDebug.Text = "Time: " + sender.ToString();
+            Button button = (Button)sender;
             PnTime.Visible = false;
+            pageData.Selection.Time = TimeSpan.Parse(button.Text);
             CalDate.SelectedDate = DateTime.MinValue;
+            CheckParams(); //Dont really know where I'll go here - this will do for now
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

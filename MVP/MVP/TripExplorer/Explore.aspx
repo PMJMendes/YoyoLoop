@@ -48,11 +48,11 @@
     <tr>
         <td><asp:Label ID="LbDate" Visible="false" Text="On" runat="server"></asp:Label></td>
         <td style="width:20px"></td>
-        <td><asp:Label ID="LbTime" Visible="false" Text="At" runat="server"></asp:Label></td>
+        <td></td>
     </tr>
     <tr>
-        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px">
-                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px" CellPadding="12">
+                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt"/>
                 <NextPrevStyle VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#808080" />
                 <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
@@ -62,28 +62,25 @@
                 <WeekendDayStyle BackColor="#FFFFCC" />
             </asp:Calendar></td>
         <td style="width:20px"></td>
+
         <td style="vertical-align:top">
-            
-            <asp:Panel ID="PnTime" runat="server" Visible="false" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center">
+            <asp:Panel ID="PnTime" runat="server" Visible="false" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center" Width="140px" Height="160px">
                 <asp:Label ID="LbPnTimeTextDate" runat="server"></asp:Label>
                 <br />
-                <table>
-                    <tr>
-                        <td><asp:PlaceHolder runat="server" ID="PH0"></asp:PlaceHolder></td>
-                        <td style="width:10px"></td>
-                        <td><asp:PlaceHolder runat="server" ID="PH1"></asp:PlaceHolder></td>
-                    </tr>
-                    <tr>
-                        <td><asp:PlaceHolder runat="server" ID="PH2"></asp:PlaceHolder></td>
-                        <td style="width:10px"></td>
-                        <td><asp:PlaceHolder runat="server" ID="PH3"></asp:PlaceHolder></td>
-                    </tr>
-                    <tr>
-                        <td><asp:PlaceHolder runat="server" ID="PH4"></asp:PlaceHolder></td>
-                        <td style="width:10px"></td>
-                        <td><asp:PlaceHolder runat="server" ID="PH5"></asp:PlaceHolder></td>
-                    </tr>
-                </table>
+                <asp:Table ID="TbDepartures" runat="server" BorderStyle="None" CellSpacing="10" HorizontalAlign="Center" CellPadding="5">
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture1" runat="server" OnClick="BtnDeparture_Click" /></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture2" runat="server" OnClick="BtnDeparture_Click" /></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture3" runat="server" OnClick="BtnDeparture_Click" /></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture4" runat="server" OnClick="BtnDeparture_Click" /></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture5" runat="server" OnClick="BtnDeparture_Click" /></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture6" runat="server" OnClick="BtnDeparture_Click" /></asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
             </asp:Panel>
         </td>
     </tr>
