@@ -335,7 +335,7 @@ namespace MVP.TripExplorer
                 b.Visible = false;
             }
 
-            slots.OrderBy(t => t.Time);
+            slots = slots.OrderBy(t => t.Time).ToList();
 
             LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
 
