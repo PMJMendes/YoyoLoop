@@ -188,6 +188,7 @@ namespace MVP.TripExplorer
 
                 PnTime.Visible = false;
                 CalDate.VisibleDate = DateTime.Today;
+                CalDate.SelectedDate = DateTime.MinValue;
             }
         }
 
@@ -208,6 +209,8 @@ namespace MVP.TripExplorer
         private void CheckParams()
         {
             var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
+            var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
+            var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
 
             if (route == null)
             {
@@ -223,18 +226,34 @@ namespace MVP.TripExplorer
                 PnTime.Visible = false;
                 LbDate.Visible = false;
                 CalDate.Visible = false;
+                CalDate.SelectedDate = DateTime.MinValue;
             }
-            else if (pageData.Selection.Route != route)
+            else if (pageData.Selection.Route != route)  // We have a new route selection
             {
-                // We have a new route selection
                 pageData.Selection.Route = route;
 
                 GetCalendarData();
             }
 
-            pageData.Selection.SAP = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
+            if (pageData.Selection.SAP != sap) // we have a new sap
+            {
+                pageData.Selection.SAP = sap;
 
-            pageData.Selection.DAP = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
+                if (route != null)
+                {
+                    GetCalendarData(); // we need to redraw calendar cause daystatus may have changed
+                }
+            }
+
+            if (pageData.Selection.SAP != sap) // we have a new sap
+            {
+                pageData.Selection.DAP = dap;
+
+                if (route != null)
+                {
+                    GetCalendarData(); // we need to redraw calendar cause daystatus may have changed
+                }
+            }
 
             if (CalDate.SelectedDate != DateTime.MinValue)
             {
