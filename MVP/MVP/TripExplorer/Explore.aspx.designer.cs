@@ -94,15 +94,6 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.Panel PnTime;
         
         /// <summary>
-        /// LbPnTimeTextDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbPnTimeTextDate;
-        
-        /// <summary>
         /// TbDepartures control.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace MVP.TripExplorer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table TbDepartures;
+        
+        /// <summary>
+        /// LbPnTimeTextDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbPnTimeTextDate;
         
         /// <summary>
         /// BtnDeparture1 control.

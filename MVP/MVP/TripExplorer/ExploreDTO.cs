@@ -23,20 +23,26 @@ namespace MVP.TripExplorer
         public Route Route { get; set; }
         public AccessPoint SAP { get; set; }
         public AccessPoint DAP { get; set;}
-        public TimeSpan Time { get; set; } // this is probably no longer needed
+        public TimeSpan Time { get; set; }
     }
 
     public class DaySlot
     {
         public DateTime Day { get; set; }
-        public DayStatus Status { get; set; }
+        public SlotStatus Status { get; set; }
         public Decimal Price { get; set; }
- 
-        public enum DayStatus
-        {
-            GREEN,      // Available trips with selected parameters
-            YELLOW,     // Available trips with different parameters
-            RED         // No available trips
-        }
+    }
+
+    public class TimeSlot
+    {
+        public TimeSpan Time { get; set; }
+        public SlotStatus Status { get; set; }
+    }
+
+    public enum SlotStatus
+    {
+        GREEN,      // Available with selected parameters
+        YELLOW,     // Available with different parameters
+        RED         // Not available
     }
 }

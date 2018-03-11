@@ -65,11 +65,11 @@ namespace MVP.Services
 
             if (state.Selection.Route.Departures.Where(dt => dt.DayType == daytype).Count() > 0 && !lastminute)
             {
-                result.Status = DaySlot.DayStatus.GREEN;
+                result.Status = SlotStatus.GREEN;
             }
             else
             {
-                result.Status = DaySlot.DayStatus.RED;
+                result.Status = SlotStatus.RED;
             }
 
             if (lastminute)
@@ -91,13 +91,31 @@ namespace MVP.Services
             return (DayType)date.DayOfWeek;
         }
 
-        public List<TimeSpan> GetDepartureTimes(ExploreDTO state)
+        public List<TimeSlot> GetTimeSlots(ExploreDTO state)
         {
-            var result = new List<TimeSpan>();
+            var result = new List<TimeSlot>();
+            var model = new EntityModel();
+            bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
 
-            foreach(Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
+            // Will loop through trips here
+
+            foreach (Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
             {
-                result.Add(d.Time);
+                var slot = new TimeSlot();
+
+                slot.Time = d.Time;
+
+                // All slot conditions will be checked here to determine status
+                if (lastminute)
+                {
+                    slot.Status = SlotStatus.RED;
+                }
+                else
+                {
+                    slot.Status = SlotStatus.GREEN;
+                }
+
+                result.Add(slot);
             }
             return result;
         }

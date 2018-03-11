@@ -3,6 +3,7 @@ using MVP.Models;
 using MVP.Models.Entities;
 using System;
 using System.Linq;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
 
@@ -67,7 +68,7 @@ namespace MVP.TripExplorer
             pageData.Selection.Time = new TimeSpan(-1); // date changed, we need to clear selected time
             CheckParams();
 
-            List<TimeSpan> departures = service.GetDepartureTimes(pageData);
+            List<TimeSlot> departures = service.GetTimeSlots(pageData);
 
             DrawTimeSelectionPopup(pageData.Selection.Date, departures);
         }
@@ -93,13 +94,13 @@ namespace MVP.TripExplorer
                 lb.Text = " <br>" + dayslot.Price.ToString() + "€";
                 switch (dayslot.Status)
                 {
-                    case DaySlot.DayStatus.RED:
+                    case SlotStatus.RED:
                         lb.ForeColor = System.Drawing.Color.Red;
                         break;
-                    case DaySlot.DayStatus.GREEN:
+                    case SlotStatus.GREEN:
                         lb.ForeColor = System.Drawing.Color.Green;
                         break;
-                    case DaySlot.DayStatus.YELLOW:
+                    case SlotStatus.YELLOW:
                         lb.ForeColor = System.Drawing.Color.Yellow;
                         break;
                 }
@@ -210,7 +211,14 @@ namespace MVP.TripExplorer
 
             if (route == null)
             {
-                pageData.Selection.Route = null;
+                pageData.Selection = new Selection
+                {
+                    Route = null,
+                    SAP = null,
+                    DAP = null,
+                    Date = DateTime.MinValue,
+                    Time = new TimeSpan(-1)
+                };
                 pageData.DaySlots.Clear();
                 PnTime.Visible = false;
                 LbDate.Visible = false;
@@ -291,7 +299,7 @@ namespace MVP.TripExplorer
             return;
         }
 
-        private void DrawTimeSelectionPopup(DateTime date, List<TimeSpan> times)
+        private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
         {
             IEnumerable<Button> buttons = new List<Button>() { BtnDeparture1,
                                                                BtnDeparture2,
@@ -305,14 +313,29 @@ namespace MVP.TripExplorer
                 b.Visible = false;
             }
 
-            times.Sort();
+            slots.OrderBy(t => t.Time);
 
             LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
 
-            for (int i = 1; i <= Math.Min(times.Count(), buttons.Count()); i++ )
+            for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++ )
             {
                 Button button = buttons.Where(b => b.ID == "BtnDeparture" + i.ToString()).First();
-                button.Text = times.ElementAt(i-1).ToString("hh\\:mm");
+                button.Text = slots.ElementAt(i-1).Time.ToString("hh\\:mm");
+                switch (slots.ElementAt(i - 1).Status)
+                {
+                    case SlotStatus.RED:
+                        button.ForeColor = System.Drawing.Color.Red;
+                        button.Enabled = false;
+                        break;
+                    case SlotStatus.GREEN:
+                        button.ForeColor = System.Drawing.Color.Green;
+                        button.Enabled = true;
+                        break;
+                    case SlotStatus.YELLOW:
+                        button.ForeColor = System.Drawing.Color.Yellow;
+                        button.Enabled = true;
+                        break;
+                }
                 button.Visible = true;
             }
 
