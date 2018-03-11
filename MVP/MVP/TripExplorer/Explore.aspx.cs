@@ -68,9 +68,7 @@ namespace MVP.TripExplorer
             pageData.Selection.Time = new TimeSpan(-1); // date changed, we need to clear selected time
             CheckParams();
 
-            List<TimeSlot> departures = service.GetTimeSlots(pageData);
-
-            DrawTimeSelectionPopup(pageData.Selection.Date, departures);
+            DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
         }
 
         protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
@@ -245,7 +243,7 @@ namespace MVP.TripExplorer
                 }
             }
 
-            if (pageData.Selection.SAP != sap) // we have a new sap
+            if (pageData.Selection.SAP != dap) // we have a new dap
             {
                 pageData.Selection.DAP = dap;
 
@@ -309,11 +307,16 @@ namespace MVP.TripExplorer
 
             pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
 
-            //Debug
-            GvDebug.DataBind();
-
             LbDate.Visible = true;
             CalDate.Visible = true;
+
+            if (PnTime.Visible) // if time selection popup is visible, update it
+            {
+                DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
+            }
+
+            //Debug
+            GvDebug.DataBind();
 
             return;
         }
