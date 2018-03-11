@@ -29,7 +29,8 @@ namespace MVP.Services
                                                Route = null,
                                                SAP = null,
                                                DAP = null,
-                                               Time = new TimeSpan(-1)
+                                               Time = new TimeSpan(-1),
+                                               Seats = 1
                                               };
             result.DaySlots = new List<DaySlot>();
 

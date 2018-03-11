@@ -81,6 +81,11 @@ namespace MVP.TripExplorer
             GetCalendarData();
         }
 
+        protected void DdlSeats_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckParams();
+        }
+
         protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
         {
             var dayslot = pageData.DaySlots.Where(d => d.Day == e.Day.Date).FirstOrDefault();
@@ -209,6 +214,7 @@ namespace MVP.TripExplorer
             var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
+            bool calupdate = false;
 
             if (route == null)
             {
@@ -218,19 +224,27 @@ namespace MVP.TripExplorer
                     SAP = null,
                     DAP = null,
                     Date = DateTime.MinValue,
-                    Time = new TimeSpan(-1)
+                    Time = new TimeSpan(-1),
+                    Seats = 1
                 };
                 pageData.DaySlots.Clear();
                 PnTime.Visible = false;
                 LbDate.Visible = false;
                 CalDate.Visible = false;
                 CalDate.SelectedDate = DateTime.MinValue;
+                LbSeats.Visible = false;
+                DdlSeats.Visible = false;
+                DdlSeats.SelectedValue = "1";
             }
             else if (pageData.Selection.Route != route)  // We have a new route selection
             {
                 pageData.Selection.Route = route;
 
-                GetCalendarData();
+                DdlSeats.SelectedValue = "1";
+                LbSeats.Visible = true;
+                DdlSeats.Visible = true;
+
+                calupdate = true;
             }
 
             if (pageData.Selection.SAP != sap) // we have a new sap
@@ -239,7 +253,7 @@ namespace MVP.TripExplorer
 
                 if (route != null)
                 {
-                    GetCalendarData(); // we need to redraw calendar cause daystatus may have changed
+                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
                 }
             }
 
@@ -249,13 +263,28 @@ namespace MVP.TripExplorer
 
                 if (route != null)
                 {
-                    GetCalendarData(); // we need to redraw calendar cause daystatus may have changed
+                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
                 }
             }
 
             if (CalDate.SelectedDate != DateTime.MinValue)
             {
                 pageData.Selection.Date = CalDate.SelectedDate;
+            }
+
+            if (DdlSeats.SelectedValue != pageData.Selection.Seats.ToString())
+            {
+                pageData.Selection.Seats = int.Parse(DdlSeats.SelectedValue);
+
+                if (route != null)
+                {
+                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                }
+            }
+
+            if (calupdate)
+            {
+                GetCalendarData();
             }
 
             //Debug label
@@ -278,11 +307,19 @@ namespace MVP.TripExplorer
                 }
                 if (pageData.Selection.Time != new TimeSpan(-1))
                 {
-                    LbDebug.Text += "Time: " + pageData.Selection.Time.ToString();
+                    LbDebug.Text += "Time: " + pageData.Selection.Time.ToString() + "<br />";
                 }
                 else
                 {
-                    LbDebug.Text += "Time: ";
+                    LbDebug.Text += "Time: <br />";
+                }
+                if (pageData.Selection.Seats != 0)
+                {
+                    LbDebug.Text += "Seats: " + pageData.Selection.Seats.ToString();
+                }
+                else
+                {
+                    LbDebug.Text += "Seats: ";
                 }
             }
         }

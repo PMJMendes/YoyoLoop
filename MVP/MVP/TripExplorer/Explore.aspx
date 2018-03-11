@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Explore.aspx.cs" Inherits="MVP.TripExplorer.Explore" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <br />
@@ -7,6 +8,8 @@
         <td>To</td>
         <td style="width:40px"></td>
         <td><asp:Label ID="LbEndAP" Visible="false" Text="Stop" runat="server"></asp:Label></td>
+        <td style="width:40px"></td>
+        <td><asp:Label ID="LbSeats" Visible="false" Text="Seats" runat="server"></asp:Label></td>
     </tr>
     <tr>
         <td>
@@ -18,6 +21,18 @@
         <td>
             <asp:DropDownList ID="DdlEndAP" runat="server" Visible="false" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndAP_SelectedIndexChanged" SelectMethod="DdlEndAP_GetData"
                 style="width: 250px; max-width: 250px">
+            </asp:DropDownList>
+        </td>
+        <td style="width:40px"></td>
+        <td>
+            <asp:DropDownList ID="DdlSeats" runat="server" Visible="false" AutoPostBack="True" OnSelectedIndexChanged="DdlSeats_SelectedIndexChanged" Width="45" Style="padding-left:5px">
+                <asp:ListItem Text="1" Value="1"/>
+                <asp:ListItem Text="2" Value="2"/>
+                <asp:ListItem Text="3" Value="3"/>
+                <asp:ListItem Text="4" Value="4"/>
+                <asp:ListItem Text="5" Value="5"/>
+                <asp:ListItem Text="6" Value="6"/>
+                <asp:ListItem Text="7" Value="7"/>
             </asp:DropDownList>
         </td>
     </tr>
