@@ -142,7 +142,7 @@ namespace MVP.Services
                 BookingId = Guid.NewGuid(),
                 Status = Booking.BookingStatus.PENDING,
                 CreationTime = DateTime.Now,
-                Trip = trip,
+                Trip = model.Trip.Single(t => t.TripId == trip.TripId),
                 Seats = state.Selection.Seats,
                 Cost = state.Selection.Seats * state.Selection.Price
             };
@@ -162,7 +162,7 @@ namespace MVP.Services
                 booking.Status = status;
                 model.SaveChanges();
 
-                //we should check and update the corresponding trip status here
+                //check and update the corresponding trip status here
             }
         }
 
@@ -174,9 +174,9 @@ namespace MVP.Services
                 TripId = Guid.NewGuid(),
                 Status = Trip.TripStatus.PENDING,
                 StartTime = state.Selection.Date + state.Selection.Time,
-                Route = state.Selection.Route,
-                StartAccessPoint = state.Selection.SAP,
-                EndAccessPoint = state.Selection.DAP
+                Route = model.Route.Single(b => b.RouteId == state.Selection.Route.RouteId),
+                StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
+                EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
             };
             model.Trip.Add(trip);
             model.SaveChanges();
