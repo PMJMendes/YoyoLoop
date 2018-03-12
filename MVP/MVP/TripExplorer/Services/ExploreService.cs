@@ -152,17 +152,17 @@ namespace MVP.Services
             return booking;
         }
 
-        public void UpdateBooking(Guid id, Booking.BookingStatus status) //this will take a booking, right now its taking an id for payment debug
+        public void UpdateBooking(Guid id, Booking.BookingStatus status) 
         {
             var model = new EntityModel();
-            var booking = model.Booking.SingleOrDefault(b => b.BookingId == id);
+            var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == id);
 
             if(booking != null)
             {
                 booking.Status = status;
                 model.SaveChanges();
 
-                //check and update the corresponding trip status here
+                UpdateTrip(booking.Trip.TripId);
             }
         }
 
@@ -181,6 +181,46 @@ namespace MVP.Services
             model.Trip.Add(trip);
             model.SaveChanges();
             return trip;
+        }
+
+        public void UpdateTrip(Guid id)
+        {
+            var model = new EntityModel();
+            var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
+            var bookings = trip.Bookings;
+
+            if (trip == null || trip.Status == Trip.TripStatus.CANCELLED)
+            {
+                return;
+            }
+
+            if (trip.StartTime < DateTime.Now)
+            {
+                trip.Status = Trip.TripStatus.COMPLETED;
+                foreach (Booking b in bookings.Where(s => s.Status == Booking.BookingStatus.BOOKED))
+                {
+                    b.Status = Booking.BookingStatus.COMPLETED;
+                }
+                model.SaveChanges();
+                return;
+            }
+
+            if (trip.Status == Trip.TripStatus.PENDING)
+            {
+                if(bookings.Where(s => s.Status == Booking.BookingStatus.BOOKED).Count() > 0)
+                {
+                    trip.Status = Trip.TripStatus.BOOKED;
+                    model.SaveChanges();
+                    return;
+                }
+
+                if (bookings.Where(s => s.Status == Booking.BookingStatus.PENDING).Count() == 0)
+                {
+                    trip.Status = Trip.TripStatus.CANCELLED;
+                    model.SaveChanges();
+                    return;
+                }
+            }
         }
     }
 }
