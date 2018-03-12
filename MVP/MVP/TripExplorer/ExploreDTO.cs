@@ -24,6 +24,7 @@ namespace MVP.TripExplorer
         public AccessPoint SAP { get; set; }
         public AccessPoint DAP { get; set;}
         public TimeSpan Time { get; set; }
+        public Decimal Price { get; set; }
         public int Seats { get; set; }
     }
 

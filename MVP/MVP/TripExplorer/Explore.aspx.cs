@@ -190,6 +190,7 @@ namespace MVP.TripExplorer
                 }
 
                 PnTime.Visible = false;
+                PnBook.Visible = false;
                 CalDate.VisibleDate = DateTime.Today;
                 CalDate.SelectedDate = DateTime.MinValue;
             }
@@ -208,13 +209,13 @@ namespace MVP.TripExplorer
             return result;
         }
 
-
         private void CheckParams()
         {
             var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
             bool calupdate = false;
+            bool bookupdate = false;
 
             if (route == null)
             {
@@ -225,11 +226,13 @@ namespace MVP.TripExplorer
                     DAP = null,
                     Date = DateTime.MinValue,
                     Time = new TimeSpan(-1),
+                    Price = 0,
                     Seats = 1
                 };
                 pageData.DaySlots.Clear();
                 PnTime.Visible = false;
                 LbDate.Visible = false;
+                PnBook.Visible = false;
                 CalDate.Visible = false;
                 CalDate.SelectedDate = DateTime.MinValue;
                 LbSeats.Visible = false;
@@ -239,7 +242,9 @@ namespace MVP.TripExplorer
             else if (pageData.Selection.Route != route)  // We have a new route selection
             {
                 pageData.Selection.Route = route;
-
+                CalDate.SelectedDate = DateTime.MinValue;
+                PnTime.Visible = false;
+                PnBook.Visible = false;
                 DdlSeats.SelectedValue = "1";
                 LbSeats.Visible = true;
                 DdlSeats.Visible = true;
@@ -254,6 +259,10 @@ namespace MVP.TripExplorer
                 if (route != null)
                 {
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    if (PnBook.Visible)
+                    {
+                        bookupdate = true;
+                    }
                 }
             }
 
@@ -264,12 +273,24 @@ namespace MVP.TripExplorer
                 if (route != null)
                 {
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    if (PnBook.Visible)
+                    {
+                        bookupdate = true;
+                    }
                 }
             }
 
             if (CalDate.SelectedDate != DateTime.MinValue)
             {
                 pageData.Selection.Date = CalDate.SelectedDate;
+                pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
+                if (route != null)
+                {
+                    if (PnBook.Visible)
+                    {
+                        bookupdate = true;
+                    }
+                }
             }
 
             if (DdlSeats.SelectedValue != pageData.Selection.Seats.ToString())
@@ -279,12 +300,26 @@ namespace MVP.TripExplorer
                 if (route != null)
                 {
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    if (PnBook.Visible)
+                    {
+                        bookupdate = true;
+                    }
                 }
+            }
+
+            if (pageData.Selection.Time != new TimeSpan(-1))
+            {
+                bookupdate = true;
             }
 
             if (calupdate)
             {
                 GetCalendarData();
+            }
+
+            if (bookupdate)
+            {
+                UpdateBookingPanel();
             }
 
             //Debug label
@@ -312,6 +347,14 @@ namespace MVP.TripExplorer
                 else
                 {
                     LbDebug.Text += "Time: <br />";
+                }
+                if (pageData.Selection.Price != 0)
+                {
+                    LbDebug.Text += "Price: " + pageData.Selection.Price.ToString() + "€<br />";
+                }
+                else
+                {
+                    LbDebug.Text += "Price: <br/>";
                 }
                 if (pageData.Selection.Seats != 0)
                 {
@@ -360,12 +403,12 @@ namespace MVP.TripExplorer
 
         private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
         {
-            IEnumerable<Button> buttons = new List<Button>() { BtnDeparture1,
-                                                               BtnDeparture2,
-                                                               BtnDeparture3,
-                                                               BtnDeparture4,
-                                                               BtnDeparture5,
-                                                               BtnDeparture6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
+            IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
+                                                               BtnTime2,
+                                                               BtnTime3,
+                                                               BtnTime4,
+                                                               BtnTime5,
+                                                               BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
 
             foreach(Button b in buttons)
             {
@@ -378,7 +421,7 @@ namespace MVP.TripExplorer
 
             for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++ )
             {
-                Button button = buttons.Where(b => b.ID == "BtnDeparture" + i.ToString()).First();
+                Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
                 button.Text = slots.ElementAt(i-1).Time.ToString("hh\\:mm");
                 switch (slots.ElementAt(i - 1).Status)
                 {
@@ -401,13 +444,53 @@ namespace MVP.TripExplorer
             PnTime.Visible = true;
         }
 
-        protected void BtnDeparture_Click(object sender, EventArgs e)
+        protected void BtnTime_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             PnTime.Visible = false;
             pageData.Selection.Time = TimeSpan.Parse(button.Text);
             CalDate.SelectedDate = DateTime.MinValue;
-            CheckParams(); //Dont really know where I'll go here - this will do for now
+            CheckParams(); 
+        }
+
+        private void UpdateBookingPanel()
+        {
+            LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
+            if(pageData.Selection.Time == new TimeSpan(-1))
+            {
+                LbDepartureTime.Text = "";
+            }
+            else
+            {
+                LbDepartureTime.Text = pageData.Selection.Time.ToString("hh\\:mm") + "h";
+            }
+            LbDepartureSeats.Text = pageData.Selection.Seats.ToString() + " passenger(s)";
+            LbDepartureTo.Text = "To: " + pageData.Selection.Route.EndRegion.Name + " / " + pageData.Selection.DAP.Name;
+            LbDepartureFrom.Text = "From: " + pageData.Selection.Route.StartRegion.Name + " / " + pageData.Selection.SAP.Name;
+            LbDepartureSeatCost.Text = pageData.Selection.Seats.ToString() + " Seat(s) x " + pageData.Selection.Price.ToString() + "€";
+            LbDepartureBookCost.Text = (pageData.Selection.Seats * pageData.Selection.Price).ToString() + "€";
+
+            if (pageData.Selection.Route != null &&
+                pageData.Selection.Date != DateTime.MinValue &&
+                pageData.Selection.Time != new TimeSpan(-1) &&
+                pageData.Selection.Seats != 0 &&
+                pageData.Selection.Price != 0)
+            {
+                BtnDepartureBook.ForeColor = System.Drawing.Color.Green;
+                BtnDepartureBook.Enabled = true;
+            }
+            else
+            {
+                BtnDepartureBook.ForeColor = System.Drawing.Color.Red;
+                BtnDepartureBook.Enabled = false;
+            }
+
+            PnBook.Visible = true;
+        }
+
+        protected void BtnDepartureBook_Click(object sender, EventArgs e)
+        {
+
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

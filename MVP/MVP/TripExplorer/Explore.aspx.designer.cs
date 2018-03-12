@@ -130,58 +130,148 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.Label LbPnTimeTextDate;
         
         /// <summary>
-        /// BtnDeparture1 control.
+        /// BtnTime1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDeparture1;
+        protected global::System.Web.UI.WebControls.Button BtnTime1;
         
         /// <summary>
-        /// BtnDeparture2 control.
+        /// BtnTime2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDeparture2;
+        protected global::System.Web.UI.WebControls.Button BtnTime2;
         
         /// <summary>
-        /// BtnDeparture3 control.
+        /// BtnTime3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDeparture3;
+        protected global::System.Web.UI.WebControls.Button BtnTime3;
         
         /// <summary>
-        /// BtnDeparture4 control.
+        /// BtnTime4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDeparture4;
+        protected global::System.Web.UI.WebControls.Button BtnTime4;
         
         /// <summary>
-        /// BtnDeparture5 control.
+        /// BtnTime5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDeparture5;
+        protected global::System.Web.UI.WebControls.Button BtnTime5;
         
         /// <summary>
-        /// BtnDeparture6 control.
+        /// BtnTime6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDeparture6;
+        protected global::System.Web.UI.WebControls.Button BtnTime6;
+        
+        /// <summary>
+        /// PnBook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PnBook;
+        
+        /// <summary>
+        /// TbDeparture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table TbDeparture;
+        
+        /// <summary>
+        /// LbDepartureDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureDate;
+        
+        /// <summary>
+        /// LbDepartureTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureTime;
+        
+        /// <summary>
+        /// LbDepartureSeats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureSeats;
+        
+        /// <summary>
+        /// LbDepartureTo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureTo;
+        
+        /// <summary>
+        /// LbDepartureFrom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureFrom;
+        
+        /// <summary>
+        /// LbDepartureSeatCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureSeatCost;
+        
+        /// <summary>
+        /// LbDepartureBookCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartureBookCost;
+        
+        /// <summary>
+        /// BtnDepartureBook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDepartureBook;
         
         /// <summary>
         /// LbDebug control.

@@ -30,6 +30,7 @@ namespace MVP.Services
                                                SAP = null,
                                                DAP = null,
                                                Time = new TimeSpan(-1),
+                                               Price = 0,
                                                Seats = 1
                                               };
             result.DaySlots = new List<DaySlot>();

@@ -85,17 +85,52 @@
                         <asp:TableCell runat="server" ColumnSpan="2" Height="20"><asp:Label ID="LbPnTimeTextDate" text="MES DIA" runat="server"></asp:Label></asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow runat="server">
-                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture1" runat="server" OnClick="BtnDeparture_Click" Width="60" Height="30"/></asp:TableCell>
-                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture2" runat="server" OnClick="BtnDeparture_Click" Width="60" Height="30"/></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnTime1" runat="server" OnClick="BtnTime_Click" Width="60" Height="30"/></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnTime2" runat="server" OnClick="BtnTime_Click" Width="60" Height="30"/></asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow runat="server">
-                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture3" runat="server" OnClick="BtnDeparture_Click" Width="60" Height="30"/></asp:TableCell>
-                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture4" runat="server" OnClick="BtnDeparture_Click" Width="60" Height="30"/></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnTime3" runat="server" OnClick="BtnTime_Click" Width="60" Height="30"/></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnTime4" runat="server" OnClick="BtnTime_Click" Width="60" Height="30"/></asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow runat="server">
-                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture5" runat="server" OnClick="BtnDeparture_Click" Width="60" Height="30"/></asp:TableCell>
-                        <asp:TableCell runat="server"><asp:Button ID="BtnDeparture6" runat="server" OnClick="BtnDeparture_Click" Width="60" Height="30"/></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnTime5" runat="server" OnClick="BtnTime_Click" Width="60" Height="30"/></asp:TableCell>
+                        <asp:TableCell runat="server"><asp:Button ID="BtnTime6" runat="server" OnClick="BtnTime_Click" Width="60" Height="30"/></asp:TableCell>
                     </asp:TableRow>
+                </asp:Table>
+            </asp:Panel>
+        </td>
+        <td style="width:100%"></td>
+
+        <td style="vertical-align:top">
+            <asp:Panel ID="PnBook" runat="server" Visible="false" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center" Width="240px" Style="padding-top:5px;padding-bottom:10px;padding-left:5px;padding-right:5px">
+                <asp:Table ID="TbDeparture" runat="server" HorizontalAlign="Center" Width="100%" Height="100%">
+                    <asp:TableRow><asp:TableCell ColumnSpan="2" HorizontalAlign="Left"><asp:Label runat="server" text="DEPARTURE"></asp:Label></asp:TableCell></asp:TableRow>
+                    <asp:TableRow Height="10px"></asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell HorizontalAlign="Left"><asp:Label ID="LbDepartureDate" Text="Data, Ds" runat="server"></asp:Label></asp:TableCell>
+                        <asp:TableCell HorizontalAlign="Left"><asp:Label ID="LbDepartureTime" Text="Hora" runat="server"></asp:Label></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell HorizontalAlign="Left"><asp:Label ID="LbDepartureSeats" Text="x Passenger(s)" runat="server"></asp:Label></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow Height="10px"></asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell ColumnSpan="2" HorizontalAlign="Left"><asp:Label ID="LbDepartureTo" Text="Destino" runat="server"></asp:Label></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell ColumnSpan="2" HorizontalAlign="Left"><asp:Label ID="LbDepartureFrom" Text="Origem" runat="server"></asp:Label></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow><asp:TableCell ColumnSpan="2" HorizontalAlign="Center"><hr style="border-top: 1px solid black"/></asp:TableCell></asp:TableRow>                    
+                    <asp:TableRow>
+                        <asp:TableCell HorizontalAlign="Left"><asp:Label ID="LbDepartureSeatCost" Text="x Seats x Cost" runat="server"></asp:Label></asp:TableCell>
+                        <asp:TableCell><asp:Label ID="LbDepartureBookCost" Text="Cost" Font-Size="Larger" Font-Bold="True" runat="server"></asp:Label></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow><asp:TableCell ColumnSpan="2" HorizontalAlign="Center"><hr style="border-top: 1px solid black"/></asp:TableCell></asp:TableRow>                    
+                    <asp:TableRow>
+                        <asp:TableCell ColumnSpan="2">
+                            <asp:Button ID="BtnDepartureBook" runat="server" Text="BOOK" Width="80px" OnClick="BtnDepartureBook_Click" />
+                        </asp:TableCell>
+                    </asp:TableRow>                    
                 </asp:Table>
             </asp:Panel>
         </td>
