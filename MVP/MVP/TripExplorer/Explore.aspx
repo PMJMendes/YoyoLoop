@@ -59,14 +59,14 @@
     <br />
     <br />
     <br />
-    <table>
+    <table style="vertical-align:top">
     <tr>
         <td><asp:Label ID="LbDate" Visible="false" Text="On" runat="server"></asp:Label></td>
         <td style="width:20px"></td>
         <td></td>
     </tr>
     <tr>
-        <td><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px" CellPadding="12">
+        <td style="vertical-align:top"><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px" CellPadding="12" Style="vertical-align:top">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt"/>
                 <NextPrevStyle VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#808080" />
@@ -102,7 +102,7 @@
         <td style="width:100%"></td>
 
         <td style="vertical-align:top">
-            <asp:Panel ID="PnBook" runat="server" Visible="false" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center" Width="240px" Style="padding-top:5px;padding-bottom:10px;padding-left:5px;padding-right:5px">
+            <asp:Panel ID="PnBook" runat="server" Visible="false" HorizontalAlign="Center" BorderStyle="Solid" BorderWidth="1px" Width="240px" Style="padding-top:5px;padding-bottom:10px;padding-left:5px;padding-right:5px">
                 <asp:Table ID="TbDeparture" runat="server" HorizontalAlign="Center" Width="100%" Height="100%">
                     <asp:TableRow><asp:TableCell ColumnSpan="2" HorizontalAlign="Left"><asp:Label runat="server" text="DEPARTURE"></asp:Label></asp:TableCell></asp:TableRow>
                     <asp:TableRow Height="10px"></asp:TableRow>
@@ -131,6 +131,18 @@
                             <asp:Button ID="BtnDepartureBook" runat="server" Text="BOOK" Width="80px" OnClick="BtnDepartureBook_Click" />
                         </asp:TableCell>
                     </asp:TableRow>                    
+                </asp:Table>
+            </asp:Panel>
+            <br />
+            <asp:Panel ID="PnDebugPay" runat="server" Visible="false" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center" Width="240px" Style="padding-top:5px;padding-bottom:10px;padding-left:5px;padding-right:5px">
+                <asp:Table runat="server" HorizontalAlign="Center" Width="100%" Height="100%">
+                    <asp:TableRow><asp:TableCell ColumnSpan="3" Font-Size="X-Small">DEBUG<br />PAYMENT CONFIRMATION RESULT</asp:TableCell></asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell><asp:Button ID="BtnDebugPayConfirm" runat="server" Text="PAY" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
+                        <asp:TableCell><asp:Button ID="BtnDebugPayCancel" runat="server" Text="CANCEL" Font-Size="Small" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
+                        <asp:TableCell><asp:Button ID="BtnDebugPayIgnore" runat="server" Text="IGNORE" Font-Size="Small" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow><asp:TableCell><asp:Label ID="LbDebugPayBookingID" runat="server" Visible="false"></asp:Label></asp:TableCell></asp:TableRow>
                 </asp:Table>
             </asp:Panel>
         </td>

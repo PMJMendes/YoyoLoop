@@ -274,6 +274,51 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.Button BtnDepartureBook;
         
         /// <summary>
+        /// PnDebugPay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PnDebugPay;
+        
+        /// <summary>
+        /// BtnDebugPayConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDebugPayConfirm;
+        
+        /// <summary>
+        /// BtnDebugPayCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDebugPayCancel;
+        
+        /// <summary>
+        /// BtnDebugPayIgnore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDebugPayIgnore;
+        
+        /// <summary>
+        /// LbDebugPayBookingID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDebugPayBookingID;
+        
+        /// <summary>
         /// LbDebug control.
         /// </summary>
         /// <remarks>

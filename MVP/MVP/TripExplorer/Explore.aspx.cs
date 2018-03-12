@@ -227,7 +227,8 @@ namespace MVP.TripExplorer
                     Date = DateTime.MinValue,
                     Time = new TimeSpan(-1),
                     Price = 0,
-                    Seats = 1
+                    Seats = 1,
+                    Trip = null
                 };
                 pageData.DaySlots.Clear();
                 PnTime.Visible = false;
@@ -490,7 +491,30 @@ namespace MVP.TripExplorer
 
         protected void BtnDepartureBook_Click(object sender, EventArgs e)
         {
+            var booking = service.CreateBooking(pageData);
 
+            // Will send to the payment confirmation page, for now we use a debug panel to handle payment status
+            BtnDepartureBook.Enabled = false;
+            LbDebugPayBookingID.Text = booking.BookingId.ToString();
+            PnDebugPay.Visible = true;
+        }
+
+        protected void BtnDebugPay_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            switch(button.Text)
+            {
+                case "PAY":
+                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), Booking.BookingStatus.BOOKED);
+                    break;
+                case "CANCEL":
+                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), Booking.BookingStatus.CANCELLED);
+                    break;
+                case "IGNORE":
+                    break;
+            }
+            PnDebugPay.Visible = false;
+            PnBook.Visible = false;
         }
 
         private IEnumerable<Route> GetPossibleRoutes()

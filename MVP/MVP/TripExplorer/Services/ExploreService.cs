@@ -31,7 +31,8 @@ namespace MVP.Services
                                                DAP = null,
                                                Time = new TimeSpan(-1),
                                                Price = 0,
-                                               Seats = 1
+                                               Seats = 1,
+                                               Trip = null
                                               };
             result.DaySlots = new List<DaySlot>();
 
@@ -120,6 +121,66 @@ namespace MVP.Services
                 result.Add(slot);
             }
             return result;
+        }
+
+        public Booking CreateBooking(ExploreDTO state)
+        {
+            var model = new EntityModel();
+            var trip = new Trip();
+
+            if(state.Selection.Trip == null)
+            {
+                trip = CreateTrip(state);
+            }
+            else
+            {
+                trip = state.Selection.Trip;
+            }
+
+            var booking = new Booking()
+            {
+                BookingId = Guid.NewGuid(),
+                Status = Booking.BookingStatus.PENDING,
+                CreationTime = DateTime.Now,
+                Trip = trip,
+                Seats = state.Selection.Seats,
+                Cost = state.Selection.Seats * state.Selection.Price
+            };
+            model.Booking.Add(booking);
+            model.SaveChanges();
+
+            return booking;
+        }
+
+        public void UpdateBooking(Guid id, Booking.BookingStatus status) //this will take a booking, right now its taking an id for payment debug
+        {
+            var model = new EntityModel();
+            var booking = model.Booking.SingleOrDefault(b => b.BookingId == id);
+
+            if(booking != null)
+            {
+                booking.Status = status;
+                model.SaveChanges();
+
+                //we should check and update the corresponding trip status here
+            }
+        }
+
+        public Trip CreateTrip(ExploreDTO state)
+        {
+            var model = new EntityModel();
+            var trip = new Trip()
+            {
+                TripId = Guid.NewGuid(),
+                Status = Trip.TripStatus.PENDING,
+                StartTime = state.Selection.Date + state.Selection.Time,
+                Route = state.Selection.Route,
+                StartAccessPoint = state.Selection.SAP,
+                EndAccessPoint = state.Selection.DAP
+            };
+            model.Trip.Add(trip);
+            model.SaveChanges();
+            return trip;
         }
     }
 }
