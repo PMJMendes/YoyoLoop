@@ -189,7 +189,7 @@ namespace MVP.Services
             var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
             var bookings = trip.Bookings;
 
-            if (trip == null || trip.Status == Trip.TripStatus.CANCELLED)
+            if (trip == null || trip.Status == Trip.TripStatus.CANCELLED || trip.Status == Trip.TripStatus.COMPLETED)
             {
                 return;
             }
