@@ -11,8 +11,6 @@ namespace MVP.Models.Entities
         public TripStatus Status { get; set; }
 
         public DateTime StartTime { get; set; }
-        public TimeSpan Duration { get; set; }
-
         public Route Route { get; set; } // Not needed but makes it easier to handle code loops
         public AccessPoint StartAccessPoint { get; set; }
         public AccessPoint EndAccessPoint { get; set; }

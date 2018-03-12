@@ -449,6 +449,10 @@
     <Compile Include="Migrations\201803091631092_ModelReworkSettingsPKChange.Designer.cs">
       <DependentUpon>201803091631092_ModelReworkSettingsPKChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803122104363_ModelReworkMinorRemoveDurationFromTrip.cs" />
+    <Compile Include="Migrations\201803122104363_ModelReworkMinorRemoveDurationFromTrip.Designer.cs">
+      <DependentUpon>201803122104363_ModelReworkMinorRemoveDurationFromTrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -548,6 +552,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803091631092_ModelReworkSettingsPKChange.resx">
       <DependentUpon>201803091631092_ModelReworkSettingsPKChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122104363_ModelReworkMinorRemoveDurationFromTrip.resx">
+      <DependentUpon>201803122104363_ModelReworkMinorRemoveDurationFromTrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
