@@ -121,7 +121,7 @@ namespace MVP.TripExplorer
 
         public IEnumerable<ListItem> DdlEndRegion_GetData()
         {
-            if (pageData.Routes.Where(r => r.EndRegion.Name == pageData.QueryString.Dest).Count() != 0)
+            if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == pageData.QueryData.EndRegionId).Count() != 0)
             {
                 return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
             }
@@ -168,17 +168,17 @@ namespace MVP.TripExplorer
             if (pageData == null)
             {
                 pageData = service.GetInitialData();
-                pageData.QueryString = GetQueryString();
+                pageData.QueryData = GetQueryString();
                 Session["explore.data"] = pageData;
 
-                string dest = pageData.QueryString.Dest;
+                Guid? dest = pageData.QueryData.EndRegionId;
 
-                if (dest != null && dest != string.Empty)
+                if (dest != null && dest != Guid.Empty)
                 {
-                    if (pageData.Routes.Where(r => r.EndRegion.Name == dest).Count() != 0)
+                    if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Count() != 0)
                     {
-                        DdlEndRegion.SelectedValue = pageData.Routes.Where(r => r.EndRegion.Name == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
-                        DdlEndAP.SelectedValue = pageData.Routes.Where(r => r.EndRegion.Name == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
+                        DdlEndRegion.SelectedValue = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
+                        DdlEndAP.SelectedValue = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
                                                                 .Where(ap => ap.Default)
                                                                 .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
                         LbEndAP.Visible = true;
@@ -193,14 +193,14 @@ namespace MVP.TripExplorer
             }
         }
 
-        public QueryString GetQueryString()
+        public QueryData GetQueryString()
         {
             var query = Request.QueryString;
-            var result = new QueryString();
+            var result = new QueryData();
 
             if (query["Dest"] != null && query["Dest"] != string.Empty)
             {
-                result.Dest = query["Dest"];
+                result.EndRegionId = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
             }
 
             return result;

@@ -6,7 +6,7 @@ namespace MVP.TripExplorer
 {
     public class ExploreDTO
     {
-        public QueryString QueryString { get; set; }
+        public QueryData QueryData { get; set; }
         public List<Route> Routes { get; set; }
         public Selection Selection { get; set; }
         public List<DaySlot> DaySlots { get; set; }
@@ -14,9 +14,9 @@ namespace MVP.TripExplorer
         public DateTime CalendarVisibleMonth { get; set; } // I don't really like this here. Will eventually have an object that tracks non-selection related control values
     }
 
-    public class QueryString
+    public class QueryData
     {
-        public string Dest { get; set; }
+        public Guid? EndRegionId { get; set; }
     }
 
     public class Selection

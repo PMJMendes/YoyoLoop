@@ -14,7 +14,7 @@ namespace MVP.Services
         {
             var result = new ExploreDTO();
 
-            result.QueryString = new QueryString();
+            result.QueryData = new QueryData();
 
             using (var model = new EntityModel())
             {
