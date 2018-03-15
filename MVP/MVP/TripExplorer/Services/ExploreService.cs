@@ -34,7 +34,9 @@ namespace MVP.Services
                                                Seats = 1,
                                                Trip = null
                                               };
+
             result.DaySlots = new List<DaySlot>();
+            result.CalendarVisibleMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
 
             return result;
         }

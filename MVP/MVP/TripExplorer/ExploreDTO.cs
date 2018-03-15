@@ -10,6 +10,8 @@ namespace MVP.TripExplorer
         public List<Route> Routes { get; set; }
         public Selection Selection { get; set; }
         public List<DaySlot> DaySlots { get; set; }
+
+        public DateTime CalendarVisibleMonth { get; set; } // I don't really like this here. Will eventually have an object that tracks non-selection related control values
     }
 
     public class QueryString

@@ -73,10 +73,7 @@ namespace MVP.TripExplorer
 
         protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
         {
-            if (CalDate.VisibleDate.Month < DateTime.Today.Month)
-            {
-                return;
-            }
+            pageData.CalendarVisibleMonth = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
 
             GetCalendarData();
         }
@@ -370,10 +367,14 @@ namespace MVP.TripExplorer
 
         private void GetCalendarData()
         {
-            DateTime d = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
+            if (pageData.CalendarVisibleMonth.Month < DateTime.Today.Month) // we may have a display bug here when past month still shows available dates
+            {
+                return;
+            }
+
+            DateTime d = pageData.CalendarVisibleMonth;
 
             DateTime firstdate = new DateTime();
-            DateTime lastdate = new DateTime();
 
             if (d.DayOfWeek == DayOfWeek.Sunday)
             {
@@ -384,7 +385,7 @@ namespace MVP.TripExplorer
                 firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);
             }
 
-            lastdate = firstdate + TimeSpan.FromDays(41);
+            DateTime lastdate = firstdate + TimeSpan.FromDays(41);
 
             pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
 
