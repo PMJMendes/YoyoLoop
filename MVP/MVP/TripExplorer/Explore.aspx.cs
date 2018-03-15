@@ -35,7 +35,7 @@ namespace MVP.TripExplorer
             LbEndAP.Visible = true;
             DdlEndAP.Visible = true;
 
-            CheckParams();
+            CheckParams("EndRegion", DdlEndRegion.SelectedValue);
         }
 
         protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,25 +50,25 @@ namespace MVP.TripExplorer
             LbStartAP.Visible = true;
             DdlStartAP.Visible = true;
 
-            CheckParams();
+            CheckParams("StartRegion", DdlStartRegion.SelectedValue);
         }
 
         protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckParams();
+            CheckParams("EndAP", DdlEndAP.SelectedValue);
         }
 
         protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckParams();
+            CheckParams("StartAP", DdlStartAP.SelectedValue);
         }
 
         protected void CalDate_SelectionChanged(object sender, EventArgs e)
         {
             pageData.Selection.Time = new TimeSpan(-1); // date changed, we need to clear selected time
-            CheckParams();
+            CheckParams("Date", CalDate.SelectedDate.ToString());
 
-            DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
+            GetTimePopupData(pageData.Selection.Date, service.GetTimeSlots(pageData));
         }
 
         protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
@@ -80,36 +80,46 @@ namespace MVP.TripExplorer
 
         protected void DdlSeats_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckParams();
+            CheckParams("Seats", DdlSeats.SelectedValue);
         }
 
-        protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
+        protected void BtnTime_Click(object sender, EventArgs e)
         {
-            var dayslot = pageData.DaySlots.Where(d => d.Day == e.Day.Date).FirstOrDefault();
+            Button button = (Button)sender;
+            PnTime.Visible = false;
+            pageData.Selection.Time = TimeSpan.Parse(button.Text);
+            CalDate.SelectedDate = DateTime.MinValue;
+            CheckParams("Time", button.Text);
+        }
 
-            if (dayslot != null)
+        protected void BtnDepartureBook_Click(object sender, EventArgs e)
+        {
+            var booking = service.CreateBooking(pageData);
+
+            // Will send to the payment confirmation page, for now we use a debug panel to handle payment status
+            BtnDepartureBook.Enabled = false;
+            LbDebugPayBookingID.Text = booking.BookingId.ToString();
+            PnDebugPay.Visible = true;
+
+            CheckParams("Book", "Book");
+        }
+
+        protected void BtnDebugPay_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            switch (button.Text)
             {
-                e.Day.IsSelectable = true;
-                Label lb = new Label();
-                lb.Text = " <br>" + dayslot.Price.ToString() + "€";
-                switch (dayslot.Status)
-                {
-                    case SlotStatus.RED:
-                        lb.ForeColor = System.Drawing.Color.Red;
-                        break;
-                    case SlotStatus.GREEN:
-                        lb.ForeColor = System.Drawing.Color.Green;
-                        break;
-                    case SlotStatus.YELLOW:
-                        lb.ForeColor = System.Drawing.Color.Yellow;
-                        break;
-                }
-                e.Cell.Controls.Add(lb);
+                case "PAY":
+                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
+                    break;
+                case "CANCEL":
+                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.CANCELLED);
+                    break;
+                case "IGNORE":
+                    break;
             }
-            else
-            {
-                e.Day.IsSelectable = false;
-            }
+            PnDebugPay.Visible = false;
+            PnBook.Visible = false;
         }
 
         protected void BtnDebug_Click(object sender, EventArgs e)
@@ -119,100 +129,29 @@ namespace MVP.TripExplorer
             LbDebug.Visible = !LbDebug.Visible;
         }
 
-        public IEnumerable<ListItem> DdlEndRegion_GetData()
-        {
-            if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == pageData.QueryData.EndRegionId).Count() != 0)
-            {
-                return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
-            }
-            else
-            {
-                return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                    pageData.Routes.Select(r => r.EndRegion).Distinct().
-                    Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-                );
-            }
-        }
-
-        public IEnumerable<ListItem> DdlStartRegion_GetData()
-        {
-            return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                GetPossibleRoutes().Select(r => r.StartRegion).Distinct().
-                Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-            );
-        }
-
-        public IEnumerable<ListItem> DdlEndAP_GetData()
-        {
-            return GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
-        }
-
-        public IEnumerable<ListItem> DdlStartAP_GetData()
-        {
-            return GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
-        }
-
-        public IEnumerable<object> GvDebug_GetData()
-        {
-            return pageData.DaySlots;
-        }
-
-        private void InitData()
-        {
-            pageData = null;
-            if (IsPostBack)
-            {
-                pageData = (ExploreDTO)Session["explore.data"];
-            }
-
-            if (pageData == null)
-            {
-                pageData = service.GetInitialData();
-                pageData.QueryData = GetQueryString();
-                Session["explore.data"] = pageData;
-
-                Guid? dest = pageData.QueryData.EndRegionId;
-
-                if (dest != null && dest != Guid.Empty)
-                {
-                    if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Count() != 0)
-                    {
-                        DdlEndRegion.SelectedValue = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
-                        DdlEndAP.SelectedValue = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
-                                                                .Where(ap => ap.Default)
-                                                                .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
-                        LbEndAP.Visible = true;
-                        DdlEndAP.Visible = true;
-                    }
-                }
-
-                PnTime.Visible = false;
-                PnBook.Visible = false;
-                CalDate.VisibleDate = DateTime.Today;
-                CalDate.SelectedDate = DateTime.MinValue;
-            }
-        }
-
-        public QueryData GetQueryString()
-        {
-            var query = Request.QueryString;
-            var result = new QueryData();
-
-            if (query["Dest"] != null && query["Dest"] != string.Empty)
-            {
-                result.EndRegionId = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
-            }
-
-            return result;
-        }
-
-        private void CheckParams()
+        private void CheckParams(string param, string value)
         {
             var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == DdlStartRegion.SelectedValue).FirstOrDefault();
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlStartAP.SelectedValue)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == DdlEndAP.SelectedValue)?.FirstOrDefault();
-            bool calupdate = false;
-            bool bookupdate = false;
+            Dictionary<string, bool> update = new Dictionary<string, bool>();
+                update.Add("calendar", false);
+                update.Add("booking", false);
+
+            switch(param)
+            {
+                case "EndRegion":
+
+                    break;
+
+                case "StartRegion":
+
+                    break;
+
+                case "Date":
+
+                    break;
+            }
 
             if (route == null)
             {
@@ -247,7 +186,7 @@ namespace MVP.TripExplorer
                 LbSeats.Visible = true;
                 DdlSeats.Visible = true;
 
-                calupdate = true;
+                update["calendar"] = true;
             }
 
             if (pageData.Selection.SAP != sap) // we have a new sap
@@ -256,10 +195,10 @@ namespace MVP.TripExplorer
 
                 if (route != null)
                 {
-                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    update["calendar"] = true; // we need to redraw calendar cause daystatus may have changed
                     if (PnBook.Visible)
                     {
-                        bookupdate = true;
+                        update["booking"] = true;
                     }
                 }
             }
@@ -270,10 +209,10 @@ namespace MVP.TripExplorer
 
                 if (route != null)
                 {
-                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    update["calendar"] = true; // we need to redraw calendar cause daystatus may have changed
                     if (PnBook.Visible)
                     {
-                        bookupdate = true;
+                        update["booking"] = true;
                     }
                 }
             }
@@ -286,7 +225,7 @@ namespace MVP.TripExplorer
                 {
                     if (PnBook.Visible)
                     {
-                        bookupdate = true;
+                        update["booking"] = true;
                     }
                 }
             }
@@ -297,27 +236,27 @@ namespace MVP.TripExplorer
 
                 if (route != null)
                 {
-                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    update["calendar"] = true; // we need to redraw calendar cause daystatus may have changed
                     if (PnBook.Visible)
                     {
-                        bookupdate = true;
+                        update["booking"] = true;
                     }
                 }
             }
 
             if (pageData.Selection.Time != new TimeSpan(-1))
             {
-                bookupdate = true;
+                update["booking"] = true;
             }
 
-            if (calupdate)
+            if (update["calendar"])
             {
                 GetCalendarData();
             }
 
-            if (bookupdate)
+            if (update["booking"])
             {
-                UpdateBookingPanel();
+                GetBookingData();
             }
 
             //Debug label
@@ -393,7 +332,7 @@ namespace MVP.TripExplorer
 
             if (PnTime.Visible) // if time selection popup is visible, update it
             {
-                DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
+                GetTimePopupData(pageData.Selection.Date, service.GetTimeSlots(pageData));
             }
 
             //Debug
@@ -402,7 +341,7 @@ namespace MVP.TripExplorer
             return;
         }
 
-        private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
+        private void GetTimePopupData(DateTime date, List<TimeSlot> slots)
         {
             IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
                                                                BtnTime2,
@@ -411,7 +350,7 @@ namespace MVP.TripExplorer
                                                                BtnTime5,
                                                                BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
 
-            foreach(Button b in buttons)
+            foreach (Button b in buttons)
             {
                 b.Visible = false;
             }
@@ -420,10 +359,10 @@ namespace MVP.TripExplorer
 
             LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
 
-            for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++ )
+            for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++)
             {
                 Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
-                button.Text = slots.ElementAt(i-1).Time.ToString("hh\\:mm");
+                button.Text = slots.ElementAt(i - 1).Time.ToString("hh\\:mm");
                 switch (slots.ElementAt(i - 1).Status)
                 {
                     case SlotStatus.RED:
@@ -445,19 +384,10 @@ namespace MVP.TripExplorer
             PnTime.Visible = true;
         }
 
-        protected void BtnTime_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            PnTime.Visible = false;
-            pageData.Selection.Time = TimeSpan.Parse(button.Text);
-            CalDate.SelectedDate = DateTime.MinValue;
-            CheckParams(); 
-        }
-
-        private void UpdateBookingPanel()
+        private void GetBookingData()
         {
             LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
-            if(pageData.Selection.Time == new TimeSpan(-1))
+            if (pageData.Selection.Time == new TimeSpan(-1))
             {
                 LbDepartureTime.Text = "";
             }
@@ -489,32 +419,120 @@ namespace MVP.TripExplorer
             PnBook.Visible = true;
         }
 
-        protected void BtnDepartureBook_Click(object sender, EventArgs e)
+        public IEnumerable<ListItem> DdlEndRegion_GetData()
         {
-            var booking = service.CreateBooking(pageData);
-
-            // Will send to the payment confirmation page, for now we use a debug panel to handle payment status
-            BtnDepartureBook.Enabled = false;
-            LbDebugPayBookingID.Text = booking.BookingId.ToString();
-            PnDebugPay.Visible = true;
+            if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == pageData.QueryData.EndRegionId).Count() != 0)
+            {
+                return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
+            }
+            else
+            {
+                return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
+                    pageData.Routes.Select(r => r.EndRegion).Distinct().
+                    Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
+                );
+            }
         }
 
-        protected void BtnDebugPay_Click(object sender, EventArgs e)
+        public IEnumerable<ListItem> DdlStartRegion_GetData()
         {
-            Button button = (Button)sender;
-            switch(button.Text)
+            return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
+                GetPossibleRoutes().Select(r => r.StartRegion).Distinct().
+                Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
+            );
+        }
+
+        public IEnumerable<ListItem> DdlEndAP_GetData()
+        {
+            return GetPossibleDAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
+        }
+
+        public IEnumerable<ListItem> DdlStartAP_GetData()
+        {
+            return GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
+        }
+
+        public IEnumerable<object> GvDebug_GetData()
+        {
+            return pageData.DaySlots;
+        }
+
+        protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
+        {
+            var dayslot = pageData.DaySlots.Where(d => d.Day == e.Day.Date).FirstOrDefault();
+
+            if (dayslot != null)
             {
-                case "PAY":
-                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
-                    break;
-                case "CANCEL":
-                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.CANCELLED);
-                    break;
-                case "IGNORE":
-                    break;
+                e.Day.IsSelectable = true;
+                Label lb = new Label();
+                lb.Text = " <br>" + dayslot.Price.ToString() + "€";
+                switch (dayslot.Status)
+                {
+                    case SlotStatus.RED:
+                        lb.ForeColor = System.Drawing.Color.Red;
+                        break;
+                    case SlotStatus.GREEN:
+                        lb.ForeColor = System.Drawing.Color.Green;
+                        break;
+                    case SlotStatus.YELLOW:
+                        lb.ForeColor = System.Drawing.Color.Yellow;
+                        break;
+                }
+                e.Cell.Controls.Add(lb);
             }
-            PnDebugPay.Visible = false;
-            PnBook.Visible = false;
+            else
+            {
+                e.Day.IsSelectable = false;
+            }
+        }
+
+        private void InitData()
+        {
+            pageData = null;
+            if (IsPostBack)
+            {
+                pageData = (ExploreDTO)Session["explore.data"];
+            }
+
+            if (pageData == null)
+            {
+                pageData = service.GetInitialData();
+                pageData.QueryData = GetQueryString();
+                Session["explore.data"] = pageData;
+
+                Guid? dest = pageData.QueryData.EndRegionId;
+
+                if (dest != null && dest != Guid.Empty)
+                {
+                    if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Count() != 0)
+                    {
+                        DdlEndRegion.SelectedValue = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
+                        DdlEndAP.SelectedValue = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
+                                                                .Where(ap => ap.Default)
+                                                                .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
+                        LbEndAP.Visible = true;
+                        DdlEndAP.Visible = true;
+                    }
+                }
+
+                PnTime.Visible = false;
+                PnBook.Visible = false;
+                CalDate.VisibleDate = DateTime.Today;
+                CalDate.SelectedDate = DateTime.MinValue;
+            }
+        }
+
+        public QueryData GetQueryString() // this may need moving to service as some query info may need model access not saved in the pagestate
+        {
+            var query = Request.QueryString;
+            var result = new QueryData();
+
+            if (query["Dest"] != null && query["Dest"] != string.Empty)
+            {
+                result.EndRegionId = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
+            }
+
+            return result;
         }
 
         private IEnumerable<Route> GetPossibleRoutes()
