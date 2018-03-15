@@ -14,13 +14,13 @@ namespace MVP.Models.Entities
         public Trip Trip { get; set; }
         public int Seats { get; set; }
         public Decimal Cost { get; set; }
+    }
 
-        public enum BookingStatus
-        {
-            CANCELLED,
-            PENDING,
-            BOOKED,
-            COMPLETED
-        }
+    public enum BookingStatus
+    {
+        CANCELLED,
+        PENDING,
+        BOOKED,
+        COMPLETED
     }
 }

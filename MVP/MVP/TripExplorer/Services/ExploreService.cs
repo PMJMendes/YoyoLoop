@@ -140,7 +140,7 @@ namespace MVP.Services
             var booking = new Booking()
             {
                 BookingId = Guid.NewGuid(),
-                Status = Booking.BookingStatus.PENDING,
+                Status = BookingStatus.PENDING,
                 CreationTime = DateTime.Now,
                 Trip = model.Trip.Single(t => t.TripId == trip.TripId),
                 Seats = state.Selection.Seats,
@@ -152,7 +152,7 @@ namespace MVP.Services
             return booking;
         }
 
-        public void UpdateBooking(Guid id, Booking.BookingStatus status) 
+        public void UpdateBooking(Guid id, BookingStatus status) 
         {
             var model = new EntityModel();
             var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == id);
@@ -172,7 +172,7 @@ namespace MVP.Services
             var trip = new Trip()
             {
                 TripId = Guid.NewGuid(),
-                Status = Trip.TripStatus.PENDING,
+                Status = BookingStatus.PENDING,
                 StartTime = state.Selection.Date + state.Selection.Time,
                 Route = model.Route.Single(b => b.RouteId == state.Selection.Route.RouteId),
                 StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
@@ -189,34 +189,34 @@ namespace MVP.Services
             var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
             var bookings = trip.Bookings;
 
-            if (trip == null || trip.Status == Trip.TripStatus.CANCELLED || trip.Status == Trip.TripStatus.COMPLETED)
+            if (trip == null || trip.Status == BookingStatus.CANCELLED || trip.Status == BookingStatus.COMPLETED)
             {
                 return;
             }
 
             if (trip.StartTime < DateTime.Now)
             {
-                trip.Status = Trip.TripStatus.COMPLETED;
-                foreach (Booking b in bookings.Where(s => s.Status == Booking.BookingStatus.BOOKED))
+                trip.Status = BookingStatus.COMPLETED;
+                foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
                 {
-                    b.Status = Booking.BookingStatus.COMPLETED;
+                    b.Status = BookingStatus.COMPLETED;
                 }
                 model.SaveChanges();
                 return;
             }
 
-            if (trip.Status == Trip.TripStatus.PENDING)
+            if (trip.Status == BookingStatus.PENDING)
             {
-                if(bookings.Where(s => s.Status == Booking.BookingStatus.BOOKED).Count() > 0)
+                if(bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
                 {
-                    trip.Status = Trip.TripStatus.BOOKED;
+                    trip.Status = BookingStatus.BOOKED;
                     model.SaveChanges();
                     return;
                 }
 
-                if (bookings.Where(s => s.Status == Booking.BookingStatus.PENDING).Count() == 0)
+                if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
                 {
-                    trip.Status = Trip.TripStatus.CANCELLED;
+                    trip.Status = BookingStatus.CANCELLED;
                     model.SaveChanges();
                     return;
                 }

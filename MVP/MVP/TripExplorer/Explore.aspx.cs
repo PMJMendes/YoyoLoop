@@ -505,10 +505,10 @@ namespace MVP.TripExplorer
             switch(button.Text)
             {
                 case "PAY":
-                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), Booking.BookingStatus.BOOKED);
+                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
                     break;
                 case "CANCEL":
-                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), Booking.BookingStatus.CANCELLED);
+                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.CANCELLED);
                     break;
                 case "IGNORE":
                     break;
