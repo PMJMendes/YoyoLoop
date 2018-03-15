@@ -373,8 +373,7 @@ namespace MVP.TripExplorer
             }
 
             DateTime d = pageData.CalendarVisibleMonth;
-
-            DateTime firstdate = new DateTime();
+            DateTime firstdate;
 
             if (d.DayOfWeek == DayOfWeek.Sunday)
             {
