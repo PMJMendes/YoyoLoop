@@ -14,8 +14,6 @@ namespace MVP.Services
         {
             var result = new ExploreDTO();
 
-            result.QueryData = new QueryData();
-
             using (var model = new EntityModel())
             {
                 result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints)
@@ -36,7 +34,6 @@ namespace MVP.Services
                                               };
 
             result.DaySlots = new List<DaySlot>();
-            result.CalendarVisibleMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
 
             return result;
         }

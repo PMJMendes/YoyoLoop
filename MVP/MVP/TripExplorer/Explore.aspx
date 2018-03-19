@@ -154,7 +154,7 @@
             <asp:Label ID="LbDebug" visible="false" runat="server"></asp:Label><br />
 
     <%-- Debug gridview --%>
-    <br /><asp:Button ID="BtnDebug" runat="server" Text="Debug" OnClick="BtnDebug_Click" />
+    <br /><asp:Button ID="BtnDebug" runat="server" Text="Debug" OnClick="BtnDebug_Click" />&nbsp;&nbsp; <asp:Button ID="BtnDebugOff" runat="server" Visible="false" Text="OFF" OnClick="BtnDebug_Click" />
     <br />
     <br />
 

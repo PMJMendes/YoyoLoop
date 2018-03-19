@@ -6,17 +6,9 @@ namespace MVP.TripExplorer
 {
     public class ExploreDTO
     {
-        public QueryData QueryData { get; set; }
         public List<Route> Routes { get; set; }
         public Selection Selection { get; set; }
         public List<DaySlot> DaySlots { get; set; }
-
-        public DateTime CalendarVisibleMonth { get; set; } // I don't really like this here. Will eventually have an object that tracks non-selection related control values
-    }
-
-    public class QueryData
-    {
-        public Guid? EndRegionId { get; set; }
     }
 
     public class Selection
@@ -44,7 +36,7 @@ namespace MVP.TripExplorer
         public SlotStatus Status { get; set; }
     }
 
-    public enum SlotStatus
+    public enum SlotStatus // Definitions have changed, not yet settled on
     {
         GREEN,      // Available with selected parameters
         YELLOW,     // Available with different parameters
