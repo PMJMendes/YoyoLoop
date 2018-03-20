@@ -5,55 +5,54 @@
     <br />
     <table>
     <tr>
-        <td>To</td>
-        <td style="width:40px"></td>
-        <td><asp:Label ID="LbEndAP" Visible="false" Text="Stop" runat="server"></asp:Label></td>
-        <td style="width:40px"></td>
-        <td><asp:Label ID="LbSeats" Visible="false" Text="Seats" runat="server"></asp:Label></td>
-    </tr>
-    <tr>
-        <td>
-            <asp:DropDownList ID="DdlEndRegion" runat="server" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndRegion_SelectedIndexChanged" SelectMethod="DdlEndRegion_GetData"
-                style="width: 120px; max-width: 120px">
-            </asp:DropDownList>
+        <td><asp:panel ID="PnEndRegion" runat="server">
+                <asp:Label runat="server">To<br /></asp:Label>
+                <asp:DropDownList ID="DdlEndRegion" runat="server" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndRegion_SelectedIndexChanged" SelectMethod="DdlEndRegion_GetData"
+                    style="width: 120px; max-width: 120px">
+                </asp:DropDownList>
+            </asp:panel>
         </td>
         <td style="width:40px"></td>
-        <td>
-            <asp:DropDownList ID="DdlEndAP" runat="server" Visible="false" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndAP_SelectedIndexChanged" SelectMethod="DdlEndAP_GetData"
-                style="width: 250px; max-width: 250px">
-            </asp:DropDownList>
+        <td><asp:Panel ID="PnEndAp" runat="server" Visible="false">
+                <asp:Label runat="server">Stop<br /></asp:Label>
+                <asp:DropDownList ID="DdlEndAP" runat="server" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlEndAP_SelectedIndexChanged" SelectMethod="DdlEndAP_GetData"
+                    style="width: 250px; max-width: 250px">
+                </asp:DropDownList>
+            </asp:Panel>
         </td>
         <td style="width:40px"></td>
-        <td>
-            <asp:DropDownList ID="DdlSeats" runat="server" Visible="false" AutoPostBack="True" OnSelectedIndexChanged="DdlSeats_SelectedIndexChanged" Width="45" Style="padding-left:5px">
-                <asp:ListItem Text="1" Value="1"/>
-                <asp:ListItem Text="2" Value="2"/>
-                <asp:ListItem Text="3" Value="3"/>
-                <asp:ListItem Text="4" Value="4"/>
-                <asp:ListItem Text="5" Value="5"/>
-                <asp:ListItem Text="6" Value="6"/>
-                <asp:ListItem Text="7" Value="7"/>
-            </asp:DropDownList>
+        <td><asp:Panel ID="PnSeats" runat="server" Visible="false">
+                <asp:Label runat="server">Seats<br /></asp:Label>
+                <asp:DropDownList ID="DdlSeats" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlSeats_SelectedIndexChanged" Width="45" Style="padding-left:5px">
+                    <asp:ListItem Text="1" Value="1"/>
+                    <asp:ListItem Text="2" Value="2"/>
+                    <asp:ListItem Text="3" Value="3"/>
+                    <asp:ListItem Text="4" Value="4"/>
+                    <asp:ListItem Text="5" Value="5"/>
+                    <asp:ListItem Text="6" Value="6"/>
+                    <asp:ListItem Text="7" Value="7"/>
+                </asp:DropDownList>
+            </asp:Panel>
         </td>
     </tr>
     <tr><td style="height:10px"></td></tr>
     <tr>
-        <td>From</td>
-        <td style="width:40px"></td>
-        <td><asp:Label ID="LbStartAP" Visible="false" Text="Stop" runat="server"></asp:Label></td>
-    </tr>
-    <tr>
-        <td>
-            <asp:DropDownList ID="DdlStartRegion" runat="server" SelectMethod="DdlStartRegion_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartRegion_SelectedIndexChanged"
-                style="width: 120px; max-width: 120px">
-            </asp:DropDownList>
+        <td><asp:Panel ID="PnStartRegion" runat="server">
+                <asp:Label runat="server">From<br /></asp:Label>
+                <asp:DropDownList ID="DdlStartRegion" runat="server" SelectMethod="DdlStartRegion_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartRegion_SelectedIndexChanged"
+                    style="width: 120px; max-width: 120px">
+                </asp:DropDownList>
+            </asp:Panel>
         </td>
         <td style="width:40px"></td>
-        <td>
-            <asp:DropDownList ID="DdlStartAP" runat="server" Visible="false" SelectMethod="DdlStartAP_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartAP_SelectedIndexChanged"
-                style="width: 250px; max-width: 250px">
-            </asp:DropDownList>
+        <td><asp:Panel ID="PnStartAP" runat="server" Visible="false">
+                <asp:Label runat="server">Stop<br /></asp:Label>
+                <asp:DropDownList ID="DdlStartAP" runat="server" SelectMethod="DdlStartAP_GetData" AutoPostBack="True" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="DdlStartAP_SelectedIndexChanged"
+                    style="width: 250px; max-width: 250px">
+                </asp:DropDownList>
+            </asp:Panel>            
         </td>
+
     </tr>
     </table>
     <br />
@@ -61,21 +60,20 @@
     <br />
     <table style="vertical-align:top">
     <tr>
-        <td><asp:Label ID="LbDate" Visible="false" Text="On" runat="server"></asp:Label></td>
-        <td style="width:20px"></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td style="vertical-align:top"><asp:Calendar ID="CalDate" runat="server" Visible="false" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px" CellPadding="12" Style="vertical-align:top">
-                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt"/>
-                <NextPrevStyle VerticalAlign="Bottom" />
-                <OtherMonthDayStyle ForeColor="#808080" />
-                <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
-                <SelectorStyle BackColor="#CCCCCC" />
-                <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
-                <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
-                <WeekendDayStyle BackColor="#FFFFCC" />
-            </asp:Calendar></td>
+        <td style="vertical-align:top">
+            <asp:Panel ID="PnDate" runat="server" Visible="false">
+                <asp:Calendar ID="CalDate" runat="server" OnVisibleMonthChanged="CalDate_MonthChange" OnDayRender="CalDate_DayRender" OnSelectionChanged="CalDate_SelectionChanged" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="270px" Width="300px" CellPadding="12" Style="vertical-align:top">
+                    <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt"/>
+                    <NextPrevStyle VerticalAlign="Bottom" />
+                    <OtherMonthDayStyle ForeColor="#808080" />
+                    <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                    <SelectorStyle BackColor="#CCCCCC" />
+                    <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                    <WeekendDayStyle BackColor="#FFFFCC" />
+                </asp:Calendar>
+            </asp:Panel>
+        </td>
         <td style="width:20px"></td>
 
         <td style="vertical-align:top">

@@ -55,10 +55,8 @@ namespace MVP.TripExplorer
             DdlStartRegion.DataBind();
             DdlEndAP.DataBind();
             DdlEndAP.SelectedValue = localData.Values.EndAP = GetPossibleDAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
-            LbStartAP.Visible = false;
-            DdlStartAP.Visible = false;
-            LbEndAP.Visible = true;
-            DdlEndAP.Visible = true;
+            PnStartAP.Visible = false;
+            PnEndAp.Visible = true;
 
             CheckParams();
         }
@@ -73,8 +71,7 @@ namespace MVP.TripExplorer
             localData.Values.StartRegion = DdlStartRegion.SelectedValue;
             DdlStartAP.DataBind();
             DdlStartAP.SelectedValue = localData.Values.StartAP = GetPossibleSAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
-            LbStartAP.Visible = true;
-            DdlStartAP.Visible = true;
+            PnStartAP.Visible = true;
 
             CheckParams();
         }
@@ -258,12 +255,10 @@ namespace MVP.TripExplorer
                 };
                 pageData.DaySlots.Clear();
                 PnTime.Visible = false;
-                LbDate.Visible = false;
                 PnBook.Visible = false;
-                CalDate.Visible = false;
+                PnDate.Visible = false;
                 CalDate.SelectedDate = localData.Values.CalSelectedDate = DateTime.MinValue;
-                LbSeats.Visible = false;
-                DdlSeats.Visible = false;
+                PnSeats.Visible = false;
                 DdlSeats.SelectedValue = localData.Values.Seats = "1";
             }
 
@@ -275,8 +270,7 @@ namespace MVP.TripExplorer
                 PnTime.Visible = false;
                 PnBook.Visible = false;
                 DdlSeats.SelectedValue = localData.Values.Seats = "1";
-                LbSeats.Visible = true;
-                DdlSeats.Visible = true;
+                PnSeats.Visible = true;
 
                 calupdate = true;
             }
@@ -326,7 +320,7 @@ namespace MVP.TripExplorer
                 {
                     pageData.Selection.Seats = int.Parse(DdlSeats.SelectedValue);
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
-                    if (PnBook.Visible) // refactor this check to the bookupdate check below
+                    if (PnBook.Visible)
                     {
                         bookupdate = true;
                     }
@@ -375,8 +369,7 @@ namespace MVP.TripExplorer
 
             pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
 
-            LbDate.Visible = true;
-            CalDate.Visible = true;
+            PnDate.Visible = true;
 
             if (PnTime.Visible) // if time selection popup is visible, update it
             {
@@ -557,12 +550,9 @@ namespace MVP.TripExplorer
                     var endap = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
                                                             .Where(ap => ap.Default)
                                                             .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
-                    DdlEndRegion.SelectedValue = endregion;
-                    DdlEndAP.SelectedValue = endap;
-                    localData.Values.EndRegion = endregion;
-                    localData.Values.EndAP = endap;
-                    LbEndAP.Visible = true;
-                    DdlEndAP.Visible = true;
+                    DdlEndRegion.SelectedValue = localData.Values.EndRegion = endregion;
+                    DdlEndAP.SelectedValue = localData.Values.EndAP = endap;
+                    PnEndAp.Visible = true;
                 }
             }
         }

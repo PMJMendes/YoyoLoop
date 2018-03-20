@@ -13,22 +13,13 @@ namespace MVP.TripExplorer {
     public partial class Explore {
         
         /// <summary>
-        /// LbEndAP control.
+        /// PnEndRegion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbEndAP;
-        
-        /// <summary>
-        /// LbSeats control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbSeats;
+        protected global::System.Web.UI.WebControls.Panel PnEndRegion;
         
         /// <summary>
         /// DdlEndRegion control.
@@ -40,6 +31,15 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlEndRegion;
         
         /// <summary>
+        /// PnEndAp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PnEndAp;
+        
+        /// <summary>
         /// DdlEndAP control.
         /// </summary>
         /// <remarks>
@@ -47,6 +47,15 @@ namespace MVP.TripExplorer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DdlEndAP;
+        
+        /// <summary>
+        /// PnSeats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PnSeats;
         
         /// <summary>
         /// DdlSeats control.
@@ -58,13 +67,13 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlSeats;
         
         /// <summary>
-        /// LbStartAP control.
+        /// PnStartRegion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbStartAP;
+        protected global::System.Web.UI.WebControls.Panel PnStartRegion;
         
         /// <summary>
         /// DdlStartRegion control.
@@ -76,6 +85,15 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlStartRegion;
         
         /// <summary>
+        /// PnStartAP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PnStartAP;
+        
+        /// <summary>
         /// DdlStartAP control.
         /// </summary>
         /// <remarks>
@@ -85,13 +103,13 @@ namespace MVP.TripExplorer {
         protected global::System.Web.UI.WebControls.DropDownList DdlStartAP;
         
         /// <summary>
-        /// LbDate control.
+        /// PnDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbDate;
+        protected global::System.Web.UI.WebControls.Panel PnDate;
         
         /// <summary>
         /// CalDate control.
