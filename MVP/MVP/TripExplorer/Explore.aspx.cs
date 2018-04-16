@@ -14,7 +14,6 @@ namespace MVP.TripExplorer
         public class PageState
         {
             public Selection Values { get; set; }
-            public QueryData Query { get; set; }
 
             public class Selection
             {
@@ -26,11 +25,6 @@ namespace MVP.TripExplorer
                 public DateTime CalSelectedDate { get; set; }
                 public DateTime CalVisibleDate { get; set; }
                 public TimeSpan Time { get; set; }
-            }
-
-            public class QueryData
-            {
-                public Guid? EndRegionId { get; set; }
             }
         }
 
@@ -169,7 +163,7 @@ namespace MVP.TripExplorer
 
         public IEnumerable<ListItem> DdlEndRegion_GetData()
         {
-            if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == localData.Query.EndRegionId).Count() != 0)
+            if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId.ToString() == localData.Values.EndRegion).Count() != 0)
             {
                 return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
             }
@@ -220,6 +214,7 @@ namespace MVP.TripExplorer
             if (localData == null)
             {
                 localData = GetInitialData();
+                ProcessQueryString();
                 InitializeControls();
                 Session["local.data"] = localData;
             }
@@ -494,23 +489,42 @@ namespace MVP.TripExplorer
                     CalSelectedDate = DateTime.Today,
                     CalVisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1),
                     Time = new TimeSpan(-1)
-                },
-                Query = GetQueryString()
+                }
             };
+
             return result;
         }
 
-        public PageState.QueryData GetQueryString()
+        public void ProcessQueryString()
         {
             var query = Request.QueryString;
-            var result = new PageState.QueryData();
 
             if (query["Dest"] != null && query["Dest"] != string.Empty)
             {
-                result.EndRegionId = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
+                Guid? dest = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
+                if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Count() != 0)
+                {
+                    var endregion = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
+                    var endap = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
+                                                            .Where(ap => ap.Default)
+                                                            .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
+                    localData.Values.EndRegion = endregion;
+                    localData.Values.EndAP = endap;
+                }
             }
+        }
 
-            return result;
+        public void InitializeControls()
+        {
+            CalDate.VisibleDate = localData.Values.CalVisibleDate;
+            CalDate.SelectedDate = localData.Values.CalSelectedDate;
+
+            if(localData.Values.EndRegion != Guid.Empty.ToString())
+            {
+                DdlEndRegion.SelectedValue = localData.Values.EndRegion;
+                DdlEndAP.SelectedValue = localData.Values.EndAP;
+                PnEndAp.Visible = true;
+            }
         }
 
         protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
@@ -539,27 +553,6 @@ namespace MVP.TripExplorer
             else
             {
                 e.Day.IsSelectable = false;
-            }
-        }
-
-        public void InitializeControls()
-        {
-            CalDate.VisibleDate = localData.Values.CalVisibleDate;
-            CalDate.SelectedDate = localData.Values.CalSelectedDate;
-
-            Guid? dest = localData.Query.EndRegionId;
-            if (dest != null && dest != Guid.Empty)
-            {
-                if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Count() != 0)
-                {
-                    var endregion = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault().LoopedRegionId.ToString();
-                    var endap = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
-                                                            .Where(ap => ap.Default)
-                                                            .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
-                    DdlEndRegion.SelectedValue = localData.Values.EndRegion = endregion;
-                    DdlEndAP.SelectedValue = localData.Values.EndAP = endap;
-                    PnEndAp.Visible = true;
-                }
             }
         }
 
