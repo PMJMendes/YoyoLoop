@@ -171,7 +171,7 @@ namespace MVP.Services
             var trip = new Trip()
             {
                 TripId = Guid.NewGuid(),
-                Status = BookingStatus.PENDING,
+                Status = TripStatus.PENDING,
                 StartTime = state.Selection.Date + state.Selection.Time,
                 Route = model.Route.Single(b => b.RouteId == state.Selection.Route.RouteId),
                 StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
@@ -188,14 +188,14 @@ namespace MVP.Services
             var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
             var bookings = trip.Bookings;
 
-            if (trip == null || trip.Status == BookingStatus.CANCELLED || trip.Status == BookingStatus.COMPLETED)
+            if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
             {
                 return;
             }
 
             if (trip.StartTime < DateTime.Now)
             {
-                trip.Status = BookingStatus.COMPLETED;
+                trip.Status = TripStatus.COMPLETED;
                 foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
                 {
                     b.Status = BookingStatus.COMPLETED;
@@ -204,18 +204,18 @@ namespace MVP.Services
                 return;
             }
 
-            if (trip.Status == BookingStatus.PENDING)
+            if (trip.Status == TripStatus.PENDING)
             {
                 if(bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
                 {
-                    trip.Status = BookingStatus.BOOKED;
+                    trip.Status = TripStatus.BOOKED;
                     model.SaveChanges();
                     return;
                 }
 
                 if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
                 {
-                    trip.Status = BookingStatus.CANCELLED;
+                    trip.Status = TripStatus.CANCELLED;
                     model.SaveChanges();
                     return;
                 }
