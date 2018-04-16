@@ -20,7 +20,7 @@ namespace MVP.Migrations
                 BookTimeout = new TimeSpan (0, 10, 0),
                 VehicleCapacity = 7,
                 LastMinuteThreshold = 2,
-                MinTimeBookLastMinute = new TimeSpan (0, 30, 0)
+                MinTimeBookLastMinute = new TimeSpan (0, 15, 0)
             });
 
             LoopedRegion lis = new LoopedRegion()
