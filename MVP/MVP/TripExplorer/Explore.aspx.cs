@@ -116,7 +116,7 @@ namespace MVP.TripExplorer
             PnTime.Visible = false;
             localData.Values.Time = TimeSpan.Parse(button.Text);
             CheckParams();
-            CalDate.SelectedDate = localData.Values.CalSelectedDate = DateTime.MinValue; // we need to make the date selectable again
+            CalDate.SelectedDate = DateTime.MinValue; // we need to make the date selectable again
         }
 
         protected void BtnDepartureBook_Click(object sender, EventArgs e)
@@ -257,19 +257,25 @@ namespace MVP.TripExplorer
                 PnTime.Visible = false;
                 PnBook.Visible = false;
                 PnDate.Visible = false;
-                CalDate.SelectedDate = localData.Values.CalSelectedDate = DateTime.MinValue;
+                CalDate.SelectedDate = 
+                localData.Values.CalSelectedDate = DateTime.MinValue;
                 PnSeats.Visible = false;
-                DdlSeats.SelectedValue = localData.Values.Seats = "1";
+                DdlSeats.SelectedValue = 
+                localData.Values.Seats = "1";
             }
 
             // REFACTOR get rid of the null route ifs down below
             else if (pageData.Selection.Route != route)  // move to separate function; We have a new route selection
             {
                 pageData.Selection.Route = route;
-                CalDate.SelectedDate = localData.Values.CalSelectedDate = DateTime.MinValue;
+                CalDate.SelectedDate = 
+                pageData.Selection.Date =
+                localData.Values.CalSelectedDate = DateTime.MinValue;
                 PnTime.Visible = false;
                 PnBook.Visible = false;
-                DdlSeats.SelectedValue = localData.Values.Seats = "1";
+                DdlSeats.SelectedValue = 
+                localData.Values.Seats = "1";
+                pageData.Selection.Seats = 1;
                 PnSeats.Visible = true;
 
                 calupdate = true;
@@ -288,7 +294,7 @@ namespace MVP.TripExplorer
                 }
             }
 
-            if (pageData.Selection.SAP != dap) // we have a new dap
+            if (pageData.Selection.DAP != dap) // we have a new dap
             {
                 if (route != null)
                 {
@@ -318,7 +324,7 @@ namespace MVP.TripExplorer
             {
                 if (route != null)
                 {
-                    pageData.Selection.Seats = int.Parse(DdlSeats.SelectedValue);
+                    pageData.Selection.Seats = int.Parse(localData.Values.Seats);
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
                     if (PnBook.Visible)
                     {
