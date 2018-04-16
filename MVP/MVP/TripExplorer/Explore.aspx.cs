@@ -235,20 +235,9 @@ namespace MVP.TripExplorer
             bool calupdate = false;
             bool bookupdate = false;
 
-            if (route == null) // move to separate function
+            if (route == null)
             {
-                pageData.Selection = new Selection
-                {
-                    Route = null,
-                    SAP = null,
-                    DAP = null,
-                    Date = DateTime.MinValue,
-                    Time = new TimeSpan(-1),
-                    Price = 0,
-                    Seats = 1,
-                    Trip = null
-                };
-                pageData.DaySlots.Clear();
+                ClearSelection();
                 PnTime.Visible = false;
                 PnBook.Visible = false;
                 PnDate.Visible = false;
@@ -258,27 +247,25 @@ namespace MVP.TripExplorer
                 DdlSeats.SelectedValue = 
                 localData.Values.Seats = "1";
             }
-
-            // REFACTOR get rid of the null route ifs down below
-            else if (pageData.Selection.Route != route)  // move to separate function; We have a new route selection
+            else
             {
-                pageData.Selection.Route = route;
-                CalDate.SelectedDate = 
-                pageData.Selection.Date =
-                localData.Values.CalSelectedDate = DateTime.MinValue;
-                PnTime.Visible = false;
-                PnBook.Visible = false;
-                DdlSeats.SelectedValue = 
-                localData.Values.Seats = "1";
-                pageData.Selection.Seats = 1;
-                PnSeats.Visible = true;
+                if (pageData.Selection.Route != route)  // New Route
+                {
+                    pageData.Selection.Route = route;
+                    CalDate.SelectedDate =
+                    pageData.Selection.Date =
+                    localData.Values.CalSelectedDate = DateTime.MinValue;
+                    PnTime.Visible = false;
+                    PnBook.Visible = false;
+                    DdlSeats.SelectedValue =
+                    localData.Values.Seats = "1";
+                    pageData.Selection.Seats = 1;
+                    PnSeats.Visible = true;
 
-                calupdate = true;
-            }
+                    calupdate = true;
+                }
 
-            if (pageData.Selection.SAP != sap) // we have a new sap
-            {
-                if (route != null)
+                if (pageData.Selection.SAP != sap) // New SAP
                 {
                     pageData.Selection.SAP = sap;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
@@ -287,11 +274,8 @@ namespace MVP.TripExplorer
                         bookupdate = true;
                     }
                 }
-            }
 
-            if (pageData.Selection.DAP != dap) // we have a new dap
-            {
-                if (route != null)
+                if (pageData.Selection.DAP != dap) // New DAP
                 {
                     pageData.Selection.DAP = dap;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
@@ -300,11 +284,8 @@ namespace MVP.TripExplorer
                         bookupdate = true;
                     }
                 }
-            }
 
-            if (pageData.Selection.Date != localData.Values.CalSelectedDate) // we have a new date
-            {
-                if (route != null)
+                if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
                     pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
@@ -313,11 +294,8 @@ namespace MVP.TripExplorer
                         bookupdate = true;
                     }
                 }
-            }
 
-            if (pageData.Selection.Seats.ToString() != localData.Values.Seats)
-            {
-                if (route != null)
+                if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
                 {
                     pageData.Selection.Seats = int.Parse(localData.Values.Seats);
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
@@ -326,12 +304,12 @@ namespace MVP.TripExplorer
                         bookupdate = true;
                     }
                 }
-            }
 
-            if (pageData.Selection.Time != localData.Values.Time) // new time
-            {
-                pageData.Selection.Time = localData.Values.Time;
-                bookupdate = true;
+                if (pageData.Selection.Time != localData.Values.Time) // New time
+                {
+                    pageData.Selection.Time = localData.Values.Time;
+                    bookupdate = true;
+                }
             }
 
             if (calupdate)
@@ -554,6 +532,22 @@ namespace MVP.TripExplorer
             {
                 e.Day.IsSelectable = false;
             }
+        }
+
+        private void ClearSelection()
+        {
+            pageData.Selection = new Selection
+            {
+                Route = null,
+                SAP = null,
+                DAP = null,
+                Date = DateTime.MinValue,
+                Time = new TimeSpan(-1),
+                Price = 0,
+                Seats = 1,
+                Trip = null
+            };
+            pageData.DaySlots.Clear();
         }
 
         public void GetDebugData()
