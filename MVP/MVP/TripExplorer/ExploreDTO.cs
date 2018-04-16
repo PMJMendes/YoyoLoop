@@ -7,13 +7,39 @@ namespace MVP.TripExplorer
     public class ExploreDTO
     {
         public List<Route> Routes { get; set; }
+        public Selection Selection { get; set; }
+        public List<DaySlot> DaySlots { get; set; }
+    }
 
-        public DateTime SelectedDate { get; set; }
-        public Route SelectedRoute { get; set; }
-        public AccessPoint SelectedSAP { get; set; }
-        public AccessPoint SelectedDAP { get; set; }
-        public TimeSpan SelectedTime { get; set; }
+    public class Selection
+    {
+        public DateTime Date { get; set; }
+        public Route Route { get; set; }
+        public AccessPoint SAP { get; set; }
+        public AccessPoint DAP { get; set;}
+        public TimeSpan Time { get; set; }
+        public Decimal Price { get; set; }
+        public int Seats { get; set; }
+        public Trip Trip { get; set; }
+    }
 
-        public List<DateTime> Departure { get; set; }
+    public class DaySlot
+    {
+        public DateTime Day { get; set; }
+        public SlotStatus Status { get; set; }
+        public Decimal Price { get; set; }
+    }
+
+    public class TimeSlot
+    {
+        public TimeSpan Time { get; set; }
+        public SlotStatus Status { get; set; }
+    }
+
+    public enum SlotStatus // Definitions have changed, not yet settled on
+    {
+        GREEN,      // Available with selected parameters
+        YELLOW,     // Available with different parameters
+        RED         // Not available
     }
 }
