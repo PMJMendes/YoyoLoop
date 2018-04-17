@@ -64,6 +64,24 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -200,6 +218,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="BackOffice\Office.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -370,6 +389,15 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BackOffice\Office.aspx.cs">
+      <DependentUpon>Office.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\Office.aspx.designer.cs">
+      <DependentUpon>Office.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\OfficeDTO.cs" />
+    <Compile Include="BackOffice\Services\OfficeService.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,12 +423,61 @@
     <Compile Include="Migrations\201801200236263_InitialDataModel.Designer.cs">
       <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803011227227_ModelReworkWireframeApproval.cs" />
+    <Compile Include="Migrations\201803011227227_ModelReworkWireframeApproval.Designer.cs">
+      <DependentUpon>201803011227227_ModelReworkWireframeApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803011734211_ModelReworkCorrection.cs" />
+    <Compile Include="Migrations\201803011734211_ModelReworkCorrection.Designer.cs">
+      <DependentUpon>201803011734211_ModelReworkCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803051046512_ModelUpdateBuildCalendar.cs" />
+    <Compile Include="Migrations\201803051046512_ModelUpdateBuildCalendar.Designer.cs">
+      <DependentUpon>201803051046512_ModelUpdateBuildCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803060948458_ModelUpdateSettingsMinTimeBook.cs" />
+    <Compile Include="Migrations\201803060948458_ModelUpdateSettingsMinTimeBook.Designer.cs">
+      <DependentUpon>201803060948458_ModelUpdateSettingsMinTimeBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061017002_ModelUpdateFares.cs" />
+    <Compile Include="Migrations\201803061017002_ModelUpdateFares.Designer.cs">
+      <DependentUpon>201803061017002_ModelUpdateFares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061139498_ModelUpdateDefaultAP.cs" />
+    <Compile Include="Migrations\201803061139498_ModelUpdateDefaultAP.Designer.cs">
+      <DependentUpon>201803061139498_ModelUpdateDefaultAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.cs" />
+    <Compile Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.Designer.cs">
+      <DependentUpon>201803061208087_ModelUpdateDepartureVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803071359569_ModelReworkMinorClassFiles.cs" />
+    <Compile Include="Migrations\201803071359569_ModelReworkMinorClassFiles.Designer.cs">
+      <DependentUpon>201803071359569_ModelReworkMinorClassFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091631092_ModelReworkSettingsPKChange.cs" />
+    <Compile Include="Migrations\201803091631092_ModelReworkSettingsPKChange.Designer.cs">
+      <DependentUpon>201803091631092_ModelReworkSettingsPKChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803122104363_ModelReworkMinorRemoveDurationFromTrip.cs" />
+    <Compile Include="Migrations\201803122104363_ModelReworkMinorRemoveDurationFromTrip.Designer.cs">
+      <DependentUpon>201803122104363_ModelReworkMinorRemoveDurationFromTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804160907020_TripStatus.cs" />
+    <Compile Include="Migrations\201804160907020_TripStatus.Designer.cs">
+      <DependentUpon>201804160907020_TripStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
+    <Compile Include="Models\Entities\Booking.cs" />
+    <Compile Include="Models\Entities\DayType.cs" />
+    <Compile Include="Models\Entities\Departure.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
+    <Compile Include="Models\Entities\Fare.cs" />
     <Compile Include="Models\Entities\LoopedRegion.cs" />
     <Compile Include="Models\Entities\Route.cs" />
+    <Compile Include="Models\Entities\Settings.cs" />
     <Compile Include="Models\Entities\Trip.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
@@ -462,6 +539,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801200236263_InitialDataModel.resx">
       <DependentUpon>201801200236263_InitialDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803011227227_ModelReworkWireframeApproval.resx">
+      <DependentUpon>201803011227227_ModelReworkWireframeApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803011734211_ModelReworkCorrection.resx">
+      <DependentUpon>201803011734211_ModelReworkCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803051046512_ModelUpdateBuildCalendar.resx">
+      <DependentUpon>201803051046512_ModelUpdateBuildCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803060948458_ModelUpdateSettingsMinTimeBook.resx">
+      <DependentUpon>201803060948458_ModelUpdateSettingsMinTimeBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061017002_ModelUpdateFares.resx">
+      <DependentUpon>201803061017002_ModelUpdateFares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061139498_ModelUpdateDefaultAP.resx">
+      <DependentUpon>201803061139498_ModelUpdateDefaultAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803061208087_ModelUpdateDepartureVehicles.resx">
+      <DependentUpon>201803061208087_ModelUpdateDepartureVehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803071359569_ModelReworkMinorClassFiles.resx">
+      <DependentUpon>201803071359569_ModelReworkMinorClassFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091631092_ModelReworkSettingsPKChange.resx">
+      <DependentUpon>201803091631092_ModelReworkSettingsPKChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803122104363_ModelReworkMinorRemoveDurationFromTrip.resx">
+      <DependentUpon>201803122104363_ModelReworkMinorRemoveDurationFromTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804160907020_TripStatus.resx">
+      <DependentUpon>201804160907020_TripStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

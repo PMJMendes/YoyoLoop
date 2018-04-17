@@ -3,9 +3,24 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>YOYOLOOP</h1>
-        <p class="lead">30-300km low carbon trips from 5 eur.</p>
-        <p><a href="/TripExplorer/Explore" class="btn btn-primary btn-lg">Get started &raquo;</a></p>
+        <p class="lead">Where do you want to go?</p>
+        <Table><tr>
+            <td>
+            <a href="/TripExplorer/Explore?Dest=Lisboa" class="btn btn-primary btn-lg">Lisboa &raquo;</a>
+            </td>
+            <td style="width:20px"></td>
+            <td>
+            <a href="/TripExplorer/Explore?Dest=Linha%20de%20Cascais" class="btn btn-primary btn-lg">Cascais &raquo;</a>
+            </td>
+            <td style="width:20px"></td>
+            <td>
+            <a href="/TripExplorer/Explore?Dest=Leiria" class="btn btn-primary btn-lg">Leiria &raquo;</a>
+            </td>
+            <td style="width:20px"></td>
+            <td>
+            <a href="/TripExplorer/Explore?Dest=Coimbra" class="btn btn-primary btn-lg">Coimbra &raquo;</a>
+            </td>
+        </tr></Table>
     </div>
 
     
