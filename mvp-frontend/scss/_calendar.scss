@@ -1,0 +1,345 @@
+.navbar.scrolled{
+    background: #eff1f6;
+
+    a {
+        color: #535e7b !important;
+    }
+
+    img.logo {
+        margin: 0 !important;
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+header.head {
+    background-image: url('../img/cascais.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+
+    .container-fluid {
+        margin-top: 10em;
+    }
+
+    .startend {
+        margin-top: 3em;
+
+        .start {
+            img {
+                width: 11px;
+                height: 11px;
+                object-fit: contain;
+                position: absolute;
+                right: 40px;
+                z-index: 1;
+            }
+        }
+        
+        .switch {
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                z-index: 1;
+            }
+        }
+    
+        .path {
+            img {
+                width: 4px;
+                height: 103px;
+                object-fit: contain;
+                position: absolute;
+                right: 44px;
+            }
+        }
+    
+        .end {
+            img {
+                width: 11px;
+                height: 11px;
+                object-fit: contain;
+                position: absolute;
+                right: 40px;
+                top: 98px;
+            }
+        }
+
+    }
+
+    .dropdown {
+        margin-top: 0.5em;
+
+        > button.dropdown-toggle {
+            padding: 0 2em 0 2em;
+            opacity: 0.9;
+            border-radius: 2px;
+            background-color: #838da7;
+            height: 3em;
+            width: 100%;
+        }
+
+        > button.destination {
+            &::after {
+                vertical-align: middle;
+                margin-left: 60%;
+                color: black;
+            }
+        }
+
+        > button.stops {
+            &::after {
+                vertical-align: middle;
+                margin-left: 80%;
+                color: black;
+            }
+        }
+        
+        > button.seats {
+            &::after {
+                color: black;
+            }
+        }
+
+        .dropdown-menu {
+            min-width: 8em;
+            margin-top: 1.5em;
+            width: 100%;
+
+            .dropdown-item {
+                font-family: Lato;
+                font-size: 1.5vw;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2;
+                letter-spacing: 0.5px;
+                text-align: left;
+                color: #535e7b;
+                &:first-child {
+                    pointer-events: none;
+                    font-size: 1vw;
+                    line-height: normal;
+                    letter-spacing: 0.4px;
+                    color: #838da7;
+                }
+            }
+
+            &:after {
+                content:"";
+                position: absolute;
+                right: 10px;
+                top: -12px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 12px 12px 12px;
+                border-color: transparent transparent #ffffff transparent;
+                z-index:9998;
+            }
+
+            .dropdown-divider {
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            img {
+                width: 1em;
+            }
+        }
+    }
+
+    .form-check {
+        margin-top: 2.5em;
+        .form-check-input {
+            margin-top: 0;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background-color: #838da7;
+
+            &:focus{
+                outline:0;
+            }
+    
+            &:before {
+                background-color: #838da7;
+            }
+
+            &:after {
+                background-color: #838da7;
+            }
+        }
+
+        .form-check-label {
+            margin-left: 1.5em;
+            vertical-align: middle;
+        }
+    }
+}
+
+#book {
+    background-color: #eff1f6;
+
+    button.btn-calendar {
+        background-color: #eff1f6;
+        border-color: #838da7;
+        border-radius: 0.25em 0 0 0.25em !important;
+    }
+
+    button.btn-list {
+        background-color: #eff1f6;
+        border-color: #838da7;
+        border-radius: 0 0.25em 0.25em 0 !important;
+    }
+
+    button.btn-today {
+        width: 90px;
+        background-color: #eff1f6;
+        border-color: #838da7;
+        border-radius: 4px;
+        color: #838da7;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: 0.4px;
+    }
+
+    button.btn {
+        height: 40px;
+        &--selected {
+            background-color: #838da7;
+            border-color: #838da7;
+        }
+    }
+
+    .month {
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.54;
+        letter-spacing: normal;
+        text-align: center;
+        color: #535e7b;
+    }
+
+    .year {
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: #838da7;
+    }
+
+    @media (max-width:575px) {
+        .display-4 {
+            font-size: 1.5rem;
+        }
+        .day h5 {
+            background-color: #f8f9fa;
+            padding: 3px 5px 5px;
+            margin: -8px -8px 8px -8px;
+        }
+        .date {
+            padding-left: 4px;
+        }
+    }
+    
+    @media (min-width: 576px) {
+        .day {
+            height: 8.2857vw;
+        }
+    }
+
+    .calendar-container {
+        font-family: Lato;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 1.4px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 0 14px 0 rgba(131, 141, 167, 0.15);
+
+        p {
+            margin-bottom: 0;
+        }
+
+        header {
+            h5 {
+                font-size: 1vw;
+                font-weight: normal;
+                line-height: 2;
+                text-align: left;
+                color: #838da7;
+            }
+        }
+
+        .day {
+            &--fully-available {
+                background-color: rgba($color: #2ecc71, $alpha: 0.1);
+            }
+
+            &--available {
+                background-color: rgba($color: #f39c12, $alpha: 0.1);
+            }
+            &--limited-availability {
+                background-color: rgba($color: #ff5f6d, $alpha: 0.1);
+            }
+
+            &--unavailable {
+                background-color: rgba($color: #838da7, $alpha: 0.1);
+            }
+
+            p.info {
+                font-size: 1vw;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: #ff5f6d;
+                position: absolute;
+                bottom: 35%;
+                left: 15%;
+            }
+
+            h5 {
+                font-size: 1vw;
+                font-weight: 600;
+                text-align: left;
+                color: #7b849e;
+                left: 15%;
+                position: absolute;
+                top: 10%;
+            }
+
+            a {
+                font-size: 2vw;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: #ff5f6d;
+                position: absolute;
+                bottom: 0;
+                left: 15%;
+            }
+        }
+    }
+}
