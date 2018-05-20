@@ -423,6 +423,33 @@ header.head .form-check .form-check-label {
   }
 }
 
+#book .return-date {
+  border-radius: 4px;
+  background-color: #838da7;
+  border: solid 1px #838da7;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+#book .return-date .btn-time {
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #ff5f6d;
+  font-size: 14px;
+}
+
+@media (max-width: 767.98px) {
+  #book .return-date {
+    display: none;
+  }
+}
+
 #book .calendar-container {
   font-family: Lato;
   font-style: normal;
