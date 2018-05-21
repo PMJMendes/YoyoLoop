@@ -69,7 +69,7 @@
 }
 
 header.head {
-  background-image: url("../img/cascais.jpg");
+  background-image: url("../img/lisboa.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -549,6 +549,7 @@ header.head .form-check .form-check-label {
   border-radius: 4px;
   background-image: linear-gradient(#ff5f6d, #ff5f6d), linear-gradient(to bottom, #ff5f6d, #ffc371);
   color: #ffffff;
+  cursor: pointer;
 }
 
 #book .calendar-container .day:hover a {
