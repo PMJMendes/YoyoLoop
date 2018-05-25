@@ -1,0 +1,624 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.TripExplorer.Calendar" %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yoyoloop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body id="">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+      <div class="container-fluid">
+        <img src="../img/yoyo-logo.png" alt="" class="img-responsive logo"/>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger text-uppercase" href="#">Loops & horarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" >Registar/Entrar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="head text-center d-flex pb-5">
+      <div class="container-fluid">
+        <div class="row p-5 dropdown-menus">
+          <div class="d-none d-sm-block col-lg-1 col-md-1 startend">
+            <div class="start">
+              <img src="../img/red-dot.png" alt="" class="img-responsive">
+            </div>
+            <div class="switch">
+              <img src="../img/switch@2x.png" alt="" class="img-responsive">
+            </div>
+            <div class="path">
+              <img src="../img/path@2x.png" alt="" class="img-responsive">
+            </div>
+            <div class="end">
+              <img src="../img/end@2x.png" alt="" class="img-responsive">
+            </div>
+          </div>
+
+          <div class="col-lg-9 col-md-9">
+            <div class="row">
+              <!-- DESTINO -->
+              <div class="col-lg-4 col-md-4 text-left">
+                <span class="text-uppercase">Destino</span>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cascais
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-item">
+                      <div class="pl-1 d-flex flex-row">
+                        <div class="p-0"><img src="../img/pin@2x.png" alt="" class="img-responsive"/></div>
+                        <div class="col-lg-8 col-md-8">Escolher destino</div>
+                      </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">&rarr; Cascais</a>
+                    <a class="dropdown-item" href="#">&rarr; Coimbra</a>
+                    <a class="dropdown-item" href="#">&rarr; Porto</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PARAGENS -->
+              <div class="col-lg-8 col-md-8 mx-auto text-left">
+                <span class="text-uppercase">Paragem</span>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle text-left stops" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Amoreiras
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-item">
+                      <div class="pl-1 d-flex flex-row">
+                        <div class="p-0"><img src="../img/pin@2x.png" alt="" class="img-responsive"/></div>
+                        <div class="col-lg-8 col-md-8">Escolher Paragem</div>
+                      </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">&rarr; Marques de Pombal</a>
+                    <a class="dropdown-item" href="#">&rarr; Saldanha</a>
+                    <a class="dropdown-item" href="#">&rarr; Benfica</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <div class="col-lg-1 col-md-1 startend-mobile pt-3 pb-5">
+                <div class="start">
+                  <img src="../img/red-dot.png" alt="" class="img-responsive">
+                </div>
+                <div class="switch">
+                  <img src="../img/switch@2x.png" alt="" class="img-responsive">
+                </div>
+                <div class="path">
+                  <img src="../img/path@2x.png" alt="" class="img-responsive">
+                </div>
+                <div class="end">
+                  <img src="../img/end@2x.png" alt="" class="img-responsive">
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <!-- ORIGEM -->
+              <div class="col-lg-4 col-md-4 text-left">
+                <span class="text-uppercase">Origem</span>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cascais
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-item">
+                      <div class="pl-1 d-flex flex-row">
+                        <div class="p-0"><img src="../img/pin@2x.png" alt="" class="img-responsive"/></div>
+                        <div class="col-lg-8">Escolher destino</div>
+                      </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">&rarr; Cascais</a>
+                    <a class="dropdown-item" href="#">&rarr; Coimbra</a>
+                    <a class="dropdown-item" href="#">&rarr; Porto</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PARAGENS -->
+              <div class="col-lg-8 col-md-8 mx-auto text-left">
+                <span class="text-uppercase">Paragem</span>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle text-left stops" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Amoreiras
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-item">
+                      <div class="pl-1 d-flex flex-row">
+                        <div class="p-0"><img src="../img/pin@2x.png" alt="" class="img-responsive"/></div>
+                        <div class="col-lg-8">Escolher paragem</div>
+                      </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">&rarr; Marques de Pombal</a>
+                    <a class="dropdown-item" href="#">&rarr; Saldanha</a>
+                    <a class="dropdown-item" href="#">&rarr; Benfica</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LUGARES -->
+          <div class="n-seats col-lg-2 col-md-2 mx-auto text-left">
+            <div class="row">
+              <div class="col col-xs-6">
+                <span class="text-uppercase">Lugares</span>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle text-left seats" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    5 lugares
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">1</a>
+                    <a class="dropdown-item" href="#">2</a>
+                    <a class="dropdown-item" href="#">3</a>
+                    <a class="dropdown-item" href="#">4</a>
+                    <a class="dropdown-item" href="#">5</a>
+                  </div>
+                </div>
+              </div>
+              <div class="return col col-xs-6 mt-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label text-uppercase" for="defaultCheck1">
+                    Ida e volta
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </header>
+
+    <section class="pt-5" id="book">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 calendar-background">
+            <!-- CALENDAR HEADER -->
+            <div class="row" id="calendar-header">
+
+              <!-- calendar-list buttons -->
+              <div class="col my-auto d-none d-sm-block">
+                <button class="btn btn-calendar btn--selected">
+                  <img src="../img/calendar.png" srcset="../img/calendar@2x.png 2x, ../img/calendar@3x.png 3x" class="btn-calendar">
+                </button>
+                <button class="btn btn-list">
+                  <img src="../img/list.png" srcset="../img/list@2x.png 2x, ../img/list@3x.png 3x" class="btn-calendar">
+                </button>
+              </div>
+
+              <!-- Month selector -->
+              <div class="col">
+                <div class="d-flex flex-row">
+                  <div class="my-auto col-lg-3 col-md-3 text-right">
+                    <img src="../img/arr-left.png" srcset="../img/arr-left@2x.png 2x, ../img/arr-left@3x.png 3x" class="btn-calendar">
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <p class=" month m-0">Março</p>
+                    <p class="d-none d-md-block year m-0">2018</p>
+                  </div>
+                  <div class="my-auto col-lg-3 col-md-3 text-left">
+                    <img src="../img/arr-right.png" srcset="../img/arr-right@2x.png 2x, ../img/arr-right@3x.png 3x" class="btn-calendar">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Today button -->
+              <div class="my-auto col text-right">
+                <button class=" btn btn-today text-uppercase">Hoje</button>
+              </div>
+            </div>
+
+            <!-- VIAGEM DE IDA -->
+            <div class="container-fluid mt-3 mb-3">
+              <div class="row departure-date">
+                <div class="col">
+                  <div class="row p-2">
+                    <div class="col">
+                      Viagem de ida
+                    </div>
+                  </div>
+                  <div class="row p-2 text-uppercase">
+                    <div class="col">
+                      14 de Março, Quarta
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col">
+                      <button class="btn btn-time text-uppercase">09:15</button>
+                    </div>
+                    <div class="col d-flex justify-content-end align-items-center">
+                      25,00€
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- CALENDAR TABLE -->
+            <div class="container-fluid calendar-container">
+              <hr class="d-block d-sm-none">
+              <header>
+                <div class="row p-1 text-uppercase">
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Seg</h5>
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Ter</h5>
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Qua</h5>
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Qui</h5>
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Sex</h5>
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Sab</h5>
+                  <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Dom</h5>
+                </div>
+              </header>
+              <hr class="d-block d-sm-none">
+              <div class="row border border-bottom-0">
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
+                  <div class="date d-flex align-items-center justify-content-center">29</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
+                  <div class="date d-flex align-items-center justify-content-center">30</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
+                  <div class="date d-flex align-items-center justify-content-center">31</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate ">
+                  <div class="date date--today d-flex align-items-center justify-content-center">1</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate ">
+                  <div class="date d-flex align-items-center justify-content-center">2</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">3</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">4</div>
+                </div>
+                <div class="w-100"></div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">5</div>
+                </div>
+                <div class="day day--limited-availability col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">6</div>
+                  <div class="row pl-3 pr-3 d-none d-sm-block">
+                    <p class="info">Quase cheio</p>
+                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
+                  </div>
+                </div>
+                <div class="day day--selected col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">7</div>
+                  <div class="row pl-3 pr-3 d-none d-sm-block">
+                    <p class="info">Quase cheio</p>
+                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
+                  </div>
+                </div>
+                <div class="day day--unavailable col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">8</div>
+                  <div class="row pl-3 pr-3 d-none d-sm-block">
+                    <p class="info">Esgotado</p>
+                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
+                  </div>
+                </div>
+                <div class="day day--available col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">9</div>
+                  <div class="row pl-3 pr-3 d-none d-sm-block">
+                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
+                  </div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">10</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">11</div>
+                </div>
+                <div class="w-100"></div>
+                <div class="day day--fully-available col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">12</div>
+                  <div class="row pl-3 pr-3 d-none d-sm-block">
+                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
+                  </div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">13</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">14</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">15</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">16</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">17</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">18</div>
+                </div>
+                <div class="w-100"></div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">19</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">20</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">21</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">22</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">23</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">24</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">25</div>
+                </div>
+                <div class="w-100"></div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">26</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">27</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">28</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">29</div>
+                </div>
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                  <div class="date d-flex align-items-center justify-content-center">30</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
+                  <div class="date d-flex align-items-center justify-content-center">1</div>
+                </div>
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
+                  <div class="date d-flex align-items-center justify-content-center">2</div>
+                </div>
+                <div class="w-100"></div>
+
+              </div>
+              <hr class="d-block d-sm-none">
+            </div>
+
+            <!-- VIAGEM DE IDA -->
+            <div class="container-fluid mt-3 mb-3">
+              <div class="row return-date">
+                <div class="col">
+                  <div class="row p-2">
+                    <div class="col">
+                      Viagem de Volta
+                    </div>
+                  </div>
+                  <div class="row p-2 text-uppercase">
+                    <div class="col">
+                      Escolher
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col d-flex justify-content-end align-items-center">
+                      00,00€
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row p-3" id="calendar-footer">
+              <div class="col-6 text-nowrap">
+                Ocupação:
+                <span class="pl-2">
+                  <img src="../img/ellipse-red.png"
+                    srcset="../img/ellipse-red@2x.png 2x,
+                      ../img/ellipse-red@3x.png 3x"
+                    class="EllipseRed">
+                    Alta
+                </span>
+                <span class="pl-2">
+                  <img src="../img/ellipse-yellow.png"
+                  srcset="../img/ellipse-yellow@2x.png 2x,
+                    ../img/ellipse-yellow@3x.png 3x"
+                  class="EllipseRed">
+                  Média
+                </span>
+                <span class="pl-2">
+                  <img src="../img/ellipse-green.png"
+                  srcset="../img/ellipse-green@2x.png 2x,
+                    ../img/ellipse-green@3x.png 3x"
+                  class="EllipseRed">
+                  Baixa
+                </span>
+              </div>
+            </div> 
+          </div>
+
+          <!--PROXIMA VIAGEM-->
+          <div class="col-lg-4 col-md-4">
+            <div class="row p-3 text-uppercase">
+              <div class="col-lg-12 d-flex justify-content-center align-self-center">
+                Proxima Viagem
+              </div>
+            </div>
+            
+            <!-- PROXIMA DATA -->
+            <div class="row next-trip">
+              <div class="col-lg-12">
+                <div class="row date">
+                  <div class="col-lg-12 d-flex justify-content-center">13 de Março, Hoje</div>
+                </div>
+                <hr class="divider">
+                <div class="row time">
+                  <div class="col-10">
+                    <!--HORA-->
+                    <div class="row">
+                      <div class="col-1">
+                        <img src="../img/clock.png"
+                        srcset="../img/clock@2x.png 2x,
+                        ../img/clock@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8">
+                        <strong>7:30</strong>
+                      </div>
+                    </div>
+                    <!--PREÇO-->
+                    <div class="row price price--limited-availability">
+                      <div class="col-1">
+                        <img src="../img/cart.png"
+                        srcset="../img/cart@2x.png 2x,
+                        ../img/cart@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8">
+                          <strong>20,00€</strong>
+                          <span class="ml-1">Quase cheio</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2 d-flex justify-content-end">
+                    <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
+                      <img src="../img/cart-light.png"
+                        srcset="../img/cart-light@2x.png 2x,
+                        ../img/cart-light@3x.png 3x"
+                        class="cart-light">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROXIMA DATA -->
+            <div class="row next-trip">
+              <div class="col-lg-12">
+                <div class="row date">
+                  <div class="col-lg-12 d-flex justify-content-center">15 de Março, Quarta</div>
+                </div>
+                <hr class="divider">
+                <div class="row time">
+                  <div class="col-8">
+                    <!--HORA-->
+                    <div class="row">
+                      <div class="col-1">
+                        <img src="../img/clock.png"
+                        srcset="../img/clock@2x.png 2x,
+                        ../img/clock@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8"><strong>19:30</strong></div>
+                    </div>
+
+                    <!--PREÇO-->
+                    <div class="row price">
+                      <div class="col-1">
+                        <img src="../img/cart.png"
+                        srcset="../img/cart@2x.png 2x,
+                        ../img/cart@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8"><strong>20,00€</strong></div>
+                    </div>
+                  </div>
+                  <div class="col-4 d-flex justify-content-end">
+                    <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
+                      <img src="../img/cart-light.png"
+                        srcset="../img/cart-light@2x.png 2x,
+                        ../img/cart-light@3x.png 3x"
+                        class="cart-light">
+                    </button>
+                  </div>
+                </div>
+
+                <hr class="divider">
+                <div class="row time">
+                  <div class="col-8">
+                    <!--HORA-->
+                    <div class="row">
+                      <div class="col-1">
+                        <img src="../img/clock.png"
+                        srcset="../img/clock@2x.png 2x,
+                        ../img/clock@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8"><strong>13:30</strong></div>
+                    </div>
+
+                    <!--PREÇO-->
+                    <div class="row price price--fully-available">
+                      <div class="col-1">
+                        <img src="../img/cart.png"
+                        srcset="../img/cart@2x.png 2x,
+                        ../img/cart@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8"><strong>20,00€</strong></div>
+                    </div>
+                  </div>
+                  <div class="col-4 d-flex justify-content-end">
+                    <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
+                      <img src="../img/cart-light.png"
+                        srcset="../img/cart-light@2x.png 2x,
+                        ../img/cart-light@3x.png 3x"
+                        class="cart-light">
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+      });
+    </script>
+
+  </body>
+
+</html>
