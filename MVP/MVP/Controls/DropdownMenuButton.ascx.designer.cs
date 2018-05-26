@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Calendar {
+namespace MVP.Controls {
     
     
-    public partial class Calendar {
+    public partial class DropdownMenuButton {
         
         /// <summary>
-        /// form1 control.
+        /// ItemRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// DdlEndRegion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlEndRegion;
+        protected global::System.Web.UI.WebControls.Repeater ItemRepeater;
     }
 }

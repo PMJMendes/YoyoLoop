@@ -38,130 +38,130 @@ namespace MVP.Calendar
             InitData();
         }
 
-        protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (DdlEndRegion.SelectedValue != Guid.Empty.ToString())
-            {
-                DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
-            }
+        //protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (DdlEndRegion.SelectedValue != Guid.Empty.ToString())
+        //    {
+        //        DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
+        //    }
 
-            localData.Values.EndRegion = DdlEndRegion.SelectedValue;
-            DdlStartRegion.DataBind();
-            DdlEndAP.DataBind();
-            DdlEndAP.SelectedValue = localData.Values.EndAP = GetPossibleDAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
-            PnStartAP.Visible = false;
-            PnEndAp.Visible = true;
+        //    localData.Values.EndRegion = DdlEndRegion.SelectedValue;
+        //    DdlStartRegion.DataBind();
+        //    DdlEndAP.DataBind();
+        //    DdlEndAP.SelectedValue = localData.Values.EndAP = GetPossibleDAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
+        //    PnStartAP.Visible = false;
+        //    PnEndAp.Visible = true;
 
-            CheckParams();
-        }
+        //    CheckParams();
+        //}
 
-        protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (DdlStartRegion.SelectedValue != Guid.Empty.ToString())
-            {
-                DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
-            }
+        //protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (DdlStartRegion.SelectedValue != Guid.Empty.ToString())
+        //    {
+        //        DdlStartRegion.Items.Remove(DdlStartRegion.Items.FindByValue(Guid.Empty.ToString()));
+        //    }
 
-            localData.Values.StartRegion = DdlStartRegion.SelectedValue;
-            DdlStartAP.DataBind();
-            DdlStartAP.SelectedValue = localData.Values.StartAP = GetPossibleSAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
-            PnStartAP.Visible = true;
+        //    localData.Values.StartRegion = DdlStartRegion.SelectedValue;
+        //    DdlStartAP.DataBind();
+        //    DdlStartAP.SelectedValue = localData.Values.StartAP = GetPossibleSAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
+        //    PnStartAP.Visible = true;
 
-            CheckParams();
-        }
+        //    CheckParams();
+        //}
 
-        protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            localData.Values.EndAP = DdlEndAP.SelectedValue;
-            CheckParams();
-        }
+        //protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    localData.Values.EndAP = DdlEndAP.SelectedValue;
+        //    CheckParams();
+        //}
 
-        protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            localData.Values.StartAP = DdlStartAP.SelectedValue;
-            CheckParams();
-        }
+        //protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    localData.Values.StartAP = DdlStartAP.SelectedValue;
+        //    CheckParams();
+        //}
 
-        protected void CalDate_SelectionChanged(object sender, EventArgs e)
-        {
-            localData.Values.CalSelectedDate = CalDate.SelectedDate;
-            pageData.Selection.Time = new TimeSpan(-1); // CHANGE & MOVE ; date changed, we need to clear selected time
-            CheckParams();
+        //protected void CalDate_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    localData.Values.CalSelectedDate = CalDate.SelectedDate;
+        //    pageData.Selection.Time = new TimeSpan(-1); // CHANGE & MOVE ; date changed, we need to clear selected time
+        //    CheckParams();
 
-            DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData)); // MOVE
-        }
+        //    DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData)); // MOVE
+        //}
 
-        protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
-        {
-            localData.Values.CalVisibleDate = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
+        //protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
+        //{
+        //    localData.Values.CalVisibleDate = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
 
-            GetCalendarData();
-        }
+        //    GetCalendarData();
+        //}
 
-        protected void DdlSeats_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            localData.Values.Seats = DdlSeats.SelectedValue;
-            CheckParams();
-        }
+        //protected void DdlSeats_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    localData.Values.Seats = DdlSeats.SelectedValue;
+        //    CheckParams();
+        //}
 
-        protected void BtnTime_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            PnTime.Visible = false;
-            localData.Values.Time = TimeSpan.Parse(button.Text);
-            CheckParams();
-            CalDate.SelectedDate = DateTime.MinValue; // we need to make the date selectable again
-        }
+        //protected void BtnTime_Click(object sender, EventArgs e)
+        //{
+        //    Button button = (Button)sender;
+        //    PnTime.Visible = false;
+        //    localData.Values.Time = TimeSpan.Parse(button.Text);
+        //    CheckParams();
+        //    CalDate.SelectedDate = DateTime.MinValue; // we need to make the date selectable again
+        //}
 
-        protected void BtnDepartureBook_Click(object sender, EventArgs e)
-        {
-            var booking = service.CreateBooking(pageData);
+        //protected void BtnDepartureBook_Click(object sender, EventArgs e)
+        //{
+        //    var booking = service.CreateBooking(pageData);
 
-            // Will send to the payment confirmation page, for now we use a debug panel to handle payment status
-            BtnDepartureBook.Enabled = false;
-            LbDebugPayBookingID.Text = booking.BookingId.ToString();
-            PnDebugPay.Visible = true;
-        }
+        //    // Will send to the payment confirmation page, for now we use a debug panel to handle payment status
+        //    BtnDepartureBook.Enabled = false;
+        //    LbDebugPayBookingID.Text = booking.BookingId.ToString();
+        //    PnDebugPay.Visible = true;
+        //}
 
-        protected void BtnDebugPay_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            switch (button.Text)
-            {
-                case "PAY":
-                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
-                    break;
-                case "CANCEL":
-                    service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.CANCELLED);
-                    break;
-                case "IGNORE":
-                    break;
-            }
-            PnDebugPay.Visible = false;
-            PnBook.Visible = false;
-        }
+        //protected void BtnDebugPay_Click(object sender, EventArgs e)
+        //{
+        //    Button button = (Button)sender;
+        //    switch (button.Text)
+        //    {
+        //        case "PAY":
+        //            service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
+        //            break;
+        //        case "CANCEL":
+        //            service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.CANCELLED);
+        //            break;
+        //        case "IGNORE":
+        //            break;
+        //    }
+        //    PnDebugPay.Visible = false;
+        //    PnBook.Visible = false;
+        //}
 
-        protected void BtnDebug_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            switch (button.Text)
-            {
-                case "Debug":
-                    GetDebugData();
-                    GvDebug.DataBind();
-                    GvDebug.Visible = true;
-                    LbDebug.Visible = true;
-                    BtnDebugOff.Visible = true;
-                    break;
-                case "OFF":
-                    GvDebug.Visible = false;
-                    LbDebug.Visible = false;
-                    BtnDebugOff.Visible = false;
-                    break;
-            }
-        }
+        //protected void BtnDebug_Click(object sender, EventArgs e)
+        //{
+        //    Button button = (Button)sender;
+        //    switch (button.Text)
+        //    {
+        //        case "Debug":
+        //            GetDebugData();
+        //            GvDebug.DataBind();
+        //            GvDebug.Visible = true;
+        //            LbDebug.Visible = true;
+        //            BtnDebugOff.Visible = true;
+        //            break;
+        //        case "OFF":
+        //            GvDebug.Visible = false;
+        //            LbDebug.Visible = false;
+        //            BtnDebugOff.Visible = false;
+        //            break;
+        //    }
+        //}
 
-        public IEnumerable<ListItem> DdlEndRegion_GetData()
+        private IEnumerable<ListItem> DdlEndRegion_GetData()
         {
             if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId.ToString() == localData.Values.EndRegion).Count() != 0)
             {
@@ -227,214 +227,214 @@ namespace MVP.Calendar
             return pageData.DaySlots;
         }
 
-        private void CheckParams()
-        {
-            var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == localData.Values.StartRegion).FirstOrDefault();
-            var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.StartAP)?.FirstOrDefault();
-            var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
-            bool calupdate = false;
-            bool bookupdate = false;
+        //private void CheckParams()
+        //{
+        //    var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == localData.Values.StartRegion).FirstOrDefault();
+        //    var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.StartAP)?.FirstOrDefault();
+        //    var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
+        //    bool calupdate = false;
+        //    bool bookupdate = false;
 
-            if (route == null)
-            {
-                ClearSelection();
-                PnTime.Visible = false;
-                PnBook.Visible = false;
-                PnDate.Visible = false;
-                CalDate.SelectedDate =
-                localData.Values.CalSelectedDate = DateTime.MinValue;
-                PnSeats.Visible = false;
-                DdlSeats.SelectedValue =
-                localData.Values.Seats = "1";
-            }
-            else
-            {
-                if (pageData.Selection.Route != route)  // New Route
-                {
-                    pageData.Selection.Route = route;
-                    CalDate.SelectedDate =
-                    pageData.Selection.Date =
-                    localData.Values.CalSelectedDate = DateTime.MinValue;
-                    PnTime.Visible = false;
-                    PnBook.Visible = false;
-                    DdlSeats.SelectedValue =
-                    localData.Values.Seats = "1";
-                    pageData.Selection.Seats = 1;
-                    PnSeats.Visible = true;
+        //    if (route == null)
+        //    {
+        //        ClearSelection();
+        //        PnTime.Visible = false;
+        //        PnBook.Visible = false;
+        //        PnDate.Visible = false;
+        //        CalDate.SelectedDate =
+        //        localData.Values.CalSelectedDate = DateTime.MinValue;
+        //        PnSeats.Visible = false;
+        //        DdlSeats.SelectedValue =
+        //        localData.Values.Seats = "1";
+        //    }
+        //    else
+        //    {
+        //        if (pageData.Selection.Route != route)  // New Route
+        //        {
+        //            pageData.Selection.Route = route;
+        //            CalDate.SelectedDate =
+        //            pageData.Selection.Date =
+        //            localData.Values.CalSelectedDate = DateTime.MinValue;
+        //            PnTime.Visible = false;
+        //            PnBook.Visible = false;
+        //            DdlSeats.SelectedValue =
+        //            localData.Values.Seats = "1";
+        //            pageData.Selection.Seats = 1;
+        //            PnSeats.Visible = true;
 
-                    calupdate = true;
-                }
+        //            calupdate = true;
+        //        }
 
-                if (pageData.Selection.SAP != sap) // New SAP
-                {
-                    pageData.Selection.SAP = sap;
-                    calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
-                    if (PnBook.Visible)
-                    {
-                        bookupdate = true;
-                    }
-                }
+        //        if (pageData.Selection.SAP != sap) // New SAP
+        //        {
+        //            pageData.Selection.SAP = sap;
+        //            calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
+        //            if (PnBook.Visible)
+        //            {
+        //                bookupdate = true;
+        //            }
+        //        }
 
-                if (pageData.Selection.DAP != dap) // New DAP
-                {
-                    pageData.Selection.DAP = dap;
-                    calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
-                    if (PnBook.Visible)
-                    {
-                        bookupdate = true;
-                    }
-                }
+        //        if (pageData.Selection.DAP != dap) // New DAP
+        //        {
+        //            pageData.Selection.DAP = dap;
+        //            calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
+        //            if (PnBook.Visible)
+        //            {
+        //                bookupdate = true;
+        //            }
+        //        }
 
-                if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
-                {
-                    pageData.Selection.Date = localData.Values.CalSelectedDate;
-                    pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
-                    if (PnBook.Visible)
-                    {
-                        bookupdate = true;
-                    }
-                }
+        //        if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
+        //        {
+        //            pageData.Selection.Date = localData.Values.CalSelectedDate;
+        //            pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
+        //            if (PnBook.Visible)
+        //            {
+        //                bookupdate = true;
+        //            }
+        //        }
 
-                if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
-                {
-                    pageData.Selection.Seats = int.Parse(localData.Values.Seats);
-                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
-                    if (PnBook.Visible)
-                    {
-                        bookupdate = true;
-                    }
-                }
+        //        if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
+        //        {
+        //            pageData.Selection.Seats = int.Parse(localData.Values.Seats);
+        //            calupdate = true; // we need to redraw calendar cause daystatus may have changed
+        //            if (PnBook.Visible)
+        //            {
+        //                bookupdate = true;
+        //            }
+        //        }
 
-                if (pageData.Selection.Time != localData.Values.Time) // New time
-                {
-                    pageData.Selection.Time = localData.Values.Time;
-                    bookupdate = true;
-                }
-            }
+        //        if (pageData.Selection.Time != localData.Values.Time) // New time
+        //        {
+        //            pageData.Selection.Time = localData.Values.Time;
+        //            bookupdate = true;
+        //        }
+        //    }
 
-            if (calupdate)
-            {
-                GetCalendarData();
-            }
+        //    if (calupdate)
+        //    {
+        //        GetCalendarData();
+        //    }
 
-            if (bookupdate)
-            {
-                UpdateBookingPanel();
-            }
+        //    if (bookupdate)
+        //    {
+        //        UpdateBookingPanel();
+        //    }
 
-            GetDebugData();
-        }
+        //    GetDebugData();
+        //}
 
-        private void GetCalendarData()
-        {
-            if (localData.Values.CalVisibleDate.Month < DateTime.Today.Month) // we may have a display bug here when past month still shows available dates
-            {
-                return;
-            }
+        //private void GetCalendarData()
+        //{
+        //    if (localData.Values.CalVisibleDate.Month < DateTime.Today.Month) // we may have a display bug here when past month still shows available dates
+        //    {
+        //        return;
+        //    }
 
-            DateTime d = localData.Values.CalVisibleDate;
-            DateTime firstdate;
+        //    DateTime d = localData.Values.CalVisibleDate;
+        //    DateTime firstdate;
 
-            if (d.DayOfWeek == DayOfWeek.Sunday)
-            {
-                firstdate = d - TimeSpan.FromDays(6);
-            }
-            else
-            {
-                firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);
-            }
+        //    if (d.DayOfWeek == DayOfWeek.Sunday)
+        //    {
+        //        firstdate = d - TimeSpan.FromDays(6);
+        //    }
+        //    else
+        //    {
+        //        firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);
+        //    }
 
-            DateTime lastdate = firstdate + TimeSpan.FromDays(41);
+        //    DateTime lastdate = firstdate + TimeSpan.FromDays(41);
 
-            pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
+        //    pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
 
-            PnDate.Visible = true;
+        //    PnDate.Visible = true;
 
-            if (PnTime.Visible) // if time selection popup is visible, update it
-            {
-                DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
-            }
+        //    if (PnTime.Visible) // if time selection popup is visible, update it
+        //    {
+        //        DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
+        //    }
 
-            return;
-        }
+        //    return;
+        //}
 
-        private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
-        {
-            IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
-                                                               BtnTime2,
-                                                               BtnTime3,
-                                                               BtnTime4,
-                                                               BtnTime5,
-                                                               BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
+        //private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
+        //{
+        //    IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
+        //                                                       BtnTime2,
+        //                                                       BtnTime3,
+        //                                                       BtnTime4,
+        //                                                       BtnTime5,
+        //                                                       BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
 
-            foreach (Button b in buttons)
-            {
-                b.Visible = false;
-            }
+        //    foreach (Button b in buttons)
+        //    {
+        //        b.Visible = false;
+        //    }
 
-            slots = slots.OrderBy(t => t.Time).ToList();
+        //    slots = slots.OrderBy(t => t.Time).ToList();
 
-            LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
+        //    LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
 
-            for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++)
-            {
-                Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
-                button.Text = slots.ElementAt(i - 1).Time.ToString("hh\\:mm");
-                switch (slots.ElementAt(i - 1).Status)
-                {
-                    case SlotStatus.RED:
-                        button.ForeColor = System.Drawing.Color.Red;
-                        button.Enabled = false;
-                        break;
-                    case SlotStatus.GREEN:
-                        button.ForeColor = System.Drawing.Color.Green;
-                        button.Enabled = true;
-                        break;
-                    case SlotStatus.YELLOW:
-                        button.ForeColor = System.Drawing.Color.Yellow;
-                        button.Enabled = true;
-                        break;
-                }
-                button.Visible = true;
-            }
+        //    for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++)
+        //    {
+        //        Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
+        //        button.Text = slots.ElementAt(i - 1).Time.ToString("hh\\:mm");
+        //        switch (slots.ElementAt(i - 1).Status)
+        //        {
+        //            case SlotStatus.RED:
+        //                button.ForeColor = System.Drawing.Color.Red;
+        //                button.Enabled = false;
+        //                break;
+        //            case SlotStatus.GREEN:
+        //                button.ForeColor = System.Drawing.Color.Green;
+        //                button.Enabled = true;
+        //                break;
+        //            case SlotStatus.YELLOW:
+        //                button.ForeColor = System.Drawing.Color.Yellow;
+        //                button.Enabled = true;
+        //                break;
+        //        }
+        //        button.Visible = true;
+        //    }
 
-            PnTime.Visible = true;
-        }
+        //    PnTime.Visible = true;
+        //}
 
-        private void UpdateBookingPanel()
-        {
-            LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
-            if (pageData.Selection.Time == new TimeSpan(-1))
-            {
-                LbDepartureTime.Text = "";
-            }
-            else
-            {
-                LbDepartureTime.Text = pageData.Selection.Time.ToString("hh\\:mm") + "h";
-            }
-            LbDepartureSeats.Text = pageData.Selection.Seats.ToString() + " passenger(s)";
-            LbDepartureTo.Text = "To: " + pageData.Selection.Route.EndRegion.Name + " / " + pageData.Selection.DAP.Name;
-            LbDepartureFrom.Text = "From: " + pageData.Selection.Route.StartRegion.Name + " / " + pageData.Selection.SAP.Name;
-            LbDepartureSeatCost.Text = pageData.Selection.Seats.ToString() + " Seat(s) x " + pageData.Selection.Price.ToString() + "€";
-            LbDepartureBookCost.Text = (pageData.Selection.Seats * pageData.Selection.Price).ToString() + "€";
+        //private void UpdateBookingPanel()
+        //{
+        //    LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
+        //    if (pageData.Selection.Time == new TimeSpan(-1))
+        //    {
+        //        LbDepartureTime.Text = "";
+        //    }
+        //    else
+        //    {
+        //        LbDepartureTime.Text = pageData.Selection.Time.ToString("hh\\:mm") + "h";
+        //    }
+        //    LbDepartureSeats.Text = pageData.Selection.Seats.ToString() + " passenger(s)";
+        //    LbDepartureTo.Text = "To: " + pageData.Selection.Route.EndRegion.Name + " / " + pageData.Selection.DAP.Name;
+        //    LbDepartureFrom.Text = "From: " + pageData.Selection.Route.StartRegion.Name + " / " + pageData.Selection.SAP.Name;
+        //    LbDepartureSeatCost.Text = pageData.Selection.Seats.ToString() + " Seat(s) x " + pageData.Selection.Price.ToString() + "€";
+        //    LbDepartureBookCost.Text = (pageData.Selection.Seats * pageData.Selection.Price).ToString() + "€";
 
-            if (pageData.Selection.Route != null &&
-                pageData.Selection.Date != DateTime.MinValue &&
-                pageData.Selection.Time != new TimeSpan(-1) &&
-                pageData.Selection.Seats != 0 &&
-                pageData.Selection.Price != 0)
-            {
-                BtnDepartureBook.ForeColor = System.Drawing.Color.Green;
-                BtnDepartureBook.Enabled = true;
-            }
-            else
-            {
-                BtnDepartureBook.ForeColor = System.Drawing.Color.Red;
-                BtnDepartureBook.Enabled = false;
-            }
+        //    if (pageData.Selection.Route != null &&
+        //        pageData.Selection.Date != DateTime.MinValue &&
+        //        pageData.Selection.Time != new TimeSpan(-1) &&
+        //        pageData.Selection.Seats != 0 &&
+        //        pageData.Selection.Price != 0)
+        //    {
+        //        BtnDepartureBook.ForeColor = System.Drawing.Color.Green;
+        //        BtnDepartureBook.Enabled = true;
+        //    }
+        //    else
+        //    {
+        //        BtnDepartureBook.ForeColor = System.Drawing.Color.Red;
+        //        BtnDepartureBook.Enabled = false;
+        //    }
 
-            PnBook.Visible = true;
-        }
+        //    PnBook.Visible = true;
+        //}
 
         private IEnumerable<Route> GetPossibleRoutes()
         {
@@ -453,7 +453,7 @@ namespace MVP.Calendar
                                       .Select(r => r.EndRegion).Distinct().FirstOrDefault()?.AccessPoints;
         }
 
-        public PageState GetInitialData()
+        private PageState GetInitialData()
         {
             var result = new PageState()
             {
@@ -473,7 +473,7 @@ namespace MVP.Calendar
             return result;
         }
 
-        public void ProcessQueryString()
+        private void ProcessQueryString()
         {
             var query = Request.QueryString;
 
@@ -492,16 +492,20 @@ namespace MVP.Calendar
             }
         }
 
-        public void InitializeControls()
+        private void InitializeControls()
         {
-            CalDate.VisibleDate = localData.Values.CalVisibleDate;
-            CalDate.SelectedDate = localData.Values.CalSelectedDate;
+            var regions = DdlEndRegion_GetData();
+            DdlEndRegion.DataSource = regions;
+            DdlEndRegion.ListDataBind();
+
+            //CalDate.VisibleDate = localData.Values.CalVisibleDate;
+            //CalDate.SelectedDate = localData.Values.CalSelectedDate;
 
             if (localData.Values.EndRegion != Guid.Empty.ToString())
             {
-                DdlEndRegion.SelectedValue = localData.Values.EndRegion;
-                DdlEndAP.SelectedValue = localData.Values.EndAP;
-                PnEndAp.Visible = true;
+                DdlEndRegion.SelectedText = regions.Where(r => r.Value == localData.Values.EndRegion).First().Text;
+                //DdlEndAP.SelectedValue = localData.Values.EndAP;
+                //PnEndAp.Visible = true;
             }
         }
 
@@ -550,17 +554,17 @@ namespace MVP.Calendar
             pageData.DaySlots.Clear();
         }
 
-        public void GetDebugData()
+        private void GetDebugData()
         {
-            LbDebug.Text = "localData.Values";
-            LbDebug.Text += "<br />StartRegion: " + localData.Values.StartRegion + " (CONTROL: " + DdlStartRegion.SelectedValue + ")";
-            LbDebug.Text += "<br />StartAP: " + localData.Values.StartAP + " (CONTROL: " + DdlStartAP.SelectedValue + ")";
-            LbDebug.Text += "<br />EndRegion: " + localData.Values.EndRegion + " (CONTROL: " + DdlEndRegion.SelectedValue + ")";
-            LbDebug.Text += "<br />EndAP: " + localData.Values.EndAP + " (CONTROL: " + DdlEndAP.SelectedValue + ")";
-            LbDebug.Text += "<br />Seats: " + localData.Values.Seats + " (CONTROL: " + DdlSeats.SelectedValue + ")";
-            LbDebug.Text += "<br />CalVisibleDate: " + localData.Values.CalVisibleDate + " (CONTROL: " + CalDate.VisibleDate + ")";
-            LbDebug.Text += "<br />CalSelectedDate: " + localData.Values.CalSelectedDate + " (CONTROL: " + CalDate.SelectedDate + ")";
-            LbDebug.Text += "<br />Time: " + localData.Values.Time;
+            //LbDebug.Text = "localData.Values";
+            //LbDebug.Text += "<br />StartRegion: " + localData.Values.StartRegion + " (CONTROL: " + DdlStartRegion.SelectedValue + ")";
+            //LbDebug.Text += "<br />StartAP: " + localData.Values.StartAP + " (CONTROL: " + DdlStartAP.SelectedValue + ")";
+            //LbDebug.Text += "<br />EndRegion: " + localData.Values.EndRegion + " (CONTROL: " + DdlEndRegion.SelectedValue + ")";
+            //LbDebug.Text += "<br />EndAP: " + localData.Values.EndAP + " (CONTROL: " + DdlEndAP.SelectedValue + ")";
+            //LbDebug.Text += "<br />Seats: " + localData.Values.Seats + " (CONTROL: " + DdlSeats.SelectedValue + ")";
+            //LbDebug.Text += "<br />CalVisibleDate: " + localData.Values.CalVisibleDate + " (CONTROL: " + CalDate.VisibleDate + ")";
+            //LbDebug.Text += "<br />CalSelectedDate: " + localData.Values.CalSelectedDate + " (CONTROL: " + CalDate.SelectedDate + ")";
+            //LbDebug.Text += "<br />Time: " + localData.Values.Time;
 
             /*
             if (pageData.Selection.Route == null)

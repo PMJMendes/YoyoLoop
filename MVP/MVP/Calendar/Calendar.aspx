@@ -1,4 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.TripExplorer.Calendar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.Calendar.Calendar" %>
+
+<%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +24,7 @@
   </head>
 
   <body id="">
-
+<form id="form1" runat="server">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
       <div class="container-fluid">
         <img src="../img/yoyo-logo.png" alt="" class="img-responsive logo"/>
@@ -68,23 +71,7 @@
               <!-- DESTINO -->
               <div class="col-lg-4 col-md-4 text-left">
                 <span class="text-uppercase">Destino</span>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Cascais
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <div class="dropdown-item">
-                      <div class="pl-1 d-flex flex-row">
-                        <div class="p-0"><img src="../img/pin@2x.png" alt="" class="img-responsive"/></div>
-                        <div class="col-lg-8 col-md-8">Escolher destino</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">&rarr; Cascais</a>
-                    <a class="dropdown-item" href="#">&rarr; Coimbra</a>
-                    <a class="dropdown-item" href="#">&rarr; Porto</a>
-                  </div>
-                </div>
+                <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="Escolher destino" />
               </div>
 
               <!-- PARAGENS -->
@@ -609,6 +596,7 @@
         </div>
       </div>
     </section>
+</form>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>

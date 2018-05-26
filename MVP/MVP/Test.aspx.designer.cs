@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Calendar {
+namespace MVP {
     
     
-    public partial class Calendar {
+    public partial class Test {
         
         /// <summary>
         /// form1 control.
@@ -22,12 +22,12 @@ namespace MVP.Calendar {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// DdlEndRegion control.
+        /// DropdownMenuButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlEndRegion;
+        protected global::MVP.Controls.DropdownMenuButton DropdownMenuButton1;
     }
 }
