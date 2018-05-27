@@ -240,8 +240,6 @@ namespace MVP.Calendar
                 ClearSelection();
                 //CalDate.SelectedDate =
                 localData.Values.CalSelectedDate = DateTime.MinValue;
-                DdlSeats.SelectedText =
-                localData.Values.Seats = "1";
             }
             else
             {
@@ -251,9 +249,6 @@ namespace MVP.Calendar
                     //CalDate.SelectedDate =
                     pageData.Selection.Date =
                     localData.Values.CalSelectedDate = DateTime.MinValue;
-                    DdlSeats.SelectedText =
-                    localData.Values.Seats = "1";
-                    pageData.Selection.Seats = 1;
 
                     //calupdate = true;
                 }
@@ -472,7 +467,8 @@ namespace MVP.Calendar
             DdlEndRegion.ListDataBind();
             DdlSeats.DataSource = DdlSeats_GetData();
             DdlSeats.ListDataBind();
-            DdlSeats.SelectedText = "1";
+            DdlSeats.SelectedText =
+            localData.Values.Seats = "1";
         }
 
         private void ProcessQueryString()
