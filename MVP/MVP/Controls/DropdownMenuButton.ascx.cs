@@ -16,19 +16,35 @@ namespace MVP.Controls
 
         public string SelectedText
         {
-            get; set;
+            get
+            {
+                return (string)ViewState["SelectedText"];
+            }
+            
+            set
+            {
+                ViewState["SelectedText"] = value;
+            }
         }
 
         public string SelectionPrompt
         {
-            get; set;
+            get
+            {
+                return (string)ViewState["SelectionPrompt"];
+            }
+            
+            set
+            {
+                ViewState["SelectionPrompt"] = value;
+            }
         }
 
-        public object DataSource
+        public IEnumerable<ListItem> DataSource
         {
             get
             {
-                return ItemRepeater.DataSource;
+                return ItemRepeater.DataSource as IEnumerable<ListItem>;
             }
 
             set
@@ -46,8 +62,9 @@ namespace MVP.Controls
 
         protected void ItemRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            OnItemSelected(e.CommandArgument);
-            this.SelectedText = e.CommandName; // This doesn't work
+            var data = (string)e.CommandArgument;
+            this.SelectedText = this.DataSource.Where(i => i.Value == data).FirstOrDefault().Text;
+            OnItemSelected(data);
         }
 
         protected void OnItemSelected(object item)
