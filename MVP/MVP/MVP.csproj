@@ -240,6 +240,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Homepage\Homepage.aspx" />
     <Content Include="img\acessivel%402x.png" />
     <Content Include="img\acessivel%403x.png" />
     <Content Include="img\acessivel.png" />
@@ -574,6 +575,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage\Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage\Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201801131725141_InitialCreate.cs" />
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
