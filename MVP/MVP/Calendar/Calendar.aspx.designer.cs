@@ -38,5 +38,32 @@ namespace MVP.Calendar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MVP.Controls.DropdownMenuButton DdlEndAP;
+        
+        /// <summary>
+        /// DdlStartRegion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Controls.DropdownMenuButton DdlStartRegion;
+        
+        /// <summary>
+        /// DdlStartAP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Controls.DropdownMenuButton DdlStartAP;
+        
+        /// <summary>
+        /// DdlSeats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Controls.DropdownMenuButton DdlSeats;
     }
 }
