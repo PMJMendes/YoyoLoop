@@ -321,3 +321,4 @@ ASALocalRun/
 # MSBuild Binary and Structured Log
 *.binlog
 /MVP/MVP/Migrations/201801171512524_PrimaryKeyChange.cs
+.DS_Store
