@@ -1,4 +1,5 @@
 ﻿using MVP.Services;
+using MVP.Controls;
 using MVP.Models;
 using MVP.Models.Entities;
 using System;
@@ -38,22 +39,18 @@ namespace MVP.Calendar
             InitData();
         }
 
-        //protected void DdlEndRegion_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (DdlEndRegion.SelectedValue != Guid.Empty.ToString())
-        //    {
-        //        DdlEndRegion.Items.Remove(DdlEndRegion.Items.FindByValue(Guid.Empty.ToString()));
-        //    }
+        protected void DdlEndRegion_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)
+        {
+            localData.Values.EndRegion = e.Item.ToString();
+            //    DdlStartRegion.DataBind();
+            DdlEndAP.DataSource = DdlEndAP_GetData();
+            DdlEndAP.ListDataBind();
+            var aps = GetPossibleDAPs()?.Where(ap => ap.Default);
+            localData.Values.EndAP = aps.Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
+            DdlEndAP.SelectedText = aps.Select(ap => ap.Name).FirstOrDefault();
 
-        //    localData.Values.EndRegion = DdlEndRegion.SelectedValue;
-        //    DdlStartRegion.DataBind();
-        //    DdlEndAP.DataBind();
-        //    DdlEndAP.SelectedValue = localData.Values.EndAP = GetPossibleDAPs()?.Where(ap => ap.Default).Select(ap => ap.AccessPointId.ToString()).FirstOrDefault();
-        //    PnStartAP.Visible = false;
-        //    PnEndAp.Visible = true;
-
-        //    CheckParams();
-        //}
+            //    CheckParams();
+        }
 
         //protected void DdlStartRegion_SelectedIndexChanged(object sender, EventArgs e)
         //{
@@ -70,11 +67,11 @@ namespace MVP.Calendar
         //    CheckParams();
         //}
 
-        //protected void DdlEndAP_SelectedIndexChanged(object sender, EventArgs e)
-        //{
+        protected void DdlEndAP_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)
+        {
         //    localData.Values.EndAP = DdlEndAP.SelectedValue;
         //    CheckParams();
-        //}
+        }
 
         //protected void DdlStartAP_SelectedIndexChanged(object sender, EventArgs e)
         //{
@@ -163,17 +160,7 @@ namespace MVP.Calendar
 
         private IEnumerable<ListItem> DdlEndRegion_GetData()
         {
-            if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId.ToString() == localData.Values.EndRegion).Count() != 0)
-            {
-                return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
-            }
-            else
-            {
-                return new[] { new ListItem("-", Guid.Empty.ToString()) }.Concat(
-                    pageData.Routes.Select(r => r.EndRegion).Distinct().
-                    Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()))
-                );
-            }
+            return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
         }
 
         public IEnumerable<ListItem> DdlStartRegion_GetData()
@@ -214,8 +201,8 @@ namespace MVP.Calendar
             if (localData == null)
             {
                 localData = GetInitialData();
-                ProcessQueryString();
                 InitializeControls();
+                ProcessQueryString();
                 Session["local.data"] = localData;
             }
 
@@ -473,6 +460,12 @@ namespace MVP.Calendar
             return result;
         }
 
+        private void InitializeControls()
+        {
+            DdlEndRegion.DataSource = DdlEndRegion_GetData();
+            DdlEndRegion.ListDataBind();
+        }
+
         private void ProcessQueryString()
         {
             var query = Request.QueryString;
@@ -488,24 +481,11 @@ namespace MVP.Calendar
                                                             .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
                     localData.Values.EndRegion = endregion;
                     localData.Values.EndAP = endap;
+                    //Process Start region and StartAP
+
+                    DdlEndRegion.SelectedText = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault()?.Name;
+                    //Selected Text on EndAP
                 }
-            }
-        }
-
-        private void InitializeControls()
-        {
-            var regions = DdlEndRegion_GetData();
-            DdlEndRegion.DataSource = regions;
-            DdlEndRegion.ListDataBind();
-
-            //CalDate.VisibleDate = localData.Values.CalVisibleDate;
-            //CalDate.SelectedDate = localData.Values.CalSelectedDate;
-
-            if (localData.Values.EndRegion != Guid.Empty.ToString())
-            {
-                DdlEndRegion.SelectedText = regions.Where(r => r.Value == localData.Values.EndRegion).First().Text;
-                //DdlEndAP.SelectedValue = localData.Values.EndAP;
-                //PnEndAp.Visible = true;
             }
         }
 

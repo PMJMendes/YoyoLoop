@@ -47,6 +47,7 @@ namespace MVP.Controls
         protected void ItemRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             OnItemSelected(e.CommandArgument);
+            this.SelectedText = e.CommandName; // This doesn't work
         }
 
         protected void OnItemSelected(object item)

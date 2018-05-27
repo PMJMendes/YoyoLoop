@@ -71,29 +71,13 @@
               <!-- DESTINO -->
               <div class="col-lg-4 col-md-4 text-left">
                 <span class="text-uppercase">Destino</span>
-                <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="Escolher destino" />
+                <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="Escolher destino" OnItemSelected="DdlEndRegion_ItemSelected" />
               </div>
 
               <!-- PARAGENS -->
               <div class="col-lg-8 col-md-8 mx-auto text-left">
                 <span class="text-uppercase">Paragem</span>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle text-left stops" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Amoreiras
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <div class="dropdown-item">
-                      <div class="pl-1 d-flex flex-row">
-                        <div class="p-0"><img src="../img/pin@2x.png" alt="" class="img-responsive"/></div>
-                        <div class="col-lg-8 col-md-8">Escolher Paragem</div>
-                      </div>
-                    </div>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">&rarr; Marques de Pombal</a>
-                    <a class="dropdown-item" href="#">&rarr; Saldanha</a>
-                    <a class="dropdown-item" href="#">&rarr; Benfica</a>
-                  </div>
-                </div>
+                <yoyo:DropdownMenuButton runat="server" ID="DdlEndAP" SelectionPrompt="Escolher paragem" OnItemSelected="DdlEndAP_ItemSelected" />
               </div>
             </div>
 
