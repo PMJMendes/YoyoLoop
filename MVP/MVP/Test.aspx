@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test.aspx.cs" Inherits="MVP.Test" %>
 
 <%@ Register src="Controls/DropdownMenuButton.ascx" tagname="DropdownMenuButton" tagprefix="uc1" %>
+<%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="uc2" TagName="DropdownMenuButton" %>
+
 
 <!DOCTYPE html>
 
@@ -25,6 +27,7 @@
 <body>
     <form id="form1" runat="server">
         <uc1:DropdownMenuButton ID="DropdownMenuButton1" runat="server" SelectedText="Boo" SelectionPrompt="Escolha" OnItemSelected="DropdownMenuButton1_ItemSelected" />
+        <uc2:DropdownMenuButton ID="DropdownMenuButton2" runat="server" SelectedText="Ube" SelectionPrompt="Seleccione" OnItemSelected="DropdownMenuButton2_ItemSelected" />
     </form>
 
     <!-- Bootstrap core JavaScript -->

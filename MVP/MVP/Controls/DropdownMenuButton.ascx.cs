@@ -62,9 +62,8 @@ namespace MVP.Controls
 
         protected void ItemRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            var data = (string)e.CommandArgument;
-            this.SelectedText = this.DataSource.Where(i => i.Value == data).FirstOrDefault().Text;
-            OnItemSelected(data);
+            this.SelectedText = e.CommandName;
+            OnItemSelected((string)e.CommandArgument);
         }
 
         protected void OnItemSelected(object item)
