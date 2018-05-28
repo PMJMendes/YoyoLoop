@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test.aspx.cs" Inherits="MVP.Test" %>
 
 <%@ Register src="Controls/DropdownMenuButton.ascx" tagname="DropdownMenuButton" tagprefix="uc1" %>
-<%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="uc2" TagName="DropdownMenuButton" %>
+<%@ Register Src="Calendar/CalendarDay.ascx" TagPrefix="uc1" TagName="CalendarDay" %>
 
 
 <!DOCTYPE html>
@@ -27,7 +27,8 @@
 <body>
     <form id="form1" runat="server">
         <uc1:DropdownMenuButton ID="DropdownMenuButton1" runat="server" SelectedText="Boo" SelectionPrompt="Escolha" OnItemSelected="DropdownMenuButton1_ItemSelected" />
-        <uc2:DropdownMenuButton ID="DropdownMenuButton2" runat="server" SelectedText="Ube" SelectionPrompt="Seleccione" OnItemSelected="DropdownMenuButton2_ItemSelected" />
+        <uc1:DropdownMenuButton ID="DropdownMenuButton2" runat="server" SelectedText="Ube" SelectionPrompt="Seleccione" OnItemSelected="DropdownMenuButton2_ItemSelected" />
+        <uc1:CalendarDay runat="server" ID="CalendarDay" DayText="7" Flag="Selected" InfoText="Quase cheio" IsCurrent="False" IsOffMonth="False" PriceText="25,00€" />
     </form>
 
     <!-- Bootstrap core JavaScript -->
@@ -36,6 +37,20 @@
     <script>
       $(window).scroll(function(){
         $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+      });
+    </script>
+    <script>
+      $(function(){
+        $('[rel="popover"]').popover({
+            container: 'body',
+            html: true,
+            content: function () {
+                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                return clone;
+            }
+          }).click(function(e) {
+              e.preventDefault();
+          });
       });
     </script>
 </body>

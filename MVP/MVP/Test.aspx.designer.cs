@@ -38,5 +38,14 @@ namespace MVP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MVP.Controls.DropdownMenuButton DropdownMenuButton2;
+        
+        /// <summary>
+        /// CalendarDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Calendar.CalendarDay CalendarDay;
     }
 }
