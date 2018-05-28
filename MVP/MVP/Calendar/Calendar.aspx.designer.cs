@@ -64,6 +64,6 @@ namespace MVP.Calendar {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlSeats;
+        protected global::MVP.Controls.DropdownFixed DdlSeats;
     }
 }

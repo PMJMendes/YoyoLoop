@@ -83,9 +83,18 @@ namespace MVP.Calendar
             CheckParams();
         }
 
-        protected void DdlSeats_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)
+        protected void DdlSeats_ItemSelected(object sender, DropdownFixed.ItemSelectedEventArgs e)
         {
-            localData.Values.Seats = e.Item.ToString();
+            string s = e.Item.ToString();
+            localData.Values.Seats = s;
+            if(s == "1")
+            {
+                DdlSeats.SelectedText = s + " lugar";
+            }
+            else
+            {
+                DdlSeats.SelectedText = s + " lugares";
+            }
 
             CheckParams();
         }
@@ -183,15 +192,15 @@ namespace MVP.Calendar
             return GetPossibleSAPs()?.Select(ap => new ListItem(ap.Name, ap.AccessPointId.ToString())) ?? Enumerable.Empty<ListItem>();
         }
 
-        public IEnumerable<ListItem> DdlSeats_GetData()
+        public IEnumerable<string> DdlSeats_GetData()
         {
-            return new List<ListItem>  { new ListItem("1", "1"),
-                                         new ListItem("2", "2"),
-                                         new ListItem("3", "3"),
-                                         new ListItem("4", "4"),
-                                         new ListItem("5", "5"),
-                                         new ListItem("6", "6"),
-                                         new ListItem("7", "7")};
+            return new List<string>  { "1",
+                                       "2",
+                                       "3",
+                                       "4",
+                                       "5",
+                                       "6",
+                                       "7",};
         }
 
         private void InitData()
@@ -467,7 +476,7 @@ namespace MVP.Calendar
             DdlEndRegion.ListDataBind();
             DdlSeats.DataSource = DdlSeats_GetData();
             DdlSeats.ListDataBind();
-            DdlSeats.SelectedText =
+            DdlSeats.SelectedText = "1 lugar";
             localData.Values.Seats = "1";
         }
 

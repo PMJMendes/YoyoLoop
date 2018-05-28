@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.Calendar.Calendar" %>
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
+<%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
 
 
 <!DOCTYPE html>
@@ -118,7 +119,7 @@
             <div class="row">
               <div class="col col-xs-6">
                 <span class="text-uppercase">Lugares</span>
-                <yoyo:DropdownMenuButton runat="server" ID="DdlSeats" OnItemSelected="DdlSeats_ItemSelected" />
+                <yoyo:DropdownFixed runat="server" ID="DdlSeats" OnItemSelected="DdlSeats_ItemSelected" />
               </div>
               <div class="return col col-xs-6 mt-3">
                 <div class="form-check">
