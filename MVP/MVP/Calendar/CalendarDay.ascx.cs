@@ -1,8 +1,8 @@
-﻿using System;
+﻿using System.Web.UI;
 
 namespace MVP.Calendar
 {
-    public partial class CalendarDay : System.Web.UI.UserControl
+    public partial class CalendarDay : UserControl
     {
         public enum DayFlag
         {

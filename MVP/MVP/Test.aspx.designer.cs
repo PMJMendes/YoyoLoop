@@ -40,12 +40,12 @@ namespace MVP {
         protected global::MVP.Controls.DropdownMenuButton DropdownMenuButton2;
         
         /// <summary>
-        /// CalendarDay control.
+        /// CalendarTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Calendar.CalendarDay CalendarDay;
+        protected global::MVP.Calendar.CalendarTable CalendarTable;
     }
 }
