@@ -202,6 +202,68 @@
             
             <!-- CALENDAR TABLE -->
             <div class="container-fluid calendar-container">
+
+              <div class="hide p-3" id="selectPopover">
+                <div class="row pt-2 pb-2">
+                  <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
+                  <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
+                </div>
+                <div class="row pt-2 pb-2">
+                  <div class="col-6"><button type="button" class="btn btn-select btn-select--disabled">12:00</button></div>
+                  <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
+                </div>
+                <div class="row pt-2 pb-2">
+                  <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
+                  <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
+                </div>
+                <div class="row pt-2 pb-2">
+                  <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
+                  <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
+                </div>
+              </div>
+
+              <div class="hide" id="destinationPopover">
+                <div class="row pt-3 pr-4 pb-0 pl-4">
+                  <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label">Destino</div>
+                  <div class="col-6 d-flex align-items-end justify-content-end text-uppercase text-nowrap header-city">Cascais</div>
+                </div>
+                <hr class="divider w-100">
+                <div class="row pt-0 pr-4 pb-3 pl-4">
+                  <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Cascais shopping</div>
+                </div>
+                <div class="row pt-2 pr-4 pb-2 pl-4">
+                  <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
+                  <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
+                </div>
+                <div class="row pt-2 pr-4 pb-2 pl-4">
+                  <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
+                  <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
+                </div>
+                <hr class="divider w-75">
+
+                <div class="row pt-0 pr-4 pb-0 pl-4">
+                  <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Hospital de Cascais</div>
+                </div>
+                <hr class="divider w-75">
+                <div class="row pt-0 pr-4 pb-0 pl-4">
+                  <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Lagoas Parque</div>
+                </div>
+                <hr class="divider w-100">
+                <div class="row pt-0 pr-4 pb-0 pl-4">
+                  <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label">Origem</div>
+                  <div class="col-6 d-flex align-items-end justify-content-end text-uppercase text-nowrap header-city header-city--departure">Lisboa</div>
+                </div>
+                <hr class="divider w-100">
+
+                <div class="row pt-0 pr-4 pb-0 pl-4">
+                  <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Gare do Oriente</div>
+                </div>
+                <hr class="divider w-75">
+                <div class="row pt-0 pr-4 pb-0 pl-4">
+                  <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Marques de Pombal</div>
+                </div>
+              </div>
+
               <hr class="d-block d-sm-none">
               <header>
                 <div class="row p-1 text-uppercase">
@@ -225,23 +287,23 @@
                 <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
                   <div class="date d-flex align-items-center justify-content-center">31</div>
                 </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate ">
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#destinationPopover">
                   <div class="date date--today d-flex align-items-center justify-content-center">1</div>
                 </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate ">
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#destinationPopover">
                   <div class="date d-flex align-items-center justify-content-center">2</div>
                 </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
                   <div class="date d-flex align-items-center justify-content-center">3</div>
                 </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
+                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
                   <div class="date d-flex align-items-center justify-content-center">4</div>
                 </div>
                 <div class="w-100"></div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
+                <div class="day col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
                   <div class="date d-flex align-items-center justify-content-center">5</div>
                 </div>
-                <div class="day day--limited-availability col p-2 border border-left-0 border-top-0 text-truncate">
+                <div class="day day--limited-availability col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
                   <div class="date d-flex align-items-center justify-content-center">6</div>
                   <div class="row pl-3 pr-3 d-none d-sm-block">
                     <p class="info">Quase cheio</p>
@@ -530,7 +592,157 @@
                     </button>
                   </div>
                 </div>
+              </div>
+            </div>
 
+
+            <!-- LATERAL ONE WAY -->
+            <div class="row next-trip">
+              <div class="col-lg-12 p-0">
+                <div class="row time pt-3">
+                  <div class="col-1 pl-4">
+                    <img src="../img/calendar-grey.png"
+                    srcset="../img/calendar-grey@2x.png 2x,
+                    ../img/calendar-grey@3x.png 3x"
+                    class="calendar-grey">
+                  </div>
+                  <div class="col-8">15 de Março, Quarta</div>
+                  <div class="col-2 text-right text-uppercase direction">Ida</div>
+                </div>
+                <hr class="divider">
+                <div class="row time">
+                  <div class="col-8">
+
+                    <!-- LUGARES -->
+                    <div class="row p-1">
+                      <div class="col-1 pl-4">
+                        <img src="../img/users.png"
+                        srcset="../img/users@2x.png 2x,
+                        ../img/users@3x.png 3x"
+                        class="users">
+                      </div>
+                      <div class="col-8"><strong>2 Lugares</strong></div>
+                    </div>
+
+                    <!--HORA-->
+                    <div class="row p-1">
+                      <div class="col-1 pl-4">
+                        <img src="../img/clock.png"
+                        srcset="../img/clock@2x.png 2x,
+                        ../img/clock@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8"><strong>19:30</strong></div>
+                    </div>
+
+                    <!--PREÇO-->
+                    <div class="row p-1 price">
+                      <div class="col-1 pl-4">
+                        <img src="../img/cart.png"
+                        srcset="../img/cart@2x.png 2x,
+                        ../img/cart@3x.png 3x"
+                        class="clock">
+                      </div>
+                      <div class="col-8"><strong>20,00€</strong></div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="row trip">
+                  <div class="col-8">
+                    <div class="row p-1 text-uppercase start-end">
+                      <div class="col-12 pl-4">Origem</div>
+                    </div>
+
+                    <div class="row p-1 text-uppercase city-name">
+                      <div class="col-12 pl-4">Lisboa</div>
+                    </div>
+
+                    <div class="row p-1 pt-0 access-point">
+                      <div class="col-12 pl-4">Marques de Pombal</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row pt-3 trip">
+                  <div class="col-8">
+                    <div class="row p-1 text-uppercase start-end">
+                      <div class="col-12 pl-4">Destino</div>
+                    </div>
+
+                    <div class="row p-1 text-uppercase city-name">
+                      <div class="col-12 pl-4">Cascais</div>
+                    </div>
+
+                    <div class="row p-1 pt-0 access-point">
+                      <div class="col-12 pl-4">Cascais shopping</div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="divider w-100">
+
+                <div class="row pricing">
+                  <div class="col-4 pl-4 text-uppercase total">Total</div>
+                  <div class="col-8 pr-4 text-right">
+                    <div class="row">
+                      <div class="col-12">2 Lugares <span class="times">x</span> <span class="price">25,00€</span></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 total-price">50,00€</div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="row pricing">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12 text-center promocode">Tenho um código promocional</div>
+                    </div>
+
+                    <div class="row p-4">
+                      <div class="col-12 text-center">
+                        <button class="btn btn-light btn-xl text-uppercase" >Reservar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="row pricing">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12 text-center promocode promocode--active">Nao tenho código promocional</div>
+                    </div>
+
+                    <div class="row p-3">
+                      <div class="col-12 text-center promocode promocode--active">
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">
+                              <img src="../img/check.png"
+                                srcset="../img/check@2x.png 2x,
+                                ../img/check@3x.png 3x"
+                                class="check">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row pb-3">
+                      <div class="col-12 text-center">
+                        <button class="btn btn-light btn-xl text-uppercase" >Reservar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -546,6 +758,20 @@
     <script>
       $(window).scroll(function(){
         $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+      });
+    </script>
+    <script>
+      $(function(){
+        $('[rel="popover"]').popover({
+            container: 'body',
+            html: true,
+            content: function () {
+                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+                return clone;
+            }
+          }).click(function(e) {
+              e.preventDefault();
+          });
       });
     </script>
 
