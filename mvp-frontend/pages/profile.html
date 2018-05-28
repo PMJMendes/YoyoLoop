@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yoyoloop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body id="">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">
+      <div class="container-fluid">
+        <img src="../img/yoyo-logo.png" alt="" class="img-responsive logo"/>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger text-uppercase" href="#">Loops & horarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" >Registar/Entrar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="profile">
+      <div class="profile__container profile__container--first">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8">
+                <h1 class="profile__main-title">O Meu perfil</h1>
+
+                <h2 class="profile__sub-title">Dados pessoais</h2>
+
+                <div class="profile__label">Nome completo</div>
+                <input class="profile__input profile__input--name" type="text" placeholder="Pedro Meireles">
+
+                <div class="profile__label">Data de nascimento</div>
+                <input class="profile__input profile__input--birthday" type="text" placeholder="14 / 10 / 1974">
+                
+                <div class="profile__label">Endereço de email</div>
+                <div class="row ml-0">
+                  <input class="profile__input profile__input--email" type="text" placeholder="myemailaddress@gmail.com">
+                  <div class="row ml-0 align-items-center justify-content-center">
+                    <div class="ml-3 mr-3 confirm-check"></div>
+                    <div class="profile__confirm-check">Confirmado</div>
+                  </div>
+                </div>
+
+                <div class="profile__label">Telemóvel</div>
+                <div class="row ml-0">
+                  <select class="profile__input profile__input--country">
+                    <option value="351">+351</option>
+                  </select>
+                  <input class="ml-2 profile__input profile__input--phone" type="text" placeholder="911 501 241">
+
+                  <div class="row ml-0 align-items-center justify-content-center">
+                    <div class="ml-3 mr-3 confirm-check"></div>
+                    <div class="profile__confirm-check">Confirmado</div>
+                  </div>
+                </div>
+
+                <div class="mt-5 mb-5 profile__separator"></div>
+                <button class="mb-5 profile__btn">Atualizar dados</button>
+                
+
+                <h2 class="profile__sub-title">Alterar password</h2>
+                <div class="profile__label">Password atual</div>
+                <input class="profile__input profile__input--password" type="text">
+
+                <div class="row ml-0">
+                  <div class="row ml-0">
+                    <div class="profile__label">Nova password</div>
+                    <input class="profile__input profile__input--password" type="text">
+                  </div>
+                  <div class="row ml-0">
+                    <div class="profile__label">Repetir nova password</div>
+                    <input class="profile__input profile__input--password" type="text">
+                  </div>
+                </div>
+                
+                <div class="mt-5 mb-5 profile__separator"></div>
+                <button class="mb-5 profile__btn">Alterar</button>
+              </div>
+
+              <div class="col-md-4 left-menu">
+                  <div class="d-flex flex-column align-items-center text-left profile__menu">
+                      <a href="/pages/profile.html" class="profile__menu__link profile__menu__link--selected">
+                      <img class="mr-2" src="../img/profile-selected.png" srcset="../img/profile-selected@2x.png 2x, ../img/profile-selected@3x.png 3x">
+                      Dados pessoais
+                    </a>
+                    <div class="mt-3 mb-3 profile__menu__separator"></div>
+                    <a href="/pages/profile-billing.html" class="profile__menu__link">
+                      <img class="mr-2" src="../img/billing.png" srcset="../img/billing@2x.png 2x, ../img/billing@3x.png 3x">
+                      Detalhes de Faturação
+                    </a>
+                    <div class="mt-3 mb-3 profile__menu__separator"></div>
+                    <a href="/pages/invitefriends.html" class="profile__menu__link">
+                      <img class="mr-2" src="../img/invitefriends.png" srcset="../img/invitefriends@2x.png 2x, ../img/invitefriends@3x.png 3x">
+                      Convidar amigos
+                    </a>
+                    <div class="mt-3 mb-3 profile__menu__separator"></div>
+                    <a class="profile__menu__link">Logout</a>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>  
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
