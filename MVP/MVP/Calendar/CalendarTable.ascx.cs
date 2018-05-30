@@ -40,21 +40,32 @@ namespace MVP.Calendar
 
             control.IsCurrent = slot.Day == DateTime.Today;
             control.IsOffMonth = !(slot.Day.Month == DateTime.Today.Month && slot.Day.Year == DateTime.Today.Year);
+            control.IsWeekend = slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday;
             control.DayText = slot.Day.Day.ToString();
-            control.PriceText = slot.Price.ToString() + "€";
-
-            switch(slot.Status)
+            if(slot.Price == 0)
             {
+                control.PriceText = "";
+            }
+            else
+            {
+                control.PriceText = slot.Price.ToString() + "€";
+            }
+
+            switch (slot.Status)
+            {
+                case SlotStatus.GREEN:
+                    control.Flag = CalendarDay.DayFlag.Available;
+                    break;
                 case SlotStatus.YELLOW:
-                    control.PriceText = "Quase cheio";
+                    control.InfoText = "Quase cheio";
                     control.Flag = CalendarDay.DayFlag.Limited;
                     break;
                 case SlotStatus.RED:
-                    control.PriceText = "Esgotado";
+                    control.InfoText = "Esgotado";
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;
                 default:
-                    control.PriceText = "";
+                    control.InfoText = "";
                     control.Flag = CalendarDay.DayFlag.None;
                     break;
             }

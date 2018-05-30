@@ -2,6 +2,8 @@
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
+<%@ Register Src="CalendarDay.ascx" TagPrefix="yoyo" TagName="CalendarDay" %>
+<%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
 
 
 <!DOCTYPE html>
@@ -24,8 +26,10 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   </head>
 
-  <body id="">
+<body id="">
+
 <form id="form1" runat="server">
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
       <div class="container-fluid">
         <img src="../img/yoyo-logo.png" alt="" class="img-responsive logo"/>
@@ -156,21 +160,21 @@
               <div class="col">
                 <div class="d-flex flex-row">
                   <div class="my-auto col-lg-3 col-md-3 text-right">
-                    <img src="../img/arr-left.png" srcset="../img/arr-left@2x.png 2x, ../img/arr-left@3x.png 3x" class="btn-calendar">
+                    <asp:ImageButton id="BtnMonthBack" runat="server" class="btn-calendar" OnClick="CalBtnMonthControl" ImageUrl="../img/arr-left.png"></asp:ImageButton>
                   </div>
                   <div class="col-lg-6 col-md-6">
-                    <p class=" month m-0">Março</p>
-                    <p class="d-none d-md-block year m-0">2018</p>
+                    <p class=" month m-0"><%= localData.Values.CalVisibleDate.ToString("MMMM") %></p>
+                    <p class="d-none d-md-block year m-0"><%= localData.Values.CalVisibleDate.Year %></p>
                   </div>
                   <div class="my-auto col-lg-3 col-md-3 text-left">
-                    <img src="../img/arr-right.png" srcset="../img/arr-right@2x.png 2x, ../img/arr-right@3x.png 3x" class="btn-calendar">
+                    <asp:ImageButton id="BtnMonthFwd" runat="server" class="btn-calendar" OnClick="CalBtnMonthControl" ImageUrl="../img/arr-right.png"></asp:ImageButton>
                   </div>
                 </div>
               </div>
 
               <!-- Today button -->
               <div class="my-auto col text-right">
-                <button class=" btn btn-today text-uppercase">Hoje</button>
+                <button id="BtnMonthToday" runat="server" OnServerClick="CalBtnMonthToday" class=" btn btn-today text-uppercase">Hoje</button>
               </div>
             </div>
 
@@ -278,135 +282,7 @@
               </header>
               <hr class="d-block d-sm-none">
               <div class="row border border-bottom-0">
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
-                  <div class="date d-flex align-items-center justify-content-center">29</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
-                  <div class="date d-flex align-items-center justify-content-center">30</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
-                  <div class="date d-flex align-items-center justify-content-center">31</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#destinationPopover">
-                  <div class="date date--today d-flex align-items-center justify-content-center">1</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#destinationPopover">
-                  <div class="date d-flex align-items-center justify-content-center">2</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
-                  <div class="date d-flex align-items-center justify-content-center">3</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
-                  <div class="date d-flex align-items-center justify-content-center">4</div>
-                </div>
-                <div class="w-100"></div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
-                  <div class="date d-flex align-items-center justify-content-center">5</div>
-                </div>
-                <div class="day day--limited-availability col p-2 border border-left-0 border-top-0 text-truncate" rel="popover" data-popover-content="#selectPopover">
-                  <div class="date d-flex align-items-center justify-content-center">6</div>
-                  <div class="row pl-3 pr-3 d-none d-sm-block">
-                    <p class="info">Quase cheio</p>
-                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
-                  </div>
-                </div>
-                <div class="day day--selected col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">7</div>
-                  <div class="row pl-3 pr-3 d-none d-sm-block">
-                    <p class="info">Quase cheio</p>
-                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
-                  </div>
-                </div>
-                <div class="day day--unavailable col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">8</div>
-                  <div class="row pl-3 pr-3 d-none d-sm-block">
-                    <p class="info">Esgotado</p>
-                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
-                  </div>
-                </div>
-                <div class="day day--available col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">9</div>
-                  <div class="row pl-3 pr-3 d-none d-sm-block">
-                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
-                  </div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">10</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">11</div>
-                </div>
-                <div class="w-100"></div>
-                <div class="day day--fully-available col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">12</div>
-                  <div class="row pl-3 pr-3 d-none d-sm-block">
-                    <a class="d-block rounded small align-self-start" title="Test 1">25,00€</a>
-                  </div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">13</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">14</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">15</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">16</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">17</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">18</div>
-                </div>
-                <div class="w-100"></div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">19</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">20</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">21</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">22</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">23</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">24</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">25</div>
-                </div>
-                <div class="w-100"></div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">26</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">27</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">28</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">29</div>
-                </div>
-                <div class="day col p-2 border border-left-0 border-top-0 text-truncate">
-                  <div class="date d-flex align-items-center justify-content-center">30</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
-                  <div class="date d-flex align-items-center justify-content-center">1</div>
-                </div>
-                <div class="day day--weekend col p-2 border border-left-0 border-top-0 text-truncate bg-light text-muted">
-                  <div class="date d-flex align-items-center justify-content-center">2</div>
-                </div>
-                <div class="w-100"></div>
-
+                  <yoyo:CalendarTable runat="server" id="CalDate" />
               </div>
               <hr class="d-block d-sm-none">
             </div>

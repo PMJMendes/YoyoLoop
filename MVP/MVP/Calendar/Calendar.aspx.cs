@@ -32,7 +32,7 @@ namespace MVP.Calendar
         private readonly CalendarService service = new CalendarService();
 
         CalendarDTO pageData;
-        PageState localData;
+        public PageState localData;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -99,6 +99,38 @@ namespace MVP.Calendar
             CheckParams();
         }
 
+        protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            switch (button.ID)
+            {
+                case "BtnMonthBack":
+                    localData.Values.CalVisibleDate = localData.Values.CalVisibleDate.AddMonths(-1);
+                    break;
+                case "BtnMonthFwd":
+                    localData.Values.CalVisibleDate = localData.Values.CalVisibleDate.AddMonths(1);
+                    break;
+                case "BtnMonthToday":
+                    localData.Values.CalVisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+                    break;
+            }
+            GetCalendarData();
+        }
+
+        protected void CalBtnMonthToday(object sender, EventArgs e)
+        {
+            DateTime today = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            if (localData.Values.CalVisibleDate == today)
+            {
+                return;
+            }
+            else
+            {
+                localData.Values.CalVisibleDate = today;
+                GetCalendarData();
+            }
+        }
+
         //protected void CalDate_SelectionChanged(object sender, EventArgs e)
         //{
         //    localData.Values.CalSelectedDate = CalDate.SelectedDate;
@@ -108,12 +140,7 @@ namespace MVP.Calendar
         //    DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData)); // MOVE
         //}
 
-        //protected void CalDate_MonthChange(Object sender, MonthChangedEventArgs e)
-        //{
-        //    localData.Values.CalVisibleDate = new DateTime(CalDate.VisibleDate.Year, CalDate.VisibleDate.Month, 1);
-        //
-        //    GetCalendarData();
-        //}
+
 
         //protected void BtnTime_Click(object sender, EventArgs e)
         //{
@@ -203,6 +230,51 @@ namespace MVP.Calendar
                                        "7",};
         }
 
+        private void GetCalendarData()
+        {
+            if (localData.Values.CalVisibleDate.Month < DateTime.Today.Month) // we may have a display bug here when past month still shows available dates
+            {
+                return;
+            }
+
+            DateTime d = localData.Values.CalVisibleDate;
+            DateTime firstdate;
+
+            if (d.DayOfWeek == DayOfWeek.Sunday)
+            {
+                firstdate = d - TimeSpan.FromDays(6);
+            }
+            else
+            {
+                firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);
+            }
+
+            DateTime lastdate = firstdate + TimeSpan.FromDays(41);
+
+            if(pageData.Selection.Route == null)
+            {
+                List<DaySlot> days = new List<DaySlot>();
+                var date = firstdate;
+
+                while (date <= lastdate)
+                {
+                    days.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
+                    date = date + TimeSpan.FromDays(1);
+                }
+
+                CalDate.DataSource = days;
+                CalDate.DataBind();
+            }
+            else
+            {
+                pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
+                CalDate.DataSource = pageData.DaySlots;
+                CalDate.DataBind();
+            }
+
+            return;
+        }
+
         private void InitData()
         {
             pageData = null;
@@ -241,13 +313,12 @@ namespace MVP.Calendar
             var route = GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == localData.Values.StartRegion).FirstOrDefault();
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.StartAP)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
-            //    bool calupdate = false;
+            bool calupdate = false;
             //    bool bookupdate = false;
 
             if (route == null)
             {
                 ClearSelection();
-                //CalDate.SelectedDate =
                 localData.Values.CalSelectedDate = DateTime.MinValue;
             }
             else
@@ -255,17 +326,16 @@ namespace MVP.Calendar
                 if (pageData.Selection.Route != route)  // New Route
                 {
                     pageData.Selection.Route = route;
-                    //CalDate.SelectedDate =
                     pageData.Selection.Date =
                     localData.Values.CalSelectedDate = DateTime.MinValue;
 
-                    //calupdate = true;
+                    calupdate = true;
                 }
 
                 if (pageData.Selection.SAP != sap) // New SAP
                 {
                     pageData.Selection.SAP = sap;
-                    //calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
+                    calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                     //if (PnBook.Visible)
                     //{
                     //    bookupdate = true;
@@ -275,7 +345,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.DAP != dap) // New DAP
                 {
                     pageData.Selection.DAP = dap;
-                    //calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
+                    calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                     //if (PnBook.Visible)
                     //{
                     //    bookupdate = true;
@@ -295,7 +365,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
                 {
                     pageData.Selection.Seats = int.Parse(localData.Values.Seats);
-                    //calupdate = true; // we need to redraw calendar cause daystatus may have changed
+                    calupdate = true; // we need to redraw calendar cause daystatus may have changed
                     //if (PnBook.Visible)
                     //{
                     //    bookupdate = true;
@@ -309,10 +379,10 @@ namespace MVP.Calendar
                 }
             }
 
-            //    if (calupdate)
-            //    {
-            //        GetCalendarData();
-            //    }
+            if (calupdate)
+            {
+                GetCalendarData();
+            }
 
             //    if (bookupdate)
             //    {
@@ -322,116 +392,83 @@ namespace MVP.Calendar
             //    GetDebugData();
         }
 
-            //private void GetCalendarData()
-            //{
-            //    if (localData.Values.CalVisibleDate.Month < DateTime.Today.Month) // we may have a display bug here when past month still shows available dates
-            //    {
-            //        return;
-            //    }
+        //private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
+        //{
+        //    IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
+        //                                                       BtnTime2,
+        //                                                       BtnTime3,
+        //                                                       BtnTime4,
+        //                                                       BtnTime5,
+        //                                                       BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
 
-            //    DateTime d = localData.Values.CalVisibleDate;
-            //    DateTime firstdate;
+        //    foreach (Button b in buttons)
+        //    {
+        //        b.Visible = false;
+        //    }
 
-            //    if (d.DayOfWeek == DayOfWeek.Sunday)
-            //    {
-            //        firstdate = d - TimeSpan.FromDays(6);
-            //    }
-            //    else
-            //    {
-            //        firstdate = d - TimeSpan.FromDays((int)d.DayOfWeek - 1);
-            //    }
+        //    slots = slots.OrderBy(t => t.Time).ToList();
 
-            //    DateTime lastdate = firstdate + TimeSpan.FromDays(41);
+        //    LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
 
-            //    pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
+        //    for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++)
+        //    {
+        //        Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
+        //        button.Text = slots.ElementAt(i - 1).Time.ToString("hh\\:mm");
+        //        switch (slots.ElementAt(i - 1).Status)
+        //        {
+        //            case SlotStatus.RED:
+        //                button.ForeColor = System.Drawing.Color.Red;
+        //                button.Enabled = false;
+        //                break;
+        //            case SlotStatus.GREEN:
+        //                button.ForeColor = System.Drawing.Color.Green;
+        //                button.Enabled = true;
+        //                break;
+        //            case SlotStatus.YELLOW:
+        //                button.ForeColor = System.Drawing.Color.Yellow;
+        //                button.Enabled = true;
+        //                break;
+        //        }
+        //        button.Visible = true;
+        //    }
 
-            //    PnDate.Visible = true;
+        //    PnTime.Visible = true;
+        //}
 
-            //    if (PnTime.Visible) // if time selection popup is visible, update it
-            //    {
-            //        DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData));
-            //    }
+        //private void UpdateBookingPanel()
+        //{
+        //    LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
+        //    if (pageData.Selection.Time == new TimeSpan(-1))
+        //    {
+        //        LbDepartureTime.Text = "";
+        //    }
+        //    else
+        //    {
+        //        LbDepartureTime.Text = pageData.Selection.Time.ToString("hh\\:mm") + "h";
+        //    }
+        //    LbDepartureSeats.Text = pageData.Selection.Seats.ToString() + " passenger(s)";
+        //    LbDepartureTo.Text = "To: " + pageData.Selection.Route.EndRegion.Name + " / " + pageData.Selection.DAP.Name;
+        //    LbDepartureFrom.Text = "From: " + pageData.Selection.Route.StartRegion.Name + " / " + pageData.Selection.SAP.Name;
+        //    LbDepartureSeatCost.Text = pageData.Selection.Seats.ToString() + " Seat(s) x " + pageData.Selection.Price.ToString() + "€";
+        //    LbDepartureBookCost.Text = (pageData.Selection.Seats * pageData.Selection.Price).ToString() + "€";
 
-            //    return;
-            //}
+        //    if (pageData.Selection.Route != null &&
+        //        pageData.Selection.Date != DateTime.MinValue &&
+        //        pageData.Selection.Time != new TimeSpan(-1) &&
+        //        pageData.Selection.Seats != 0 &&
+        //        pageData.Selection.Price != 0)
+        //    {
+        //        BtnDepartureBook.ForeColor = System.Drawing.Color.Green;
+        //        BtnDepartureBook.Enabled = true;
+        //    }
+        //    else
+        //    {
+        //        BtnDepartureBook.ForeColor = System.Drawing.Color.Red;
+        //        BtnDepartureBook.Enabled = false;
+        //    }
 
-            //private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
-            //{
-            //    IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
-            //                                                       BtnTime2,
-            //                                                       BtnTime3,
-            //                                                       BtnTime4,
-            //                                                       BtnTime5,
-            //                                                       BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
-
-            //    foreach (Button b in buttons)
-            //    {
-            //        b.Visible = false;
-            //    }
-
-            //    slots = slots.OrderBy(t => t.Time).ToList();
-
-            //    LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
-
-            //    for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++)
-            //    {
-            //        Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
-            //        button.Text = slots.ElementAt(i - 1).Time.ToString("hh\\:mm");
-            //        switch (slots.ElementAt(i - 1).Status)
-            //        {
-            //            case SlotStatus.RED:
-            //                button.ForeColor = System.Drawing.Color.Red;
-            //                button.Enabled = false;
-            //                break;
-            //            case SlotStatus.GREEN:
-            //                button.ForeColor = System.Drawing.Color.Green;
-            //                button.Enabled = true;
-            //                break;
-            //            case SlotStatus.YELLOW:
-            //                button.ForeColor = System.Drawing.Color.Yellow;
-            //                button.Enabled = true;
-            //                break;
-            //        }
-            //        button.Visible = true;
-            //    }
-
-            //    PnTime.Visible = true;
-            //}
-
-            //private void UpdateBookingPanel()
-            //{
-            //    LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
-            //    if (pageData.Selection.Time == new TimeSpan(-1))
-            //    {
-            //        LbDepartureTime.Text = "";
-            //    }
-            //    else
-            //    {
-            //        LbDepartureTime.Text = pageData.Selection.Time.ToString("hh\\:mm") + "h";
-            //    }
-            //    LbDepartureSeats.Text = pageData.Selection.Seats.ToString() + " passenger(s)";
-            //    LbDepartureTo.Text = "To: " + pageData.Selection.Route.EndRegion.Name + " / " + pageData.Selection.DAP.Name;
-            //    LbDepartureFrom.Text = "From: " + pageData.Selection.Route.StartRegion.Name + " / " + pageData.Selection.SAP.Name;
-            //    LbDepartureSeatCost.Text = pageData.Selection.Seats.ToString() + " Seat(s) x " + pageData.Selection.Price.ToString() + "€";
-            //    LbDepartureBookCost.Text = (pageData.Selection.Seats * pageData.Selection.Price).ToString() + "€";
-
-            //    if (pageData.Selection.Route != null &&
-            //        pageData.Selection.Date != DateTime.MinValue &&
-            //        pageData.Selection.Time != new TimeSpan(-1) &&
-            //        pageData.Selection.Seats != 0 &&
-            //        pageData.Selection.Price != 0)
-            //    {
-            //        BtnDepartureBook.ForeColor = System.Drawing.Color.Green;
-            //        BtnDepartureBook.Enabled = true;
-            //    }
-            //    else
-            //    {
-            //        BtnDepartureBook.ForeColor = System.Drawing.Color.Red;
-            //        BtnDepartureBook.Enabled = false;
-            //    }
-
-            //    PnBook.Visible = true;
-            //}
+        //    PnBook.Visible = true;
+        //}
 
         private IEnumerable<Route> GetPossibleRoutes()
         {
@@ -478,6 +515,7 @@ namespace MVP.Calendar
             DdlSeats.ListDataBind();
             DdlSeats.SelectedText = "1 lugar";
             localData.Values.Seats = "1";
+            GetCalendarData();
         }
 
         private void ProcessQueryString()

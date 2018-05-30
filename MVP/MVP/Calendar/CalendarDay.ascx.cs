@@ -10,8 +10,7 @@ namespace MVP.Calendar
             Limited,
             Selected,
             Unavailable,
-            Available,
-            Weekend
+            Available
         }
 
         public string DayText
@@ -20,6 +19,11 @@ namespace MVP.Calendar
         }
 
         public bool IsOffMonth
+        {
+            get; set;
+        }
+
+        public bool IsWeekend
         {
             get; set;
         }
@@ -52,6 +56,14 @@ namespace MVP.Calendar
             }
         }
 
+        protected string DayWeekendTag
+        {
+            get
+            {
+                return IsWeekend ? " day--weekend" : "";
+            }
+        }
+
         protected string CurrentDayTag
         {
             get
@@ -76,10 +88,7 @@ namespace MVP.Calendar
                         return " day--unavailable";
 
                     case DayFlag.Available:
-                        return " day--available";
-
-                    case DayFlag.Weekend:
-                        return " day--weekend";
+                        return " day--fully-available";
 
                     default:
                         return "";

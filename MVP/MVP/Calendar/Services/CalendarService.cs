@@ -49,6 +49,10 @@ namespace MVP.Services
                 {
                     result.Add(GetDay(state, date));
                 }
+                else
+                {
+                    result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
+                }
                 date = date + TimeSpan.FromDays(1);
             }
 

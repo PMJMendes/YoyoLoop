@@ -38,8 +38,9 @@ namespace MVP.Calendar
 
     public enum SlotStatus // Definitions have changed, not yet settled on
     {
-        GREEN,      // Available with selected parameters
-        YELLOW,     // Available with different parameters
-        RED         // Not available
+        NONE,       // Unavailable
+        GREEN,      // Plenty of seats
+        YELLOW,     // QUASE CHEIO
+        RED         // ESGOTADO
     }
 }
