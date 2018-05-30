@@ -163,7 +163,7 @@
                     <asp:ImageButton id="BtnMonthBack" runat="server" class="btn-calendar" OnClick="CalBtnMonthControl" ImageUrl="../img/arr-left.png"></asp:ImageButton>
                   </div>
                   <div class="col-lg-6 col-md-6">
-                    <p class=" month m-0"><%= localData.Values.CalVisibleDate.ToString("MMMM") %></p>
+                    <p class=" month m-0"><%= localData.Values.CalVisibleDate.ToString("MMMM").ToUpper() %></p>
                     <p class="d-none d-md-block year m-0"><%= localData.Values.CalVisibleDate.Year %></p>
                   </div>
                   <div class="my-auto col-lg-3 col-md-3 text-left">

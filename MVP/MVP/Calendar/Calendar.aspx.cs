@@ -105,13 +105,12 @@ namespace MVP.Calendar
             switch (button.ID)
             {
                 case "BtnMonthBack":
-                    localData.Values.CalVisibleDate = localData.Values.CalVisibleDate.AddMonths(-1);
+                    localData.Values.CalVisibleDate = 
+                    CalDate.VisibleDate = localData.Values.CalVisibleDate.AddMonths(-1);
                     break;
                 case "BtnMonthFwd":
-                    localData.Values.CalVisibleDate = localData.Values.CalVisibleDate.AddMonths(1);
-                    break;
-                case "BtnMonthToday":
-                    localData.Values.CalVisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+                    localData.Values.CalVisibleDate =
+                    CalDate.VisibleDate = localData.Values.CalVisibleDate.AddMonths(1);
                     break;
             }
             GetCalendarData();
@@ -126,7 +125,8 @@ namespace MVP.Calendar
             }
             else
             {
-                localData.Values.CalVisibleDate = today;
+                localData.Values.CalVisibleDate =
+                CalDate.VisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
                 GetCalendarData();
             }
         }
@@ -232,11 +232,6 @@ namespace MVP.Calendar
 
         private void GetCalendarData()
         {
-            if (localData.Values.CalVisibleDate.Month < DateTime.Today.Month) // we may have a display bug here when past month still shows available dates
-            {
-                return;
-            }
-
             DateTime d = localData.Values.CalVisibleDate;
             DateTime firstdate;
 
@@ -515,6 +510,7 @@ namespace MVP.Calendar
             DdlSeats.ListDataBind();
             DdlSeats.SelectedText = "1 lugar";
             localData.Values.Seats = "1";
+            CalDate.VisibleDate = localData.Values.CalVisibleDate;
             GetCalendarData();
         }
 

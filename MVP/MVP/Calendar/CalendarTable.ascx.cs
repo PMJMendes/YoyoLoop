@@ -22,6 +22,11 @@ namespace MVP.Calendar
             }
         }
 
+        public DateTime VisibleDate
+        {
+            get; set;
+        }
+
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             var list = (IEnumerable<DaySlot>)e.Item.DataItem;
@@ -39,7 +44,7 @@ namespace MVP.Calendar
             var control = (CalendarDay)e.Item.FindControl("CalendarDay");
 
             control.IsCurrent = slot.Day == DateTime.Today;
-            control.IsOffMonth = !(slot.Day.Month == DateTime.Today.Month && slot.Day.Year == DateTime.Today.Year);
+            control.IsOffMonth = !(slot.Day.Month == VisibleDate.Month && slot.Day.Year == VisibleDate.Year);
             control.IsWeekend = slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday;
             control.DayText = slot.Day.Day.ToString();
             if(slot.Price == 0)
