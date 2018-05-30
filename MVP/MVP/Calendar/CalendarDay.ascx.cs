@@ -15,37 +15,86 @@ namespace MVP.Calendar
 
         public string DayText
         {
-            get; set;
+            get
+            {
+                return (string)ViewState["DayText"];
+            }
+            set
+            {
+                ViewState["DayText"] = value;
+            }
         }
 
         public bool IsOffMonth
         {
-            get; set;
+            get
+            {
+                return (bool)ViewState["IsOffMonth"];
+            }
+            set
+            {
+                ViewState["IsOffMonth"] = value;
+            }
         }
 
         public bool IsWeekend
         {
-            get; set;
+            get
+            {
+                return (bool)ViewState["IsWeekend"];
+            }
+            set
+            {
+                ViewState["IsWeekend"] = value;
+            }
         }
 
         public bool IsCurrent
         {
-            get; set;
+            get
+            {
+                return (bool)ViewState["IsCurrent"];
+            }
+            set
+            {
+                ViewState["IsCurrent"] = value;
+            }
         }
 
         public string InfoText
         {
-            get; set;
+            get
+            {
+                return (string)ViewState["InfoText"];
+            }
+            set
+            {
+                ViewState["InfoText"] = value;
+            }
         }
 
         public string PriceText
         {
-            get; set;
+            get
+            {
+                return (string)ViewState["PriceText"];
+            }
+            set
+            {
+                ViewState["PriceText"] = value;
+            }
         }
 
         public DayFlag Flag
         {
-            get; set;
+            get
+            {
+                return (DayFlag)ViewState["Flag"];
+            }
+            set
+            {
+                ViewState["Flag"] = value;
+            }
         }
 
         protected string OffMonthTag
