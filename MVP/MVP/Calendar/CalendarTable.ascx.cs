@@ -83,6 +83,7 @@ namespace MVP.Calendar
                     break;
                 default:
                     control.InfoText = "";
+                    control.PriceText = "";
                     if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
                     {
                         control.Flag = CalendarDay.DayFlag.Weekend;

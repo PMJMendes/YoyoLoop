@@ -110,6 +110,10 @@ namespace MVP.Services
                 {
                     result.Status = SlotStatus.YELLOW;
                 }
+                else if (ocup == 0 && lastminute)
+                {
+                    result.Status = SlotStatus.NONE;
+                }
                 else
                 {
                     result.Status = SlotStatus.GREEN;
