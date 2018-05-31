@@ -75,7 +75,7 @@ namespace MVP.Services
             }
             else
             {
-                result.Status = SlotStatus.RED;
+                result.Status = SlotStatus.NONE;
             }
 
             if (lastminute)
