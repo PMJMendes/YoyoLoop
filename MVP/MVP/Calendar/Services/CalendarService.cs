@@ -95,11 +95,6 @@ namespace MVP.Services
                 return result;
             }
 
-            if (lastminute && !departures.Where(d => d.Occupancy > 0).Any())
-            {
-                return result;
-            }
-
             if (!departures.Where(d => d.Occupancy < capacity).Any())
             {
                 result.Status = SlotStatus.BLACK;
