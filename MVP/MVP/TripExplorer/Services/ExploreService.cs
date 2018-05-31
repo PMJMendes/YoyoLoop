@@ -168,12 +168,15 @@ namespace MVP.Services
         public Trip CreateTrip(ExploreDTO state)
         {
             var model = new EntityModel();
+            DayType daytype = GetDayType(state.Selection.Date);
             var trip = new Trip()
             {
                 TripId = Guid.NewGuid(),
                 Status = TripStatus.PENDING,
                 StartTime = state.Selection.Date + state.Selection.Time,
-                Departure = model.Departure.Where(b => (b.Route.RouteId == state.Selection.Route.RouteId) && (b.Time == state.Selection.Time)).First(),
+                Departure = model.Departure.Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
+                                           .Where(dt => dt.DayType == daytype)
+                                           .Where(t => t.Time == state.Selection.Time).First(),
                 StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
                 EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
             };

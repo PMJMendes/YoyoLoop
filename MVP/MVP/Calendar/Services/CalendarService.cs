@@ -82,9 +82,10 @@ namespace MVP.Services
             };
 
             var dayType = GetDayType(date);
+            var trip = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings);
 
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                .GroupJoin(trip,
                     d => d,
                     t => t.Departure,
                     (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).FirstOrDefault() }
@@ -211,12 +212,15 @@ namespace MVP.Services
         public Trip CreateTrip(CalendarDTO state)
         {
             var model = new EntityModel();
+            DayType daytype = GetDayType(state.Selection.Date);
             var trip = new Trip()
             {
                 TripId = Guid.NewGuid(),
                 Status = TripStatus.PENDING,
                 StartTime = state.Selection.Date + state.Selection.Time,
-                Departure = model.Departure.Where(b => (b.Route.RouteId == state.Selection.Route.RouteId) && (b.Time == state.Selection.Time)).First(),
+                Departure = model.Departure.Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
+                                           .Where(dt => dt.DayType == daytype)
+                                           .Where(t => t.Time == state.Selection.Time).First(),
                 StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
                 EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
             };
