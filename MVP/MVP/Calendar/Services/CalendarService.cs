@@ -87,7 +87,7 @@ namespace MVP.Services
                 .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
                     d => d,
                     t => t.Departure,
-                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).SingleOrDefault() }
+                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).FirstOrDefault() }
                 );
 
             if (!departures.Any())
