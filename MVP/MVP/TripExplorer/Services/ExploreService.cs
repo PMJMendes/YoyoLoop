@@ -57,33 +57,35 @@ namespace MVP.Services
 
         public DaySlot GetDay(ExploreDTO state, DateTime date)
         {
-            var result = new DaySlot();
-            var model = new EntityModel();
-            var daytype = GetDayType(date);
-
-            result.Day = date;
-
-            bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-
-            if (state.Selection.Route.Departures.Where(dt => dt.DayType == daytype).Count() > 0 && !lastminute)
+            using (var model = new EntityModel())
             {
-                result.Status = SlotStatus.GREEN;
-            }
-            else
-            {
-                result.Status = SlotStatus.RED;
-            }
+                var result = new DaySlot();
+                var daytype = GetDayType(date);
 
-            if (lastminute)
-            {
-                result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
-            }
-            else
-            {
-                result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.STANDARD).Select(p => p.Price).FirstOrDefault();
-            }
+                result.Day = date;
 
-            return result;
+                bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+
+                if (state.Selection.Route.Departures.Where(dt => dt.DayType == daytype).Count() > 0 && !lastminute)
+                {
+                    result.Status = SlotStatus.GREEN;
+                }
+                else
+                {
+                    result.Status = SlotStatus.RED;
+                }
+
+                if (lastminute)
+                {
+                    result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
+                }
+                else
+                {
+                    result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.STANDARD).Select(p => p.Price).FirstOrDefault();
+                }
+
+                return result;
+            }
         }
 
         public DayType GetDayType(DateTime date)
@@ -95,132 +97,142 @@ namespace MVP.Services
 
         public List<TimeSlot> GetTimeSlots(ExploreDTO state)
         {
-            var result = new List<TimeSlot>();
-            var model = new EntityModel();
-            bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-
-            // Will loop through trips here
-
-            foreach (Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
+            using (var model = new EntityModel())
             {
-                var slot = new TimeSlot();
+                var result = new List<TimeSlot>();
+                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
 
-                slot.Time = d.Time;
+                // Will loop through trips here
 
-                // All slot conditions will be checked here to determine status
-                if (lastminute)
+                foreach (Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
                 {
-                    slot.Status = SlotStatus.RED;
-                }
-                else
-                {
-                    slot.Status = SlotStatus.GREEN;
-                }
+                    var slot = new TimeSlot();
 
-                result.Add(slot);
+                    slot.Time = d.Time;
+
+                    // All slot conditions will be checked here to determine status
+                    if (lastminute)
+                    {
+                        slot.Status = SlotStatus.RED;
+                    }
+                    else
+                    {
+                        slot.Status = SlotStatus.GREEN;
+                    }
+
+                    result.Add(slot);
+                }
+                return result;
             }
-            return result;
         }
 
         public Booking CreateBooking(ExploreDTO state)
         {
-            var model = new EntityModel();
-            var trip = new Trip();
-
-            if(state.Selection.Trip == null)
+            using (var model = new EntityModel())
             {
-                trip = CreateTrip(state);
+                var trip = new Trip();
+
+                if (state.Selection.Trip == null)
+                {
+                    trip = CreateTrip(state);
+                }
+                else
+                {
+                    trip = state.Selection.Trip;
+                }
+
+                var booking = new Booking()
+                {
+                    BookingId = Guid.NewGuid(),
+                    Status = BookingStatus.PENDING,
+                    CreationTime = DateTime.Now,
+                    Trip = model.Trip.Single(t => t.TripId == trip.TripId),
+                    Seats = state.Selection.Seats,
+                    Cost = state.Selection.Seats * state.Selection.Price
+                };
+                model.Booking.Add(booking);
+                model.SaveChanges();
+
+                return booking;
             }
-            else
-            {
-                trip = state.Selection.Trip;
-            }
-
-            var booking = new Booking()
-            {
-                BookingId = Guid.NewGuid(),
-                Status = BookingStatus.PENDING,
-                CreationTime = DateTime.Now,
-                Trip = model.Trip.Single(t => t.TripId == trip.TripId),
-                Seats = state.Selection.Seats,
-                Cost = state.Selection.Seats * state.Selection.Price
-            };
-            model.Booking.Add(booking);
-            model.SaveChanges();
-
-            return booking;
         }
 
         public void UpdateBooking(Guid id, BookingStatus status) 
         {
-            var model = new EntityModel();
-            var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == id);
-
-            if(booking != null)
+            using (var model = new EntityModel())
             {
-                booking.Status = status;
-                model.SaveChanges();
+                var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == id);
 
-                UpdateTrip(booking.Trip.TripId);
+                if (booking != null)
+                {
+                    booking.Status = status;
+                    model.SaveChanges();
+
+                    UpdateTrip(booking.Trip.TripId);
+                }
             }
         }
 
         public Trip CreateTrip(ExploreDTO state)
         {
-            var model = new EntityModel();
-            DayType daytype = GetDayType(state.Selection.Date);
-            var trip = new Trip()
+            using (var model = new EntityModel())
             {
-                TripId = Guid.NewGuid(),
-                Status = TripStatus.PENDING,
-                StartTime = state.Selection.Date + state.Selection.Time,
-                Departure = model.Departure.Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
-                                           .Where(dt => dt.DayType == daytype)
-                                           .Where(t => t.Time == state.Selection.Time).First(),
-                StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
-                EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
-            };
-            model.Trip.Add(trip);
-            model.SaveChanges();
-            return trip;
+                DayType daytype = GetDayType(state.Selection.Date);
+                var trip = new Trip()
+                {
+                    TripId = Guid.NewGuid(),
+                    Status = TripStatus.PENDING,
+                    StartTime = state.Selection.Date + state.Selection.Time,
+                    Departure = model.Departure.Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
+                                               .Where(dt => dt.DayType == daytype)
+                                               .Where(t => t.Time == state.Selection.Time).First(),
+                    StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
+                    EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
+                };
+                model.Trip.Add(trip);
+                model.SaveChanges();
+                return trip;
+            }
         }
 
         public void UpdateTrip(Guid id)
         {
-            var model = new EntityModel();
-            var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
-            var bookings = trip.Bookings;
-
-            if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
+            using (var model = new EntityModel())
             {
-                return;
-            }
+                var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
+                var bookings = trip.Bookings;
 
-            if (trip.StartTime < DateTime.Now)
-            {
-                trip.Status = TripStatus.COMPLETED;
-                foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
+                if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
                 {
-                    b.Status = BookingStatus.COMPLETED;
+                    return;
                 }
-                model.SaveChanges();
-                return;
-            }
 
-            if (trip.Status == TripStatus.PENDING)
-            {
-                if(bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
+                if (trip.StartTime < DateTime.Now)
                 {
-                    trip.Status = TripStatus.BOOKED;
+                    trip.Status = TripStatus.COMPLETED;
+                    foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
+                    {
+                        b.Status = BookingStatus.COMPLETED;
+                    }
                     model.SaveChanges();
                     return;
                 }
 
-                if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
+                if (trip.Status == TripStatus.PENDING)
                 {
-                    trip.Status = TripStatus.CANCELLED;
-                    model.SaveChanges();
-                    return;
+                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
+                    {
+                        trip.Status = TripStatus.BOOKED;
+                        model.SaveChanges();
+                        return;
+                    }
+
+                    if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
+                    {
+                        trip.Status = TripStatus.CANCELLED;
+                        model.SaveChanges();
+                        return;
+                    }
                 }
             }
         }
