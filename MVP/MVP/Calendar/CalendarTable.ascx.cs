@@ -66,13 +66,18 @@ namespace MVP.Calendar
             switch (slot.Status)
             {
                 case SlotStatus.GREEN:
-                    control.Flag = CalendarDay.DayFlag.Available;
+                    control.InfoText = "";
+                    control.Flag = CalendarDay.DayFlag.Fully;
                     break;
                 case SlotStatus.YELLOW:
+                    control.InfoText = "";
+                    control.Flag = CalendarDay.DayFlag.Available;
+                    break;
+                case SlotStatus.RED:
                     control.InfoText = "Quase cheio";
                     control.Flag = CalendarDay.DayFlag.Limited;
                     break;
-                case SlotStatus.RED:
+                case SlotStatus.BLACK:
                     control.InfoText = "Esgotado";
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;

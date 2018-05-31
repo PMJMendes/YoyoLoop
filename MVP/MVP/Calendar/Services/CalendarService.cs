@@ -64,19 +64,54 @@ namespace MVP.Services
             var result = new DaySlot();
             var model = new EntityModel();
             var daytype = GetDayType(date);
+            var trips = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date)
+                                  .Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
+                                  .Include(b => b.Bookings);
+            var deps = state.Selection.Route.Departures.Where(dt => dt.DayType == daytype);
+
+            var query = trips.GroupJoin(deps,
+                                    t => t.StartTime.TimeOfDay,
+                                    d => d.Time,
+                                    (a, b) => new { trips = a, deps = b });
 
             result.Day = date;
+            result.Status = SlotStatus.NONE;
 
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
 
-            if (state.Selection.Route.Departures.Where(dt => dt.DayType == daytype).Count() > 0 && !lastminute)
-            {
-                result.Status = SlotStatus.GREEN;
-            }
-            else
-            {
-                result.Status = SlotStatus.NONE;
-            }
+            //if(query.Count() > 0)
+            //{
+            //    int cap = model.Settings.Select(s => s.VehicleCapacity).First();
+            //    foreach (Trip t in query)
+            //    {
+            //        int seats = t.Bookings.Sum(s => s.Seats);
+            //        double ocup = (double)seats / (double)cap;
+
+            //        if(ocup >= 1)
+            //        {
+            //            result.Status = SlotStatus.BLACK;
+            //        }
+            //        else if (ocup > 0.5)
+            //        {
+            //            result.Status = SlotStatus.RED;
+            //            break;
+            //        }
+            //        else if (ocup > 0.25)
+            //        {
+            //            result.Status = SlotStatus.YELLOW;
+            //        }
+            //        else if (result.Status != SlotStatus.YELLOW)
+            //        {
+            //            result.Status = SlotStatus.GREEN;
+            //        }
+            //    }
+            //}
+
+            //redo below 
+            //if (deps.Count() > 0 && !lastminute)
+            //{
+            //    result.Status = SlotStatus.GREEN;
+            //}
 
             if (lastminute)
             {

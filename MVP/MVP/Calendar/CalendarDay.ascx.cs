@@ -11,7 +11,8 @@ namespace MVP.Calendar
             Limited,
             Selected,
             Unavailable,
-            Available
+            Available,
+            Fully
         }
 
         public string DayText
@@ -118,6 +119,9 @@ namespace MVP.Calendar
                         return " day--unavailable";
 
                     case DayFlag.Available:
+                        return " day--available";
+
+                    case DayFlag.Fully:
                         return " day--fully-available";
 
                     case DayFlag.Weekend:
