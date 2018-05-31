@@ -7,6 +7,7 @@ namespace MVP.Calendar
         public enum DayFlag
         {
             None,
+            Weekend,
             Limited,
             Selected,
             Unavailable,
@@ -34,18 +35,6 @@ namespace MVP.Calendar
             set
             {
                 ViewState["IsOffMonth"] = value;
-            }
-        }
-
-        public bool IsWeekend
-        {
-            get
-            {
-                return (bool)ViewState["IsWeekend"];
-            }
-            set
-            {
-                ViewState["IsWeekend"] = value;
             }
         }
 
@@ -105,14 +94,6 @@ namespace MVP.Calendar
             }
         }
 
-        protected string DayWeekendTag
-        {
-            get
-            {
-                return IsWeekend ? " day--weekend" : "";
-            }
-        }
-
         protected string CurrentDayTag
         {
             get
@@ -138,6 +119,9 @@ namespace MVP.Calendar
 
                     case DayFlag.Available:
                         return " day--fully-available";
+
+                    case DayFlag.Weekend:
+                        return " day--weekend";
 
                     default:
                         return "";

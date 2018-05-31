@@ -24,7 +24,15 @@ namespace MVP.Calendar
 
         public DateTime VisibleDate
         {
-            get; set;
+            get
+            {
+                return (DateTime)ViewState["VisibleDate"];
+            }
+                
+            set
+            {
+                ViewState["VisibleDate"] = value;
+            }
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -45,7 +53,6 @@ namespace MVP.Calendar
 
             control.IsCurrent = slot.Day == DateTime.Today;
             control.IsOffMonth = !(slot.Day.Month == VisibleDate.Month && slot.Day.Year == VisibleDate.Year);
-            control.IsWeekend = slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday;
             control.DayText = slot.Day.Day.ToString();
             if(slot.Price == 0)
             {
@@ -71,7 +78,14 @@ namespace MVP.Calendar
                     break;
                 default:
                     control.InfoText = "";
-                    control.Flag = CalendarDay.DayFlag.None;
+                    if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
+                    {
+                        control.Flag = CalendarDay.DayFlag.Weekend;
+                    }
+                    else
+                    {
+                        control.Flag = CalendarDay.DayFlag.None;
+                    }
                     break;
             }
         }
