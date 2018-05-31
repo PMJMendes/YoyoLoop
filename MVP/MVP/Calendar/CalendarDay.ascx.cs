@@ -7,6 +7,7 @@ namespace MVP.Calendar
         public enum DayFlag
         {
             None,
+            OffMonth,
             Weekend,
             Limited,
             Selected,
@@ -24,18 +25,6 @@ namespace MVP.Calendar
             set
             {
                 ViewState["DayText"] = value;
-            }
-        }
-
-        public bool IsOffMonth
-        {
-            get
-            {
-                return (bool)ViewState["IsOffMonth"];
-            }
-            set
-            {
-                ViewState["IsOffMonth"] = value;
             }
         }
 
@@ -87,14 +76,6 @@ namespace MVP.Calendar
             }
         }
 
-        protected string OffMonthTag
-        {
-            get
-            {
-                return IsOffMonth ? " bg-light text-muted" : "";
-            }
-        }
-
         protected string CurrentDayTag
         {
             get
@@ -126,6 +107,9 @@ namespace MVP.Calendar
 
                     case DayFlag.Weekend:
                         return " day--weekend";
+
+                    case DayFlag.OffMonth:
+                        return " bg-light text-muted";
 
                     default:
                         return "";

@@ -52,7 +52,6 @@ namespace MVP.Calendar
             var control = (CalendarDay)e.Item.FindControl("CalendarDay");
 
             control.IsCurrent = slot.Day == DateTime.Today;
-            control.IsOffMonth = !(slot.Day.Month == VisibleDate.Month && slot.Day.Year == VisibleDate.Year);
             control.DayText = slot.Day.Day.ToString();
             if(slot.Price == 0)
             {
@@ -87,6 +86,10 @@ namespace MVP.Calendar
                     if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
                     {
                         control.Flag = CalendarDay.DayFlag.Weekend;
+                    }
+                    else if (!(slot.Day.Month == VisibleDate.Month && slot.Day.Year == VisibleDate.Year))
+                    {
+                        control.Flag = CalendarDay.DayFlag.OffMonth;
                     }
                     else
                     {
