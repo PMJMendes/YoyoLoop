@@ -43,17 +43,22 @@ namespace MVP.Services
             var result = new List<DaySlot>();
             var date = startdate;
 
-            while(date <= enddate)
+            using (var model = new EntityModel())
             {
-                if(date >= DateTime.Today)
+                var capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+
+                while (date <= enddate)
                 {
-                    result.Add(GetDay(state, date));
+                    if (date >= DateTime.Today)
+                    {
+                        result.Add(GetDay(state, date, model, capacity));
+                    }
+                    else
+                    {
+                        result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
+                    }
+                    date = date + TimeSpan.FromDays(1);
                 }
-                else
-                {
-                    result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
-                }
-                date = date + TimeSpan.FromDays(1);
             }
 
             return result;
@@ -61,58 +66,57 @@ namespace MVP.Services
 
         public DaySlot GetDay(CalendarDTO state, DateTime date)
         {
-            var result = new DaySlot();
-            var model = new EntityModel();
-            var daytype = GetDayType(date);
-            var trips = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date)
-                                  .Where(r => r.Departure.Route.RouteId == state.Selection.Route.RouteId)
-                                  .Include(b => b.Bookings);
-            var deps = state.Selection.Route.Departures.Where(dt => dt.DayType == daytype);
+            using (var model = new EntityModel())
+            {
+                return GetDay(state, date, model, model.Settings.Select(s => s.VehicleCapacity).First());
+            }
+        }
 
-            var query = trips.GroupJoin(deps,
-                                    t => t.StartTime.TimeOfDay,
-                                    d => d.Time,
-                                    (a, b) => new { trips = a, deps = b });
+        private DaySlot GetDay(CalendarDTO state, DateTime date, EntityModel model, int capacity)
+        {
+            var result = new DaySlot
+            {
+                Day = date,
+                Status = SlotStatus.NONE,
+                Price = 0
+            };
 
-            result.Day = date;
-            result.Status = SlotStatus.NONE;
+            var dayType = GetDayType(date);
+
+            var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
+                .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                    d => d,
+                    t => t.Departure,
+                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).SingleOrDefault() }
+                );
+
+            if (!departures.Any())
+            {
+                return result;
+            }
+
+            if (!departures.Where(d => d.Occupancy < capacity).Any())
+            {
+                result.Status = SlotStatus.BLACK;
+            }
+            else
+            {
+                double ocup = (double)departures.Max(d => d.Occupancy) / (double)capacity;
+                if (ocup > 0.5)
+                {
+                    result.Status = SlotStatus.RED;
+                }
+                else if (ocup > 0.25)
+                {
+                    result.Status = SlotStatus.YELLOW;
+                }
+                else
+                {
+                    result.Status = SlotStatus.GREEN;
+                }
+            }
 
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-
-            //if(query.Count() > 0)
-            //{
-            //    int cap = model.Settings.Select(s => s.VehicleCapacity).First();
-            //    foreach (Trip t in query)
-            //    {
-            //        int seats = t.Bookings.Sum(s => s.Seats);
-            //        double ocup = (double)seats / (double)cap;
-
-            //        if(ocup >= 1)
-            //        {
-            //            result.Status = SlotStatus.BLACK;
-            //        }
-            //        else if (ocup > 0.5)
-            //        {
-            //            result.Status = SlotStatus.RED;
-            //            break;
-            //        }
-            //        else if (ocup > 0.25)
-            //        {
-            //            result.Status = SlotStatus.YELLOW;
-            //        }
-            //        else if (result.Status != SlotStatus.YELLOW)
-            //        {
-            //            result.Status = SlotStatus.GREEN;
-            //        }
-            //    }
-            //}
-
-            //redo below 
-            //if (deps.Count() > 0 && !lastminute)
-            //{
-            //    result.Status = SlotStatus.GREEN;
-            //}
-
             if (lastminute)
             {
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
