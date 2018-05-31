@@ -81,11 +81,10 @@ namespace MVP.Services
                 Price = 0
             };
 
+            bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var dayType = GetDayType(date);
-            var trip = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings);
-
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                .GroupJoin(trip,
+                .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
                     d => d,
                     t => t.Departure,
                     (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).FirstOrDefault() }
@@ -117,7 +116,6 @@ namespace MVP.Services
                 }
             }
 
-            bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             if (lastminute)
             {
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
@@ -126,7 +124,6 @@ namespace MVP.Services
             {
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.STANDARD).Select(p => p.Price).FirstOrDefault();
             }
-
             return result;
         }
 
