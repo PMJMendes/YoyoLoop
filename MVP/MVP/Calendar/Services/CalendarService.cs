@@ -65,7 +65,7 @@ namespace MVP.Services
             var model = new EntityModel();
             var daytype = GetDayType(date);
             var trips = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date)
-                                  .Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
+                                  .Where(r => r.Departure.Route.RouteId == state.Selection.Route.RouteId)
                                   .Include(b => b.Bookings);
             var deps = state.Selection.Route.Departures.Where(dt => dt.DayType == daytype);
 
@@ -212,7 +212,7 @@ namespace MVP.Services
                 TripId = Guid.NewGuid(),
                 Status = TripStatus.PENDING,
                 StartTime = state.Selection.Date + state.Selection.Time,
-                Route = model.Route.Single(b => b.RouteId == state.Selection.Route.RouteId),
+                Departure = model.Departure.Single(b => b.Route.RouteId == state.Selection.Route.RouteId),
                 StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
                 EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
             };

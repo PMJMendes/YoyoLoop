@@ -669,6 +669,10 @@
     <Compile Include="Migrations\201804160907020_TripStatus.Designer.cs">
       <DependentUpon>201804160907020_TripStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805311350029_TripRouteToDeparture.cs" />
+    <Compile Include="Migrations\201805311350029_TripRouteToDeparture.Designer.cs">
+      <DependentUpon>201805311350029_TripRouteToDeparture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -843,6 +847,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804160907020_TripStatus.resx">
       <DependentUpon>201804160907020_TripStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805311350029_TripRouteToDeparture.resx">
+      <DependentUpon>201805311350029_TripRouteToDeparture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
