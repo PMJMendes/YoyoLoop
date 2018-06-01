@@ -384,7 +384,7 @@ namespace MVP.TripExplorer
                 {
                     case SlotStatus.RED:
                         button.ForeColor = System.Drawing.Color.Red;
-                        button.Enabled = false;
+                        button.Enabled = true;
                         break;
                     case SlotStatus.GREEN:
                         button.ForeColor = System.Drawing.Color.Green;
