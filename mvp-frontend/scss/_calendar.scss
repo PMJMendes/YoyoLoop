@@ -786,6 +786,7 @@ header.head {
     line-height: normal;
     letter-spacing: normal;
     color: #c1c6d3;
+    min-width: 220px;
 
     .btn-select {
         border-radius: 4px;
@@ -816,11 +817,16 @@ header.head {
         font-size: 13px;
         color: #535e7b;
         cursor: pointer;
+        transition: 0.4s;
     }
 
-    .row {
-        &:last-child {
-            padding-bottom: 16px!important;
-        }
+    .panel {
+        display: none;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .divider {
+        margin-top: 0px;
     }
 }
