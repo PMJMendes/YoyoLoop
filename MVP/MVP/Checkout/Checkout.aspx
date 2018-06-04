@@ -75,6 +75,7 @@
                 <input class="profile__input profile__input--postal-code" type="text" placeholder="1234">
               </div>
 
+
       <div class="col-lg-4 col-md-4">
             <!-- LATERAL ONE WAY -->
             <div class="row next-trip">
@@ -86,7 +87,7 @@
                     ../img/calendar-grey@3x.png 3x"
                     class="calendar-grey">
                   </div>
-                  <div class="col-8">15 de Março, Quarta</div>
+                  <div class="col-8"><%= pageData.StartTime.ToString("dd") %> de <%= pageData.StartTime.ToString("MMMM").ToUpper() %>, <%= pageData.StartTime.ToString("dddd") %></div>
                   <div class="col-2 text-right text-uppercase direction">Ida</div>
                 </div>
                 <hr class="divider">
@@ -101,7 +102,7 @@
                         ../img/users@3x.png 3x"
                         class="users">
                       </div>
-                      <div class="col-8"><strong>2 Lugares</strong></div>
+                      <div class="col-8"><strong><%= pageData.Seats.ToString() %> Lugar(es)</strong></div>
                     </div>
 
                     <!--HORA-->
@@ -112,7 +113,7 @@
                         ../img/clock@3x.png 3x"
                         class="clock">
                       </div>
-                      <div class="col-8"><strong>19:30</strong></div>
+                      <div class="col-8"><strong><%= pageData.StartTime.ToString("hh\\:mm") %></strong></div>
                     </div>
 
                     <!--PREÇO-->
@@ -123,7 +124,7 @@
                         ../img/cart@3x.png 3x"
                         class="clock">
                       </div>
-                      <div class="col-8"><strong>20,00€</strong></div>
+                      <div class="col-8"><strong><%= pageData.Cost.ToString() %> €</strong></div>
                     </div>
                   </div>
                 </div>
@@ -137,11 +138,11 @@
                     </div>
 
                     <div class="row p-1 text-uppercase city-name">
-                      <div class="col-12 pl-4">Lisboa</div>
+                      <div class="col-12 pl-4"><%= pageData.StartRegionName %></div>
                     </div>
 
                     <div class="row p-1 pt-0 access-point">
-                      <div class="col-12 pl-4">Marques de Pombal</div>
+                      <div class="col-12 pl-4"><%= pageData.StartAPName  %></div>
                     </div>
                   </div>
                 </div>
@@ -153,11 +154,11 @@
                     </div>
 
                     <div class="row p-1 text-uppercase city-name">
-                      <div class="col-12 pl-4">Cascais</div>
+                      <div class="col-12 pl-4"><%= pageData.EndRegionName %></div>
                     </div>
 
                     <div class="row p-1 pt-0 access-point">
-                      <div class="col-12 pl-4">Cascais shopping</div>
+                      <div class="col-12 pl-4"><%= pageData.EndAPName %></div>
                     </div>
                   </div>
                 </div>
@@ -168,10 +169,7 @@
                   <div class="col-4 pl-4 text-uppercase total">Total</div>
                   <div class="col-8 pr-4 text-right">
                     <div class="row">
-                      <div class="col-12">2 Lugares <span class="times">x</span> <span class="price">25,00€</span></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 total-price">50,00€</div>
+                      <div class="col-12 total-price"><%= pageData.Cost %> €</div>
                     </div>
                   </div>
                 </div>
@@ -185,6 +183,8 @@
         </div>
       </div>  
     </div>
+            </div>
+        </div>
 
 
   </form>

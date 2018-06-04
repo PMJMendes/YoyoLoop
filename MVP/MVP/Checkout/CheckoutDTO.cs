@@ -8,6 +8,14 @@ namespace MVP.Checkout
 {
     public class CheckoutDTO
     {
+        public Guid BookingId { get; set; }
+        public int Seats { get; set; }
+        public decimal Cost { get; set; }
 
+        public DateTime StartTime { get; set; }
+        public string StartRegionName { get; set; }
+        public string StartAPName { get; set; }
+        public string EndRegionName { get; set; }
+        public string EndAPName { get; set; }
     }
 }
