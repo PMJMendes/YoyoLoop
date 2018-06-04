@@ -231,6 +231,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Calendar\CalendarTable.ascx" />
+    <Content Include="Checkout\Checkout.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -572,6 +573,15 @@
       <DependentUpon>CalendarTable.ascx</DependentUpon>
     </Compile>
     <Compile Include="Calendar\Services\CalendarService.cs" />
+    <Compile Include="Checkout\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutDTO.cs" />
+    <Compile Include="Checkout\Services\CheckoutService.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
