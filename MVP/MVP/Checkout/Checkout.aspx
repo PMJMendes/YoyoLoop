@@ -47,6 +47,7 @@
       </div>
     </nav>
 
+    <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
 
     <div class="profile">
       <div class="profile__container profile__container--first">
@@ -66,13 +67,15 @@
                 <input class="profile__input profile__input--name" type="text" placeholder="Pedro Meireles">
                 
                 <div class="profile__label">Número do cartão</div>
-                <input class="profile__input profile__input--card-number" type="text" placeholder="Número do cartão"> 
+                <input class="profile__input profile__input--card-number" type="text" id="txtCardNumber" placeholder="Número do cartão"> 
                 
                 <div class="profile__label">Validade</div>
-                <input class="profile__input profile__input--postal-code" type="text" placeholder="06/18">
+                <input class="profile__input profile__input--postal-code" type="text" id="txtCardExpiryMonth" placeholder="MM">
+                /
+                <input class="profile__input profile__input--postal-code" type="text" id="txtCardExpiryYear" placeholder="YY">
 
                 <div class="profile__label">CVV</div>
-                <input class="profile__input profile__input--postal-code" type="text" placeholder="1234">
+                <input class="profile__input profile__input--postal-code" type="text" id="txtCardSecurityCode" placeholder="1234">
               </div>
 
 
@@ -174,19 +177,14 @@
                   </div>
                 </div>
             </div>
-
         </div>
-
                 <div class="mt-5 mb-5 profile__separator"></div>
-                <button class="mb-5 profile__btn">Pagar</button>
-
+                <button class="mb-5 profile__btn" id="btnPay">Pagar</button>
         </div>
       </div>  
     </div>
-            </div>
-        </div>
-
-
+    </div>
+    </div>
   </form>
 
     <!-- Bootstrap core JavaScript -->
@@ -199,6 +197,42 @@
       });
     </script>
 
+    <!-- Stripe JavaScript -->
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <script type="text/javascript">
+
+	    $('document').ready(function () {
+		    Stripe.setPublishableKey('pk_test_88CHJBhi4hoLYjbDfFTytsAm');
+
+			    $('#btnPay').on('click', function (e) {
+				    e.preventDefault();
+       	            e.stopPropagation();
+
+			    Stripe.card.createToken({
+				    number: $('#txtCardNumber').val(), 
+				    cvc: $('#txtCardSecurityCode').val(),
+				    exp_month: $('#txtCardExpiryMonth').val(),
+				    exp_year: $('#txtCardExpiryYear').val()
+			    }, stripeResponseHandler);
+		    });
+
+		    function stripeResponseHandler(status, response) {
+			    var $form = $('#form1');
+			    if (response.error) {
+				    // Show the errors on the form
+				    alert(response.error.message);
+			    } else {
+				    // response contains id and card, which contains additional card details 
+				    var token = response.id;
+				    // Insert the token into the form so it gets submitted to the server
+				    $('#hfStripeToken').val(token);
+				    // and submit
+				    $form.get(0).submit();
+			    }
+		    }
+	    });
+    </script>
 
   </body>
 
