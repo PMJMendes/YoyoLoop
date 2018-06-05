@@ -128,6 +128,9 @@ namespace MVP.TripExplorer
             Button button = (Button)sender;
             switch (button.Text)
             {
+                case "CHECKOUT":
+                    Response.Redirect("../Checkout/Checkout?Id=" + Guid.Parse(LbDebugPayBookingID.Text));
+                    break;
                 case "PAY":
                     service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
                     break;

@@ -136,7 +136,10 @@
                 <asp:Table runat="server" HorizontalAlign="Center" Width="100%" Height="100%">
                     <asp:TableRow><asp:TableCell ColumnSpan="3" Font-Size="X-Small">DEBUG<br />PAYMENT CONFIRMATION RESULT</asp:TableCell></asp:TableRow>
                     <asp:TableRow>
-                        <asp:TableCell><asp:Button ID="BtnDebugPayConfirm" runat="server" Text="PAY" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
+                        <asp:TableCell ColumnSpan="3"><asp:Button ID="BtnDebugPayCheckout" runat="server" Text="CHECKOUT" Width="140px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell><asp:Button ID="BtnDebugPayConfirm" runat="server" Text="PAY" Font-Size="Small" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
                         <asp:TableCell><asp:Button ID="BtnDebugPayCancel" runat="server" Text="CANCEL" Font-Size="Small" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
                         <asp:TableCell><asp:Button ID="BtnDebugPayIgnore" runat="server" Text="IGNORE" Font-Size="Small" Width="70px" OnClick="BtnDebugPay_Click" /></asp:TableCell>
                     </asp:TableRow>
