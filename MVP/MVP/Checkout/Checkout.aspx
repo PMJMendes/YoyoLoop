@@ -64,18 +64,18 @@
                 </select>
 
                 <div class="profile__label">Nome do titular</div>
-                <input class="profile__input profile__input--name" type="text" placeholder="Pedro Meireles">
+                <input class="profile__input profile__input--name" type="text" id="txtCardName" Value="<%= localData.CardName %>" placeholder="">
                 
                 <div class="profile__label">Número do cartão</div>
-                <input class="profile__input profile__input--card-number" type="text" id="txtCardNumber" placeholder="Número do cartão"> 
+                <input class="profile__input profile__input--card-number" type="text" id="txtCardNumber" Value="<%= localData.CardNumber %>" placeholder="0000 0000 0000 0000">
                 
                 <div class="profile__label">Validade</div>
-                <input class="profile__input profile__input--postal-code" type="text" id="txtCardExpiryMonth" placeholder="MM">
+                <input class="profile__input profile__input--postal-code" type="text" id="txtCardExpiryMonth" Value="<%= localData.CardMonth %>" placeholder="MM">
                 /
-                <input class="profile__input profile__input--postal-code" type="text" id="txtCardExpiryYear" placeholder="YY">
+                <input class="profile__input profile__input--postal-code" type="text" id="txtCardExpiryYear" Value="<%= localData.CardYear %>" placeholder="YY">
 
                 <div class="profile__label">CVV</div>
-                <input class="profile__input profile__input--postal-code" type="text" id="txtCardSecurityCode" placeholder="1234">
+                <input class="profile__input profile__input--postal-code" type="text" id="txtCardSecurityCode" Value="<%= localData.CardCVV %>" placeholder="123">
               </div>
 
 
@@ -203,31 +203,34 @@
     <script type="text/javascript">
 
 	    $('document').ready(function () {
-		    Stripe.setPublishableKey('pk_test_88CHJBhi4hoLYjbDfFTytsAm');
+		    Stripe.setPublishableKey('<%=stripePublishableKey%>');
 
-			    $('#btnPay').on('click', function (e) {
-				    e.preventDefault();
-       	            e.stopPropagation();
+            $('#btnPay').on('click', function (e)
+            {
+			    e.preventDefault();
+       	        e.stopPropagation();
 
-			    Stripe.card.createToken({
-				    number: $('#txtCardNumber').val(), 
+                Stripe.card.createToken({
+                    number: $('#txtCardNumber').val(), 
 				    cvc: $('#txtCardSecurityCode').val(),
 				    exp_month: $('#txtCardExpiryMonth').val(),
-				    exp_year: $('#txtCardExpiryYear').val()
+                    exp_year: $('#txtCardExpiryYear').val(),
+                    name:  $('#txtCardName').val()
 			    }, stripeResponseHandler);
 		    });
 
-		    function stripeResponseHandler(status, response) {
+            function stripeResponseHandler(status, response)
+            {
 			    var $form = $('#form1');
-			    if (response.error) {
-				    // Show the errors on the form
+                if (response.error)
+                {
+                    //need something better here
 				    alert(response.error.message);
-			    } else {
-				    // response contains id and card, which contains additional card details 
+                }
+                else
+                {
 				    var token = response.id;
-				    // Insert the token into the form so it gets submitted to the server
 				    $('#hfStripeToken').val(token);
-				    // and submit
 				    $form.get(0).submit();
 			    }
 		    }

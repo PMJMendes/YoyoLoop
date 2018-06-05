@@ -15,10 +15,22 @@ namespace MVP.Checkout
 {
     public partial class Checkout : System.Web.UI.Page
     {
+        public class PageState
+        {
+            public string PayMethod { get; set; }
+            public string CardName { get; set; }
+            public string CardNumber { get; set; }
+            public string CardMonth { get; set; }
+            public string CardYear { get; set; }
+            public string CardCVV { get; set; }
+        }
 
         private readonly CheckoutService service = new CheckoutService();
+        protected readonly string stripePublishableKey = WebConfigurationManager.AppSettings["StripePublishableKey"];
+        private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
-        public CheckoutDTO pageData;
+        protected CheckoutDTO pageData;
+        protected PageState localData;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,7 +47,7 @@ namespace MVP.Checkout
                 SourceTokenOrExistingSourceId = stripeToken
             };
 
-            var chargeService = new StripeChargeService(WebConfigurationManager.AppSettings["StripeSecretKey"]);
+            var chargeService = new StripeChargeService(stripePrivateKey);
 
             try
             {
@@ -50,17 +62,21 @@ namespace MVP.Checkout
                 return;
             }
 
-            // Successfully Authorised, do payment processing here...
+            // Charge sucessful
             HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Sucessful charge.\")</SCRIPT>");
-        } 
+            service.UpdateBooking(pageData.BookingId, BookingStatus.BOOKED);
+            //Response.Redirect("../Confirmed/Confirmed");
+        }
 
         private void InitData()
         {
             pageData = null;
+            localData = null;
 
             if (IsPostBack)
             {
                 pageData = (CheckoutDTO)Session["checkout.data"];
+                localData = (PageState)Session["local.data"];
 
                 // StripeHandler
                 NameValueCollection nvc = Request.Form;
@@ -78,6 +94,16 @@ namespace MVP.Checkout
                 Session["checkout.data"] = pageData;
             }
 
+            if (localData == null)
+            {
+                localData = new PageState { PayMethod = "",
+                                            CardName = "",
+                                            CardNumber = "",
+                                            CardMonth = "",
+                                            CardYear = "",
+                                            CardCVV = ""};
+                Session["local.data"] = localData;
+            }
         }
 
         private void ProcessQueryString()
@@ -90,6 +116,19 @@ namespace MVP.Checkout
                 pageData = service.GetBooking(id);
                 if(pageData == null)
                 {
+                    // temp blank values to stop page from crashing - eventually not needed when redirect is uncommented
+                    pageData = new CheckoutDTO
+                    {
+                        BookingId = Guid.Empty,
+                        Seats = 0,
+                        Cost = 0,
+                        StartTime = new DateTime(),
+                        StartRegionName = "",
+                        StartAPName = "",
+                        EndRegionName = "",
+                        EndAPName = ""
+                    };
+
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
                     //Response.Redirect("../Calendar/Calendar");
                 }

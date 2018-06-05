@@ -22,7 +22,6 @@ namespace MVP
             // Stripe
             var secretKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
             StripeConfiguration.SetApiKey(secretKey);
-            var publishableKey = WebConfigurationManager.AppSettings["StripePublishableKey"];
         }
     }
 }

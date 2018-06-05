@@ -48,5 +48,63 @@ namespace MVP.Services
             }
             return result;
         }
+
+        public void UpdateBooking(Guid id, BookingStatus status)
+        {
+            using (var model = new EntityModel())
+            {
+                var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == id);
+
+                if (booking != null)
+                {
+                    booking.Status = status;
+                    model.SaveChanges();
+
+                    UpdateTrip(booking.Trip.TripId);
+                }
+            }
+        }
+
+        public void UpdateTrip(Guid id)
+        {
+            using (var model = new EntityModel())
+            {
+                var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
+                var bookings = trip.Bookings;
+
+                if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
+                {
+                    return;
+                }
+
+                if (trip.StartTime < DateTime.Now)
+                {
+                    trip.Status = TripStatus.COMPLETED;
+                    foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
+                    {
+                        b.Status = BookingStatus.COMPLETED;
+                    }
+                    model.SaveChanges();
+                    return;
+                }
+
+                if (trip.Status == TripStatus.PENDING)
+                {
+                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
+                    {
+                        trip.Status = TripStatus.BOOKED;
+                        model.SaveChanges();
+                        return;
+                    }
+
+                    if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
+                    {
+                        trip.Status = TripStatus.CANCELLED;
+                        model.SaveChanges();
+                        return;
+                    }
+                }
+            }
+        }
     }
 }
