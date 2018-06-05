@@ -116,7 +116,7 @@
                         ../img/clock@3x.png 3x"
                         class="clock">
                       </div>
-                      <div class="col-8"><strong><%= pageData.StartTime.ToString("hh\\:mm") %></strong></div>
+                      <div class="col-8"><strong><%= pageData.StartTime.ToString("HH\\:mm") %></strong></div>
                     </div>
 
                     <!--PREÇO-->
