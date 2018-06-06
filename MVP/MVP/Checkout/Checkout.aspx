@@ -54,6 +54,7 @@
     </nav>
 
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
+  </form>
 
     <div class="checkout">
       <div class="checkout__container checkout__container--first">
@@ -267,7 +268,6 @@
         </div>
       </div>  
     </div>
-  </form>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>
