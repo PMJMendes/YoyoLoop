@@ -96,11 +96,54 @@
         <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-5 invitefriends__promocode">
             <p class="invitefriends__promocode__text mb-5 text-center">Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!</p>
 
-            <div class="d-flex align-items-center justify-content-center">
-                <input class="invitefriends__promocode__input mr-5" type="text" placeholder="#mypromocode">
-                <a href="#" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center">Copiar Link</a>
+            <div id="copy-link-1" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
+                <div class="invitefriends__promocode__input mr-5" type="text" placeholder="#mypromocode">
+                    <div class="invitefriends__promocode__label">#mypromocode</div>
+                </div>
+                <a href="#" id="copy-link-1-btn" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center">Copiar Link</a>
             </div>
-        </div>
+
+
+            <div id="copy-link-2" class="d-flex align-items-center justify-content-center invitefriends__hidden invitefriends__copy-link row">
+                <div class="invitefriends__popover invitefriends__popover--copied">
+                    <div class="check">
+
+                    </div>
+                    Copied to clipboard
+                </div>
+                <div class="invitefriends__promocode__input mr-5" type="text" placeholder="#mypromocode">
+                    <div class="invitefriends__promocode__label">#mypromocode</div>
+                    <div class="invitefriends__promocode__copy">Copy Link</div>
+                </div>
+                <a href="#" id="copy-link-2-btn" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center">Partilhar</a>
+                <div class="invitefriends__popover invitefriends__popover--register">
+                    <div class="invitefriends__popover__link">
+                        <img src="../img/face.png" srcset="../img/face@2x.png 2x, ../img/face@3x.png 3x" class="face">
+                        Partilhar no facebook
+                    </div>
+                    
+                    <div class="invitefriends__popover__separator"></div>
+
+                    <div class="invitefriends__popover__link">
+                        <img src="../img/twitter.png" srcset="../img/twitter@2x.png 2x, ../img/twitter@3x.png 3x">
+                        Partilhar no twitter
+                    </div>
+
+                    <div class="invitefriends__popover__separator"></div>
+
+                    <div class="invitefriends__popover__link">
+                        <img src="../img/linkedin.png" srcset="../img/linkedin@2x.png 2x, ../img/linkedin@3x.png 3x">
+                        Partilhar no linkedin
+                    </div>
+
+                    <div class="invitefriends__popover__separator"></div>
+
+                    <div class="invitefriends__popover__link">
+                        <img src="../img/email.png" srcset="../img/email@2x.png 2x, ../img/email@3x.png 3x">
+                        Enviar por Email
+                    </div>
+                </div>
+            </div>
       </div>
 
       <div class="invitefriends__container invitefriends__container--forth">
@@ -133,6 +176,11 @@
     <script>
         $(window).scroll(function(){
             $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+        });
+
+        $("#copy-link-1-btn").click(function() {
+            $("#copy-link-1").addClass("invitefriends__hidden");
+            $("#copy-link-2").removeClass("invitefriends__hidden");
         });
     </script>
   </body>

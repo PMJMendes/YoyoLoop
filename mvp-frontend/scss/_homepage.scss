@@ -18,12 +18,23 @@
         padding-left: 60px;
         padding-right: 40px;
 
+
+        @media #{$mobile} {
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+
         &--first {
             margin-top: 220px;
         }
 
         &--second {
             background: #eff1f6;
+
+            img.illustration {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         &--third {
@@ -34,6 +45,7 @@
         &--forth {
             padding-top: 30px;
         }
+
     }
     
     // Section One stylings
@@ -45,6 +57,10 @@
         color: #ff5f6d;
         text-transform: uppercase;
         width: 868px;
+
+        @media #{$mobile} {
+            font-size: 32px;
+        }
     }
 
     &__sub-title {
@@ -81,6 +97,46 @@
         padding: 0 30px;
         border-radius: 4px;
         box-shadow: 0 0 60px 0 rgba(31, 40, 53, 0.15);
+
+        &--lisboa {
+            background-image: url("../img/lisboa.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: 425px 425px;
+        }
+
+        &--leiria {
+            background-image: url("../img/Leiria.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: 425px 425px;
+        }
+
+        &--coimbra {
+            background-image: url("../img/Coimbra.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: 425px 425px;
+        }
+
+        &--cascais {
+            background-image: url("../img/Cascais.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: 425px 425px;
+        }
 
         &__header {
             &__city {
