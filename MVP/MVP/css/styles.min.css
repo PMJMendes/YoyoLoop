@@ -1,3 +1,18 @@
+.navbar.scrolled {
+    background-color: #fff;
+    box-shadow: 0 5px 12px 0 rgba(83,94,123,.1)
+}
+
+    .navbar.scrolled a {
+        color: #535e7b !important
+    }
+
+    .navbar.scrolled img.logo {
+        margin: 0 !important;
+        width: 60px !important;
+        height: 60px !important
+    }
+
 #main-nav {
     font-weight: 400;
     font-style: normal;
@@ -54,20 +69,6 @@
     background-color: #ff5f6d;
     box-shadow: 0 5px 12px 0 rgba(255,95,109,.3)
 }
-
-.navbar.scrolled {
-    background: #eff1f6
-}
-
-    .navbar.scrolled a {
-        color: #535e7b !important
-    }
-
-    .navbar.scrolled img.logo {
-        margin: 0 !important;
-        width: 60px !important;
-        height: 60px !important
-    }
 
 header.head {
     background-image: url(../img/cascais.jpg);
@@ -829,6 +830,10 @@ header.head .form-check {
     cursor: default
 }
 
+.hide {
+    display: none
+}
+
 #destinationPopover {
     font-family: Lato;
     font-weight: 400;
@@ -904,6 +909,13 @@ header.head .form-check {
     padding-right: 40px
 }
 
+@media (max-width:767.98px) {
+    .homepage__container {
+        padding-left: 20px;
+        padding-right: 10px
+    }
+}
+
 .homepage__container--first {
     margin-top: 220px
 }
@@ -911,6 +923,11 @@ header.head .form-check {
 .homepage__container--second {
     background: #eff1f6
 }
+
+    .homepage__container--second img.illustration {
+        width: 100%;
+        height: 100%
+    }
 
 .homepage__container--third {
     padding-top: 30px;
@@ -929,6 +946,12 @@ header.head .form-check {
     color: #ff5f6d;
     text-transform: uppercase;
     width: 868px
+}
+
+@media (max-width:767.98px) {
+    .homepage__main-title {
+        font-size: 32px
+    }
 }
 
 .homepage__sub-title {
@@ -965,6 +988,46 @@ header.head .form-check {
     padding: 0 30px;
     border-radius: 4px;
     box-shadow: 0 0 60px 0 rgba(31,40,53,.15)
+}
+
+.homepage__where-to-card--lisboa {
+    background-image: url(../img/lisboa.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 425px 425px
+}
+
+.homepage__where-to-card--leiria {
+    background-image: url(../img/Leiria.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 425px 425px
+}
+
+.homepage__where-to-card--coimbra {
+    background-image: url(../img/Coimbra.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 425px 425px
+}
+
+.homepage__where-to-card--cascais {
+    background-image: url(../img/Cascais.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 425px 425px
 }
 
 .homepage__where-to-card__header__city {
@@ -1747,6 +1810,12 @@ header.head .form-check {
     color: #535e7b
 }
 
+@media (max-width:767.98px) {
+    .travel__card__first__your-trip {
+        text-align: center
+    }
+}
+
 .travel__card__first__point {
     font-size: 14px;
     margin-bottom: 10px;
@@ -1811,12 +1880,24 @@ header.head .form-check {
 }
 
 .travel__card__separator {
+    top: 0;
     position: absolute;
     height: 100%;
     left: -8px
 }
 
+@media (max-width:767.98px) {
+    .travel__card__separator {
+        text-align: center;
+        transform: rotate(90deg);
+        left: 435px;
+        height: 930px;
+        top: -465px
+    }
+}
+
 .travel__card__last {
+    padding: 40px;
     background: #ffd580;
     position: relative;
     display: flex;
@@ -2094,6 +2175,462 @@ header.head .form-check {
     background-color: #d5dbe9
 }
 
+.checkout {
+    font-family: Lato
+}
+
+.checkout__navbar {
+    background: #fff
+}
+
+    .checkout__navbar a {
+        color: #535e7b !important
+    }
+
+.checkout a:hover {
+    color: inherit;
+    text-decoration: none
+}
+
+.checkout select {
+    -webkit-appearance: none;
+    background: url(../img/arr-down.png) no-repeat right;
+    background-position: 90%
+}
+
+.checkout__container {
+    padding-left: 60px;
+    padding-right: 40px;
+    margin-top: 220px
+}
+
+@media (max-width:767.98px) {
+    .checkout__container {
+        padding: 0 !important
+    }
+}
+
+.checkout__main-title {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    color: #ff5f6d;
+    margin-bottom: 20px
+}
+
+.checkout__sub-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #535e7b;
+    margin-bottom: 15px
+}
+
+.checkout__sub-title-policy {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #535e7b;
+    margin-bottom: 15px
+}
+
+.checkout__policy-text {
+    max-width: 600px;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: left;
+    color: #8b9398
+}
+
+.checkout__accept-terms-condition {
+    max-width: 650px
+}
+
+@media (max-width:767.98px) {
+    .checkout__accept-terms-condition {
+        text-align: center !important
+    }
+}
+
+.checkout__accept-terms-condition--pay {
+    text-align: right
+}
+
+@media (max-width:767.98px) {
+    .checkout__accept-terms-condition--pay {
+        padding-top: 20px;
+        text-align: center !important
+    }
+}
+
+.checkout__accept-terms-condition--pay .btn {
+    font-size: 14px;
+    color: #fff;
+    width: 187px;
+    height: 40px;
+    border-radius: 19.5px;
+    border-color: #ff5f6d;
+    background-color: #ff5f6d;
+    box-shadow: 0 5px 12px 0 rgba(255,95,109,.3)
+}
+
+.checkout__terms-conditions {
+    font-size: 12px;
+    text-align: left;
+    color: #8b9398
+}
+
+    .checkout__terms-conditions a {
+        color: #ff5f6d;
+        text-decoration: underline
+    }
+
+.checkout__label {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: #838da7
+}
+
+.checkout__card-info {
+    max-width: 480px
+}
+
+.checkout__billing {
+    max-width: 615px
+}
+
+@media (max-width:767.98px) {
+    .checkout__billing--checkbox {
+        padding-left: 15px;
+        padding-bottom: 10px;
+        justify-content: flex-end
+    }
+}
+
+.checkout__input {
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: solid 1px rgba(102,115,134,.2);
+    font-size: 14px;
+    line-height: 2.3;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #667386;
+    padding-left: 10px;
+    margin: 5px 0 10px 0;
+    width: 100%
+}
+
+    .checkout__input::placeholder {
+        opacity: .5;
+        font-size: 14px;
+        color: rgba(102,115,134,.5)
+    }
+
+.checkout__input--name {
+    max-width: 450px
+}
+
+.checkout__input--birthday {
+    max-width: 190px
+}
+
+.checkout__input--email {
+    max-width: 360px
+}
+
+.checkout__input--country {
+    max-width: 85px
+}
+
+.checkout__input--phone {
+    max-width: 135px
+}
+
+.checkout__input--password {
+    max-width: 190px
+}
+
+.checkout__input--billing-name {
+    max-width: 600px
+}
+
+.checkout__input--company {
+    max-width: 600px
+}
+
+.checkout__input--nif {
+    max-width: 130px
+}
+
+.checkout__input--postal-code {
+    max-width: 130px
+}
+
+.checkout__input--city {
+    width: 100%;
+    max-width: 250px
+}
+
+.checkout__input--payment-method {
+    max-width: 300px
+}
+
+.checkout__input--card-number {
+    max-width: 280px
+}
+
+.checkout__input--card-expiration {
+    max-width: 100px
+}
+
+.checkout__input--card-cvv {
+    max-width: 80px
+}
+
+.checkout__input--promocode {
+    max-width: 300px
+}
+
+.checkout__separator {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px 0;
+    height: 2px;
+    background-color: #d5dbe9
+}
+
+.checkout__confirm-check {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #838da7
+}
+
+.checkout__btn {
+    border-radius: 20px;
+    background-color: #ff5f6d;
+    box-shadow: 0 5px 12px 0 rgba(255,95,109,.3);
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase
+}
+
+.checkout__menu {
+    padding: 10px;
+    max-width: 250px;
+    padding: 30px 0 30px 30px;
+    border-color: #d5dbe9;
+    border-width: 0 0 0 2px;
+    border-style: solid;
+    position: fixed
+}
+
+.checkout__menu__separator {
+    height: 2px;
+    width: 100%;
+    background-color: #d5dbe9
+}
+
+.checkout__menu__link {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #838da7 !important
+}
+
+.checkout__menu__link--selected {
+    color: #ff5f6d !important
+}
+
+.checkout .next-trip {
+    font-family: Lato;
+    margin-top: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: solid 1px rgba(102,115,134,.2)
+}
+
+    .checkout .next-trip .date {
+        padding: 16px 16px 0 16px
+    }
+
+    .checkout .next-trip .time {
+        padding: 0 16px 0 16px
+    }
+
+        .checkout .next-trip .time:last-child {
+            padding-bottom: 16px
+        }
+
+        .checkout .next-trip .time .price--fully-available {
+            color: #2ecc71
+        }
+
+        .checkout .next-trip .time .price--available {
+            color: #f39c12
+        }
+
+        .checkout .next-trip .time .price--limited-availability {
+            color: #ff5f6d
+        }
+
+        .checkout .next-trip .time .price--unavailable {
+            color: #838da7
+        }
+
+    .checkout .next-trip .direction {
+        color: #c1c6d3
+    }
+
+    .checkout .next-trip .divider {
+        width: 90%;
+        background-color: #d5dbe9
+    }
+
+    .checkout .next-trip .btn-cart {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ff5f6d;
+        border-color: #ff5f6d;
+        box-shadow: 0 5px 12px 0 rgba(255,95,109,.3)
+    }
+
+    .checkout .next-trip .trip {
+        padding: 0 16px 0 16px
+    }
+
+        .checkout .next-trip .trip:last-child {
+            padding-bottom: 16px
+        }
+
+        .checkout .next-trip .trip .start-end {
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: .3px;
+            text-align: left;
+            color: #c1c6d3
+        }
+
+        .checkout .next-trip .trip .city-name {
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: .4px;
+            text-align: left;
+            color: #535e7b
+        }
+
+        .checkout .next-trip .trip .access-point {
+            line-height: 1
+        }
+
+    .checkout .next-trip .pricing {
+        padding: 0 16px 0 16px;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal
+    }
+
+        .checkout .next-trip .pricing .total {
+            font-weight: 700;
+            letter-spacing: .4px;
+            color: #c1c6d3
+        }
+
+        .checkout .next-trip .pricing .times {
+            font-size: 10px
+        }
+
+        .checkout .next-trip .pricing .price {
+            color: #ff5f6d
+        }
+
+        .checkout .next-trip .pricing .total-price {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: normal;
+            color: #ff5f6d
+        }
+
+        .checkout .next-trip .pricing .promocode {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ff5f6d;
+            text-decoration: underline;
+            cursor: pointer
+        }
+
+        .checkout .next-trip .pricing .promocode--active {
+            color: #535e7b
+        }
+
+        .checkout .next-trip .pricing .promocode .input-group-text {
+            background-color: #ff5f6d
+        }
+
+        .checkout .next-trip .pricing .btn {
+            font-size: 14px;
+            color: #fff;
+            width: 187px;
+            height: 40px;
+            border-radius: 19.5px;
+            border-color: #ff5f6d;
+            background-color: #ff5f6d;
+            box-shadow: 0 5px 12px 0 rgba(255,95,109,.3)
+        }
+
+.checkout .form-check .form-check-input {
+    width: 30px;
+    height: 30px;
+    background-color: #fff
+}
+
+.checkout .form-check .form-check-label {
+    margin-left: 12px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.4;
+    letter-spacing: .4px;
+    text-align: left;
+    color: #838da7
+}
+
+.confirm-check {
+    width: 20px;
+    height: 20px;
+    background-color: #2ecc71;
+    border-radius: 50%
+}
+
 .footer {
     font-family: Lato;
     font-weight: 400;
@@ -2191,3 +2728,152 @@ header.head .form-check {
         border-color: transparent transparent #fff transparent;
         z-index: 9998
     }
+
+.login {
+    font-family: Lato;
+    font-style: normal;
+    font-stretch: normal
+}
+
+.login__main-title {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+    color: #ff5f6d
+}
+
+.login__separator {
+    background-color: #ff5f6d;
+    margin: 20px 15px 20px 15px
+}
+
+.login__separator--grey {
+    margin: 20px 15px 20px 15px;
+    background-color: #d5dbe9
+}
+
+.login__with--facebook {
+    width: 200px;
+    border-radius: 21px;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    box-shadow: 0 5px 12px 0 rgba(59,89,152,.3)
+}
+
+.login__with--google {
+    width: 200px;
+    border-radius: 21px;
+    background-color: #c71610;
+    border-color: #c71610;
+    box-shadow: 0 5px 12px 0 rgba(199,22,16,.3)
+}
+
+.login__with--email {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.78;
+    letter-spacing: .4px;
+    color: #838da7
+}
+
+    .login__with--email a {
+        color: #ff5f6d;
+        text-decoration: underline
+    }
+
+@media (max-width:767.98px) {
+    .login__facebook-row {
+        text-align: center !important;
+        margin-bottom: 10px
+    }
+}
+
+@media (max-width:767.98px) {
+    .login__google-row {
+        text-align: center !important
+    }
+}
+
+@media (max-width:767.98px) {
+    .login__forgot-password {
+        text-align: center !important
+    }
+}
+
+@media (max-width:767.98px) {
+    .login__log-in {
+        text-align: center !important
+    }
+}
+
+.login__campaigns {
+    padding-left: 30px
+}
+
+@media (max-width:767.98px) {
+    .login__campaigns {
+        text-align: center !important
+    }
+}
+
+.login__or {
+    font-size: 12px;
+    letter-spacing: .3px;
+    text-align: left;
+    color: #c1c6d3
+}
+
+.login__input::placeholder {
+    font-size: 14px;
+    line-height: 2.29;
+    letter-spacing: .8px;
+    color: #667386
+}
+
+.login__input--label {
+    margin-left: 15px;
+    padding-top: 5px;
+    font-size: 11px;
+    line-height: 1.27;
+    color: #8b9398
+}
+
+.login__input--checkbox {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: solid 1px rgba(102,115,134,.2)
+}
+
+.login__forgot-password {
+    padding-left: 30px
+}
+
+    .login__forgot-password a {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 3.21;
+        color: #ff5f6d;
+        text-decoration: underline
+    }
+
+.login__login {
+    width: 200px;
+    height: 42px;
+    border-radius: 21px;
+    background-color: #ff5f6d;
+    border-color: #ff5f6d;
+    box-shadow: 0 5px 12px 0 rgba(255,95,109,.3)
+}
+
+    .login__login:hover {
+        background-color: #ff5f6d;
+        border-color: #ff5f6d;
+        opacity: .9
+    }
+
+input:checked {
+    color: #c71610;
+    background-color: #c71610
+}
