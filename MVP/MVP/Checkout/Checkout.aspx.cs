@@ -15,22 +15,11 @@ namespace MVP.Checkout
 {
     public partial class Checkout : System.Web.UI.Page
     {
-        public class PageState
-        {
-            public string PayMethod { get; set; }
-            public string CardName { get; set; }
-            public string CardNumber { get; set; }
-            public string CardMonth { get; set; }
-            public string CardYear { get; set; }
-            public string CardCVV { get; set; }
-        }
-
         private readonly CheckoutService service = new CheckoutService();
         protected readonly string stripePublishableKey = WebConfigurationManager.AppSettings["StripePublishableKey"];
         private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
         protected CheckoutDTO pageData;
-        protected PageState localData;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -71,12 +60,10 @@ namespace MVP.Checkout
         private void InitData()
         {
             pageData = null;
-            localData = null;
 
             if (IsPostBack)
             {
                 pageData = (CheckoutDTO)Session["checkout.data"];
-                localData = (PageState)Session["local.data"];
 
                 // StripeHandler
                 NameValueCollection nvc = Request.Form;
@@ -92,17 +79,6 @@ namespace MVP.Checkout
                 pageData = service.GetInitialData();
                 ProcessQueryString();
                 Session["checkout.data"] = pageData;
-            }
-
-            if (localData == null)
-            {
-                localData = new PageState { PayMethod = "",
-                                            CardName = "",
-                                            CardNumber = "",
-                                            CardMonth = "",
-                                            CardYear = "",
-                                            CardCVV = ""};
-                Session["local.data"] = localData;
             }
         }
 
