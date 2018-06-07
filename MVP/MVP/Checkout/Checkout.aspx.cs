@@ -52,9 +52,8 @@ namespace MVP.Checkout
             }
 
             // Charge sucessful
-            HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Sucessful charge.\")</SCRIPT>");
             service.UpdateBooking(pageData.BookingId, BookingStatus.BOOKED);
-            //Response.Redirect("../Confirmed/Confirmed");
+            Response.Redirect("../Confirm/Confirm?Id=" + pageData.BookingId.ToString());
         }
 
         private void InitData()

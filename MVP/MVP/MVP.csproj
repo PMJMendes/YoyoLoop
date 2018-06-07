@@ -251,6 +251,7 @@
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Calendar\CalendarTable.ascx" />
     <Content Include="Checkout\Checkout.aspx" />
+    <Content Include="Confirm\Confirm.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -717,6 +718,15 @@
     </Compile>
     <Compile Include="Checkout\CheckoutDTO.cs" />
     <Compile Include="Checkout\Services\CheckoutService.cs" />
+    <Compile Include="Confirm\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirm\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirm\ConfirmDTO.cs" />
+    <Compile Include="Confirm\Services\ConfirmService.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -817,6 +827,10 @@
     <Compile Include="Migrations\201805311350029_TripRouteToDeparture.cs" />
     <Compile Include="Migrations\201805311350029_TripRouteToDeparture.Designer.cs">
       <DependentUpon>201805311350029_TripRouteToDeparture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806071314329_BookingTicketCode.cs" />
+    <Compile Include="Migrations\201806071314329_BookingTicketCode.Designer.cs">
+      <DependentUpon>201806071314329_BookingTicketCode.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
@@ -995,6 +1009,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805311350029_TripRouteToDeparture.resx">
       <DependentUpon>201805311350029_TripRouteToDeparture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806071314329_BookingTicketCode.resx">
+      <DependentUpon>201806071314329_BookingTicketCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
