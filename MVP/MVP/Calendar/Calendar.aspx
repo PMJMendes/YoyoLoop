@@ -5,7 +5,6 @@
 <%@ Register Src="CalendarDay.ascx" TagPrefix="yoyo" TagName="CalendarDay" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
 <%@ Register Src="Popover.ascx" TagPrefix="yoyo" TagName="Popover" %>
-<%@ Register Src="PopoverAPGroup.ascx" TagPrefix="yoyo" TagName="PopoverAPGroup" %>
 
 
 <!DOCTYPE html>
@@ -568,6 +567,12 @@
         </div>
       </div>
     </section>
+
+    <!-- DESTINATION POPOVER -->
+    <div class="hide" id="destinationPopover">
+        <yoyo:Popover runat="server" ID="Popover" />
+    </div>
+
 </form>
 
     <!-- Bootstrap core JavaScript -->
@@ -631,11 +636,6 @@
         <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
         <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
       </div>
-    </div>
-
-    <!-- DESTINATION POPOVER -->
-    <div class="hide" id="destinationPopover">
-        <yoyo:Popover runat="server" ID="Popover" />
     </div>
 
   </body>

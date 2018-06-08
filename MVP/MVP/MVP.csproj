@@ -250,7 +250,6 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Calendar\Popover.ascx" />
-    <Content Include="Calendar\PopoverAPGroup.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
     <Content Include="Checkout\Checkout.aspx" />
     <Content Include="Confirm\Confirm.aspx" />
@@ -709,13 +708,6 @@
     </Compile>
     <Compile Include="Calendar\Popover.ascx.designer.cs">
       <DependentUpon>Popover.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Calendar\PopoverAPGroup.ascx.cs">
-      <DependentUpon>PopoverAPGroup.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Calendar\PopoverAPGroup.ascx.designer.cs">
-      <DependentUpon>PopoverAPGroup.ascx</DependentUpon>
     </Compile>
     <Compile Include="Calendar\CalendarTable.ascx.cs">
       <DependentUpon>CalendarTable.ascx</DependentUpon>

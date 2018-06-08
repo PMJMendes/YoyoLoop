@@ -280,17 +280,44 @@ namespace MVP.Calendar
                                                     new APGroup {
                                                                   StartAPName = "Saldanha",
                                                                   EndAPName = "Gare do Oriente",
-                                                                  Times = new List<TimeSlot>()
+                                                                  Times = new List<TimeSlot> {
+                                                                                               new TimeSlot { Time = new TimeSpan(10,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(12,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(15,0,0),
+                                                                                                              Status = SlotStatus.GREEN}
+                                                                                              }
                                                                  },
                                                     new APGroup {
                                                                   StartAPName = "Hospital de Cascais",
                                                                   EndAPName = "Lagoas Parque",
-                                                                  Times = new List<TimeSlot>()
+                                                                  Times = new List<TimeSlot> {
+                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(13,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(18,0,0),
+                                                                                                              Status = SlotStatus.GREEN}
+                                                                                              }
                                                                  },
                                                     new APGroup {
                                                                   StartAPName = "Marques de Pombal",
                                                                   EndAPName = "Cascais Shopping",
-                                                                  Times = new List<TimeSlot>()
+                                                                  Times = new List<TimeSlot> {
+                                                                                               new TimeSlot { Time = new TimeSpan(9,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(14,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(21,0,0),
+                                                                                                              Status = SlotStatus.GREEN}
+                                                                                              }
                                                                  }
                                                     };
             Popover.DataBind();
