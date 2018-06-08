@@ -275,6 +275,27 @@ namespace MVP.Calendar
             pageData = null;
             localData = null;
 
+            //TEST STUFF
+            Popover.DataSource = new List<APGroup>{
+                                                    new APGroup {
+                                                                  StartAPName = "Saldanha",
+                                                                  EndAPName = "Gare do Oriente",
+                                                                  Times = new List<TimeSlot>()
+                                                                 },
+                                                    new APGroup {
+                                                                  StartAPName = "Hospital de Cascais",
+                                                                  EndAPName = "Lagoas Parque",
+                                                                  Times = new List<TimeSlot>()
+                                                                 },
+                                                    new APGroup {
+                                                                  StartAPName = "Marques de Pombal",
+                                                                  EndAPName = "Cascais Shopping",
+                                                                  Times = new List<TimeSlot>()
+                                                                 }
+                                                    };
+            Popover.DataBind();
+            // END OF TEST STUFF
+
             if (IsPostBack)
             {
                 pageData = (CalendarDTO)Session["calendar.data"];
