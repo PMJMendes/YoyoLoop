@@ -559,6 +559,7 @@ namespace MVP.Calendar
             DdlSeats.SelectedText = "1 lugar";
             localData.Values.Seats = "1";
             CalDate.VisibleDate = localData.Values.CalVisibleDate;
+            CalDate.SelectedDate = new DateTime();
             GetCalendarData();
         }
 

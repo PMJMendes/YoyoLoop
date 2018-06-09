@@ -1,4 +1,5 @@
-﻿using System.Web.UI;
+﻿using System;
+using System.Web.UI;
 
 namespace MVP.Calendar
 {
@@ -14,6 +15,18 @@ namespace MVP.Calendar
             Unavailable,
             Available,
             Fully
+        }
+
+        public DateTime Date
+        {
+            get
+            {
+                return (DateTime)ViewState["Date"];
+            }
+            set
+            {
+                ViewState["Date"] = value;
+            }
         }
 
         public string DayText
