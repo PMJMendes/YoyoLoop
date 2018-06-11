@@ -3,9 +3,9 @@
 
 <asp:Repeater ID="WeekRepeater" runat="server" OnItemDataBound="WeekRepeater_ItemDataBound">
     <ItemTemplate>
-        <asp:Repeater ID="DayRepeater" runat="server" OnItemDataBound="DayRepeater_ItemDataBound">
+        <asp:Repeater ID="DayRepeater" runat="server" OnItemDataBound="DayRepeater_ItemDataBound" OnItemCommand="DayClick">
             <ItemTemplate>
-                <yoyo:CalendarDay runat="server" ID="CalendarDay" OnClick="DayClick"/>
+                <yoyo:CalendarDay runat="server" ID="CalendarDay" />
             </ItemTemplate>
         </asp:Repeater>
         <div class="w-100"></div>

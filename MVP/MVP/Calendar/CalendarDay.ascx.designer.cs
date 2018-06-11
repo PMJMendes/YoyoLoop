@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Calendar
-{
+namespace MVP.Calendar {
     
     
     public partial class CalendarDay {
