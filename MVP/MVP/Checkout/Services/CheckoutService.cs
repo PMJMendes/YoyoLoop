@@ -58,6 +58,7 @@ namespace MVP.Services
                 if (booking != null)
                 {
                     booking.Status = status;
+                    booking.TicketCode = GenerateTicket(10);
                     model.SaveChanges();
 
                     UpdateTrip(booking.Trip.TripId);
@@ -105,6 +106,46 @@ namespace MVP.Services
                     }
                 }
             }
+        }
+
+        public string GenerateTicket(int length)
+        {
+            string vowels = "aaaaaeeeeeeeiiiiiooooouuu";
+            string consonants = "bbcccdddfffgghhhhjklllmmmnnnnnpprrrrrsssssttttttvwwxyyz";
+            string[] vowelafter = { "th", "ch", "sh", "qu" };
+            string[] consonantafter = { "oo", "ee" };
+
+            Random rnd = new Random();
+            string result = "#";
+            bool isvowel = false;
+
+            for (int i = 0; i < length; i++)
+            {
+                if (isvowel)
+                {
+                    if (rnd.Next(0, 5) == 0 && i < (length - 1))
+                    {
+                        result += consonantafter[rnd.Next(0, consonantafter.Length)];
+                    }
+                    else
+                    {
+                        result += vowels.Substring(rnd.Next(0, vowels.Length), 1);
+                    }
+                }
+                else
+                {
+                    if (rnd.Next(0, 5) == 0 && i < (length - 1))
+                    {
+                        result += vowelafter[rnd.Next(0, vowelafter.Length)];
+                    }
+                    else
+                    {
+                        result += consonants.Substring(rnd.Next(0, consonants.Length), 1);
+                    }
+                }
+                isvowel = !isvowel;
+            }
+            return result;
         }
     }
 }

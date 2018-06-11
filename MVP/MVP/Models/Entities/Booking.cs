@@ -9,6 +9,7 @@ namespace MVP.Models.Entities
     {
         public Guid BookingId { get; set; }
         public BookingStatus Status { get; set; }
+        public string TicketCode { get; set; }
 
         public DateTime CreationTime { get; set; }
         public Trip Trip { get; set; }
