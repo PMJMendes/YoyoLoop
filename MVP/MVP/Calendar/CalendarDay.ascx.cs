@@ -11,7 +11,7 @@ namespace MVP.Calendar
 
         public CalendarDay()
         {
-            this.Click += new EventHandler(Day_Click);
+            //this.Click += new EventHandler(Day_Click);
         }
 
         protected virtual void OnDayClicked()
