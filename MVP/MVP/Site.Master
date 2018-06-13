@@ -14,7 +14,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="/css/css" />
+    <webopt:bundlereference runat="server" path="~/Content/css"/>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- Bootstrap core CSS -->
@@ -61,7 +61,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
         <div class="container-fluid">
-            <img src="../img/yoyo-logo.png" alt="" class="img-responsive logo"/>
+            <a href="/"><img src="../img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
