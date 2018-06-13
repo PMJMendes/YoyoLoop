@@ -14,11 +14,12 @@ namespace MVP.Calendar
         {
             get
             {
-                return WeekRepeater.DataSource as IEnumerable<DaySlot>;
+                return (IEnumerable<DaySlot>)ViewState["DataSource"];
             }
 
             set
             {
+                ViewState["DataSource"] = value;
                 WeekRepeater.DataSource = value.GroupBy(s => (int)(s.Day - value.First().Day).TotalDays / 7);
             }
         }
@@ -53,6 +54,8 @@ namespace MVP.Calendar
         {
             var control = (CalendarDay)sender;
             SelectedDate = control.Date;
+            this.DataSource = this.DataSource;
+            WeekRepeater.DataBind();
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)

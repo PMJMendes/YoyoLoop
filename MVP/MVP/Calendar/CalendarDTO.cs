@@ -23,6 +23,7 @@ namespace MVP.Calendar
         public Trip Trip { get; set; }
     }
 
+    [Serializable]
     public class DaySlot
     {
         public DateTime Day { get; set; }
