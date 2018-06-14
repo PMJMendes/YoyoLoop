@@ -264,6 +264,8 @@
     <Content Include="Calendar\CalendarDay.ascx" />
     <Content Include="Controls\DropdownMenuButton.ascx" />
     <Content Include="Controls\DropdownFixed.ascx" />
+    <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\styles.css" />
@@ -762,6 +764,20 @@
     </Compile>
     <Compile Include="Controls\DropdownFixed.ascx.designer.cs">
       <DependentUpon>DropdownFixed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
