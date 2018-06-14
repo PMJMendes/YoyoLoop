@@ -30,13 +30,20 @@ namespace MVP.Calendar
         public Decimal Price { get; set; }
     }
 
+    public class APGroup
+    {
+        public string StartAPName { get; set; }
+        public string EndAPName { get; set; }
+        public List<TimeSlot> Times { get; set; }
+    }
+
     public class TimeSlot
     {
         public TimeSpan Time { get; set; }
         public SlotStatus Status { get; set; }
     }
 
-    public enum SlotStatus // Definitions have changed, not yet settled on
+    public enum SlotStatus 
     {
         NONE,       // unavailable
         GREEN,      // plenty of seats

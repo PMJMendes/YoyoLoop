@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -35,6 +36,25 @@ namespace MVP.Calendar
             }
         }
 
+        public DateTime SelectedDate
+        {
+            get
+            {
+                return (DateTime)ViewState["SelectedDate"];
+            }
+
+            set
+            {
+                ViewState["SelectedDate"] = value;
+            }
+        }
+
+        protected void DayClick(object sender, EventArgs e)
+        {
+            var control = (CalendarDay)sender;
+            SelectedDate = control.Date;
+        }
+
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             var list = (IEnumerable<DaySlot>)e.Item.DataItem;
@@ -52,6 +72,7 @@ namespace MVP.Calendar
             var control = (CalendarDay)e.Item.FindControl("CalendarDay");
 
             control.IsCurrent = slot.Day == DateTime.Today;
+            control.Date = slot.Day;
             control.DayText = slot.Day.Day.ToString();
             if(slot.Price == 0)
             {
@@ -96,6 +117,11 @@ namespace MVP.Calendar
                         control.Flag = CalendarDay.DayFlag.None;
                     }
                     break;
+            }
+
+            if(slot.Day == SelectedDate)
+            {
+                control.Flag = CalendarDay.DayFlag.Selected;
             }
         }
     }

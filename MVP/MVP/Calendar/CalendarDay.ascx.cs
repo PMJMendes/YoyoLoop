@@ -1,9 +1,29 @@
-﻿using System.Web.UI;
+﻿using System;
+using System.Web.UI;
+
 
 namespace MVP.Calendar
 {
     public partial class CalendarDay : UserControl
     {
+        public delegate void DayClickedHandler(object sender);
+        public event DayClickedHandler DayClicked;
+
+        public CalendarDay()
+        {
+            //this.Click += new EventHandler(Day_Click);
+        }
+
+        protected virtual void OnDayClicked()
+        {
+            DayClicked?.Invoke(this);
+        }
+
+        private void Day_Click(object sender, EventArgs e)
+        {
+            OnDayClicked();
+        }
+
         public enum DayFlag
         {
             None,
@@ -14,6 +34,18 @@ namespace MVP.Calendar
             Unavailable,
             Available,
             Fully
+        }
+
+        public DateTime Date
+        {
+            get
+            {
+                return (DateTime)ViewState["Date"];
+            }
+            set
+            {
+                ViewState["Date"] = value;
+            }
         }
 
         public string DayText

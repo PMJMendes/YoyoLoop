@@ -4,17 +4,29 @@
 
 <html lang="en">
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - YoyoLoop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%: Page.Title %></title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:bundlereference runat="server" path="~/Content/css"/>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
@@ -38,49 +50,179 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">YoyoLoop</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(window).scroll(function(){
+                $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+            });
+        </script>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+        <div class="container-fluid">
+            <a href="/"><img src="../img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger text-uppercase" href="/Calendar/Calendar">Loops & horarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
+                        </li>
+                            <asp:LoginView runat="server" ViewStateMode="Disabled">
+                                <AnonymousTemplate>
+                                    <li class="nav-item">
+                                        <button class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" >Registar/Entrar</button>
+                                    </li>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <li class="nav-item">
+                                        <a class="nav-link js-scroll-trigger text-uppercase" href="#services">As minhas viagens</a>
+                                    </li>
+                                    <li class="nav-item my-auto">
+                                        <img src="../img/userprofile-red.png"
+                                            srcset="../img/userprofile-red@2x.png 2x,
+                                                    ../img/userprofile-red@3x.png 3x"
+                                            class="userprofile-red">
+                                    </li>
+                                    <li>
+                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </li>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                </ul>
+            </div>                        
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - YoyoLoop Portugal, Lda</p>
-            </footer>
-        </div>
+    </nav>
+
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <section class="footer">
+                <div class="footer__container d-flex flex-column justify-content-center">
+                    <div class="container-fluid">
+                        <div class="footer__first-row row p-5">
+                            <div class="col-md-3 d-flex align-items-center">
+                                <img src="../img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/>
+                            </div>
+                            <div class="footer__column col-md-2">
+                                <p><h2 class="text-uppercase">yoyoloop</h2></p>
+                                <p><a class="" href="#">Sobre nós</a></p>
+                                <p><a class="" href="#">Como funciona</a></p>
+                                <p><a class="" href="#">Ajuda</a></p>
+                                <p class="footer__column footer__column--text-red"><a class="" href="#">Contacto</a></p>
+                            </div>
+                            <div class="footer__column col-md-2">
+                                <p><h2 class="text-uppercase">Destinos</h2></p>
+                                <p><a class="" href="#">&rarr; Cascais</a></p>
+                                <p><a class="" href="#">&rarr; Coimbra</a></p>
+                                <p><a class="" href="#">&rarr; Porto</a></p>
+                                <p><a class="" href="#">&rarr; Lisboa</a></p>
+                            </div>
+                            <div class="footer__column col-md-2">
+                                <p><h2 class="text-uppercase">Loops</h2></p>
+                                <p><a class="" href="#">Lisboa &rarr; Cascais</a></p>
+                                <p><a class="" href="#">Lisboa &rarr; Coimbra</a></p>
+                                <p><a class="" href="#">Lisboa &rarr; Porto</a></p>
+                            </div>
+                            <div class="footer__column col-md-3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="footer__dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <img src="../img/language.png"
+                                                srcset="../img/language@2x.png 2x,
+                                                    ../img/language@3x.png 3x"
+                                                class="language pr-2">
+                                                Português
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Inglês</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pt-4">
+                                    <div class="col-md-4">
+                                        <img src="../img/jcb.png"
+                                        srcset="../img/jcb@2x.png 2x,
+                                                ../img/jcb@3x.png 3x"
+                                        class="jcb">
+                                    </div>
+                                    <div class="col-md-3 pl-0">
+                                        <img src="../img/diners-club.png"
+                                        srcset="../img/diners-club@2x.png 2x,
+                                                ../img/diners-club@3x.png 3x"
+                                        class="diners-club">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="../img/discover.png"
+                                        srcset="../img/discover@2x.png 2x,
+                                                ../img/discover@3x.png 3x"
+                                        class="discover">
+                                    </div>
+                                </div>
+                                <div class="row pt-4">
+                                    <div class="col-md-4">
+                                        <img src="../img/amex.png"
+                                        srcset="../img/amex@2x.png 2x,
+                                                ../img/amex@3x.png 3x"
+                                        class="amex">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="../img/visa.png"
+                                        srcset="../img/visa@2x.png 2x,
+                                                ../img/visa@3x.png 3x"
+                                        class="visa">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="../img/master-card.png"
+                                        srcset="../img/master-card@2x.png 2x,
+                                                ../img/master-card@3x.png 3x"
+                                        class="master-card">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__second-row row p-5">
+                            <div class="col-md-4">Copyright © 2018. Yoyoloop Portugal, Unipessoal, Lda</div>
+                            <div class="col-md-4 text-center">
+                                <a class="footer__social" href="#">
+                                    <img src="../img/facebook.png"
+                                        srcset="../img/facebook@2x.png 2x,
+                                            ../img/facebook@3x.png 3x"
+                                        class="facebook p-1">
+                                </a>
+                                <a class="footer__social" href="#">
+                                    <img src="../img/instagram.png"
+                                        srcset="../img/instagram@2x.png 2x,
+                                            ../img/instagram@3x.png 3x"
+                                        class="instagram p-1">
+                                </a>
+                                <a class="footer__social" href="#">
+                                    <img src="../img/linkedin-footer.png"
+                                        srcset="../img/linkedin-footer@2x.png 2x,
+                                            ../img/linkedin@-footer3x.png 3x"
+                                        class="linkedin p-1">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6 text-right"><a class="" href="#">Politica de privacidade</a></div>
+                                    <div class="col-md-6 pl-0 text-right"><a class="" href="#">Termos e Condiçōes</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
     </form>
 </body>
 </html>

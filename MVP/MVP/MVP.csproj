@@ -249,6 +249,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
+    <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
     <Content Include="Checkout\Checkout.aspx" />
     <Content Include="Confirm\Confirm.aspx" />
@@ -701,6 +702,13 @@
     <Compile Include="BackOffice\OfficeDTO.cs" />
     <Compile Include="BackOffice\Services\OfficeService.cs" />
     <Compile Include="Calendar\CalendarDTO.cs" />
+    <Compile Include="Calendar\Popover.ascx.cs">
+      <DependentUpon>Popover.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar\Popover.ascx.designer.cs">
+      <DependentUpon>Popover.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Calendar\CalendarTable.ascx.cs">
       <DependentUpon>CalendarTable.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

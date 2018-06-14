@@ -1,57 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.Calendar.Calendar" %>
+﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.Calendar.Calendar" %>
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
 <%@ Register Src="CalendarDay.ascx" TagPrefix="yoyo" TagName="CalendarDay" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
+<%@ Register Src="Popover.ascx" TagPrefix="yoyo" TagName="Popover" %>
 
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Yoyoloop</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-  </head>
-
-<body id="">
-
-<form id="form1" runat="server">
-
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-      <div class="container-fluid">
-        <img src="../img/yoyo-logo.png" alt="" class="img-responsive logo"/>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-uppercase" href="#">Loops & horarios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" >Registar/Entrar</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <header class="head text-center d-flex pb-5">
       <div class="container-fluid">
@@ -125,7 +80,8 @@
                 <span class="text-uppercase">Lugares</span>
                 <yoyo:DropdownFixed runat="server" ID="DdlSeats" OnItemSelected="DdlSeats_ItemSelected" />
               </div>
-              <div class="return col col-xs-6 mt-3">
+              <!-- HIDDEN FOR NOW -->
+              <div class="hide return col col-xs-6 mt-3">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                   <label class="form-check-label text-uppercase" for="defaultCheck1">
@@ -133,6 +89,7 @@
                   </label>
                 </div>
               </div>
+              <!-- END OF HIDE -->
             </div>
           </div>
         </div>
@@ -178,8 +135,8 @@
               </div>
             </div>
 
-            <!-- VIAGEM DE IDA -->
-            <div class="container-fluid mt-3 mb-3">
+            <!-- VIAGEM DE IDA HIDDEN FOR NOW -->
+            <div class="hide container-fluid mt-3 mb-3">
               <div class="row departure-date">
                 <div class="col">
                   <div class="row p-2">
@@ -225,8 +182,8 @@
               <hr class="d-block d-sm-none">
             </div>
 
-            <!-- VIAGEM DE IDA -->
-            <div class="container-fluid mt-3 mb-3">
+            <!-- VIAGEM DE VOLTA - HIDDEN FOR NOW -->
+            <div class="container-fluid mt-3 mb-3 hide">
               <div class="row return-date">
                 <div class="col">
                   <div class="row p-2">
@@ -564,16 +521,13 @@
         </div>
       </div>
     </section>
-</form>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-      $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
-      });
-    </script>
+    <!-- DESTINATION POPOVER -->
+    <section>
+        <div class="hide" id="destinationPopover">
+            <yoyo:Popover runat="server" ID="Popover" />
+        </div>
+    </section>
 
     <script>
       $(function(){
@@ -610,110 +564,4 @@
     });
     </script>
 
-    <div class="hide p-3" id="selectPopover">
-      <div class="row pt-2 pb-2">
-        <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-        <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-      </div>
-      <div class="row pt-2 pb-2">
-        <div class="col-6"><button type="button" class="btn btn-select btn-select--disabled">12:00</button></div>
-        <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-      </div>
-      <div class="row pt-2 pb-2">
-        <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-        <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-      </div>
-      <div class="row pt-2 pb-2">
-        <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-        <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-      </div>
-    </div>
-
-    <!-- DESTINATION POPOVER -->
-    <div class="hide" id="destinationPopover">
-      <div class="row pt-3 pr-4 pb-3 pl-4">
-        <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label">Destino</div>
-        <div class="col-6 d-flex align-items-end justify-content-end text-uppercase text-nowrap header-city">Cascais</div>
-      </div>
-      <hr class="divider w-100">
-      <div class="row pt-0 pr-4 pb-3 pl-4 accordion">
-        <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Cascais shopping</div>
-      </div>
-      <div class="panel">
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-      </div>
-      <hr class="divider w-75">
-
-      <div class="row pt-0 pr-4 pb-3 pl-4 accordion">
-        <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Hospital de Cascais</div>
-      </div>
-      <div class="panel">
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-      </div>
-      <hr class="divider w-75">
-      <div class="row pt-0 pr-4 pb-3 pl-4 accordion">
-        <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Lagoas Parque</div>
-      </div>
-      <div class="panel">
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-      </div>
-      <hr class="divider w-100">
-      <div class="row pt-0 pr-4 pb-3 pl-4">
-        <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label">Origem</div>
-        <div class="col-6 d-flex align-items-end justify-content-end text-uppercase text-nowrap header-city header-city--departure">Lisboa</div>
-      </div>
-      <hr class="divider w-100">
-
-      <div class="row pt-0 pr-4 pb-3 pl-4 accordion">
-        <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Gare do Oriente</div>
-      </div>
-      <div class="panel">
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-      </div>
-      <hr class="divider w-75">
-      <div class="row pt-0 pr-4 pb-3 pl-4 accordion">
-        <div class="col-12 text-uppercase text-nowrap access-point">&rarr; Marques de Pombal</div>
-      </div>
-      <div class="panel">
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-        <div class="row pt-2 pr-4 pb-2 pl-4">
-          <div class="col-6"><button type="button" class="btn btn-select">12:00</button></div>
-          <div class="col-6"><button type="button" class="btn btn-select">15:00</button></div>
-        </div>
-      </div>
-    </div>
-
-  </body>
-
-</html>
+</asp:Content>
