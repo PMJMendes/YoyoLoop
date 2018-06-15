@@ -17,8 +17,8 @@ namespace MVP.Controls
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = TbEmail.Text, Email = TbEmail.Text };
-            IdentityResult result = manager.Create(user, TbPassword.Text);
+            var user = new ApplicationUser() { UserName = TbRegisterEmail.Text, Email = TbRegisterEmail.Text };
+            IdentityResult result = manager.Create(user, TbRegisterPassword.Text);
             if (result.Succeeded)
             {
                 // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -31,7 +31,7 @@ namespace MVP.Controls
             }
             else
             {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
+                RegisterErrorMessage.Text = result.Errors.FirstOrDefault();
             }
         }
     }

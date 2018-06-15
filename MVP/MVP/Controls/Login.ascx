@@ -42,22 +42,27 @@
                 <div class="login__with--email row">
                     <div class="col-12 text-center text-uppercase">Regista-te com o teu email</div>
                 </div>
+                <span class="text-danger"> <!-- Need styling for this -->
+                    <asp:Literal runat="server" ID="LoginErrorMessage" Visible="false" />
+                </span>
                 <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="email" class="form-control login__input" id="email" aria-describedby="emailHelp" placeholder="Endereço de email">
+                            <asp:TextBox runat="server" id="TbLoginEmail" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Endereço de email" />
+                            <asp:RequiredFieldValidator runat="server" ValidationGroup="Login" ControlToValidate="TbLoginEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The email field is required." /> <!-- I need a css for this -->
                         </div>
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <input type="password" class="form-control login__input" id="login-password" placeholder="Password">
+                                    <asp:TextBox runat="server" id="TbLoginPassword" TextMode="Password" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Password" />
+                                    <asp:RequiredFieldValidator runat="server" ValidationGroup="Login" ControlToValidate="TbLoginPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The password field is required." /> <!-- I need a css for this -->
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input login__input--checkbox" id="forgot">
-                                        <label class="form-check-label login__input--label" for="forgot">Lembrar-me da <br>password</label>
+                                        <input type="checkbox" runat="server" id="LoginRememberMe" class="form-check-input login__input--checkbox" >
+                                        <label class="form-check-label login__input--label" for="RememberMe">Lembrar-me da <br>password</label>
                                     </div>
                                 </div>
                             </div>
@@ -66,9 +71,9 @@
                 </div>
 
                 <div class="row">
-                    <div class="login__forgot-password col-md-6"><a href="">Esqueci-me da password</a></div>
+                    <div class="login__forgot-password col-md-6"><a href="#">Esqueci-me da password</a></div>
                     <div class="login__log-in col-md-6">
-                        <button type="submit" class="login__login btn btn-primary">Entrar</button>
+                        <asp:Button runat="server" ID="btnLogin" CausesValidation="true" ValidationGroup="Login" OnClick="LogIn" Text="Entrar" CssClass="login__login btn btn-primary"/>
                     </div>
                 </div>
             </div>
