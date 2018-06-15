@@ -17,7 +17,7 @@
   
           <div class="row row-no-padding mt-3 mb-5">
             <div class="col-md-6 col-lg-3 pl-0">
-              <div class="homepage__where-to-card mb-2 d-flex flex-column align-items-center">
+              <div class="homepage__where-to-card homepage__where-to-card--lisboa mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
                   <div class="homepage__where-to-card__header__city">Lisboa</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">
@@ -38,7 +38,7 @@
             </div>
             
             <div class="col-md-6 col-lg-3 pl-0">
-              <div class="homepage__where-to-card mb-2 d-flex flex-column align-items-center">
+              <div class="homepage__where-to-card homepage__where-to-card--leiria mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
                   <div class="homepage__where-to-card__header__city">Leiria</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">
@@ -59,7 +59,7 @@
             </div>
 
             <div class="col-md-6 col-lg-3 pl-0">
-              <div class="homepage__where-to-card mb-2 d-flex flex-column align-items-center">
+              <div class="homepage__where-to-card homepage__where-to-card--coimbra mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
                   <div class="homepage__where-to-card__header__city">Coimbra</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">
@@ -80,7 +80,7 @@
             </div>
 
             <div class="col-md-6 col-lg-3 pl-0">
-              <div class="homepage__where-to-card mb-2 d-flex flex-column align-items-center">
+              <div class="homepage__where-to-card homepage__where-to-card--cascais mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
                   <div class="homepage__where-to-card__header__city">Cascais</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">
@@ -122,7 +122,7 @@
           </div>
 
           <div class="row justify-content-center mb-5">
-            Placeholder for image
+            <img class="img-responsive illustration" src="/img/illustration.png">
           </div>
         </div>
       </div>
