@@ -44,16 +44,30 @@
                         primeiro precisamos dos teus dados
                     </div>
                 </div>
+                <asp:Literal runat="server" ID="ErrorMessage" /> <!-- I need styling for error message summary -->
+                <asp:ValidationSummary CssClass="text-danger" runat="server"/> <!-- I need a css for this -->
                 <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
                     <div class="col-12">
                         <div class="form-group">
                             <input type="text" class="form-control login__input" placeholder="Nome completo">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control login__input" id="register-email" aria-describedby="emailHelp" placeholder="Endereço de email">
+                            <asp:TextBox runat="server" TextMode="Email" CssClass="form-control login__input" id="TbEmail" aria-describedby="emailHelp" placeholder="Endereço de email" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TbEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The email field is required." /> <!-- I need a css for this -->
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control login__input" id="confirm-email" aria-describedby="emailHelp" placeholder="Repetir Endereço de email">
+                            <asp:TextBox runat="server" TextMode="Email" CssClass="form-control login__input" id="TbConfirmEmail" aria-describedby="emailHelp" placeholder="Repetir Endereço de email" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TbConfirmEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm email field is required." /> <!-- I need a css for this -->
+                            <asp:CompareValidator runat="server" ControlToCompare="TbEmail" ControlToValidate="TbConfirmEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The email and confirmation email do not match." /> <!-- I need a css for this -->
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox runat="server" TextMode="Password" CssClass="form-control login__input" id="TbPassword" aria-describedby="emailHelp" placeholder="Password" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TbPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The password field is required." /> <!-- I need a css for this -->
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox runat="server" TextMode="Password" CssClass="form-control login__input" id="TbConfirmPassword" aria-describedby="emailHelp" placeholder="Repetir password" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TbConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." /> <!-- I need a css for this -->
+                            <asp:CompareValidator runat="server" ControlToCompare="TbPassword" ControlToValidate="TbConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." /> <!-- I need a css for this -->
                         </div>
                     </div>
                 </div>
@@ -69,7 +83,7 @@
                         </div>
                     </div>
                     <div class="login__log-in col-md-6">
-                        <button type="submit" class="login__login btn btn-primary">Continuar</button>
+                        <asp:Button runat="server" CssClass="login__login btn btn-primary" Text="Continuar" OnClick="CreateUser_Click"/>
                     </div>
                 </div>
             </div>
