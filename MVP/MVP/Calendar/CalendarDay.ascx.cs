@@ -91,6 +91,14 @@ namespace MVP.Calendar
             }
         }
 
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            DayWrapper.CssClass += DayBackgroundTag;
+            DayWrapper.Attributes["onclick"] = "javascript:__doPostBack('" + UniqueID + "', '')";
+        }
+
         protected string CurrentDayTag
         {
             get
@@ -139,13 +147,7 @@ namespace MVP.Calendar
 
         void IPostBackEventHandler.RaisePostBackEvent(string eventArgument)
         {
-            if (!string.IsNullOrEmpty(eventArgument))
-            {
-                if (eventArgument == "TriggerClick")
-                {
-                    OnDayClicked();
-                }
-            }
+            OnDayClicked();
         }
     }
 }

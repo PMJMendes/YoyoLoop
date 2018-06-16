@@ -22,6 +22,16 @@ namespace MVP.Calendar
             }
         }
 
+        public void Show()
+        {
+            PopupControl.Show();
+        }
+
+        public void Hide()
+        {
+            PopupControl.Hide();
+        }
+
         protected void APGroupRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if(e.Item.DataItem != null)

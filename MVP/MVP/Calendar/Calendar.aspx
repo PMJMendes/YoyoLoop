@@ -2,9 +2,7 @@
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
-<%@ Register Src="CalendarDay.ascx" TagPrefix="yoyo" TagName="CalendarDay" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
-<%@ Register Src="Popover.ascx" TagPrefix="yoyo" TagName="Popover" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -177,7 +175,7 @@
               </header>
               <hr class="d-block d-sm-none">
               <div class="row border border-bottom-0">
-                  <yoyo:CalendarTable runat="server" id="CalDate" />
+                  <yoyo:CalendarTable runat="server" id="CalDate" OnDaySelected="CalDate_DaySelected" />
               </div>
               <hr class="d-block d-sm-none">
             </div>
@@ -521,47 +519,4 @@
         </div>
       </div>
     </section>
-
-    <!-- DESTINATION POPOVER -->
-    <section>
-        <div class="hide" id="destinationPopover">
-            <yoyo:Popover runat="server" ID="Popover" />
-        </div>
-    </section>
-
-    <script>
-      $(function(){
-        $('[rel="popover"]').popover({
-            container: 'body',
-            html: true,
-            content: function () {
-                var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
-                return clone;
-            }
-          }).click(function(e) {
-              e.preventDefault();
-          });
-      });
-    </script>
-
-    <script>
-    $(function(){
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      
-      for (i = 0; i < acc.length; i++) {
-        $(acc[i]).click(function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-    });
-    </script>
-
 </asp:Content>

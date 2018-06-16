@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AjaxControlToolkit;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -10,6 +11,15 @@ namespace MVP.Calendar
 {
     public partial class CalendarTable : UserControl
     {
+        private string LastAnchor;
+
+        public class DaySelectedEventArgs : EventArgs
+        {
+            public DateTime DaySelected;
+        }
+
+        public event EventHandler<DaySelectedEventArgs> DaySelected;
+
         public IEnumerable<DaySlot> DataSource
         {
             get
@@ -50,12 +60,23 @@ namespace MVP.Calendar
             }
         }
 
-        protected void DayClick(object sender, EventArgs e)
+        public void ShowPopover(IEnumerable<APGroup> popoverData)
+        {
+            Popover.DataSource = popoverData;
+            Popover.DataBind();
+            Popover.Show();
+            Page.ClientScript.RegisterStartupScript(GetType(), "positionPopover", "positionPopover($('[id*=\"" + LastAnchor + "\"]')[0]);", true);
+        }
+
+        protected void CalendarDay_DayClicked(object sender, EventArgs e)
         {
             var control = (CalendarDay)sender;
             SelectedDate = control.Date;
             this.DataSource = this.DataSource;
             WeekRepeater.DataBind();
+
+            LastAnchor = control.FindControl("DayWrapper").ClientID;
+            OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date });
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -126,6 +147,11 @@ namespace MVP.Calendar
             {
                 control.Flag = CalendarDay.DayFlag.Selected;
             }
+        }
+
+        protected virtual void OnDaySelected(DaySelectedEventArgs args)
+        {
+            DaySelected?.Invoke(this, args);
         }
     }
 }
