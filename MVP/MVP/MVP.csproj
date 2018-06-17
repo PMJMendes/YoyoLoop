@@ -264,6 +264,8 @@
     <Content Include="Calendar\CalendarDay.ascx" />
     <Content Include="Controls\DropdownMenuButton.ascx" />
     <Content Include="Controls\DropdownFixed.ascx" />
+    <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\styles.css" />
@@ -275,7 +277,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Homepage\Homepage.aspx" />
     <Content Include="img\about.jpg" />
     <Content Include="img\acessivel%402x.png" />
     <Content Include="img\acessivel%403x.png" />
@@ -576,7 +577,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
-    <Content Include="Test.aspx" />
     <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -798,6 +798,20 @@
     <Compile Include="Controls\DropdownFixed.ascx.designer.cs">
       <DependentUpon>DropdownFixed.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -807,13 +821,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage\Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Homepage\Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201801131725141_InitialCreate.cs" />
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
@@ -902,13 +909,6 @@
     </Compile>
     <Compile Include="Calendar\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="TripExplorer\Explore.aspx.cs">
       <DependentUpon>Explore.aspx</DependentUpon>

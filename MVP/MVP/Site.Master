@@ -1,8 +1,12 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MVP.SiteMaster" %>
 
+<%@ Register Src="~/Controls/Login.ascx" TagPrefix="yoyo" TagName="Login" %>
+<%@ Register Src="~/Controls/Register.ascx" TagPrefix="yoyo" TagName="Register" %>
+
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -59,12 +63,16 @@
             });
         </script>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-        <div class="container-fluid">
-            <a href="/"><img src="../img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <yoyo:Login id="login" runat="server" />
+        <yoyo:Register ID="register" runat="server" />
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+            <div class="container-fluid">
+                <a href="/"><img src="../img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -73,31 +81,25 @@
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
                         </li>
-                            <asp:LoginView runat="server" ViewStateMode="Disabled">
-                                <AnonymousTemplate>
-                                    <li class="nav-item">
-                                        <button class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" >Registar/Entrar</button>
-                                    </li>
-                                </AnonymousTemplate>
-                                <LoggedInTemplate>
-                                    <li class="nav-item">
-                                        <a class="nav-link js-scroll-trigger text-uppercase" href="#services">As minhas viagens</a>
-                                    </li>
-                                    <li class="nav-item my-auto">
-                                        <img src="../img/userprofile-red.png"
-                                            srcset="../img/userprofile-red@2x.png 2x,
-                                                    ../img/userprofile-red@3x.png 3x"
-                                            class="userprofile-red">
-                                    </li>
-                                    <li>
-                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                    </li>
-                                </LoggedInTemplate>
-                            </asp:LoginView>
-                </ul>
-            </div>                        
-        </div>
-    </nav>
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
+                                <li class="nav-item">
+                                    <button type="button" onclick="return false" class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" data-toggle="modal" data-target="#loginModal">Registar/Entrar</button>
+                                </li>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <li class="nav-item">
+                                    <a class="nav-link js-scroll-trigger text-uppercase" href="#services">As minhas viagens</a>
+                                </li>
+                                <li class="nav-item my-auto"> <!-- Temporarily logs you out -->
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" LogoutImageUrl="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x,/img/userprofile-red@3x.png 3x" CssClass="userprofile-red" ToolTip="Logout" />
+                                </li>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </ul>
+                </div>                        
+            </div>
+        </nav>
 
 
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -223,6 +225,7 @@
                 </div>
             </section>
         </footer>
+
     </form>
 </body>
 </html>
