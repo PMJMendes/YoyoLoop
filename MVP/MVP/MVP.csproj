@@ -267,6 +267,8 @@
     <Content Include="Calendar\CalendarDay.ascx" />
     <Content Include="Controls\DropdownMenuButton.ascx" />
     <Content Include="Controls\DropdownFixed.ascx" />
+    <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\styles.css" />
@@ -278,13 +280,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Homepage\Homepage.aspx" />
+    <Content Include="img\about.jpg" />
     <Content Include="img\acessivel%402x.png" />
     <Content Include="img\acessivel%403x.png" />
     <Content Include="img\acessivel-2%402x.png" />
     <Content Include="img\acessivel-2%403x.png" />
     <Content Include="img\acessivel-2.png" />
     <Content Include="img\acessivel.png" />
+    <Content Include="img\alert%402x.png" />
+    <Content Include="img\alert%403x.png" />
+    <Content Include="img\alert.png" />
     <Content Include="img\amex%402x.png" />
     <Content Include="img\amex%403x.png" />
     <Content Include="img\amex.png" />
@@ -327,6 +332,7 @@
     <Content Include="img\cart-light%403x.png" />
     <Content Include="img\cart-light.png" />
     <Content Include="img\cart.png" />
+    <Content Include="img\cascais %281%29.jpg" />
     <Content Include="img\cascais.jpg" />
     <Content Include="img\Cascais.png" />
     <Content Include="img\check%402x.png" />
@@ -339,15 +345,22 @@
     <Content Include="img\clock-black.png" />
     <Content Include="img\clock.png" />
     <Content Include="img\Coimbra.png" />
+    <Content Include="img\comofunciona.jpg" />
+    <Content Include="img\comoviajar.jpg" />
+    <Content Include="img\contactos.jpg" />
     <Content Include="img\conveniente%402x.png" />
     <Content Include="img\conveniente%403x.png" />
     <Content Include="img\conveniente.png" />
+    <Content Include="img\destino.jpg" />
     <Content Include="img\diners-club%402x.png" />
     <Content Include="img\diners-club%403x.png" />
     <Content Include="img\diners-club.png" />
     <Content Include="img\discover%402x.png" />
     <Content Include="img\discover%403x.png" />
     <Content Include="img\discover.png" />
+    <Content Include="img\download%402x.png" />
+    <Content Include="img\download%403x.png" />
+    <Content Include="img\download.png" />
     <Content Include="img\duracao%402x.png" />
     <Content Include="img\duracao%403x.png" />
     <Content Include="img\duracao.png" />
@@ -403,6 +416,9 @@
     <Content Include="img\Leiria.png" />
     <Content Include="img\linkedin%402x.png" />
     <Content Include="img\linkedin%403x.png" />
+    <Content Include="img\linkedin-btn%402x.png" />
+    <Content Include="img\linkedin-btn%403x.png" />
+    <Content Include="img\linkedin-btn.png" />
     <Content Include="img\linkedin-footer%402x.png" />
     <Content Include="img\linkedin-footer%403x.png" />
     <Content Include="img\linkedin-footer.png" />
@@ -413,12 +429,23 @@
     <Content Include="img\list%402x.png" />
     <Content Include="img\list%403x.png" />
     <Content Include="img\list.png" />
+    <Content Include="img\loop.jpg" />
     <Content Include="img\loopico%402x.png" />
     <Content Include="img\loopico%403x.png" />
     <Content Include="img\loopico.png" />
+    <Content Include="img\mail%402x.png" />
+    <Content Include="img\mail%403x.png" />
+    <Content Include="img\mail.png" />
     <Content Include="img\master-card%402x.png" />
     <Content Include="img\master-card%403x.png" />
     <Content Include="img\master-card.png" />
+    <Content Include="img\nossosshuttles.jpg" />
+    <Content Include="img\pagination-left%402x.png" />
+    <Content Include="img\pagination-left%403x.png" />
+    <Content Include="img\pagination-left.png" />
+    <Content Include="img\pagination-right%402x.png" />
+    <Content Include="img\pagination-right%403x.png" />
+    <Content Include="img\pagination-right.png" />
     <Content Include="img\path%402x.png" />
     <Content Include="img\path%403x.png" />
     <Content Include="img\path.png" />
@@ -444,6 +471,12 @@
     <Content Include="img\search%402x.png" />
     <Content Include="img\search%403x.png" />
     <Content Include="img\search.png" />
+    <Content Include="img\share%402x.png" />
+    <Content Include="img\share%403x.png" />
+    <Content Include="img\share.png" />
+    <Content Include="img\sms%402x.png" />
+    <Content Include="img\sms%403x.png" />
+    <Content Include="img\sms.png" />
     <Content Include="img\stopred%402x.png" />
     <Content Include="img\stopred%403x.png" />
     <Content Include="img\stopred.png" />
@@ -459,6 +492,9 @@
     <Content Include="img\transfer%402x.png" />
     <Content Include="img\transfer%403x.png" />
     <Content Include="img\transfer.png" />
+    <Content Include="img\twiter%402x.png" />
+    <Content Include="img\twiter%403x.png" />
+    <Content Include="img\twiter.png" />
     <Content Include="img\twitter%402x.png" />
     <Content Include="img\twitter%403x.png" />
     <Content Include="img\twitter.png" />
@@ -544,7 +580,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
-    <Content Include="Test.aspx" />
     <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -766,6 +801,20 @@
     <Compile Include="Controls\DropdownFixed.ascx.designer.cs">
       <DependentUpon>DropdownFixed.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Register.ascx.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Register.ascx.designer.cs">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -775,13 +824,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Homepage\Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Homepage\Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201801131725141_InitialCreate.cs" />
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
@@ -870,13 +912,6 @@
     </Compile>
     <Compile Include="Calendar\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="TripExplorer\Explore.aspx.cs">
       <DependentUpon>Explore.aspx</DependentUpon>

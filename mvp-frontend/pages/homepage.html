@@ -20,6 +20,58 @@
 
   <body id="">
 
+    <!-- SUGGEST TRIP -->
+    <div class="login modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="login__main-title text-uppercase col-12">
+                Não encontras a tua cidade?
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <hr class="login__separator">
+              </div>
+            </div>
+
+            <div class="d-flex flex-row align-items-center pt-3 pb-3">
+              <div class="login__or d-flex align-items-center justify-content-center text-center col-12 p-0">
+                  Queres que a Yoyoloop te dê boleia até à tua cidade?<br>
+                  Sugere um loop e fica atento às novidades!                  
+              </div>
+            </div>
+            <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
+              <div class="col-12">
+                <form>
+                  <div class="form-group">
+                    <input type="email" class="form-control login__input" id="email" aria-describedby="emailHelp" placeholder="O teu endereço de email">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea class="form-control" id="suggestionFormControlTextarea" rows="6" placeholder="A tua sugestão"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="login__forgot-password col-md-6"><a href="">Inserir captch here !</a></div>
+              <div class="login__log-in col-md-6">
+                <button type="submit" class="login__login btn btn-primary">Enviar</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- END SUGGEST TRIP -->
+
     <!-- Modal -->
     <div class="login modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -225,7 +277,7 @@
   
           <div class="row row-no-padding justify-content-between mt-5">
             <div class="homepage__where-to-go">Para onde queres ir?</div>
-            <a href="#" class="homepage__find-city">Não encontras a tua cidade?</a>
+            <a href="#" class="homepage__find-city" data-toggle="modal" data-target="#cityModal">Não encontras a tua cidade?</a>
           </div>
   
           <div class="row row-no-padding mt-3 mb-5">
