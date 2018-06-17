@@ -11,8 +11,6 @@ namespace MVP.Calendar
 {
     public partial class CalendarTable : UserControl
     {
-        private string LastAnchor;
-
         public class DaySelectedEventArgs : EventArgs
         {
             public DateTime DaySelected;
@@ -60,23 +58,36 @@ namespace MVP.Calendar
             }
         }
 
-        public void ShowPopover(IEnumerable<APGroup> popoverData)
+        public string SelectedDayID
         {
-            Popover.DataSource = popoverData;
-            Popover.DataBind();
-            Popover.Show();
-            Page.ClientScript.RegisterStartupScript(GetType(), "positionPopover", "positionPopover($('[id*=\"" + LastAnchor + "\"]')[0]);", true);
+            get
+            {
+                return (string)ViewState["SelectedDayID"];
+            }
+
+            set
+            {
+                ViewState["SelectedDayID"] = value;
+            }
         }
 
         protected void CalendarDay_DayClicked(object sender, EventArgs e)
         {
             var control = (CalendarDay)sender;
             SelectedDate = control.Date;
+            SelectedDayID = control.ClientID;
             this.DataSource = this.DataSource;
             WeekRepeater.DataBind();
-
-            LastAnchor = control.FindControl("DayWrapper").ClientID;
             OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date });
+        }
+
+        public void ShowPopover(IEnumerable<APGroup> popoverData)
+        {
+            var control = (CalendarDay)FindControlRecursive(this, SelectedDayID);
+            Popover.DataSource = popoverData;
+            Popover.DataBind();
+            string target = "#" + control.FindControl("DayWrapper").ClientID;
+            Page.ClientScript.RegisterStartupScript(GetType(), "showPopoverKey", "showPopover('" + target + "');", true);
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -152,6 +163,23 @@ namespace MVP.Calendar
         protected virtual void OnDaySelected(DaySelectedEventArgs args)
         {
             DaySelected?.Invoke(this, args);
+        }
+
+        private Control FindControlRecursive(Control ctrl, string id)
+        {
+            if (ctrl.ClientID == id)
+            {
+                return ctrl;
+            }
+            foreach (Control child in ctrl.Controls)
+            {
+                Control t = FindControlRecursive(child, id);
+                if (t != null)
+                {
+                    return t;
+                }
+            }
+            return null;
         }
     }
 }

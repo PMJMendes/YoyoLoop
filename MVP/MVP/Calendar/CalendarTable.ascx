@@ -2,6 +2,7 @@
 <%@ Register Src="~/Calendar/CalendarDay.ascx" TagPrefix="yoyo" TagName="CalendarDay" %>
 <%@ Register Src="~/Calendar/Popover.ascx" TagPrefix="yoyo" TagName="Popover" %>
 
+
 <asp:Repeater ID="WeekRepeater" runat="server" OnItemDataBound="WeekRepeater_ItemDataBound">
     <ItemTemplate>
         <asp:Repeater ID="DayRepeater" runat="server" OnItemDataBound="DayRepeater_ItemDataBound">
@@ -13,4 +14,23 @@
     </ItemTemplate>
 </asp:Repeater>
 
-<yoyo:Popover runat="server" ID="Popover" />
+<section>
+    <div class="hide" id="destinationPopover">
+        <yoyo:Popover runat="server" ID="Popover" />
+    </div>
+</section>
+
+<script>
+    function showPopover(target) {
+        $(target).popover({
+            container: 'body',
+            html: true,
+            content: function () {
+                return $('#destinationPopover').clone(true).removeClass('hide');
+            },
+            trigger: 'focus',
+            placement: 'auto'
+        });
+        $(target).popover('show');
+    };
+</script>

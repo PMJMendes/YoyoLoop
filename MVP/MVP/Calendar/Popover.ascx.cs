@@ -22,19 +22,9 @@ namespace MVP.Calendar
             }
         }
 
-        public void Show()
-        {
-            PopupControl.Show();
-        }
-
-        public void Hide()
-        {
-            PopupControl.Hide();
-        }
-
         protected void APGroupRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            if(e.Item.DataItem != null)
+            if (e.Item.DataItem != null)
             {
                 var slot = (APGroup)e.Item.DataItem;
                 var label = (Label)e.Item.FindControl("APGroup");

@@ -160,7 +160,7 @@
             </div>
             
             <!-- CALENDAR TABLE -->
-            <div class="container-fluid calendar-container">
+            <div class="container-fluid calendar-container" id="CalendarContainer">
               <hr class="d-block d-sm-none">
               <header>
                 <div class="row p-1 text-uppercase">

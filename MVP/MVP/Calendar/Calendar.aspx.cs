@@ -99,6 +99,58 @@ namespace MVP.Calendar
             CheckParams();
         }
 
+        protected void CalDate_DaySelected(object sender, CalendarTable.DaySelectedEventArgs e)
+        {
+            //Get trip data for e.DaySelected
+            //TEST STUFF
+            var testData = new List<APGroup>{
+                                                    new APGroup {
+                                                                  StartAPName = "Saldanha",
+                                                                  EndAPName = "Gare do Oriente",
+                                                                  Times = new List<TimeSlot> {
+                                                                                               new TimeSlot { Time = new TimeSpan(10,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(12,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(15,0,0),
+                                                                                                              Status = SlotStatus.GREEN}
+                                                                                              }
+                                                                 },
+                                                    new APGroup {
+                                                                  StartAPName = "Hospital de Cascais",
+                                                                  EndAPName = "Lagoas Parque",
+                                                                  Times = new List<TimeSlot> {
+                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(13,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(18,0,0),
+                                                                                                              Status = SlotStatus.GREEN}
+                                                                                              }
+                                                                 },
+                                                    new APGroup {
+                                                                  StartAPName = "Marques de Pombal",
+                                                                  EndAPName = "Cascais Shopping",
+                                                                  Times = new List<TimeSlot> {
+                                                                                               new TimeSlot { Time = new TimeSpan(9,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(14,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
+                                                                                                              Status = SlotStatus.GREEN},
+                                                                                               new TimeSlot { Time = new TimeSpan(21,0,0),
+                                                                                                              Status = SlotStatus.GREEN}
+                                                                                              }
+                                                                 }
+                                                    };
+            // END OF TEST STUFF
+            CalDate.ShowPopover(testData);
+        }
+
         protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
         {
             ImageButton button = (ImageButton)sender;
@@ -228,58 +280,6 @@ namespace MVP.Calendar
                                        "5",
                                        "6",
                                        "7",};
-        }
-
-        protected void CalDate_DaySelected(object sender, CalendarTable.DaySelectedEventArgs e)
-        {
-            //Get trip data for e.DaySelected
-            //TEST STUFF
-            var testData = new List<APGroup>{
-                                                    new APGroup {
-                                                                  StartAPName = "Saldanha",
-                                                                  EndAPName = "Gare do Oriente",
-                                                                  Times = new List<TimeSlot> {
-                                                                                               new TimeSlot { Time = new TimeSpan(10,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(12,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(15,0,0),
-                                                                                                              Status = SlotStatus.GREEN}
-                                                                                              }
-                                                                 },
-                                                    new APGroup {
-                                                                  StartAPName = "Hospital de Cascais",
-                                                                  EndAPName = "Lagoas Parque",
-                                                                  Times = new List<TimeSlot> {
-                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(13,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(18,0,0),
-                                                                                                              Status = SlotStatus.GREEN}
-                                                                                              }
-                                                                 },
-                                                    new APGroup {
-                                                                  StartAPName = "Marques de Pombal",
-                                                                  EndAPName = "Cascais Shopping",
-                                                                  Times = new List<TimeSlot> {
-                                                                                               new TimeSlot { Time = new TimeSpan(9,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(14,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(21,0,0),
-                                                                                                              Status = SlotStatus.GREEN}
-                                                                                              }
-                                                                 }
-                                                    };
-            // END OF TEST STUFF
-            CalDate.ShowPopover(testData);
         }
 
         private void GetCalendarData()
