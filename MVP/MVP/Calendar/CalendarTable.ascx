@@ -19,18 +19,3 @@
         <yoyo:Popover runat="server" ID="Popover" />
     </div>
 </section>
-
-<script>
-    function showPopover(source, target) {
-        $(target).popover({
-            container: 'body',
-            html: true,
-            content: function () {
-                return $(source).removeClass('hide');
-            },
-            trigger: 'focus',
-            placement: 'auto'
-        });
-        $(target).popover('show');
-    };
-</script>

@@ -8,12 +8,33 @@ namespace MVP.Calendar
 {
     public partial class CalendarTable : UserControl
     {
-        public class DaySelectedEventArgs : EventArgs
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string  script =  "function showPopover(source, target) {" + "\n";
+                    script += "     $(target).popover({" + "\n";
+                    script += "         container: 'body'," + "\n";
+                    script += "         html: true," + "\n";
+                    script += "         content: function () {" + "\n";
+                    script += "             return $(source).removeClass('hide');" + "\n";
+                    script += "         }," + "\n";
+                    script += "         trigger: 'manual'," + "\n";
+                    script += "         placement: 'auto'" + "\n";
+                    script += "     });" + "\n";
+                    script += "     $(target).popover('show');" + "\n";
+                    script += "};";
+            Page.ClientScript.RegisterClientScriptBlock(GetType(), "showPopoverFunctionKey", script, true);
+        }
+
+    public class DaySelectedEventArgs : EventArgs
         {
             public DateTime DaySelected;
         }
 
         public event EventHandler<DaySelectedEventArgs> DaySelected;
+
+        [System.ComponentModel.Bindable(true)]
+        public string PopoverWrapper { get; set; }
 
         public IEnumerable<DaySlot> DataSource
         {
@@ -26,20 +47,6 @@ namespace MVP.Calendar
             {
                 ViewState["DataSource"] = value;
                 WeekRepeater.DataSource = value.GroupBy(s => (int)(s.Day - value.First().Day).TotalDays / 7);
-            }
-        }
-
-        [System.ComponentModel.Bindable(true)]
-        public string PopoverWrapper
-        {
-            get
-            {
-                return (string)ViewState["PopoverWrapper"];
-            }
-
-            set
-            {
-                ViewState["PopoverWrapper"] = value;
             }
         }
 
