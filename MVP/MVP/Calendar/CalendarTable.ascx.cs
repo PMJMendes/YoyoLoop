@@ -105,7 +105,7 @@ namespace MVP.Calendar
             Popover.DataBind();
             string source = "#" + PopoverWrapper;
             string target = "#" + SelectedDayWrapperID;
-            Page.ClientScript.RegisterStartupScript(GetType(), "showPopoverKey", "showPopover('" + source + "', '" + target + "');", true);
+            Page.ClientScript.RegisterStartupScript(GetType(), "show" + PopoverWrapper + "Key", "showPopover('" + source + "', '" + target + "');", true);
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
