@@ -15,7 +15,7 @@
 </asp:Repeater>
 
 <section>
-    <div class="hide" id="destinationPopover">
+    <div class="hide" id="<%= PopoverWrapper %>">
         <yoyo:Popover runat="server" ID="Popover" />
     </div>
 </section>

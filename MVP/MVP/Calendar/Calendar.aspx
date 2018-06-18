@@ -175,7 +175,7 @@
               </header>
               <hr class="d-block d-sm-none">
               <div class="row border border-bottom-0">
-                  <yoyo:CalendarTable runat="server" id="CalDate" OnDaySelected="CalDate_DaySelected" />
+                  <yoyo:CalendarTable runat="server" id="CalDate" PopoverWrapper="destinationPopover" OnDaySelected="CalDate_DaySelected" />
               </div>
               <hr class="d-block d-sm-none">
             </div>

@@ -29,6 +29,20 @@ namespace MVP.Calendar
             }
         }
 
+        [System.ComponentModel.Bindable(true)]
+        public string PopoverWrapper
+        {
+            get
+            {
+                return (string)ViewState["PopoverWrapper"];
+            }
+
+            set
+            {
+                ViewState["PopoverWrapper"] = value;
+            }
+        }
+
         public DateTime VisibleDate
         {
             get
@@ -82,7 +96,7 @@ namespace MVP.Calendar
         {
             Popover.DataSource = popoverData;
             Popover.DataBind();
-            string source = "#destinationPopover";
+            string source = "#" + PopoverWrapper;
             string target = "#" + SelectedDayWrapperID;
             Page.ClientScript.RegisterStartupScript(GetType(), "showPopoverKey", "showPopover('" + source + "', '" + target + "');", true);
         }
