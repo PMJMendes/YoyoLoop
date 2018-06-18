@@ -251,6 +251,7 @@
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
+    <Content Include="Calendar\Scripts\calendar-table.js" />
     <Content Include="Checkout\Checkout.aspx" />
     <Content Include="Confirm\Confirm.aspx" />
     <Content Include="Contact.aspx" />

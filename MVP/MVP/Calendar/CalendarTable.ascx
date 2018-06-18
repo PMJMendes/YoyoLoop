@@ -5,8 +5,10 @@
 <asp:ScriptManagerProxy runat="server">
     <Scripts>
         <asp:ScriptReference Path="~/Scripts/Custom/show-popover.js" />
+        <asp:ScriptReference Path="./Scripts/calendar-table.js" />
     </Scripts>
 </asp:ScriptManagerProxy>
+
 
 <asp:Repeater ID="WeekRepeater" runat="server" OnItemDataBound="WeekRepeater_ItemDataBound">
     <ItemTemplate>
@@ -20,7 +22,7 @@
 </asp:Repeater>
 
 <section>
-    <div class="hide" id="<%= PopoverWrapper %>">
+    <div class="hide popover-marker" id="<%= PopoverWrapper %>">
         <yoyo:Popover runat="server" ID="Popover" />
     </div>
 </section>
