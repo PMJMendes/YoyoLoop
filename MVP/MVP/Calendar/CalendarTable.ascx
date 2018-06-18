@@ -2,6 +2,11 @@
 <%@ Register Src="~/Calendar/CalendarDay.ascx" TagPrefix="yoyo" TagName="CalendarDay" %>
 <%@ Register Src="~/Calendar/Popover.ascx" TagPrefix="yoyo" TagName="Popover" %>
 
+<asp:ScriptManagerProxy runat="server">
+    <Scripts>
+        <asp:ScriptReference Path="~/Scripts/Custom/show-popover.js" />
+    </Scripts>
+</asp:ScriptManagerProxy>
 
 <asp:Repeater ID="WeekRepeater" runat="server" OnItemDataBound="WeekRepeater_ItemDataBound">
     <ItemTemplate>
