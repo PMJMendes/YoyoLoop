@@ -21,12 +21,12 @@
 </section>
 
 <script>
-    function showPopover(target) {
+    function showPopover(source, target) {
         $(target).popover({
             container: 'body',
             html: true,
             content: function () {
-                return $('#destinationPopover').clone(true).removeClass('hide');
+                return $(source).removeClass('hide');
             },
             trigger: 'focus',
             placement: 'auto'

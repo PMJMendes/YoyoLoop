@@ -58,7 +58,7 @@ namespace MVP.Calendar
             }
         }
 
-        public string SelectedDayID
+        public string SelectedDayWrapperID
         {
             get
             {
@@ -75,7 +75,7 @@ namespace MVP.Calendar
         {
             var control = (CalendarDay)sender;
             SelectedDate = control.Date;
-            SelectedDayID = control.ClientID;
+            SelectedDayWrapperID = control.FindControl("DayWrapper").ClientID;
             this.DataSource = this.DataSource;
             WeekRepeater.DataBind();
             OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date });
@@ -83,11 +83,11 @@ namespace MVP.Calendar
 
         public void ShowPopover(IEnumerable<APGroup> popoverData)
         {
-            var control = (CalendarDay)FindControlRecursive(this, SelectedDayID);
             Popover.DataSource = popoverData;
             Popover.DataBind();
-            string target = "#" + control.FindControl("DayWrapper").ClientID;
-            Page.ClientScript.RegisterStartupScript(GetType(), "showPopoverKey", "showPopover('" + target + "');", true);
+            string source = "#destinationPopover";
+            string target = "#" + SelectedDayWrapperID;
+            Page.ClientScript.RegisterStartupScript(GetType(), "showPopoverKey", "showPopover('" + source + "', '" + target + "');", true);
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -163,23 +163,6 @@ namespace MVP.Calendar
         protected virtual void OnDaySelected(DaySelectedEventArgs args)
         {
             DaySelected?.Invoke(this, args);
-        }
-
-        private Control FindControlRecursive(Control ctrl, string id)
-        {
-            if (ctrl.ClientID == id)
-            {
-                return ctrl;
-            }
-            foreach (Control child in ctrl.Controls)
-            {
-                Control t = FindControlRecursive(child, id);
-                if (t != null)
-                {
-                    return t;
-                }
-            }
-            return null;
         }
     }
 }
