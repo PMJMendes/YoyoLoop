@@ -1,28 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.UI;
-
 
 namespace MVP.Calendar
 {
-    public partial class CalendarDay : UserControl
+    public partial class CalendarDay : UserControl, IPostBackEventHandler
     {
-        public delegate void DayClickedHandler(object sender);
-        public event DayClickedHandler DayClicked;
-
-        public CalendarDay()
-        {
-            //this.Click += new EventHandler(Day_Click);
-        }
-
-        protected virtual void OnDayClicked()
-        {
-            DayClicked?.Invoke(this);
-        }
-
-        private void Day_Click(object sender, EventArgs e)
-        {
-            OnDayClicked();
-        }
+        public event EventHandler DayClicked;
 
         public enum DayFlag
         {
@@ -108,6 +92,14 @@ namespace MVP.Calendar
             }
         }
 
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            DayWrapper.CssClass += DayBackgroundTag;
+            DayWrapper.Attributes["onclick"] = "javascript:__doPostBack('" + UniqueID + "', '')";
+        }
+
         protected string CurrentDayTag
         {
             get
@@ -147,6 +139,16 @@ namespace MVP.Calendar
                         return "";
                 }
             }
+        }
+
+        protected virtual void OnDayClicked()
+        {
+            DayClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        void IPostBackEventHandler.RaisePostBackEvent(string eventArgument)
+        {
+            OnDayClicked();
         }
     }
 }

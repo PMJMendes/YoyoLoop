@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -10,15 +8,26 @@ namespace MVP.Calendar
 {
     public partial class CalendarTable : UserControl
     {
+        public class DaySelectedEventArgs : EventArgs
+        {
+            public DateTime DaySelected;
+        }
+
+        public event EventHandler<DaySelectedEventArgs> DaySelected;
+
+        [System.ComponentModel.Bindable(true)]
+        public string PopoverWrapper { get; set; }
+
         public IEnumerable<DaySlot> DataSource
         {
             get
             {
-                return WeekRepeater.DataSource as IEnumerable<DaySlot>;
+                return (IEnumerable<DaySlot>)ViewState["DataSource"];
             }
 
             set
             {
+                ViewState["DataSource"] = value;
                 WeekRepeater.DataSource = value.GroupBy(s => (int)(s.Day - value.First().Day).TotalDays / 7);
             }
         }
@@ -49,10 +58,36 @@ namespace MVP.Calendar
             }
         }
 
-        protected void DayClick(object sender, EventArgs e)
+        public string SelectedDayWrapperID
+        {
+            get
+            {
+                return (string)ViewState["SelectedDayID"];
+            }
+
+            set
+            {
+                ViewState["SelectedDayID"] = value;
+            }
+        }
+
+        protected void CalendarDay_DayClicked(object sender, EventArgs e)
         {
             var control = (CalendarDay)sender;
             SelectedDate = control.Date;
+            SelectedDayWrapperID = control.FindControl("DayWrapper").ClientID;
+            this.DataSource = this.DataSource;
+            WeekRepeater.DataBind();
+            OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date });
+        }
+
+        public void ShowPopover(IEnumerable<APGroup> popoverData)
+        {
+            Popover.DataSource = popoverData;
+            Popover.DataBind();
+            string source = "#" + PopoverWrapper;
+            string target = "#" + SelectedDayWrapperID;
+            Page.ClientScript.RegisterStartupScript(GetType(), "show" + PopoverWrapper + "Key", "showPopover('" + source + "', '" + target + "');", true);
         }
 
         protected void WeekRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -123,6 +158,11 @@ namespace MVP.Calendar
             {
                 control.Flag = CalendarDay.DayFlag.Selected;
             }
+        }
+
+        protected virtual void OnDaySelected(DaySelectedEventArgs args)
+        {
+            DaySelected?.Invoke(this, args);
         }
     }
 }

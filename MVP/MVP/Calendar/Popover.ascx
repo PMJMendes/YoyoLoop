@@ -25,3 +25,25 @@
         <hr class="divider w-75">
     </SeparatorTemplate>
 </asp:Repeater>
+
+<script>
+    $(function(){
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+      
+        for (i = 0; i < acc.length; i++) {
+        $(acc[i]).click(function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+    });
+</script>
+
+
