@@ -13,6 +13,15 @@ namespace MVP.Controls {
     public partial class Login {
         
         /// <summary>
+        /// upLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upLogin;
+        
+        /// <summary>
         /// LoginErrorMessage control.
         /// </summary>
         /// <remarks>
