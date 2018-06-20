@@ -3,6 +3,7 @@
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
+<%@ Register Src="BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -97,7 +98,14 @@
     <section class="pt-5" id="book">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-8 col-md-8 calendar-background">
+            <asp:Panel runat="server" ID="pnPlaceholder" Visible="true" Width="100%">
+                <h6 style="text-align:center">THIS IS A PLACEHOLDER</h6>
+                <p style="text-align:center"><img src="/img/comoviajar.jpg" Style="" /></p>
+                <br />
+                <br />
+            </asp:Panel>
+
+            <asp:panel runat="server" ID="pnCalendar" CssClass="col-lg-8 col-md-8 calendar-background" Visible="false">
             <!-- CALENDAR HEADER -->
             <div class="row" id="calendar-header">
 
@@ -229,293 +237,147 @@
                 </span>
               </div>
             </div> 
-          </div>
+          </asp:panel>
 
           <!--PROXIMA VIAGEM-->
-          <div class="col-lg-4 col-md-4">
-            <div class="row p-3 text-uppercase">
-              <div class="col-lg-12 d-flex justify-content-center align-self-center">
-                Proxima Viagem
-              </div>
-            </div>
+          <asp:panel runat="server" ID="pnLateral" class="col-lg-4 col-md-4" Visible="true">
+            <div id="NextTrip" class="hide">
+                <div class="row p-3 text-uppercase">
+                  <div class="col-lg-12 d-flex justify-content-center align-self-center">
+                    Proxima Viagem
+                  </div>
+                </div>
             
-            <!-- PROXIMA DATA -->
-            <div class="row next-trip">
-              <div class="col-lg-12">
-                <div class="row date">
-                  <div class="col-lg-12 d-flex justify-content-center">13 de Março, Hoje</div>
-                </div>
-                <hr class="divider">
-                <div class="row time">
-                  <div class="col-10">
-                    <!--HORA-->
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="../img/clock.png"
-                        srcset="../img/clock@2x.png 2x,
-                        ../img/clock@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8">
-                        <strong>7:30</strong>
-                      </div>
+                <!-- PROXIMA DATA -->
+                <div class="row next-trip">
+                  <div class="col-lg-12">
+                    <div class="row date">
+                      <div class="col-lg-12 d-flex justify-content-center">13 de Março, Hoje</div>
                     </div>
-                    <!--PREÇO-->
-                    <div class="row price price--limited-availability">
-                      <div class="col-1">
-                        <img src="../img/cart.png"
-                        srcset="../img/cart@2x.png 2x,
-                        ../img/cart@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8">
-                          <strong>20,00€</strong>
-                          <span class="ml-1">Quase cheio</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 d-flex justify-content-end">
-                    <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
-                      <img src="../img/cart-light.png"
-                        srcset="../img/cart-light@2x.png 2x,
-                        ../img/cart-light@3x.png 3x"
-                        class="cart-light">
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- PROXIMA DATA -->
-            <div class="row next-trip">
-              <div class="col-lg-12">
-                <div class="row date">
-                  <div class="col-lg-12 d-flex justify-content-center">15 de Março, Quarta</div>
-                </div>
-                <hr class="divider">
-                <div class="row time">
-                  <div class="col-8">
-                    <!--HORA-->
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="../img/clock.png"
-                        srcset="../img/clock@2x.png 2x,
-                        ../img/clock@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8"><strong>19:30</strong></div>
-                    </div>
-
-                    <!--PREÇO-->
-                    <div class="row price">
-                      <div class="col-1">
-                        <img src="../img/cart.png"
-                        srcset="../img/cart@2x.png 2x,
-                        ../img/cart@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8"><strong>20,00€</strong></div>
-                    </div>
-                  </div>
-                  <div class="col-4 d-flex justify-content-end">
-                    <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
-                      <img src="../img/cart-light.png"
-                        srcset="../img/cart-light@2x.png 2x,
-                        ../img/cart-light@3x.png 3x"
-                        class="cart-light">
-                    </button>
-                  </div>
-                </div>
-
-                <hr class="divider">
-                <div class="row time">
-                  <div class="col-8">
-                    <!--HORA-->
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="../img/clock.png"
-                        srcset="../img/clock@2x.png 2x,
-                        ../img/clock@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8"><strong>13:30</strong></div>
-                    </div>
-
-                    <!--PREÇO-->
-                    <div class="row price price--fully-available">
-                      <div class="col-1">
-                        <img src="../img/cart.png"
-                        srcset="../img/cart@2x.png 2x,
-                        ../img/cart@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8"><strong>20,00€</strong></div>
-                    </div>
-                  </div>
-                  <div class="col-4 d-flex justify-content-end">
-                    <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
-                      <img src="../img/cart-light.png"
-                        srcset="../img/cart-light@2x.png 2x,
-                        ../img/cart-light@3x.png 3x"
-                        class="cart-light">
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- LATERAL ONE WAY -->
-            <div class="row next-trip">
-              <div class="col-lg-12 p-0">
-                <div class="row time pt-3">
-                  <div class="col-1 pl-4">
-                    <img src="../img/calendar-grey.png"
-                    srcset="../img/calendar-grey@2x.png 2x,
-                    ../img/calendar-grey@3x.png 3x"
-                    class="calendar-grey">
-                  </div>
-                  <div class="col-8">15 de Março, Quarta</div>
-                  <div class="col-2 text-right text-uppercase direction">Ida</div>
-                </div>
-                <hr class="divider">
-                <div class="row time">
-                  <div class="col-8">
-
-                    <!-- LUGARES -->
-                    <div class="row p-1">
-                      <div class="col-1 pl-4">
-                        <img src="../img/users.png"
-                        srcset="../img/users@2x.png 2x,
-                        ../img/users@3x.png 3x"
-                        class="users">
-                      </div>
-                      <div class="col-8"><strong>2 Lugares</strong></div>
-                    </div>
-
-                    <!--HORA-->
-                    <div class="row p-1">
-                      <div class="col-1 pl-4">
-                        <img src="../img/clock.png"
-                        srcset="../img/clock@2x.png 2x,
-                        ../img/clock@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8"><strong>19:30</strong></div>
-                    </div>
-
-                    <!--PREÇO-->
-                    <div class="row p-1 price">
-                      <div class="col-1 pl-4">
-                        <img src="../img/cart.png"
-                        srcset="../img/cart@2x.png 2x,
-                        ../img/cart@3x.png 3x"
-                        class="clock">
-                      </div>
-                      <div class="col-8"><strong>20,00€</strong></div>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="divider">
-
-                <div class="row trip">
-                  <div class="col-8">
-                    <div class="row p-1 text-uppercase start-end">
-                      <div class="col-12 pl-4">Origem</div>
-                    </div>
-
-                    <div class="row p-1 text-uppercase city-name">
-                      <div class="col-12 pl-4">Lisboa</div>
-                    </div>
-
-                    <div class="row p-1 pt-0 access-point">
-                      <div class="col-12 pl-4">Marques de Pombal</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row pt-3 trip">
-                  <div class="col-8">
-                    <div class="row p-1 text-uppercase start-end">
-                      <div class="col-12 pl-4">Destino</div>
-                    </div>
-
-                    <div class="row p-1 text-uppercase city-name">
-                      <div class="col-12 pl-4">Cascais</div>
-                    </div>
-
-                    <div class="row p-1 pt-0 access-point">
-                      <div class="col-12 pl-4">Cascais shopping</div>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="divider w-100">
-
-                <div class="row pricing">
-                  <div class="col-4 pl-4 text-uppercase total">Total</div>
-                  <div class="col-8 pr-4 text-right">
-                    <div class="row">
-                      <div class="col-12">2 Lugares <span class="times">x</span> <span class="price">25,00€</span></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 total-price">50,00€</div>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="divider">
-
-                <div class="row pricing">
-                  <div class="col-12">
-                    <div class="row">
-                      <div class="col-12 text-center promocode">Tenho um código promocional</div>
-                    </div>
-
-                    <div class="row p-4">
-                      <div class="col-12 text-center">
-                        <button class="btn btn-light btn-xl text-uppercase" >Reservar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <hr class="divider">
-
-                <div class="row pricing">
-                  <div class="col-12">
-                    <div class="row">
-                      <div class="col-12 text-center promocode promocode--active">Nao tenho código promocional</div>
-                    </div>
-
-                    <div class="row p-3">
-                      <div class="col-12 text-center promocode promocode--active">
-                        <div class="input-group mb-3">
-                          <input type="text" class="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2">
-                          <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">
-                              <img src="../img/check.png"
-                                srcset="../img/check@2x.png 2x,
-                                ../img/check@3x.png 3x"
-                                class="check">
-                            </span>
+                    <hr class="divider">
+                    <div class="row time">
+                      <div class="col-10">
+                        <!--HORA-->
+                        <div class="row">
+                          <div class="col-1">
+                            <img src="../img/clock.png"
+                            srcset="../img/clock@2x.png 2x,
+                            ../img/clock@3x.png 3x"
+                            class="clock">
+                          </div>
+                          <div class="col-8">
+                            <strong>7:30</strong>
+                          </div>
+                        </div>
+                        <!--PREÇO-->
+                        <div class="row price price--limited-availability">
+                          <div class="col-1">
+                            <img src="../img/cart.png"
+                            srcset="../img/cart@2x.png 2x,
+                            ../img/cart@3x.png 3x"
+                            class="clock">
+                          </div>
+                          <div class="col-8">
+                              <strong>20,00€</strong>
+                              <span class="ml-1">Quase cheio</span>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="row pb-3">
-                      <div class="col-12 text-center">
-                        <button class="btn btn-light btn-xl text-uppercase" >Reservar</button>
+                      <div class="col-2 d-flex justify-content-end">
+                        <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
+                          <img src="../img/cart-light.png"
+                            srcset="../img/cart-light@2x.png 2x,
+                            ../img/cart-light@3x.png 3x"
+                            class="cart-light">
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-          </div>
+                <!-- PROXIMA DATA -->
+                <div class="row next-trip">
+                  <div class="col-lg-12">
+                    <div class="row date">
+                      <div class="col-lg-12 d-flex justify-content-center">15 de Março, Quarta</div>
+                    </div>
+                    <hr class="divider">
+                    <div class="row time">
+                      <div class="col-8">
+                        <!--HORA-->
+                        <div class="row">
+                          <div class="col-1">
+                            <img src="../img/clock.png"
+                            srcset="../img/clock@2x.png 2x,
+                            ../img/clock@3x.png 3x"
+                            class="clock">
+                          </div>
+                          <div class="col-8"><strong>19:30</strong></div>
+                        </div>
+
+                        <!--PREÇO-->
+                        <div class="row price">
+                          <div class="col-1">
+                            <img src="../img/cart.png"
+                            srcset="../img/cart@2x.png 2x,
+                            ../img/cart@3x.png 3x"
+                            class="clock">
+                          </div>
+                          <div class="col-8"><strong>20,00€</strong></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex justify-content-end">
+                        <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
+                          <img src="../img/cart-light.png"
+                            srcset="../img/cart-light@2x.png 2x,
+                            ../img/cart-light@3x.png 3x"
+                            class="cart-light">
+                        </button>
+                      </div>
+                    </div>
+
+                    <hr class="divider">
+                    <div class="row time">
+                      <div class="col-8">
+                        <!--HORA-->
+                        <div class="row">
+                          <div class="col-1">
+                            <img src="../img/clock.png"
+                            srcset="../img/clock@2x.png 2x,
+                            ../img/clock@3x.png 3x"
+                            class="clock">
+                          </div>
+                          <div class="col-8"><strong>13:30</strong></div>
+                        </div>
+
+                        <!--PREÇO-->
+                        <div class="row price price--fully-available">
+                          <div class="col-1">
+                            <img src="../img/cart.png"
+                            srcset="../img/cart@2x.png 2x,
+                            ../img/cart@3x.png 3x"
+                            class="clock">
+                          </div>
+                          <div class="col-8"><strong>20,00€</strong></div>
+                        </div>
+                      </div>
+                      <div class="col-4 d-flex justify-content-end">
+                        <button class="btn btn-light btn-xl d-flex justify-content-center btn-cart">  
+                          <img src="../img/cart-light.png"
+                            srcset="../img/cart-light@2x.png 2x,
+                            ../img/cart-light@3x.png 3x"
+                            class="cart-light">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- END OF NEXT TRIP -->
+
+            
+            </asp:panel>
+
         </div>
       </div>
     </section>

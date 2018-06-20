@@ -58,6 +58,24 @@ namespace MVP.Calendar {
         protected global::MVP.Controls.DropdownFixed DdlSeats;
         
         /// <summary>
+        /// pnPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnPlaceholder;
+        
+        /// <summary>
+        /// pnCalendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnCalendar;
+        
+        /// <summary>
         /// BtnMonthBack control.
         /// </summary>
         /// <remarks>
@@ -92,5 +110,14 @@ namespace MVP.Calendar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MVP.Calendar.CalendarTable CalDate;
+        
+        /// <summary>
+        /// pnLateral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnLateral;
     }
 }
