@@ -45,7 +45,7 @@
                             <div class="col-12 text-center text-uppercase">Regista-te com o teu email</div>
                         </div>
                         <span class="text-danger"> <!-- Need styling for this -->
-                            <asp:Literal runat="server" ID="LoginErrorMessage" Visible="false" />
+                            <asp:Label runat="server" Id="LoginMessage" Visible="false" />
                         </span>
                         <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
                             <div class="col-12">

@@ -27,7 +27,12 @@ namespace MVP.Controls
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                Response.Redirect(Request.RawUrl);
+                RegisterErrorMessage.Text = "Registration sucessful";
+
+                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "__doPostBack();", true);
+                //This postback needs to raise an event on the Site.Master to key the previous viewstate to the newly signed in user before doing the AntiXsrf check
+
+                //Response.Redirect(Request.RawUrl);
                 //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
             else
