@@ -27,9 +27,11 @@ namespace MVP.Calendar
             if (e.Item.DataItem != null)
             {
                 var slot = (APGroup)e.Item.DataItem;
-                var label = (Label)e.Item.FindControl("APGroup");
+                var startlabel = (Label)e.Item.FindControl("StartAP");
+                var endlabel = (Label)e.Item.FindControl("EndAP");
                 var control = (Repeater)e.Item.FindControl("RowRepeater");
-                label.Text = slot.StartAPName + "<br/>&rarr; " + slot.EndAPName;
+                startlabel.Text = slot.StartAPName;
+                endlabel.Text = slot.EndAPName; 
                 control.DataSource = slot.Times.Select((x, i) => new { Index = i, Value = x })
                                                .GroupBy(x => x.Index / 2)
                                                .Select(x => x.Select(v => v.Value).ToList())
