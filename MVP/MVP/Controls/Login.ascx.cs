@@ -37,10 +37,17 @@ namespace MVP.Controls
             // To enable password failures to trigger lockout, change to shouldLockout: true
             var result = signinManager.PasswordSignIn(TbLoginEmail.Text, TbLoginPassword.Text, LoginRememberMe.Checked, shouldLockout: false);
 
+            LoginMessage.Visible = false;
+
             switch (result)
             {
                 case SignInStatus.Success:
-                    Response.Redirect(Request.RawUrl);
+                    LoginMessage.Text = "Login sucessful";
+                    LoginMessage.Visible = true;
+                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "__doPostBack();", true);
+                    //This postback needs to raise an event on the Site.Master to key the previous viewstate to the newly signed in user before doing the AntiXsrf check
+
+                    //Response.Redirect(Request.RawUrl);
                     //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                     break;
                 case SignInStatus.LockedOut:
@@ -54,8 +61,8 @@ namespace MVP.Controls
                     break;
                 case SignInStatus.Failure:
                 default:
-                    LoginErrorMessage.Text = "Invalid login attempt";
-                    LoginErrorMessage.Visible = true;
+                    LoginMessage.Text = "Invalid login attempt";
+                    LoginMessage.Visible = true;
                     break;
             }
         }
