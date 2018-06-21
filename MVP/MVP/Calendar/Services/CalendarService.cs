@@ -197,11 +197,11 @@ namespace MVP.Services
                 var trip = new Trip();
                 if(state.Selection.SAP.Name != startapname)
                 {
-                    state.Selection.SAP = state.Selection.Route.StartRegion.AccessPoints.Where(ap => ap.Name == startapname).First();
+                    state.Selection.SAP = state.Selection.Route.StartRegion.AccessPoints.Single(ap => ap.Name == startapname);
                 }
                 if (state.Selection.DAP.Name != endapname)
                 {
-                    state.Selection.DAP = state.Selection.Route.EndRegion.AccessPoints.Where(ap => ap.Name == endapname).First();
+                    state.Selection.DAP = state.Selection.Route.EndRegion.AccessPoints.Single(ap => ap.Name == endapname);
                 }
 
                 if (state.Selection.Trip == null)
