@@ -2,6 +2,12 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <asp:ScriptManagerProxy runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="https://js.stripe.com/v2/" />
+        </Scripts>
+    </asp:ScriptManagerProxy>
+
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
 
     <div class="checkout">
@@ -217,67 +223,35 @@
       </div>  
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
-      });
-    </script>
-
-    <script>
-        $(function(){
-            $('[rel="popover"]').popover({
-                container: 'body',
-                html: true,
-                content: function () {
-                    var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
-                    return clone;
-                }
-            }).click(function(e) {
-                e.preventDefault();
-            });
-        });
-    </script>
-
-    <!-- Stripe JavaScript -->
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-
+    <!-- Stripe Javascript -->
     <script type="text/javascript">
+        $('document').ready(function () {
+            Stripe.setPublishableKey('<%=stripePublishableKey%>');
 
-	    $('document').ready(function () {
-		    Stripe.setPublishableKey('<%=stripePublishableKey%>');
-
-            $('#btnPay').on('click', function (e)
-            {
-			    e.preventDefault();
-       	        e.stopPropagation();
+            $('#btnPay').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
 
                 Stripe.card.createToken({
-                    number: $('#txtCardNumber').val(), 
-				    cvc: $('#txtCardSecurityCode').val(),
-				    exp: $('#txtCardExpiry').val(),
-                    name:  $('#txtCardName').val()
-			    }, stripeResponseHandler);
-		    });
+                    number: $('#txtCardNumber').val(),
+                    cvc: $('#txtCardSecurityCode').val(),
+                    exp: $('#txtCardExpiry').val(),
+                    name: $('#txtCardName').val()
+                }, stripeResponseHandler);
+            });
 
-            function stripeResponseHandler(status, response)
-            {
-			    var $form = $('#form1');
-                if (response.error)
-                {
+            function stripeResponseHandler(status, response) {
+                var $form = $('#MasterForm');
+                if (response.error) {
                     //need something better here
-				    alert(response.error.message);
+                    alert(response.error.message);
                 }
-                else
-                {
-				    var token = response.id;
-				    $('#hfStripeToken').val(token);
-				    $form.get(0).submit();
-			    }
-		    }
-	    });
+                else {
+                    var token = response.id;
+                    $('#hfStripeToken').val(token);
+                    $form.get(0).submit();
+                }
+            }
+        });
     </script>
 </asp:Content>
