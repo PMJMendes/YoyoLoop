@@ -84,10 +84,10 @@ namespace MVP.Services
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
                     d => d,
                     t => t.Departure,
-                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).FirstOrDefault() }
+                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).DefaultIfEmpty().Sum(b => b.Seats)).FirstOrDefault() }
                 );
 
             if (!departures.Any())
@@ -140,53 +140,39 @@ namespace MVP.Services
 
         public List<APGroup> GetTimeSlots(CalendarDTO state)
         {
+            var date = state.Selection.Date;
+
             using (var model = new EntityModel())
             {
-                var result = new List<APGroup>();
-                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-
-                var date = state.Selection.Date;
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
                 var dayType = GetDayType(date);
 
-                //if (lastminute)
-                //{
-                //    departures = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date && t.Bookings.Sum(b => b.Seats) < (model.Settings.FirstOrDefault().VehicleCapacity - state.Selection.Seats)).ToList();
-                //}
-                //else
-                //{
-                //    departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                //                  .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date &&
-                //                                              t.Bookings.Sum(b => b.Seats) < (model.Settings.FirstOrDefault().VehicleCapacity - state.Selection.Seats)),
-                //                    d => d,
-                //                    t => t.Departure,
-                //                    (d, ts) => new
-                //                                    {
-                //                                        Departure = d,
-                //                                        StartAccessPoint = ts.Select(t => t.StartAccessPoint).First() ?? state.Selection.SAP,
-                //                                        EndAccessPoint = ts.Select(t => t.EndAccessPoint).First() ?? state.Selection.DAP
-                //                                    }
-                //                    );
-                //}
+                var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
+                    .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                        d => d,
+                        t => t.Departure,
+                        (d, ts) => new { Departure = d, Trips = ts }
+                    );
 
-                //TEMP LOGIC THAT JUST CHECKS DEPARTURES
-                var times = new List<TimeSlot>();
-                foreach (Departure d in model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType))
+                var tripGroups = departures.SelectMany(
+                        d => d.Trips.DefaultIfEmpty(),
+                        (d, t) => new { Trip = t, Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).DefaultIfEmpty().Sum(b => b.Seats), Departure = d.Departure }
+                    ).GroupBy(t => t.Trip).ToList();
+
+                return tripGroups.Select(d => new APGroup
                 {
-                    times.Add(new TimeSlot
-                    {
-                        Time = d.Time,
-                        Status = lastminute ? SlotStatus.RED : SlotStatus.GREEN
-                    });
-                }
-                var apg = new APGroup
-                {
-                    StartAPName = state.Selection.SAP.Name,
-                    EndAPName = state.Selection.DAP.Name,
-                    Times = times.OrderBy(t => t.Time).ToList()
-                };
-                result.Add(apg);
-                
-                return result;
+                    StartAPName = (d.Key == null ? state.Selection.SAP : d.Key.StartAccessPoint).Name,
+                    EndAPName = (d.Key == null ? state.Selection.DAP : d.Key.EndAccessPoint).Name,
+                    Times = d.Select(dt => new TimeSlot {
+                        Departure = dt.Departure,
+                        Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
+                            dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
+                            dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
+                            lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
+                            SlotStatus.GREEN
+                    }).OrderBy(ts => ts.Departure.Time).ToList()
+                }).ToList();
             }
         }
 

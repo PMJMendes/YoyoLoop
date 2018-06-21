@@ -69,7 +69,7 @@ namespace MVP.Calendar
                 var startlabel = (Label)grouprepeater.FindControl("StartAP");
                 var endlabel = (Label)grouprepeater.FindControl("EndAP");
                 string apgroup = startlabel.Text + "," + endlabel.Text;
-                control.Text = timeslot.Time.ToString("hh\\:mm");
+                control.Text = timeslot.Departure.Time.ToString("hh\\:mm");
                 control.CommandArgument = apgroup;
             }
         }
