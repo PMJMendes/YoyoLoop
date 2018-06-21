@@ -84,10 +84,10 @@ namespace MVP.Services
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                     d => d,
                     t => t.Departure,
-                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).DefaultIfEmpty().Sum(b => b.Seats)).FirstOrDefault() }
+                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats)).FirstOrDefault() }
                 );
 
             if (!departures.Any())
@@ -149,7 +149,7 @@ namespace MVP.Services
                 var dayType = GetDayType(date);
 
                 var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                    .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                    .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                         d => d,
                         t => t.Departure,
                         (d, ts) => new { Departure = d, Trips = ts }
@@ -157,13 +157,13 @@ namespace MVP.Services
 
                 var tripGroups = departures.SelectMany(
                         d => d.Trips.DefaultIfEmpty(),
-                        (d, t) => new { Trip = t, Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).DefaultIfEmpty().Sum(b => b.Seats), Departure = d.Departure }
+                        (d, t) => new { Trip = new { Trip = t, SAP = t.StartAccessPoint, EAP = t.EndAccessPoint }, Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats), Departure = d.Departure }
                     ).GroupBy(t => t.Trip).ToList();
 
                 return tripGroups.Select(d => new APGroup
                 {
-                    StartAPName = (d.Key == null ? state.Selection.SAP : d.Key.StartAccessPoint).Name,
-                    EndAPName = (d.Key == null ? state.Selection.DAP : d.Key.EndAccessPoint).Name,
+                    StartAPName = (d.Key == null ? state.Selection.SAP : d.Key.SAP).Name,
+                    EndAPName = (d.Key == null ? state.Selection.DAP : d.Key.EAP).Name,
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
                         Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
