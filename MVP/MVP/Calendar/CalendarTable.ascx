@@ -5,9 +5,9 @@
 <asp:ScriptManagerProxy runat="server">
     <Scripts>
         <asp:ScriptReference Path="~/Scripts/Custom/show-popover.js" />
-        <asp:ScriptReference Path="./Scripts/calendar-table.js" />
     </Scripts>
 </asp:ScriptManagerProxy>
+         <%--<asp:ScriptReference Path="./Scripts/calendar-table.js" />--%> 
 
 
 <asp:Repeater ID="WeekRepeater" runat="server" OnItemDataBound="WeekRepeater_ItemDataBound">

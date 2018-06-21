@@ -100,54 +100,27 @@ namespace MVP.Calendar
 
         protected void CalDate_DaySelected(object sender, CalendarTable.DaySelectedEventArgs e)
         {
-            //Get trip data for e.DaySelected
-            //TEST STUFF
-            var testData = new List<APGroup>{
-                                                    new APGroup {
-                                                                  StartAPName = "Saldanha",
-                                                                  EndAPName = "Gare do Oriente",
-                                                                  Times = new List<TimeSlot> {
-                                                                                               new TimeSlot { Time = new TimeSpan(10,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(12,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(15,0,0),
-                                                                                                              Status = SlotStatus.GREEN}
-                                                                                              }
-                                                                 },
-                                                    new APGroup {
-                                                                  StartAPName = "Hospital de Cascais",
-                                                                  EndAPName = "Lagoas Parque",
-                                                                  Times = new List<TimeSlot> {
-                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(13,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(18,0,0),
-                                                                                                              Status = SlotStatus.GREEN}
-                                                                                              }
-                                                                 },
-                                                    new APGroup {
-                                                                  StartAPName = "Marques de Pombal",
-                                                                  EndAPName = "Cascais Shopping",
-                                                                  Times = new List<TimeSlot> {
-                                                                                               new TimeSlot { Time = new TimeSpan(9,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(11,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(14,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(16,0,0),
-                                                                                                              Status = SlotStatus.GREEN},
-                                                                                               new TimeSlot { Time = new TimeSpan(21,0,0),
-                                                                                                              Status = SlotStatus.GREEN}
-                                                                                              }
-                                                                 }
-                                                    };
-            // END OF TEST STUFF
-            CalDate.ShowPopover(testData);
+            localData.Values.CalSelectedDate = e.DaySelected;
+            CheckParams();
+            
+            if(e.DaySelected.Date < DateTime.Today)
+            {
+                return;
+            }
+            if(e.DayStatus != CalendarDay.DayFlag.Available &&
+               e.DayStatus != CalendarDay.DayFlag.Fully &&
+               e.DayStatus != CalendarDay.DayFlag.Limited)
+            {
+                return;
+            }
+
+            var timeslots = service.GetTimeSlots(pageData);
+            if(timeslots.Count() == 0)
+            {
+                return;
+            }
+
+            CalDate.ShowPopover(timeslots);
         }
 
         protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
@@ -411,49 +384,6 @@ namespace MVP.Calendar
             //        UpdateBookingPanel();
             //    }
         }
-
-        //private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
-        //{
-        //    IEnumerable<Button> buttons = new List<Button>() { BtnTime1,
-        //                                                       BtnTime2,
-        //                                                       BtnTime3,
-        //                                                       BtnTime4,
-        //                                                       BtnTime5,
-        //                                                       BtnTime6 }; // this is horrible - need to find a way to get TbDepartures.Controls.OfType<Button> to recursively drill into child containers
-
-        //    foreach (Button b in buttons)
-        //    {
-        //        b.Visible = false;
-        //    }
-
-        //    slots = slots.OrderBy(t => t.Time).ToList();
-
-        //    LbPnTimeTextDate.Text = date.ToString("MMM").ToUpper() + " " + date.ToString("dd") + "<br />";
-
-        //    for (int i = 1; i <= Math.Min(slots.Count(), buttons.Count()); i++)
-        //    {
-        //        Button button = buttons.Where(b => b.ID == "BtnTime" + i.ToString()).First();
-        //        button.Text = slots.ElementAt(i - 1).Time.ToString("hh\\:mm");
-        //        switch (slots.ElementAt(i - 1).Status)
-        //        {
-        //            case SlotStatus.RED:
-        //                button.ForeColor = System.Drawing.Color.Red;
-        //                button.Enabled = false;
-        //                break;
-        //            case SlotStatus.GREEN:
-        //                button.ForeColor = System.Drawing.Color.Green;
-        //                button.Enabled = true;
-        //                break;
-        //            case SlotStatus.YELLOW:
-        //                button.ForeColor = System.Drawing.Color.Yellow;
-        //                button.Enabled = true;
-        //                break;
-        //        }
-        //        button.Visible = true;
-        //    }
-
-        //    PnTime.Visible = true;
-        //}
 
         //private void UpdateBookingPanel()
         //{

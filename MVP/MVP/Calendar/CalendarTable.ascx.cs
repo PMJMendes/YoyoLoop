@@ -11,6 +11,7 @@ namespace MVP.Calendar
         public class DaySelectedEventArgs : EventArgs
         {
             public DateTime DaySelected;
+            public CalendarDay.DayFlag DayStatus;
         }
 
         public event EventHandler<DaySelectedEventArgs> DaySelected;
@@ -78,7 +79,9 @@ namespace MVP.Calendar
             SelectedDayWrapperID = control.FindControl("DayWrapper").ClientID;
             this.DataSource = this.DataSource;
             WeekRepeater.DataBind();
-            OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date });
+            OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date,
+                                                     DayStatus = control.Flag
+                                                    });
         }
 
         public void ShowPopover(IEnumerable<APGroup> popoverData)

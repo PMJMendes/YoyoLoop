@@ -138,33 +138,53 @@ namespace MVP.Services
             return (DayType)date.DayOfWeek;
         }
 
-        public List<TimeSlot> GetTimeSlots(CalendarDTO state)
+        public List<APGroup> GetTimeSlots(CalendarDTO state)
         {
             using (var model = new EntityModel())
             {
-                var result = new List<TimeSlot>();
+                var result = new List<APGroup>();
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
 
-                // Will loop through trips here
+                var date = state.Selection.Date;
+                var dayType = GetDayType(date);
 
-                foreach (Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
+                //if (lastminute)
+                //{
+                //    departures = model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date && t.Bookings.Sum(b => b.Seats) < (model.Settings.FirstOrDefault().VehicleCapacity - state.Selection.Seats)).ToList();
+                //}
+                //else
+                //{
+                //    departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
+                //                  .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date &&
+                //                                              t.Bookings.Sum(b => b.Seats) < (model.Settings.FirstOrDefault().VehicleCapacity - state.Selection.Seats)),
+                //                    d => d,
+                //                    t => t.Departure,
+                //                    (d, ts) => new
+                //                                    {
+                //                                        Departure = d,
+                //                                        StartAccessPoint = ts.Select(t => t.StartAccessPoint).First() ?? state.Selection.SAP,
+                //                                        EndAccessPoint = ts.Select(t => t.EndAccessPoint).First() ?? state.Selection.DAP
+                //                                    }
+                //                    );
+                //}
+
+                var times = new List<TimeSlot>();
+                foreach (Departure d in model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType))
                 {
-                    var slot = new TimeSlot();
-
-                    slot.Time = d.Time;
-
-                    // All slot conditions will be checked here to determine status
-                    if (lastminute)
+                    times.Add(new TimeSlot
                     {
-                        slot.Status = SlotStatus.RED;
-                    }
-                    else
-                    {
-                        slot.Status = SlotStatus.GREEN;
-                    }
-
-                    result.Add(slot);
+                        Time = d.Time,
+                        Status = lastminute ? SlotStatus.RED : SlotStatus.GREEN
+                    });
                 }
+                var apg = new APGroup
+                {
+                    StartAPName = state.Selection.SAP.Name,
+                    EndAPName = state.Selection.DAP.Name,
+                    Times = times.OrderBy(t => t.Time).ToList()
+                };
+                result.Add(apg);
+                
                 return result;
             }
         }
