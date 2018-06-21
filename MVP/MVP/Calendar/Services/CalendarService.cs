@@ -157,7 +157,7 @@ namespace MVP.Services
 
                 var tripGroups = departures.SelectMany(
                         d => d.Trips.DefaultIfEmpty(),
-                        (d, t) => new { Trip = new { Trip = t, SAP = t.StartAccessPoint, EAP = t.EndAccessPoint }, Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats), Departure = d.Departure }
+                        (d, t) => new { Trip = t == null ? null : new { SAP = t.StartAccessPoint, EAP = t.EndAccessPoint }, Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats), Departure = d.Departure }
                     ).GroupBy(t => t.Trip).ToList();
 
                 return tripGroups.Select(d => new APGroup
