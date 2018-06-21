@@ -25,7 +25,7 @@ namespace MVP.Calendar
             public string EndAPName { get; set; }
         }
 
-        public BookingData bookingData
+        public BookingData PanelData
         {
             get
             {
@@ -41,19 +41,24 @@ namespace MVP.Calendar
         {
             if(!IsPostBack)
             {
-                bookingData = new BookingData
-                {
-                    DepartureID = null,
-                    TripID = null,
-                    Seats = 1,
-                    Cost = 0,
-                    StartTime = DateTime.MinValue,
-                    StartRegionName = "REGIAO DE ORIGEM",
-                    StartAPName = "Paragem de origem",
-                    EndRegionName = "REGIAO DE DESTINO",
-                    EndAPName = "Paragem de destino"
-                };
+                Init_Data();
             }
+        }
+
+        internal void Init_Data()
+        {
+            PanelData = new BookingData
+            {
+                DepartureID = null,
+                TripID = null,
+                Seats = 1,
+                Cost = 0,
+                StartTime = DateTime.MinValue,
+                StartRegionName = "REGIAO DE ORIGEM",
+                StartAPName = "Paragem de origem",
+                EndRegionName = "REGIAO DE DESTINO",
+                EndAPName = "Paragem de destino"
+            };
         }
     }
 }

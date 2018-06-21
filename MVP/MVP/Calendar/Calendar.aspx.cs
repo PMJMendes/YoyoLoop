@@ -117,6 +117,17 @@ namespace MVP.Calendar
             CalDate.ShowPopover(timeslots);
         }
 
+        protected void CalDate_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
+        {
+            localData.Values.Time = e.TimeSelected;
+            CheckParams();
+            Char delimiter = ',';
+            string[] apgroup = e.Group.Split(delimiter);
+            string startapname = apgroup[0];
+            string endapname = apgroup[1];
+            UpdateBookingPanel(startapname, endapname);
+        }
+
         protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
         {
             ImageButton button = (ImageButton)sender;
@@ -148,26 +159,6 @@ namespace MVP.Calendar
                 GetCalendarData();
             }
         }
-
-        //protected void CalDate_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    localData.Values.CalSelectedDate = CalDate.SelectedDate;
-        //    pageData.Selection.Time = new TimeSpan(-1); // CHANGE & MOVE ; date changed, we need to clear selected time
-        //    CheckParams();
-        //
-        //    DrawTimeSelectionPopup(pageData.Selection.Date, service.GetTimeSlots(pageData)); // MOVE
-        //}
-
-
-
-        //protected void BtnTime_Click(object sender, EventArgs e)
-        //{
-        //    Button button = (Button)sender;
-        //    PnTime.Visible = false;
-        //    localData.Values.Time = TimeSpan.Parse(button.Text);
-        //    CheckParams();
-        //    CalDate.SelectedDate = DateTime.MinValue; // we need to make the date selectable again
-        //}
 
         //protected void BtnDepartureBook_Click(object sender, EventArgs e)
         //{
@@ -301,13 +292,14 @@ namespace MVP.Calendar
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.StartAP)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
             bool calupdate = false;
-            //    bool bookupdate = false;
 
             if (route == null)
             {
                 ClearSelection();
                 localData.Values.CalSelectedDate = DateTime.MinValue;
                 pnCalendar.Visible = false;
+                BookingPanel.Init_Data();
+                BookingPanel.Visible = false;
             }
             else
             {
@@ -324,46 +316,29 @@ namespace MVP.Calendar
                 {
                     pageData.Selection.SAP = sap;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
-                    //if (PnBook.Visible)
-                    //{
-                    //    bookupdate = true;
-                    //}
                 }
 
                 if (pageData.Selection.DAP != dap) // New DAP
                 {
                     pageData.Selection.DAP = dap;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
-                    //if (PnBook.Visible)
-                    //{
-                    //    bookupdate = true;
-                    //}
                 }
 
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
                     pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
-                    //if (PnBook.Visible)
-                    //{
-                    //    bookupdate = true;
-                    //}
                 }
 
                 if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
                 {
                     pageData.Selection.Seats = int.Parse(localData.Values.Seats);
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
-                    //if (PnBook.Visible)
-                    //{
-                    //    bookupdate = true;
-                    //}
                 }
 
                 if (pageData.Selection.Time != localData.Values.Time) // New time
                 {
                     pageData.Selection.Time = localData.Values.Time;
-                    //bookupdate = true;
                 }
             }
 
@@ -372,47 +347,20 @@ namespace MVP.Calendar
                 GetCalendarData();
                 pnCalendar.Visible = true;
             }
-
-            //    if (bookupdate)
-            //    {
-            //        UpdateBookingPanel();
-            //    }
         }
 
-        //private void UpdateBookingPanel()
-        //{
-        //    LbDepartureDate.Text = pageData.Selection.Date.Date.ToString("d MMM, ddd").ToUpper();
-        //    if (pageData.Selection.Time == new TimeSpan(-1))
-        //    {
-        //        LbDepartureTime.Text = "";
-        //    }
-        //    else
-        //    {
-        //        LbDepartureTime.Text = pageData.Selection.Time.ToString("hh\\:mm") + "h";
-        //    }
-        //    LbDepartureSeats.Text = pageData.Selection.Seats.ToString() + " passenger(s)";
-        //    LbDepartureTo.Text = "To: " + pageData.Selection.Route.EndRegion.Name + " / " + pageData.Selection.DAP.Name;
-        //    LbDepartureFrom.Text = "From: " + pageData.Selection.Route.StartRegion.Name + " / " + pageData.Selection.SAP.Name;
-        //    LbDepartureSeatCost.Text = pageData.Selection.Seats.ToString() + " Seat(s) x " + pageData.Selection.Price.ToString() + "€";
-        //    LbDepartureBookCost.Text = (pageData.Selection.Seats * pageData.Selection.Price).ToString() + "€";
+        private void UpdateBookingPanel(string startapname, string endapname)
+        {
+            BookingPanel.PanelData.Seats = pageData.Selection.Seats;
+            BookingPanel.PanelData.Cost = pageData.Selection.Price * pageData.Selection.Seats;
+            BookingPanel.PanelData.StartTime = pageData.Selection.Date + pageData.Selection.Time;
+            BookingPanel.PanelData.StartRegionName = pageData.Selection.Route.StartRegion.Name;
+            BookingPanel.PanelData.EndRegionName = pageData.Selection.Route.EndRegion.Name;
+            BookingPanel.PanelData.StartAPName = startapname;
+            BookingPanel.PanelData.EndAPName = endapname;
 
-        //    if (pageData.Selection.Route != null &&
-        //        pageData.Selection.Date != DateTime.MinValue &&
-        //        pageData.Selection.Time != new TimeSpan(-1) &&
-        //        pageData.Selection.Seats != 0 &&
-        //        pageData.Selection.Price != 0)
-        //    {
-        //        BtnDepartureBook.ForeColor = System.Drawing.Color.Green;
-        //        BtnDepartureBook.Enabled = true;
-        //    }
-        //    else
-        //    {
-        //        BtnDepartureBook.ForeColor = System.Drawing.Color.Red;
-        //        BtnDepartureBook.Enabled = false;
-        //    }
-
-        //    PnBook.Visible = true;
-        //}
+            BookingPanel.Visible = true;
+        }
 
         private IEnumerable<Route> GetPossibleRoutes()
         {

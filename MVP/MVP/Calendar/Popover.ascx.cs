@@ -9,6 +9,14 @@ namespace MVP.Calendar
 {
     public partial class Popover : UserControl
     {
+        public class TimeSelectedEventArgs : EventArgs
+        {
+            public TimeSpan TimeSelected;
+            public string Group;
+        }
+
+        public event EventHandler<TimeSelectedEventArgs> TimeSelected;
+
         public IEnumerable<APGroup> DataSource
         {
             get
@@ -57,8 +65,24 @@ namespace MVP.Calendar
             {
                 var timeslot = (TimeSlot)e.Item.DataItem;
                 var control = (LinkButton)e.Item.FindControl("BtnTime");
+                var grouprepeater = (RepeaterItem)((RepeaterItem)((Repeater)sender).Parent).Parent.NamingContainer;
+                var startlabel = (Label)grouprepeater.FindControl("StartAP");
+                var endlabel = (Label)grouprepeater.FindControl("EndAP");
+                string apgroup = startlabel.Text + "," + endlabel.Text;
                 control.Text = timeslot.Time.ToString("hh\\:mm");
+                control.CommandArgument = apgroup;
             }
+        }
+
+        protected void TimeRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            LinkButton button = (LinkButton)e.CommandSource;
+            OnTimeSelected(TimeSpan.Parse(button.Text), (string)e.CommandArgument);
+        }
+
+        protected void OnTimeSelected(TimeSpan time, string group)
+        {
+            TimeSelected?.Invoke(this, new TimeSelectedEventArgs() { TimeSelected = time, Group = group });
         }
     }
 }

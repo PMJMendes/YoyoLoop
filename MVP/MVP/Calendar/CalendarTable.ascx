@@ -24,6 +24,6 @@
 
 <section>
     <div class="hide popover-marker" id="<%= PopoverWrapper %>">
-        <yoyo:Popover runat="server" ID="Popover" />
+        <yoyo:Popover runat="server" ID="Popover" OnTimeSelected="Popover_TimeSelected" />
     </div>
 </section>

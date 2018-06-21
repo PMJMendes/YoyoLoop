@@ -168,6 +168,7 @@ namespace MVP.Services
                 //                    );
                 //}
 
+                //TEMP LOGIC THAT JUST CHECKS DEPARTURES
                 var times = new List<TimeSlot>();
                 foreach (Departure d in model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType))
                 {

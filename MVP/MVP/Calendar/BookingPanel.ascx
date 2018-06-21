@@ -9,7 +9,7 @@
                     /img/calendar-grey@3x.png 3x"
                     class="calendar-grey">
             </div>
-            <div class="col-8"><%= bookingData.StartTime.ToString("dd") %> de <%= bookingData.StartTime.ToString("MMMM") %>, <%= bookingData.StartTime.ToString("dddd") %></div>
+            <div class="col-8"><%= PanelData.StartTime.ToString("dd") %> de <%= PanelData.StartTime.ToString("MMMM") %>, <%= PanelData.StartTime.ToString("dddd") %></div>
                 <div class="col-2 text-right text-uppercase direction">Ida</div>
             </div>
 
@@ -25,7 +25,7 @@
                                 /img/users@3x.png 3x"
                                 class="users">
                         </div>
-                        <div class="col-8"><strong><%= bookingData.Seats.ToString() %> <%= bookingData.Seats == 1 ? "Lugar" : "Lugares" %></strong></div>
+                        <div class="col-8"><strong><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %></strong></div>
                     </div>
 
                     <!--HORA-->
@@ -36,7 +36,7 @@
                                 /img/clock@3x.png 3x"
                                 class="clock">
                         </div>
-                        <div class="col-8"><strong><%= bookingData.StartTime.ToString("HH\\:mm") %></strong></div>
+                        <div class="col-8"><strong><%= PanelData.StartTime.ToString("HH\\:mm") %></strong></div>
                     </div>
 
                     <!--PREÇO-->
@@ -47,7 +47,7 @@
                             /img/cart@3x.png 3x"
                             class="clock">
                         </div>
-                        <div class="col-8"><strong><%= bookingData.Cost.ToString("C") %></strong></div>
+                        <div class="col-8"><strong><%= PanelData.Cost.ToString("C") %></strong></div>
                     </div>
 
             </div>
@@ -61,10 +61,10 @@
                     <div class="col-12 pl-4">Origem</div>
                 </div>
                 <div class="row p-1 text-uppercase city-name">
-                    <div class="col-12 pl-4"><%= bookingData.StartRegionName %></div>
+                    <div class="col-12 pl-4"><%= PanelData.StartRegionName %></div>
                 </div>
                 <div class="row p-1 pt-0 access-point">
-                    <div class="col-12 pl-4"><%= bookingData.StartAPName %></div>
+                    <div class="col-12 pl-4"><%= PanelData.StartAPName %></div>
                 </div>
             </div>
         </div>
@@ -75,10 +75,10 @@
                     <div class="col-12 pl-4">Destino</div>
                 </div>
                 <div class="row p-1 text-uppercase city-name">
-                    <div class="col-12 pl-4"><%= bookingData.EndRegionName %></div>
+                    <div class="col-12 pl-4"><%= PanelData.EndRegionName %></div>
                 </div>
                 <div class="row p-1 pt-0 access-point">
-                    <div class="col-12 pl-4"><%= bookingData.EndAPName %></div>
+                    <div class="col-12 pl-4"><%= PanelData.EndAPName %></div>
                 </div>
             </div>
         </div>
@@ -89,10 +89,10 @@
             <div class="col-4 pl-4 text-uppercase total">Total</div>
             <div class="col-8 pr-4 text-right">
                 <div class="row">
-                    <div class="col-12"><%= bookingData.Seats.ToString() %> <%= bookingData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= (bookingData.Seats != 0 ? (bookingData.Cost / bookingData.Seats) : 0).ToString("C") %></span></div>
+                    <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= (PanelData.Seats != 0 ? (PanelData.Cost / PanelData.Seats) : 0).ToString("C") %></span></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 total-price"><%= bookingData.Cost.ToString("C") %></div>
+                    <div class="col-12 total-price"><%= PanelData.Cost.ToString("C") %></div>
                 </div>
             </div>
         </div>
