@@ -157,13 +157,22 @@ namespace MVP.Services
 
                 var tripGroups = departures.SelectMany(
                         d => d.Trips.DefaultIfEmpty(),
-                        (d, t) => new { Trip = t == null ? null : new { SAP = t.StartAccessPoint, EAP = t.EndAccessPoint }, Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats), Departure = d.Departure }
-                    ).GroupBy(t => t.Trip).ToList();
+                        (d, t) => new
+                        {
+                            APs = new
+                            {
+                                SAP = t == null ? model.AccessPoint.Where(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId).FirstOrDefault() : t.StartAccessPoint,
+                                DAP = t == null ? model.AccessPoint.Where(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId).FirstOrDefault() : t.EndAccessPoint
+                            },
+                            Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats),
+                            Departure = d.Departure
+                        }
+                    ).GroupBy(t => t.APs).OrderByDescending(t => (t.Key.SAP.AccessPointId == state.Selection.SAP.AccessPointId) && (t.Key.DAP.AccessPointId == state.Selection.DAP.AccessPointId)).ToList();
 
                 return tripGroups.Select(d => new APGroup
                 {
-                    StartAPName = (d.Key == null ? state.Selection.SAP : d.Key.SAP).Name,
-                    EndAPName = (d.Key == null ? state.Selection.DAP : d.Key.EAP).Name,
+                    StartAPName = d.Key.SAP.Name,
+                    EndAPName = d.Key.DAP.Name,
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
                         Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
