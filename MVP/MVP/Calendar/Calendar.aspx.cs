@@ -55,6 +55,12 @@ namespace MVP.Calendar
             DdlEndAP.SelectedText = aps.Select(ap => ap.Name).FirstOrDefault();
 
             CheckParams();
+            if (DdlStartRegion.DataSource.Count() == 1)
+            {
+                var item = DdlStartRegion.DataSource.First();
+                DdlStartRegion.SelectedText = item.Text;
+                DdlStartRegion_ItemSelected(this.FindControl("DdlStartRegion"), new DropdownMenuButton.ItemSelectedEventArgs() { Item = item.Value });
+            }
         }
 
         protected void DdlStartRegion_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)
@@ -87,14 +93,7 @@ namespace MVP.Calendar
         {
             string s = e.Item.ToString();
             localData.Values.Seats = s;
-            if(s == "1")
-            {
-                DdlSeats.SelectedText = s + " lugar";
-            }
-            else
-            {
-                DdlSeats.SelectedText = s + " lugares";
-            }
+            DdlSeats.SelectedText = s + (s == "1" ? " lugar" : " lugares");
 
             CheckParams();
         }
@@ -231,26 +230,6 @@ namespace MVP.Calendar
         //    PnBook.Visible = false;
         //}
 
-        //protected void BtnDebug_Click(object sender, EventArgs e)
-        //{
-        //    Button button = (Button)sender;
-        //    switch (button.Text)
-        //    {
-        //        case "Debug":
-        //            GetDebugData();
-        //            GvDebug.DataBind();
-        //            GvDebug.Visible = true;
-        //            LbDebug.Visible = true;
-        //            BtnDebugOff.Visible = true;
-        //            break;
-        //        case "OFF":
-        //            GvDebug.Visible = false;
-        //            LbDebug.Visible = false;
-        //            BtnDebugOff.Visible = false;
-        //            break;
-        //    }
-        //}
-
         private IEnumerable<ListItem> DdlEndRegion_GetData()
         {
             return pageData.Routes.Select(r => r.EndRegion).Distinct().Select(lr => new ListItem(lr.Name, lr.LoopedRegionId.ToString()));
@@ -346,14 +325,8 @@ namespace MVP.Calendar
                 ProcessQueryString();
                 Session["local.data"] = localData;
             }
-
-            GetDebugData();
         }
 
-        public IEnumerable<object> GvDebug_GetData()
-        {
-            return pageData.DaySlots;
-        }
 
         private void CheckParams()
         {
@@ -367,6 +340,7 @@ namespace MVP.Calendar
             {
                 ClearSelection();
                 localData.Values.CalSelectedDate = DateTime.MinValue;
+                pnCalendar.Visible = false;
             }
             else
             {
@@ -429,14 +403,13 @@ namespace MVP.Calendar
             if (calupdate)
             {
                 GetCalendarData();
+                pnCalendar.Visible = true;
             }
 
             //    if (bookupdate)
             //    {
             //        UpdateBookingPanel();
             //    }
-
-            //    GetDebugData();
         }
 
         //private void DrawTimeSelectionPopup(DateTime date, List<TimeSlot> slots)
@@ -558,13 +531,16 @@ namespace MVP.Calendar
         {
             DdlEndRegion.DataSource = DdlEndRegion_GetData();
             DdlEndRegion.ListDataBind();
+            if (DdlEndRegion.DataSource.Count() == 1)
+            {
+                DdlEndRegion_ItemSelected(this, new DropdownMenuButton.ItemSelectedEventArgs() { Item = DdlEndRegion.DataSource.First() });
+            }
             DdlSeats.DataSource = DdlSeats_GetData();
             DdlSeats.ListDataBind();
             DdlSeats.SelectedText = "1 lugar";
             localData.Values.Seats = "1";
             CalDate.VisibleDate = localData.Values.CalVisibleDate;
             CalDate.SelectedDate = new DateTime();
-            GetCalendarData();
         }
 
         private void ProcessQueryString()
@@ -596,38 +572,16 @@ namespace MVP.Calendar
                     localData.Values.StartAP = Guid.Empty.ToString();
                     DdlStartRegion.SelectedText = "";
                     DdlStartAP.SelectedText = "";
+                    CheckParams();
+                    if (DdlStartRegion.DataSource.Count() == 1)
+                    {
+                        var item = DdlStartRegion.DataSource.First();
+                        DdlStartRegion.SelectedText = item.Text;
+                        DdlStartRegion_ItemSelected(this.FindControl("DdlStartRegion"), new DropdownMenuButton.ItemSelectedEventArgs() { Item = item.Value });
+                    }
                 }
             }
         }
-
-        //protected void CalDate_DayRender(object sender, DayRenderEventArgs e)
-        //{
-        //    var dayslot = pageData.DaySlots.Where(d => d.Day == e.Day.Date).FirstOrDefault();
-
-        //    if (dayslot != null)
-        //    {
-        //        e.Day.IsSelectable = true;
-        //        Label lb = new Label();
-        //        lb.Text = " <br>" + dayslot.Price.ToString() + "€";
-        //        switch (dayslot.Status)
-        //        {
-        //            case SlotStatus.RED:
-        //                lb.ForeColor = System.Drawing.Color.Red;
-        //                break;
-        //            case SlotStatus.GREEN:
-        //                lb.ForeColor = System.Drawing.Color.Green;
-        //                break;
-        //            case SlotStatus.YELLOW:
-        //                lb.ForeColor = System.Drawing.Color.Yellow;
-        //                break;
-        //        }
-        //        e.Cell.Controls.Add(lb);
-        //    }
-        //    else
-        //    {
-        //        e.Day.IsSelectable = false;
-        //    }
-        //}
 
         private void ClearSelection()
         {
@@ -643,64 +597,6 @@ namespace MVP.Calendar
                 Trip = null
             };
             pageData.DaySlots.Clear();
-        }
-
-        private void GetDebugData()
-        {
-            //LbDebug.Text = "localData.Values";
-            //LbDebug.Text += "<br />StartRegion: " + localData.Values.StartRegion + " (CONTROL: " + DdlStartRegion.SelectedValue + ")";
-            //LbDebug.Text += "<br />StartAP: " + localData.Values.StartAP + " (CONTROL: " + DdlStartAP.SelectedValue + ")";
-            //LbDebug.Text += "<br />EndRegion: " + localData.Values.EndRegion + " (CONTROL: " + DdlEndRegion.SelectedValue + ")";
-            //LbDebug.Text += "<br />EndAP: " + localData.Values.EndAP + " (CONTROL: " + DdlEndAP.SelectedValue + ")";
-            //LbDebug.Text += "<br />Seats: " + localData.Values.Seats + " (CONTROL: " + DdlSeats.SelectedValue + ")";
-            //LbDebug.Text += "<br />CalVisibleDate: " + localData.Values.CalVisibleDate + " (CONTROL: " + CalDate.VisibleDate + ")";
-            //LbDebug.Text += "<br />CalSelectedDate: " + localData.Values.CalSelectedDate + " (CONTROL: " + CalDate.SelectedDate + ")";
-            //LbDebug.Text += "<br />Time: " + localData.Values.Time;
-
-            /*
-            if (pageData.Selection.Route == null)
-            {
-                LbDebug.Text = "No route selected";
-            }
-            else
-            {
-                LbDebug.Text = "Route: " + pageData.Selection.Route.StartRegion.Name + " to " + pageData.Selection.Route.EndRegion.Name + "<br />" +
-                               "SAP: " + pageData.Selection.SAP.Name + "<br />" +
-                               "DAP: " + pageData.Selection.DAP.Name + "<br />";
-                if (pageData.Selection.Date != DateTime.MinValue)
-                {
-                    LbDebug.Text += "Date: " + pageData.Selection.Date.ToString("dd-MMM-yyyy") + "<br />";
-                }
-                else
-                {
-                    LbDebug.Text += "Date: <br />";
-                }
-                if (pageData.Selection.Time != new TimeSpan(-1))
-                {
-                    LbDebug.Text += "Time: " + pageData.Selection.Time.ToString() + "<br />";
-                }
-                else
-                {
-                    LbDebug.Text += "Time: <br />";
-                }
-                if (pageData.Selection.Price != 0)
-                {
-                    LbDebug.Text += "Price: " + pageData.Selection.Price.ToString() + "€<br />";
-                }
-                else
-                {
-                    LbDebug.Text += "Price: <br/>";
-                }
-                if (pageData.Selection.Seats != 0)
-                {
-                    LbDebug.Text += "Seats: " + pageData.Selection.Seats.ToString();
-                }
-                else
-                {
-                    LbDebug.Text += "Seats: ";
-                }
-            }
-            */
         }
     }
 }
