@@ -11,7 +11,7 @@ namespace MVP.Calendar
         public class DaySelectedEventArgs : EventArgs
         {
             public DateTime DaySelected;
-            public CalendarDay.DayFlag DayStatus;
+            public string PriceText;
         }
 
         public event EventHandler<DaySelectedEventArgs> DaySelected;
@@ -80,7 +80,7 @@ namespace MVP.Calendar
             this.DataSource = this.DataSource;
             WeekRepeater.DataBind();
             OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date,
-                                                     DayStatus = control.Flag
+                                                     PriceText = control.PriceText
                                                     });
         }
 

@@ -103,19 +103,13 @@ namespace MVP.Calendar
             localData.Values.CalSelectedDate = e.DaySelected;
             CheckParams();
             
-            if(e.DaySelected.Date < DateTime.Today)
-            {
-                return;
-            }
-            if(e.DayStatus != CalendarDay.DayFlag.Available &&
-               e.DayStatus != CalendarDay.DayFlag.Fully &&
-               e.DayStatus != CalendarDay.DayFlag.Limited)
+            if(e.DaySelected.Date < DateTime.Today || e.PriceText == "")
             {
                 return;
             }
 
             var timeslots = service.GetTimeSlots(pageData);
-            if(timeslots.Count() == 0)
+            if(!timeslots.Any())
             {
                 return;
             }
