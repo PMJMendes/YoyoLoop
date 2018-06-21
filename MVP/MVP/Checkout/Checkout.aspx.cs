@@ -53,7 +53,7 @@ namespace MVP.Checkout
 
             // Charge sucessful
             service.UpdateBooking(pageData.BookingId, BookingStatus.BOOKED);
-            Response.Redirect("../Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+            Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
         }
 
         private void InitData()

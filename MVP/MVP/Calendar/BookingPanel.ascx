@@ -106,7 +106,7 @@
                 </div>
                 <div class="row p-4">
                     <div class="col-12 text-center">
-                        <button class="btn btn-light btn-xl text-uppercase" >Reservar</button>
+                        <button runat="server" ID="BtnBook" OnServerClick="BtnBook_Click" Class="btn btn-light btn-xl text-uppercase" >Reservar</button>
                     </div>
                 </div>
             </div>

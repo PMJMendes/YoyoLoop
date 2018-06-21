@@ -364,7 +364,7 @@
                     <!-- END OF PROXIMA VIAGEM -->
 
                     <!-- BOOKING PANEL -->
-                    <yoyo:BookingPanel runat="server" ID="BookingPanel" Visible="false" />
+                    <yoyo:BookingPanel runat="server" ID="BookingPanel" OnBookingSelected="BookingPanel_BookingSelected" Visible="false" />
 
                 </div>
                 <!-- END OF LATERAL -->

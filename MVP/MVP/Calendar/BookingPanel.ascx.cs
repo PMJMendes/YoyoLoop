@@ -9,12 +9,17 @@ namespace MVP.Calendar
 {
     public partial class BookingPanel : System.Web.UI.UserControl
     {
+        public class BookingSelectedEventArgs : EventArgs
+        {
+            public string Selected_StartAPName;
+            public string Selected_EndAPName;
+        }
+
+        public event EventHandler<BookingSelectedEventArgs> BookingSelected;
+
         [Serializable]
         public class BookingData 
         {
-            public Guid? DepartureID { get; set; }
-            public Guid? TripID { get; set; }
-
             public int Seats { get; set; }
             public decimal Cost { get; set; }
 
@@ -49,8 +54,6 @@ namespace MVP.Calendar
         {
             PanelData = new BookingData
             {
-                DepartureID = null,
-                TripID = null,
                 Seats = 1,
                 Cost = 0,
                 StartTime = DateTime.MinValue,
@@ -59,6 +62,20 @@ namespace MVP.Calendar
                 EndRegionName = "REGIAO DE DESTINO",
                 EndAPName = "Paragem de destino"
             };
+        }
+
+        protected void BtnBook_Click(object sender, EventArgs e)
+        {
+            OnBookingSelected(new BookingSelectedEventArgs
+            {
+                Selected_StartAPName = PanelData.StartAPName,
+                Selected_EndAPName = PanelData.EndAPName
+            });
+        }
+
+        protected virtual void OnBookingSelected(BookingSelectedEventArgs args)
+        {
+            BookingSelected?.Invoke(this, args);
         }
     }
 }

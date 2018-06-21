@@ -160,33 +160,18 @@ namespace MVP.Calendar
             }
         }
 
-        //protected void BtnDepartureBook_Click(object sender, EventArgs e)
-        //{
-        //    var booking = service.CreateBooking(pageData);
-
-        //    // Will send to the payment confirmation page, for now we use a debug panel to handle payment status
-        //    BtnDepartureBook.Enabled = false;
-        //    LbDebugPayBookingID.Text = booking.BookingId.ToString();
-        //    PnDebugPay.Visible = true;
-        //}
-
-        //protected void BtnDebugPay_Click(object sender, EventArgs e)
-        //{
-        //    Button button = (Button)sender;
-        //    switch (button.Text)
-        //    {
-        //        case "PAY":
-        //            service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.BOOKED);
-        //            break;
-        //        case "CANCEL":
-        //            service.UpdateBooking(Guid.Parse(LbDebugPayBookingID.Text), BookingStatus.CANCELLED);
-        //            break;
-        //        case "IGNORE":
-        //            break;
-        //    }
-        //    PnDebugPay.Visible = false;
-        //    PnBook.Visible = false;
-        //}
+        protected void BookingPanel_BookingSelected(object sender, BookingPanel.BookingSelectedEventArgs e)
+        {
+            if(User?.Identity.IsAuthenticated == true)
+            {
+                var booking = service.CreateBooking(pageData, e.Selected_StartAPName, e.Selected_EndAPName);
+                Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(GetType(), "showRegistarModalKey", "$('#registerModal').modal('show');", true);
+            }
+        }
 
         private IEnumerable<ListItem> DdlEndRegion_GetData()
         {
