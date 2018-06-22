@@ -19,7 +19,7 @@
                     <div class="row pt-2 pr-4 pb-2 pl-4">
                         <asp:Repeater ID="TimeRepeater" runat="server" OnItemDataBound="TimeRepeater_ItemDataBound" OnItemCommand="TimeRepeater_ItemCommand">
                             <ItemTemplate>
-                                    <div class="col-6"><asp:LinkButton runat="server" ID="BtnTime" class="btn btn-select" /></div>
+                                    <div class="col-6"><asp:LinkButton runat="server" ID="BtnTime" CssClass="btn btn-select" /></div>
                             </ItemTemplate>
                         </asp:Repeater>
                     </div>

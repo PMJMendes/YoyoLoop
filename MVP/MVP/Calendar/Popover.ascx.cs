@@ -71,6 +71,36 @@ namespace MVP.Calendar
                 string apgroup = startlabel.Text + "," + endlabel.Text;
                 control.Text = timeslot.Departure.Time.ToString("hh\\:mm");
                 control.CommandArgument = apgroup;
+                switch (timeslot.Status) // Colors to be replaced by styles
+                {
+                    case SlotStatus.GREEN:
+                        control.BackColor = System.Drawing.Color.FromArgb(46, 204, 113);
+                        control.ForeColor = System.Drawing.Color.White;
+                        break;
+                    case SlotStatus.YELLOW:
+                        control.BackColor = System.Drawing.Color.FromArgb(243, 156, 18);
+                        control.ForeColor = System.Drawing.Color.Black;
+                        break;
+                    case SlotStatus.RED:
+                        control.BackColor = System.Drawing.Color.FromArgb(255, 95, 109);
+                        control.ForeColor = System.Drawing.Color.White;
+                        break;
+                    case SlotStatus.BLACK:
+                        control.BackColor = System.Drawing.Color.LightGray;
+                        control.ForeColor = System.Drawing.Color.DarkGray;
+                        control.Enabled = false;
+                        break;
+                    case SlotStatus.NONE:
+                        control.BackColor = System.Drawing.Color.LightGray;
+                        control.ForeColor = System.Drawing.Color.DarkGray;
+                        control.Enabled = false;
+                        break;
+                    default:
+                        control.Visible = false;
+                        control.Enabled = false;
+                        break;
+                }
+
             }
         }
 

@@ -120,10 +120,8 @@ namespace MVP.Calendar
         protected void CalDate_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
         {
             localData.Values.Time = e.TimeSelected;
-            Char delimiter = ',';
-            string[] apgroup = e.Group.Split(delimiter);
-            string startapname = apgroup[0];
-            string endapname = apgroup[1];
+            string startapname = e.Group.Split(',')[0];
+            string endapname = e.Group.Split(',')[1];
 
             if(startapname != pageData.Selection.SAP.Name)
             {
