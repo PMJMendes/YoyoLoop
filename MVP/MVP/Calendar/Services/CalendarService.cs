@@ -185,19 +185,11 @@ namespace MVP.Services
             }
         }
 
-        public Booking CreateBooking(CalendarDTO state, string startapname, string endapname)
+        public Booking CreateBooking(CalendarDTO state)
         {
             using (var model = new EntityModel())
             {
                 var trip = new Trip();
-                if(state.Selection.SAP.Name != startapname)
-                {
-                    state.Selection.SAP = state.Selection.Route.StartRegion.AccessPoints.Single(ap => ap.Name == startapname);
-                }
-                if (state.Selection.DAP.Name != endapname)
-                {
-                    state.Selection.DAP = state.Selection.Route.EndRegion.AccessPoints.Single(ap => ap.Name == endapname);
-                }
 
                 if (state.Selection.Trip == null)
                 {

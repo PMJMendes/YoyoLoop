@@ -120,12 +120,25 @@ namespace MVP.Calendar
         protected void CalDate_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
         {
             localData.Values.Time = e.TimeSelected;
-            CheckParams();
             Char delimiter = ',';
             string[] apgroup = e.Group.Split(delimiter);
             string startapname = apgroup[0];
             string endapname = apgroup[1];
-            UpdateBookingPanel(startapname, endapname);
+
+            if(startapname != pageData.Selection.SAP.Name)
+            {
+                localData.Values.StartAP = pageData.Selection.Route.StartRegion.AccessPoints.Single(ap => ap.Name == startapname).AccessPointId.ToString();
+                DdlStartAP.SelectedText = startapname;
+            }
+
+            if (endapname != pageData.Selection.DAP.Name)
+            {
+                localData.Values.EndAP = pageData.Selection.Route.EndRegion.AccessPoints.Single(ap => ap.Name == endapname).AccessPointId.ToString();
+                DdlEndAP.SelectedText = endapname;
+            }
+
+            CheckParams();
+            UpdateBookingPanel();
         }
 
         protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
@@ -164,7 +177,7 @@ namespace MVP.Calendar
         {
             if(User?.Identity.IsAuthenticated == true)
             {
-                var booking = service.CreateBooking(pageData, e.Selected_StartAPName, e.Selected_EndAPName);
+                var booking = service.CreateBooking(pageData);
                 Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
             }
             else
@@ -282,9 +295,8 @@ namespace MVP.Calendar
             {
                 ClearSelection();
                 localData.Values.CalSelectedDate = DateTime.MinValue;
+                ClearBookingPanel();
                 pnCalendar.Visible = false;
-                BookingPanel.Init_Data();
-                BookingPanel.Visible = false;
             }
             else
             {
@@ -293,19 +305,21 @@ namespace MVP.Calendar
                     pageData.Selection.Route = route;
                     pageData.Selection.Date =
                     localData.Values.CalSelectedDate = DateTime.MinValue;
-
+                    ClearBookingPanel();
                     calupdate = true;
                 }
 
                 if (pageData.Selection.SAP != sap) // New SAP
                 {
                     pageData.Selection.SAP = sap;
+                    ClearBookingPanel();
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                 }
 
                 if (pageData.Selection.DAP != dap) // New DAP
                 {
                     pageData.Selection.DAP = dap;
+                    ClearBookingPanel();
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                 }
 
@@ -313,11 +327,13 @@ namespace MVP.Calendar
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
                     pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
+                    ClearBookingPanel();
                 }
 
                 if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
                 {
                     pageData.Selection.Seats = int.Parse(localData.Values.Seats);
+                    ClearBookingPanel();
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
                 }
 
@@ -334,15 +350,21 @@ namespace MVP.Calendar
             }
         }
 
-        private void UpdateBookingPanel(string startapname, string endapname)
+        private void ClearBookingPanel()
+        {
+            BookingPanel.Init_Data();
+            BookingPanel.Visible = false;
+        }
+
+        private void UpdateBookingPanel()
         {
             BookingPanel.PanelData.Seats = pageData.Selection.Seats;
             BookingPanel.PanelData.Cost = pageData.Selection.Price * pageData.Selection.Seats;
             BookingPanel.PanelData.StartTime = pageData.Selection.Date + pageData.Selection.Time;
             BookingPanel.PanelData.StartRegionName = pageData.Selection.Route.StartRegion.Name;
             BookingPanel.PanelData.EndRegionName = pageData.Selection.Route.EndRegion.Name;
-            BookingPanel.PanelData.StartAPName = startapname;
-            BookingPanel.PanelData.EndAPName = endapname;
+            BookingPanel.PanelData.StartAPName = pageData.Selection.SAP.Name;
+            BookingPanel.PanelData.EndAPName = pageData.Selection.DAP.Name;
 
             BookingPanel.Visible = true;
         }
