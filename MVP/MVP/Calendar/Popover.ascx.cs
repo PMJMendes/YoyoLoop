@@ -79,7 +79,7 @@ namespace MVP.Calendar
                         break;
                     case SlotStatus.YELLOW:
                         control.BackColor = System.Drawing.Color.FromArgb(243, 156, 18);
-                        control.ForeColor = System.Drawing.Color.Black;
+                        control.ForeColor = System.Drawing.Color.White;
                         break;
                     case SlotStatus.RED:
                         control.BackColor = System.Drawing.Color.FromArgb(255, 95, 109);
