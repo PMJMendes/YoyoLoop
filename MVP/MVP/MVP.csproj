@@ -891,6 +891,10 @@
     <Compile Include="Migrations\201806071314329_BookingTicketCode.Designer.cs">
       <DependentUpon>201806071314329_BookingTicketCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806230231569_BookingUser.cs" />
+    <Compile Include="Migrations\201806230231569_BookingUser.Designer.cs">
+      <DependentUpon>201806230231569_BookingUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1050,6 +1054,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806071314329_BookingTicketCode.resx">
       <DependentUpon>201806071314329_BookingTicketCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806230231569_BookingUser.resx">
+      <DependentUpon>201806230231569_BookingUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
