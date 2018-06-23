@@ -5,6 +5,17 @@
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
 <%@ Register Src="BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 
+<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+    <style type="text/css">
+        .homepage__navbar {
+            background: unset
+        }
+            .homepage__navbar a {
+                color: #fbfbfb !important
+            }
+     </style>
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <header class="head text-center d-flex pb-5">
