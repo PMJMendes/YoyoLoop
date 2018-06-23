@@ -175,7 +175,7 @@ namespace MVP.Services
                     EndAPName = d.Key.DAP.Name,
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
-                        Status = dt.Occupancy + state.Selection.Seats >= capacity ? SlotStatus.BLACK :
+                        Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
                             dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
                             dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
                             lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
@@ -191,20 +191,35 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
-                trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
+                trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
                 if(trip == null)
                 {
                     return true;
                 }
                 else
                 {
-                    if(trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats >= capacity)
+                    if(trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
                     {
                         return false;
                     }
                     else
                     {
                         return true;
+                    }
+                }
+            }
+        }
+
+        public void CheckPending()
+        {
+            using (var model = new EntityModel())
+            {
+                TimeSpan timeout = model.Settings.Select(s => s.BookTimeout).First();
+                foreach (Booking b in model.Booking.Where(b => b.Status == BookingStatus.PENDING))
+                {
+                    if(DateTime.Now - b.CreationTime > timeout)
+                    {
+                        UpdateBooking(b.BookingId, BookingStatus.CANCELLED);
                     }
                 }
             }

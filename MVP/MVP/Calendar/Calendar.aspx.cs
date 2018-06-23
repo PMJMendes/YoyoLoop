@@ -38,6 +38,7 @@ namespace MVP.Calendar
         protected void Page_Load(object sender, EventArgs e)
         {
             InitData();
+            service.CheckPending();
         }
 
         protected void DdlEndRegion_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)
