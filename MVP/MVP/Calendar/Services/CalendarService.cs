@@ -323,14 +323,14 @@ namespace MVP.Services
 
                 if (trip.Status == TripStatus.PENDING)
                 {
-                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
+                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Any())
                     {
                         trip.Status = TripStatus.BOOKED;
                         model.SaveChanges();
                         return;
                     }
 
-                    if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
+                    if (!bookings.Where(s => s.Status == BookingStatus.PENDING).Any())
                     {
                         trip.Status = TripStatus.CANCELLED;
                         model.SaveChanges();
