@@ -17,7 +17,7 @@ namespace MVP.Controls
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = TbRegisterEmail.Text, Email = TbRegisterEmail.Text };
+            var user = new ApplicationUser() { UserName = TbRegisterEmail.Text, Email = TbRegisterEmail.Text, Name = TbRegisterName.Text };
             IdentityResult result = manager.Create(user, TbRegisterPassword.Text);
             if (result.Succeeded)
             {
