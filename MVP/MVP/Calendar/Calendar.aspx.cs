@@ -98,6 +98,38 @@ namespace MVP.Calendar
             CheckParams();
         }
 
+        protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            switch (button.ID)
+            {
+                case "BtnMonthBack":
+                    localData.Values.CalVisibleDate =
+                    CalDate.VisibleDate = localData.Values.CalVisibleDate.AddMonths(-1);
+                    break;
+                case "BtnMonthFwd":
+                    localData.Values.CalVisibleDate =
+                    CalDate.VisibleDate = localData.Values.CalVisibleDate.AddMonths(1);
+                    break;
+            }
+            GetCalendarData();
+        }
+
+        protected void CalBtnMonthToday(object sender, EventArgs e)
+        {
+            DateTime today = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            if (localData.Values.CalVisibleDate == today)
+            {
+                return;
+            }
+            else
+            {
+                localData.Values.CalVisibleDate =
+                CalDate.VisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+                GetCalendarData();
+            }
+        }
+
         protected void CalDate_DaySelected(object sender, CalendarTable.DaySelectedEventArgs e)
         {
             localData.Values.CalSelectedDate = e.DaySelected;
@@ -137,38 +169,6 @@ namespace MVP.Calendar
 
             CheckParams();
             UpdateBookingPanel();
-        }
-
-        protected void CalBtnMonthControl(object sender, ImageClickEventArgs e)
-        {
-            ImageButton button = (ImageButton)sender;
-            switch (button.ID)
-            {
-                case "BtnMonthBack":
-                    localData.Values.CalVisibleDate = 
-                    CalDate.VisibleDate = localData.Values.CalVisibleDate.AddMonths(-1);
-                    break;
-                case "BtnMonthFwd":
-                    localData.Values.CalVisibleDate =
-                    CalDate.VisibleDate = localData.Values.CalVisibleDate.AddMonths(1);
-                    break;
-            }
-            GetCalendarData();
-        }
-
-        protected void CalBtnMonthToday(object sender, EventArgs e)
-        {
-            DateTime today = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
-            if (localData.Values.CalVisibleDate == today)
-            {
-                return;
-            }
-            else
-            {
-                localData.Values.CalVisibleDate =
-                CalDate.VisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
-                GetCalendarData();
-            }
         }
 
         protected void BookingPanel_BookingSelected(object sender, BookingPanel.BookingSelectedEventArgs e)
