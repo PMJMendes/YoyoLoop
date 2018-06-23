@@ -10,6 +10,7 @@ using MVP.Services;
 using MVP.Models;
 using MVP.Models.Entities;
 using Stripe;
+using Microsoft.AspNet.Identity;
 
 namespace MVP.Checkout
 {
@@ -23,6 +24,11 @@ namespace MVP.Checkout
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(User?.Identity.IsAuthenticated == false)
+            {
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
+                //Response.Redirect("/");
+            }
             InitData();
         }
 
@@ -105,13 +111,18 @@ namespace MVP.Checkout
                     };
 
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
-                    //Response.Redirect("../Calendar/Calendar");
+                    //Response.Redirect("/Calendar/Calendar");
+                }
+                else if (pageData.UserId != User?.Identity.GetUserId())
+                {
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
+                    //Response.Redirect("/Calendar/Calendar");
                 }
             }
             else
             {
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
-                //Response.Redirect("../Calendar/Calendar");
+                //Response.Redirect("/Calendar/Calendar");
             }
         }
     }

@@ -37,6 +37,7 @@ namespace MVP.Services
                 else
                 {
                     result.BookingId = booking.BookingId;
+                    result.UserId = booking.UserId;
                     result.Seats = booking.Seats;
                     result.Cost = booking.Cost;
                     result.StartTime = booking.Trip.StartTime;

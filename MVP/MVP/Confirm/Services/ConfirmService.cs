@@ -14,6 +14,7 @@ namespace MVP.Services
         {
             var result = new ConfirmDTO {
                                             BookingId = Guid.Empty,
+                                            UserId = "",
                                             Seats = 0,
                                             Cost = 0,
                                             TicketCode = "#MYTICKETYO",
@@ -47,6 +48,7 @@ namespace MVP.Services
                 else
                 {
                     result.BookingId = booking.BookingId;
+                    result.UserId = booking.UserId;
                     result.Seats = booking.Seats;
                     result.Cost = booking.Cost;
                     result.TicketCode = booking.TicketCode;
