@@ -146,13 +146,13 @@ namespace MVP.Calendar
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;
                 case SlotStatus.NONE:
-                    control.InfoText = "";
-                    control.Flag = CalendarDay.DayFlag.Unavailable;
-                    break;
                 default:
                     control.InfoText = "";
-                    control.PriceText = "";
-                    if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
+                    if(control.PriceText != "")
+                    {
+                        control.Flag = CalendarDay.DayFlag.Unavailable;
+                    }
+                    else if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
                     {
                         control.Flag = CalendarDay.DayFlag.Weekend;
                     }
