@@ -231,26 +231,9 @@ namespace MVP.Calendar
 
             DateTime lastdate = firstdate + TimeSpan.FromDays(41);
 
-            if(pageData.Selection.Route == null)
-            {
-                List<DaySlot> days = new List<DaySlot>();
-                var date = firstdate;
-
-                while (date <= lastdate)
-                {
-                    days.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
-                    date = date + TimeSpan.FromDays(1);
-                }
-
-                CalDate.DataSource = days;
-                CalDate.DataBind();
-            }
-            else
-            {
-                pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
-                CalDate.DataSource = pageData.DaySlots;
-                CalDate.DataBind();
-            }
+            pageData.DaySlots = service.GetDaySlots(pageData, firstdate, lastdate);
+            CalDate.DataSource = pageData.DaySlots;
+            CalDate.DataBind();
 
             return;
         }

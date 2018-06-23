@@ -145,6 +145,10 @@ namespace MVP.Calendar
                     control.InfoText = "Esgotado";
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;
+                case SlotStatus.NONE:
+                    control.InfoText = "";
+                    control.Flag = CalendarDay.DayFlag.Unavailable;
+                    break;
                 default:
                     control.InfoText = "";
                     control.PriceText = "";
