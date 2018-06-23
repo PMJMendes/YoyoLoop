@@ -247,7 +247,7 @@ namespace MVP.Services
                 {
                     BookingId = Guid.NewGuid(),
                     Status = BookingStatus.PENDING,
-                    User = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(HttpContext.Current.User.Identity.GetUserId()),
+                    UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
                     Trip = model.Trip.Single(t => t.TripId == trip.TripId),
                     Seats = state.Selection.Seats,
