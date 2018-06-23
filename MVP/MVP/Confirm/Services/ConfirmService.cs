@@ -5,33 +5,33 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using Microsoft.AspNet.Identity;
 
 namespace MVP.Services
 {
     public class ConfirmService
     {
-        public ConfirmDTO GetInitialData()
+        public ConfirmDTO GetInitialData(string userid)
         {
-            var result = new ConfirmDTO {
-                                            BookingId = Guid.Empty,
-                                            UserId = "",
-                                            Seats = 0,
-                                            Cost = 0,
-                                            TicketCode = "#MYTICKETYO",
-                                            StartTime = DateTime.Now,
-                                            StartRegionName = "Start Region",
-                                            StartAPName = "Start AP",
-                                            EndRegionName = "End Region",
-                                            EndAPName = "End AP"
-                                        };
-
+            var result = new ConfirmDTO
+            {
+                BookingId = Guid.Empty,
+                UserId = "",
+                UserEmail = "email@email.com",
+                Seats = 0,
+                Cost = 0,
+                TicketCode = "#MYTICKETYO",
+                StartTime = DateTime.Now,
+                StartRegionName = "Start Region",
+                StartAPName = "Start AP",
+                EndRegionName = "End Region",
+                EndAPName = "End AP"
+            };
             return result;
         }
 
         public ConfirmDTO GetBooking(Guid id)
         {
-            var result = new ConfirmDTO();
-
             using (var model = new EntityModel())
             {
                 var booking = model.Booking.Where(b => b.BookingId == id && b.Status == BookingStatus.BOOKED)
@@ -43,23 +43,27 @@ namespace MVP.Services
                                            .FirstOrDefault();
                 if (booking == null)
                 {
-                    result = null;
+                    return null;
                 }
                 else
                 {
-                    result.BookingId = booking.BookingId;
-                    result.UserId = booking.UserId;
-                    result.Seats = booking.Seats;
-                    result.Cost = booking.Cost;
-                    result.TicketCode = booking.TicketCode;
-                    result.StartTime = booking.Trip.StartTime;
-                    result.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
-                    result.StartAPName = booking.Trip.StartAccessPoint.Name;
-                    result.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
-                    result.EndAPName = booking.Trip.EndAccessPoint.Name;
+                    var result = new ConfirmDTO
+                    {
+                        BookingId = booking.BookingId,
+                        UserId = booking.UserId,
+                        UserEmail = model.Users.Single(u => u.Id == booking.UserId).Email,
+                        Seats = booking.Seats,
+                        Cost = booking.Cost,
+                        TicketCode = booking.TicketCode,
+                        StartTime = booking.Trip.StartTime,
+                        StartRegionName = booking.Trip.StartAccessPoint.Region.Name,
+                        StartAPName = booking.Trip.StartAccessPoint.Name,
+                        EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
+                        EndAPName = booking.Trip.EndAccessPoint.Name
+                    };
+                    return result;
                 }
             }
-            return result;
         }
     }
 }

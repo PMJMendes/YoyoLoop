@@ -36,7 +36,7 @@ namespace MVP.Confirm
 
             if (pageData == null)
             {
-                pageData = service.GetInitialData();
+                pageData = service.GetInitialData(User?.Identity.GetUserId());
                 ProcessQueryString();
                 Session["confirm.data"] = pageData;
             }
@@ -56,6 +56,8 @@ namespace MVP.Confirm
                     pageData = new ConfirmDTO
                     {
                         BookingId = Guid.Empty,
+                        UserId = "",
+                        UserEmail = "email@email.com",
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
@@ -75,7 +77,6 @@ namespace MVP.Confirm
                     //Something went really terribly wrong here - email systems?
                     //Response.Redirect("/Calendar/Calendar");
                 }
-
             }
             else
             {

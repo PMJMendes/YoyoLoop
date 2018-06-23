@@ -19,5 +19,7 @@ namespace MVP.Confirm
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
+
+        public string UserEmail { get; set; }
     }
 }
