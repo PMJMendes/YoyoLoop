@@ -271,12 +271,13 @@ namespace MVP.Calendar
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.StartAP)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
             bool calupdate = false;
+            bool clearbook = false;
 
             if (route == null)
             {
                 ClearSelection();
                 localData.Values.CalSelectedDate = DateTime.MinValue;
-                ClearBookingPanel();
+                clearbook = true;
                 pnCalendar.Visible = false;
             }
             else
@@ -286,21 +287,21 @@ namespace MVP.Calendar
                     pageData.Selection.Route = route;
                     pageData.Selection.Date =
                     localData.Values.CalSelectedDate = DateTime.MinValue;
-                    ClearBookingPanel();
+                    clearbook = true;
                     calupdate = true;
                 }
 
                 if (pageData.Selection.SAP != sap) // New SAP
                 {
                     pageData.Selection.SAP = sap;
-                    ClearBookingPanel();
+                    clearbook = true;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                 }
 
                 if (pageData.Selection.DAP != dap) // New DAP
                 {
                     pageData.Selection.DAP = dap;
-                    ClearBookingPanel();
+                    clearbook = true;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                 }
 
@@ -308,13 +309,13 @@ namespace MVP.Calendar
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
                     pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
-                    ClearBookingPanel();
+                    clearbook = true;
                 }
 
                 if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
                 {
                     pageData.Selection.Seats = int.Parse(localData.Values.Seats);
-                    ClearBookingPanel();
+                    clearbook = true;
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
                 }
 
@@ -324,6 +325,10 @@ namespace MVP.Calendar
                 }
             }
 
+            if (clearbook)
+            {
+                ClearBookingPanel();
+            }
             if (calupdate)
             {
                 GetCalendarData();
