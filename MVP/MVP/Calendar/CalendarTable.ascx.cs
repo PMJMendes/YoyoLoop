@@ -11,9 +11,11 @@ namespace MVP.Calendar
         public class DaySelectedEventArgs : EventArgs
         {
             public DateTime DaySelected;
+            public string PriceText;
         }
 
         public event EventHandler<DaySelectedEventArgs> DaySelected;
+        public event EventHandler<Popover.TimeSelectedEventArgs> TimeSelected;
 
         [System.ComponentModel.Bindable(true)]
         public string PopoverWrapper { get; set; }
@@ -78,7 +80,14 @@ namespace MVP.Calendar
             SelectedDayWrapperID = control.FindControl("DayWrapper").ClientID;
             this.DataSource = this.DataSource;
             WeekRepeater.DataBind();
-            OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date });
+            OnDaySelected(new DaySelectedEventArgs { DaySelected = control.Date,
+                                                     PriceText = control.PriceText
+                                                    });
+        }
+
+        protected void Popover_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
+        {
+            OnTimeSelected(new Popover.TimeSelectedEventArgs { TimeSelected = e.TimeSelected, Group = e.Group });
         }
 
         public void ShowPopover(IEnumerable<APGroup> popoverData)
@@ -136,6 +145,10 @@ namespace MVP.Calendar
                     control.InfoText = "Esgotado";
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;
+                case SlotStatus.NONE:
+                    control.InfoText = "";
+                    control.Flag = CalendarDay.DayFlag.Unavailable;
+                    break;
                 default:
                     control.InfoText = "";
                     control.PriceText = "";
@@ -163,6 +176,11 @@ namespace MVP.Calendar
         protected virtual void OnDaySelected(DaySelectedEventArgs args)
         {
             DaySelected?.Invoke(this, args);
+        }
+
+        protected virtual void OnTimeSelected(Popover.TimeSelectedEventArgs args)
+        {
+            TimeSelected?.Invoke(this, args);
         }
     }
 }

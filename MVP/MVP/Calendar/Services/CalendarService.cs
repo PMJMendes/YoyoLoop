@@ -5,6 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace MVP.Services
 {
@@ -84,10 +87,10 @@ namespace MVP.Services
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
-                .GroupJoin(model.Trip.Where(t => DbFunctions.TruncateTime(t.StartTime) == date).Include(t => t.Bookings),
+                .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                     d => d,
                     t => t.Departure,
-                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Sum(b => b.Seats)).FirstOrDefault() }
+                    (d, ts) => new { Departure = d, Occupancy = ts.Select(t => t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats)).FirstOrDefault() }
                 );
 
             if (!departures.Any())
@@ -138,34 +141,90 @@ namespace MVP.Services
             return (DayType)date.DayOfWeek;
         }
 
-        public List<TimeSlot> GetTimeSlots(CalendarDTO state)
+        public List<APGroup> GetTimeSlots(CalendarDTO state)
+        {
+            var date = state.Selection.Date;
+
+            using (var model = new EntityModel())
+            {
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                var dayType = GetDayType(date);
+
+                var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
+                    .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
+                        d => d,
+                        t => t.Departure,
+                        (d, ts) => new { Departure = d, Trips = ts }
+                    );
+
+                var tripGroups = departures.SelectMany(
+                        d => d.Trips.DefaultIfEmpty(),
+                        (d, t) => new
+                        {
+                            APs = new
+                            {
+                                SAP = t == null ? model.AccessPoint.Where(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId).FirstOrDefault() : t.StartAccessPoint,
+                                DAP = t == null ? model.AccessPoint.Where(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId).FirstOrDefault() : t.EndAccessPoint
+                            },
+                            Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats),
+                            Departure = d.Departure
+                        }
+                    ).GroupBy(t => t.APs).OrderByDescending(t => (t.Key.SAP.AccessPointId == state.Selection.SAP.AccessPointId) && (t.Key.DAP.AccessPointId == state.Selection.DAP.AccessPointId)).ToList();
+
+                return tripGroups.Select(d => new APGroup
+                {
+                    StartAPName = d.Key.SAP.Name,
+                    EndAPName = d.Key.DAP.Name,
+                    Times = d.Select(dt => new TimeSlot {
+                        Departure = dt.Departure,
+                        Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
+                            dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
+                            dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
+                            lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
+                            SlotStatus.GREEN
+                    }).OrderBy(ts => ts.Departure.Time).ToList()
+                }).ToList();
+            }
+        }
+
+        public bool CheckAvailable(CalendarDTO state, out Trip trip)
         {
             using (var model = new EntityModel())
             {
-                var result = new List<TimeSlot>();
-                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-
-                // Will loop through trips here
-
-                foreach (Departure d in state.Selection.Route.Departures.Where(d => d.DayType == GetDayType(state.Selection.Date)))
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
+                trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
+                if(trip == null)
                 {
-                    var slot = new TimeSlot();
-
-                    slot.Time = d.Time;
-
-                    // All slot conditions will be checked here to determine status
-                    if (lastminute)
+                    return true;
+                }
+                else
+                {
+                    if(trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
                     {
-                        slot.Status = SlotStatus.RED;
+                        return false;
                     }
                     else
                     {
-                        slot.Status = SlotStatus.GREEN;
+                        return true;
                     }
-
-                    result.Add(slot);
                 }
-                return result;
+            }
+        }
+
+        public void CheckPending()
+        {
+            using (var model = new EntityModel())
+            {
+                TimeSpan timeout = model.Settings.Select(s => s.BookTimeout).First();
+                foreach (Booking b in model.Booking.Where(b => b.Status == BookingStatus.PENDING))
+                {
+                    if(DateTime.Now - b.CreationTime > timeout)
+                    {
+                        UpdateBooking(b.BookingId, BookingStatus.CANCELLED);
+                    }
+                }
             }
         }
 
@@ -188,6 +247,7 @@ namespace MVP.Services
                 {
                     BookingId = Guid.NewGuid(),
                     Status = BookingStatus.PENDING,
+                    UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
                     Trip = model.Trip.Single(t => t.TripId == trip.TripId),
                     Seats = state.Selection.Seats,
@@ -263,14 +323,14 @@ namespace MVP.Services
 
                 if (trip.Status == TripStatus.PENDING)
                 {
-                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
+                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Any())
                     {
                         trip.Status = TripStatus.BOOKED;
                         model.SaveChanges();
                         return;
                     }
 
-                    if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
+                    if (!bookings.Where(s => s.Status == BookingStatus.PENDING).Any())
                     {
                         trip.Status = TripStatus.CANCELLED;
                         model.SaveChanges();

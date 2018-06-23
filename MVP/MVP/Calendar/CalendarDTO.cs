@@ -40,7 +40,7 @@ namespace MVP.Calendar
 
     public class TimeSlot
     {
-        public TimeSpan Time { get; set; }
+        public Departure Departure { get; set; }
         public SlotStatus Status { get; set; }
     }
 

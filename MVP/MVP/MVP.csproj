@@ -249,6 +249,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
+    <Content Include="Calendar\BookingPanel.ascx" />
     <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
     <Content Include="Calendar\Scripts\calendar-table.js" />
@@ -737,6 +738,13 @@
     </Compile>
     <Compile Include="BackOffice\OfficeDTO.cs" />
     <Compile Include="BackOffice\Services\OfficeService.cs" />
+    <Compile Include="Calendar\BookingPanel.ascx.cs">
+      <DependentUpon>BookingPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar\BookingPanel.ascx.designer.cs">
+      <DependentUpon>BookingPanel.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Calendar\CalendarDTO.cs" />
     <Compile Include="Calendar\Popover.ascx.cs">
       <DependentUpon>Popover.ascx</DependentUpon>
@@ -882,6 +890,14 @@
     <Compile Include="Migrations\201806071314329_BookingTicketCode.cs" />
     <Compile Include="Migrations\201806071314329_BookingTicketCode.Designer.cs">
       <DependentUpon>201806071314329_BookingTicketCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806230231569_BookingUser.cs" />
+    <Compile Include="Migrations\201806230231569_BookingUser.Designer.cs">
+      <DependentUpon>201806230231569_BookingUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806230300347_BookingUser-to-BookingUserId.cs" />
+    <Compile Include="Migrations\201806230300347_BookingUser-to-BookingUserId.Designer.cs">
+      <DependentUpon>201806230300347_BookingUser-to-BookingUserId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
@@ -1042,6 +1058,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806071314329_BookingTicketCode.resx">
       <DependentUpon>201806071314329_BookingTicketCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806230231569_BookingUser.resx">
+      <DependentUpon>201806230231569_BookingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806230300347_BookingUser-to-BookingUserId.resx">
+      <DependentUpon>201806230300347_BookingUser-to-BookingUserId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

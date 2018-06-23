@@ -9,6 +9,14 @@ namespace MVP.Calendar
 {
     public partial class Popover : UserControl
     {
+        public class TimeSelectedEventArgs : EventArgs
+        {
+            public TimeSpan TimeSelected;
+            public string Group;
+        }
+
+        public event EventHandler<TimeSelectedEventArgs> TimeSelected;
+
         public IEnumerable<APGroup> DataSource
         {
             get
@@ -27,9 +35,11 @@ namespace MVP.Calendar
             if (e.Item.DataItem != null)
             {
                 var slot = (APGroup)e.Item.DataItem;
-                var label = (Label)e.Item.FindControl("APGroup");
+                var startlabel = (Label)e.Item.FindControl("StartAP");
+                var endlabel = (Label)e.Item.FindControl("EndAP");
                 var control = (Repeater)e.Item.FindControl("RowRepeater");
-                label.Text = slot.StartAPName + "<br/>&rarr; " + slot.EndAPName;
+                startlabel.Text = slot.StartAPName;
+                endlabel.Text = slot.EndAPName; 
                 control.DataSource = slot.Times.Select((x, i) => new { Index = i, Value = x })
                                                .GroupBy(x => x.Index / 2)
                                                .Select(x => x.Select(v => v.Value).ToList())
@@ -55,8 +65,54 @@ namespace MVP.Calendar
             {
                 var timeslot = (TimeSlot)e.Item.DataItem;
                 var control = (LinkButton)e.Item.FindControl("BtnTime");
-                control.Text = timeslot.Time.ToString("hh\\:mm");
+                var grouprepeater = (RepeaterItem)((RepeaterItem)((Repeater)sender).Parent).Parent.NamingContainer;
+                var startlabel = (Label)grouprepeater.FindControl("StartAP");
+                var endlabel = (Label)grouprepeater.FindControl("EndAP");
+                string apgroup = startlabel.Text + "," + endlabel.Text;
+                control.Text = timeslot.Departure.Time.ToString("hh\\:mm");
+                control.CommandArgument = apgroup;
+                switch (timeslot.Status) // Colors to be replaced by styles
+                {
+                    case SlotStatus.GREEN:
+                        control.BackColor = System.Drawing.Color.FromArgb(46, 204, 113);
+                        control.ForeColor = System.Drawing.Color.White;
+                        break;
+                    case SlotStatus.YELLOW:
+                        control.BackColor = System.Drawing.Color.FromArgb(243, 156, 18);
+                        control.ForeColor = System.Drawing.Color.White;
+                        break;
+                    case SlotStatus.RED:
+                        control.BackColor = System.Drawing.Color.FromArgb(255, 95, 109);
+                        control.ForeColor = System.Drawing.Color.White;
+                        break;
+                    case SlotStatus.BLACK:
+                        control.BackColor = System.Drawing.Color.LightGray;
+                        control.ForeColor = System.Drawing.Color.DarkGray;
+                        control.Enabled = false;
+                        break;
+                    case SlotStatus.NONE:
+                        control.BackColor = System.Drawing.Color.LightGray;
+                        control.ForeColor = System.Drawing.Color.DarkGray;
+                        control.Enabled = false;
+                        break;
+                    default:
+                        control.Visible = false;
+                        control.Enabled = false;
+                        break;
+                }
+
             }
+        }
+
+        protected void TimeRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            LinkButton button = (LinkButton)e.CommandSource;
+            OnTimeSelected(TimeSpan.Parse(button.Text), (string)e.CommandArgument);
+        }
+
+        protected void OnTimeSelected(TimeSpan time, string group)
+        {
+            TimeSelected?.Invoke(this, new TimeSelectedEventArgs() { TimeSelected = time, Group = group });
         }
     }
 }
