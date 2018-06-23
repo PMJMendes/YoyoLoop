@@ -104,10 +104,10 @@ namespace MVP.Checkout
                         Seats = 0,
                         Cost = 0,
                         StartTime = new DateTime(),
-                        StartRegionName = "",
-                        StartAPName = "",
-                        EndRegionName = "",
-                        EndAPName = ""
+                        StartRegionName = "Região de Origem",
+                        StartAPName = "Paragem de Origem",
+                        EndRegionName = "Região de Destino",
+                        EndAPName = "Paragem de Destino"
                     };
 
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
