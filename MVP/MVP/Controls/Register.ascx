@@ -53,7 +53,8 @@
                             <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control login__input" placeholder="Nome completo">
+                                        <asp:TextBox runat="server" id="TbRegisterName" CssClass="form-control login__input" placeholder="Nome" />
+                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterName" CssClass="text-danger" Display="Dynamic" ErrorMessage="The name field is required." /> <!-- I need a css for this -->
                                     </div>
                                     <div class="form-group">
                                         <asp:TextBox runat="server" id="TbRegisterEmail" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Endereço de email" />
