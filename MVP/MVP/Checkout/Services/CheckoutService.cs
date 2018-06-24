@@ -108,7 +108,7 @@ namespace MVP.Services
                 if (booking != null)
                 {
                     booking.Status = status;
-                    booking.TicketCode = GenerateTicket(10);
+                    booking.TicketCode = GenerateTicket(6);
                     model.SaveChanges();
 
                     UpdateTrip(booking.Trip.TripId);

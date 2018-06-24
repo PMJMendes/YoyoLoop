@@ -27,6 +27,7 @@ namespace MVP.Calendar
                 public DateTime CalSelectedDate { get; set; }
                 public DateTime CalVisibleDate { get; set; }
                 public TimeSpan Time { get; set; }
+                public Guid DepartureId { get; set; }
             }
         }
 
@@ -154,10 +155,12 @@ namespace MVP.Calendar
         protected void CalDate_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
         {
             localData.Values.Time = e.TimeSelected;
-            string startapname = e.Group.Split(',')[0];
-            string endapname = e.Group.Split(',')[1];
+            var timeparams = e.TimeParams.Split('|');
+            string startapname = timeparams[0];
+            string endapname = timeparams[1];
+            localData.Values.DepartureId = Guid.Parse(timeparams[2]);
 
-            if(startapname != pageData.Selection.SAP.Name)
+            if (startapname != pageData.Selection.SAP.Name)
             {
                 localData.Values.StartAP = pageData.Selection.Route.StartRegion.AccessPoints.Single(ap => ap.Name == startapname).AccessPointId.ToString();
                 DdlStartAP.SelectedText = startapname;
@@ -333,6 +336,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Time != localData.Values.Time) // New time
                 {
                     pageData.Selection.Time = localData.Values.Time;
+                    pageData.Selection.DepartureId = localData.Values.DepartureId;
                 }
             }
 
@@ -470,6 +474,7 @@ namespace MVP.Calendar
                 Time = new TimeSpan(-1),
                 Price = 0,
                 Seats = 1,
+                DepartureId = Guid.Empty
             };
             pageData.DaySlots.Clear();
         }

@@ -12,7 +12,7 @@ namespace MVP.Calendar
         public class TimeSelectedEventArgs : EventArgs
         {
             public TimeSpan TimeSelected;
-            public string Group;
+            public string TimeParams;
         }
 
         public event EventHandler<TimeSelectedEventArgs> TimeSelected;
@@ -68,9 +68,9 @@ namespace MVP.Calendar
                 var grouprepeater = (RepeaterItem)((RepeaterItem)((Repeater)sender).Parent).Parent.NamingContainer;
                 var startlabel = (Label)grouprepeater.FindControl("StartAP");
                 var endlabel = (Label)grouprepeater.FindControl("EndAP");
-                string apgroup = startlabel.Text + "," + endlabel.Text;
+                string timeparams = startlabel.Text + "|" + endlabel.Text + "|" + timeslot.Departure.DepartureId.ToString();
                 control.Text = timeslot.Departure.Time.ToString("hh\\:mm");
-                control.CommandArgument = apgroup;
+                control.CommandArgument = timeparams;
                 switch (timeslot.Status) // Colors to be replaced by styles
                 {
                     case SlotStatus.GREEN:
@@ -110,9 +110,9 @@ namespace MVP.Calendar
             OnTimeSelected(TimeSpan.Parse(button.Text), (string)e.CommandArgument);
         }
 
-        protected void OnTimeSelected(TimeSpan time, string group)
+        protected void OnTimeSelected(TimeSpan time, string timeparams)
         {
-            TimeSelected?.Invoke(this, new TimeSelectedEventArgs() { TimeSelected = time, Group = group });
+            TimeSelected?.Invoke(this, new TimeSelectedEventArgs() { TimeSelected = time, TimeParams = timeparams });
         }
     }
 }

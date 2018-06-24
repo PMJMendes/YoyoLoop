@@ -35,6 +35,7 @@ namespace MVP.Services
                                                Time = new TimeSpan(-1),
                                                Price = 0,
                                                Seats = 1,
+                                               DepartureId = Guid.Empty
                                               };
 
             result.DaySlots = new List<DaySlot>();
@@ -212,7 +213,7 @@ namespace MVP.Services
                 {
                     int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                     var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
-                    var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
+                    var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.Departure.DepartureId == state.Selection.DepartureId);
 
                     if (trip == null)
                     {

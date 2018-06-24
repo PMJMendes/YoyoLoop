@@ -87,7 +87,7 @@ namespace MVP.Calendar
 
         protected void Popover_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
         {
-            OnTimeSelected(new Popover.TimeSelectedEventArgs { TimeSelected = e.TimeSelected, Group = e.Group });
+            OnTimeSelected(new Popover.TimeSelectedEventArgs { TimeSelected = e.TimeSelected, TimeParams = e.TimeParams });
         }
 
         public void ShowPopover(IEnumerable<APGroup> popoverData)

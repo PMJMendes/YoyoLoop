@@ -80,7 +80,7 @@
         <img class="travel__card__separator" src="/img/path.png" srcset="/img/path@2x.png 2x, /img/path@3x.png 3x">
         <div class="<%= TicketBooking.Status == MVP.Models.Entities.BookingStatus.BOOKED ? "" : "hide" %>">
             <p class="travel__card__last__gray-text">BILHETE</p>
-            <p class="travel__card__last__ticket-number">#<%= TicketBooking.TicketCode?.ToUpper() ?? "" %></p>
+            <p class="travel__card__last__ticket-number"><%= TicketBooking.TicketCode?.ToUpper() ?? "" %></p>
         </div>
         <div class="<%= TicketBooking.Status == MVP.Models.Entities.BookingStatus.PENDING ? "" : "hide" %>">
             <div class="row text-center">
