@@ -903,6 +903,10 @@
     <Compile Include="Migrations\201806230922199_ApplicationUser-Name.Designer.cs">
       <DependentUpon>201806230922199_ApplicationUser-Name.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806240415416_User-Name-to-User-ContactName.cs" />
+    <Compile Include="Migrations\201806240415416_User-Name-to-User-ContactName.Designer.cs">
+      <DependentUpon>201806240415416_User-Name-to-User-ContactName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -917,6 +921,7 @@
     <Compile Include="Models\Entities\Trip.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
+    <Compile Include="Models\Extensions\IdentityExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Strings.Designer.cs">
@@ -1071,6 +1076,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806230922199_ApplicationUser-Name.resx">
       <DependentUpon>201806230922199_ApplicationUser-Name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806240415416_User-Name-to-User-ContactName.resx">
+      <DependentUpon>201806240415416_User-Name-to-User-ContactName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -36,7 +36,7 @@ namespace MVP.Confirm
 
             if (pageData == null)
             {
-                pageData = service.GetInitialData(User?.Identity.GetUserId());
+                pageData = service.GetInitialData();
                 ProcessQueryString();
                 Session["confirm.data"] = pageData;
             }
@@ -76,6 +76,7 @@ namespace MVP.Confirm
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
                     //Something went really terribly wrong here - email systems?
                     //Response.Redirect("/Calendar/Calendar");
+
                 }
             }
             else

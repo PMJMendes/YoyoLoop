@@ -2,16 +2,18 @@
 using MVP.Models.Entities;
 using MVP.Confirm;
 using System;
+using System.Web;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace MVP.Services
 {
     public class ConfirmService
     {
-        public ConfirmDTO GetInitialData(string userid)
+        public ConfirmDTO GetInitialData()
         {
             var result = new ConfirmDTO
             {
@@ -51,7 +53,7 @@ namespace MVP.Services
                     {
                         BookingId = booking.BookingId,
                         UserId = booking.UserId,
-                        UserEmail = model.Users.Single(u => u.Id == booking.UserId).Email,
+                        UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email,
                         Seats = booking.Seats,
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
