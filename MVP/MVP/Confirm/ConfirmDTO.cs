@@ -9,6 +9,7 @@ namespace MVP.Confirm
     public class ConfirmDTO
     {
         public Guid BookingId { get; set; }
+        public string UserId { get; set; }
         public int Seats { get; set; }
         public decimal Cost { get; set; }
         public string TicketCode { get; set; }
@@ -18,5 +19,7 @@ namespace MVP.Confirm
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
+
+        public string UserEmail { get; set; }
     }
 }

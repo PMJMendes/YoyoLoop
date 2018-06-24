@@ -5,11 +5,17 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using Stripe;
+using System.Web.Configuration;
 
 namespace MVP.Services
 {
     public class CheckoutService
     {
+        public static object Checkout_Lock = new object();
+
+        private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
+
         public CheckoutDTO GetInitialData()
         {
             var result = new CheckoutDTO();
@@ -37,6 +43,7 @@ namespace MVP.Services
                 else
                 {
                     result.BookingId = booking.BookingId;
+                    result.UserId = booking.UserId;
                     result.Seats = booking.Seats;
                     result.Cost = booking.Cost;
                     result.StartTime = booking.Trip.StartTime;
@@ -49,6 +56,50 @@ namespace MVP.Services
             return result;
         }
 
+        public bool ProcessPayment(CheckoutDTO state, string stripeToken, out string error)
+        {
+            lock (Checkout_Lock)
+            {
+                using (var model = new EntityModel())
+                {
+                    var booking = model.Booking.SingleOrDefault(b => b.BookingId == state.BookingId && b.Status == BookingStatus.PENDING);
+                    if (booking == null)
+                    {
+                        error = "Booking no longer valid.";
+                        return false;
+                    }
+                }
+
+                var myCharge = new StripeChargeCreateOptions
+                {
+                    Amount = (int)(state.Cost * 100),
+                    Currency = "EUR",
+                    Description = state.BookingId.ToString(),
+                    SourceTokenOrExistingSourceId = stripeToken
+                };
+
+                var chargeService = new StripeChargeService(stripePrivateKey);
+
+                try
+                {
+                    var stripeCharge = chargeService.Create(myCharge);
+                }
+                catch (StripeException ex)
+                {
+                    StripeError stripeError = ex.StripeError;
+
+                    // Handle error
+                    error = stripeError.ErrorType;
+                    return false;
+                }
+
+                // Charge sucessful
+                UpdateBooking(state.BookingId, BookingStatus.BOOKED);
+                error = string.Empty;
+                return true;
+            }
+        }
+
         public void UpdateBooking(Guid id, BookingStatus status)
         {
             using (var model = new EntityModel())
@@ -58,7 +109,7 @@ namespace MVP.Services
                 if (booking != null)
                 {
                     booking.Status = status;
-                    booking.TicketCode = GenerateTicket(10);
+                    booking.TicketCode = GenerateTicket(6);
                     model.SaveChanges();
 
                     UpdateTrip(booking.Trip.TripId);

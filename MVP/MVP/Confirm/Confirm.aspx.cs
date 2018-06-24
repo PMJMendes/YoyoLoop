@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MVP.Services;
 using MVP.Models.Entities;
+using Microsoft.AspNet.Identity;
 
 namespace MVP.Confirm
 {
@@ -16,6 +17,11 @@ namespace MVP.Confirm
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (User?.Identity.IsAuthenticated == false)
+            {
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
+                //Response.Redirect("/");
+            }
             InitData();
         }
 
@@ -50,6 +56,8 @@ namespace MVP.Confirm
                     pageData = new ConfirmDTO
                     {
                         BookingId = Guid.Empty,
+                        UserId = "",
+                        UserEmail = "email@email.com",
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
@@ -61,13 +69,20 @@ namespace MVP.Confirm
                     };
 
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
-                    //Response.Redirect("../Calendar/Calendar");
+                    //Response.Redirect("/Calendar/Calendar");
+                }
+                else if (pageData.UserId != User?.Identity.GetUserId())
+                {
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
+                    //Something went really terribly wrong here - email systems?
+                    //Response.Redirect("/Calendar/Calendar");
+
                 }
             }
             else
             {
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
-                //Response.Redirect("../Calendar/Calendar");
+                //Response.Redirect("/Calendar/Calendar");
             }
         }
     }

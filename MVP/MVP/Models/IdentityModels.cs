@@ -14,11 +14,16 @@ namespace MVP.Models
     // You can add User data for the user by adding more properties to your User class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
+        // YOYOLOOP EXTENDED PROPERTIES
+        public string ContactName { get; set; }
+
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = manager.CreateIdentity(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
+            userIdentity.AddClaim(new Claim("ContactName", this.ContactName?.ToString() ?? ""));
+            userIdentity.AddClaim(new Claim("Email", this.Email.ToString()));
             return userIdentity;
         }
 

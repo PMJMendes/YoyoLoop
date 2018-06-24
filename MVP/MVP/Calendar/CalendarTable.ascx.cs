@@ -87,7 +87,7 @@ namespace MVP.Calendar
 
         protected void Popover_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
         {
-            OnTimeSelected(new Popover.TimeSelectedEventArgs { TimeSelected = e.TimeSelected, Group = e.Group });
+            OnTimeSelected(new Popover.TimeSelectedEventArgs { TimeSelected = e.TimeSelected, TimeParams = e.TimeParams });
         }
 
         public void ShowPopover(IEnumerable<APGroup> popoverData)
@@ -146,13 +146,13 @@ namespace MVP.Calendar
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;
                 case SlotStatus.NONE:
-                    control.InfoText = "";
-                    control.Flag = CalendarDay.DayFlag.Unavailable;
-                    break;
                 default:
                     control.InfoText = "";
-                    control.PriceText = "";
-                    if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
+                    if(control.PriceText != "")
+                    {
+                        control.Flag = CalendarDay.DayFlag.Unavailable;
+                    }
+                    else if(slot.Day.DayOfWeek == DayOfWeek.Saturday || slot.Day.DayOfWeek == DayOfWeek.Sunday)
                     {
                         control.Flag = CalendarDay.DayFlag.Weekend;
                     }

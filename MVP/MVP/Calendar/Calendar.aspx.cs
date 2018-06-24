@@ -27,6 +27,7 @@ namespace MVP.Calendar
                 public DateTime CalSelectedDate { get; set; }
                 public DateTime CalVisibleDate { get; set; }
                 public TimeSpan Time { get; set; }
+                public Guid DepartureId { get; set; }
             }
         }
 
@@ -154,10 +155,12 @@ namespace MVP.Calendar
         protected void CalDate_TimeSelected(object sender, Popover.TimeSelectedEventArgs e)
         {
             localData.Values.Time = e.TimeSelected;
-            string startapname = e.Group.Split(',')[0];
-            string endapname = e.Group.Split(',')[1];
+            var timeparams = e.TimeParams.Split('|');
+            string startapname = timeparams[0];
+            string endapname = timeparams[1];
+            localData.Values.DepartureId = Guid.Parse(timeparams[2]);
 
-            if(startapname != pageData.Selection.SAP.Name)
+            if (startapname != pageData.Selection.SAP.Name)
             {
                 localData.Values.StartAP = pageData.Selection.Route.StartRegion.AccessPoints.Single(ap => ap.Name == startapname).AccessPointId.ToString();
                 DdlStartAP.SelectedText = startapname;
@@ -177,18 +180,16 @@ namespace MVP.Calendar
         {
             if(User?.Identity.IsAuthenticated == true)
             {
-                Trip trip;
-                if (service.CheckAvailable(pageData, out trip))
-                {
-                    pageData.Selection.Trip = trip;
-                    var booking = service.CreateBooking(pageData);
-                    Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
-                }
-                else
+                var booking = service.CreateBooking(pageData);
+                if(booking == null)
                 {
                     //NEED PRETTY ERROR HANDLING HERE
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Trip no longer available.\")</SCRIPT>");
-                    Response.Redirect("/Calendar/Calendar");
+                    //Response.Redirect("/Calendar/Calendar");
+                }
+                else
+                {
+                    Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
                 }
             }
             else
@@ -335,6 +336,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Time != localData.Values.Time) // New time
                 {
                     pageData.Selection.Time = localData.Values.Time;
+                    pageData.Selection.DepartureId = localData.Values.DepartureId;
                 }
             }
 
@@ -472,7 +474,7 @@ namespace MVP.Calendar
                 Time = new TimeSpan(-1),
                 Price = 0,
                 Seats = 1,
-                Trip = null
+                DepartureId = Guid.Empty
             };
             pageData.DaySlots.Clear();
         }

@@ -13,6 +13,8 @@ namespace MVP.Services
 {
     public class CalendarService
     {
+        public static object Booking_Lock = new object();
+
         public CalendarDTO GetInitialData()
         {
             var result = new CalendarDTO();
@@ -33,7 +35,7 @@ namespace MVP.Services
                                                Time = new TimeSpan(-1),
                                                Price = 0,
                                                Seats = 1,
-                                               Trip = null
+                                               DepartureId = Guid.Empty
                                               };
 
             result.DaySlots = new List<DaySlot>();
@@ -188,31 +190,6 @@ namespace MVP.Services
             }
         }
 
-        public bool CheckAvailable(CalendarDTO state, out Trip trip)
-        {
-            using (var model = new EntityModel())
-            {
-                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
-                var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
-                trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
-                if(trip == null)
-                {
-                    return true;
-                }
-                else
-                {
-                    if(trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        return true;
-                    }
-                }
-            }
-        }
-
         public void CheckPending()
         {
             using (var model = new EntityModel())
@@ -232,16 +209,8 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var trip = new Trip();
-
-                if (state.Selection.Trip == null)
-                {
-                    trip = CreateTrip(state);
-                }
-                else
-                {
-                    trip = state.Selection.Trip;
-                }
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
 
                 var booking = new Booking()
                 {
@@ -249,18 +218,51 @@ namespace MVP.Services
                     Status = BookingStatus.PENDING,
                     UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
-                    Trip = model.Trip.Single(t => t.TripId == trip.TripId),
                     Seats = state.Selection.Seats,
                     Cost = state.Selection.Seats * state.Selection.Price
                 };
-                model.Booking.Add(booking);
-                model.SaveChanges();
 
-                return booking;
+                lock (Booking_Lock)
+                {
+                    var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.Departure.DepartureId == state.Selection.DepartureId);
+
+                    if (trip == null)
+                    {
+                        trip = CreateTrip(state, model);
+                        model.Trip.Add(trip);
+                    }
+                    else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
+                    {
+                        return null;
+                    }
+
+                    booking.Trip = trip;
+
+                    model.Booking.Add(booking);
+                    model.SaveChanges();
+
+                    return booking;
+                }
             }
         }
 
-        public void UpdateBooking(Guid id, BookingStatus status) 
+        private Trip CreateTrip(CalendarDTO state, EntityModel model)
+        {
+            DayType daytype = GetDayType(state.Selection.Date);
+            return new Trip
+            {
+                TripId = Guid.NewGuid(),
+                Status = TripStatus.PENDING,
+                StartTime = state.Selection.Date + state.Selection.Time,
+                Departure = model.Departure.Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
+                                            .Where(dt => dt.DayType == daytype)
+                                            .Where(t => t.Time == state.Selection.Time).First(),
+                StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
+                EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
+            };
+        }
+
+        private void UpdateBooking(Guid id, BookingStatus status)
         {
             using (var model = new EntityModel())
             {
@@ -271,71 +273,46 @@ namespace MVP.Services
                     booking.Status = status;
                     model.SaveChanges();
 
-                    UpdateTrip(booking.Trip.TripId);
+                    UpdateTrip(booking.Trip.TripId, model);
                 }
             }
         }
 
-        public Trip CreateTrip(CalendarDTO state)
+        private void UpdateTrip(Guid id, EntityModel model)
         {
-            using (var model = new EntityModel())
+            var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
+            var bookings = trip.Bookings;
+
+            if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
             {
-                DayType daytype = GetDayType(state.Selection.Date);
-                var trip = new Trip()
+                return;
+            }
+
+            if (trip.StartTime < DateTime.Now)
+            {
+                trip.Status = TripStatus.COMPLETED;
+                foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
                 {
-                    TripId = Guid.NewGuid(),
-                    Status = TripStatus.PENDING,
-                    StartTime = state.Selection.Date + state.Selection.Time,
-                    Departure = model.Departure.Where(r => r.Route.RouteId == state.Selection.Route.RouteId)
-                                               .Where(dt => dt.DayType == daytype)
-                                               .Where(t => t.Time == state.Selection.Time).First(),
-                    StartAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId),
-                    EndAccessPoint = model.AccessPoint.Single(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)
-                };
-                model.Trip.Add(trip);
+                    b.Status = BookingStatus.COMPLETED;
+                }
                 model.SaveChanges();
-                return trip;
+                return;
             }
-        }
 
-        public void UpdateTrip(Guid id)
-        {
-            using (var model = new EntityModel())
+            if (trip.Status == TripStatus.PENDING)
             {
-                var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
-                var bookings = trip.Bookings;
-
-                if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
+                if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Any())
                 {
-                    return;
-                }
-
-                if (trip.StartTime < DateTime.Now)
-                {
-                    trip.Status = TripStatus.COMPLETED;
-                    foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
-                    {
-                        b.Status = BookingStatus.COMPLETED;
-                    }
+                    trip.Status = TripStatus.BOOKED;
                     model.SaveChanges();
                     return;
                 }
 
-                if (trip.Status == TripStatus.PENDING)
+                if (!bookings.Where(s => s.Status == BookingStatus.PENDING).Any())
                 {
-                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Any())
-                    {
-                        trip.Status = TripStatus.BOOKED;
-                        model.SaveChanges();
-                        return;
-                    }
-
-                    if (!bookings.Where(s => s.Status == BookingStatus.PENDING).Any())
-                    {
-                        trip.Status = TripStatus.CANCELLED;
-                        model.SaveChanges();
-                        return;
-                    }
+                    trip.Status = TripStatus.CANCELLED;
+                    model.SaveChanges();
+                    return;
                 }
             }
         }

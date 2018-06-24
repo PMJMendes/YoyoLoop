@@ -9,6 +9,7 @@ namespace MVP.Checkout
     public class CheckoutDTO
     {
         public Guid BookingId { get; set; }
+        public string UserId { get; set; }
         public int Seats { get; set; }
         public decimal Cost { get; set; }
 

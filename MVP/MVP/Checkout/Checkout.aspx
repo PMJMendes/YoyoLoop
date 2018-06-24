@@ -214,7 +214,7 @@
                             </div>  
                         </div>
                         <div class="checkout__accept-terms-condition--pay col-md-6">
-                            <button class="btn btn-light btn-xl text-uppercase" id="btnPay">Pagar</button>
+                            <button id="btnPay" class="btn btn-light btn-xl text-uppercase">Pagar</button>
                         </div>
                     </div>
                 </div>
