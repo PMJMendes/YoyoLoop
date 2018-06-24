@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 using MVP.Services;
 using MVP.Models;
 using MVP.Models.Entities;
-using Stripe;
 using Microsoft.AspNet.Identity;
 
 namespace MVP.Checkout
@@ -18,7 +17,6 @@ namespace MVP.Checkout
     {
         private readonly CheckoutService service = new CheckoutService();
         protected readonly string stripePublishableKey = WebConfigurationManager.AppSettings["StripePublishableKey"];
-        private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
         protected CheckoutDTO pageData;
 
@@ -30,36 +28,6 @@ namespace MVP.Checkout
                 //Response.Redirect("/");
             }
             InitData();
-        }
-
-        protected void ProcessPayment (string stripeToken)
-        {
-            var myCharge = new StripeChargeCreateOptions
-            {
-                Amount = (int)(pageData.Cost * 100),
-                Currency = "EUR",
-                Description = pageData.BookingId.ToString(),
-                SourceTokenOrExistingSourceId = stripeToken
-            };
-
-            var chargeService = new StripeChargeService(stripePrivateKey);
-
-            try
-            {
-                var stripeCharge = chargeService.Create(myCharge);
-            }
-            catch (StripeException ex)
-            {
-                StripeError stripeError = ex.StripeError;
-
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"" + stripeError.ErrorType + "\")</SCRIPT>");
-                // Handle error
-                return;
-            }
-
-            // Charge sucessful
-            service.UpdateBooking(pageData.BookingId, BookingStatus.BOOKED);
-            Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
         }
 
         private void InitData()
@@ -75,7 +43,16 @@ namespace MVP.Checkout
                 string hfStripeToken = nvc["hfStripeToken"];
                 if (!string.IsNullOrEmpty(hfStripeToken))
                 {
-                    ProcessPayment(hfStripeToken);
+                    string error;
+                    if (service.ProcessPayment(pageData, hfStripeToken, out error))
+                    {
+                        Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                    }
+                    else
+                    {
+                        //HANDLE ERROR
+                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"" + error + "\")</SCRIPT>");
+                    }
                 }
             }
 
