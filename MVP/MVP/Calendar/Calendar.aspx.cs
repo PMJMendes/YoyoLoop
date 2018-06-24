@@ -177,18 +177,16 @@ namespace MVP.Calendar
         {
             if(User?.Identity.IsAuthenticated == true)
             {
-                Trip trip;
-                if (service.CheckAvailable(pageData, out trip))
-                {
-                    pageData.Selection.Trip = trip;
-                    var booking = service.CreateBooking(pageData);
-                    Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
-                }
-                else
+                var booking = service.CreateBooking(pageData);
+                if(booking == null)
                 {
                     //NEED PRETTY ERROR HANDLING HERE
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Trip no longer available.\")</SCRIPT>");
-                    Response.Redirect("/Calendar/Calendar");
+                    //Response.Redirect("/Calendar/Calendar");
+                }
+                else
+                {
+                    Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
                 }
             }
             else
@@ -472,7 +470,6 @@ namespace MVP.Calendar
                 Time = new TimeSpan(-1),
                 Price = 0,
                 Seats = 1,
-                Trip = null
             };
             pageData.DaySlots.Clear();
         }

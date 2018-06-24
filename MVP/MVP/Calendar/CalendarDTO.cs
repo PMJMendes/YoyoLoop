@@ -20,7 +20,6 @@ namespace MVP.Calendar
         public TimeSpan Time { get; set; }
         public Decimal Price { get; set; }
         public int Seats { get; set; }
-        public Trip Trip { get; set; }
     }
 
     [Serializable]

@@ -33,7 +33,6 @@ namespace MVP.Services
                                                Time = new TimeSpan(-1),
                                                Price = 0,
                                                Seats = 1,
-                                               Trip = null
                                               };
 
             result.DaySlots = new List<DaySlot>();
@@ -188,31 +187,6 @@ namespace MVP.Services
             }
         }
 
-        public bool CheckAvailable(CalendarDTO state, out Trip trip)
-        {
-            using (var model = new EntityModel())
-            {
-                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
-                var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
-                trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
-                if(trip == null)
-                {
-                    return true;
-                }
-                else
-                {
-                    if(trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        return true;
-                    }
-                }
-            }
-        }
-
         public void CheckPending()
         {
             using (var model = new EntityModel())
@@ -232,15 +206,17 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var trip = new Trip();
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
+                var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
 
-                if (state.Selection.Trip == null)
+                if (trip == null)
                 {
                     trip = CreateTrip(state);
                 }
-                else
+                else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
                 {
-                    trip = state.Selection.Trip;
+                    return null;
                 }
 
                 var booking = new Booking()
