@@ -12,7 +12,8 @@ namespace MVP.Services
 {
     public class CheckoutService
     {
-        public Object Booking_Lock = new Object();
+        public static object Checkout_Lock = new object();
+
         private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
         public CheckoutDTO GetInitialData()
@@ -57,7 +58,7 @@ namespace MVP.Services
 
         public bool ProcessPayment(CheckoutDTO state, string stripeToken, out string error)
         {
-            lock (Booking_Lock)
+            lock (Checkout_Lock)
             {
                 using (var model = new EntityModel())
                 {

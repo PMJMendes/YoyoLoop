@@ -22,7 +22,7 @@ namespace MVP.Models
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = manager.CreateIdentity(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
-            userIdentity.AddClaim(new Claim("ContactName", this.ContactName.ToString()));
+            userIdentity.AddClaim(new Claim("ContactName", this.ContactName?.ToString() ?? ""));
             userIdentity.AddClaim(new Claim("Email", this.Email.ToString()));
             return userIdentity;
         }
