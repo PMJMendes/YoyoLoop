@@ -13,6 +13,8 @@ namespace MVP.Services
 {
     public class CalendarService
     {
+        public Object Booking_Lock = new Object();
+
         public CalendarDTO GetInitialData()
         {
             var result = new CalendarDTO();
@@ -204,35 +206,38 @@ namespace MVP.Services
 
         public Booking CreateBooking(CalendarDTO state)
         {
-            using (var model = new EntityModel())
+            lock (Booking_Lock)
             {
-                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
-                var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
-                var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
-
-                if (trip == null)
+                using (var model = new EntityModel())
                 {
-                    trip = CreateTrip(state);
+                    int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                    var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
+                    var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.StartTime == starttime && t.Departure.Route.RouteId == state.Selection.Route.RouteId);
+
+                    if (trip == null)
+                    {
+                        trip = CreateTrip(state);
+                    }
+                    else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
+                    {
+                        return null;
+                    }
+
+                    var booking = new Booking()
+                    {
+                        BookingId = Guid.NewGuid(),
+                        Status = BookingStatus.PENDING,
+                        UserId = HttpContext.Current.User.Identity.GetUserId(),
+                        CreationTime = DateTime.Now,
+                        Trip = model.Trip.Single(t => t.TripId == trip.TripId),
+                        Seats = state.Selection.Seats,
+                        Cost = state.Selection.Seats * state.Selection.Price
+                    };
+                    model.Booking.Add(booking);
+                    model.SaveChanges();
+
+                    return booking;
                 }
-                else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
-                {
-                    return null;
-                }
-
-                var booking = new Booking()
-                {
-                    BookingId = Guid.NewGuid(),
-                    Status = BookingStatus.PENDING,
-                    UserId = HttpContext.Current.User.Identity.GetUserId(),
-                    CreationTime = DateTime.Now,
-                    Trip = model.Trip.Single(t => t.TripId == trip.TripId),
-                    Seats = state.Selection.Seats,
-                    Cost = state.Selection.Seats * state.Selection.Price
-                };
-                model.Booking.Add(booking);
-                model.SaveChanges();
-
-                return booking;
             }
         }
 
