@@ -39,7 +39,7 @@
 
                 <h1 class="travel__main-title-past pt-5 pb-5">Viagens anteriores</h1>
 
-                <div id="PastBookings" Class="<%= RepActiveBookings.Visible ? "hide" : "" %>">
+                <div id="PastBookings" Class="<%= RepPastBookings.Visible ? "hide" : "" %>">
                     <h5>Não tem viagens anteriores</h5>
                 </div>
                 <asp:Repeater runat="server" ID="RepPastBookings" OnItemDataBound="RepPastBookings_ItemDataBound" Visible="false">
