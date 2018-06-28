@@ -190,6 +190,42 @@ namespace MVP.Services
             }
         }
 
+        public bool CheckPossible(CalendarDTO state)
+        {
+            var starttime = state.Selection.Date + state.Selection.Time;
+            var dayType = GetDayType(state.Selection.Date);
+
+            using (var model = new EntityModel())
+            {
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+
+                var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId &&
+                                                            d.DayType == dayType &&
+                                                            d.Time == state.Selection.Time
+                                                       )
+                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => t.Status != TripStatus.CANCELLED &&
+                                                                              t.StartTime == starttime &&
+                                                                              t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
+                                                                              t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
+                                                                              t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity
+                                                                         ),
+                        d => d,
+                        t => t.Departure,
+                        (d, ts) => new { Departure = d, Trips = ts }
+                    );
+
+                if(lastminute)
+                {
+                    return departures.Any(t => t.Trips.Any());
+                }
+                else
+                {
+                    return departures.Any();
+                }
+            }
+        }
+
         public void CheckPending()
         {
             using (var model = new EntityModel())

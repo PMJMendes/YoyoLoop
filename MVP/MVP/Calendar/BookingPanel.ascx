@@ -9,7 +9,7 @@
                     /img/calendar-grey@3x.png 3x"
                     class="calendar-grey">
             </div>
-            <div class="col-8"><%= PanelData.StartTime.ToString("dd") %> de <%= PanelData.StartTime.ToString("MMMM") %>, <%= PanelData.StartTime.ToString("dddd") %></div>
+            <div class="col-8"><asp:label runat="server" ID="LbDate"><%= PanelData.StartTime.ToString("dd") %> de <%= PanelData.StartTime.ToString("MMMM") %>, <%= PanelData.StartTime.ToString("dddd") %></asp:label></div>
                 <div class="col-2 text-right text-uppercase direction">Ida</div>
             </div>
 
@@ -25,7 +25,7 @@
                                 /img/users@3x.png 3x"
                                 class="users">
                         </div>
-                        <div class="col-8"><strong><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %></strong></div>
+                        <div class="col-8"><strong><asp:label runat="server" ID="LbSeats"><%= PanelData.Seats.ToString() %><%= PanelData.Seats == 1 ? " Lugar" : " Lugares" %></asp:label></strong></div>
                     </div>
 
                     <!--HORA-->
@@ -36,7 +36,7 @@
                                 /img/clock@3x.png 3x"
                                 class="clock">
                         </div>
-                        <div class="col-8"><strong><%= PanelData.StartTime.ToString("HH\\:mm") %></strong></div>
+                        <div class="col-8"><strong><asp:label runat="server" ID="LbTime"><%= PanelData.StartTime.ToString("HH\\:mm") %></asp:label></strong></div>
                     </div>
 
                     <!--PREÇO-->
@@ -47,7 +47,7 @@
                             /img/cart@3x.png 3x"
                             class="clock">
                         </div>
-                        <div class="col-8"><strong><%= PanelData.Cost.ToString("C") %></strong></div>
+                        <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.Cost.ToString("C") %></asp:label></strong></div>
                     </div>
 
             </div>
@@ -61,10 +61,10 @@
                     <div class="col-12 pl-4">Origem</div>
                 </div>
                 <div class="row p-1 text-uppercase city-name">
-                    <div class="col-12 pl-4"><%= PanelData.StartRegionName %></div>
+                    <div class="col-12 pl-4"><asp:label runat="server" ID="LbStartRegion"><%= PanelData.StartRegionName %></asp:label></div>
                 </div>
                 <div class="row p-1 pt-0 access-point">
-                    <div class="col-12 pl-4"><%= PanelData.StartAPName %></div>
+                    <div class="col-12 pl-4"><asp:label runat="server" ID="LbStartAP"><%= PanelData.StartAPName %></asp:label></div>
                 </div>
             </div>
         </div>
@@ -75,10 +75,10 @@
                     <div class="col-12 pl-4">Destino</div>
                 </div>
                 <div class="row p-1 text-uppercase city-name">
-                    <div class="col-12 pl-4"><%= PanelData.EndRegionName %></div>
+                    <div class="col-12 pl-4"><asp:label runat="server" ID="LbEndRegion"><%= PanelData.EndRegionName %></asp:label></div>
                 </div>
                 <div class="row p-1 pt-0 access-point">
-                    <div class="col-12 pl-4"><%= PanelData.EndAPName %></div>
+                    <div class="col-12 pl-4"><asp:label runat="server" ID="LbEndAP"><%= PanelData.EndAPName %></asp:label></div>
                 </div>
             </div>
         </div>
@@ -106,7 +106,8 @@
                 </div>
                 <div class="row p-4">
                     <div class="col-12 text-center">
-                        <button runat="server" ID="BtnBook" OnServerClick="BtnBook_Click" Class="btn btn-light btn-xl text-uppercase" >Reservar</button>
+                        <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
+                        <p><asp:Label runat="server" ID="LbError" Text="Viagem indisponivel" CssClass="text-danger" Visible="false" /></p>
                     </div>
                 </div>
             </div>

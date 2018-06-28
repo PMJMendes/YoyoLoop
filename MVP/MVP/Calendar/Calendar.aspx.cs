@@ -173,7 +173,8 @@ namespace MVP.Calendar
             }
 
             CheckParams();
-            UpdateBookingPanel();
+            ClearBookingPanel();
+            UpdateBookingPanel("new");
         }
 
         protected void BookingPanel_BookingSelected(object sender, BookingPanel.BookingSelectedEventArgs e)
@@ -285,13 +286,13 @@ namespace MVP.Calendar
             var sap = GetPossibleSAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.StartAP)?.FirstOrDefault();
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
             bool calupdate = false;
-            bool clearbook = false;
+            string bookupdate = string.Empty;
 
             if (route == null)
             {
                 ClearSelection();
                 localData.Values.CalSelectedDate = DateTime.MinValue;
-                clearbook = true;
+                bookupdate = "clear";
                 pnCalendar.Visible = false;
             }
             else
@@ -301,21 +302,21 @@ namespace MVP.Calendar
                     pageData.Selection.Route = route;
                     pageData.Selection.Date =
                     localData.Values.CalSelectedDate = DateTime.MinValue;
-                    clearbook = true;
+                    bookupdate = "clear";
                     calupdate = true;
                 }
 
                 if (pageData.Selection.SAP != sap) // New SAP
                 {
                     pageData.Selection.SAP = sap;
-                    clearbook = true;
+                    bookupdate = "sap";
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                 }
 
                 if (pageData.Selection.DAP != dap) // New DAP
                 {
                     pageData.Selection.DAP = dap;
-                    clearbook = true;
+                    bookupdate = "dap";
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed; this may no longer be true
                 }
 
@@ -323,13 +324,13 @@ namespace MVP.Calendar
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
                     pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
-                    clearbook = true;
+                    bookupdate = "date";
                 }
 
                 if (pageData.Selection.Seats.ToString() != localData.Values.Seats) // New seats
                 {
                     pageData.Selection.Seats = int.Parse(localData.Values.Seats);
-                    clearbook = true;
+                    bookupdate = "seats";
                     calupdate = true; // we need to redraw calendar cause daystatus may have changed
                 }
 
@@ -340,9 +341,17 @@ namespace MVP.Calendar
                 }
             }
 
-            if (clearbook)
+            if(bookupdate != string.Empty)
             {
-                ClearBookingPanel();
+                if (bookupdate == "clear")
+                {
+                    ClearBookingPanel();
+                }
+                else if (BookingPanel.Visible)
+                {
+                    UpdateBookingPanel(bookupdate);
+                }
+
             }
             if (calupdate)
             {
@@ -357,16 +366,17 @@ namespace MVP.Calendar
             BookingPanel.Visible = false;
         }
 
-        private void UpdateBookingPanel()
+        private void UpdateBookingPanel(string trigger)
         {
-            BookingPanel.PanelData.Seats = pageData.Selection.Seats;
-            BookingPanel.PanelData.Cost = pageData.Selection.Price * pageData.Selection.Seats;
-            BookingPanel.PanelData.StartTime = pageData.Selection.Date + pageData.Selection.Time;
-            BookingPanel.PanelData.StartRegionName = pageData.Selection.Route.StartRegion.Name;
-            BookingPanel.PanelData.EndRegionName = pageData.Selection.Route.EndRegion.Name;
-            BookingPanel.PanelData.StartAPName = pageData.Selection.SAP.Name;
-            BookingPanel.PanelData.EndAPName = pageData.Selection.DAP.Name;
-
+            switch(trigger)
+            {
+                case "new":
+                    BookingPanel.Databind(pageData.Selection, trigger, true);
+                    break;
+                default:
+                    BookingPanel.Databind(pageData.Selection, trigger, service.CheckPossible(pageData));
+                    break;
+            }
             BookingPanel.Visible = true;
         }
 
