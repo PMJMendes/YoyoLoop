@@ -101,9 +101,42 @@
 
         <div class="row pricing">
             <div class="col-12">
-                <div class="row">
-                    <div class="col-12 text-center promocode">Tenho um código promocional</div>
+                <div id="divNoPromocode" class="<%= pnPromocode.Visible ? "hide" : "" %>">
+                    <div class="row">
+                        <div class="col-12 text-center promocode">
+                            <a runat="server" id="lkPromo" OnServerClick="lkPromo_ServerClick">Tenho um código promocional</a>
+                        </div>
+                    </div>
                 </div>
+                <asp:Panel runat="server" ID="pnPromocode" Visible="false">
+                    <div class="row">
+                        <div class="col-12 text-center promocode promocode--active">
+                            <a runat="server" id="lkNoPromo" OnServerClick="lkPromo_ServerClick">Não tenho código promocional</a>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-12 text-center promocode promocode--active">
+                            <div class="input-group mb-3">
+                                <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
+                                    <span class="input-group-text">
+                                        <img src="/img/alert.png"
+                                            srcset="/img/alert@2x.png 2x,
+                                            /img/alert@3x.png 3x">
+                                    </span>
+                                </asp:panel>
+                                <asp:panel runat="server" ID="pnPromoCheck" CssClass="input-group-append" Visible="false">
+                                    <span class="input-group-text">
+                                        <img src="/img/check.png"
+                                            srcset="/img/check@2x.png 2x,
+                                            /img/check@3x.png 3x"
+                                            class="check">
+                                    </span>
+                                </asp:panel>
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
                 <div class="row p-4">
                     <div class="col-12 text-center">
                         <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
@@ -112,39 +145,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- EXTENDED PROMO CODE -->
-        <div class="hide">
-            <hr class="divider">
-
-            <div class="row pricing">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-12 text-center promocode promocode--active">Nao tenho código promocional</div>
-                    </div>
-                    <div class="row p-3">
-                        <div class="col-12 text-center promocode promocode--active">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon2">
-                                        <img src="/img/check.png"
-                                            srcset="/img/check@2x.png 2x,
-                                            /img/check@3x.png 3x"
-                                            class="check">
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row pb-3">
-                        <div class="col-12 text-center">
-                            <button class="btn btn-light btn-xl text-uppercase" >Reservar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END OF EXTENDED PROMO CODE -->
     </div>
 </div>

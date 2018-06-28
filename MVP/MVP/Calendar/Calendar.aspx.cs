@@ -177,6 +177,12 @@ namespace MVP.Calendar
             UpdateBookingPanel("new");
         }
 
+        protected void BookingPanel_PromoEntered(object sender, BookingPanel.PromoEnteredEventArgs e)
+        {
+            pageData.Selection.Price = service.CheckPromo(pageData, e.Promocode);
+            UpdateBookingPanel("promo");
+        }
+
         protected void BookingPanel_BookingSelected(object sender, BookingPanel.BookingSelectedEventArgs e)
         {
             if(User?.Identity.IsAuthenticated == true)
@@ -323,6 +329,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
+                    pageData.Selection.FullPrice = 
                     pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
                     bookupdate = "date";
                 }
@@ -482,6 +489,7 @@ namespace MVP.Calendar
                 DAP = null,
                 Date = DateTime.MinValue,
                 Time = new TimeSpan(-1),
+                FullPrice = 0,
                 Price = 0,
                 Seats = 1,
                 DepartureId = Guid.Empty

@@ -33,6 +33,7 @@ namespace MVP.Services
                                                SAP = null,
                                                DAP = null,
                                                Time = new TimeSpan(-1),
+                                               FullPrice = 0,
                                                Price = 0,
                                                Seats = 1,
                                                DepartureId = Guid.Empty
@@ -188,6 +189,23 @@ namespace MVP.Services
                     }).OrderBy(ts => ts.Departure.Time).ToList()
                 }).ToList();
             }
+        }
+
+        public decimal CheckPromo(CalendarDTO state, string promocode)
+        {
+            decimal result;
+            using (var model = new EntityModel())
+            {
+                if(model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == promocode))
+                {
+                    result = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.PROMOTIONAL).Price;
+                }
+                else
+                {
+                    result = state.Selection.FullPrice;
+                }
+            }
+            return result;
         }
 
         public bool CheckPossible(CalendarDTO state)

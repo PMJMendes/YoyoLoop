@@ -15,12 +15,19 @@ namespace MVP.Calendar
             public string Selected_EndAPName;
         }
 
+        public class PromoEnteredEventArgs : EventArgs
+        {
+            public string Promocode;
+        }
+
         public event EventHandler<BookingSelectedEventArgs> BookingSelected;
+        public event EventHandler<PromoEnteredEventArgs> PromoEntered;
 
         [Serializable]
         public class BookingData 
         {
             public int Seats { get; set; }
+            public decimal FullCost { get; set; }
             public decimal Cost { get; set; }
 
             public DateTime StartTime { get; set; }
@@ -55,19 +62,22 @@ namespace MVP.Calendar
             PanelData = new BookingData
             {
                 Seats = 1,
+                FullCost = 0,
                 Cost = 0,
                 StartTime = DateTime.MinValue,
                 StartRegionName = "REGIAO DE ORIGEM",
                 StartAPName = "Paragem de origem",
                 EndRegionName = "REGIAO DE DESTINO",
-                EndAPName = "Paragem de destino"
+                EndAPName = "Paragem de destino",
             };
+            Clear_Promo();
             Clear_Errors();
         }
 
         internal void Databind(Selection source, string trigger, bool active)
         {
             PanelData.Seats = source.Seats;
+            PanelData.FullCost = source.FullPrice * source.Seats;
             PanelData.Cost = source.Price * source.Seats;
             PanelData.StartTime = source.Date + source.Time;
             PanelData.StartRegionName = source.Route.StartRegion.Name;
@@ -101,6 +111,28 @@ namespace MVP.Calendar
                 BtnBook.Enabled = false;
                 LbError.Visible = true;
             }
+            if(trigger == "promo")
+            {
+                if(tbPromo.Text == string.Empty)
+                {
+                    pnPromoCheck.Visible = false;
+                    pnPromoError.Visible = false;
+                }
+                else
+                {
+                    if (PanelData.Cost == PanelData.FullCost)
+                    {
+                        pnPromoCheck.Visible = false;
+                        pnPromoError.Visible = true;
+                    }
+                    else
+                    {
+                        pnPromoCheck.Visible = true;
+                        pnPromoError.Visible = false;
+                        //adjust panel to show discounted price
+                    }
+                }
+            }
         }
 
         protected void BtnBook_Click(object sender, EventArgs e)
@@ -112,9 +144,27 @@ namespace MVP.Calendar
             });
         }
 
+        protected void lkPromo_ServerClick(object sender, EventArgs e)
+        {
+            pnPromocode.Visible = !pnPromocode.Visible;
+        }
+
+        protected void tbPromo_TextChanged(object sender, EventArgs e)
+        {
+            OnPromoChanged(new PromoEnteredEventArgs
+            {
+                Promocode = tbPromo.Text.ToUpper()
+            });
+        }
+
         protected virtual void OnBookingSelected(BookingSelectedEventArgs args)
         {
             BookingSelected?.Invoke(this, args);
+        }
+
+        protected virtual void OnPromoChanged(PromoEnteredEventArgs args)
+        {
+            PromoEntered?.Invoke(this, args);
         }
 
         internal void Clear_Errors()
@@ -129,6 +179,14 @@ namespace MVP.Calendar
             BtnBook.BackColor = System.Drawing.Color.Empty;
             BtnBook.BorderColor = System.Drawing.Color.Empty;
             LbError.Visible = false;
+        }
+
+        internal void Clear_Promo()
+        {
+            tbPromo.Text = string.Empty;
+            pnPromocode.Visible = false;
+            pnPromoCheck.Visible = false;
+            pnPromoError.Visible = false;
         }
     }
 }

@@ -18,6 +18,7 @@ namespace MVP.Calendar
         public AccessPoint SAP { get; set; }
         public AccessPoint DAP { get; set;}
         public TimeSpan Time { get; set; }
+        public Decimal FullPrice { get; set; }
         public Decimal Price { get; set; }
         public int Seats { get; set; }
         public Guid DepartureId { get; set; }

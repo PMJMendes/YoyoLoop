@@ -23,6 +23,15 @@ namespace MVP.Migrations
                 MinTimeBookLastMinute = new TimeSpan (0, 15, 0)
             });
 
+            context.Promocode.AddOrUpdate(new Promocode()
+            {
+                PromocodeId = Guid.Parse("9E77E2F3-1B9C-4E65-9BB0-3AB9448378B6"),
+                Active = true,
+                Code = "YOYOLOOP",
+                StartDate = new DateTime(2018, 1, 1),
+                EndDate = new DateTime(2050, 12, 31)
+            });
+
             LoopedRegion lis = new LoopedRegion()
             {
                 LoopedRegionId = Guid.Parse("F99985B9-58DE-4924-84A0-92D597B72F0D"),
