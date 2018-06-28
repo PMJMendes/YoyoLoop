@@ -29,6 +29,7 @@ namespace MVP.Calendar
         {
             public int Seats { get; set; }
             public Fare.FareType Fare { get; set; }
+            public decimal StandardPrice { get; set; }
             public decimal Price { get; set; }
             public bool PromoValid { get; set; }
 
@@ -65,6 +66,7 @@ namespace MVP.Calendar
             {
                 Seats = 1,
                 Fare = Fare.FareType.STANDARD,
+                StandardPrice = 0,
                 Price = 0,
                 StartTime = DateTime.MinValue,
                 StartRegionName = "REGIAO DE ORIGEM",
@@ -80,8 +82,9 @@ namespace MVP.Calendar
         internal void Databind(Selection source, string trigger, bool active)
         {
             PanelData.Seats = source.Seats;
-            PanelData.Fare = source.Fare;
-            PanelData.Price = source.Route.Fares.FirstOrDefault(f => f.Type == source.Fare).Price;
+            PanelData.Fare = source.FareType;
+            PanelData.StandardPrice = source.Route.Fares.FirstOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
+            PanelData.Price = source.Route.Fares.FirstOrDefault(f => f.Type == source.FareType).Price;
             PanelData.StartTime = source.Date + source.Time;
             PanelData.StartRegionName = source.Route.StartRegion.Name;
             PanelData.EndRegionName = source.Route.EndRegion.Name;
@@ -135,7 +138,6 @@ namespace MVP.Calendar
                         pnPromoCheck.Visible = true;
                         PanelData.PromoValid = true;
                         pnPromoError.Visible = false;
-                        //adjust panel to show discounted price
                     }
                 }
             }

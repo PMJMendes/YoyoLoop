@@ -28,12 +28,13 @@ namespace MVP.Services
                                            .ToList();
             }
 
-            result.Selection = new Selection { Date = DateTime.MinValue,
+            result.Selection = new Selection { Date = new DateTime(),
                                                Route = null,
                                                SAP = null,
                                                DAP = null,
-                                               Time = new TimeSpan(-1),
-                                               Fare = Fare.FareType.STANDARD,
+                                               Time = new TimeSpan(),
+                                               Promocode = string.Empty,
+                                               FareType = Fare.FareType.STANDARD,
                                                Seats = 1,
                                                DepartureId = Guid.Empty
                                               };
@@ -190,13 +191,13 @@ namespace MVP.Services
             }
         }
 
-        public Fare.FareType CheckPromo(CalendarDTO state, string promocode)
+        public Fare.FareType CheckPromo(CalendarDTO state)
         {
             Fare.FareType result;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == promocode))
+                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Selection.Promocode))
                 {
                     result = Fare.FareType.PROMOTIONAL;
                 }
@@ -273,8 +274,8 @@ namespace MVP.Services
                     UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
                     Seats = state.Selection.Seats,
-                    Fare = state.Selection.Fare,
-                    Cost = state.Selection.Seats * model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.Fare).Price
+                    Fare = state.Selection.FareType,
+                    Cost = state.Selection.Seats * model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price
                 };
 
                 lock (Booking_Lock)

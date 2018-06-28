@@ -18,7 +18,8 @@ namespace MVP.Calendar
         public AccessPoint SAP { get; set; }
         public AccessPoint DAP { get; set;}
         public TimeSpan Time { get; set; }
-        public Fare.FareType Fare { get; set; }
+        public string Promocode { get; set; }
+        public Fare.FareType FareType { get; set; }
         public int Seats { get; set; }
         public Guid DepartureId { get; set; }
     }
