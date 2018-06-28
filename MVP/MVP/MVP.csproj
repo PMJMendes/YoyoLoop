@@ -902,10 +902,15 @@
     <Compile Include="Migrations\201806240415416_User-Name-to-User-ContactName.Designer.cs">
       <DependentUpon>201806240415416_User-Name-to-User-ContactName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806280849153_Promocodes.cs" />
+    <Compile Include="Migrations\201806280849153_Promocodes.Designer.cs">
+      <DependentUpon>201806280849153_Promocodes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
+    <Compile Include="Models\Entities\Promocode.cs" />
     <Compile Include="Models\Entities\DayType.cs" />
     <Compile Include="Models\Entities\Departure.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
@@ -1097,6 +1102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806240415416_User-Name-to-User-ContactName.resx">
       <DependentUpon>201806240415416_User-Name-to-User-ContactName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280849153_Promocodes.resx">
+      <DependentUpon>201806280849153_Promocodes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
