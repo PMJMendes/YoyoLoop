@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVP.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,8 +28,9 @@ namespace MVP.Calendar
         public class BookingData 
         {
             public int Seats { get; set; }
-            public decimal FullCost { get; set; }
-            public decimal Cost { get; set; }
+            public Fare.FareType Fare { get; set; }
+            public decimal Price { get; set; }
+            public bool PromoValid { get; set; }
 
             public DateTime StartTime { get; set; }
             public string StartRegionName { get; set; }
@@ -62,13 +64,14 @@ namespace MVP.Calendar
             PanelData = new BookingData
             {
                 Seats = 1,
-                FullCost = 0,
-                Cost = 0,
+                Fare = Fare.FareType.STANDARD,
+                Price = 0,
                 StartTime = DateTime.MinValue,
                 StartRegionName = "REGIAO DE ORIGEM",
                 StartAPName = "Paragem de origem",
                 EndRegionName = "REGIAO DE DESTINO",
                 EndAPName = "Paragem de destino",
+                PromoValid = false
             };
             Clear_Promo();
             Clear_Errors();
@@ -77,8 +80,8 @@ namespace MVP.Calendar
         internal void Databind(Selection source, string trigger, bool active)
         {
             PanelData.Seats = source.Seats;
-            PanelData.FullCost = source.FullPrice * source.Seats;
-            PanelData.Cost = source.Price * source.Seats;
+            PanelData.Fare = source.Fare;
+            PanelData.Price = source.Route.Fares.FirstOrDefault(f => f.Type == source.Fare).Price;
             PanelData.StartTime = source.Date + source.Time;
             PanelData.StartRegionName = source.Route.StartRegion.Name;
             PanelData.EndRegionName = source.Route.EndRegion.Name;
@@ -115,19 +118,22 @@ namespace MVP.Calendar
             {
                 if(tbPromo.Text == string.Empty)
                 {
+                    PanelData.PromoValid = false;
                     pnPromoCheck.Visible = false;
                     pnPromoError.Visible = false;
                 }
                 else
                 {
-                    if (PanelData.Cost == PanelData.FullCost)
+                    if (PanelData.Fare != Fare.FareType.PROMOTIONAL)
                     {
                         pnPromoCheck.Visible = false;
+                        PanelData.PromoValid = false;
                         pnPromoError.Visible = true;
                     }
                     else
                     {
                         pnPromoCheck.Visible = true;
+                        PanelData.PromoValid = true;
                         pnPromoError.Visible = false;
                         //adjust panel to show discounted price
                     }
@@ -184,6 +190,7 @@ namespace MVP.Calendar
         internal void Clear_Promo()
         {
             tbPromo.Text = string.Empty;
+            PanelData.PromoValid = false;
             pnPromocode.Visible = false;
             pnPromoCheck.Visible = false;
             pnPromoError.Visible = false;

@@ -47,7 +47,7 @@
                             /img/cart@3x.png 3x"
                             class="clock">
                         </div>
-                        <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.Cost.ToString("C") %></asp:label></strong></div>
+                        <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= (PanelData.Price * PanelData.Seats).ToString("C") %></asp:label></strong></div>
                     </div>
 
             </div>
@@ -89,10 +89,10 @@
             <div class="col-4 pl-4 text-uppercase total">Total</div>
             <div class="col-8 pr-4 text-right">
                 <div class="row">
-                    <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= (PanelData.Seats != 0 ? (PanelData.Cost / PanelData.Seats) : 0).ToString("C") %></span></div>
+                    <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= PanelData.Price.ToString("C") %></span></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 total-price"><%= PanelData.Cost.ToString("C") %></div>
+                    <div class="col-12 total-price"><%= (PanelData.Price * PanelData.Seats).ToString("C") %></div>
                 </div>
             </div>
         </div>

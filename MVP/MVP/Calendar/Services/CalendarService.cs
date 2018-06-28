@@ -33,8 +33,7 @@ namespace MVP.Services
                                                SAP = null,
                                                DAP = null,
                                                Time = new TimeSpan(-1),
-                                               FullPrice = 0,
-                                               Price = 0,
+                                               Fare = Fare.FareType.STANDARD,
                                                Seats = 1,
                                                DepartureId = Guid.Empty
                                               };
@@ -191,18 +190,19 @@ namespace MVP.Services
             }
         }
 
-        public decimal CheckPromo(CalendarDTO state, string promocode)
+        public Fare.FareType CheckPromo(CalendarDTO state, string promocode)
         {
-            decimal result;
+            Fare.FareType result;
             using (var model = new EntityModel())
             {
-                if(model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == promocode))
+                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == promocode))
                 {
-                    result = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.PROMOTIONAL).Price;
+                    result = Fare.FareType.PROMOTIONAL;
                 }
                 else
                 {
-                    result = state.Selection.FullPrice;
+                    result = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
                 }
             }
             return result;
@@ -273,7 +273,8 @@ namespace MVP.Services
                     UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
                     Seats = state.Selection.Seats,
-                    Cost = state.Selection.Seats * state.Selection.Price
+                    Fare = state.Selection.Fare,
+                    Cost = state.Selection.Seats * model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.Fare).Price
                 };
 
                 lock (Booking_Lock)

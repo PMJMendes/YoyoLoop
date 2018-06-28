@@ -18,8 +18,7 @@ namespace MVP.Calendar
         public AccessPoint SAP { get; set; }
         public AccessPoint DAP { get; set;}
         public TimeSpan Time { get; set; }
-        public Decimal FullPrice { get; set; }
-        public Decimal Price { get; set; }
+        public Fare.FareType Fare { get; set; }
         public int Seats { get; set; }
         public Guid DepartureId { get; set; }
     }
@@ -29,6 +28,7 @@ namespace MVP.Calendar
     {
         public DateTime Day { get; set; }
         public SlotStatus Status { get; set; }
+        public Fare.FareType Fare { get; set; }
         public Decimal Price { get; set; }
     }
 
