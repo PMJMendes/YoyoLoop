@@ -331,7 +331,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
-                    pageData.Selection.FareType = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Fare).First();
+                    pageData.Selection.FareType = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
                     bookupdate = "date";
                 }
 

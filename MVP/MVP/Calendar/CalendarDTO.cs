@@ -29,7 +29,7 @@ namespace MVP.Calendar
     {
         public DateTime Day { get; set; }
         public SlotStatus Status { get; set; }
-        public Fare.FareType Fare { get; set; }
+        public Fare.FareType FareType { get; set; }
         public Decimal Price { get; set; }
     }
 

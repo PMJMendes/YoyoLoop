@@ -61,7 +61,7 @@ namespace MVP.Services
                     }
                     else
                     {
-                        result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
+                        result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, FareType = Fare.FareType.STANDARD, Price = 0 });
                     }
                     date = date + TimeSpan.FromDays(1);
                 }
@@ -84,6 +84,7 @@ namespace MVP.Services
             {
                 Day = date,
                 Status = SlotStatus.NONE,
+                FareType = Fare.FareType.STANDARD,
                 Price = 0
             };
 
@@ -128,10 +129,12 @@ namespace MVP.Services
 
             if (lastminute)
             {
+                result.FareType = Fare.FareType.LASTMINUTE;
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
             }
             else
             {
+                result.FareType = Fare.FareType.STANDARD;
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.STANDARD).Select(p => p.Price).FirstOrDefault();
             }
             return result;
