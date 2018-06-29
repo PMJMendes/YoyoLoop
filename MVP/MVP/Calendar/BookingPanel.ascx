@@ -123,7 +123,7 @@
                     <div class="row p-3">
                         <div class="col-12 text-center promocode promocode--active">
                             <div class="input-group mb-3">
-                                <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
                                 <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
                                     <span class="input-group-text">
                                         <img src="/img/alert.png"

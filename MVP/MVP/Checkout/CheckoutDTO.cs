@@ -10,7 +10,14 @@ namespace MVP.Checkout
     {
         public Guid BookingId { get; set; }
         public string UserId { get; set; }
+
         public int Seats { get; set; }
+        public Fare.FareType FareType { get; set; }
+        public decimal StandardPrice { get; set; }
+        public decimal Price { get; set; }
+        public string Promocode { get; set; }
+        public bool PromoValid { get; set; }
+
         public decimal Cost { get; set; }
 
         public DateTime StartTime { get; set; }
