@@ -274,7 +274,8 @@ namespace MVP.Services
                     UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
                     Seats = state.Selection.Seats,
-                    Fare = state.Selection.FareType,
+                    FareType = state.Selection.FareType,
+                    Promocode = model.Promocode.FirstOrDefault(p => p.Code == state.Selection.Promocode),
                     Cost = state.Selection.Seats * model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price
                 };
 
