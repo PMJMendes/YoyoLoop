@@ -2,8 +2,8 @@
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
+<%@ Register Src="~/Controls/BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
-<%@ Register Src="BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 
 <asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">

@@ -248,7 +248,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
-    <Content Include="Calendar\BookingPanel.ascx" />
+    <Content Include="Controls\BookingPanel.ascx" />
     <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
     <Content Include="Calendar\Scripts\calendar-table.js" />
@@ -733,11 +733,11 @@
     </Compile>
     <Compile Include="BackOffice\OfficeDTO.cs" />
     <Compile Include="BackOffice\Services\OfficeService.cs" />
-    <Compile Include="Calendar\BookingPanel.ascx.cs">
+    <Compile Include="Controls\BookingPanel.ascx.cs">
       <DependentUpon>BookingPanel.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Calendar\BookingPanel.ascx.designer.cs">
+    <Compile Include="Controls\BookingPanel.ascx.designer.cs">
       <DependentUpon>BookingPanel.ascx</DependentUpon>
     </Compile>
     <Compile Include="Calendar\CalendarDTO.cs" />
@@ -788,6 +788,7 @@
     <Compile Include="Calendar\CalendarDay.ascx.designer.cs">
       <DependentUpon>CalendarDay.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BookingPanelDTO.cs" />
     <Compile Include="Controls\DropdownMenuButton.ascx.cs">
       <DependentUpon>DropdownMenuButton.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

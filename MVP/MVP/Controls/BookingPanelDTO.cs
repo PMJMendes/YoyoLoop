@@ -1,0 +1,24 @@
+﻿using MVP.Models.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace MVP.Controls
+{
+    [Serializable]
+    public class BookingPanelDTO
+    {
+        public int Seats { get; set; }
+        public Fare.FareType FareType { get; set; }
+        public decimal StandardPrice { get; set; }
+        public decimal Price { get; set; }
+        public bool PromoValid { get; set; }
+
+        public DateTime StartTime { get; set; }
+        public string StartRegionName { get; set; }
+        public string StartAPName { get; set; }
+        public string EndRegionName { get; set; }
+        public string EndAPName { get; set; }
+    }
+}

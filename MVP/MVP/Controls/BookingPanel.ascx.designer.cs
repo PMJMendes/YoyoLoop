@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Calendar {
+namespace MVP.Controls {
     
     
     public partial class BookingPanel {

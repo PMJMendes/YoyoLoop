@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BookingPanel.ascx.cs" Inherits="MVP.Calendar.BookingPanel" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BookingPanel.ascx.cs" Inherits="MVP.Controls.BookingPanel" %>
 
 <div class="row next-trip">
     <div class="col-lg-12 p-0">

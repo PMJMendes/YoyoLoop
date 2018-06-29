@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MVP.Calendar
+namespace MVP.Controls
 {
     public partial class BookingPanel : System.Web.UI.UserControl
     {
@@ -24,27 +24,11 @@ namespace MVP.Calendar
         public event EventHandler<BookingSelectedEventArgs> BookingSelected;
         public event EventHandler<PromoEnteredEventArgs> PromoEntered;
 
-        [Serializable]
-        public class BookingData 
-        {
-            public int Seats { get; set; }
-            public Fare.FareType Fare { get; set; }
-            public decimal StandardPrice { get; set; }
-            public decimal Price { get; set; }
-            public bool PromoValid { get; set; }
-
-            public DateTime StartTime { get; set; }
-            public string StartRegionName { get; set; }
-            public string StartAPName { get; set; }
-            public string EndRegionName { get; set; }
-            public string EndAPName { get; set; }
-        }
-
-        public BookingData PanelData
+        public BookingPanelDTO PanelData
         {
             get
             {
-                return (BookingData)ViewState["bookingData"];
+                return (BookingPanelDTO)ViewState["bookingData"];
             }
             set
             {
@@ -62,10 +46,10 @@ namespace MVP.Calendar
 
         internal void Init_Data()
         {
-            PanelData = new BookingData
+            PanelData = new BookingPanelDTO
             {
                 Seats = 1,
-                Fare = Fare.FareType.STANDARD,
+                FareType = Fare.FareType.STANDARD,
                 StandardPrice = 0,
                 Price = 0,
                 StartTime = DateTime.MinValue,
@@ -79,10 +63,10 @@ namespace MVP.Calendar
             Clear_Errors();
         }
 
-        internal void Databind(Selection source, string trigger, bool active)
+        internal void Databind(Calendar.Selection source, string trigger, bool active) // switch source to DTO
         {
             PanelData.Seats = source.Seats;
-            PanelData.Fare = source.FareType;
+            PanelData.FareType = source.FareType;
             PanelData.StandardPrice = source.Route.Fares.FirstOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
             PanelData.Price = source.Route.Fares.FirstOrDefault(f => f.Type == source.FareType).Price;
             PanelData.StartTime = source.Date + source.Time;
@@ -127,7 +111,7 @@ namespace MVP.Calendar
                 }
                 else
                 {
-                    if (PanelData.Fare != Fare.FareType.PROMOTIONAL)
+                    if (PanelData.FareType != Fare.FareType.PROMOTIONAL)
                     {
                         pnPromoCheck.Visible = false;
                         PanelData.PromoValid = false;
