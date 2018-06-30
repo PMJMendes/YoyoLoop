@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Calendar {
+namespace MVP.Controls {
     
     
     public partial class BookingPanel {
@@ -85,6 +85,60 @@ namespace MVP.Calendar {
         protected global::System.Web.UI.WebControls.Label LbEndAP;
         
         /// <summary>
+        /// lkPromo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkPromo;
+        
+        /// <summary>
+        /// pnPromocode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnPromocode;
+        
+        /// <summary>
+        /// lkNoPromo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkNoPromo;
+        
+        /// <summary>
+        /// tbPromo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPromo;
+        
+        /// <summary>
+        /// pnPromoError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnPromoError;
+        
+        /// <summary>
+        /// pnPromoCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnPromoCheck;
+        
+        /// <summary>
         /// BtnBook control.
         /// </summary>
         /// <remarks>
@@ -92,14 +146,5 @@ namespace MVP.Calendar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnBook;
-        
-        /// <summary>
-        /// LbError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbError;
     }
 }

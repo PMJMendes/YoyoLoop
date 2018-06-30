@@ -1,24 +1,25 @@
-﻿using System;
+﻿using MVP.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MVP.Models.Entities;
 
-namespace MVP.Checkout
+namespace MVP.Controls
 {
-    public class CheckoutDTO
+    [Serializable]
+    public class BookingPanelDTO
     {
-        public Guid BookingId { get; set; }
-        public string UserId { get; set; }
+        public bool BookingValid { get; set; }
+        public string Trigger { get; set; }
 
         public int Seats { get; set; }
         public Fare.FareType FareType { get; set; }
         public decimal StandardPrice { get; set; }
         public decimal Price { get; set; }
+        public decimal StandardCost { get; set; }
+        public decimal Cost { get; set; }
         public string Promocode { get; set; }
         public bool PromoValid { get; set; }
-
-        public decimal Cost { get; set; }
 
         public DateTime StartTime { get; set; }
         public string StartRegionName { get; set; }

@@ -26,6 +26,7 @@ namespace MVP.Calendar
                 public string Seats { get; set; }
                 public DateTime CalSelectedDate { get; set; }
                 public DateTime CalVisibleDate { get; set; }
+                public string Promocode { get; set; }
                 public TimeSpan Time { get; set; }
                 public Guid DepartureId { get; set; }
             }
@@ -173,8 +174,14 @@ namespace MVP.Calendar
             }
 
             CheckParams();
-            ClearBookingPanel();
             UpdateBookingPanel("new");
+        }
+
+        protected void BookingPanel_PromoEntered(object sender, BookingPanel.PromoEnteredEventArgs e)
+        {
+
+            localData.Values.Promocode = e.Promocode;
+            CheckParams();
         }
 
         protected void BookingPanel_BookingSelected(object sender, BookingPanel.BookingSelectedEventArgs e)
@@ -323,7 +330,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
-                    pageData.Selection.Price = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.Price).First();
+                    pageData.Selection.FareType = pageData.Selection.FareType == Fare.FareType.PROMOTIONAL ? Fare.FareType.PROMOTIONAL : pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
                     bookupdate = "date";
                 }
 
@@ -338,6 +345,13 @@ namespace MVP.Calendar
                 {
                     pageData.Selection.Time = localData.Values.Time;
                     pageData.Selection.DepartureId = localData.Values.DepartureId;
+                }
+
+                if (pageData.Selection.Promocode != localData.Values.Promocode) // New promocode
+                {
+                    pageData.Selection.Promocode = localData.Values.Promocode;
+                    pageData.Selection.FareType = service.CheckPromo(pageData);
+                    bookupdate = "promo";
                 }
             }
 
@@ -368,15 +382,7 @@ namespace MVP.Calendar
 
         private void UpdateBookingPanel(string trigger)
         {
-            switch(trigger)
-            {
-                case "new":
-                    BookingPanel.Databind(pageData.Selection, trigger, true);
-                    break;
-                default:
-                    BookingPanel.Databind(pageData.Selection, trigger, service.CheckPossible(pageData));
-                    break;
-            }
+            BookingPanel.Databind(service.GetBookingPanelData(pageData, trigger));
             BookingPanel.Visible = true;
         }
 
@@ -410,7 +416,9 @@ namespace MVP.Calendar
                     Seats = "1",
                     CalSelectedDate = DateTime.Today,
                     CalVisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1),
-                    Time = new TimeSpan(-1)
+                    Promocode = string.Empty,
+                    Time = new TimeSpan(),
+                    DepartureId = Guid.Empty
                 }
             };
 
@@ -431,6 +439,7 @@ namespace MVP.Calendar
             localData.Values.Seats = "1";
             CalDate.VisibleDate = localData.Values.CalVisibleDate;
             CalDate.SelectedDate = new DateTime();
+            BookingPanel.Visible = false;
         }
 
         private void ProcessQueryString()
@@ -480,9 +489,10 @@ namespace MVP.Calendar
                 Route = null,
                 SAP = null,
                 DAP = null,
-                Date = DateTime.MinValue,
-                Time = new TimeSpan(-1),
-                Price = 0,
+                Date = new DateTime(),
+                Time = new TimeSpan(),
+                Promocode = string.Empty,
+                FareType = Fare.FareType.STANDARD,
                 Seats = 1,
                 DepartureId = Guid.Empty
             };

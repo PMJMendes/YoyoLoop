@@ -7,6 +7,7 @@ using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MVP.Services;
+using MVP.Controls;
 using MVP.Models;
 using MVP.Models.Entities;
 using Microsoft.AspNet.Identity;
@@ -28,6 +29,11 @@ namespace MVP.Checkout
                 //Response.Redirect("/");
             }
             InitData();
+        }
+
+        private void UpdateCheckoutPanel()
+        {
+            CheckoutPanel.Databind(service.GetCheckoutPanelData(pageData));
         }
 
         private void InitData()
@@ -61,6 +67,8 @@ namespace MVP.Checkout
                 pageData = service.GetInitialData();
                 ProcessQueryString();
                 Session["checkout.data"] = pageData;
+                UpdateCheckoutPanel();
+                
             }
         }
 
@@ -78,7 +86,13 @@ namespace MVP.Checkout
                     pageData = new CheckoutDTO
                     {
                         BookingId = Guid.Empty,
+                        UserId = string.Empty,
                         Seats = 0,
+                        FareType = Fare.FareType.STANDARD,
+                        StandardPrice = 0,
+                        Price = 0,
+                        Promocode = string.Empty,
+                        PromoValid = false,
                         Cost = 0,
                         StartTime = new DateTime(),
                         StartRegionName = "Região de Origem",
@@ -95,11 +109,43 @@ namespace MVP.Checkout
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
                     //Response.Redirect("/Calendar/Calendar");
                 }
+                else
+                {
+                    if(pageData.PromoValid)
+                    {
+                        pnPromocode.Visible = false;
+                    }
+                }
             }
             else
             {
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
                 //Response.Redirect("/Calendar/Calendar");
+            }
+        }
+
+        protected void tbPromo_TextChanged(object sender, EventArgs e)
+        {
+            pageData.Promocode = tbPromo.Text;
+            pageData = service.CheckPromo(pageData);
+            UpdateCheckoutPanel();
+            if (pageData.Promocode == string.Empty)
+            {
+                pnPromoCheck.Visible = false;
+                pnPromoError.Visible = false;
+            }
+            else
+            {
+                if (!pageData.PromoValid)
+                {
+                    pnPromoCheck.Visible = false;
+                    pnPromoError.Visible = true;
+                }
+                else
+                {
+                    pnPromoCheck.Visible = true;
+                    pnPromoError.Visible = false;
+                }
             }
         }
     }

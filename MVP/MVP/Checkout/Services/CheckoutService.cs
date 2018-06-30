@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using Stripe;
 using System.Web.Configuration;
+using MVP.Controls;
 
 namespace MVP.Services
 {
@@ -35,6 +36,8 @@ namespace MVP.Services
                                            .Include(dap => dap.Trip.EndAccessPoint)
                                            .Include(sr => sr.Trip.StartAccessPoint.Region)
                                            .Include(er => er.Trip.EndAccessPoint.Region)
+                                           .Include(f => f.Trip.Departure.Route.Fares)
+                                           .Include(p => p.Promocode)
                                            .FirstOrDefault();
                 if(booking == null)
                 {
@@ -45,6 +48,11 @@ namespace MVP.Services
                     result.BookingId = booking.BookingId;
                     result.UserId = booking.UserId;
                     result.Seats = booking.Seats;
+                    result.FareType = booking.FareType;
+                    result.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
+                    result.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
+                    result.Promocode = booking.Promocode?.Code ?? string.Empty;
+                    result.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
                     result.Cost = booking.Cost;
                     result.StartTime = booking.Trip.StartTime;
                     result.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
@@ -52,6 +60,53 @@ namespace MVP.Services
                     result.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
                     result.EndAPName = booking.Trip.EndAccessPoint.Name;
                 }
+            }
+            return result;
+        }
+
+        public BookingPanelDTO GetCheckoutPanelData(CheckoutDTO state)
+        {
+            var result = new BookingPanelDTO
+            {
+                BookingValid = true,
+                Trigger = string.Empty,
+                Seats = state.Seats,
+                FareType = state.FareType,
+                StandardPrice = state.StandardPrice,
+                Price = state.Price,
+                Promocode = state.Promocode,
+                PromoValid = state.PromoValid,
+                StartTime = state.StartTime,
+                StartRegionName = state.StartRegionName,
+                StartAPName = state.StartAPName,
+                EndRegionName = state.EndRegionName,
+                EndAPName = state.EndAPName,
+                Cost = state.Cost
+            };
+
+            result.StandardCost = result.StandardPrice * result.Seats;
+
+            return result;
+        }
+
+        public CheckoutDTO CheckPromo(CheckoutDTO state)
+        {
+            CheckoutDTO result = state;
+            using (var model = new EntityModel())
+            {
+                bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
+                {
+                    result.FareType = Fare.FareType.PROMOTIONAL;
+                    result.PromoValid = true;
+                }
+                else
+                {
+                    result.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                    result.PromoValid = false;
+                }
+                result.Price = model.Booking.Include(b => b.Trip.Departure.Route.Fares).FirstOrDefault(b => b.BookingId == state.BookingId).Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == result.FareType).Price;
+                result.Cost = result.Seats * result.Price;
             }
             return result;
         }
@@ -94,67 +149,68 @@ namespace MVP.Services
                 }
 
                 // Charge sucessful
-                UpdateBooking(state.BookingId, BookingStatus.BOOKED);
+                UpdateBooking(state, BookingStatus.BOOKED);
                 error = string.Empty;
                 return true;
             }
         }
 
-        public void UpdateBooking(Guid id, BookingStatus status)
+        public void UpdateBooking(CheckoutDTO state, BookingStatus status)
         {
             using (var model = new EntityModel())
             {
-                var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == id);
+                var booking = model.Booking.Include(t => t.Trip).Include(p => p.Promocode).SingleOrDefault(b => b.BookingId == state.BookingId);
 
                 if (booking != null)
                 {
                     booking.Status = status;
                     booking.TicketCode = GenerateTicket(6);
+                    booking.FareType = state.FareType;
+                    booking.Promocode = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode.ToUpper());
+                    booking.Cost = state.Cost;
+
                     model.SaveChanges();
 
-                    UpdateTrip(booking.Trip.TripId);
+                    UpdateTrip(booking.Trip.TripId, model);
                 }
             }
         }
 
-        public void UpdateTrip(Guid id)
+        public void UpdateTrip(Guid id, EntityModel model)
         {
-            using (var model = new EntityModel())
+            var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
+            var bookings = trip.Bookings;
+
+            if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
             {
-                var trip = model.Trip.Include(b => b.Bookings).SingleOrDefault(t => t.TripId == id);
-                var bookings = trip.Bookings;
+                return;
+            }
 
-                if (trip == null || trip.Status == TripStatus.CANCELLED || trip.Status == TripStatus.COMPLETED)
+            if (trip.StartTime < DateTime.Now)
+            {
+                trip.Status = TripStatus.COMPLETED;
+                foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
                 {
-                    return;
+                    b.Status = BookingStatus.COMPLETED;
                 }
+                model.SaveChanges();
+                return;
+            }
 
-                if (trip.StartTime < DateTime.Now)
+            if (trip.Status == TripStatus.PENDING)
+            {
+                if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
                 {
-                    trip.Status = TripStatus.COMPLETED;
-                    foreach (Booking b in bookings.Where(s => s.Status == BookingStatus.BOOKED))
-                    {
-                        b.Status = BookingStatus.COMPLETED;
-                    }
+                    trip.Status = TripStatus.BOOKED;
                     model.SaveChanges();
                     return;
                 }
 
-                if (trip.Status == TripStatus.PENDING)
+                if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
                 {
-                    if (bookings.Where(s => s.Status == BookingStatus.BOOKED).Count() > 0)
-                    {
-                        trip.Status = TripStatus.BOOKED;
-                        model.SaveChanges();
-                        return;
-                    }
-
-                    if (bookings.Where(s => s.Status == BookingStatus.PENDING).Count() == 0)
-                    {
-                        trip.Status = TripStatus.CANCELLED;
-                        model.SaveChanges();
-                        return;
-                    }
+                    trip.Status = TripStatus.CANCELLED;
+                    model.SaveChanges();
+                    return;
                 }
             }
         }

@@ -15,6 +15,8 @@ namespace MVP.Models.Entities
         public DateTime CreationTime { get; set; }
         public Trip Trip { get; set; }
         public int Seats { get; set; }
+        public Fare.FareType FareType { get; set; }
+        public Promocode Promocode { get; set; }
         public Decimal Cost { get; set; }
     }
 
