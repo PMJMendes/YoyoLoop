@@ -174,7 +174,6 @@ namespace MVP.Calendar
             }
 
             CheckParams();
-            ClearBookingPanel();
             UpdateBookingPanel("new");
         }
 
@@ -331,7 +330,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
-                    pageData.Selection.FareType = pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
+                    pageData.Selection.FareType = pageData.Selection.FareType == Fare.FareType.PROMOTIONAL ? Fare.FareType.PROMOTIONAL : pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
                     bookupdate = "date";
                 }
 
@@ -352,7 +351,7 @@ namespace MVP.Calendar
                 {
                     pageData.Selection.Promocode = localData.Values.Promocode;
                     pageData.Selection.FareType = service.CheckPromo(pageData);
-                    UpdateBookingPanel("promo");
+                    bookupdate = "promo";
                 }
             }
 
@@ -383,15 +382,7 @@ namespace MVP.Calendar
 
         private void UpdateBookingPanel(string trigger)
         {
-            switch(trigger)
-            {
-                case "new":
-                    BookingPanel.Databind(pageData.Selection, trigger, true);
-                    break;
-                default:
-                    BookingPanel.Databind(pageData.Selection, trigger, service.CheckPossible(pageData));
-                    break;
-            }
+            BookingPanel.Databind(service.GetBookingPanelData(pageData, trigger));
             BookingPanel.Visible = true;
         }
 

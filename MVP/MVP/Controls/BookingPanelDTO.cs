@@ -9,10 +9,16 @@ namespace MVP.Controls
     [Serializable]
     public class BookingPanelDTO
     {
+        public bool Active { get; set; }
+        public string Trigger { get; set; }
+
         public int Seats { get; set; }
         public Fare.FareType FareType { get; set; }
         public decimal StandardPrice { get; set; }
         public decimal Price { get; set; }
+        public decimal StandardCost { get; set; }
+        public decimal Cost { get; set; }
+        public string Promocode { get; set; }
         public bool PromoValid { get; set; }
 
         public DateTime StartTime { get; set; }

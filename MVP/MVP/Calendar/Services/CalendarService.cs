@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using MVP.Controls;
 
 namespace MVP.Services
 {
@@ -212,7 +213,7 @@ namespace MVP.Services
             return result;
         }
 
-        public bool CheckPossible(CalendarDTO state)
+        public BookingPanelDTO GetBookingPanelData(CalendarDTO state, string trigger)
         {
             var starttime = state.Selection.Date + state.Selection.Time;
             var dayType = GetDayType(state.Selection.Date);
@@ -237,14 +238,42 @@ namespace MVP.Services
                         (d, ts) => new { Departure = d, Trips = ts }
                     );
 
-                if(lastminute)
+                var result = new BookingPanelDTO
                 {
-                    return departures.Any(t => t.Trips.Any());
+                    Trigger = trigger,
+                    Seats = state.Selection.Seats,
+                    FareType = state.Selection.FareType,
+                    StandardPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == (lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD)).Price,
+                    Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
+                    Promocode = state.Selection.Promocode,
+                    PromoValid = state.Selection.FareType == Fare.FareType.PROMOTIONAL ? true : false,
+                    StartTime = starttime,
+                    StartRegionName = state.Selection.Route.StartRegion.Name,
+                    StartAPName = state.Selection.SAP.Name,
+                    EndRegionName = state.Selection.Route.EndRegion.Name,
+                    EndAPName = state.Selection.DAP.Name
+                };
+
+                result.StandardCost = result.StandardPrice * result.Seats;
+                result.Cost = result.Price * result.Seats;
+
+                if(trigger == "new")
+                {
+                    result.Active = true;
                 }
                 else
                 {
-                    return departures.Any();
+                    if (lastminute)
+                    {
+                        result.Active = departures.Any(t => t.Trips.Any());
+                    }
+                    else
+                    {
+                        result.Active = departures.Any();
+                    }
                 }
+
+                return result;
             }
         }
 

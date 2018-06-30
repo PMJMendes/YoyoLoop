@@ -24,6 +24,9 @@ namespace MVP.Controls
         public event EventHandler<BookingSelectedEventArgs> BookingSelected;
         public event EventHandler<PromoEnteredEventArgs> PromoEntered;
 
+        [System.ComponentModel.Bindable(true)]
+        public bool PromoForm { get; set; }
+
         public BookingPanelDTO PanelData
         {
             get
@@ -48,39 +51,42 @@ namespace MVP.Controls
         {
             PanelData = new BookingPanelDTO
             {
+                Active = false,
+                Trigger = string.Empty,
                 Seats = 1,
                 FareType = Fare.FareType.STANDARD,
                 StandardPrice = 0,
                 Price = 0,
+                StandardCost = 0,
+                Cost = 0,
+                Promocode = string.Empty,
+                PromoValid = false,
                 StartTime = DateTime.MinValue,
                 StartRegionName = "REGIAO DE ORIGEM",
                 StartAPName = "Paragem de origem",
                 EndRegionName = "REGIAO DE DESTINO",
-                EndAPName = "Paragem de destino",
-                PromoValid = false
+                EndAPName = "Paragem de destino"
             };
             Clear_Promo();
             Clear_Errors();
         }
 
-        internal void Databind(Calendar.Selection source, string trigger, bool active) // switch source to DTO
+        internal void Databind(BookingPanelDTO source)
         {
-            PanelData.Seats = source.Seats;
-            PanelData.FareType = source.FareType;
-            PanelData.StandardPrice = source.Route.Fares.FirstOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
-            PanelData.Price = source.Route.Fares.FirstOrDefault(f => f.Type == source.FareType).Price;
-            PanelData.StartTime = source.Date + source.Time;
-            PanelData.StartRegionName = source.Route.StartRegion.Name;
-            PanelData.EndRegionName = source.Route.EndRegion.Name;
-            PanelData.StartAPName = source.SAP.Name;
-            PanelData.EndAPName = source.DAP.Name;
-            if (active)
+            PanelData = source;
+            tbPromo.Text = PanelData.Promocode;
+            if(PanelData.PromoValid)
+            {
+                pnPromocode.Visible = true;
+            }
+
+            if (PanelData.Active)
             {
                 Clear_Errors();
             }
             else
             {
-                switch (trigger)
+                switch (PanelData.Trigger)
                 {
                     case "sap":
                         LbStartAP.ForeColor = System.Drawing.Color.Red;
@@ -98,10 +104,10 @@ namespace MVP.Controls
                 BtnBook.BackColor = System.Drawing.Color.Gray;
                 BtnBook.ForeColor = System.Drawing.Color.White;
                 BtnBook.BorderColor = System.Drawing.Color.Black;
+                BtnBook.Text = "Viagem indisponível";
                 BtnBook.Enabled = false;
-                LbError.Visible = true;
             }
-            if(trigger == "promo")
+            if(PanelData.Trigger == "promo")
             {
                 if(tbPromo.Text == string.Empty)
                 {
@@ -111,16 +117,14 @@ namespace MVP.Controls
                 }
                 else
                 {
-                    if (PanelData.FareType != Fare.FareType.PROMOTIONAL)
+                    if (!PanelData.PromoValid)
                     {
                         pnPromoCheck.Visible = false;
-                        PanelData.PromoValid = false;
                         pnPromoError.Visible = true;
                     }
                     else
                     {
                         pnPromoCheck.Visible = true;
-                        PanelData.PromoValid = true;
                         pnPromoError.Visible = false;
                     }
                 }
@@ -166,11 +170,11 @@ namespace MVP.Controls
             {
                 l.ForeColor = System.Drawing.Color.Empty;
             }
+            BtnBook.Text = "Reservar";
             BtnBook.Enabled = true;
             BtnBook.ForeColor = System.Drawing.Color.Empty;
             BtnBook.BackColor = System.Drawing.Color.Empty;
             BtnBook.BorderColor = System.Drawing.Color.Empty;
-            LbError.Visible = false;
         }
 
         internal void Clear_Promo()

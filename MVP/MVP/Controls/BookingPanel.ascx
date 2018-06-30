@@ -47,7 +47,7 @@
                             /img/cart@3x.png 3x"
                             class="clock">
                         </div>
-                        <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= (PanelData.StandardPrice * PanelData.Seats).ToString("C") %></asp:label></strong></div>
+                        <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.StandardCost.ToString("C") %></asp:label></strong></div>
                     </div>
 
             </div>
@@ -95,10 +95,10 @@
                     <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= PanelData.Price.ToString("C") %></span></div>
                 </div>
                 <div class="row <%= PanelData.PromoValid ? "" : "hide" %>">
-                    <div class="col-12 total-price"><s><%= (PanelData.StandardPrice * PanelData.Seats).ToString("C") %></s></div>
+                    <div class="col-12 total-price"><s><%= PanelData.StandardCost.ToString("C") %></s></div>
                 </div>
                 <div class="row">
-                    <div class="col-12 total-price"><%= (PanelData.Price * PanelData.Seats).ToString("C") %></div>
+                    <div class="col-12 total-price"><%= PanelData.Cost.ToString("C") %></div>
                 </div>
             </div>
         </div>
@@ -107,46 +107,47 @@
 
         <div class="row pricing">
             <div class="col-12">
-                <div id="divNoPromocode" class="<%= pnPromocode.Visible ? "hide" : "" %>">
-                    <div class="row">
-                        <div class="col-12 text-center promocode">
-                            <a runat="server" id="lkPromo" OnServerClick="lkPromo_ServerClick">Tenho um código promocional</a>
-                        </div>
-                    </div>
-                </div>
-                <asp:Panel runat="server" ID="pnPromocode" Visible="false">
-                    <div class="row">
-                        <div class="col-12 text-center promocode promocode--active">
-                            <a runat="server" id="lkNoPromo" OnServerClick="lkPromo_ServerClick">Não tenho código promocional</a>
-                        </div>
-                    </div>
-                    <div class="row p-3">
-                        <div class="col-12 text-center promocode promocode--active">
-                            <div class="input-group mb-3">
-                                <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
-                                <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
-                                    <span class="input-group-text">
-                                        <img src="/img/alert.png"
-                                            srcset="/img/alert@2x.png 2x,
-                                            /img/alert@3x.png 3x">
-                                    </span>
-                                </asp:panel>
-                                <asp:panel runat="server" ID="pnPromoCheck" CssClass="input-group-append" Visible="false">
-                                    <span class="input-group-text">
-                                        <img src="/img/check.png"
-                                            srcset="/img/check@2x.png 2x,
-                                            /img/check@3x.png 3x"
-                                            class="check">
-                                    </span>
-                                </asp:panel>
+                <div id="promoform" class="<%= PromoForm ? "" : "hide" %>">
+                    <div id="divNoPromocode" class="<%= pnPromocode.Visible ? "hide" : "" %>">
+                        <div class="row">
+                            <div class="col-12 text-center promocode">
+                                <a runat="server" id="lkPromo" OnServerClick="lkPromo_ServerClick">Tenho um código promocional</a>
                             </div>
                         </div>
                     </div>
-                </asp:Panel>
+                    <asp:Panel runat="server" ID="pnPromocode" Visible="false">
+                        <div class="row">
+                            <div class="col-12 text-center promocode promocode--active">
+                                <a runat="server" id="lkNoPromo" OnServerClick="lkPromo_ServerClick">Não tenho código promocional</a>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-12 text-center promocode promocode--active">
+                                <div class="input-group mb-3">
+                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                    <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
+                                        <span class="input-group-text">
+                                            <img src="/img/alert.png"
+                                                srcset="/img/alert@2x.png 2x,
+                                                /img/alert@3x.png 3x">
+                                        </span>
+                                    </asp:panel>
+                                    <asp:panel runat="server" ID="pnPromoCheck" CssClass="input-group-append" Visible="false">
+                                        <span class="input-group-text">
+                                            <img src="/img/check.png"
+                                                srcset="/img/check@2x.png 2x,
+                                                /img/check@3x.png 3x"
+                                                class="check">
+                                        </span>
+                                    </asp:panel>
+                                </div>
+                            </div>
+                        </div>
+                    </asp:Panel>
+                </div>
                 <div class="row p-4">
                     <div class="col-12 text-center">
                         <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
-                        <p><asp:Label runat="server" ID="LbError" Text="Viagem indisponivel" CssClass="text-danger" Visible="false" /></p>
                     </div>
                 </div>
             </div>
