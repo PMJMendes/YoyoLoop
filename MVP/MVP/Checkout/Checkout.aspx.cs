@@ -7,6 +7,7 @@ using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MVP.Services;
+using MVP.Controls;
 using MVP.Models;
 using MVP.Models.Entities;
 using Microsoft.AspNet.Identity;
@@ -28,6 +29,11 @@ namespace MVP.Checkout
                 //Response.Redirect("/");
             }
             InitData();
+        }
+
+        private void UpdateCheckoutPanel()
+        {
+            CheckoutPanel.Databind(service.GetCheckoutPanelData(pageData));
         }
 
         private void InitData()
@@ -61,6 +67,8 @@ namespace MVP.Checkout
                 pageData = service.GetInitialData();
                 ProcessQueryString();
                 Session["checkout.data"] = pageData;
+                UpdateCheckoutPanel();
+                
             }
         }
 
@@ -120,6 +128,7 @@ namespace MVP.Checkout
         {
             pageData.Promocode = tbPromo.Text;
             pageData = service.CheckPromo(pageData);
+            UpdateCheckoutPanel();
             if (pageData.Promocode == string.Empty)
             {
                 pnPromoCheck.Visible = false;

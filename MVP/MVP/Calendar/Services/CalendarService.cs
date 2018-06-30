@@ -259,17 +259,17 @@ namespace MVP.Services
 
                 if(trigger == "new")
                 {
-                    result.Active = true;
+                    result.BookingValid = true;
                 }
                 else
                 {
                     if (lastminute)
                     {
-                        result.Active = departures.Any(t => t.Trips.Any());
+                        result.BookingValid = departures.Any(t => t.Trips.Any());
                     }
                     else
                     {
-                        result.Active = departures.Any();
+                        result.BookingValid = departures.Any();
                     }
                 }
 

@@ -25,25 +25,17 @@ namespace MVP.Controls
         public event EventHandler<PromoEnteredEventArgs> PromoEntered;
 
         [System.ComponentModel.Bindable(true)]
-        public bool PromoForm { get; set; }
+        public bool BookingActive { get; set; }
 
         public BookingPanelDTO PanelData
         {
             get
             {
-                return (BookingPanelDTO)ViewState["bookingData"];
+                return (BookingPanelDTO)ViewState["PanelData"];
             }
             set
             {
-                ViewState["bookingData"] = value;
-            }
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if(!IsPostBack)
-            {
-                Init_Data();
+                ViewState["PanelData"] = value;
             }
         }
 
@@ -51,7 +43,7 @@ namespace MVP.Controls
         {
             PanelData = new BookingPanelDTO
             {
-                Active = false,
+                BookingValid = false,
                 Trigger = string.Empty,
                 Seats = 1,
                 FareType = Fare.FareType.STANDARD,
@@ -80,7 +72,7 @@ namespace MVP.Controls
                 pnPromocode.Visible = true;
             }
 
-            if (PanelData.Active)
+            if (PanelData.BookingValid)
             {
                 Clear_Errors();
             }

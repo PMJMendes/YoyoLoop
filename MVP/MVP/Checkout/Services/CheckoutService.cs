@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using Stripe;
 using System.Web.Configuration;
+using MVP.Controls;
 
 namespace MVP.Services
 {
@@ -60,6 +61,31 @@ namespace MVP.Services
                     result.EndAPName = booking.Trip.EndAccessPoint.Name;
                 }
             }
+            return result;
+        }
+
+        public BookingPanelDTO GetCheckoutPanelData(CheckoutDTO state)
+        {
+            var result = new BookingPanelDTO
+            {
+                BookingValid = true,
+                Trigger = string.Empty,
+                Seats = state.Seats,
+                FareType = state.FareType,
+                StandardPrice = state.StandardPrice,
+                Price = state.Price,
+                Promocode = state.Promocode,
+                PromoValid = state.PromoValid,
+                StartTime = state.StartTime,
+                StartRegionName = state.StartRegionName,
+                StartAPName = state.StartAPName,
+                EndRegionName = state.EndRegionName,
+                EndAPName = state.EndAPName,
+                Cost = state.Cost
+            };
+
+            result.StandardCost = result.StandardPrice * result.Seats;
+
             return result;
         }
 

@@ -103,11 +103,11 @@
             </div>
         </div>
 
-        <hr class="divider">
+        <div id="Booking" class="<%= BookingActive ? "" : "hide" %>">
+            <hr class="divider">
 
-        <div class="row pricing">
-            <div class="col-12">
-                <div id="promoform" class="<%= PromoForm ? "" : "hide" %>">
+            <div class="row pricing">
+                <div class="col-12">
                     <div id="divNoPromocode" class="<%= pnPromocode.Visible ? "hide" : "" %>">
                         <div class="row">
                             <div class="col-12 text-center promocode">
@@ -144,10 +144,10 @@
                             </div>
                         </div>
                     </asp:Panel>
-                </div>
-                <div class="row p-4">
-                    <div class="col-12 text-center">
-                        <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
+                    <div class="row p-4">
+                        <div class="col-12 text-center">
+                            <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ namespace MVP.Controls
     [Serializable]
     public class BookingPanelDTO
     {
-        public bool Active { get; set; }
+        public bool BookingValid { get; set; }
         public string Trigger { get; set; }
 
         public int Seats { get; set; }
