@@ -13,6 +13,15 @@ namespace MVP.Checkout {
     public partial class Checkout {
         
         /// <summary>
+        /// upPromocode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upPromocode;
+        
+        /// <summary>
         /// pnPromocode control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace MVP.Checkout {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnPromoCheck;
+        
+        /// <summary>
+        /// upCheckoutPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upCheckoutPanel;
         
         /// <summary>
         /// CheckoutPanel control.

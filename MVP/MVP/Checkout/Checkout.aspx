@@ -19,27 +19,7 @@
                     <div class="col-md-8">
                         <h1 class="checkout__main-title">Pagar e Confirmar</h1>
 
-                        <h2 class="checkout__sub-title">Pagamento</h2>
-                        <div class="checkout__label">Método de pagamento</div>
-                        <select class="checkout__input checkout__input--payment-method">
-                            <option value="card">Cartão de crédito</option>
-                        </select>
-
-                        <div class="checkout__label">Nome do titular</div>
-                        <input class="checkout__input checkout__input--name" type="text" id="txtCardName" placeholder="">
-                
-                        <div class="row checkout__card-info">
-                            <div class="col-md-7">
-                                <div class="checkout__label">Número do cartão</div>
-                                <input class="checkout__input checkout__input--card-number" type="text" id="txtCardNumber" placeholder="0000 0000 0000 0000">
-                            </div>
-                            <div class="col-md-3 d-flex align-items-end">
-                                <input class="checkout__input checkout__input--card-expiration" type="text" id="txtCardExpiry" placeholder="MM/YY"> 
-                            </div>
-                            <div class="col-md-2 d-flex align-items-end">
-                                <input class="checkout__input checkout__input--card-cvv" type="text" id="txtCardSecurityCode" placeholder="CVV"> 
-                            </div>
-                        </div>
+                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:290px;width:100%;border:none" />
 
                         <!-- FACTURA HIDDEN FOR NOW -->
                         <div class="hide">
@@ -84,32 +64,39 @@
                         </div>
                         <!-- END OF FACTURA -->
 
-                        <asp:Panel runat="server" ID="pnPromocode" Visible="true">
-                            <div class="mt-5 mb-5 checkout__separator"></div>
-                            <div class="checkout__label">Código promocional</div>
-                            <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="checkout__input checkout__input--promocode" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
-                            <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
-                                <span class="input-group-text">
-                                    <img src="/img/alert.png"
-                                        srcset="/img/alert@2x.png 2x,
-                                        /img/alert@3x.png 3x">
-                                </span>
-                            </asp:panel>
-                            <asp:panel runat="server" ID="pnPromoCheck" CssClass="input-group-append" Visible="false">
-                                <span class="input-group-text">
-                                    <img src="/img/check.png"
-                                        srcset="/img/check@2x.png 2x,
-                                        /img/check@3x.png 3x"
-                                        class="check">
-                                </span>
-                            </asp:panel>
-                        </asp:Panel>
-
+                        <asp:UpdatePanel runat="server" ID="upPromocode" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <asp:Panel runat="server" ID="pnPromocode" Visible="true">
+                                    <div class="mt-5 mb-5 checkout__separator"></div>
+                                    <div class="checkout__label">Código promocional</div>
+                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="checkout__input checkout__input--promocode" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                    <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
+                                        <span class="input-group-text">
+                                            <img src="/img/alert.png"
+                                                srcset="/img/alert@2x.png 2x,
+                                                /img/alert@3x.png 3x">
+                                        </span>
+                                    </asp:panel>
+                                    <asp:panel runat="server" ID="pnPromoCheck" CssClass="input-group-append" Visible="false">
+                                        <span class="input-group-text">
+                                            <img src="/img/check.png"
+                                                srcset="/img/check@2x.png 2x,
+                                                /img/check@3x.png 3x"
+                                                class="check">
+                                        </span>
+                                    </asp:panel>
+                                </asp:Panel>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
                     </div>
 
                     <div class="col-md-4 left-menu">
-                        <!-- BOOKING PANEL -->
-                        <yoyo:BookingPanel runat="server" ID="CheckoutPanel" BookingActive="false" />
+                        <asp:UpdatePanel runat="server" ID="upCheckoutPanel" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <!-- BOOKING PANEL -->
+                                <yoyo:BookingPanel runat="server" ID="CheckoutPanel" BookingActive="false" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
                     </div>
                 </div>
 
@@ -127,8 +114,8 @@
                         <div class="checkout__accept-terms-condition row pt-5 pb-5">
                             <div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="terms-and-conditions">
-                                    <label class="checkout__terms-conditions form-check-label" for="terms-and-conditions">Aceito os <a class="" href="">Termos & condiçōes</a></label>
+                                    <input id="cbTerms" class="form-check-input" type="checkbox" value="">
+                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">Aceito os <a class="" href="">Termos & condiçōes</a></label>
                                 </div>  
                             </div>
                             <div class="checkout__accept-terms-condition--pay col-md-6">
@@ -138,7 +125,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 
     <!-- Stripe Javascript -->
@@ -150,11 +137,12 @@
                 e.preventDefault();
                 e.stopPropagation();
 
+                var frame = $('iframe[name=ifPayForm]');
                 Stripe.card.createToken({
-                    number: $('#txtCardNumber').val(),
-                    cvc: $('#txtCardSecurityCode').val(),
-                    exp: $('#txtCardExpiry').val(),
-                    name: $('#txtCardName').val()
+                    number: frame.contents().find('#txtCardNumber').val(),
+                    cvc: frame.contents().find('#txtCardSecurityCode').val(),
+                    exp: frame.contents().find('#txtCardExpiry').val(),
+                    name: frame.contents().find('#txtCardName').val()
                 }, stripeResponseHandler);
             });
 

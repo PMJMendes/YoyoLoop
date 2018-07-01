@@ -248,6 +248,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
+    <Content Include="Checkout\Payform.aspx" />
     <Content Include="Controls\BookingPanel.ascx" />
     <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
@@ -733,6 +734,13 @@
     </Compile>
     <Compile Include="BackOffice\OfficeDTO.cs" />
     <Compile Include="BackOffice\Services\OfficeService.cs" />
+    <Compile Include="Checkout\Payform.aspx.cs">
+      <DependentUpon>Payform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Payform.aspx.designer.cs">
+      <DependentUpon>Payform.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BookingPanel.ascx.cs">
       <DependentUpon>BookingPanel.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
