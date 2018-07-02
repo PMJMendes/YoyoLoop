@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
 using System.Web;
+using Microsoft.AspNet.Identity;
 
 namespace MVP.Calendar
 {
@@ -15,8 +16,9 @@ namespace MVP.Calendar
     {
         public class PageState
         {
-            public Selection Values { get; set; }
+            public bool AnonymousBookingHandler;
 
+            public Selection Values { get; set; }
             public class Selection
             {
                 public string StartRegion { get; set; }
@@ -50,7 +52,10 @@ namespace MVP.Calendar
 
         protected void UserSignIn(object sender, SiteMaster.SignInEventArgs e)
         {
-            HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert('User " + e.UserId + " has signed in.')</SCRIPT>");
+            if (User?.Identity.IsAuthenticated == true)
+            {
+                CreateBooking();
+            }
         }
 
         protected void DdlEndRegion_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)
@@ -198,21 +203,12 @@ namespace MVP.Calendar
         {
             if(User?.Identity.IsAuthenticated == true)
             {
-                var booking = service.CreateBooking(pageData);
-                if(booking == null)
-                {
-                    //NEED PRETTY ERROR HANDLING HERE
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Trip no longer available.\")</SCRIPT>");
-                    //Response.Redirect("/Calendar/Calendar");
-                }
-                else
-                {
-                    Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
-                }
+                CreateBooking();
             }
             else
             {
                 Page.ClientScript.RegisterStartupScript(GetType(), "showRegistarModalKey", "$('#registerModal').modal('show');", true);
+                localData.AnonymousBookingHandler = true;
             }
         }
 
@@ -304,6 +300,7 @@ namespace MVP.Calendar
             var dap = GetPossibleDAPs()?.Where(ap => ap.AccessPointId.ToString() == localData.Values.EndAP)?.FirstOrDefault();
             bool calupdate = false;
             string bookupdate = string.Empty;
+            localData.AnonymousBookingHandler = false;
 
             if (route == null)
             {
@@ -396,6 +393,21 @@ namespace MVP.Calendar
             BookingPanel.Visible = true;
         }
 
+        private void CreateBooking()
+        {
+            var booking = service.CreateBooking(pageData);
+            if (booking == null)
+            {
+                //NEED PRETTY ERROR HANDLING HERE
+                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Trip no longer available.\")</SCRIPT>");
+                //Response.Redirect("/Calendar/Calendar");
+            }
+            else
+            {
+                Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
+            }
+        }
+
         private IEnumerable<Route> GetPossibleRoutes()
         {
             return pageData.Routes.Where(r => r.EndRegion.LoopedRegionId.ToString() == localData.Values.EndRegion);
@@ -417,6 +429,7 @@ namespace MVP.Calendar
         {
             var result = new PageState()
             {
+                AnonymousBookingHandler = false,
                 Values = new PageState.Selection()
                 {
                     StartRegion = Guid.Empty.ToString(),
