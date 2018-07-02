@@ -52,7 +52,7 @@ namespace MVP.Calendar
 
         protected void UserSignIn(object sender, SiteMaster.SignInEventArgs e)
         {
-            if (User?.Identity.IsAuthenticated == true)
+            if (User?.Identity.IsAuthenticated == true && localData.AnonymousBookingHandler)
             {
                 CreateBooking();
             }
