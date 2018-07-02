@@ -65,9 +65,12 @@ namespace MVP
             }
             else
             {
+                if((string)ViewState[AntiXsrfUserNameKey] == String.Empty)
+                {
+                    ViewState[AntiXsrfUserNameKey] = Context.User.Identity.Name ?? String.Empty;
+                }
                 // Validate the Anti-XSRF token
-                if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue)
-                    //|| (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty)) THIS IS CURRENTLY DISABLED DUE TO VIEWSTATE BEING KEYED TO A SPECIFIC USER
+                if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
                 {
                     throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
                 }

@@ -48,7 +48,6 @@ namespace MVP.Controls
                     LoginMessage.Visible = true;
                     var userId = signinManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
                     ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "__doPostBack('" + UniqueID + "', '" + userId + "');", true);
-                    //This postback needs to raise an event on the Site.Master to key the previous viewstate to the newly signed in user before doing the AntiXsrf check
 
                     //Response.Redirect(Request.RawUrl);
                     //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
