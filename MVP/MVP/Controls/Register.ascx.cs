@@ -11,8 +11,10 @@ using MVP.Models;
 
 namespace MVP.Controls
 {
-    public partial class Register : System.Web.UI.UserControl
+    public partial class Register : UserControl, IPostBackEventHandler
     {
+        public event EventHandler<SiteMaster.SignInEventArgs> SignIn;
+
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -28,8 +30,9 @@ namespace MVP.Controls
 
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                 RegisterErrorMessage.Text = "Registration sucessful";
+                var userId = signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
 
-                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "__doPostBack();", true);
+                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "__doPostBack('" + UniqueID + "', '" + userId + "');", true);
                 //This postback needs to raise an event on the Site.Master to key the previous viewstate to the newly signed in user before doing the AntiXsrf check
 
                 //Response.Redirect(Request.RawUrl);
@@ -39,6 +42,16 @@ namespace MVP.Controls
             {
                 RegisterErrorMessage.Text = result.Errors.FirstOrDefault();
             }
+        }
+
+        protected virtual void OnSignIn(string e)
+        {
+            SignIn?.Invoke(this, new SiteMaster.SignInEventArgs { UserId = e });
+        }
+
+        void IPostBackEventHandler.RaisePostBackEvent(string e)
+        {
+            OnSignIn(e);
         }
     }
 }

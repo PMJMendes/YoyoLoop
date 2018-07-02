@@ -37,10 +37,20 @@ namespace MVP.Calendar
         CalendarDTO pageData;
         public PageState localData;
 
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            Master.PassSignIn += new EventHandler<SiteMaster.SignInEventArgs>(UserSignIn);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             InitData();
             service.CheckPending();
+        }
+
+        protected void UserSignIn(object sender, SiteMaster.SignInEventArgs e)
+        {
+            HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert('User " + e.UserId + " has signed in.')</SCRIPT>");
         }
 
         protected void DdlEndRegion_ItemSelected(object sender, DropdownMenuButton.ItemSelectedEventArgs e)

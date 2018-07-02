@@ -11,8 +11,10 @@ using MVP.Models;
 
 namespace MVP.Controls
 {
-    public partial class Login : System.Web.UI.UserControl
+    public partial class Login : UserControl, IPostBackEventHandler
     {
+        public event EventHandler<SiteMaster.SignInEventArgs> SignIn;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             /*
@@ -44,7 +46,8 @@ namespace MVP.Controls
                 case SignInStatus.Success:
                     LoginMessage.Text = "Login sucessful";
                     LoginMessage.Visible = true;
-                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "__doPostBack();", true);
+                    var userId = signinManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
+                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "__doPostBack('" + UniqueID + "', '" + userId + "');", true);
                     //This postback needs to raise an event on the Site.Master to key the previous viewstate to the newly signed in user before doing the AntiXsrf check
 
                     //Response.Redirect(Request.RawUrl);
@@ -65,6 +68,17 @@ namespace MVP.Controls
                     LoginMessage.Visible = true;
                     break;
             }
+        }
+
+        protected virtual void OnSignIn(string e)
+        {
+            SignIn?.Invoke(this, new SiteMaster.SignInEventArgs { UserId = e });
+        }
+
+        void IPostBackEventHandler.RaisePostBackEvent(string e)
+        {
+
+            OnSignIn(e);
         }
     }
 }
