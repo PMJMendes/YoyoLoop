@@ -24,33 +24,28 @@
     </head>
 
     <body>
-        <form id="PayForm" runat="server">
+        <div class="checkout">
+            <h2 class="checkout__sub-title">Pagamento</h2>
+            <div class="checkout__label">Método de pagamento</div>
+            <select class="checkout__input checkout__input--payment-method">
+                <option value="card">Cartão de crédito</option>
+            </select>
 
-            <div class="checkout">
-                <h2 class="checkout__sub-title">Pagamento</h2>
-                <div class="checkout__label">Método de pagamento</div>
-                <select class="checkout__input checkout__input--payment-method">
-                    <option value="card">Cartão de crédito</option>
-                </select>
-
-                <div class="checkout__label">Nome do titular</div>
-                <input class="checkout__input checkout__input--name" type="text" id="txtCardName" placeholder="" />
+            <div class="checkout__label">Nome do titular</div>
+            <input class="checkout__input checkout__input--name" type="text" id="txtCardName" placeholder="" />
                 
-                <div class="row checkout__card-info">
-                    <div class="col-md-7">
-                        <div class="checkout__label">Número do cartão</div>
-                        <input class="checkout__input checkout__input--card-number" type="text" id="txtCardNumber" placeholder="0000 0000 0000 0000" />
-                    </div>
-                    <div class="col-md-3 d-flex align-items-end">
-                        <input class="checkout__input checkout__input--card-expiration" type="text" id="txtCardExpiry" placeholder="MM/YY" />
-                    </div>
-                    <div class="col-md-2 d-flex align-items-end">
-                        <input class="checkout__input checkout__input--card-cvv" type="text" id="txtCardSecurityCode" placeholder="CVV" />
-                    </div>
+            <div class="row checkout__card-info">
+                <div class="col-md-7">
+                    <div class="checkout__label">Número do cartão</div>
+                    <input class="checkout__input checkout__input--card-number" type="text" id="txtCardNumber" placeholder="0000 0000 0000 0000" />
+                </div>
+                <div class="col-md-3 d-flex align-items-end">
+                    <input class="checkout__input checkout__input--card-expiration" type="text" id="txtCardExpiry" placeholder="MM/YY" />
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <input class="checkout__input checkout__input--card-cvv" type="text" id="txtCardSecurityCode" placeholder="CVV" />
                 </div>
             </div>
-
-        </form>
+        </div>
     </body>
-
 </html>
