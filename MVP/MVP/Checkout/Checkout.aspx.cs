@@ -34,6 +34,7 @@ namespace MVP.Checkout
         private void UpdateCheckoutPanel()
         {
             CheckoutPanel.Databind(service.GetCheckoutPanelData(pageData));
+            upCheckoutPanel.Update();
         }
 
         private void InitData()
