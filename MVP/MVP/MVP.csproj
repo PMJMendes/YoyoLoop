@@ -249,6 +249,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Checkout\Payform.aspx" />
+    <Content Include="Checkout\Scripts\stripe-createToken.js" />
     <Content Include="Controls\BookingPanel.ascx" />
     <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />

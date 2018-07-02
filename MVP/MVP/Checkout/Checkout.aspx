@@ -7,9 +7,11 @@
     <asp:ScriptManagerProxy runat="server">
         <Scripts>
             <asp:ScriptReference Path="https://js.stripe.com/v2/" />
+            <asp:ScriptReference Path="./Scripts/stripe-createToken.js" /> 
         </Scripts>
     </asp:ScriptManagerProxy>
 
+    <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
 
     <div class="checkout">
@@ -128,36 +130,4 @@
         </div>
     </div>
 
-    <!-- Stripe Javascript -->
-    <script type="text/javascript">
-        $('document').ready(function () {
-            Stripe.setPublishableKey('<%=stripePublishableKey%>');
-
-            $('#btnPay').on('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                var frame = $('iframe[name=ifPayForm]');
-                Stripe.card.createToken({
-                    number: frame.contents().find('#txtCardNumber').val(),
-                    cvc: frame.contents().find('#txtCardSecurityCode').val(),
-                    exp: frame.contents().find('#txtCardExpiry').val(),
-                    name: frame.contents().find('#txtCardName').val()
-                }, stripeResponseHandler);
-            });
-
-            function stripeResponseHandler(status, response) {
-                var $form = $('#MasterForm');
-                if (response.error) {
-                    //need something better here
-                    alert(response.error.message);
-                }
-                else {
-                    var token = response.id;
-                    $('#hfStripeToken').val(token);
-                    $form.get(0).submit();
-                }
-            }
-        });
-    </script>
 </asp:Content>
