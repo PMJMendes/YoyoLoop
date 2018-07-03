@@ -665,7 +665,7 @@ header.head {
     text-decoration: underline; }
   .homepage__where-to-card {
     background: black;
-    max-width: 315px;
+    max-width: 350px;
     margin: auto;
     padding: 0 30px;
     border-radius: 4px;
@@ -2457,7 +2457,4 @@ header.head {
 input:checked {
   color: #c71610;
   background-color: #c71610; }
-
-body {
-  font-family: Lato; }
 

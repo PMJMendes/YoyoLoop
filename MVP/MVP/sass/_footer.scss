@@ -1,0 +1,103 @@
+.footer {
+	font-family: Lato;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	border-radius: 3.5px;
+	
+	&__first-row {
+		background-color: #262e43;
+	}
+
+	&__second-row {
+		background-color: #000000;
+		color: #95a0be;
+
+		a, a:hover {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+
+	&__social {
+		text-decoration: none!important;
+	}
+
+    &__logo {
+        width: 145px;
+        height: 145px;
+	}
+
+    &__column {
+		&--text-red {
+			color: #ff5f6d!important;
+		}
+
+		p {
+			font-size: 14px;
+			letter-spacing: normal;
+			text-align: left;
+			color: #95a0be;
+			font-weight: bold;
+			line-height: 0.96;
+			letter-spacing: 0.7px;
+			text-decoration: none;
+
+			a, a:hover {
+				color: inherit;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+
+        h2 {
+			font-size: 14px;
+			line-height: 1.07;
+			letter-spacing: normal;
+			text-align: left;
+			color: #95a0be;
+			font-weight: bold;
+			line-height: 2.21;
+			letter-spacing: 0.7px;
+		}
+	}
+	
+	&__dropdown {
+		> button.dropdown-toggle {
+			padding: 0 10% 0 10%;
+			opacity: 0.9;
+			border-radius: 2px;
+			background-color: #838da7;
+			width: 205px;
+			height: 40px;
+		}
+
+		> button.destination {
+			&::after {
+				margin-top: 10px;
+				float: right;
+				color: black;
+			}
+		}
+
+		.dropdown-menu {
+			width: 185px;
+            margin-top: 1em;
+
+            &::after {
+                content:"";
+                position: absolute;
+                right: 10px;
+                top: -12px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 12px 12px 12px;
+                border-color: transparent transparent #ffffff transparent;
+                z-index:9998;
+            }
+		}
+	}
+}
