@@ -22,6 +22,7 @@ namespace MVP.Models
             public DbSet<Vehicle.VehicleAvailability> VehicleAvailability { get; set; }
         public DbSet<Driver> Driver { get; set; }
             public DbSet<Driver.DriverAvailability> DriverAvailability { get; set; }
+        public DbSet<Promocode> Promocode { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -2,8 +2,8 @@
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
+<%@ Register Src="~/Controls/BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
-<%@ Register Src="BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 
 <asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
@@ -375,7 +375,7 @@
                     <!-- END OF PROXIMA VIAGEM -->
 
                     <!-- BOOKING PANEL -->
-                    <yoyo:BookingPanel runat="server" ID="BookingPanel" OnBookingSelected="BookingPanel_BookingSelected" Visible="false" />
+                    <yoyo:BookingPanel runat="server" ID="BookingPanel" BookingActive="true" OnBookingSelected="BookingPanel_BookingSelected" OnPromoEntered="BookingPanel_PromoEntered" Visible="false" />
 
                 </div>
                 <!-- END OF LATERAL -->

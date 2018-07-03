@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using MVP.Controls;
 
 namespace MVP.Services
 {
@@ -28,12 +29,13 @@ namespace MVP.Services
                                            .ToList();
             }
 
-            result.Selection = new Selection { Date = DateTime.MinValue,
+            result.Selection = new Selection { Date = new DateTime(),
                                                Route = null,
                                                SAP = null,
                                                DAP = null,
-                                               Time = new TimeSpan(-1),
-                                               Price = 0,
+                                               Time = new TimeSpan(),
+                                               Promocode = string.Empty,
+                                               FareType = Fare.FareType.STANDARD,
                                                Seats = 1,
                                                DepartureId = Guid.Empty
                                               };
@@ -60,7 +62,7 @@ namespace MVP.Services
                     }
                     else
                     {
-                        result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, Price = 0 });
+                        result.Add(new DaySlot { Day = date, Status = SlotStatus.NONE, FareType = Fare.FareType.STANDARD, Price = 0 });
                     }
                     date = date + TimeSpan.FromDays(1);
                 }
@@ -83,6 +85,7 @@ namespace MVP.Services
             {
                 Day = date,
                 Status = SlotStatus.NONE,
+                FareType = Fare.FareType.STANDARD,
                 Price = 0
             };
 
@@ -127,10 +130,12 @@ namespace MVP.Services
 
             if (lastminute)
             {
+                result.FareType = Fare.FareType.LASTMINUTE;
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.LASTMINUTE).Select(p => p.Price).FirstOrDefault();
             }
             else
             {
+                result.FareType = Fare.FareType.STANDARD;
                 result.Price = state.Selection.Route.Fares.Where(ft => ft.Type == Fare.FareType.STANDARD).Select(p => p.Price).FirstOrDefault();
             }
             return result;
@@ -190,6 +195,88 @@ namespace MVP.Services
             }
         }
 
+        public Fare.FareType CheckPromo(CalendarDTO state)
+        {
+            Fare.FareType result;
+            using (var model = new EntityModel())
+            {
+                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Selection.Promocode))
+                {
+                    result = Fare.FareType.PROMOTIONAL;
+                }
+                else
+                {
+                    result = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                }
+            }
+            return result;
+        }
+
+        public BookingPanelDTO GetBookingPanelData(CalendarDTO state, string trigger)
+        {
+            var starttime = state.Selection.Date + state.Selection.Time;
+            var dayType = GetDayType(state.Selection.Date);
+
+            using (var model = new EntityModel())
+            {
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+
+                var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId &&
+                                                            d.DayType == dayType &&
+                                                            d.Time == state.Selection.Time
+                                                       )
+                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => t.Status != TripStatus.CANCELLED &&
+                                                                              t.StartTime == starttime &&
+                                                                              t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
+                                                                              t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
+                                                                              t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity
+                                                                         ),
+                        d => d,
+                        t => t.Departure,
+                        (d, ts) => new { Departure = d, Trips = ts }
+                    );
+
+                var result = new BookingPanelDTO
+                {
+                    Trigger = trigger,
+                    Seats = state.Selection.Seats,
+                    FareType = state.Selection.FareType,
+                    StandardPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == (lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD)).Price,
+                    Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
+                    Promocode = state.Selection.Promocode,
+                    PromoValid = state.Selection.FareType == Fare.FareType.PROMOTIONAL ? true : false,
+                    StartTime = starttime,
+                    StartRegionName = state.Selection.Route.StartRegion.Name,
+                    StartAPName = state.Selection.SAP.Name,
+                    EndRegionName = state.Selection.Route.EndRegion.Name,
+                    EndAPName = state.Selection.DAP.Name
+                };
+
+                result.StandardCost = result.StandardPrice * result.Seats;
+                result.Cost = result.Price * result.Seats;
+
+                if(trigger == "new")
+                {
+                    result.BookingValid = true;
+                }
+                else
+                {
+                    if (lastminute)
+                    {
+                        result.BookingValid = departures.Any(t => t.Trips.Any());
+                    }
+                    else
+                    {
+                        result.BookingValid = departures.Any();
+                    }
+                }
+
+                return result;
+            }
+        }
+
         public void CheckPending()
         {
             using (var model = new EntityModel())
@@ -219,7 +306,9 @@ namespace MVP.Services
                     UserId = HttpContext.Current.User.Identity.GetUserId(),
                     CreationTime = DateTime.Now,
                     Seats = state.Selection.Seats,
-                    Cost = state.Selection.Seats * state.Selection.Price
+                    FareType = state.Selection.FareType,
+                    Promocode = model.Promocode.FirstOrDefault(p => p.Code == state.Selection.Promocode),
+                    Cost = state.Selection.Seats * model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price
                 };
 
                 lock (Booking_Lock)

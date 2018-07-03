@@ -7,108 +7,144 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Calendar {
+namespace MVP.Controls {
     
     
-    public partial class Calendar {
+    public partial class BookingPanel {
         
         /// <summary>
-        /// DdlEndRegion control.
+        /// LbDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlEndRegion;
+        protected global::System.Web.UI.WebControls.Label LbDate;
         
         /// <summary>
-        /// DdlEndAP control.
+        /// LbSeats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlEndAP;
+        protected global::System.Web.UI.WebControls.Label LbSeats;
         
         /// <summary>
-        /// DdlStartRegion control.
+        /// LbTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlStartRegion;
+        protected global::System.Web.UI.WebControls.Label LbTime;
         
         /// <summary>
-        /// DdlStartAP control.
+        /// LbCost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlStartAP;
+        protected global::System.Web.UI.WebControls.Label LbCost;
         
         /// <summary>
-        /// DdlSeats control.
+        /// LbStartRegion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.DropdownFixed DdlSeats;
+        protected global::System.Web.UI.WebControls.Label LbStartRegion;
         
         /// <summary>
-        /// pnCalendar control.
+        /// LbStartAP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnCalendar;
+        protected global::System.Web.UI.WebControls.Label LbStartAP;
         
         /// <summary>
-        /// BtnMonthBack control.
+        /// LbEndRegion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnMonthBack;
+        protected global::System.Web.UI.WebControls.Label LbEndRegion;
         
         /// <summary>
-        /// BtnMonthFwd control.
+        /// LbEndAP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton BtnMonthFwd;
+        protected global::System.Web.UI.WebControls.Label LbEndAP;
         
         /// <summary>
-        /// BtnMonthToday control.
+        /// lkPromo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton BtnMonthToday;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkPromo;
         
         /// <summary>
-        /// CalDate control.
+        /// pnPromocode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Calendar.CalendarTable CalDate;
+        protected global::System.Web.UI.WebControls.Panel pnPromocode;
         
         /// <summary>
-        /// BookingPanel control.
+        /// lkNoPromo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MVP.Controls.BookingPanel BookingPanel;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkNoPromo;
+        
+        /// <summary>
+        /// tbPromo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPromo;
+        
+        /// <summary>
+        /// pnPromoError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnPromoError;
+        
+        /// <summary>
+        /// pnPromoCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnPromoCheck;
+        
+        /// <summary>
+        /// BtnBook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnBook;
     }
 }

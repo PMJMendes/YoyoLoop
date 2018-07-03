@@ -232,7 +232,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -249,7 +248,9 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
-    <Content Include="Calendar\BookingPanel.ascx" />
+    <Content Include="Checkout\Payform.aspx" />
+    <Content Include="Checkout\Scripts\stripe-createToken.js" />
+    <Content Include="Controls\BookingPanel.ascx" />
     <Content Include="Calendar\Popover.ascx" />
     <Content Include="Calendar\CalendarTable.ascx" />
     <Content Include="Calendar\Scripts\calendar-table.js" />
@@ -722,13 +723,6 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -741,11 +735,18 @@
     </Compile>
     <Compile Include="BackOffice\OfficeDTO.cs" />
     <Compile Include="BackOffice\Services\OfficeService.cs" />
-    <Compile Include="Calendar\BookingPanel.ascx.cs">
+    <Compile Include="Checkout\Payform.aspx.cs">
+      <DependentUpon>Payform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout\Payform.aspx.designer.cs">
+      <DependentUpon>Payform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BookingPanel.ascx.cs">
       <DependentUpon>BookingPanel.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Calendar\BookingPanel.ascx.designer.cs">
+    <Compile Include="Controls\BookingPanel.ascx.designer.cs">
       <DependentUpon>BookingPanel.ascx</DependentUpon>
     </Compile>
     <Compile Include="Calendar\CalendarDTO.cs" />
@@ -796,6 +797,7 @@
     <Compile Include="Calendar\CalendarDay.ascx.designer.cs">
       <DependentUpon>CalendarDay.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BookingPanelDTO.cs" />
     <Compile Include="Controls\DropdownMenuButton.ascx.cs">
       <DependentUpon>DropdownMenuButton.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -910,10 +912,23 @@
     <Compile Include="Migrations\201806240415416_User-Name-to-User-ContactName.Designer.cs">
       <DependentUpon>201806240415416_User-Name-to-User-ContactName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806280849153_Promocodes.cs" />
+    <Compile Include="Migrations\201806280849153_Promocodes.Designer.cs">
+      <DependentUpon>201806280849153_Promocodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806282132285_Booking-FareType.cs" />
+    <Compile Include="Migrations\201806282132285_Booking-FareType.Designer.cs">
+      <DependentUpon>201806282132285_Booking-FareType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806290004041_Booking-Promocode.cs" />
+    <Compile Include="Migrations\201806290004041_Booking-Promocode.Designer.cs">
+      <DependentUpon>201806290004041_Booking-Promocode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
+    <Compile Include="Models\Entities\Promocode.cs" />
     <Compile Include="Models\Entities\DayType.cs" />
     <Compile Include="Models\Entities\Departure.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
@@ -1105,6 +1120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806240415416_User-Name-to-User-ContactName.resx">
       <DependentUpon>201806240415416_User-Name-to-User-ContactName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280849153_Promocodes.resx">
+      <DependentUpon>201806280849153_Promocodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806282132285_Booking-FareType.resx">
+      <DependentUpon>201806282132285_Booking-FareType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806290004041_Booking-Promocode.resx">
+      <DependentUpon>201806290004041_Booking-Promocode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

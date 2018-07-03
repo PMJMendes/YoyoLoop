@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MVP
+namespace MVP.Checkout
 {
-    public partial class About : Page
+    public partial class Payform : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

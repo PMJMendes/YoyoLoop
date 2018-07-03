@@ -38,7 +38,7 @@
 
 <body>
     <form runat="server" id="MasterForm">
-        <asp:ScriptManager runat="server">
+        <asp:ScriptManager runat="server" EnablePartialRendering="true">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
