@@ -10,6 +10,7 @@ namespace MVP.Checkout
     {
         public Guid BookingId { get; set; }
         public string UserId { get; set; }
+        public BookingStatus BookingStatus { get; set; }
 
         public int Seats { get; set; }
         public Fare.FareType FareType { get; set; }

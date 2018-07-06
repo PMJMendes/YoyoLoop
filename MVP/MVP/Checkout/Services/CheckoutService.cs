@@ -30,7 +30,7 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
-                var booking = model.Booking.Where(b => b.BookingId == id && b.Status == BookingStatus.PENDING)
+                var booking = model.Booking.Where(b => b.BookingId == id)
                                            .Include(t => t.Trip)
                                            .Include(sap => sap.Trip.StartAccessPoint)
                                            .Include(dap => dap.Trip.EndAccessPoint)
@@ -47,6 +47,7 @@ namespace MVP.Services
                 {
                     result.BookingId = booking.BookingId;
                     result.UserId = booking.UserId;
+                    result.BookingStatus = booking.Status;
                     result.Seats = booking.Seats;
                     result.FareType = booking.FareType;
                     result.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
