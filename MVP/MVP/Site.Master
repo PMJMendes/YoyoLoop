@@ -65,13 +65,13 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
-        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
-
         <!-- BLOCKUI DIV -->
         <div id="divBlockUI" style="display:none;"> 
             <h1>We are processing your request.  Please be patient.</h1> 
         </div> 
+
+        <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">
@@ -108,8 +108,15 @@
             </div>
         </nav>
 
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
+        <asp:UpdatePanel runat="server" ID="upMainContent">
+            <ContentTemplate>
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
 
         <footer>
             <section class="footer">
