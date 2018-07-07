@@ -248,6 +248,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
+    <Content Include="Calendar\Scripts\init-popover.js" />
     <Content Include="Checkout\Payform.aspx" />
     <Content Include="Checkout\Scripts\stripe-createToken.js" />
     <Content Include="Controls\BookingPanel.ascx" />
