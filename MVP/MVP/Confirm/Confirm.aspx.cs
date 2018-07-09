@@ -78,6 +78,10 @@ namespace MVP.Confirm
                     //Response.Redirect("/Calendar/Calendar");
 
                 }
+
+                //email the ticket (logic code here to determine if we should mail or confirm email
+
+                service.SendTicket(pageData);
             }
             else
             {

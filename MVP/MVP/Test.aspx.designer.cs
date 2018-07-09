@@ -13,39 +13,12 @@ namespace MVP {
     public partial class Test {
         
         /// <summary>
-        /// form1 control.
+        /// btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// DropdownMenuButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DropdownMenuButton1;
-        
-        /// <summary>
-        /// DropdownMenuButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DropdownMenuButton2;
-        
-        /// <summary>
-        /// CalendarTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MVP.Calendar.CalendarTable CalendarTable;
+        protected global::System.Web.UI.WebControls.Button btn;
     }
 }
