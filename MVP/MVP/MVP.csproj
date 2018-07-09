@@ -586,7 +586,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
-    <Content Include="Test.aspx" />
     <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -978,13 +977,6 @@
     </Compile>
     <Compile Include="Calendar\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="TripExplorer\Explore.aspx.cs">
       <DependentUpon>Explore.aspx</DependentUpon>
