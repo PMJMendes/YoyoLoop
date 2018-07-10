@@ -4,6 +4,7 @@
     $('#btnPay').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
+        $.blockUI({ message: $('#divBlockUI') });
 
         var frame = $('iframe[name=ifPayForm]');
         Stripe.card.createToken({
@@ -18,6 +19,7 @@
         var $form = $('#MasterForm');
         if (response.error) {
             //need something better here
+            $.unblockUI();
             alert(response.error.message);
         }
         else {
