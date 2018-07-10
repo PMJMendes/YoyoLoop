@@ -313,8 +313,9 @@ namespace MVP.Services
 
                 lock (Booking_Lock)
                 {
-                    var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED && t.Departure.DepartureId == state.Selection.DepartureId);
-
+                    var trip = model.Trip.Include(b => b.Bookings).FirstOrDefault(t => t.Status != TripStatus.CANCELLED &&
+                                                                                       t.Departure.DepartureId == state.Selection.DepartureId &&
+                                                                                       t.StartTime == starttime);
                     if (trip == null)
                     {
                         trip = CreateTrip(state, model);
