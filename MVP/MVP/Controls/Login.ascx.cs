@@ -47,7 +47,7 @@ namespace MVP.Controls
                     LoginMessage.Text = "Login sucessful";
                     LoginMessage.Visible = true;
                     var userId = signinManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
-                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "setTimeout(function(){$.blockUI({ message: $('#divBlockUI') });__doPostBack('" + UniqueID + "', '" + userId + "');},1);", true);
+                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "__doPostBack('" + UniqueID + "', '" + userId + "');", true);
 
                     //Response.Redirect(Request.RawUrl);
                     //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
@@ -65,6 +65,7 @@ namespace MVP.Controls
                 default:
                     LoginMessage.Text = "Invalid login attempt";
                     LoginMessage.Visible = true;
+                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginFailedKey", "$.unblockUI();", true);
                     break;
             }
         }

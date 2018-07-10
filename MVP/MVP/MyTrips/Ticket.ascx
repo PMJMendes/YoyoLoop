@@ -101,7 +101,7 @@
         <div class="<%= TicketBooking.Status == MVP.Models.Entities.BookingStatus.BOOKED ? "" : "hide" %>">
             <div class="row text-center">
                 <div class="col-12">
-                    <a href="/Confirm/Confirm?Id=<%= TicketBooking.BookingId.ToString() %>" class="travel__card--details btn btn-primary text-uppercase">
+                    <a OnClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" href="/Confirm/Confirm?Id=<%= TicketBooking.BookingId.ToString() %>" class="travel__card--details btn btn-primary text-uppercase">
                         Ver reserva
                     </a>
                 </div>
@@ -110,7 +110,7 @@
         <div class="<%= TicketBooking.Status == MVP.Models.Entities.BookingStatus.PENDING ? "" : "hide" %>">
             <div class="row text-center">
                 <div class="col-12">
-                    <a href="/Checkout/Checkout?Id=<%= TicketBooking.BookingId.ToString() %>" class="travel__card--details btn btn-primary text-uppercase">
+                    <a OnClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" href="/Checkout/Checkout?Id=<%= TicketBooking.BookingId.ToString() %>" class="travel__card--details btn btn-primary text-uppercase">
                         Reservar
                     </a>
                 </div>

@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="login__log-in col-md-6">
-                                    <asp:Button runat="server" Id="btnRegisterContinue" CausesValidation="true" ValidationGroup="Register" CssClass="login__login btn btn-primary" Text="Continuar" OnClick="CreateUser_Click"/>
+                                    <asp:Button runat="server" Id="btnRegisterContinue" CausesValidation="true" ValidationGroup="Register" CssClass="login__login btn btn-primary" Text="Continuar" OnClientClick="javascript: if(Page_ClientValidate('Register')){ $.blockUI({ message: $('#divBlockUI'), baseZ: 20000 }) }" OnClick="CreateUser_Click"/>
                                 </div>
                             </div>
                         </div>

@@ -60,7 +60,6 @@
                 <asp:ScriptReference Path="~/vendor/jquery/jquery.min.js" />
                 <asp:ScriptReference Path="~/vendor/bootstrap/js/bootstrap.bundle.min.js" />
                 <asp:ScriptReference Path="~/Scripts/jquery.blockUI.js" />
-                <asp:ScriptReference Path="~/Scripts/Custom/blockUI-extension.js" />
                 <asp:ScriptReference Path="~/Scripts/Custom/navbar-scroll.js" />
             </Scripts>
         </asp:ScriptManager>
@@ -83,7 +82,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI({ message: $('#divBlockUI') })" href="/Calendar/Calendar">Loops & horarios</a>
+                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" href="/Calendar/Calendar">Loops & horarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
@@ -96,7 +95,7 @@
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <li class="nav-item">
-                                    <a class="nav-link js-scroll-trigger text-uppercase" href="/MyTrips/MyTrips">As minhas viagens</a>
+                                    <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" href="/MyTrips/MyTrips">As minhas viagens</a>
                                 </li>
                                 <li class="nav-item my-auto"> <!-- Temporarily logs you out -->
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" LogoutImageUrl="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x,/img/userprofile-red@3x.png 3x" CssClass="userprofile-red" ToolTip="Logout" />
@@ -108,15 +107,8 @@
             </div>
         </nav>
 
-        <asp:UpdatePanel runat="server" ID="upMainContent">
-            <ContentTemplate>
-
-                <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                </asp:ContentPlaceHolder>
-
-            </ContentTemplate>
-        </asp:UpdatePanel>
-
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
 
         <footer>
             <section class="footer">

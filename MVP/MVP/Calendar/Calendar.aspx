@@ -121,21 +121,21 @@
                         <div class="col">
                             <div class="d-flex flex-row">
                                 <div class="my-auto col-lg-3 col-md-3 text-right">
-                                    <asp:ImageButton id="BtnMonthBack" runat="server" class="btn-calendar" OnClick="CalBtnMonthControl" ImageUrl="/img/arr-left.png" />
+                                    <asp:ImageButton id="BtnMonthBack" runat="server" class="btn-calendar" OnClientClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" OnClick="CalBtnMonthControl" ImageUrl="/img/arr-left.png" />
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <p class=" month m-0"><%= localData.Values.CalVisibleDate.ToString("MMMM").ToUpper() %></p>
                                     <p class="d-none d-md-block year m-0"><%= localData.Values.CalVisibleDate.Year %></p>
                                 </div>
                                 <div class="my-auto col-lg-3 col-md-3 text-left">
-                                    <asp:ImageButton id="BtnMonthFwd" runat="server" class="btn-calendar" OnClick="CalBtnMonthControl" ImageUrl="/img/arr-right.png"/>
+                                    <asp:ImageButton id="BtnMonthFwd" runat="server" class="btn-calendar" OnClientClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" OnClick="CalBtnMonthControl" ImageUrl="/img/arr-right.png"/>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Today button -->
                         <div class="my-auto col text-right">
-                            <button id="BtnMonthToday" runat="server" OnServerClick="CalBtnMonthToday" class=" btn btn-today text-uppercase">Hoje</button>
+                            <asp:Button id="BtnMonthToday" runat="server" OnClientClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" OnClick="CalBtnMonthToday" CssClass="btn btn-today text-uppercase" Text="Hoje" />
                         </div>
                     </div>
                     <!-- END OF CALENDAR HEADER -->
@@ -239,7 +239,8 @@
                     </div> 
                 </asp:panel>
                 <!-- END OF CALENDAR -->
-            
+
+
                 <!-- LATERAL -->
                 <div ID="Lateral" class="col-lg-4 col-md-4 <%= pnCalendar.Visible ? "" : "hide" %>">
 
@@ -380,7 +381,9 @@
 
                 </div>
                 <!-- END OF LATERAL -->
+
             </div>
         </div>
     </section>
+
 </asp:Content>

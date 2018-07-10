@@ -4,7 +4,7 @@
     $('#btnPay').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        $.blockUI({ message: $('#divBlockUI') });
+        $.blockUI({ message: $('#divBlockUI'), baseZ: 20000 });
 
         var frame = $('iframe[name=ifPayForm]');
         Stripe.card.createToken({

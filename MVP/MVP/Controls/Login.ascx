@@ -75,7 +75,7 @@
                         <div class="row">
                             <div class="login__forgot-password col-md-6"><a href="#">Esqueci-me da password</a></div>
                             <div class="login__log-in col-md-6">
-                                <asp:Button runat="server" ID="btnLogin" CausesValidation="true" ValidationGroup="Login" OnClick="LogIn" Text="Entrar" CssClass="login__login btn btn-primary"/>
+                                <asp:Button runat="server" ID="btnLogin" CausesValidation="true" ValidationGroup="Login" OnClientClick="javascript: if(Page_ClientValidate('Login')){ $.blockUI({ message: $('#divBlockUI'), baseZ: 20000 }) }" OnClick="LogIn" Text="Entrar" CssClass="login__login btn btn-primary"/>
                             </div>
                         </div>
                     </div>

@@ -29,11 +29,6 @@ namespace MVP.Checkout
                 //Response.Redirect("/");
             }
 
-            //STOP MAINCONTENT UPDATES from CHILD panels
-            UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
-            masterpanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
-            masterpanel.ChildrenAsTriggers = false;
-
             InitData();
         }
 

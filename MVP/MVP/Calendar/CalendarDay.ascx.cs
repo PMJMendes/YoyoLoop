@@ -97,7 +97,7 @@ namespace MVP.Calendar
             base.OnPreRender(e);
 
             DayWrapper.CssClass += DayBackgroundTag;
-            DayWrapper.Attributes["onclick"] = "javascript:__doPostBack('" + UniqueID + "', '')";
+            DayWrapper.Attributes["onclick"] = "javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 });__doPostBack('" + UniqueID + "', '')";
         }
 
         protected string CurrentDayTag
