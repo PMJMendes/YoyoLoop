@@ -113,7 +113,6 @@
                             O valor que pagaste será transformado em crédito e podes encontrá-lo
                             na tua conta para utilizar em futuras viagens.
                         </p>
-    
                         <div class="checkout__accept-terms-condition row pt-5 pb-5">
                             <div class="col-md-6">
                                 <div class="form-check">
@@ -122,7 +121,7 @@
                                 </div>  
                             </div>
                             <div class="checkout__accept-terms-condition--pay col-md-6">
-                                <button id="btnPay" class="btn btn-light btn-xl text-uppercase">Pagar</button>
+                                <button id="btnPay" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
                             </div>
                         </div>
                     </div>
