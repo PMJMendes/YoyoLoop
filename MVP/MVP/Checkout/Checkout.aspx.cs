@@ -28,6 +28,12 @@ namespace MVP.Checkout
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
                 //Response.Redirect("/");
             }
+
+            //STOP MAINCONTENT UPDATES from CHILD panels
+            UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
+            masterpanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+            masterpanel.ChildrenAsTriggers = false;
+
             InitData();
         }
 
