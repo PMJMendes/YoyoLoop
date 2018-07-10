@@ -83,7 +83,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI({ message: $('#divBlockUI') })" href="/Calendar/Calendar">Loops & horarios</a>
+                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Calendar/Calendar">Loops & horarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
@@ -96,7 +96,7 @@
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <li class="nav-item">
-                                    <a class="nav-link js-scroll-trigger text-uppercase" href="/MyTrips/MyTrips">As minhas viagens</a>
+                                    <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips">As minhas viagens</a>
                                 </li>
                                 <li class="nav-item my-auto"> <!-- Temporarily logs you out -->
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" LogoutImageUrl="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x,/img/userprofile-red@3x.png 3x" CssClass="userprofile-red" ToolTip="Logout" />

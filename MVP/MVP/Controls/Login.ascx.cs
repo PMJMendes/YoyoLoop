@@ -31,6 +31,7 @@ namespace MVP.Controls
 
         protected void LogIn(object sender, EventArgs e)
         {
+            System.Threading.Thread.Sleep(5000);
             // Validate the user password
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
