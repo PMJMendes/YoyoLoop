@@ -32,7 +32,7 @@ namespace MVP.Controls
                 RegisterErrorMessage.Text = "Registration sucessful";
                 var userId = signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
 
-                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "__doPostBack('" + UniqueID + "', '" + userId + "');", true);
+                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "__doPostBack('" + UniqueID + "', '" + userId + "'); ", true);
 
                 //Response.Redirect(Request.RawUrl);
                 //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
@@ -40,6 +40,7 @@ namespace MVP.Controls
             else
             {
                 RegisterErrorMessage.Text = result.Errors.FirstOrDefault();
+                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerFailedKey", "$.unblockUI();", true);
             }
         }
 

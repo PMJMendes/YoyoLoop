@@ -1,5 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Popover.ascx.cs" Inherits="MVP.Calendar.Popover" %>
 
+<asp:ScriptManagerProxy runat="server">
+    <Scripts>
+        <asp:ScriptReference Path="./Scripts/init-popover.js" /> 
+    </Scripts>
+</asp:ScriptManagerProxy>
+
 <div class="row pt-3 pr-4 pb-3 pl-4" />
 <asp:Repeater ID="APGroupRepeater" runat="server" OnItemDataBound="APGroupRepeater_ItemDataBound">
     <ItemTemplate>
@@ -19,7 +25,7 @@
                     <div class="row pt-2 pr-4 pb-2 pl-4">
                         <asp:Repeater ID="TimeRepeater" runat="server" OnItemDataBound="TimeRepeater_ItemDataBound" OnItemCommand="TimeRepeater_ItemCommand">
                             <ItemTemplate>
-                                    <div class="col-6"><asp:LinkButton runat="server" ID="BtnTime" CssClass="btn btn-select" /></div>
+                                    <div class="col-6"><asp:LinkButton runat="server" ID="BtnTime" OnClientClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" CssClass="btn btn-select" /></div>
                             </ItemTemplate>
                         </asp:Repeater>
                     </div>
@@ -32,25 +38,3 @@
         <hr class="divider w-75">
     </SeparatorTemplate>
 </asp:Repeater>
-
-<script>
-    $(function(){
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-      
-        for (i = 0; i < acc.length; i++) {
-        $(acc[i]).click(function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            }
-        });
-        }
-    });
-</script>
-
-

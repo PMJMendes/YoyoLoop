@@ -28,6 +28,7 @@ namespace MVP.Checkout
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
                 //Response.Redirect("/");
             }
+
             InitData();
         }
 

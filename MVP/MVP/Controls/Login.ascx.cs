@@ -65,6 +65,7 @@ namespace MVP.Controls
                 default:
                     LoginMessage.Text = "Invalid login attempt";
                     LoginMessage.Visible = true;
+                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginFailedKey", "$.unblockUI();", true);
                     break;
             }
         }

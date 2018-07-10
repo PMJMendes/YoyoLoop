@@ -13,7 +13,7 @@
         <div class="dropdown-divider"></div>
         <asp:Repeater ID="ItemRepeater" runat="server" OnItemCommand="ItemRepeater_ItemCommand">
             <ItemTemplate>
-                <asp:LinkButton ID="Item" runat="server" class="dropdown-item" CommandArgument="<%# ((ListItem)Container.DataItem).Value %>" CommandName="<%# ((ListItem)Container.DataItem).Text %>">&rarr; <%# ((ListItem)Container.DataItem).Text %></asp:LinkButton>
+                <asp:LinkButton ID="Item" runat="server" class="dropdown-item" OnClientClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" CommandArgument="<%# ((ListItem)Container.DataItem).Value %>" CommandName="<%# ((ListItem)Container.DataItem).Text %>">&rarr; <%# ((ListItem)Container.DataItem).Text %></asp:LinkButton>
             </ItemTemplate>
         </asp:Repeater>
     </div>

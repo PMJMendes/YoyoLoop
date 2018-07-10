@@ -71,7 +71,7 @@
                                 <asp:Panel runat="server" ID="pnPromocode" Visible="true">
                                     <div class="mt-5 mb-5 checkout__separator"></div>
                                     <div class="checkout__label">Código promocional</div>
-                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="checkout__input checkout__input--promocode" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="checkout__input checkout__input--promocode" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
                                     <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
                                         <span class="input-group-text">
                                             <img src="/img/alert.png"
@@ -90,6 +90,7 @@
                                 </asp:Panel>
                             </ContentTemplate>
                         </asp:UpdatePanel>
+
                     </div>
 
                     <div class="col-md-4 left-menu">

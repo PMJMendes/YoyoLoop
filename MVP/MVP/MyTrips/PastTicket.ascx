@@ -106,7 +106,7 @@
         <p class="travel__card-past__last__price"><%= TicketBooking.Cost.ToString("C") %></p>
         <div class="row text-center">
             <div class="col-12">
-                <a href="/Calendar/Calendar?Dest=<%= TicketBooking.Trip.Departure.Route.EndRegion.Name %>" class="travel__card--book-again btn btn-primary text-uppercase">
+                <a OnClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" href="/Calendar/Calendar?Dest=<%= TicketBooking.Trip.Departure.Route.EndRegion.Name %>" class="travel__card--book-again btn btn-primary text-uppercase">
                     Reservar novamente
                 </a>
             </div>

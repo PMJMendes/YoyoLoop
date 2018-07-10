@@ -207,7 +207,7 @@ namespace MVP.Calendar
             }
             else
             {
-                Page.ClientScript.RegisterStartupScript(GetType(), "showRegistarModalKey", "$('#registerModal').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "showRegistarModalKey", "$('#registerModal').modal('show');", true);
                 localData.AnonymousBookingHandler = true;
             }
         }

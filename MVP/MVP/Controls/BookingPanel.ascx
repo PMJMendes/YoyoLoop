@@ -124,7 +124,7 @@
                         <div class="row p-3">
                             <div class="col-12 text-center promocode promocode--active">
                                 <div class="input-group mb-3">
-                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
                                     <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
                                         <span class="input-group-text">
                                             <img src="/img/alert.png"
@@ -146,7 +146,7 @@
                     </asp:Panel>
                     <div class="row p-4">
                         <div class="col-12 text-center">
-                            <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
+                            <asp:button runat="server" ID="BtnBook" OnClientClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
                         </div>
                     </div>
                 </div>

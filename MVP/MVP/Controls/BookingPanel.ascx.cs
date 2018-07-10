@@ -39,6 +39,13 @@ namespace MVP.Controls
             }
         }
 
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            tbPromo.Attributes.Add("onchange", "javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })");
+        }
+
         internal void Init_Data()
         {
             PanelData = new BookingPanelDTO
@@ -157,7 +164,7 @@ namespace MVP.Controls
 
         internal void Clear_Errors()
         {
-            var labels = this.Controls.OfType<Label>();
+            var labels = Controls.OfType<Label>();
             foreach (Label l in labels)
             {
                 l.ForeColor = System.Drawing.Color.Empty;

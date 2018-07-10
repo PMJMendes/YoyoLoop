@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <h1 class="travel__main-title">A tua viagem está confirmada</h1>
                 <div class="travel__sub-title mb-5">
-                      Encontra o teu bilhete em  <a href="/MyTrips/MyTrips" class="travel__sub-title--red travel__sub-title--link">As Minhas Viagens</a>
+                      Encontra o teu bilhete em  <a OnClick="javascript:$.blockUI({ message: $('#divBlockUI'), baseZ: 20000 })" href="/MyTrips/MyTrips" class="travel__sub-title--red travel__sub-title--link">As Minhas Viagens</a>
                 </div>
 
                 <!-- START CARD -->
