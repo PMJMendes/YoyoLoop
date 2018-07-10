@@ -90,6 +90,7 @@
                                 </asp:Panel>
                             </ContentTemplate>
                         </asp:UpdatePanel>
+
                     </div>
 
                     <div class="col-md-4 left-menu">
