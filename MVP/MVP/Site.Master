@@ -38,6 +38,7 @@
 
 <body>
     <form runat="server" id="MasterForm">
+        
         <asp:ScriptManager runat="server" EnablePartialRendering="true">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -56,28 +57,32 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
+                <asp:ScriptReference Path="~/vendor/jquery/jquery.min.js" />
+                <asp:ScriptReference Path="~/vendor/bootstrap/js/bootstrap.bundle.min.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.blockUI.js" />
+                <asp:ScriptReference Path="~/Scripts/Custom/blockUI-extension.js" />
                 <asp:ScriptReference Path="~/Scripts/Custom/navbar-scroll.js" />
             </Scripts>
         </asp:ScriptManager>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="/vendor/jquery/jquery.min.js"></script>
-        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-        <yoyo:Login id="login" runat="server" />
-        <yoyo:Register ID="register" runat="server" />
+        <!-- BLOCKUI DIV -->
+        <div id="divBlockUI" style="display:none;"> 
+            <h1>We are processing your request.  Please be patient.</h1> 
+        </div> 
+        <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">
             <div class="container-fluid">
-                <a href="/"><img src="../img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
+                <a href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" href="/Calendar/Calendar">Loops & horarios</a>
+                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Calendar/Calendar">Loops & horarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
@@ -90,7 +95,7 @@
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <li class="nav-item">
-                                    <a class="nav-link js-scroll-trigger text-uppercase" href="/MyTrips/MyTrips">As minhas viagens</a>
+                                    <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips">As minhas viagens</a>
                                 </li>
                                 <li class="nav-item my-auto"> <!-- Temporarily logs you out -->
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" LogoutImageUrl="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x,/img/userprofile-red@3x.png 3x" CssClass="userprofile-red" ToolTip="Logout" />
@@ -102,9 +107,15 @@
             </div>
         </nav>
 
+        <asp:UpdatePanel runat="server" ID="upMainContent">
+            <ContentTemplate>
 
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
 
         <footer>
             <section class="footer">
@@ -226,7 +237,6 @@
                 </div>
             </section>
         </footer>
-
     </form>
 </body>
 </html>

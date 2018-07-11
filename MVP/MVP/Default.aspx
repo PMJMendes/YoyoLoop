@@ -33,7 +33,7 @@
 
                 <div class="homepage__where-to-card__from mb-2">De leiria, Cascais e coimbra</div>
                 <div class="homepage__where-to-card__when mb-4">Todos os dias</div>
-                <a href="../Calendar/Calendar?Dest=Lisboa" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
+                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
               </div>
             </div>
             
@@ -54,7 +54,7 @@
 
                 <div class="homepage__where-to-card__from mb-2">De lisboa</div>
                 <div class="homepage__where-to-card__when mb-4">Todos os dias</div>
-                <a href="../Calendar/Calendar?Dest=Leiria" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
+                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Leiria" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
               </div>
             </div>
 
@@ -75,7 +75,7 @@
 
                 <div class="homepage__where-to-card__from mb-2">De Lisboa</div>
                 <div class="homepage__where-to-card__when mb-4">Todos os dias</div>
-                <a href="../Calendar/Calendar?Dest=Coimbra" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
+                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Coimbra" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
               </div>
             </div>
 
@@ -96,7 +96,7 @@
 
                 <div class="homepage__where-to-card__from mb-2">De Lisboa</div>
                 <div class="homepage__where-to-card__when mb-4">Todos os dias</div>
-                <a href="../Calendar/Calendar?Dest=Linha%20de%20Cascais" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
+                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Linha%20de%20Cascais" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center">Reservar</a>
               </div>
             </div>
           </div>

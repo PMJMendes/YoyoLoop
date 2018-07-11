@@ -28,6 +28,12 @@ namespace MVP.Checkout
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
                 //Response.Redirect("/");
             }
+
+            //STOP MAINCONTENT UPDATES from CHILD panels
+            UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
+            masterpanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+            masterpanel.ChildrenAsTriggers = false;
+
             InitData();
         }
 
@@ -69,7 +75,6 @@ namespace MVP.Checkout
                 ProcessQueryString();
                 Session["checkout.data"] = pageData;
                 UpdateCheckoutPanel();
-                
             }
         }
 
@@ -88,6 +93,7 @@ namespace MVP.Checkout
                     {
                         BookingId = Guid.Empty,
                         UserId = string.Empty,
+                        BookingStatus = BookingStatus.CANCELLED,
                         Seats = 0,
                         FareType = Fare.FareType.STANDARD,
                         StandardPrice = 0,
@@ -102,13 +108,13 @@ namespace MVP.Checkout
                         EndAPName = "Paragem de Destino"
                     };
 
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
-                    //Response.Redirect("/Calendar/Calendar");
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Couldn't find booking.\")</SCRIPT>");
+                    //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
                 }
                 else if (pageData.UserId != User?.Identity.GetUserId())
                 {
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
-                    //Response.Redirect("/Calendar/Calendar");
+                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user for this booking.\")</SCRIPT>");
+                    //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
                 }
                 else
                 {
@@ -117,11 +123,33 @@ namespace MVP.Checkout
                         pnPromocode.Visible = false;
                     }
                 }
+
+                switch (pageData.BookingStatus)
+                {
+                    case (BookingStatus.CANCELLED):
+                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"This booking has expired.\")</SCRIPT>");
+                        //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                        break;
+                    case (BookingStatus.BOOKED):
+                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"This booking has already been payed.\")</SCRIPT>");
+                        Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                        break;
+                    case (BookingStatus.COMPLETED):
+                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"This trip has already been completed.\")</SCRIPT>");
+                        //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                        break;
+                    case (BookingStatus.PENDING):
+                        break;
+                    default:
+                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Something went wrong.\")</SCRIPT>");
+                        //Response.Redirect("/Calendar/Calendar"); - GENERIC ERROR PAGE
+                        break;
+                }
             }
             else
             {
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
-                //Response.Redirect("/Calendar/Calendar");
+                //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Calendar.aspx.cs" Inherits="MVP.Calendar.Calendar" %>
+<%@ MasterType virtualpath="~/Site.Master" %>
 
 <%@ Register Src="~/Controls/DropdownMenuButton.ascx" TagPrefix="yoyo" TagName="DropdownMenuButton" %>
 <%@ Register Src="~/Controls/DropdownFixed.ascx" TagPrefix="yoyo" TagName="DropdownFixed" %>
@@ -134,7 +135,7 @@
 
                         <!-- Today button -->
                         <div class="my-auto col text-right">
-                            <button id="BtnMonthToday" runat="server" OnServerClick="CalBtnMonthToday" class=" btn btn-today text-uppercase">Hoje</button>
+                            <asp:button id="BtnMonthToday" runat="server" OnClick="CalBtnMonthToday" CssClass=" btn btn-today text-uppercase" Text="Hoje" />
                         </div>
                     </div>
                     <!-- END OF CALENDAR HEADER -->
@@ -379,7 +380,6 @@
 
                 </div>
                 <!-- END OF LATERAL -->
-
             </div>
         </div>
     </section>

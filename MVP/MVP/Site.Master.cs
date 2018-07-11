@@ -12,6 +12,13 @@ namespace MVP
 {
     public partial class SiteMaster : MasterPage
     {
+        public event EventHandler<SignInEventArgs> PassSignIn;
+
+        public class SignInEventArgs : EventArgs
+        {
+            public string UserId;
+        }
+
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
@@ -58,24 +65,26 @@ namespace MVP
             }
             else
             {
+                if((string)ViewState[AntiXsrfUserNameKey] == String.Empty)
+                {
+                    ViewState[AntiXsrfUserNameKey] = Context.User.Identity.Name ?? String.Empty;
+                }
                 // Validate the Anti-XSRF token
-                if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue)
-                    //|| (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty)) THIS IS CURRENTLY DISABLED DUE TO VIEWSTATE BEING KEYED TO A SPECIFIC USER
+                if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
                 {
                     throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
                 }
             }
         }
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
-    }
 
+        protected void UserSignIn(object sender, SignInEventArgs e)
+        {
+            PassSignIn?.Invoke(this, new SignInEventArgs { UserId = e.UserId });
+        }
+    }
 }

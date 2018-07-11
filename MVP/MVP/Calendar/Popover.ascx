@@ -1,5 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Popover.ascx.cs" Inherits="MVP.Calendar.Popover" %>
 
+<asp:ScriptManagerProxy runat="server">
+    <Scripts>
+        <asp:ScriptReference Path="./Scripts/init-popover.js" /> 
+    </Scripts>
+</asp:ScriptManagerProxy>
+
 <div class="row pt-3 pr-4 pb-3 pl-4" />
 <asp:Repeater ID="APGroupRepeater" runat="server" OnItemDataBound="APGroupRepeater_ItemDataBound">
     <ItemTemplate>
@@ -32,25 +38,3 @@
         <hr class="divider w-75">
     </SeparatorTemplate>
 </asp:Repeater>
-
-<script>
-    $(function(){
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-      
-        for (i = 0; i < acc.length; i++) {
-        $(acc[i]).click(function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            }
-        });
-        }
-    });
-</script>
-
-

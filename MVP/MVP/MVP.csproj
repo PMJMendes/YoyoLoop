@@ -248,6 +248,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
+    <Content Include="Calendar\Scripts\init-popover.js" />
     <Content Include="Checkout\Payform.aspx" />
     <Content Include="Checkout\Scripts\stripe-createToken.js" />
     <Content Include="Controls\BookingPanel.ascx" />
@@ -274,6 +275,7 @@
     <Content Include="css\styles.css" />
     <Content Include="css\styles.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EmailTemplates\Ticket.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Account\Web.config" />
@@ -522,6 +524,7 @@
     <Content Include="MyTrips\Ticket.ascx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\Custom\blockUI-extension.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
     <Content Include="Scripts\Custom\show-popover.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -551,6 +554,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />

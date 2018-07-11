@@ -91,7 +91,7 @@ namespace MVP.Calendar {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton BtnMonthToday;
+        protected global::System.Web.UI.WebControls.Button BtnMonthToday;
         
         /// <summary>
         /// CalDate control.
@@ -110,5 +110,17 @@ namespace MVP.Calendar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MVP.Controls.BookingPanel BookingPanel;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new MVP.SiteMaster Master {
+            get {
+                return ((MVP.SiteMaster)(base.Master));
+            }
+        }
     }
 }

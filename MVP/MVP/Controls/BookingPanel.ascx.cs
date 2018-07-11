@@ -157,7 +157,7 @@ namespace MVP.Controls
 
         internal void Clear_Errors()
         {
-            var labels = this.Controls.OfType<Label>();
+            var labels = upBookingPanel.Controls[0].Controls.OfType<Label>();
             foreach (Label l in labels)
             {
                 l.ForeColor = System.Drawing.Color.Empty;
