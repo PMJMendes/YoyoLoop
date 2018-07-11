@@ -275,6 +275,7 @@
     <Content Include="css\styles.css" />
     <Content Include="css\styles.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EmailTemplates\Ticket.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Account\Web.config" />
