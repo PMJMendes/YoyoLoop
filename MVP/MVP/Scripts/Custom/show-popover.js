@@ -9,4 +9,6 @@
         placement: 'auto'
     });
     $(target).popover('show');
+
+    initPopover();
 };

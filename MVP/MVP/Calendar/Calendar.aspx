@@ -380,7 +380,6 @@
 
                 </div>
                 <!-- END OF LATERAL -->
-
             </div>
         </div>
     </section>
