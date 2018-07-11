@@ -3,11 +3,11 @@ using MVP.Models.Entities;
 using MVP.Confirm;
 using System;
 using System.Web;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+
 
 namespace MVP.Services
 {

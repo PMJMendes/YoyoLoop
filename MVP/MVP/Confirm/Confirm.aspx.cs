@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using MVP.Services;
-using MVP.Models.Entities;
 using Microsoft.AspNet.Identity;
 
 namespace MVP.Confirm
@@ -76,7 +71,6 @@ namespace MVP.Confirm
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
                     //Something went really terribly wrong here - email systems?
                     //Response.Redirect("/Calendar/Calendar");
-
                 }
             }
             else

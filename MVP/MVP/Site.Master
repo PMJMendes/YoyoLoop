@@ -56,13 +56,11 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
+                <asp:ScriptReference Path="~/vendor/jquery/jquery.min.js" />
+                <asp:ScriptReference Path="~/vendor/bootstrap/js/bootstrap.bundle.min.js" />
                 <asp:ScriptReference Path="~/Scripts/Custom/navbar-scroll.js" />
             </Scripts>
         </asp:ScriptManager>
-
-        <!-- Bootstrap core JavaScript -->
-        <script src="/vendor/jquery/jquery.min.js"></script>
-        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
         <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />

@@ -10,6 +10,7 @@ namespace MVP.Checkout
     {
         public Guid BookingId { get; set; }
         public string UserId { get; set; }
+        public string UserEmail { get; set; }
         public BookingStatus BookingStatus { get; set; }
 
         public int Seats { get; set; }
@@ -20,6 +21,7 @@ namespace MVP.Checkout
         public bool PromoValid { get; set; }
 
         public decimal Cost { get; set; }
+        public string TicketCode { get; set; }
 
         public DateTime StartTime { get; set; }
         public string StartRegionName { get; set; }
