@@ -47,7 +47,7 @@ namespace MVP.Controls
                     LoginMessage.Text = "Login sucessful";
                     LoginMessage.Visible = true;
                     var userId = signinManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
-                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "setTimeout(function(){$.blockUI({ message: $('#divBlockUI') });__doPostBack('" + UniqueID + "', '" + userId + "');},1);", true);
+                    ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '" + userId + "');},1);", true);
 
                     //Response.Redirect(Request.RawUrl);
                     //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);

@@ -32,7 +32,7 @@ namespace MVP.Controls
                 RegisterErrorMessage.Text = "Registration sucessful";
                 var userId = signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
 
-                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "setTimeout(function(){$.blockUI({ message: $('#divBlockUI') });__doPostBack('" + UniqueID + "', '" + userId + "');},1);", true);
+                ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '" + userId + "');},1);", true);
 
                 //Response.Redirect(Request.RawUrl);
                 //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
