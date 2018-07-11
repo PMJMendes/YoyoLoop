@@ -135,7 +135,7 @@
 
                         <!-- Today button -->
                         <div class="my-auto col text-right">
-                            <button id="BtnMonthToday" runat="server" OnServerClick="CalBtnMonthToday" class=" btn btn-today text-uppercase">Hoje</button>
+                            <asp:button id="BtnMonthToday" runat="server" OnClick="CalBtnMonthToday" CssClass=" btn btn-today text-uppercase" Text="Hoje" />
                         </div>
                     </div>
                     <!-- END OF CALENDAR HEADER -->
