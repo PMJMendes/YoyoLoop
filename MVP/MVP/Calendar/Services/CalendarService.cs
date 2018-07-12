@@ -197,7 +197,7 @@ namespace MVP.Services
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
                         Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
-                                 date + dt.Departure.Time < threshold ? SlotStatus.BLACK :
+                                 date + dt.Departure.Time < threshold ? SlotStatus.NONE :
                                  dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
                                  dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
                                  lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
