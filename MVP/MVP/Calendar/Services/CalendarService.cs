@@ -222,13 +222,15 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
                 var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId &&
                                                             d.DayType == dayType &&
                                                             d.Time == state.Selection.Time
                                                        )
-                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => t.Status != TripStatus.CANCELLED &&
+                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => (t.Status == TripStatus.PENDING || t.Status == TripStatus.BOOKED) &&
                                                                               t.StartTime == starttime &&
+                                                                              t.StartTime >= threshold &&
                                                                               t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
                                                                               t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
                                                                               t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity
