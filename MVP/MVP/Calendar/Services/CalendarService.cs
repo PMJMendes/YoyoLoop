@@ -308,6 +308,7 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
+                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
                 var booking = new Booking()
                 {
@@ -331,7 +332,7 @@ namespace MVP.Services
                         trip = CreateTrip(state, model);
                         model.Trip.Add(trip);
                     }
-                    else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
+                    else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity || trip.StartTime < threshold)
                     {
                         return null;
                     }
