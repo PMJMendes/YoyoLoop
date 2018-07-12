@@ -104,13 +104,17 @@ namespace MVP.Services
                 return result;
             }
 
-            if (date == DateTime.Today && !departures.Where(d => d.Departure.Time < threshold).Any())
+            if (!departures.Where(d => d.Occupancy < capacity).Any())
             {
                 result.Status = SlotStatus.BLACK;
             }
-            else if (!departures.Where(d => d.Occupancy < capacity).Any())
+            else if (lastminute && departures.Where(d => d.Occupancy > 0 && !(d.Occupancy < capacity)).Any()) 
             {
                 result.Status = SlotStatus.BLACK;
+            }
+            else if (date == DateTime.Today && !departures.Where(d => d.Departure.Time < threshold).Any())
+            {
+                result.Status = SlotStatus.NONE;
             }
             else
             {
