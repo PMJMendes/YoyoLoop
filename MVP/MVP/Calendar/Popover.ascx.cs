@@ -114,5 +114,14 @@ namespace MVP.Calendar
         {
             TimeSelected?.Invoke(this, new TimeSelectedEventArgs() { TimeSelected = time, TimeParams = timeparams });
         }
+
+        protected void TimeRepeater_ItemCreated(object sender, RepeaterItemEventArgs e)
+        {
+            LinkButton button = e.Item.FindControl("BtnTime") as LinkButton;
+            if(button != null)
+            {
+                ScriptManager.GetCurrent(Page).RegisterAsyncPostBackControl(button);
+            }
+        }
     }
 }
