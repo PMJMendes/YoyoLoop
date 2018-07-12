@@ -90,6 +90,7 @@ namespace MVP.Services
             };
 
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+            var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
@@ -103,7 +104,11 @@ namespace MVP.Services
                 return result;
             }
 
-            if (!departures.Where(d => d.Occupancy < capacity).Any())
+            if (date == DateTime.Today && !departures.Where(d => d.Departure.Time < threshold).Any())
+            {
+                result.Status = SlotStatus.BLACK;
+            }
+            else if (!departures.Where(d => d.Occupancy < capacity).Any())
             {
                 result.Status = SlotStatus.BLACK;
             }
