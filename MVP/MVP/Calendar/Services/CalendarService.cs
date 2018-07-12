@@ -156,6 +156,8 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
+
                 var dayType = GetDayType(date);
 
                 var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
@@ -186,10 +188,11 @@ namespace MVP.Services
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
                         Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
-                            dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
-                            dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
-                            lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
-                            SlotStatus.GREEN
+                                 date + dt.Departure.Time < threshold ? SlotStatus.BLACK :
+                                 dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
+                                 dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
+                                 lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
+                                 SlotStatus.GREEN
                     }).OrderBy(ts => ts.Departure.Time).ToList()
                 }).ToList();
             }
