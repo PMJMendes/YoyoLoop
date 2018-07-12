@@ -127,7 +127,8 @@ namespace MVP.Services
             {
                 using (var model = new EntityModel())
                 {
-                    var booking = model.Booking.SingleOrDefault(b => b.BookingId == state.BookingId && b.Status == BookingStatus.PENDING);
+                    var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
+                    var booking = model.Booking.Include(b => b.Trip).SingleOrDefault(b => b.BookingId == state.BookingId && b.Status == BookingStatus.PENDING && b.Trip.StartTime > threshold);
                     if (booking == null)
                     {
                         error = "Booking no longer valid.";
@@ -161,7 +162,7 @@ namespace MVP.Services
                 // Charge sucessful
                 UpdateBooking(state, BookingStatus.BOOKED);
                 error = string.Empty;
-                SendTicket(state); // THIS IS JUST A DEMO OF THE MAIL SERVICE, WE'RE NOT SUPPOSED TO SEND TICKET HERE
+                SendTicket(state); // THIS IS JUST A DEMO OF THE MAIL SERVICE, WE'RE NOT SUPPOSED TO SEND TICKET HERE, BUT INVOICE
                 return true;
             }
         }
