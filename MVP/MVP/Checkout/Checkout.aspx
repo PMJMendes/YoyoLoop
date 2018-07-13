@@ -7,7 +7,6 @@
     <asp:ScriptManagerProxy runat="server">
         <Scripts>
             <asp:ScriptReference Path="https://js.stripe.com/v2/" />
-            <asp:ScriptReference Path="./Scripts/stripe-createToken.js" /> 
         </Scripts>
     </asp:ScriptManagerProxy>
 

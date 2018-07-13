@@ -935,6 +935,7 @@
     <Compile Include="Models\Entities\Trip.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
+    <Compile Include="Models\Extensions\ContextExtensions.cs" />
     <Compile Include="Models\Extensions\IdentityExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="MyTrips\MyTrips.aspx.cs">

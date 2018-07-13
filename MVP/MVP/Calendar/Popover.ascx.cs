@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MVP.Models.Extensions;
 
 namespace MVP.Calendar
 {
@@ -28,6 +29,14 @@ namespace MVP.Calendar
             {
                 APGroupRepeater.DataSource = value;
             }
+        }
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            // Load scripts
+            ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
+
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("./Scripts/init-popover.js") });
         }
 
         protected void APGroupRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)

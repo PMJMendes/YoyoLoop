@@ -10,6 +10,7 @@ using MVP.Services;
 using MVP.Controls;
 using MVP.Models;
 using MVP.Models.Entities;
+using MVP.Models.Extensions;
 using Microsoft.AspNet.Identity;
 
 namespace MVP.Checkout
@@ -20,6 +21,14 @@ namespace MVP.Checkout
         protected readonly string stripePublishableKey = WebConfigurationManager.AppSettings["StripePublishableKey"];
 
         protected CheckoutDTO pageData;
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            // Load scripts
+            ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
+
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("./Scripts/stripe-createToken.js") });
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
