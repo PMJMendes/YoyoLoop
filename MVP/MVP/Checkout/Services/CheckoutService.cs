@@ -295,6 +295,7 @@ namespace MVP.Services
             reader.Close();
 
             MailMessage msg = md.CreateMailMessage(state.UserEmail, fill_in, body, new Control());
+            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
             try
             {
