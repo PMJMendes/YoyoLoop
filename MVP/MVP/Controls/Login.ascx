@@ -75,7 +75,7 @@
                         <div class="row">
                             <div class="login__forgot-password col-md-6"><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#forgotModal">Esqueci-me da password</a></div>
                             <div class="login__log-in col-md-6">
-                                <asp:Button runat="server" ID="btnLogin" CausesValidation="true" ValidationGroup="Login" OnClick="LogIn" Text="Entrar" CssClass="login__login btn btn-primary"/>
+                                <asp:Button runat="server" ID="btnLogin" CausesValidation="true" ValidationGroup="Login" OnClick="LogIn_Click" Text="Entrar" CssClass="login__login btn btn-primary"/>
                             </div>
                         </div>
                     </div>

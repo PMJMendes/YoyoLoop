@@ -13,12 +13,7 @@ namespace MVP
 {
     public partial class SiteMaster : MasterPage
     {
-        public event EventHandler<SignInEventArgs> PassSignIn;
-
-        public class SignInEventArgs : EventArgs
-        {
-            public string UserId;
-        }
+        public event EventHandler<EventArgs> PassSignIn;
 
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -92,9 +87,9 @@ namespace MVP
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
-        protected void UserSignIn(object sender, SignInEventArgs e)
+        protected void UserSignIn(object sender, EventArgs e)
         {
-            PassSignIn?.Invoke(this, new SignInEventArgs { UserId = e.UserId });
+            PassSignIn?.Invoke(this, e);
         }
     }
 }
