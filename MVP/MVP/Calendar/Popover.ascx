@@ -1,11 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Popover.ascx.cs" Inherits="MVP.Calendar.Popover" %>
 
-<asp:ScriptManagerProxy runat="server">
-    <Scripts>
-        <asp:ScriptReference Path="./Scripts/init-popover.js" /> 
-    </Scripts>
-</asp:ScriptManagerProxy>
-
 <asp:UpdatePanel runat="server" ID="upPopover" UpdateMode="Conditional">
     <ContentTemplate>
         <div class="row pt-3 pr-4 pb-3 pl-4" />

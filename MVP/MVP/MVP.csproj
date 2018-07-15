@@ -257,7 +257,6 @@
     <Content Include="Calendar\Scripts\calendar-table.js" />
     <Content Include="Checkout\Checkout.aspx" />
     <Content Include="Confirm\Confirm.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -787,13 +786,6 @@
     </Compile>
     <Compile Include="Confirm\ConfirmDTO.cs" />
     <Compile Include="Confirm\Services\ConfirmService.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Calendar\CalendarDay.ascx.cs">
       <DependentUpon>CalendarDay.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -943,6 +935,7 @@
     <Compile Include="Models\Entities\Trip.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
+    <Compile Include="Models\Extensions\ContextExtensions.cs" />
     <Compile Include="Models\Extensions\IdentityExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="MyTrips\MyTrips.aspx.cs">

@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using MVP.Models.Extensions;
 
 namespace MVP
 {
@@ -25,6 +26,15 @@ namespace MVP
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            // Load scripts
+            ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
+
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/jquery/jquery.min.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/bootstrap/js/bootstrap.bundle.min.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.blockUI.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
+
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;

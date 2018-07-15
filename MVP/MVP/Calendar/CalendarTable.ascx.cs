@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MVP.Models.Extensions;
 
 namespace MVP.Calendar
 {
@@ -71,6 +72,15 @@ namespace MVP.Calendar
             {
                 ViewState["SelectedDayID"] = value;
             }
+        }
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            // Load scripts
+            ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
+
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/show-popover.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("./Scripts/calendar-table.js") });
         }
 
         protected void CalendarDay_DayClicked(object sender, EventArgs e)
