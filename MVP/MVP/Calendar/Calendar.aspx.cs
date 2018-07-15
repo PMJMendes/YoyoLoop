@@ -41,7 +41,7 @@ namespace MVP.Calendar
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            Master.PassSignIn += new EventHandler<SiteMaster.SignInEventArgs>(UserSignIn);
+            Master.PassSignIn += new EventHandler<EventArgs>(UserSignIn);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace MVP.Calendar
             service.CheckPending();
         }
 
-        protected void UserSignIn(object sender, SiteMaster.SignInEventArgs e)
+        protected void UserSignIn(object sender, EventArgs e)
         {
             if (User?.Identity.IsAuthenticated == true && localData.AnonymousBookingHandler)
             {
