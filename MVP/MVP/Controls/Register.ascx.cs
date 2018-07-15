@@ -8,11 +8,14 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using MVP.Models;
+using MVP.Services;
 
 namespace MVP.Controls
 {
     public partial class Register : UserControl, IPostBackEventHandler
     {
+        private readonly MasterService service = new MasterService();
+
         public event EventHandler<SiteMaster.SignInEventArgs> SignIn;
 
         protected void CreateUser_Click(object sender, EventArgs e)
@@ -24,18 +27,20 @@ namespace MVP.Controls
             if (result.Succeeded)
             {
                 // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
-                //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
+                // EMAIL CONFIRMATION
+                string code = manager.GenerateEmailConfirmationToken(user.Id);
+                string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
+                service.SendEmailConfirmation(user.Email, callbackUrl);
+                //END OF EMAIL CONFIRMATION
+
+                //SIGN THE USER IN
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                 RegisterErrorMessage.Text = "Registration sucessful";
                 var userId = signInManager.AuthenticationManager.AuthenticationResponseGrant.Identity.GetUserId();
 
+                //FIRE THE USER SIGN IN EVENT
                 ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '" + userId + "');},1);", true);
-
-                //Response.Redirect(Request.RawUrl);
-                //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
             else
             {
