@@ -267,6 +267,7 @@
     <Content Include="Calendar\CalendarDay.ascx" />
     <Content Include="Controls\DropdownMenuButton.ascx" />
     <Content Include="Controls\DropdownFixed.ascx" />
+    <Content Include="Controls\Forgot.ascx" />
     <Content Include="Controls\Login.ascx" />
     <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
@@ -807,6 +808,13 @@
     </Compile>
     <Compile Include="Controls\DropdownFixed.ascx.designer.cs">
       <DependentUpon>DropdownFixed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forgot.ascx.cs">
+      <DependentUpon>Forgot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Forgot.ascx.designer.cs">
+      <DependentUpon>Forgot.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Login.ascx.cs">
       <DependentUpon>Login.ascx</DependentUpon>
