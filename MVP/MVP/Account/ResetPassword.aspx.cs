@@ -27,20 +27,31 @@ namespace MVP.Account
                 var user = manager.FindByName(Email.Text);
                 if (user == null)
                 {
-                    ErrorMessage.Text = "No user found";
+                    FormPanel.Visible = false;
+                    errorPanel.Visible = true;
+                    successPanel.Visible = false;
+                    ErrorMessage.Text = "No user found.";
                     return;
                 }
                 var result = manager.ResetPassword(user.Id, code, Password.Text);
                 if (result.Succeeded)
                 {
-                    Response.Redirect("~/Account/ResetPasswordConfirmation");
+                    FormPanel.Visible = false;
+                    errorPanel.Visible = false;
+                    successPanel.Visible = true;
                     return;
                 }
+                FormPanel.Visible = false;
+                errorPanel.Visible = true;
+                successPanel.Visible = false;
                 ErrorMessage.Text = result.Errors.FirstOrDefault();
                 return;
             }
 
-            ErrorMessage.Text = "An error has occurred";
+            FormPanel.Visible = false;
+            errorPanel.Visible = true;
+            successPanel.Visible = false;
+            ErrorMessage.Text = "An error has occurred.";
         }
     }
 }

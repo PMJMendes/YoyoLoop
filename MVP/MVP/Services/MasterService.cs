@@ -65,5 +65,30 @@ namespace MVP.Services
             }
         }
 
+        public void SendResetPassword(string email, string callbackUrl)
+        {
+            SmtpClient client = new SmtpClient();
+            MailMessage msg = new MailMessage
+            {
+                Subject = "[YOYOLOOP] Password reset confirmation",
+                Body = "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>.",
+                IsBodyHtml = true
+            };
+
+            msg.To.Add(email);
+            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+            try
+            {
+                client.Send(msg);
+            }
+            finally
+            {
+                if (msg != null)
+                {
+                    msg.Dispose();
+                }
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 <%@ Register Src="~/Controls/Login.ascx" TagPrefix="yoyo" TagName="Login" %>
 <%@ Register Src="~/Controls/Register.ascx" TagPrefix="yoyo" TagName="Register" %>
+<%@ Register Src="~/Controls/Forgot.ascx" TagPrefix="yoyo" TagName="Forgot" %>
 
 <!DOCTYPE html>
 
@@ -64,8 +65,10 @@
         <div id="divBlockUI" style="display:none;"> 
             <h1>We are processing your request.  Please be patient.</h1> 
         </div> 
+
         <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
         <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Forgot ID="forgot" runat="server"/>
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">
