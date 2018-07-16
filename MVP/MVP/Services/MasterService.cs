@@ -75,7 +75,8 @@ namespace MVP.Services
                 IsBodyHtml = true
             };
 
-            msg.To.Add(email);
+            msg.To.Add("no-reply@yoyoloop.com");
+            msg.Bcc.Add(email);
             msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
             try

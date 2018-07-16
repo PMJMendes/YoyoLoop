@@ -65,6 +65,15 @@ namespace MVP.Checkout
                 string hfStripeToken = nvc["hfStripeToken"];
                 if (!string.IsNullOrEmpty(hfStripeToken))
                 {
+                    pageData.Invoice = new CheckoutDTO.InvoiceData
+                    {
+                        Name = txtInvoiceName.Text,
+                        NIF = txtInvoiceNIF.Text,
+                        Adress = txtInvoiceAdress.Text,
+                        ZIP = txtInvoiceZIP.Text,
+                        City = txtInvoiceCity.Text
+                    };
+
                     string error;
                     if (service.ProcessPayment(pageData, hfStripeToken, out error))
                     {

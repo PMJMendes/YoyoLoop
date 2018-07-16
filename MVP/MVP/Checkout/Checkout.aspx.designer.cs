@@ -13,6 +13,60 @@ namespace MVP.Checkout {
     public partial class Checkout {
         
         /// <summary>
+        /// upBillingForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upBillingForm;
+        
+        /// <summary>
+        /// txtInvoiceName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceName;
+        
+        /// <summary>
+        /// txtInvoiceNIF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceNIF;
+        
+        /// <summary>
+        /// txtInvoiceAdress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceAdress;
+        
+        /// <summary>
+        /// txtInvoiceZIP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceZIP;
+        
+        /// <summary>
+        /// txtInvoiceCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceCity;
+        
+        /// <summary>
         /// upPromocode control.
         /// </summary>
         /// <remarks>
