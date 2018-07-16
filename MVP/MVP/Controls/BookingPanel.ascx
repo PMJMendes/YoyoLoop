@@ -157,7 +157,4 @@
             </div>
         </div>
     </ContentTemplate>
-    <Triggers>
-        <asp:PostBackTrigger ControlID="BtnBook" />
-    </Triggers>
 </asp:UpdatePanel>
