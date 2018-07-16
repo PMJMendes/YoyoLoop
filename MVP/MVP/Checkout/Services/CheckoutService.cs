@@ -149,6 +149,10 @@ namespace MVP.Services
                 try
                 {
                     var stripeCharge = chargeService.Create(myCharge);
+                    if(stripeCharge != null)
+                    {
+                        state.StripeChargeID = stripeCharge.Id;
+                    }
                 }
                 catch (StripeException ex)
                 {
@@ -162,7 +166,7 @@ namespace MVP.Services
                 // Charge sucessful
                 UpdateBooking(state, BookingStatus.BOOKED);
                 error = string.Empty;
-                SendTicket(state); // THIS IS JUST A DEMO OF THE MAIL SERVICE, WE'RE NOT SUPPOSED TO SEND TICKET HERE, BUT INVOICE
+                SendInvoice(state);
                 return true;
             }
         }
@@ -268,33 +272,42 @@ namespace MVP.Services
             return result;
         }
 
-        public void SendTicket(CheckoutDTO state)
+        public void SendInvoice(CheckoutDTO state)
         {
-
             SmtpClient client = new SmtpClient();
-            MailDefinition md = new MailDefinition
+            MailMessage msg = new MailMessage
             {
-                IsBodyHtml = true,
-                Subject = "A sua viagem está confirmada"
+                IsBodyHtml = false
             };
 
-            ListDictionary fill_in = new ListDictionary();
-            fill_in.Add("<%StartRegionName%>", state.StartRegionName.ToUpper());
-            fill_in.Add("<%StartAPName%>", state.StartAPName);
-            fill_in.Add("<%EndRegionName%>", state.EndRegionName.ToUpper());
-            fill_in.Add("<%EndAPName%>", state.EndAPName);
-            fill_in.Add("<%Date%>", state.StartTime.ToString("dd MMMM").ToUpper());
-            fill_in.Add("<%Weekday%>", state.StartTime.ToString("ddd").ToUpper());
-            fill_in.Add("<%Time%>", state.StartTime.ToString("HH\\:mm"));
-            fill_in.Add("<%Cost%>", state.Cost.ToString("C"));
-            fill_in.Add("<%TicketCode%>", state.TicketCode.ToUpper());
-            fill_in.Add("<%Seats%>", state.Seats.ToString() + " " + (state.Seats == 1 ? "Lugar" : "Lugares"));
+            msg.Subject = "[YOYOLOOP] INVOICE: " + state.BookingId.ToString().Substring(0, 8);
 
-            StreamReader reader = new StreamReader(HttpContext.Current.Server.MapPath("/EmailTemplates/Ticket.html"));
-            string body = reader.ReadToEnd();
-            reader.Close();
+            string body = "Data: " + DateTime.Now.ToString("R");
+            body += "\r\nBooking ID: " + state.BookingId.ToString();
+            body += "\r\nUser: " + state.UserEmail;
+            body += "\r\n";
+            body += "\r\nDETALHES DA VIAGEM:";
+            body += "\r\nOrigem: " + state.StartRegionName + " (" + state.StartAPName + ")";
+            body += "\r\nDestino: " + state.EndRegionName + " (" + state.EndAPName + ")";
+            body += "\r\nHora: " + state.StartTime.ToString("R");
+            body += "\r\nLugares: " + state.Seats.ToString();
+            body += "\r\n";
+            body += "\r\nDETALHES DO PAGAMENTO:";
+            body += "\r\nTarifa: " + state.FareType.ToString();
+            body += "\r\nPromocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
+            body += "\r\nStripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
+            body += "\r\nValor pago: " + state.Cost.ToString() + "€";
+            body += "\r\n";
+            body += "\r\nDADOS DE FACTURAÇÃO:";
+            body += "\r\nNome: " + state.Invoice.Name;
+            body += "\r\nNIF: " + state.Invoice.NIF;
+            body += "\r\nMorada: " + state.Invoice.Adress;
+            body += "\r\nCód. Postal: " + state.Invoice.ZIP;
+            body += "\r\nCidade: " + state.Invoice.City;
 
-            MailMessage msg = md.CreateMailMessage(state.UserEmail, fill_in, body, new Control());
+            msg.Body = body;
+
+            msg.To.Add(WebConfigurationManager.AppSettings["InvoiceProviderEmail"]);
             msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
             try

@@ -22,47 +22,40 @@
 
                         <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:290px;width:100%;border:none" />
 
-                        <!-- FACTURA HIDDEN FOR NOW -->
-                        <div class="hide">
-                            <div class="mt-5 mb-5 checkout__separator"></div>
+                        <!-- FACTURA -->
+                        <div class="mt-5 mb-5 checkout__separator"></div>
 
-                            <div class="row checkout__billing">
-                                <div class="col-md-8">
-                                    <h2 class="checkout__sub-title">Detalhes de facturação</h2>
-                                </div>
-                                <div class="checkout__billing--checkbox col-md-4 d-flex align-items-middle flex-row-reverse pt-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="company">
-                                        <label class="form-check-label" for="company">Empresa</label>
-                                    </div>                        
-                                </div>
-                            </div>
-
-                            <div class="checkout__label">Nome</div>
-                            <input class="checkout__input checkout__input--billing-name" type="text" placeholder="Pedro Meireles">
-
-                            <div class="checkout__label">Nome da empresa</div>
-                            <input class="checkout__input checkout__input--company" type="text">
-
-                            <div class="checkout__label">NIF</div>
-                            <input class="checkout__input checkout__input--nif" type="text" placeholder="000 000 000">
-                
-                            <div class="checkout__label">Morada</div>
-                            <input class="checkout__input checkout__input--company" type="text">
-
-                            <div class="row ml-0">
-                                <div class="row ml-0 mr-5 checkout__input--postal-code">
-                                    <div class="checkout__label">Código postal</div>
-                                    <input class="checkout__input" type="text" placeholder="0000-000">
-                                </div>
-                                <div class="row ml-0 checkout__input--city">
-                                    <div class="checkout__label">Cidade</div>
-                                    <select class="checkout__input checkout__input--city">
-                                        <option value="Lisboa">Lisboa</option>
-                                    </select>
-                                </div>
+                        <div class="row checkout__billing">
+                            <div class="col-md-8">
+                                <h2 class="checkout__sub-title">Detalhes de facturação</h2>
                             </div>
                         </div>
+
+                        <asp:UpdatePanel runat="server" ID="upBillingForm" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <div id="billingform">
+                                    <div class="checkout__label">Nome</div>
+                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="DisplayName" />
+
+                                    <div class="checkout__label">NIF</div>
+                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="true" CssClass="checkout__input checkout__input--nif" AutoCompleteType="Search" placeholder="000 000 000" />
+                
+                                    <div class="checkout__label">Morada</div>
+                                    <asp:TextBox runat="server" ID="txtInvoiceAdress" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeStreetAddress" />
+
+                                    <div class="row ml-0">
+                                        <div class="row ml-0 mr-5 checkout__input--postal-code">
+                                            <div class="checkout__label">Código postal</div>
+                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="true" CssClass="checkout__input" AutoCompleteType="HomeZipCode" placeholder="0000-000" />
+                                        </div>
+                                        <div class="row ml-0 checkout__input--city">
+                                            <div class="checkout__label">Cidade</div>
+                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeCity" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
                         <!-- END OF FACTURA -->
 
                         <asp:UpdatePanel runat="server" ID="upPromocode" UpdateMode="Conditional">

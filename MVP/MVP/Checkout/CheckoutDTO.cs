@@ -28,5 +28,18 @@ namespace MVP.Checkout
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
+
+        public string StripeChargeID { get; set; }
+
+        public InvoiceData Invoice { get; set; }
+
+        public class InvoiceData
+        {
+            public string Name { get; set; }
+            public string NIF { get; set; }
+            public string Adress { get; set; }
+            public string ZIP { get; set; }
+            public string City { get; set; }
+        }
     }
 }

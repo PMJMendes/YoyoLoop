@@ -102,7 +102,7 @@
                 <!-- END CARD -->
 
                 <div class="d-flex justify-content-between align-items-center mt-3">
-                    <div class="travel__copy-bold">Enviámos a tua fatura para <span style="color: #ff5f6d;"><%= pageData.UserEmail %></span></div>
+                    <div class="travel__copy-bold">Vamos enviar a tua fatura para <span style="color: #ff5f6d;"><%= pageData.UserEmail %></span></div>
                 </div>
 
             <div class="travel__separator mt-5 mb-5"></div>
