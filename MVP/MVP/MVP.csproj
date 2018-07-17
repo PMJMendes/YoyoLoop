@@ -284,6 +284,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Help\Help.aspx" />
     <Content Include="img\about.jpg" />
     <Content Include="img\acessivel%402x.png" />
     <Content Include="img\acessivel%403x.png" />
@@ -858,6 +859,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201801131725141_InitialCreate.cs" />
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">

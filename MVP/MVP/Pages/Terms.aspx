@@ -1,9 +1,5 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Terms.aspx.cs" Inherits="MVP.Pages.Terms" %>
 
-<asp:Content ID="LocalCss" ContentPlaceHolderID="HeadContent" runat="server">
-    <link href="<%= Context.VersionedContent("/css/terms_and_conditions.min.css") %>" rel="stylesheet">
-</asp:Content>
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="terms">
