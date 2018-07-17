@@ -1,0 +1,249 @@
+﻿.homepage {
+  font-family: Lato; }
+  .homepage__navbar {
+    background: white; }
+    .homepage__navbar a {
+      color: #535e7b !important; }
+  .homepage a:hover {
+    color: inherit;
+    text-decoration: none; }
+  .homepage__container {
+    padding-left: 60px;
+    padding-right: 40px; }
+    @media (max-width: 767.98px) {
+      .homepage__container {
+        padding-left: 20px;
+        padding-right: 10px; } }
+    .homepage__container--first {
+      margin-top: 220px; }
+    .homepage__container--second {
+      background: #eff1f6; }
+      .homepage__container--second img.illustration {
+        width: 100%;
+        height: 100%; }
+    .homepage__container--third {
+      padding-top: 30px;
+      background-image: linear-gradient(to bottom, #ff5f6d, #ffc371); }
+    .homepage__container--forth {
+      padding-top: 30px; }
+  .homepage__main-title {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 2.1px;
+    color: #ff5f6d;
+    text-transform: uppercase;
+    width: 868px; }
+    @media (max-width: 767.98px) {
+      .homepage__main-title {
+        font-size: 32px; } }
+  .homepage__sub-title {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    color: #535e7b;
+    width: 836px; }
+  .homepage__where-to-go {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #535e7b; }
+  .homepage__find-city {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.75;
+    letter-spacing: 1px;
+    text-align: right;
+    color: #535e7b;
+    text-decoration: underline; }
+  .homepage__where-to-card {
+    background: black;
+    max-width: 315px;
+    margin: auto;
+    padding: 0 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 60px 0 rgba(31, 40, 53, 0.15); }
+    .homepage__where-to-card--lisboa {
+      background-image: url("../img/lisboa.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 425px 425px; }
+    .homepage__where-to-card--leiria {
+      background-image: url("../img/Leiria.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 425px 425px; }
+    .homepage__where-to-card--coimbra {
+      background-image: url("../img/Coimbra.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 425px 425px; }
+    .homepage__where-to-card--cascais {
+      background-image: url("../img/Cascais.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 425px 425px; }
+    .homepage__where-to-card__header__city {
+      font-size: 34px;
+      color: #ffffff; }
+    .homepage__where-to-card__header__price {
+      color: #ffcc66;
+      font-weight: bold;
+      text-transform: uppercase; }
+      .homepage__where-to-card__header__price__amount {
+        font-size: 40px; }
+      .homepage__where-to-card__header__price__from {
+        font-size: 9px;
+        text-align: right; }
+      .homepage__where-to-card__header__price__symbol {
+        font-size: 20px;
+        text-align: right; }
+    .homepage__where-to-card__separator {
+      width: 100%;
+      height: 1px;
+      opacity: 0.6;
+      background-color: #eff1f6; }
+    .homepage__where-to-card__from {
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.8;
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase; }
+    .homepage__where-to-card__when {
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.8;
+      color: #ffffff;
+      text-transform: uppercase; }
+    .homepage__where-to-card__reserve {
+      margin: auto;
+      width: 70%; }
+  .homepage__yoyoloop {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+    color: #838da7;
+    margin-top: 73px; }
+  .homepage__yoyoloop-main-description {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    color: #535e7b; }
+  .homepage__yoyoloop-sub-description {
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #535e7b; }
+  .homepage__popular-loops {
+    background: black; }
+    .homepage__popular-loops__title {
+      font-size: 36px;
+      line-height: 1.8;
+      color: #ffffff; }
+    .homepage__popular-loops__city {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-top: 10px; }
+    .homepage__popular-loops__footer__reserve {
+      margin: 20px auto 0 auto;
+      max-width: 200px; }
+    .homepage__popular-loops__features__main-title, .homepage__popular-loops__features__sub-title {
+      font-size: 10px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-top: 5px; }
+    .homepage__popular-loops__features__sub-title {
+      margin-top: 3px;
+      font-weight: 900; }
+    .homepage__popular-loops__separator {
+      width: 80%;
+      margin: auto;
+      height: 1px;
+      opacity: 0.6;
+      background-color: #eff1f6; }
+    .homepage__popular-loops__search {
+      background: #fff; }
+      .homepage__popular-loops__search__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 3px;
+        color: #535e7b; }
+      .homepage__popular-loops__search__btn {
+        border-radius: 20px;
+        background-color: #ffffff;
+        border: solid 2px #ff5f6d;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 1.75;
+        letter-spacing: 1px;
+        color: #ff5f6d;
+        padding: 5px 20px;
+        text-transform: uppercase; }
+        .homepage__popular-loops__search__btn:hover {
+          color: #ff5f6d !important; }
+  .homepage__see-all {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 1.8px;
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: underline; }
+  .homepage__why-catch-ride {
+    font-size: 36px;
+    font-weight: bold;
+    color: #535e7b; }
+  .homepage__why-card__title {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: normal;
+    color: #535e7b; }
+  .homepage__why-card__sub-title {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #838da7;
+    text-transform: uppercase; }
+  .homepage__why-card__separator {
+    background-color: #838da7;
+    height: 1px;
+    width: 100px; }
+  .homepage__why-card__content {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    color: #8b9398; }
+  .homepage__reserve-btn, .homepage__where-to-card__reserve, .homepage__popular-loops__footer__reserve {
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ff5f6d;
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase; }
+    .homepage__reserve-btn:hover, .homepage__where-to-card__reserve:hover, .homepage__popular-loops__footer__reserve:hover {
+      color: white !important; }
+

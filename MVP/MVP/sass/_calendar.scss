@@ -1,3 +1,8 @@
+$mobile: "(max-width: 767.98px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$laptop: "(min-width: 1024px) and (max-width: 1439px)";
+$desktop: "(min-width: 1440px)";
+
 header.head {
     background-image: url('../img/cascais.jpg');
     background-position: center center;
@@ -253,10 +258,9 @@ header.head {
     background-color: #eff1f6;
     font-family: Lato;
     color: #838da7;
-    white-space: nowrap;
 
     @media #{$mobile} {
-        padding-top: 0!important;
+        padding-top: 0 !important;
     }
 
     .container {
@@ -306,6 +310,7 @@ header.head {
 
     button.btn {
         height: 40px;
+
         &--selected {
             background-color: #838da7;
             border-color: #838da7;
@@ -428,7 +433,7 @@ header.head {
             }
         }
 
-            
+
         @media (min-width: 576px) {
             .day {
                 height: 8.2857vw;
@@ -437,7 +442,7 @@ header.head {
             .date {
                 width: 36px;
                 height: 36px;
-                
+
                 &--today {
                     color: white;
                     background: #838da7;
@@ -526,11 +531,12 @@ header.head {
 
             &--available {
                 background-color: rgba($color: #f39c12, $alpha: 0.1);
-                
+
                 a {
                     color: #f39c12;
                 }
             }
+
             &--limited-availability {
                 background-color: rgba($color: #ff5f6d, $alpha: 0.1);
 
@@ -548,13 +554,7 @@ header.head {
             }
 
             &--weekend {
-                background: repeating-linear-gradient(
-                    -45deg,
-                    #ffffff,
-                    #ffffff 5px,
-                    rgba($color: #838da7, $alpha: 0.1) 0,
-                    rgba($color: #838da7, $alpha: 0.1) 10px
-                );
+                background: repeating-linear-gradient( -45deg, #ffffff, #ffffff 5px, rgba($color: #838da7, $alpha: 0.1) 0, rgba($color: #838da7, $alpha: 0.1) 10px );
             }
 
             @media #{$mobile} {
@@ -570,16 +570,17 @@ header.head {
                     color: #ffffff;
                     background-color: rgba($color: #2ecc71, $alpha: 1);
                 }
-    
+
                 &--available {
                     color: #ffffff;
                     background-color: rgba($color: #f39c12, $alpha: 1);
                 }
+
                 &--limited-availability {
                     color: #ffffff;
                     background-color: rgba($color: #ff5f6d, $alpha: 1);
                 }
-    
+
                 &--unavailable {
                     background-color: rgba($color: #838da7, $alpha: .1);
                 }
@@ -610,16 +611,17 @@ header.head {
                 &--fully-available {
                     color: #2ecc71;
                 }
-    
+
                 &--available {
-                    color:#f39c12;
+                    color: #f39c12;
                 }
+
                 &--limited-availability {
                     color: #ff5f6d;
                 }
-    
+
                 &--unavailable {
-                    color:#838da7;
+                    color: #838da7;
                 }
             }
         }
@@ -664,7 +666,8 @@ header.head {
             .city-name {
                 font-family: Lato;
                 font-size: 14px;
-                font-weight: bold;;
+                font-weight: bold;
+                ;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: normal;
@@ -737,6 +740,26 @@ header.head {
                 box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3);
             }
         }
+    }
+}
+
+.illustration {
+    width: 100%;
+}
+
+.calendar-placeholder-text {
+    font-family: Lato;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: center;
+    color: #535e7b;
+
+    @media #{$mobile} {
+        font-size: 16px;
     }
 }
 

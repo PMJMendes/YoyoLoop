@@ -526,6 +526,12 @@
     <Content Include="sass\styles.min.css">
       <DependentUpon>styles.css</DependentUpon>
     </Content>
+    <Content Include="sass\_homepage.css">
+      <DependentUpon>_homepage.scss</DependentUpon>
+    </Content>
+    <Content Include="sass\_homepage.min.css">
+      <DependentUpon>_homepage.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
