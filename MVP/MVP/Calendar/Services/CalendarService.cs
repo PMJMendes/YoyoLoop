@@ -90,6 +90,7 @@ namespace MVP.Services
             };
 
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+            var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
@@ -106,6 +107,14 @@ namespace MVP.Services
             if (!departures.Where(d => d.Occupancy < capacity).Any())
             {
                 result.Status = SlotStatus.BLACK;
+            }
+            else if (lastminute && departures.Where(d => d.Occupancy > 0 && !(d.Occupancy < capacity)).Any()) 
+            {
+                result.Status = SlotStatus.BLACK;
+            }
+            else if (date == DateTime.Today && !departures.Where(d => d.Departure.Time < threshold).Any())
+            {
+                result.Status = SlotStatus.NONE;
             }
             else
             {
@@ -156,6 +165,8 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
+
                 var dayType = GetDayType(date);
 
                 var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
@@ -186,10 +197,11 @@ namespace MVP.Services
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
                         Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
-                            dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
-                            dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
-                            lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
-                            SlotStatus.GREEN
+                                 date + dt.Departure.Time < threshold ? SlotStatus.NONE :
+                                 dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
+                                 dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
+                                 lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
+                                 SlotStatus.GREEN
                     }).OrderBy(ts => ts.Departure.Time).ToList()
                 }).ToList();
             }
@@ -222,13 +234,15 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
                 var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId &&
                                                             d.DayType == dayType &&
                                                             d.Time == state.Selection.Time
                                                        )
-                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => t.Status != TripStatus.CANCELLED &&
+                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => (t.Status == TripStatus.PENDING || t.Status == TripStatus.BOOKED) &&
                                                                               t.StartTime == starttime &&
+                                                                              t.StartTime >= threshold &&
                                                                               t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
                                                                               t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
                                                                               t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity
@@ -298,6 +312,7 @@ namespace MVP.Services
             {
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 var starttime = state.Selection.Date + state.Selection.Time; // EF doesn't support Arithmetics with DateTime - mindboggling
+                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
                 var booking = new Booking()
                 {
@@ -321,7 +336,7 @@ namespace MVP.Services
                         trip = CreateTrip(state, model);
                         model.Trip.Add(trip);
                     }
-                    else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity)
+                    else if (trip.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats > capacity || trip.StartTime < threshold)
                     {
                         return null;
                     }

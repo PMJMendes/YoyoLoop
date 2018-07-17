@@ -257,7 +257,6 @@
     <Content Include="Calendar\Scripts\calendar-table.js" />
     <Content Include="Checkout\Checkout.aspx" />
     <Content Include="Confirm\Confirm.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -268,6 +267,7 @@
     <Content Include="Calendar\CalendarDay.ascx" />
     <Content Include="Controls\DropdownMenuButton.ascx" />
     <Content Include="Controls\DropdownFixed.ascx" />
+    <Content Include="Controls\Forgot.ascx" />
     <Content Include="Controls\Login.ascx" />
     <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
@@ -787,13 +787,6 @@
     </Compile>
     <Compile Include="Confirm\ConfirmDTO.cs" />
     <Compile Include="Confirm\Services\ConfirmService.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Calendar\CalendarDay.ascx.cs">
       <DependentUpon>CalendarDay.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -815,6 +808,13 @@
     </Compile>
     <Compile Include="Controls\DropdownFixed.ascx.designer.cs">
       <DependentUpon>DropdownFixed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forgot.ascx.cs">
+      <DependentUpon>Forgot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Forgot.ascx.designer.cs">
+      <DependentUpon>Forgot.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Login.ascx.cs">
       <DependentUpon>Login.ascx</DependentUpon>
@@ -943,6 +943,7 @@
     <Compile Include="Models\Entities\Trip.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
+    <Compile Include="Models\Extensions\ContextExtensions.cs" />
     <Compile Include="Models\Extensions\IdentityExtensions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="MyTrips\MyTrips.aspx.cs">
@@ -981,6 +982,7 @@
     <Compile Include="Calendar\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Services\MasterService.cs" />
     <Compile Include="TripExplorer\Explore.aspx.cs">
       <DependentUpon>Explore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -2,6 +2,7 @@
 
 <%@ Register Src="~/Controls/Login.ascx" TagPrefix="yoyo" TagName="Login" %>
 <%@ Register Src="~/Controls/Register.ascx" TagPrefix="yoyo" TagName="Register" %>
+<%@ Register Src="~/Controls/Forgot.ascx" TagPrefix="yoyo" TagName="Forgot" %>
 
 <!DOCTYPE html>
 
@@ -23,8 +24,8 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/styles.min.css" rel="stylesheet">
+    <link href="<%= Context.VersionedContent("/css/bootstrap.min.css") %>"  rel="stylesheet">
+    <link href="<%= Context.VersionedContent("/css/styles.min.css") %>" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -56,12 +57,7 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-                <asp:ScriptReference Path="~/vendor/jquery/jquery.min.js" />
-                <asp:ScriptReference Path="~/vendor/bootstrap/js/bootstrap.bundle.min.js" />
-                <asp:ScriptReference Path="~/Scripts/jquery.blockUI.js" />
-                <asp:ScriptReference Path="~/Scripts/Custom/blockUI-extension.js" />
-                <asp:ScriptReference Path="~/Scripts/Custom/navbar-scroll.js" />
+                <%--Site Scripts loaded by codebehind for version control cache handling --%>
             </Scripts>
         </asp:ScriptManager>
 
@@ -69,8 +65,10 @@
         <div id="divBlockUI" style="display:none;"> 
             <h1>We are processing your request.  Please be patient.</h1> 
         </div> 
+
         <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
         <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Forgot ID="forgot" runat="server"/>
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">

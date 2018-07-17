@@ -1,18 +1,20 @@
-﻿<%@ Page Title="Account Confirmation" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="MVP.Account.Confirm" Async="true" %>
+﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="MVP.Account.Confirm" Async="true" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
 
-    <div>
-        <asp:PlaceHolder runat="server" ID="successPanel" ViewStateMode="Disabled" Visible="true">
-            <p>
-                Thank you for confirming your account. Click <asp:HyperLink ID="login" runat="server" NavigateUrl="~/Account/Login">here</asp:HyperLink>  to login             
-            </p>
-        </asp:PlaceHolder>
-        <asp:PlaceHolder runat="server" ID="errorPanel" ViewStateMode="Disabled" Visible="false">
-            <p class="text-danger">
-                An error has occurred.
-            </p>
-        </asp:PlaceHolder>
+    <div class="travel" style="height:400px;width:100%;">
+        <div class="travel__container">
+            <div class="container-fluid">
+                <div style="position:relative;top:100px;left:-50px;text-align:center">
+                    <asp:PlaceHolder runat="server" ID="successPanel" ViewStateMode="Disabled" Visible="true">
+                            <h1 class="travel__main-title">Thank you for confirming your email.</h1>
+                    </asp:PlaceHolder>
+                    <asp:PlaceHolder runat="server" ID="errorPanel" ViewStateMode="Disabled" Visible="false">
+                            <h1 class="travel__main-title">An error has occurred.</h1>
+                    </asp:PlaceHolder>
+                </div>
+            </div>
+        </div>
     </div>
+
 </asp:Content>

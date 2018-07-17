@@ -7,17 +7,13 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using MVP.Models.Extensions;
 
 namespace MVP
 {
     public partial class SiteMaster : MasterPage
     {
-        public event EventHandler<SignInEventArgs> PassSignIn;
-
-        public class SignInEventArgs : EventArgs
-        {
-            public string UserId;
-        }
+        public event EventHandler<EventArgs> PassSignIn;
 
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -25,6 +21,15 @@ namespace MVP
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            // Load scripts
+            ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
+
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/jquery/jquery.min.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/bootstrap/js/bootstrap.bundle.min.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.blockUI.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
+
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
@@ -82,9 +87,9 @@ namespace MVP
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
 
-        protected void UserSignIn(object sender, SignInEventArgs e)
+        protected void UserSignIn(object sender, EventArgs e)
         {
-            PassSignIn?.Invoke(this, new SignInEventArgs { UserId = e.UserId });
+            PassSignIn?.Invoke(this, e);
         }
     }
 }
