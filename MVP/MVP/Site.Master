@@ -226,8 +226,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-md-6 text-right"><a class="" href="#">Politica de privacidade</a></div>
-                                    <div class="col-md-6 pl-0 text-right"><a class="" href="#">Termos e Condiçōes</a></div>
+                                    <div class="col-md-6 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Privacy">Politica de privacidade</a></div>
+                                    <div class="col-md-6 pl-0 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Terms">Termos e Condiçōes</a></div>
                                 </div>
                             </div>
                         </div>
