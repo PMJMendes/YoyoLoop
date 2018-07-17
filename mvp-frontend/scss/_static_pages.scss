@@ -14,7 +14,17 @@
     }
 
     &__pic-one {
-        background-image: url(../img/cascais.jpg);
+        background-image: url(../img/inside-car.jpeg) !important;
+        height: 600px;
+    }
+
+    &__pic-two {
+        background-image: url(../img/actor-car.jpeg) !important;
+        height: 600px;
+    }
+
+    &__pic-three {
+        background-image: url(../img/about.jpg) !important;
         height: 600px;
     }
 
@@ -296,6 +306,82 @@
             width: 100%;
             margin: 0;
             margin-top: 60px;
+        }
+    }
+
+    &__about {
+        &__grid {
+            .col-md-4 {
+                padding: 0 6px 0 0;
+
+                &:last-of-type {
+                    padding: 0;
+                }
+
+                @media #{$mobile} {
+                    padding: 0;
+                }
+            }
+        }
+
+        &__size {
+            background-image: url(../img/nossosshuttles.jpg) !important;
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            width: 100%;
+            height: 300px;
+            
+            &--big {
+                height: 600px;
+            }
+
+            &__pic-2 {
+                background-image: url(../img/contactos.jpg) !important;
+            }
+            &__pic-3 {
+                background-image: url(../img/destino.jpg) !important;
+            }
+            &__pic-4 {
+                background-image: url(../img/actor-car.jpeg) !important;
+            }
+            &__pic-5 {
+                background-image: url(../img/comoviajar.jpg) !important;
+            }
+            &__pic-6 {
+                background-image: url(../img/comofunciona.jpg) !important;
+            }
+            &__pic-7 {
+                background-image: url(../img/loop.jpg) !important;
+            }
+        }
+    }
+
+    &__grid {
+        &__main-title {
+            font-size: 38px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        &__sub-title {
+            max-width: 800px;
+            font-size: 20px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #ffffff;
         }
     }
 }
