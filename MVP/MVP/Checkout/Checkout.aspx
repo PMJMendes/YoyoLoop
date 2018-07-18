@@ -109,7 +109,7 @@
                             <div class="col-md-6">
                                 <div class="form-check">
                                     <input id="cbTerms" class="form-check-input" type="checkbox" value="">
-                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">Aceito os <a class="" href="">Termos & condiçōes</a></label>
+                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
                                 </div>  
                             </div>
                             <div class="checkout__accept-terms-condition--pay col-md-6">
