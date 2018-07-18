@@ -15,4 +15,3 @@ function AjaxEnd(sender, args) {
 function AjaxBegin(sender, args) {
     $.blockUI();
 }
-
