@@ -37,6 +37,9 @@
                                     <div class="checkout__label">Nome</div>
                                     <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="DisplayName" />
 
+                                    <div class="checkout__label">Nome da Empresa</div>
+                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="Company" />
+
                                     <div class="checkout__label">NIF</div>
                                     <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="true" CssClass="checkout__input checkout__input--nif" AutoCompleteType="Search" placeholder="000 000 000" />
                 
