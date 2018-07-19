@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 using System.Collections.Specialized;
 using System.IO;
 using System.Web.UI;
-using TheArtOfDev.HtmlRenderer.PdfSharp;
+using System.Web.Configuration;
 
 namespace MVP.Services
 {
@@ -59,6 +59,7 @@ namespace MVP.Services
                         BookingId = booking.BookingId,
                         UserId = booking.UserId,
                         UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email,
+                        UserContactName = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).ContactName,
                         Seats = booking.Seats,
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
@@ -73,33 +74,32 @@ namespace MVP.Services
             }
         }
 
-        public void SendTicket(ConfirmDTO state)
+        public void SendTicket(ConfirmDTO state, HttpRequest request)
         {
-
             SmtpClient client = new SmtpClient();
-            MailDefinition md = new MailDefinition
+            MailMessage msg = new MailMessage
             {
-                IsBodyHtml = true,
-                Subject = "A sua viagem está confirmada"
+                IsBodyHtml = true
             };
 
-            ListDictionary fill_in = new ListDictionary();
-            fill_in.Add("<%StartRegionName%>", state.StartRegionName.ToUpper());
-            fill_in.Add("<%StartAPName%>", state.StartAPName);
-            fill_in.Add("<%EndRegionName%>", state.EndRegionName.ToUpper());
-            fill_in.Add("<%EndAPName%>", state.EndAPName);
-            fill_in.Add("<%Date%>", state.StartTime.ToString("dd MMMM").ToUpper());
-            fill_in.Add("<%Weekday%>", state.StartTime.ToString("ddd").ToUpper());
-            fill_in.Add("<%Time%>", state.StartTime.ToString("HH\\:mm"));
-            fill_in.Add("<%Cost%>", state.Cost.ToString("C"));
-            fill_in.Add("<%TicketCode%>", state.TicketCode.ToUpper());
-            fill_in.Add("<%Seats%>", state.Seats.ToString() + " " + (state.Seats == 1 ? "Lugar" : "Lugares"));
+            msg.Subject = "A sua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
 
-            StreamReader reader = new StreamReader(HttpContext.Current.Server.MapPath("/EmailTemplates/Ticket.html"));
-            string body = reader.ReadToEnd();
-            reader.Close();
+            string body = "Caro " + state.UserContactName + ",";
+            body += "<br />";
+            body += "<br />A sua viagem está confirmada.<br />";
+            body += "<br />Código do bilhete: <h1>" + state.TicketCode.ToUpper() + "</h1>";
+            body += "<br />DETALHES DA VIAGEM:";
+            body += "<br />Origem: " + state.StartRegionName + " (" + state.StartAPName + ")";
+            body += "<br />Destino: " + state.EndRegionName + " (" + state.EndAPName + ")";
+            body += "<br />Hora: " + state.StartTime.ToString("R");
+            body += "<br />Lugares: " + state.Seats.ToString();
+            body += "<br />";
+            body += "<br />Pode fazer download do seu bilhete <a href=\"" + request.Url.Scheme + "://" + request.Url.Authority + "/Ticket/Ticket?Id=" + state.BookingId.ToString() + "\">aqui</a>.";
 
-            MailMessage msg = md.CreateMailMessage(state.UserEmail, fill_in, body, new Control());
+            msg.Body = body;
+
+            msg.To.Add(state.UserEmail);
+            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
             try
             {
@@ -107,43 +107,8 @@ namespace MVP.Services
             }
             finally
             {
-                if (msg != null)
-                {
-                    msg.Dispose();
-                }
+                msg?.Dispose();
             }
-        }
-
-        public byte [] GetPDF (ConfirmDTO state)
-        {
-            StreamReader reader = new StreamReader(HttpContext.Current.Server.MapPath("/PDFTemplates/Ticket.html"));
-            string html = reader.ReadToEnd();
-            reader.Close();
-
-            html = html.Replace("<%StartRegionName%>", state.StartRegionName.ToUpper());
-            html = html.Replace("<%StartAPName%>", state.StartAPName);
-            html = html.Replace("<%EndRegionName%>", state.EndRegionName.ToUpper());
-            html = html.Replace("<%EndAPName%>", state.EndAPName);
-            html = html.Replace("<%Date%>", state.StartTime.ToString("dd MMMM").ToUpper());
-            html = html.Replace("<%Weekday%>", state.StartTime.ToString("ddd").ToUpper());
-            html = html.Replace("<%Time%>", state.StartTime.ToString("HH\\:mm"));
-            html = html.Replace("<%Cost%>", state.Cost.ToString("C"));
-            html = html.Replace("<%TicketCode%>", state.TicketCode.ToUpper());
-            html = html.Replace("<%Seats%>", state.Seats.ToString() + " " + (state.Seats == 1 ? "Lugar" : "Lugares"));
-
-            return PdfSharpConvert(html);
-        }
-
-        public static Byte[] PdfSharpConvert(String html)
-        {
-            Byte[] result = null;
-            using (MemoryStream ms = new MemoryStream())
-            {
-                var pdf = PdfGenerator.GeneratePdf(html, PdfSharp.PageSize.A4);
-                pdf.Save(ms);
-                result = ms.ToArray();
-            }
-            return result;
         }
     }
 }

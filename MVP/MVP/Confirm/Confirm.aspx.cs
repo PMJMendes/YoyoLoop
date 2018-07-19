@@ -3,7 +3,6 @@ using System.Web;
 using MVP.Services;
 using Microsoft.AspNet.Identity;
 using System.Web.UI;
-using System.IO;
 
 namespace MVP.Confirm
 {
@@ -11,13 +10,6 @@ namespace MVP.Confirm
     {
         private readonly ConfirmService service = new ConfirmService();
         protected ConfirmDTO pageData;
-
-        protected override void OnPreRender(EventArgs e)
-        {
-            base.OnPreRender(e);
-
-            ScriptManager.GetCurrent(Page).RegisterPostBackControl(btnDownload);
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -91,24 +83,12 @@ namespace MVP.Confirm
 
         protected void btnEmail_Click(object sender, EventArgs e)
         {
-            service.SendTicket(pageData);
+            service.SendTicket(pageData, Request);
         }
 
         protected void btnSMS_Click(object sender, EventArgs e)
         {
             Page.ClientScript.GetPostBackEventReference(new PostBackOptions(this));
-        }
-
-        protected void btnDownload_Click(object sender, EventArgs e)
-        {
-            MemoryStream pdf = new MemoryStream(service.GetPDF(pageData));
-
-            Response.Clear();
-            Response.ContentType = "application/pdf";
-            Response.AddHeader("content-disposition", "attachment; filename=Ticket_" + pageData.BookingId.ToString().Substring(0, 8) + ".pdf");
-            Response.Buffer = true;
-            Response.BinaryWrite(pdf.ToArray());
-            Response.Flush();
         }
     }
 }

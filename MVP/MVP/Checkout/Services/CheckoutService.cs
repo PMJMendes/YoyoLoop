@@ -318,10 +318,7 @@ namespace MVP.Services
             }
             finally
             {
-                if (msg != null)
-                {
-                    msg.Dispose();
-                }
+                msg?.Dispose();
             }
         }
     }
