@@ -27,6 +27,7 @@ namespace MVP.Account
                 if (result.Succeeded)
                 {
                     successPanel.Visible = true;
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Default.aspx';}, 5000);", true);
                     return;
                 }
             }
