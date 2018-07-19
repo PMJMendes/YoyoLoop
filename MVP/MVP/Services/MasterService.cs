@@ -21,6 +21,15 @@ namespace MVP.Services
             return result;
         }
 
+        public void ForceLogIn(HttpContext context, string userid)
+        {
+            var manager = context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var signinManager = context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+            var user = manager.FindById(userid);
+
+            signinManager.SignIn(user, false, false);
+        }
+
         public IdentityResult CreateUser (HttpContext context, HttpRequest request, string email, string password, string contactname)
         {
             var manager = context.GetOwinContext().GetUserManager<ApplicationUserManager>();
