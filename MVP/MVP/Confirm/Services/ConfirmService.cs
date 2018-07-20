@@ -28,6 +28,7 @@ namespace MVP.Services
                 Seats = 0,
                 Cost = 0,
                 TicketCode = "#MYTICKETYO",
+                TicketURL = "#",
                 StartTime = DateTime.Now,
                 StartRegionName = "Start Region",
                 StartAPName = "Start AP",
@@ -63,6 +64,7 @@ namespace MVP.Services
                         Seats = booking.Seats,
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
+                        TicketURL = "#",
                         StartTime = booking.Trip.StartTime,
                         StartRegionName = booking.Trip.StartAccessPoint.Region.Name,
                         StartAPName = booking.Trip.StartAccessPoint.Name,
@@ -74,7 +76,7 @@ namespace MVP.Services
             }
         }
 
-        public void SendTicket(ConfirmDTO state, HttpRequest request)
+        public void SendTicket(ConfirmDTO state)
         {
             SmtpClient client = new SmtpClient();
             MailMessage msg = new MailMessage
@@ -94,7 +96,7 @@ namespace MVP.Services
             body += "<br />Hora: " + state.StartTime.ToString("R");
             body += "<br />Lugares: " + state.Seats.ToString();
             body += "<br />";
-            body += "<br />Pode fazer download do seu bilhete <a href=\"" + request.Url.Scheme + "://" + request.Url.Authority + "/Ticket/Ticket?Id=" + state.BookingId.ToString() + "\">aqui</a>.";
+            body += "<br />Pode fazer download do seu bilhete <a href=\"" + state.TicketURL + "\">aqui</a>.";
 
             msg.Body = body;
 
