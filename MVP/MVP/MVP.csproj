@@ -957,6 +957,10 @@
     <Compile Include="Migrations\201806290004041_Booking-Promocode.Designer.cs">
       <DependentUpon>201806290004041_Booking-Promocode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807201340064_UpdateService.cs" />
+    <Compile Include="Migrations\201807201340064_UpdateService.Designer.cs">
+      <DependentUpon>201807201340064_UpdateService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -970,6 +974,7 @@
     <Compile Include="Models\Entities\Route.cs" />
     <Compile Include="Models\Entities\Settings.cs" />
     <Compile Include="Models\Entities\Trip.cs" />
+    <Compile Include="Models\Entities\UpdateService.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\Extensions\ContextExtensions.cs" />
@@ -1196,6 +1201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806290004041_Booking-Promocode.resx">
       <DependentUpon>201806290004041_Booking-Promocode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807201340064_UpdateService.resx">
+      <DependentUpon>201807201340064_UpdateService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
