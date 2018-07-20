@@ -168,11 +168,12 @@ namespace MVP.Services
             var tomorrow = DateTime.Today.AddDays(1);
             List<Trip> trips = model.Trip.Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
                                          .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
+                                         .Include(t => t.Bookings)
                                          .Where(t => DbFunctions.TruncateTime(t.StartTime) == tomorrow && t.Status == TripStatus.BOOKED).ToList();
-            SendDailyList(tomorrow, trips);
+            SendDailyList(tomorrow, trips, model.Settings.Select(s => s.VehicleCapacity).First());
         }
 
-        public void SendDailyList(DateTime date, List<Trip> trips)
+        public void SendDailyList(DateTime date, List<Trip> trips, int capacity)
         {
             SmtpClient client = new SmtpClient();
             MailMessage msg = new MailMessage
@@ -195,7 +196,12 @@ namespace MVP.Services
                 trips = trips.OrderBy(t => t.StartTime).ToList();
                 foreach (Trip t in trips)
                 {
+                    int ocup = t.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
+                    int free = capacity - ocup;
                     body += t.StartTime.ToShortTimeString() + " > " + t.StartAccessPoint.Region.Name + " (" + t.StartAccessPoint.Name + ") para " + t.EndAccessPoint.Region.Name + " (" + t.EndAccessPoint.Name + ")";
+                    body += "\r\n";
+                    body += "\tLugares: " + capacity.ToString() + " total, " + ocup.ToString() + " vendidos, " + free.ToString() + " disponíveis";
+                    body += "\r\n";
                     body += "\r\n";
                 }
             }
