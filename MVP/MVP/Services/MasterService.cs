@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net.Mail;
@@ -107,62 +108,112 @@ namespace MVP.Services
 
         public void MasterUpdate()
         {
-            CheckBooked();
-            CheckClosed();
-            CheckDaily();
-        }
-
-        private void CheckBooked()
-        {
             using (var model = new EntityModel())
             {
-                var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
-                var trips = model.Trip.Include(t => t.Bookings).Where(t => t.Status == TripStatus.BOOKED && t.StartTime < threshold);
-
-                if (!trips.Any())
+                model.UpdateService.First().LastRun = DateTime.Now;
+                CheckBooked(model);
+                CheckClosed(model);
+                if(model.UpdateService.First().LastDaily != DateTime.Today)
                 {
-                    return;
-                }
-
-                foreach (Trip t in trips)
-                {
-                    t.Status = TripStatus.CLOSED;
-                    foreach (Booking b in t.Bookings.Where(b => b.Status == BookingStatus.PENDING))
-                    {
-                        b.Status = BookingStatus.CANCELLED;
-                    }
-                    SendPassengerList(t.TripId);
+                    CheckDaily(model);
                 }
                 model.SaveChanges();
             }
         }
 
-        private void CheckClosed()
+        private void CheckBooked(EntityModel model)
         {
-            using (var model = new EntityModel())
+            var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
+            var trips = model.Trip.Include(t => t.Bookings).Where(t => t.Status == TripStatus.BOOKED && t.StartTime < threshold);
+
+            if (!trips.Any())
             {
-                var now = DateTime.Now;
-                var trips = model.Trip.Include(t => t.Bookings).Where(t => t.Status == TripStatus.CLOSED && t.StartTime < now);
+                return;
+            }
 
-                if (!trips.Any())
+            foreach (Trip t in trips)
+            {
+                t.Status = TripStatus.CLOSED;
+                foreach (Booking b in t.Bookings.Where(b => b.Status == BookingStatus.PENDING))
                 {
-                    return;
+                    b.Status = BookingStatus.CANCELLED;
                 }
-
-                foreach (Trip t in trips)
-                {
-                    t.Status = TripStatus.COMPLETED;
-                    foreach (Booking b in t.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
-                    {
-                        b.Status = BookingStatus.COMPLETED;
-                    }
-                }
-                model.SaveChanges();
+                SendPassengerList(t.TripId);
             }
         }
 
-        private void CheckDaily()
+        private void CheckClosed(EntityModel model)
         {
+            var now = DateTime.Now;
+            var trips = model.Trip.Include(t => t.Bookings).Where(t => t.Status == TripStatus.CLOSED && t.StartTime < now);
+
+            if (!trips.Any())
+            {
+                return;
+            }
+
+            foreach (Trip t in trips)
+            {
+                t.Status = TripStatus.COMPLETED;
+                foreach (Booking b in t.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
+                {
+                    b.Status = BookingStatus.COMPLETED;
+                }
+            }
+        }
+
+        private void CheckDaily(EntityModel model)
+        {
+            model.UpdateService.First().LastDaily = DateTime.Today;
+            var tomorrow = DateTime.Today.AddDays(1);
+            List<Trip> trips = model.Trip.Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
+                                         .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
+                                         .Where(t => DbFunctions.TruncateTime(t.StartTime) == tomorrow && t.Status == TripStatus.BOOKED).ToList();
+            SendDailyList(tomorrow, trips);
+        }
+
+        public void SendDailyList(DateTime date, List<Trip> trips)
+        {
+            SmtpClient client = new SmtpClient();
+            MailMessage msg = new MailMessage
+            {
+                IsBodyHtml = false
+            };
+
+            msg.Subject = "[YOYOLOOP] Lista de Viagens - " + date.ToLongDateString();
+            string body = string.Empty;
+
+            if(!trips.Any())
+            {
+                body += "\r\nNão há viagens no dia " + date.ToLongDateString();
+            }
+            else
+            {
+                body += "\r\nViagens para " + date.ToLongDateString() + ":";
+                body += "\r\n";
+                body += "\r\n";
+                trips = trips.OrderBy(t => t.StartTime).ToList();
+                foreach (Trip t in trips)
+                {
+                    body += t.StartTime.ToShortTimeString() + " > " + t.StartAccessPoint.Region.Name + " (" + t.StartAccessPoint.Name + ") para " + t.EndAccessPoint.Region.Name + " (" + t.EndAccessPoint.Name + ")";
+                    body += "\r\n";
+                }
+            }
+
+            msg.Body = body;
+
+            msg.To.Add(WebConfigurationManager.AppSettings["OperationsProviderEmail"]);
+            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+            try
+            {
+                client.Send(msg);
+            }
+            finally
+            {
+                msg?.Dispose();
+            }
+
         }
 
         public void SendPassengerList(Guid tripid)
