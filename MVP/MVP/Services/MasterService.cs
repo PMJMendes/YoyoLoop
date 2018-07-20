@@ -248,7 +248,6 @@ namespace MVP.Services
                 body += "\r\nLugares disponíveis para venda: " + free.ToString();
                 body += "\r\n";
                 body += "\r\nPASSAGEIROS:";
-                body += "\r\n";
                 foreach (Booking b in trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
                 {
                     string contactname = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.ContactName;
