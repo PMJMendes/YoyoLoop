@@ -106,6 +106,20 @@ namespace MVP.Services
             }
         }
 
+        public void CheckUpdater()
+        {
+            using (var model = new EntityModel())
+            {
+                var lastrun = model.UpdateService.First().LastRun;
+                var elapsed = DateTime.Now - lastrun;
+                var threshold = model.UpdateService.First().WarningThreshold;
+                if (elapsed > threshold)
+                {
+                    SendWarning("Update task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R"));
+                }
+            }
+        }
+
         public void MasterUpdate()
         {
             using (var model = new EntityModel())
@@ -266,6 +280,34 @@ namespace MVP.Services
             msg.Body = body;
 
             msg.To.Add(WebConfigurationManager.AppSettings["OperationsProviderEmail"]);
+            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+            try
+            {
+                client.Send(msg);
+            }
+            finally
+            {
+                msg?.Dispose();
+            }
+        }
+
+        private void SendWarning(string warning)
+        {
+            SmtpClient client = new SmtpClient();
+            MailMessage msg = new MailMessage
+            {
+                IsBodyHtml = false
+            };
+
+            msg.Subject = "[YOYOLOOP] System Warning";
+            string body = string.Empty;
+
+            body += warning + "\r\n";
+
+            msg.Body = body;
+
+            msg.To.Add(WebConfigurationManager.AppSettings["SystemsProviderEmail"]);
             msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
             try
