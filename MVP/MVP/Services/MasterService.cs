@@ -233,13 +233,23 @@ namespace MVP.Services
                                      .Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
                                      .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
                                      .SingleOrDefault(t => t.TripId == tripid);
+                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                int ocup = trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
+                int free = capacity - ocup;
+
                 body += "\r\nDETALHES DA VIAGEM:";
                 body += "\r\nOrigem: " + trip.StartAccessPoint.Region.Name + " (" + trip.StartAccessPoint.Name + ")";
                 body += "\r\nDestino: " + trip.EndAccessPoint.Region.Name + " (" + trip.EndAccessPoint.Name + ")";
                 body += "\r\nHora: " + trip.StartTime.ToString("R");
                 body += "\r\n";
+                body += "\r\nOCUPAÇÃO:";
+                body += "\r\nTotal de lugares: " + capacity.ToString();
+                body += "\r\nLugares ocupados: " + ocup.ToString();
+                body += "\r\nLugares disponíveis para venda: " + free.ToString();
+                body += "\r\n";
                 body += "\r\nPASSAGEIROS:";
-                foreach(Booking b in trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
+                body += "\r\n";
+                foreach (Booking b in trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
                 {
                     string contactname = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.ContactName;
                     string username = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.UserName;
