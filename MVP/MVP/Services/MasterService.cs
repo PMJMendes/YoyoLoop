@@ -1,8 +1,10 @@
-﻿using System.Net.Mail;
+﻿using System;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Configuration;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
 using MVP.Models;
 
 namespace MVP.Services
@@ -30,16 +32,16 @@ namespace MVP.Services
             signinManager.SignIn(user, false, false);
         }
 
-        public IdentityResult CreateUser (HttpContext context, HttpRequest request, string email, string password, string contactname)
+        public IdentityResult CreateUser (IOwinContext context, Func<string, string, string> genCallbackUrl, string email, string password, string contactname)
         {
-            var manager = context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = context.GetOwinContext().Get<ApplicationSignInManager>();
+            var manager = context.GetUserManager<ApplicationUserManager>();
+            var signInManager = context.Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = email, Email = email, ContactName = contactname };
             IdentityResult result = manager.Create(user, password);
             if (result.Succeeded)
             {
                 string code = manager.GenerateEmailConfirmationToken(user.Id);
-                string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, request);
+                string callbackUrl = genCallbackUrl(code, user.Id);
                 SendEmailConfirmation(user.Email, callbackUrl);
 
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
