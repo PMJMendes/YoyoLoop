@@ -130,6 +130,7 @@ namespace MVP.Services
                 if(model.UpdateService.First().LastDaily != DateTime.Today)
                 {
                     CheckDaily(model);
+                    Cleanup(model);
                 }
                 model.SaveChanges();
             }
@@ -187,6 +188,51 @@ namespace MVP.Services
             SendDailyList(tomorrow, trips, model.Settings.Select(s => s.VehicleCapacity).First());
         }
 
+        private void Cleanup(EntityModel model)
+        {
+            // This method shouldn't be needed. It cleans up status on both Trips and Bookings that should never have gotten to that state.
+            // Maybe keep it as a manual method to be called from the Update page.
+
+            foreach(Trip t in model.Trip.Include(t => t.Bookings).Where(t => (t.Status != TripStatus.CANCELLED || t.Status != TripStatus.COMPLETED) && t.StartTime < DateTime.Now))
+            {
+                if(t.Status == TripStatus.PENDING)
+                {
+                    t.Status = TripStatus.CANCELLED;
+                    foreach(Booking b in t.Bookings)
+                    {
+                        b.Status = BookingStatus.CANCELLED;
+                    }
+                }
+                else if(t.Status == TripStatus.BOOKED || t.Status == TripStatus.CLOSED)
+                {
+                    t.Status = TripStatus.COMPLETED;
+                    foreach(Booking b in t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED))
+                    {
+                        b.Status = BookingStatus.COMPLETED;
+                    }
+                }
+            }
+
+            foreach (Booking b in model.Booking.Include(b => b.Trip).Where(b => (b.Status != BookingStatus.CANCELLED || b.Status != BookingStatus.COMPLETED) && b.Trip.StartTime < DateTime.Now))
+            {
+                if(b.Status == BookingStatus.PENDING)
+                {
+                    b.Status = BookingStatus.CANCELLED;
+                }
+                else if(b.Status == BookingStatus.BOOKED)
+                {
+                    if(b.Trip.Status == TripStatus.CANCELLED)
+                    {
+                        b.Status = BookingStatus.CANCELLED;
+                    }
+                    else
+                    {
+                        b.Status = BookingStatus.COMPLETED;
+                    }
+                }
+            }
+        }
+
         public void SendDailyList(DateTime date, List<Trip> trips, int capacity)
         {
             SmtpClient client = new SmtpClient();
@@ -200,7 +246,7 @@ namespace MVP.Services
 
             if(!trips.Any())
             {
-                body += "\r\nNão há viagens no " + date.ToLongDateString();
+                body += "\r\nNão há viagens para " + date.ToLongDateString();
             }
             else
             {
