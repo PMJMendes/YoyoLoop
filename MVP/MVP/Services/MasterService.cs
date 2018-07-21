@@ -200,7 +200,7 @@ namespace MVP.Services
 
             if(!trips.Any())
             {
-                body += "\r\nNão há viagens no dia " + date.ToLongDateString();
+                body += "\r\nNão há viagens no " + date.ToLongDateString();
             }
             else
             {
