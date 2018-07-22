@@ -106,7 +106,7 @@ namespace MVP.Services
             }
         }
 
-        public void CheckUpdater()
+        public void CheckUpdater(string host)
         {
             using (var model = new EntityModel())
             {
@@ -115,7 +115,7 @@ namespace MVP.Services
                 var threshold = model.UpdateService.First().WarningThreshold;
                 if (elapsed > threshold)
                 {
-                    SendWarning("Update task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R"));
+                    SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R"));
                 }
             }
         }

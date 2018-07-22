@@ -34,7 +34,7 @@ namespace MVP
 
             // Check if update service has been running
             var service = new MasterService();
-            service.CheckUpdater();
+            service.CheckUpdater(Request.Url.GetLeftPart(UriPartial.Authority));
 
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
