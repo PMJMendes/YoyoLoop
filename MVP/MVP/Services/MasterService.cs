@@ -11,10 +11,10 @@ namespace MVP.Services
 {
     public class MasterService
     {
-        public SignInStatus LogIn (HttpContext context, string email, string password, bool rememberme)
+        public SignInStatus LogIn (IOwinContext context, string email, string password, bool rememberme)
         {
-            var manager = context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signinManager = context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+            var manager = context.GetUserManager<ApplicationUserManager>();
+            var signinManager = context.GetUserManager<ApplicationSignInManager>();
 
             // This doen't count login failures towards account lockout
             // To enable password failures to trigger lockout, change to shouldLockout: true
@@ -23,10 +23,10 @@ namespace MVP.Services
             return result;
         }
 
-        public void ForceLogIn(HttpContext context, string userid)
+        public void ForceLogIn(IOwinContext context, string userid)
         {
-            var manager = context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signinManager = context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+            var manager = context.GetUserManager<ApplicationUserManager>();
+            var signinManager = context.GetUserManager<ApplicationSignInManager>();
             var user = manager.FindById(userid);
 
             signinManager.SignIn(user, false, false);

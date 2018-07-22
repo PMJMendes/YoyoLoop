@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity.Owin;
 using MVP.Services;
@@ -15,7 +16,7 @@ namespace MVP.Controls
         {
             LoginMessage.Visible = false;
 
-            var result = service.LogIn(Context, TbLoginEmail.Text, TbLoginPassword.Text, LoginRememberMe.Checked);
+            var result = service.LogIn(Context.GetOwinContext(), TbLoginEmail.Text, TbLoginPassword.Text, LoginRememberMe.Checked);
 
             switch (result)
             {
