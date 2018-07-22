@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using MVP.Services;
@@ -14,7 +15,9 @@ namespace MVP.Controls
 
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            IdentityResult result = service.CreateUser(Context, Request, TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text);
+            IdentityResult result = service.CreateUser(Context.GetOwinContext(),
+                    (code, id) => IdentityHelper.GetUserConfirmationRedirectUrl(code, id, Request),
+                    TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text);
             if (result.Succeeded)
             {
                 ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '');},1);", true);
