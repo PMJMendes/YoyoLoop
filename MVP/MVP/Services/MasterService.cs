@@ -180,13 +180,15 @@ namespace MVP.Services
 
         private void CheckDaily(EntityModel model)
         {
-            model.UpdateService.First().LastDaily = DateTime.Today;
             var tomorrow = DateTime.Today.AddDays(1);
             List<Trip> trips = model.Trip.Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
                                          .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
                                          .Include(t => t.Bookings)
                                          .Where(t => DbFunctions.TruncateTime(t.StartTime) == tomorrow && t.Status == TripStatus.BOOKED).ToList();
-            SendDailyList(tomorrow, trips, model.Settings.Select(s => s.VehicleCapacity).First());
+            if(SendDailyList(tomorrow, trips, model.Settings.Select(s => s.VehicleCapacity).First()))
+            {
+                model.UpdateService.First().LastDaily = DateTime.Today;
+            }
         }
 
         private void Cleanup(EntityModel model)
@@ -234,7 +236,7 @@ namespace MVP.Services
             }
         }
 
-        public void SendDailyList(DateTime date, List<Trip> trips, int capacity)
+        public bool SendDailyList(DateTime date, List<Trip> trips, int capacity)
         {
             SmtpClient client = new SmtpClient();
             MailMessage msg = new MailMessage
@@ -275,6 +277,12 @@ namespace MVP.Services
             try
             {
                 client.Send(msg);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                SendWarning(ex.Message);
+                return false;
             }
             finally
             {
