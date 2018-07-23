@@ -10,6 +10,7 @@ namespace MVP.Models
     public class EntityModel : ApplicationDbContext
     {
         public DbSet<Settings> Settings { get; set; }
+        public DbSet<UpdateService> UpdateService { get; set; }
         public DbSet<LoopedRegion> LoopedRegion {get; set;}
         public DbSet<AccessPoint> AccessPoint { get; set; }
         public DbSet<AccessPointHost> AccessPointHost { get; set; }

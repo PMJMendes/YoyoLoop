@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using MVP.Models.Extensions;
+using MVP.Services;
 
 namespace MVP
 {
@@ -29,6 +30,11 @@ namespace MVP
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.blockUI.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
+
+
+            // Check if update service has been running
+            var service = new MasterService();
+            service.CheckUpdater(Request.Url.GetLeftPart(UriPartial.Authority));
 
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
