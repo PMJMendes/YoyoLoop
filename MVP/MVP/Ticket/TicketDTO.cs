@@ -2,26 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MVP.Models.Entities;
 
-namespace MVP.Confirm
+namespace MVP.Ticket
 {
-    public class ConfirmDTO
+    public class TicketDTO
     {
         public Guid BookingId { get; set; }
-        public string UserId { get; set; }
         public int Seats { get; set; }
         public decimal Cost { get; set; }
         public string TicketCode { get; set; }
-        public string TicketURL { get; set; }
 
         public DateTime StartTime { get; set; }
         public string StartRegionName { get; set; }
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
-
-        public string UserEmail { get; set; }
-        public string UserContactName { get; set; }
     }
 }

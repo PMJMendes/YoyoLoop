@@ -3,7 +3,6 @@ using System.Web;
 using MVP.Services;
 using Microsoft.AspNet.Identity;
 using System.Web.UI;
-using System.IO;
 
 namespace MVP.Confirm
 {
@@ -11,13 +10,6 @@ namespace MVP.Confirm
     {
         private readonly ConfirmService service = new ConfirmService();
         protected ConfirmDTO pageData;
-
-        protected override void OnPreRender(EventArgs e)
-        {
-            base.OnPreRender(e);
-
-            ScriptManager.GetCurrent(Page).RegisterPostBackControl(btnDownload);
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -65,6 +57,7 @@ namespace MVP.Confirm
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
+                        TicketURL = "#",
                         StartTime = DateTime.Now,
                         StartRegionName = "Start Region",
                         StartAPName = "Start AP",
@@ -81,6 +74,7 @@ namespace MVP.Confirm
                     //Something went really terribly wrong here - email systems?
                     //Response.Redirect("/Calendar/Calendar");
                 }
+                pageData.TicketURL = Request.Url.Scheme + "://" + Request.Url.Authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
             }
             else
             {
@@ -97,18 +91,6 @@ namespace MVP.Confirm
         protected void btnSMS_Click(object sender, EventArgs e)
         {
             Page.ClientScript.GetPostBackEventReference(new PostBackOptions(this));
-        }
-
-        protected void btnDownload_Click(object sender, EventArgs e)
-        {
-            MemoryStream pdf = new MemoryStream(service.GetPDF(pageData));
-
-            Response.Clear();
-            Response.ContentType = "application/pdf";
-            Response.AddHeader("content-disposition", "attachment; filename=Ticket_" + pageData.BookingId.ToString().Substring(0, 8) + ".pdf");
-            Response.Buffer = true;
-            Response.BinaryWrite(pdf.ToArray());
-            Response.Flush();
         }
     }
 }

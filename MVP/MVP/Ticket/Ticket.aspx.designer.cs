@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP.Confirm {
+namespace MVP.Ticket {
     
     
-    public partial class Confirm {
+    public partial class Ticket {
         
         /// <summary>
-        /// btnEmail control.
+        /// phError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnEmail;
+        protected global::System.Web.UI.WebControls.PlaceHolder phError;
         
         /// <summary>
-        /// btnSMS control.
+        /// phSucess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSMS;
+        protected global::System.Web.UI.WebControls.PlaceHolder phSucess;
     }
 }

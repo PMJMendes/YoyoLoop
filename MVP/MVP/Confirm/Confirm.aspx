@@ -117,7 +117,7 @@
                 <asp:LinkButton runat="server" ID="btnSMS" OnClick="btnSMS_Click" CssClass="travel__white-btn text-uppercase">Receber por SMS</asp:LinkButton>
               </div>
               <div class="col-md-3 pb-3 d-flex justify-content-center">
-                <asp:LinkButton runat="server" ID="btnDownload" OnClick="btnDownload_Click" CssClass="travel__white-btn text-uppercase">download</asp:LinkButton>
+                <a href="/Ticket/Ticket?Id=<%= pageData.BookingId.ToString() %>" target="_blank" class="travel__white-btn text-uppercase">download</a>
               </div>
               <div class="col-md-3 pb-3 d-flex justify-content-center align-items-center">
                 <a href="#" class="travel__card__first__text text-uppercase">

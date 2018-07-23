@@ -36,6 +36,7 @@ namespace MVP.Checkout
         public class InvoiceData
         {
             public string Name { get; set; }
+            public string Company { get; set; }
             public string NIF { get; set; }
             public string Adress { get; set; }
             public string ZIP { get; set; }
