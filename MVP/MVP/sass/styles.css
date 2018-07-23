@@ -52,7 +52,7 @@
     box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); }
 
 header.head {
-  background-image: url("../img/cascais.jpg");
+  background-image: url("/img/cascais.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -671,7 +671,7 @@ header.head {
     border-radius: 4px;
     box-shadow: 0 0 60px 0 rgba(31, 40, 53, 0.15); }
     .homepage__where-to-card--lisboa {
-      background-image: url("../img/lisboa.png");
+      background-image: url("/img/lisboa.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -679,7 +679,7 @@ header.head {
       -o-background-size: cover;
       background-size: 425px 425px; }
     .homepage__where-to-card--leiria {
-      background-image: url("../img/Leiria.png");
+      background-image: url("/img/Leiria.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -687,7 +687,7 @@ header.head {
       -o-background-size: cover;
       background-size: 425px 425px; }
     .homepage__where-to-card--coimbra {
-      background-image: url("../img/Coimbra.png");
+      background-image: url("/img/Coimbra.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -695,7 +695,7 @@ header.head {
       -o-background-size: cover;
       background-size: 425px 425px; }
     .homepage__where-to-card--cascais {
-      background-image: url("../img/Cascais.png");
+      background-image: url("/img/Cascais.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -863,7 +863,7 @@ header.head {
     text-decoration: none; }
   .profile select {
     -webkit-appearance: none;
-    background: url(../img/arr-down.png) no-repeat right;
+    background: url(/img/arr-down.png) no-repeat right;
     background-position: 90%; }
   .profile__container {
     padding-left: 60px;
@@ -930,7 +930,7 @@ header.head {
       max-width: 300px; }
     .profile__input--card-number {
       max-width: 250px;
-      background: url(../img/red-dot.png) no-repeat right;
+      background: url(/img/red-dot.png) no-repeat right;
       background-position: 90%; }
   .profile__separator {
     width: 60%;
@@ -1194,7 +1194,7 @@ header.head {
     position: relative; }
 
 .check {
-  background: url(../img/check.png); }
+  background: url(/img/check.png); }
 
 .travel {
   font-family: Lato; }
@@ -1599,7 +1599,7 @@ header.head {
     .travel__reserve:hover {
       color: white !important; }
   .travel__invite-friends {
-    background-image: url("../img/comoviajar.jpg");
+    background-image: url("/img/comoviajar.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -1996,7 +1996,7 @@ header.head {
     text-decoration: none; }
   .checkout select {
     -webkit-appearance: none;
-    background: url(../img/arr-down.png) no-repeat right;
+    background: url(/img/arr-down.png) no-repeat right;
     background-position: 90%; }
   .checkout__container {
     padding-left: 60px;

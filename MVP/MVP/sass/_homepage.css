@@ -66,7 +66,7 @@
     border-radius: 4px;
     box-shadow: 0 0 60px 0 rgba(31, 40, 53, 0.15); }
     .homepage__where-to-card--lisboa {
-      background-image: url("../img/lisboa.png");
+      background-image: url("/img/lisboa.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -74,7 +74,7 @@
       -o-background-size: cover;
       background-size: 425px 425px; }
     .homepage__where-to-card--leiria {
-      background-image: url("../img/Leiria.png");
+      background-image: url("/img/Leiria.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -82,7 +82,7 @@
       -o-background-size: cover;
       background-size: 425px 425px; }
     .homepage__where-to-card--coimbra {
-      background-image: url("../img/Coimbra.png");
+      background-image: url("/img/Coimbra.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -90,7 +90,7 @@
       -o-background-size: cover;
       background-size: 425px 425px; }
     .homepage__where-to-card--cascais {
-      background-image: url("../img/Cascais.png");
+      background-image: url("/img/Cascais.png");
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;

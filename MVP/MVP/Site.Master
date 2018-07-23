@@ -122,7 +122,7 @@
                     <div class="container-fluid">
                         <div class="footer__first-row row p-5">
                             <div class="col-md-3 d-flex align-items-center">
-                                <img src="../img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/>
+                                <img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/>
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">yoyoloop</h2></p>
@@ -149,9 +149,9 @@
                                     <div class="col-md-12">
                                         <div class="footer__dropdown">
                                             <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <img src="../img/language.png"
-                                                srcset="../img/language@2x.png 2x,
-                                                    ../img/language@3x.png 3x"
+                                                <img src="/img/language.png"
+                                                srcset="/img/language@2x.png 2x,
+                                                    /img/language@3x.png 3x"
                                                 class="language pr-2">
                                                 Português
                                             </button>
@@ -163,41 +163,41 @@
                                 </div>
                                 <div class="row pt-4">
                                     <div class="col-md-4">
-                                        <img src="../img/jcb.png"
-                                        srcset="../img/jcb@2x.png 2x,
-                                                ../img/jcb@3x.png 3x"
+                                        <img src="/img/jcb.png"
+                                        srcset="/img/jcb@2x.png 2x,
+                                                /img/jcb@3x.png 3x"
                                         class="jcb">
                                     </div>
                                     <div class="col-md-3 pl-0">
-                                        <img src="../img/diners-club.png"
-                                        srcset="../img/diners-club@2x.png 2x,
-                                                ../img/diners-club@3x.png 3x"
+                                        <img src="/img/diners-club.png"
+                                        srcset="/img/diners-club@2x.png 2x,
+                                                /img/diners-club@3x.png 3x"
                                         class="diners-club">
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="../img/discover.png"
-                                        srcset="../img/discover@2x.png 2x,
-                                                ../img/discover@3x.png 3x"
+                                        <img src="/img/discover.png"
+                                        srcset="/img/discover@2x.png 2x,
+                                                /img/discover@3x.png 3x"
                                         class="discover">
                                     </div>
                                 </div>
                                 <div class="row pt-4">
                                     <div class="col-md-4">
-                                        <img src="../img/amex.png"
-                                        srcset="../img/amex@2x.png 2x,
-                                                ../img/amex@3x.png 3x"
+                                        <img src="/img/amex.png"
+                                        srcset="/img/amex@2x.png 2x,
+                                                /img/amex@3x.png 3x"
                                         class="amex">
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="../img/visa.png"
-                                        srcset="../img/visa@2x.png 2x,
-                                                ../img/visa@3x.png 3x"
+                                        <img src="/img/visa.png"
+                                        srcset="/img/visa@2x.png 2x,
+                                                /img/visa@3x.png 3x"
                                         class="visa">
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="../img/master-card.png"
-                                        srcset="../img/master-card@2x.png 2x,
-                                                ../img/master-card@3x.png 3x"
+                                        <img src="/img/master-card.png"
+                                        srcset="/img/master-card@2x.png 2x,
+                                                /img/master-card@3x.png 3x"
                                         class="master-card">
                                     </div>
                                 </div>
@@ -207,21 +207,21 @@
                             <div class="col-md-4">Copyright © 2018. Yoyoloop Portugal, Unipessoal, Lda</div>
                             <div class="col-md-4 text-center">
                                 <a class="footer__social" href="#">
-                                    <img src="../img/facebook.png"
-                                        srcset="../img/facebook@2x.png 2x,
-                                            ../img/facebook@3x.png 3x"
+                                    <img src="/img/facebook.png"
+                                        srcset="/img/facebook@2x.png 2x,
+                                            /img/facebook@3x.png 3x"
                                         class="facebook p-1">
                                 </a>
                                 <a class="footer__social" href="#">
-                                    <img src="../img/instagram.png"
-                                        srcset="../img/instagram@2x.png 2x,
-                                            ../img/instagram@3x.png 3x"
+                                    <img src="/img/instagram.png"
+                                        srcset="/img/instagram@2x.png 2x,
+                                            /img/instagram@3x.png 3x"
                                         class="instagram p-1">
                                 </a>
                                 <a class="footer__social" href="#">
-                                    <img src="../img/linkedin-footer.png"
-                                        srcset="../img/linkedin-footer@2x.png 2x,
-                                            ../img/linkedin@-footer3x.png 3x"
+                                    <img src="/img/linkedin-footer.png"
+                                        srcset="/img/linkedin-footer@2x.png 2x,
+                                            /img/linkedin@-footer3x.png 3x"
                                         class="linkedin p-1">
                                 </a>
                             </div>
