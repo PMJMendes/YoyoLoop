@@ -583,6 +583,7 @@
     <Content Include="sass\_navigation.scss" />
     <Content Include="sass\_profile.scss" />
     <Content Include="sass\_travel.scss" />
+    <Content Include="compilerconfig.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
