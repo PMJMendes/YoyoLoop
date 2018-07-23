@@ -6,7 +6,12 @@
   .navbar.scrolled img.logo {
     margin: 0 !important;
     width: 60px !important;
-    height: 60px !important; }
+    height: 60px !important;
+    -ms-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
 
 #main-nav {
   font-weight: normal;
@@ -20,7 +25,12 @@
       #main-nav .container-fluid img.logo {
         margin: 20px;
         width: 100px;
-        height: 100px; } }
+        height: 100px;
+        -ms-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out; } }
   #main-nav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 2rem;
     font-family: Lato;
@@ -516,28 +526,24 @@ header.head {
       #book .next-trip .pricing .total {
         font-weight: bold;
         letter-spacing: 0.4px;
-        color: #c1c6d3; }
+        color: #c1c6d3;
+        font-size: 12px; }
       #book .next-trip .pricing .times {
         font-size: 10px; }
       #book .next-trip .pricing .price {
-        color: #ff5f6d; }
+        color: #ff5f6d;
+        font-weight: bold; }
+      #book .next-trip .pricing .price-green {
+        color: #2ecc71;
+        font-weight: bold; }
       #book .next-trip .pricing .total-price {
         font-size: 30px;
         font-weight: bold;
         letter-spacing: normal;
         color: #ff5f6d; }
-      #book .next-trip .pricing .promocode {
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: normal;
-        text-align: center;
-        color: #ff5f6d;
-        text-decoration: underline;
-        cursor: pointer; }
-        #book .next-trip .pricing .promocode--active {
-          color: #535e7b; }
-        #book .next-trip .pricing .promocode .input-group-text {
-          background-color: #ff5f6d; }
+        @media (max-width: 767.98px) {
+          #book .next-trip .pricing .total-price {
+            font-size: 18px; } }
       #book .next-trip .pricing .btn {
         font-size: 14px;
         color: white;
@@ -568,6 +574,47 @@ header.head {
 @media (max-width: 767.98px) {
   .border {
     border: none !important; } }
+
+.promocode {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ff5f6d;
+  text-decoration: underline;
+  cursor: pointer; }
+  .promocode a {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ff5f6d;
+    text-decoration: underline;
+    cursor: pointer; }
+  .promocode--active a {
+    color: #535e7b; }
+  .promocode .input-group-text {
+    background-color: #ff5f6d; }
+
+.embed-submit-field {
+  position: relative; }
+  .embed-submit-field input {
+    width: 100%;
+    padding: 15px; }
+  .embed-submit-field button {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #ff5f6d;
+    border-radius: 50px;
+    padding: 10px;
+    transition: all .2s; }
+    .embed-submit-field button:hover {
+      background-color: #ff5f6d;
+      color: #fff; }
 
 .popover-body {
   padding: 0 !important; }
@@ -618,6 +665,10 @@ header.head {
     padding: 0; }
   #destinationPopover .divider {
     margin-top: 0px; }
+
+#NextTrip, #next-trip {
+  position: sticky;
+  top: 80px; }
 
 .homepage {
   font-family: Lato; }

@@ -6,5 +6,9 @@
   {
     "outputFile": "sass/_homepage.css",
     "inputFile": "sass/_homepage.scss"
+  },
+  {
+    "outputFile": "sass/_navigation.css",
+    "inputFile": "sass/_navigation.scss"
   }
 ]

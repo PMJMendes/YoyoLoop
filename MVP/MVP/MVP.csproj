@@ -532,6 +532,12 @@
     <Content Include="sass\_homepage.min.css">
       <DependentUpon>_homepage.css</DependentUpon>
     </Content>
+    <Content Include="sass\_navigation.css">
+      <DependentUpon>_navigation.scss</DependentUpon>
+    </Content>
+    <Content Include="sass\_navigation.min.css">
+      <DependentUpon>_navigation.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
@@ -578,6 +584,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.sticky.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />

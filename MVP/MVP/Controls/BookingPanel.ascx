@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BookingPanel.ascx.cs" Inherits="MVP.Controls.BookingPanel" %>
 
-<div class="row next-trip">
+<div id="next-trip" class="row next-trip">
     <div class="col-lg-12 p-0">
         <div class="row time pt-3">
             <div class="col-1 pl-4">
@@ -86,7 +86,7 @@
         <hr class="divider w-100">
 
         <div class="row pricing">
-            <div class="col-4 pl-4 text-uppercase total">Total</div>
+            <div class="col-4 pl-4 text-uppercase total">Resumo</div>
             <div class="col-8 pr-4 text-right">
                 <div class="row <%= PanelData.PromoValid ? "" : "hide" %>">
                     <div class="col-12"><s><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= PanelData.StandardPrice.ToString("C") %></span></s></div>
@@ -94,9 +94,27 @@
                 <div class="row">
                     <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= PanelData.Price.ToString("C") %></span></div>
                 </div>
+                <div class="row pb-1">
+                    <div class="col-12">Promocode <span class="price pl-1"><%= PanelData.Price.ToString("C") %></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">Promocode <span class="price-green pl-1">-<%= PanelData.Price.ToString("C") %></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">Promocode <span class="price-green pl-1">-<%= PanelData.Price.ToString("C") %></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">Promocode <span class="pl-1">-<%= PanelData.Price.ToString("C") %></span></div>
+                </div>
                 <div class="row <%= PanelData.PromoValid ? "" : "hide" %>">
                     <div class="col-12 total-price"><s><%= PanelData.StandardCost.ToString("C") %></s></div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row pricing">
+            <div class="col-6 pl-4 align-self-end text-uppercase total">Preço Final</div>
+            <div class="col-6 pr-4 text-right">
                 <div class="row">
                     <div class="col-12 total-price"><%= PanelData.Cost.ToString("C") %></div>
                 </div>
@@ -124,7 +142,10 @@
                         <div class="row p-3">
                             <div class="col-12 text-center promocode promocode--active">
                                 <div class="input-group mb-3">
-                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                    <div class="embed-submit-field">
+                                        <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoCompleteType="None" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                        <button type="submit">V</button>
+                                    </div>
                                     <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
                                         <span class="input-group-text">
                                             <img src="/img/alert.png"

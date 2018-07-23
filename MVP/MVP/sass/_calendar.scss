@@ -694,6 +694,7 @@ header.head {
                 font-weight: bold;
                 letter-spacing: 0.4px;
                 color: #c1c6d3;
+                font-size: 12px;
             }
 
             .times {
@@ -702,6 +703,12 @@ header.head {
 
             .price {
                 color: #ff5f6d;
+                font-weight: bold;
+            }
+
+            .price-green {
+                color: #2ecc71;
+                font-weight: bold;
             }
 
             .total-price {
@@ -709,25 +716,14 @@ header.head {
                 font-weight: bold;
                 letter-spacing: normal;
                 color: #ff5f6d;
-            }
 
-            .promocode {
-                font-size: 14px;
-                font-weight: bold;
-                letter-spacing: normal;
-                text-align: center;
-                color: #ff5f6d;
-                text-decoration: underline;
-                cursor: pointer;
 
-                &--active {
-                    color: #535e7b;
-                }
-
-                .input-group-text {
-                    background-color: #ff5f6d;
+                @media #{$mobile} {
+                    font-size: 18px;
                 }
             }
+
+
 
             .btn {
                 font-size: 14px;
@@ -768,6 +764,65 @@ header.head {
         border: none!important;
     }
 }
+
+.promocode {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ff5f6d;
+    text-decoration: underline;
+    cursor: pointer;
+
+    a {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ff5f6d;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &--active {
+        a {
+            color: #535e7b;
+        }
+    }
+
+    .input-group-text {
+        background-color: #ff5f6d;
+    }
+}
+
+.embed-submit-field {
+    position: relative;
+
+    input {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        //Only styling from here, you can discard this
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        background: #ff5f6d;
+        border-radius: 50px;
+        padding: 10px;
+        transition: all .2s;
+
+        &:hover {
+            background-color: #ff5f6d;
+            color: #fff;
+        }
+    }
+}
+
 
 .popover-body {
     padding: 0!important;
@@ -841,4 +896,9 @@ header.head {
     .divider {
         margin-top: 0px;
     }
+}
+
+#NextTrip, #next-trip {
+    position: sticky;
+    top: 80px;
 }
