@@ -354,7 +354,7 @@ namespace MVP.Services
             }
         }
 
-        public void SendWarning(string warning)
+        private void SendWarning(string warning)
         {
             SmtpClient client = new SmtpClient();
             MailMessage msg = new MailMessage
