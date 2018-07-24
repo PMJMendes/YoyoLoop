@@ -289,7 +289,7 @@ header.head {
         border-radius: 0 0.25em 0.25em 0 !important;
     }
 
-    button.btn-today {
+    input.btn-today {
         width: 90px;
         background-color: #eff1f6;
         border-color: #838da7;
@@ -898,7 +898,7 @@ header.head {
     }
 }
 
-#NextTrip, #next-trip {
+.sticky {
     position: sticky;
     top: 80px;
 }
