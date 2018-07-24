@@ -547,6 +547,7 @@
     <Content Include="MyTrips\Ticket.ascx" />
     <Content Include="Pages\Privacy.aspx" />
     <Content Include="Pages\Terms.aspx" />
+    <Content Include="Profile\Profile.aspx" />
     <Content Include="sass\styles.css" />
     <Content Include="sass\styles.min.css" />
     <Content Include="sass\_homepage.css" />
@@ -1050,6 +1051,15 @@
     <Compile Include="Pages\Terms.aspx.designer.cs">
       <DependentUpon>Terms.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfileDTO.cs" />
+    <Compile Include="Profile\Services\ProfileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Strings.Designer.cs">
       <AutoGen>True</AutoGen>

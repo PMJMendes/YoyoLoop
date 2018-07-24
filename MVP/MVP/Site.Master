@@ -111,7 +111,7 @@
         <div id="ProfileMenu" class="hide">
             <div class='profile-menu__wrapper'>
                 <div class='d-flex flex-column align-items-center text-left'>
-                    <a href='/pages/profile.html' OnClick="javascript:$.blockUI()" class='profile__menu__link'>
+                    <a href='/Profile/Profile' OnClick="javascript:$.blockUI()" class='profile__menu__link'>
                         <img class='mr-2' src='/img/profile.png' srcset='/img/profile@2x.png 2x, /img/profile@3x.png 3x'>
                         O Meu Perfil
                     </a>
@@ -163,8 +163,8 @@
                                 <p><h2 class="text-uppercase">yoyoloop</h2></p>
                                 <p><a class="" href="#">Sobre nós</a></p>
                                 <p><a class="" href="#">Como funciona</a></p>
-                                <p><a class="" href="#">Ajuda</a></p>
-                                <p class="footer__column footer__column--text-red"><a class="" href="#">Contacto</a></p>
+                                <p><a class="" OnClick="javascript:$.blockUI()" href="/Help/Help">Ajuda</a></p>
+                                <p><a class="" href="#">Contacto</a></p>
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">Destinos</h2></p>
