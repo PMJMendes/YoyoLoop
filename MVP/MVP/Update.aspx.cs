@@ -7,7 +7,7 @@ namespace MVP
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (Request.UserHostAddress != WebConfigurationManager.AppSettings["UpdateTaskServer"])
+            if (Request.UserHostAddress == WebConfigurationManager.AppSettings["UpdateTaskServer"])
             {
                 var service = new MasterService();
                 service.MasterUpdate();
