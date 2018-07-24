@@ -31,6 +31,7 @@ namespace MVP
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.sticky.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/profile-menu-popover.js") });
 
 
             // Check if update service has been running
@@ -89,14 +90,16 @@ namespace MVP
             }
         }
 
-        protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
+        protected void btnLogout_Click(object sender, EventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Response.Redirect("/");
         }
 
         protected void UserSignIn(object sender, EventArgs e)
         {
             PassSignIn?.Invoke(this, e);
         }
+
     }
 }
