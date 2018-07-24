@@ -1,0 +1,67 @@
+.terms {
+    font-family: Lato;
+
+    &__navbar {
+        background: white;
+
+        a {
+            color: #535e7b !important;
+        }
+    }
+
+    a:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__container {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 220px;
+        max-width: 1027px;
+        margin: 220px auto 0 auto;
+
+        @media #{$mobile} {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &__main-title {
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1.3;
+        letter-spacing: 2px;
+        color: #ff5f6d;
+
+        margin-bottom: 20px;
+
+        @media #{$mobile} {
+            text-align: center;
+        }
+    }
+
+    &__separator  { 
+        width: 100%;
+        height: 2px;
+        background-color: #d5dbe9;
+    }
+
+
+    &__content {
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.3;
+        letter-spacing: 0.5px;
+        color: #535e7b;
+
+        &--bold {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+    }
+}

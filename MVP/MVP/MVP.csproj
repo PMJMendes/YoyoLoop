@@ -292,6 +292,7 @@
     <Content Include="img\acessivel-2%403x.png" />
     <Content Include="img\acessivel-2.png" />
     <Content Include="img\acessivel.png" />
+    <Content Include="img\actor-car.jpeg" />
     <Content Include="img\alert%402x.png" />
     <Content Include="img\alert%403x.png" />
     <Content Include="img\alert.png" />
@@ -421,6 +422,7 @@
     <Content Include="img\historico%403x.png" />
     <Content Include="img\historico.png" />
     <Content Include="img\illustration.png" />
+    <Content Include="img\inside-car.jpeg" />
     <Content Include="img\instagram%402x.png" />
     <Content Include="img\instagram%403x.png" />
     <Content Include="img\instagram.png" />
@@ -449,6 +451,9 @@
     <Content Include="img\list%402x.png" />
     <Content Include="img\list%403x.png" />
     <Content Include="img\list.png" />
+    <Content Include="img\logout%402x.png" />
+    <Content Include="img\logout%403x.png" />
+    <Content Include="img\logout.png" />
     <Content Include="img\loop.jpg" />
     <Content Include="img\loopico%402x.png" />
     <Content Include="img\loopico%403x.png" />
@@ -584,6 +589,10 @@
     <Content Include="sass\_profile.scss" />
     <Content Include="sass\_travel.scss" />
     <Content Include="compilerconfig.json" />
+    <Content Include="sass\_static_pages.scss" />
+    <Content Include="sass\_utils.scss" />
+    <Content Include="sass\terms_and_conditions.scss" />
+    <Content Include="sass\_help.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
