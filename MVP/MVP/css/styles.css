@@ -617,7 +617,8 @@ header.head {
       color: #fff; }
 
 .popover-body {
-  padding: 0 !important; }
+  padding: 0 !important;
+  max-width: 225px; }
 
 #selectPopover .btn-select {
   border-radius: 4px;
@@ -648,6 +649,10 @@ header.head {
       cursor: default; }
   #destinationPopover .header-label {
     font-size: 10px; }
+    #destinationPopover .header-label--start {
+      color: #ffcc66; }
+    #destinationPopover .header-label--destination {
+      color: #ff5f6d; }
   #destinationPopover .header-city {
     font-size: 13px;
     font-weight: bold;
@@ -666,7 +671,8 @@ header.head {
   #destinationPopover .show {
     display: block; }
   #destinationPopover .divider {
-    margin-top: 0px; }
+    margin-top: 5px;
+    margin-bottom: 5px; }
 
 .sticky {
   position: sticky;
