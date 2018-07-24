@@ -11,5 +11,6 @@ namespace MVP.Models.Entities
         public DateTime LastRun { get; set; }
         public DateTime LastDaily { get; set; }
         public TimeSpan WarningThreshold { get; set; }
+        public Boolean Warning { get; set; }
     }
 }

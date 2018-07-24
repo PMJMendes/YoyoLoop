@@ -111,12 +111,18 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
+                if(model.UpdateService.First().Warning)
+                {
+                    return;
+                }
                 var lastrun = model.UpdateService.First().LastRun;
                 var elapsed = DateTime.Now - lastrun;
                 var threshold = model.UpdateService.First().WarningThreshold;
                 if (elapsed > threshold)
                 {
                     SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R"));
+                    model.UpdateService.First().Warning = true;
+                    model.SaveChanges();
                 }
             }
         }
@@ -126,6 +132,7 @@ namespace MVP.Services
             using (var model = new EntityModel())
             {
                 model.UpdateService.First().LastRun = DateTime.Now;
+                model.UpdateService.First().Warning = false;
                 CheckBooked(model);
                 CheckClosed(model);
                 if(model.UpdateService.First().LastDaily != DateTime.Today)
