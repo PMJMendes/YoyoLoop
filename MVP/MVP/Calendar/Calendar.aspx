@@ -96,9 +96,11 @@
             <div class="row">
 
                 <!-- PLACEHOLDER DIV -->
-                <div ID="Placeholder" Class="<%= pnCalendar.Visible ? "hide" : "" %>" Style="width:100%; height:800px">
-                    <h6 style="text-align:center">THIS IS A PLACEHOLDER</h6>
-                    <p style="text-align:center"><img src="/img/comoviajar.jpg" Style="" /></p>
+                <div ID="Placeholder" Class="<%= pnCalendar.Visible ? "hide" : "d-flex align-items-center justify-content-center mb-5" %>">
+                    <div class="col-md-12 text-center">
+                        <h6 class="calendar-placeholder-text text-uppercase pt-4 pb-4">Escolhe o Destino e Origem da viagem</h6>
+                        <img class="img-responsive illustration" src="/img/illustration.png"  style="max-width: 1200px;">
+                    </div>
                 </div>
 
                 <!-- CALENDAR -->
