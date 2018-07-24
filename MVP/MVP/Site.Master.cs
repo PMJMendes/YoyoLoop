@@ -28,6 +28,7 @@ namespace MVP
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/jquery/jquery.min.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/bootstrap/js/bootstrap.bundle.min.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.blockUI.js") });
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.sticky.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
 

@@ -1,0 +1,19 @@
+$mobile: "(max-width: 767.98px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$laptop: "(min-width: 1024px) and (max-width: 1439px)";
+$desktop: "(min-width: 1440px)";
+
+@import "navigation.scss";
+@import "calendar.scss";
+@import "homepage.scss";
+@import "profile.scss";
+@import "invitefriends.scss";
+@import "travel.scss";
+@import "contacts.scss";
+@import "checkout.scss";
+@import "footer.scss";
+@import "loginregister.scss";
+
+body {
+    font-family: Lato;
+}
