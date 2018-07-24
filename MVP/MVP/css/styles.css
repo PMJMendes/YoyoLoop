@@ -663,6 +663,8 @@ header.head {
     display: none;
     overflow: hidden;
     padding: 0; }
+  #destinationPopover .show {
+    display: block; }
   #destinationPopover .divider {
     margin-top: 0px; }
 
