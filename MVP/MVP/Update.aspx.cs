@@ -6,11 +6,13 @@ namespace MVP
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            if(Request.IsLocal)
+            var service = new MasterService();
+            if (Request.IsLocal)
             {
-                var service = new MasterService();
                 service.MasterUpdate();
             }
+
+            service.SendWarning("Hostname: " + Request.UserHostName + "\r\nIPAddress: " + Request.UserHostAddress);
         }
     }
 }
