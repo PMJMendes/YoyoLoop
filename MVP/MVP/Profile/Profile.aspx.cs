@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using MVP.Services;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+
+namespace MVP.Profile
+{
+    public partial class Profile : System.Web.UI.Page
+    {
+        private readonly ProfileService service = new ProfileService();
+        protected ProfileDTO pageData;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (User?.Identity.IsAuthenticated == false)
+            {
+                Response.Redirect("/");
+            }
+            InitData();
+        }
+
+        private void InitData()
+        {
+            pageData = null;
+
+            if (IsPostBack)
+            {
+                pageData = (ProfileDTO)Session["profile.data"];
+            }
+
+            if (pageData == null)
+            {
+                pageData = service.GetInitialData(User?.Identity.GetUserId());
+                Session["profile.data"] = pageData;
+                InitializeControls();
+            }
+        }
+
+        private void InitializeControls()
+        {
+            txtName.Text = pageData.ContactName;
+            txtBirthDate.Text = pageData.BirthDate;
+            txtEmail.Text = pageData.Email;
+            txtPhoneNumber.Text = pageData.PhoneNumber;
+        }
+
+        protected void btnConfirmEmail_Click(object sender, EventArgs e)
+        {
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            string code = manager.GenerateEmailConfirmationToken(pageData.UserId);
+            string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, pageData.UserId, Request);
+            var service = new MasterService();
+            service.SendEmailConfirmation(pageData.Email, callbackUrl);
+            btnConfirmEmail.Text = "Email de confirmação enviado";
+            btnConfirmEmail.Enabled = false;
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Response.Redirect("/");
+        }
+    }
+}

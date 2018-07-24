@@ -1,0 +1,80 @@
+.banner {
+    font-family: Lato;
+
+    &__reserve {
+        height: 89px;
+        background-color: #ffcc66;
+        box-shadow: 0px 5px 12px 0 rgba(255, 204, 102, 0.3);
+
+        @media #{$mobile} {
+            height: 120px;
+        }
+
+        &__container {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        &__subtitle {
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.7px;
+            font-weight: 600;
+            text-align: left;
+            text-transform: uppercase;
+            color: #535e7b;
+
+            @media #{$mobile} {
+                text-align: center;
+            }
+        }
+
+        &__maintitle {
+            font-size: 22px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #535e7b;
+
+            &--bold {
+                font-weight: 900;
+                color: #ff5f6d;
+            }
+
+            @media #{$mobile} {
+                text-align: center;
+            }
+        }
+
+        &__btn {
+            a {
+                margin-right: 0;
+
+                @media #{$mobile} {
+                    margin: auto;
+                }    
+            }
+        }
+    }
+}
+
+.profile-menu {
+    &__wrapper {
+        width: 270px;
+        padding: 20px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 10px 17.3px 40px 0 rgba(131, 141, 167, 0.1);
+    }
+
+    &__btn {
+        margin-bottom: 25px;
+    }
+}

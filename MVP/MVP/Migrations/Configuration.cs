@@ -19,7 +19,8 @@ namespace MVP.Migrations
                 UpdateServiceId = Guid.Parse("DBD2C631-05E6-43EC-B86C-34B03A283906"),
                 LastRun = DateTime.Now,
                 LastDaily = DateTime.Today,
-                WarningThreshold = new TimeSpan(0, 30, 0)
+                WarningThreshold = new TimeSpan(0, 30, 0),
+                Warning = false
             });
 
             context.Settings.AddOrUpdate(new Settings()
