@@ -2,7 +2,7 @@
 
 <asp:UpdatePanel runat="server" ID="upBookingPanel">
     <ContentTemplate>
-        <div id="NextTrip" class="row next-trip">
+        <div class="row next-trip">
             <div class="col-lg-12 p-0">
                 <div class="row time pt-3">
                     <div class="col-1 pl-4">

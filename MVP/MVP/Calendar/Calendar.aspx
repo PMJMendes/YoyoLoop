@@ -245,7 +245,7 @@
                 <div ID="Lateral" class="col-lg-4 col-md-4 <%= pnCalendar.Visible ? "" : "hide" %>">
 
                     <!--PROXIMA VIAGEM-->
-                    <div ID="NextTrip" class="<%= BookingPanel.Visible ? "hide" : "" %>">
+                    <div class="<%= BookingPanel.Visible ? "hide" : "sticky" %>">
                         <div class="row p-3 text-uppercase">
                             <div class="col-lg-12 d-flex justify-content-center align-self-center">
                                 Proxima Viagem

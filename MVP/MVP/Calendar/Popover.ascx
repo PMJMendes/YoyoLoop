@@ -16,7 +16,7 @@
                     </div>
                 </div>                
                 <div class="panel">
-                <hr class="divider w-75">
+                    <hr class="divider w-75">
                     <asp:Repeater ID="RowRepeater" runat="server" OnItemDataBound="RowRepeater_ItemDatabound">
                         <ItemTemplate>
                             <div class="row pt-2 pr-4 pb-2 pl-4">
