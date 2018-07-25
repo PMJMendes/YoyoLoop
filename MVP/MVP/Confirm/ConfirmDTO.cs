@@ -13,6 +13,7 @@ namespace MVP.Confirm
         public int Seats { get; set; }
         public decimal Cost { get; set; }
         public string TicketCode { get; set; }
+        public string TicketURL { get; set; }
 
         public DateTime StartTime { get; set; }
         public string StartRegionName { get; set; }
@@ -21,5 +22,6 @@ namespace MVP.Confirm
         public string EndAPName { get; set; }
 
         public string UserEmail { get; set; }
+        public string UserContactName { get; set; }
     }
 }

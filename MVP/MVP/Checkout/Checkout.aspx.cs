@@ -68,6 +68,7 @@ namespace MVP.Checkout
                     pageData.Invoice = new CheckoutDTO.InvoiceData
                     {
                         Name = txtInvoiceName.Text,
+                        Company = txtInvoiceCompany.Text,
                         NIF = txtInvoiceNIF.Text,
                         Adress = txtInvoiceAdress.Text,
                         ZIP = txtInvoiceZIP.Text,

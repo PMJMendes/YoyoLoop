@@ -300,10 +300,12 @@ namespace MVP.Services
             body += "\r\n";
             body += "\r\nDADOS DE FACTURAÇÃO:";
             body += "\r\nNome: " + state.Invoice.Name;
+            body += "\r\nEmpresa: " + state.Invoice.Company;
             body += "\r\nNIF: " + state.Invoice.NIF;
             body += "\r\nMorada: " + state.Invoice.Adress;
             body += "\r\nCód. Postal: " + state.Invoice.ZIP;
             body += "\r\nCidade: " + state.Invoice.City;
+            body += "\r\n";
 
             msg.Body = body;
 
@@ -316,10 +318,7 @@ namespace MVP.Services
             }
             finally
             {
-                if (msg != null)
-                {
-                    msg.Dispose();
-                }
+                msg?.Dispose();
             }
         }
     }

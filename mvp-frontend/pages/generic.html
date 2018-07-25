@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yoyoloop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="container-fluid" id="">
+    <h1>Main menu</h1>
+    <a tabindex="0"
+        data-html="true"
+        data-placement="bottom"
+        data-toggle="popover"
+        data-trigger="focus"
+        data-content="<div class='profile-menu__wrapper'>
+            <div class='d-flex flex-column align-items-center text-left'>
+                <a href='/pages/profile.html' class='profile__menu__link'>
+                    <img class='mr-2' src='../img/profile.png' srcset='../img/profile@2x.png 2x, ../img/profile@3x.png 3x'>
+                    O Meu Perfil
+                </a>
+    
+                <div class='mt-3 mb-3 profile__menu__separator'></div>
+                
+                <a href='/pages/profile-billing.html' class='profile__menu__link profile__menu__link--selected'>
+                    <img class='mr-2' src='../img/billing-selected.png' srcset='../img/billing-selected@2x.png 2x, ../img/billing-selected@3x.png 3x'>
+                    Detalhes de Faturação
+                </a>
+                
+                <div class='mt-3 mb-3 profile__menu__separator'></div>
+                
+                <a href='/pages/invitefriends.html' class='profile__menu__link'>
+                    <img class='mr-2' src='../img/invitefriends.png' srcset='../img/invitefriends@2x.png 2x, ../img/invitefriends@3x.png 3x'>
+                    Convidar amigos
+                </a>
+                
+                <div class='mt-3 mb-3 profile__menu__separator'></div>
+                
+                <a href='/pages/invitefriends.html' class='profile__menu__link'>
+                    <img class='mr-2' src='../img/logout.png' srcset='../img/logout@2x.png 2x, ../img/logout@3x.png 3x'>
+                    Logout
+                </a>
+            </div>
+        </div>">
+        <img class="profile-menu__btn" src="../img/userprofile-red.png" srcset="../img/userprofile-red@2x.png 2x, ../img/userprofile-red@3x.png 3x">
+    </a>
+
+    <h1>Credit</h1>
+    <div class="banner__reserve">
+        <div class="banner__reserve__container row d-flex align-items-center">
+            <div class="col-md-3 banner__reserve__subtitle">Convidar Amigos</div>
+            <div class="col-md-6 banner__reserve__maintitle">
+                Tens cinco viagens de <span class="banner__reserve__maintitle banner__reserve__maintitle--bold">3€</span>
+            </div>
+            <div class="col-md-3 banner__reserve__btn">
+                <a href="#" class="homepage__where-to-card__reserve d-flex align-items-center justify-content-center">Reservar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Friend trips</h1>
+    <div class="banner__reserve">
+        <div class="banner__reserve__container row d-flex align-items-center">
+            <div class="col-md-3 banner__reserve__subtitle">Conta Corrente</div>
+            <div class="col-md-6 banner__reserve__maintitle">
+                You have 
+                <span class="banner__reserve__maintitle banner__reserve__maintitle--bold">35€</span>
+                on your account
+            </div>
+            <div class="col-md-3 banner__reserve__btn">
+                <a href="#" class="homepage__where-to-card__reserve d-flex align-items-center justify-content-center">Reservar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Pending trips</h1>
+    Isn't this implemented somewhere else?
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    $(function(){
+        $("[data-toggle=popover]").popover({
+        });
+    });
+</script>
+  </body>
+
+</html>

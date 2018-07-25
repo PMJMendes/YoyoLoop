@@ -2,6 +2,7 @@
 using System.Web;
 using MVP.Services;
 using Microsoft.AspNet.Identity;
+using System.Web.UI;
 
 namespace MVP.Confirm
 {
@@ -56,6 +57,7 @@ namespace MVP.Confirm
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
+                        TicketURL = "#",
                         StartTime = DateTime.Now,
                         StartRegionName = "Start Region",
                         StartAPName = "Start AP",
@@ -72,12 +74,23 @@ namespace MVP.Confirm
                     //Something went really terribly wrong here - email systems?
                     //Response.Redirect("/Calendar/Calendar");
                 }
+                pageData.TicketURL = Request.Url.Scheme + "://" + Request.Url.Authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
             }
             else
             {
                 HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
                 //Response.Redirect("/Calendar/Calendar");
             }
+        }
+
+        protected void btnEmail_Click(object sender, EventArgs e)
+        {
+            service.SendTicket(pageData);
+        }
+
+        protected void btnSMS_Click(object sender, EventArgs e)
+        {
+            Page.ClientScript.GetPostBackEventReference(new PostBackOptions(this));
         }
     }
 }

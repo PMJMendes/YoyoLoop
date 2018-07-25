@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "css/styles.css",
+    "inputFile": "sass/styles.scss"
+  },
+  {
+    "outputFile": "sass/_homepage.css",
+    "inputFile": "sass/_homepage.scss"
+  },
+  {
+    "outputFile": "sass/_navigation.css",
+    "inputFile": "sass/_navigation.scss"
+  }
+]

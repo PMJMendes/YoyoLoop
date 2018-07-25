@@ -121,6 +121,7 @@
     <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -274,14 +275,16 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\styles.min.css" />
+    <Content Include="css\terms_and_conditions.css" />
+    <Content Include="css\terms_and_conditions.min.css" />
     <Content Include="Default.aspx" />
-    <Content Include="EmailTemplates\Ticket.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Account\Web.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Help\Help.aspx" />
     <Content Include="img\about.jpg" />
     <Content Include="img\acessivel%402x.png" />
     <Content Include="img\acessivel%403x.png" />
@@ -289,12 +292,15 @@
     <Content Include="img\acessivel-2%403x.png" />
     <Content Include="img\acessivel-2.png" />
     <Content Include="img\acessivel.png" />
+    <Content Include="img\actor-car.jpeg" />
     <Content Include="img\alert%402x.png" />
     <Content Include="img\alert%403x.png" />
     <Content Include="img\alert.png" />
     <Content Include="img\amex%402x.png" />
     <Content Include="img\amex%403x.png" />
     <Content Include="img\amex.png" />
+    <Content Include="img\arr%402x.png" />
+    <Content Include="img\arr%403x.png" />
     <Content Include="img\arr-down%402x.png" />
     <Content Include="img\arr-down%403x.png" />
     <Content Include="img\arr-down.png" />
@@ -304,6 +310,7 @@
     <Content Include="img\arr-right%402x.png" />
     <Content Include="img\arr-right%403x.png" />
     <Content Include="img\arr-right.png" />
+    <Content Include="img\arr.png" />
     <Content Include="img\arrows%402x.png" />
     <Content Include="img\arrows%403x.png" />
     <Content Include="img\arrows.png" />
@@ -313,6 +320,12 @@
     <Content Include="img\billing-selected%403x.png" />
     <Content Include="img\billing-selected.png" />
     <Content Include="img\billing.png" />
+    <Content Include="img\boleia%402x.png" />
+    <Content Include="img\boleia%403x.png" />
+    <Content Include="img\boleia.png" />
+    <Content Include="img\bus%402x.png" />
+    <Content Include="img\bus%403x.png" />
+    <Content Include="img\bus.png" />
     <Content Include="img\calendar%402x.png" />
     <Content Include="img\calendar%403x.png" />
     <Content Include="img\calendar-black%402x.png" />
@@ -325,6 +338,9 @@
     <Content Include="img\capacidade%402x.png" />
     <Content Include="img\capacidade%403x.png" />
     <Content Include="img\capacidade.png" />
+    <Content Include="img\carro%402x.png" />
+    <Content Include="img\carro%403x.png" />
+    <Content Include="img\carro.png" />
     <Content Include="img\cart%402x.png" />
     <Content Include="img\cart%403x.png" />
     <Content Include="img\cart-black%402x.png" />
@@ -347,6 +363,9 @@
     <Content Include="img\clock-black.png" />
     <Content Include="img\clock.png" />
     <Content Include="img\Coimbra.png" />
+    <Content Include="img\comboio%402x.png" />
+    <Content Include="img\comboio%403x.png" />
+    <Content Include="img\comboio.png" />
     <Content Include="img\comofunciona.jpg" />
     <Content Include="img\comoviajar.jpg" />
     <Content Include="img\contactos.jpg" />
@@ -403,6 +422,7 @@
     <Content Include="img\historico%403x.png" />
     <Content Include="img\historico.png" />
     <Content Include="img\illustration.png" />
+    <Content Include="img\inside-car.jpeg" />
     <Content Include="img\instagram%402x.png" />
     <Content Include="img\instagram%403x.png" />
     <Content Include="img\instagram.png" />
@@ -431,6 +451,9 @@
     <Content Include="img\list%402x.png" />
     <Content Include="img\list%403x.png" />
     <Content Include="img\list.png" />
+    <Content Include="img\logout%402x.png" />
+    <Content Include="img\logout%403x.png" />
+    <Content Include="img\logout.png" />
     <Content Include="img\loop.jpg" />
     <Content Include="img\loopico%402x.png" />
     <Content Include="img\loopico%403x.png" />
@@ -522,10 +545,20 @@
     <Content Include="MyTrips\MyTrips.aspx" />
     <Content Include="MyTrips\PastTicket.ascx" />
     <Content Include="MyTrips\Ticket.ascx" />
+    <Content Include="Pages\Privacy.aspx" />
+    <Content Include="Pages\Terms.aspx" />
+    <Content Include="Profile\Profile.aspx" />
+    <Content Include="sass\styles.css" />
+    <Content Include="sass\styles.min.css" />
+    <Content Include="sass\_homepage.css" />
+    <Content Include="sass\_homepage.min.css" />
+    <Content Include="sass\_navigation.css" />
+    <Content Include="sass\_navigation.min.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Custom\blockUI-extension.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
+    <Content Include="Scripts\Custom\profile-menu-popover.js" />
     <Content Include="Scripts\Custom\show-popover.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -546,6 +579,22 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="img\.DS_Store" />
+    <Content Include="sass\styles.scss" />
+    <Content Include="sass\_calendar.scss" />
+    <Content Include="sass\_checkout.scss" />
+    <Content Include="sass\_contacts.scss" />
+    <Content Include="sass\_footer.scss" />
+    <Content Include="sass\_homepage.scss" />
+    <Content Include="sass\_invitefriends.scss" />
+    <Content Include="sass\_loginregister.scss" />
+    <Content Include="sass\_navigation.scss" />
+    <Content Include="sass\_profile.scss" />
+    <Content Include="sass\_travel.scss" />
+    <Content Include="compilerconfig.json" />
+    <Content Include="sass\_static_pages.scss" />
+    <Content Include="sass\_utils.scss" />
+    <Content Include="sass\terms_and_conditions.scss" />
+    <Content Include="sass\_help.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -555,6 +604,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.sticky.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -589,7 +639,9 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
+    <Content Include="Ticket\Ticket.aspx" />
     <Content Include="TripExplorer\Explore.aspx" />
+    <Content Include="Update.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
@@ -840,6 +892,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Help\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201801131725141_InitialCreate.cs" />
     <Compile Include="Migrations\201801131725141_InitialCreate.Designer.cs">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
@@ -928,6 +987,14 @@
     <Compile Include="Migrations\201806290004041_Booking-Promocode.Designer.cs">
       <DependentUpon>201806290004041_Booking-Promocode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807201340064_UpdateService.cs" />
+    <Compile Include="Migrations\201807201340064_UpdateService.Designer.cs">
+      <DependentUpon>201807201340064_UpdateService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807241553336_UpdateService-Warning.cs" />
+    <Compile Include="Migrations\201807241553336_UpdateService-Warning.Designer.cs">
+      <DependentUpon>201807241553336_UpdateService-Warning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -941,6 +1008,7 @@
     <Compile Include="Models\Entities\Route.cs" />
     <Compile Include="Models\Entities\Settings.cs" />
     <Compile Include="Models\Entities\Trip.cs" />
+    <Compile Include="Models\Entities\UpdateService.cs" />
     <Compile Include="Models\Entities\Vehicle.cs" />
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\Extensions\ContextExtensions.cs" />
@@ -969,6 +1037,29 @@
     <Compile Include="MyTrips\Ticket.ascx.designer.cs">
       <DependentUpon>Ticket.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Terms.aspx.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Terms.aspx.designer.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfileDTO.cs" />
+    <Compile Include="Profile\Services\ProfileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -983,6 +1074,15 @@
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\MasterService.cs" />
+    <Compile Include="Ticket\Services\TicketService.cs" />
+    <Compile Include="Ticket\Ticket.aspx.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ticket\Ticket.aspx.designer.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket\TicketDTO.cs" />
     <Compile Include="TripExplorer\Explore.aspx.cs">
       <DependentUpon>Explore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1000,12 +1100,21 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -1136,6 +1245,12 @@
     <EmbeddedResource Include="Migrations\201806290004041_Booking-Promocode.resx">
       <DependentUpon>201806290004041_Booking-Promocode.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807201340064_UpdateService.resx">
+      <DependentUpon>201807201340064_UpdateService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807241553336_UpdateService-Warning.resx">
+      <DependentUpon>201807241553336_UpdateService-Warning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
@@ -1179,7 +1294,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\BuildWebCompiler.1.11.375\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildWebCompiler.1.11.375\build\BuildWebCompiler.targets'))" />
   </Target>
+  <Import Project="..\packages\BuildWebCompiler.1.11.375\build\BuildWebCompiler.targets" Condition="Exists('..\packages\BuildWebCompiler.1.11.375\build\BuildWebCompiler.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

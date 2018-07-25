@@ -39,6 +39,11 @@ namespace MVP.Account
                     FormPanel.Visible = false;
                     errorPanel.Visible = false;
                     successPanel.Visible = true;
+
+                    var service = new Services.MasterService();
+                    service.ForceLogIn(Context.GetOwinContext(), user.Id);
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Default.aspx';}, 5000);", true);
                     return;
                 }
                 FormPanel.Visible = false;
