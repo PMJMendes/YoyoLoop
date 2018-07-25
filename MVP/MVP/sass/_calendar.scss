@@ -289,7 +289,7 @@ header.head {
         border-radius: 0 0.25em 0.25em 0 !important;
     }
 
-    button.btn-today {
+    input.btn-today {
         width: 90px;
         background-color: #eff1f6;
         border-color: #838da7;
@@ -826,6 +826,7 @@ header.head {
 
 .popover-body {
     padding: 0!important;
+    max-width: 225px;
 }
 
 #selectPopover {
@@ -868,6 +869,14 @@ header.head {
 
     .header-label {
         font-size: 10px;
+
+        &--start {
+            color: #ffcc66;
+        }
+
+        &--destination {
+            color: #ff5f6d;
+        }
     }
 
     .header-city {
@@ -893,12 +902,17 @@ header.head {
         padding: 0;
     }
 
+    .show {
+        display: block;
+    }
+
     .divider {
-        margin-top: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 
-#NextTrip, #next-trip {
+.sticky {
     position: sticky;
     top: 80px;
 }

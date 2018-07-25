@@ -245,7 +245,7 @@
                 <div ID="Lateral" class="col-lg-4 col-md-4 <%= pnCalendar.Visible ? "" : "hide" %>">
 
                     <!--PROXIMA VIAGEM-->
-                    <div ID="NextTrip" class="<%= BookingPanel.Visible ? "hide" : "" %>">
+                    <div class="<%= BookingPanel.Visible ? "hide" : "sticky" %>">
                         <div class="row p-3 text-uppercase">
                             <div class="col-lg-12 d-flex justify-content-center align-self-center">
                                 Proxima Viagem
@@ -377,8 +377,9 @@
                     <!-- END OF PROXIMA VIAGEM -->
 
                     <!-- BOOKING PANEL -->
-                    <yoyo:BookingPanel runat="server" ID="BookingPanel" BookingActive="true" OnBookingSelected="BookingPanel_BookingSelected" OnPromoEntered="BookingPanel_PromoEntered" Visible="false" />
-
+                    <div class="sticky">
+                        <yoyo:BookingPanel runat="server" ID="BookingPanel" BookingActive="true" OnBookingSelected="BookingPanel_BookingSelected" OnPromoEntered="BookingPanel_PromoEntered" Visible="false" />
+                    </div>
                 </div>
                 <!-- END OF LATERAL -->
             </div>
