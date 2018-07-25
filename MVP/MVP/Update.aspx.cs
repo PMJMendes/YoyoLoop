@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Configuration;
 using MVP.Services;
 namespace MVP
 {
@@ -6,7 +7,7 @@ namespace MVP
     {
         protected void Page_Init(object sender, EventArgs e)
         {
-            if(Request.IsLocal)
+            if (Request.UserHostAddress == WebConfigurationManager.AppSettings["UpdateTaskServer"])
             {
                 var service = new MasterService();
                 service.MasterUpdate();
