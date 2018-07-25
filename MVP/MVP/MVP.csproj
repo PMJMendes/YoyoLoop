@@ -279,6 +279,10 @@
     <Content Include="css\terms_and_conditions.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Favicon16x316px.ico" />
+    <Content Include="Favicon32x32px.ico" />
+    <Content Include="Favicon48x48.ico" />
+    <Content Include="Favicon64x64.ico" />
     <Content Include="Global.asax" />
     <Content Include="Account\Web.config" />
     <Content Include="ApplicationInsights.config">
@@ -412,6 +416,10 @@
     <Content Include="img\facebook-login%403x.png" />
     <Content Include="img\facebook-login.png" />
     <Content Include="img\facebook.png" />
+    <Content Include="img\Favicon16x316px.ico" />
+    <Content Include="img\Favicon32x32px.ico" />
+    <Content Include="img\Favicon48x48.ico" />
+    <Content Include="img\Favicon64x64.ico" />
     <Content Include="img\fiavel%402x.png" />
     <Content Include="img\fiavel%403x.png" />
     <Content Include="img\fiavel.png" />
@@ -1268,6 +1276,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />

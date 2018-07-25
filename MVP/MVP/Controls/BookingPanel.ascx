@@ -168,6 +168,8 @@
                                                 </span>
                                             </asp:panel>
 
+                                            <%-- tem que ficar antes do input senao nao funciona %>
+
                                             <%-- Bola vermelha default do lado direito, aparecer so enquanto nao foi validado 
                                             <span class="input-group-text promocode-default">
                                                 <img src="/img/check.png"
