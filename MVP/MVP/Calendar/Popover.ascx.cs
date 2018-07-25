@@ -44,9 +44,16 @@ namespace MVP.Calendar
             if (e.Item.DataItem != null)
             {
                 var slot = (APGroup)e.Item.DataItem;
-                var startlabel = (Label)e.Item.FindControl("StartAP");
-                var endlabel = (Label)e.Item.FindControl("EndAP");
+                var header = (Panel)e.Item.FindControl("pnAccordionHeader");
+                var panel = (Panel)e.Item.FindControl("pnAccordionPanel");
+                var startlabel = (Label)header.FindControl("StartAP");
+                var endlabel = (Label)header.FindControl("EndAP");
                 var control = (Repeater)e.Item.FindControl("RowRepeater");
+                if(e.Item.ItemIndex == 0)
+                {
+                    header.CssClass += " active";
+                    panel.CssClass += " show";
+                }
                 startlabel.Text = slot.StartAPName;
                 endlabel.Text = slot.EndAPName; 
                 control.DataSource = slot.Times.Select((x, i) => new { Index = i, Value = x })
