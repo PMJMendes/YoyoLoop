@@ -150,9 +150,8 @@
                                     </div>
                                 </div>
                                 <div class="row p-3">
-                                    <div class="col-12 text-center promocode promocode--active">
-                                        <div class="input-group mb-3">
-                                            <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
+                                    <div class="d-flex justify-content-center col-12 text-center promocode promocode--active">
+                                        <div class="input-group mb-3 d-flex justify-content-center">
                                             <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
                                                 <span class="input-group-text">
                                                     <img src="/img/alert.png"
@@ -168,6 +167,31 @@
                                                         class="check">
                                                 </span>
                                             </asp:panel>
+
+                                            <%-- Bola vermelha default do lado direito, aparecer so enquanto nao foi validado 
+                                            <span class="input-group-text promocode-default">
+                                                <img src="/img/check.png"
+                                                    srcset="/img/check@2x.png 2x,
+                                                    /img/check@3x.png 3x"
+                                                    class="check">
+                                            </span> --%>
+                                            
+                                             <%-- Quando promocode é approved, tem que se mudar o texto para o que estiver dentro do input 
+                                            <span class="input-group-text text-center promocode-approved">
+                                                YOYOLOOP12345
+                                            </span>--%>
+
+                                             <%-- Quando promocode ja foi usado, tem que se mudar o texto para o que estiver dentro do input --%>
+                                            <span class="input-group-text text-center promocode-error">
+                                                YOYOLOOP12345
+                                            </span>
+                                            <span class="input-group-text promocode-clean">
+                                                <img src="/img/closebtn.png"
+                                                     srcset="/img/closebtn@2x.png 2x,
+                                                             /img/closebtn@3x.png 3x"
+                                                     class="closebtn">
+                                            </span>
+                                            <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="form-control" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
                                         </div>
                                     </div>
                                 </div>

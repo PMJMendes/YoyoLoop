@@ -362,6 +362,9 @@
     <Content Include="img\clock-black%403x.png" />
     <Content Include="img\clock-black.png" />
     <Content Include="img\clock.png" />
+    <Content Include="img\closebtn%402x.png" />
+    <Content Include="img\closebtn%403x.png" />
+    <Content Include="img\closebtn.png" />
     <Content Include="img\Coimbra.png" />
     <Content Include="img\comboio%402x.png" />
     <Content Include="img\comboio%403x.png" />
