@@ -49,8 +49,8 @@
     color: #ff5f6d; }
   #main-nav img.logo {
     margin: 20px;
-    width: 140px;
-    height: 140px; }
+    width: 120px;
+    height: 120px; }
   #main-nav .btn {
     font-size: 14px;
     color: white;
@@ -885,6 +885,9 @@ header.head {
     font-weight: bold;
     text-align: center;
     color: #535e7b; }
+    @media (max-width: 767.98px) {
+      .homepage__yoyoloop-main-description {
+        font-size: 24px; } }
   .homepage__yoyoloop-sub-description {
     font-size: 20px;
     line-height: 1.3;
@@ -1004,6 +1007,9 @@ header.head {
     padding-left: 60px;
     padding-right: 40px;
     margin-top: 220px; }
+    @media (max-width: 767.98px) {
+      .profile__container {
+        padding: 0 !important; } }
   .profile__main-title {
     font-size: 38px;
     font-weight: 900;
@@ -1081,6 +1087,7 @@ header.head {
   .profile__btn {
     border-radius: 20px;
     background-color: #ff5f6d;
+    border-color: #ff5f6d;
     box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3);
     padding: 10px 40px;
     font-size: 14px;
@@ -1141,6 +1148,9 @@ header.head {
   .invitefriends__container {
     padding-left: 60px;
     padding-right: 40px; }
+    @media (max-width: 767.98px) {
+      .invitefriends__container {
+        padding: 0 !important; } }
     .invitefriends__container--first {
       height: 1000px;
       background: red; }
@@ -1240,6 +1250,9 @@ header.head {
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase; }
+    @media (max-width: 767.98px) {
+      .invitefriends__reserve-btn, .invitefriends__promocode__reserve {
+        font-size: 12px; } }
     .invitefriends__reserve-btn:hover, .invitefriends__promocode__reserve:hover {
       color: white !important; }
     .invitefriends__reserve-btn--white {
@@ -2616,8 +2629,7 @@ input:checked {
     margin: 220px auto 0 auto; }
     @media (max-width: 767.98px) {
       .terms__container {
-        padding-left: 10px;
-        padding-right: 10px; } }
+        padding: 0 !important; } }
   .terms__main-title {
     font-size: 38px;
     font-weight: 900;
@@ -2970,9 +2982,6 @@ input:checked {
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 10px 17.3px 40px 0 rgba(131, 141, 167, 0.1); }
-
-.profile-menu__btn {
-  margin-bottom: 25px; }
 
 .help {
   font-family: Lato; }

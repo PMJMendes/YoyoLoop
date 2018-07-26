@@ -145,6 +145,9 @@
     font-weight: bold;
     text-align: center;
     color: #535e7b; }
+    @media (max-width: 767.98px) {
+      .homepage__yoyoloop-main-description {
+        font-size: 24px; } }
   .homepage__yoyoloop-sub-description {
     font-size: 20px;
     line-height: 1.3;
@@ -246,3 +249,4 @@
     text-transform: uppercase; }
     .homepage__reserve-btn:hover, .homepage__where-to-card__reserve:hover, .homepage__popular-loops__footer__reserve:hover {
       color: white !important; }
+
