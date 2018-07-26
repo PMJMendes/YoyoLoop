@@ -167,7 +167,6 @@
                                                 <span class="input-group-text text-center promocode-approved">
                                                     <%= PanelData.Promocode %>
                                                 </span>
-                                                <!-- Por alguma razão este check aparece como clicable, não é suposto -->
                                                 <span class="input-group-text promocode-default">
                                                     <img src="/img/check.png"
                                                         srcset="/img/check@2x.png 2x,
