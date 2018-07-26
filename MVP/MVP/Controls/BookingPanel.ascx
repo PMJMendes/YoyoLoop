@@ -157,12 +157,10 @@
                                                     <%= PanelData.Promocode %>
                                                 </span>
                                                 <span class="input-group-text promocode-clean">
-                                                    <a runat="server" id="lkClearPromo" onserverclick="lkClearPromo_ServerClick">
-                                                        <img src="/img/closebtn.png"
-                                                             srcset="/img/closebtn@2x.png 2x,
-                                                                     /img/closebtn@3x.png 3x"
-                                                             class="closebtn">
-                                                    </a>
+                                                    <asp:ImageButton runat="server" ID="lkClearPromo" OnClick="lkClearPromo_ServerClick" src="/img/closebtn.png"
+                                                        srcset="/img/closebtn@2x.png 2x,
+                                                                /img/closebtn@3x.png 3x"
+                                                        class="closebtn" tabindex="-1" />
                                                 </span>
                                             </asp:Placeholder>
                                             <asp:Placeholder runat="server" ID="phPromoCheck" Visible="false">
