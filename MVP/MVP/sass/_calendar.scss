@@ -792,6 +792,7 @@ header.head {
 
     .input-group {
         max-width: 235px;
+        border-radius: .25rem;
     }
 
     .promocode-default {
@@ -865,6 +866,7 @@ header.head {
 
     .form-control:disabled, .form-control[readonly] {
         background-color: white;
+        border: 1px solid #ced4da;
     }
 }
 

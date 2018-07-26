@@ -594,7 +594,8 @@ header.head {
   .promocode--active a {
     color: #535e7b; }
   .promocode .input-group {
-    max-width: 235px; }
+    max-width: 235px;
+    border-radius: .25rem; }
   .promocode .promocode-default {
     background-color: #ff5f6d;
     border-color: #ff5f6d;
@@ -652,7 +653,8 @@ header.head {
       .promocode .promocode-error {
         margin-left: -23px; } }
   .promocode .form-control:disabled, .promocode .form-control[readonly] {
-    background-color: white; }
+    background-color: white;
+    border: 1px solid #ced4da; }
 
 .embed-submit-field {
   position: relative; }
