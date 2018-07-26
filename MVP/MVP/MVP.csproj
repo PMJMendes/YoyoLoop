@@ -278,7 +278,6 @@
     <Content Include="css\terms_and_conditions.css" />
     <Content Include="css\terms_and_conditions.min.css" />
     <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Account\Web.config" />
     <Content Include="ApplicationInsights.config">
@@ -362,6 +361,9 @@
     <Content Include="img\clock-black%403x.png" />
     <Content Include="img\clock-black.png" />
     <Content Include="img\clock.png" />
+    <Content Include="img\closebtn%402x.png" />
+    <Content Include="img\closebtn%403x.png" />
+    <Content Include="img\closebtn.png" />
     <Content Include="img\Coimbra.png" />
     <Content Include="img\comboio%402x.png" />
     <Content Include="img\comboio%403x.png" />
@@ -545,6 +547,7 @@
     <Content Include="MyTrips\MyTrips.aspx" />
     <Content Include="MyTrips\PastTicket.ascx" />
     <Content Include="MyTrips\Ticket.ascx" />
+    <Content Include="favicon.ico" />
     <Content Include="Pages\Privacy.aspx" />
     <Content Include="Pages\Terms.aspx" />
     <Content Include="Profile\Profile.aspx" />
@@ -1265,6 +1268,10 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />

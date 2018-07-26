@@ -377,7 +377,7 @@
                     <!-- END OF PROXIMA VIAGEM -->
 
                     <!-- BOOKING PANEL -->
-                    <div class="sticky">
+                    <div class="sticky pb-5">
                         <yoyo:BookingPanel runat="server" ID="BookingPanel" BookingActive="true" OnBookingSelected="BookingPanel_BookingSelected" OnPromoEntered="BookingPanel_PromoEntered" Visible="false" />
                     </div>
                 </div>
