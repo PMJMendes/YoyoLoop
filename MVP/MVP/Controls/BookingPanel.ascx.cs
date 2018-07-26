@@ -105,19 +105,33 @@ namespace MVP.Controls
                 {
                     PanelData.PromoValid = false;
                     pnPromoCheck.Visible = false;
+                    phPromoCheck.Visible = false;
                     pnPromoError.Visible = false;
+                    phPromoError.Visible = false;
+                    tbPromo.Attributes.Add("placeholder", "Inserir codigo promocional");
+                    tbPromo.Enabled = true;
                 }
                 else
                 {
                     if (!PanelData.PromoValid)
                     {
                         pnPromoCheck.Visible = false;
+                        phPromoCheck.Visible = false;
                         pnPromoError.Visible = true;
+                        phPromoError.Visible = true;
+                        tbPromo.Text = string.Empty;
+                        tbPromo.Attributes.Add("placeholder", string.Empty);
+                        tbPromo.Enabled = false;
                     }
                     else
                     {
                         pnPromoCheck.Visible = true;
+                        phPromoCheck.Visible = true;
                         pnPromoError.Visible = false;
+                        phPromoError.Visible = false;
+                        tbPromo.Text = string.Empty;
+                        tbPromo.Attributes.Add("placeholder", string.Empty);
+                        tbPromo.Enabled = false;
                     }
                 }
             }
@@ -142,6 +156,14 @@ namespace MVP.Controls
             OnPromoChanged(new PromoEnteredEventArgs
             {
                 Promocode = tbPromo.Text.ToUpper()
+            });
+        }
+
+        protected void lkClearPromo_ServerClick(object sender, EventArgs e)
+        {
+            OnPromoChanged(new PromoEnteredEventArgs
+            {
+                Promocode = string.Empty
             });
         }
 
