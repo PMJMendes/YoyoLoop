@@ -104,8 +104,8 @@ namespace MVP.Controls
                 if(tbPromo.Text == string.Empty)
                 {
                     PanelData.PromoValid = false;
-                    pnPromoCheck.Visible = false;
-                    pnPromoError.Visible = false;
+                    phPromoCheck.Visible = false;
+                    phPromoError.Visible = false;
                     tbPromo.Attributes.Add("placeholder", "Código promocional");
                     tbPromo.Enabled = true;
                 }
@@ -113,16 +113,16 @@ namespace MVP.Controls
                 {
                     if (!PanelData.PromoValid)
                     {
-                        pnPromoCheck.Visible = false;
-                        pnPromoError.Visible = true;
+                        phPromoCheck.Visible = false;
+                        phPromoError.Visible = true;
                         tbPromo.Text = string.Empty;
                         tbPromo.Attributes.Add("placeholder", string.Empty);
                         tbPromo.Enabled = false;
                     }
                     else
                     {
-                        pnPromoCheck.Visible = true;
-                        pnPromoError.Visible = false;
+                        phPromoCheck.Visible = true;
+                        phPromoError.Visible = false;
                         tbPromo.Text = string.Empty;
                         tbPromo.Attributes.Add("placeholder", string.Empty);
                         tbPromo.Enabled = false;
@@ -190,8 +190,8 @@ namespace MVP.Controls
             tbPromo.Text = string.Empty;
             PanelData.PromoValid = false;
             pnPromocode.Visible = false;
-            pnPromoCheck.Visible = false;
-            pnPromoError.Visible = false;
+            phPromoCheck.Visible = false;
+            phPromoError.Visible = false;
         }
     }
 }

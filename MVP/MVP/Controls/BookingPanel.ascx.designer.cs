@@ -121,13 +121,13 @@ namespace MVP.Controls {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lkNoPromo;
         
         /// <summary>
-        /// pnPromoError control.
+        /// phPromoError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnPromoError;
+        protected global::System.Web.UI.WebControls.PlaceHolder phPromoError;
         
         /// <summary>
         /// lkClearPromo control.
@@ -139,13 +139,13 @@ namespace MVP.Controls {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lkClearPromo;
         
         /// <summary>
-        /// pnPromoCheck control.
+        /// phPromoCheck control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnPromoCheck;
+        protected global::System.Web.UI.WebControls.PlaceHolder phPromoCheck;
         
         /// <summary>
         /// tbPromo control.

@@ -152,7 +152,7 @@
                                 <div class="row p-3">
                                     <div class="d-flex justify-content-center col-12 text-center promocode promocode--active">
                                         <div class="input-group mb-3 d-flex justify-content-center">
-                                            <asp:panel runat="server" ID="pnPromoError" Visible="false">
+                                            <asp:Placeholder runat="server" ID="phPromoError" Visible="false">
                                                 <span class="input-group-text text-center promocode-error">
                                                     <%= PanelData.Promocode %>
                                                 </span>
@@ -164,8 +164,8 @@
                                                              class="closebtn">
                                                     </a>
                                                 </span>
-                                            </asp:panel>
-                                            <asp:panel runat="server" ID="pnPromoCheck" Visible="false">
+                                            </asp:Placeholder>
+                                            <asp:Placeholder runat="server" ID="phPromoCheck" Visible="false">
                                                 <span class="input-group-text text-center promocode-approved">
                                                     <%= PanelData.Promocode %>
                                                 </span>
@@ -176,7 +176,7 @@
                                                         /img/check@3x.png 3x"
                                                         class="check">
                                                 </span>                                            
-                                            </asp:panel>
+                                            </asp:Placeholder>
                                             <!-- A textbox continua a precisar de styling. O texto enquanto está a ser introduzido aparece 
                                                 sublinhado e preciso que o aspecto da textbox seja o mesmo quando está disabled -->
                                             <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="form-control" placeholder="Inserir código" aria-label="Inserir código" aria-describedby="basic-addon2" />
