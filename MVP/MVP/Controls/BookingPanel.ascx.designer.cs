@@ -130,13 +130,13 @@ namespace MVP.Controls {
         protected global::System.Web.UI.WebControls.PlaceHolder phPromoError;
         
         /// <summary>
-        /// lkClearPromo control.
+        /// ibPromoError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton lkClearPromo;
+        protected global::System.Web.UI.WebControls.ImageButton ibPromoError;
         
         /// <summary>
         /// phPromoCheck control.
@@ -146,6 +146,15 @@ namespace MVP.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phPromoCheck;
+        
+        /// <summary>
+        /// ibPromoCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibPromoCheck;
         
         /// <summary>
         /// tbPromo control.
