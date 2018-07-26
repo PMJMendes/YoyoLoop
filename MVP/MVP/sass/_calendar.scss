@@ -771,7 +771,7 @@ header.head {
     letter-spacing: normal;
     text-align: center;
     color: #ff5f6d;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
 
     a {
@@ -861,6 +861,10 @@ header.head {
         @media #{$mobile} {
             margin-left: -23px;
         }
+    }
+
+    .form-control:disabled, .form-control[readonly] {
+        background-color: white;
     }
 }
 

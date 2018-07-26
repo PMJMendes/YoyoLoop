@@ -581,7 +581,7 @@ header.head {
   letter-spacing: normal;
   text-align: center;
   color: #ff5f6d;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer; }
   .promocode a {
     font-size: 14px;
@@ -651,6 +651,8 @@ header.head {
     @media (max-width: 767.98px) {
       .promocode .promocode-error {
         margin-left: -23px; } }
+  .promocode .form-control:disabled, .promocode .form-control[readonly] {
+    background-color: white; }
 
 .embed-submit-field {
   position: relative; }
@@ -3148,3 +3150,4 @@ input:checked {
 
 body {
   font-family: Lato; }
+
