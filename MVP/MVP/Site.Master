@@ -77,9 +77,6 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-logo" href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
-                <a class="navbar-toggler navbar-toggler-right" id="ProfileMenuLink" tabindex="-1">
-                    <img class="profile-menu__btn" src="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x, /img/userprofile-red@3x.png 3x">
-                </a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="d-flex align-items-center navbar-nav ml-auto">
                         <li class="nav-item">
@@ -99,7 +96,7 @@
                                     <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips">As minhas viagens</a>
                                 </li>
                                 <li class="nav-item my-auto">
-                                    <a class="profile-desktop" id="ProfileMenuLink" tabindex="-1">
+                                    <a id="ProfileMenuLink" tabindex="-1">
                                         <img class="profile-menu__btn" src="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x, /img/userprofile-red@3x.png 3x">
                                     </a>
                                 </li>
