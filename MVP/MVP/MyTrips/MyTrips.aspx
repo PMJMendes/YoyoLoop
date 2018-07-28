@@ -28,7 +28,21 @@
                 <!-- END OF CONTA CORRENT -->
 
                 <div id="ActiveBookings" Class="<%= RepActiveBookings.Visible ? "hide" : "" %>">
-                    <h5>Não tem viagens</h5>
+                    <div class="row p-3">
+                        <div class="col-md-4 text-center">
+                            <img src="/img/ticket.png"
+                             srcset="/img/ticket@2x.png 2x,
+                                     /img/ticket@3x.png 3x"
+                             class="ticket">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="travel__empty-state-main p-2">Ainda não tem viagens.</p>
+                            <p class="travel__empty-state-sub p-2">Reserva a tua primeira viagem com a Yoyoloop!</p>
+                            <p class="travel__empty-state-button">
+                                <a href="/Calendar/Calendar?Dest=Lisboa" class="d-flex align-items-center justify-content-center text-uppercase travel__empty-state-btn">Reserva Já</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <asp:Repeater runat="server" ID="RepActiveBookings" OnItemDataBound="RepActiveBookings_ItemDataBound" Visible="false">
                     <ItemTemplate>

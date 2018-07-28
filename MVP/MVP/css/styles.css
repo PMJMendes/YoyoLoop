@@ -1389,6 +1389,50 @@ header.head {
       .travel__container {
         padding-left: 10px;
         padding-right: 10px; } }
+  .travel__empty-state-main {
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.03;
+    letter-spacing: normal;
+    color: #535e7b; }
+    @media (max-width: 767.98px) {
+      .travel__empty-state-main {
+        text-align: center; } }
+  .travel__empty-state-sub {
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #838da7; }
+    @media (max-width: 767.98px) {
+      .travel__empty-state-sub {
+        text-align: center; } }
+  @media (max-width: 767.98px) {
+    .travel__empty-state-button {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  .travel__empty-state-btn {
+    width: 161px;
+    height: 36px;
+    color: white;
+    border-radius: 17.5px;
+    background-color: #ff5f6d;
+    box-shadow: 4px 6.9px 20px 0 rgba(255, 95, 109, 0.5); }
+    @media (max-width: 767.98px) {
+      .travel__empty-state-btn {
+        text-align: center; } }
   .travel__main-title {
     font-size: 38px;
     font-weight: 900;
