@@ -78,7 +78,11 @@
                 </button>
                 <a class="navbar-logo" href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
 
-                <asp:LoginView runat="server" ViewStateMode="Disabled">
+                <asp:LoginView runat="server" ViewStateMode="Disabled">                
+                    <AnonymousTemplate>
+                        <div class="placeholder">
+                        </div>
+                    </AnonymousTemplate>
                     <LoggedInTemplate>
                         <a class="navbar-toggler navbar-toggler-right profile-menu-anchor" tabindex="-1">
                             <img class="profile-menu__btn" src="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x, /img/userprofile-red@3x.png 3x">
