@@ -1127,8 +1127,10 @@ header.head {
     padding: 30px 0 30px 30px;
     border-color: #d5dbe9;
     border-width: 0 0 0 2px;
-    border-style: solid;
-    position: fixed; }
+    border-style: solid; }
+    @media (max-width: 767.98px) {
+      .profile__menu {
+        display: none !important; } }
     .profile__menu__separator {
       height: 2px;
       width: 100%;
@@ -3221,3 +3223,4 @@ input:checked {
 
 body {
   font-family: Lato; }
+

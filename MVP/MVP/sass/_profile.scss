@@ -168,7 +168,10 @@ $desktop: "(min-width: 1440px)";
         border-color: #d5dbe9;
         border-width: 0 0 0 2px;
         border-style: solid;
-        position: fixed;
+
+        @media #{$mobile} {
+            display: none!important;
+        }
 
         &__separator {
             height: 2px;
