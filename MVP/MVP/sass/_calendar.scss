@@ -898,10 +898,14 @@ header.head {
     }
 }
 
-
 .popover-body {
-    padding: 0!important;
-    max-width: 225px;
+    padding: 0 !important;
+}
+
+.popover-marker {
+    &__calendar {
+        max-width: 225px;
+    }
 }
 
 #selectPopover {

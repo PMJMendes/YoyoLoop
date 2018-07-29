@@ -14,7 +14,8 @@
                     <div class="col-12 text-nowrap access-point mb-2">
                         <asp:Label runat="server" ID="StartAP"/>
                     </div>
-                </asp:Panel>                
+                </asp:Panel>   
+                
                 <asp:Panel runat="server" ID="pnAccordionPanel" CssClass="panel">
                     <hr class="divider w-75">
                     <asp:Repeater ID="RowRepeater" runat="server" OnItemDataBound="RowRepeater_ItemDatabound">

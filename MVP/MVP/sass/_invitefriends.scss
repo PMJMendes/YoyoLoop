@@ -131,6 +131,11 @@ $desktop: "(min-width: 1440px)";
             justify-content: space-between;
             padding: 0 20px;
             position: relative;
+
+            @media #{$mobile} {
+                margin-right: 0 !important;
+                margin-bottom: 10px;
+            }
         }
 
         &__label {
