@@ -696,7 +696,9 @@ header.head {
       color: #fff; }
 
 .popover-body {
-  padding: 0 !important;
+  padding: 0 !important; }
+
+.popover-marker__calendar {
   max-width: 225px; }
 
 #selectPopover .btn-select {

@@ -14,7 +14,7 @@
 </asp:Repeater>
 
 <section>
-    <div class="hide popover-marker" id="<%= PopoverWrapper %>">
+    <div class="hide popover-marker popover-marker__calendar" id="<%= PopoverWrapper %>">
         <yoyo:Popover runat="server" ID="Popover" OnTimeSelected="Popover_TimeSelected" />
     </div>
 </section>
