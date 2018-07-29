@@ -313,6 +313,12 @@
     <Content Include="img\arrows%402x.png" />
     <Content Include="img\arrows%403x.png" />
     <Content Include="img\arrows.png" />
+    <Content Include="img\arrows_2%402x.png" />
+    <Content Include="img\arrows_2%403x.png" />
+    <Content Include="img\arrows_2.png" />
+    <Content Include="img\arrows_3%402x.png" />
+    <Content Include="img\arrows_3%403x.png" />
+    <Content Include="img\arrows_3.png" />
     <Content Include="img\billing%402x.png" />
     <Content Include="img\billing%403x.png" />
     <Content Include="img\billing-selected%402x.png" />
@@ -324,6 +330,9 @@
     <Content Include="img\boleia.png" />
     <Content Include="img\bus%402x.png" />
     <Content Include="img\bus%403x.png" />
+    <Content Include="img\bus-white%402x.png" />
+    <Content Include="img\bus-white%403x.png" />
+    <Content Include="img\bus-white.png" />
     <Content Include="img\bus.png" />
     <Content Include="img\calendar%402x.png" />
     <Content Include="img\calendar%403x.png" />
@@ -364,12 +373,16 @@
     <Content Include="img\closebtn%402x.png" />
     <Content Include="img\closebtn%403x.png" />
     <Content Include="img\closebtn.png" />
+    <Content Include="img\coimbra.jpg" />
     <Content Include="img\Coimbra.png" />
     <Content Include="img\comboio%402x.png" />
     <Content Include="img\comboio%403x.png" />
     <Content Include="img\comboio.png" />
     <Content Include="img\comofunciona.jpg" />
     <Content Include="img\comoviajar.jpg" />
+    <Content Include="img\contact%402x.png" />
+    <Content Include="img\contact%403x.png" />
+    <Content Include="img\contact.png" />
     <Content Include="img\contactos.jpg" />
     <Content Include="img\conveniente%402x.png" />
     <Content Include="img\conveniente%403x.png" />
@@ -423,6 +436,9 @@
     <Content Include="img\historico%402x.png" />
     <Content Include="img\historico%403x.png" />
     <Content Include="img\historico.png" />
+    <Content Include="img\horarios%402x.png" />
+    <Content Include="img\horarios%403x.png" />
+    <Content Include="img\horarios.png" />
     <Content Include="img\illustration.png" />
     <Content Include="img\inside-car.jpeg" />
     <Content Include="img\instagram%402x.png" />
@@ -437,6 +453,7 @@
     <Content Include="img\language%402x.png" />
     <Content Include="img\language%403x.png" />
     <Content Include="img\language.png" />
+    <Content Include="img\leiria.jpg" />
     <Content Include="img\Leiria.png" />
     <Content Include="img\linkedin%402x.png" />
     <Content Include="img\linkedin%403x.png" />
@@ -448,6 +465,7 @@
     <Content Include="img\linkedin-footer.png" />
     <Content Include="img\linkedin.png" />
     <Content Include="img\lisboa-1.jpg" />
+    <Content Include="img\lisboa-2.jpg" />
     <Content Include="img\lisboa.jpg" />
     <Content Include="img\Lisboa.png" />
     <Content Include="img\list%402x.png" />
@@ -460,6 +478,12 @@
     <Content Include="img\loopico%402x.png" />
     <Content Include="img\loopico%403x.png" />
     <Content Include="img\loopico.png" />
+    <Content Include="img\loopico_2%402x.png" />
+    <Content Include="img\loopico_2%403x.png" />
+    <Content Include="img\loopico_2.png" />
+    <Content Include="img\loopico_3%402x.png" />
+    <Content Include="img\loopico_3%403x.png" />
+    <Content Include="img\loopico_3.png" />
     <Content Include="img\mail%402x.png" />
     <Content Include="img\mail%403x.png" />
     <Content Include="img\mail.png" />
@@ -495,6 +519,7 @@
     <Content Include="img\reservar%402x.png" />
     <Content Include="img\reservar%403x.png" />
     <Content Include="img\reservar.png" />
+    <Content Include="img\road.jpg" />
     <Content Include="img\search%402x.png" />
     <Content Include="img\search%403x.png" />
     <Content Include="img\search.png" />
@@ -507,9 +532,21 @@
     <Content Include="img\stopred%402x.png" />
     <Content Include="img\stopred%403x.png" />
     <Content Include="img\stopred.png" />
+    <Content Include="img\stopred_2%402x.png" />
+    <Content Include="img\stopred_2%403x.png" />
+    <Content Include="img\stopred_2.png" />
+    <Content Include="img\stopred_3%402x.png" />
+    <Content Include="img\stopred_3%403x.png" />
+    <Content Include="img\stopred_3.png" />
     <Content Include="img\stopyellow%402x.png" />
     <Content Include="img\stopyellow%403x.png" />
     <Content Include="img\stopyellow.png" />
+    <Content Include="img\stopyellow_2%402x.png" />
+    <Content Include="img\stopyellow_2%403x.png" />
+    <Content Include="img\stopyellow_2.png" />
+    <Content Include="img\stopyellow_3%402x.png" />
+    <Content Include="img\stopyellow_3%403x.png" />
+    <Content Include="img\stopyellow_3.png" />
     <Content Include="img\sustentavel%402x.png" />
     <Content Include="img\sustentavel%403x.png" />
     <Content Include="img\sustentavel.png" />
@@ -544,10 +581,15 @@
     <Content Include="img\wifi%403x.png" />
     <Content Include="img\wifi.png" />
     <Content Include="img\yoyo-logo.png" />
+    <Content Include="img\yoyo-looplogo%402x.png" />
+    <Content Include="img\yoyo-looplogo%403x.png" />
+    <Content Include="img\yoyo-looplogo.png" />
     <Content Include="MyTrips\MyTrips.aspx" />
     <Content Include="MyTrips\PastTicket.ascx" />
     <Content Include="MyTrips\Ticket.ascx" />
     <Content Include="favicon.ico" />
+    <Content Include="Pages\Destinos.aspx" />
+    <Content Include="Pages\Loops.aspx" />
     <Content Include="Pages\Privacy.aspx" />
     <Content Include="Pages\Terms.aspx" />
     <Content Include="Profile\Profile.aspx" />
@@ -598,6 +640,8 @@
     <Content Include="sass\_utils.scss" />
     <Content Include="sass\terms_and_conditions.scss" />
     <Content Include="sass\_help.scss" />
+    <Content Include="sass\_destinos.scss" />
+    <Content Include="sass\_yoyoloops.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1039,6 +1083,20 @@
     </Compile>
     <Compile Include="MyTrips\Ticket.ascx.designer.cs">
       <DependentUpon>Ticket.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Destinos.aspx.cs">
+      <DependentUpon>Destinos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Destinos.aspx.designer.cs">
+      <DependentUpon>Destinos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Loops.aspx.cs">
+      <DependentUpon>Loops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Loops.aspx.designer.cs">
+      <DependentUpon>Loops.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Privacy.aspx.cs">
       <DependentUpon>Privacy.aspx</DependentUpon>

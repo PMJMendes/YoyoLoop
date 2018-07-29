@@ -2681,6 +2681,12 @@ input:checked {
   .static-page__pic-three {
     background-image: url(/img/about.jpg) !important;
     height: 600px; }
+  .static-page__pic-four {
+    background-image: url(/img/destino.jpg) !important;
+    height: 600px; }
+  .static-page__pic-five {
+    background-image: url(/img/loop.jpg) !important;
+    height: 600px; }
   .static-page a:hover {
     color: inherit;
     text-decoration: none; }
@@ -2697,7 +2703,8 @@ input:checked {
     text-align: center; }
     @media (max-width: 767.98px) {
       .static-page__main-title {
-        font-size: 40px; } }
+        font-size: 40px;
+        width: 100%; } }
   .static-page__divider {
     width: 90%;
     background-color: #d5dbe9; }
@@ -2762,8 +2769,7 @@ input:checked {
     text-align: center; }
   .static-page__box-container__first {
     height: 320px;
-    background-color: #eff1f6;
-    padding-left: 100px; }
+    background-color: #eff1f6; }
     .static-page__box-container__first__main-title {
       font-size: 74px;
       font-weight: bold;
@@ -2792,10 +2798,76 @@ input:checked {
         padding-left: 0;
         display: flex;
         align-items: center; } }
+  .static-page__box-container__schedules {
+    background-image: url("/img/cascais.jpg"); }
+    .static-page__box-container__schedules__label {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.43;
+      letter-spacing: 2px;
+      color: #ffffff; }
+    .static-page__box-container__schedules__text {
+      max-width: 260px;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      color: #ffffff; }
+    .static-page__box-container__schedules__time {
+      color: #ffcd6a;
+      font-size: 12px; }
   .static-page__box-container__second img {
     width: 100%;
     height: 100%;
     max-height: 320px; }
+  .static-page__box-container__second--destinies-cascais {
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url("/img/cascais.jpg"); }
+  .static-page__box-container__second--destinies-lisboa {
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url("/img/cascais.jpg"); }
+  .static-page__box-container__second--destinies-porto {
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url("/img/cascais.jpg"); }
+    .static-page__box-container__second--destinies-porto--desktop {
+      display: flex !important; }
+    .static-page__box-container__second--destinies-porto--mobile {
+      display: none !important; }
+    @media (max-width: 767.98px) {
+      .static-page__box-container__second--destinies-porto--desktop {
+        display: none !important; }
+      .static-page__box-container__second--destinies-porto--mobile {
+        display: flex !important; } }
+  .static-page__box-container__second--destinies-coimbra {
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-image: url("/img/cascais.jpg"); }
+    .static-page__box-container__second--destinies-coimbra--desktop {
+      display: flex !important; }
+    .static-page__box-container__second--destinies-coimbra--mobile {
+      display: none !important; }
+    @media (max-width: 767.98px) {
+      .static-page__box-container__second--destinies-coimbra--desktop {
+        display: none !important; }
+      .static-page__box-container__second--destinies-coimbra--mobile {
+        display: flex !important; } }
   .static-page__box2 {
     background-color: #eff1f6; }
     .static-page__box2__image {
@@ -3150,5 +3222,167 @@ input:checked {
           background-color: #ff5f6d;
           box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); } }
 
-body {
-  font-family: Lato; }
+section.yoyoloops {
+  padding-bottom: 0; }
+  section.yoyoloops .loop-desktop {
+    display: flex !important; }
+  section.yoyoloops .loop-mobile {
+    display: none !important; }
+  @media (max-width: 767.98px) {
+    section.yoyoloops .loop-desktop {
+      display: none !important; }
+    section.yoyoloops .loop-mobile {
+      display: flex !important; } }
+  section.yoyoloops #city {
+    background-color: #eff1f6;
+    padding: 5% 0% 5% 8%;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    section.yoyoloops #city .loop {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.60;
+      letter-spacing: 1.8px;
+      color: #838da7;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      section.yoyoloops #city .loop img {
+        width: 30px;
+        height: auto;
+        margin-right: 2%; }
+    section.yoyoloops #city .name {
+      font-size: 74px;
+      color: #ff5f6d; }
+      @media (max-width: 1200px) {
+        section.yoyoloops #city .name {
+          font-size: 50px; } }
+    section.yoyoloops #city .price {
+      font-size: 38px;
+      color: #535e7b; }
+      @media (max-width: 1200px) {
+        section.yoyoloops #city .price {
+          font-size: 20px; } }
+    section.yoyoloops #city p {
+      margin-bottom: 4%; }
+    section.yoyoloops #city p:last-child {
+      margin-bottom: 0px; }
+    section.yoyoloops #city.right-side {
+      padding: 5% 8% 5% 0%; }
+      section.yoyoloops #city.right-side p:first-child {
+        display: block; }
+  section.yoyoloops .cascais {
+    background-image: url("/img/cascais.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden; }
+  section.yoyoloops .coimbra {
+    background-image: url("/img/coimbra.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden; }
+  section.yoyoloops .leiria {
+    background-image: url("/img/leiria.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden; }
+  section.yoyoloops #city-details {
+    padding: 1% 5% 0% 5%; }
+    @media (max-width: 1200px) {
+      section.yoyoloops #city-details {
+        padding-bottom: 2%; } }
+    section.yoyoloops #city-details .directions {
+      display: flex;
+      justify-content: space-between; }
+      section.yoyoloops #city-details .directions div:first-child {
+        margin-left: 10%; }
+      section.yoyoloops #city-details .directions div:last-child {
+        margin-right: 10%; }
+    section.yoyoloops #city-details img {
+      margin: 5%; }
+      section.yoyoloops #city-details img.stop {
+        width: 40px;
+        height: 50px;
+        margin-bottom: 0%; }
+      section.yoyoloops #city-details img.arrow {
+        width: 125px;
+        height: 40px;
+        margin: 0% 5%; }
+        @media (max-width: 992px) {
+          section.yoyoloops #city-details img.arrow {
+            width: 80px;
+            height: 25px; } }
+    section.yoyoloops #city-details p.city-name {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.44;
+      letter-spacing: 2px; }
+    section.yoyoloops #city-details #access-points {
+      color: white;
+      font-size: 10px;
+      line-height: 1.89;
+      display: flex;
+      justify-content: space-between; }
+      section.yoyoloops #city-details #access-points p {
+        margin-bottom: 0; }
+      section.yoyoloops #city-details #access-points p.ap-right {
+        margin-left: 30%; }
+        @media (max-width: 768px) {
+          section.yoyoloops #city-details #access-points p.ap-right {
+            margin-left: 20%; } }
+      section.yoyoloops #city-details #access-points p.timeline-left {
+        color: #ff5f6d; }
+      section.yoyoloops #city-details #access-points p.timeline-right {
+        color: #ffcc66; }
+      section.yoyoloops #city-details #access-points p.day-of-week {
+        color: #ffffff; }
+    section.yoyoloops #city-details .departures-1,
+    section.yoyoloops #city-details .departures-2 {
+      font-size: 12px;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.89;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff; }
+    section.yoyoloops #city-details .departures-1 {
+      padding-right: 15%; }
+      section.yoyoloops #city-details .departures-1 p {
+        padding-right: 0; }
+      @media (max-width: 1200px) {
+        section.yoyoloops #city-details .departures-1 {
+          padding-right: 5%;
+          font-size: 10px; } }
+      @media (min-width: 992px) {
+        section.yoyoloops #city-details .departures-1 {
+          padding-right: 10%; } }
+    section.yoyoloops #city-details .departures-2 {
+      padding-left: 20%; }
+      @media (max-width: 1200px) {
+        section.yoyoloops #city-details .departures-2 {
+          padding-left: 10%;
+          font-size: 10px; } }
+      @media (min-width: 992px) {
+        section.yoyoloops #city-details .departures-2 {
+          padding-left: 15%; } }
+    section.yoyoloops #city-details .half {
+      width: 50%; }
+  section.yoyoloops .btn-book {
+    color: white;
+    width: 136px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ff5f6d; }

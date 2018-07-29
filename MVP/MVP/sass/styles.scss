@@ -17,7 +17,4 @@ $desktop: "(min-width: 1440px)";
 @import "static_pages.scss";
 @import "utils.scss";
 @import "help.scss";
-
-body {
-    font-family: Lato;
-}
+@import "yoyoloops.scss";
