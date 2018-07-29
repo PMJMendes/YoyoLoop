@@ -25,14 +25,11 @@ namespace MVP
             // Load scripts
             ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
 
-            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/jquery/jquery.min.js") });
-            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/vendor/bootstrap/js/bootstrap.bundle.min.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.blockUI.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.sticky.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/profile-menu-popover.js") });
-
 
             // Check if update service has been running
             var service = new MasterService();

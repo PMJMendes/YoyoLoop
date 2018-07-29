@@ -51,6 +51,12 @@
     margin: 20px;
     width: 120px;
     height: 120px; }
+    @media (max-width: 767.98px) {
+      #main-nav img.logo {
+        width: 70px !important;
+        height: 70px !important;
+        margin-left: 40px !important;
+        margin-right: 40px !important; } }
   #main-nav .btn {
     font-size: 14px;
     color: white;
@@ -60,6 +66,19 @@
     border-color: #ff5f6d;
     background-color: #ff5f6d;
     box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); }
+  #main-nav .navbar-toggler {
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  #main-nav .navbar-toggler-right img {
+    width: 30px;
+    height: 30px; }
+  @media (max-width: 767.98px) {
+    #main-nav .profile-desktop {
+      display: none; } }
+
+.placeholder {
+  padding: 25px; }
 
 header.head {
   background-image: url("/img/cascais.jpg");
@@ -677,7 +696,9 @@ header.head {
       color: #fff; }
 
 .popover-body {
-  padding: 0 !important;
+  padding: 0 !important; }
+
+.popover-marker__calendar {
   max-width: 225px; }
 
 #selectPopover .btn-select {
@@ -1219,6 +1240,10 @@ header.head {
     justify-content: space-between;
     padding: 0 20px;
     position: relative; }
+    @media (max-width: 767.98px) {
+      .invitefriends__promocode__input {
+        margin-right: 0 !important;
+        margin-bottom: 10px; } }
   .invitefriends__promocode__label {
     font-size: 16px;
     font-weight: bold;
@@ -1373,6 +1398,50 @@ header.head {
       .travel__container {
         padding-left: 10px;
         padding-right: 10px; } }
+  .travel__empty-state-main {
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.03;
+    letter-spacing: normal;
+    color: #535e7b; }
+    @media (max-width: 767.98px) {
+      .travel__empty-state-main {
+        text-align: center; } }
+  .travel__empty-state-sub {
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #838da7; }
+    @media (max-width: 767.98px) {
+      .travel__empty-state-sub {
+        text-align: center; } }
+  @media (max-width: 767.98px) {
+    .travel__empty-state-button {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  .travel__empty-state-btn {
+    width: 161px;
+    height: 36px;
+    color: white;
+    border-radius: 17.5px;
+    background-color: #ff5f6d;
+    box-shadow: 4px 6.9px 20px 0 rgba(255, 95, 109, 0.5); }
+    @media (max-width: 767.98px) {
+      .travel__empty-state-btn {
+        text-align: center; } }
   .travel__main-title {
     font-size: 38px;
     font-weight: 900;

@@ -516,6 +516,9 @@
     <Content Include="img\switch%402x.png" />
     <Content Include="img\switch%403x.png" />
     <Content Include="img\switch.png" />
+    <Content Include="img\ticket%402x.png" />
+    <Content Include="img\ticket%403x.png" />
+    <Content Include="img\ticket.png" />
     <Content Include="img\transfer%402x.png" />
     <Content Include="img\transfer%403x.png" />
     <Content Include="img\transfer.png" />
