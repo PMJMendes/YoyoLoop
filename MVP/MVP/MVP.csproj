@@ -599,6 +599,12 @@
     <Content Include="sass\_homepage.min.css" />
     <Content Include="sass\_navigation.css" />
     <Content Include="sass\_navigation.min.css" />
+    <Content Include="sass\_yoyoloops.css">
+      <DependentUpon>_yoyoloops.scss</DependentUpon>
+    </Content>
+    <Content Include="sass\_yoyoloops.min.css">
+      <DependentUpon>_yoyoloops.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Custom\blockUI-extension.js" />
@@ -642,6 +648,9 @@
     <Content Include="sass\_help.scss" />
     <Content Include="sass\_destinos.scss" />
     <Content Include="sass\_yoyoloops.scss" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

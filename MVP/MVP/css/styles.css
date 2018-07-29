@@ -3233,7 +3233,7 @@ section.yoyoloops {
       display: none !important; }
     section.yoyoloops .loop-mobile {
       display: flex !important; } }
-  section.yoyoloops #city {
+  section.yoyoloops .city {
     background-color: #eff1f6;
     padding: 5% 0% 5% 8%;
     font-weight: bold;
@@ -3242,7 +3242,7 @@ section.yoyoloops {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    section.yoyoloops #city .loop {
+    section.yoyoloops .city .loop {
       font-size: 18px;
       font-weight: 600;
       line-height: 1.60;
@@ -3251,29 +3251,29 @@ section.yoyoloops {
       display: flex;
       align-items: center;
       flex-wrap: wrap; }
-      section.yoyoloops #city .loop img {
+      section.yoyoloops .city .loop img {
         width: 30px;
         height: auto;
         margin-right: 2%; }
-    section.yoyoloops #city .name {
+    section.yoyoloops .city .name {
       font-size: 74px;
       color: #ff5f6d; }
       @media (max-width: 1200px) {
-        section.yoyoloops #city .name {
+        section.yoyoloops .city .name {
           font-size: 50px; } }
-    section.yoyoloops #city .price {
+    section.yoyoloops .city .price {
       font-size: 38px;
       color: #535e7b; }
       @media (max-width: 1200px) {
-        section.yoyoloops #city .price {
+        section.yoyoloops .city .price {
           font-size: 20px; } }
-    section.yoyoloops #city p {
+    section.yoyoloops .city p {
       margin-bottom: 4%; }
-    section.yoyoloops #city p:last-child {
+    section.yoyoloops .city p:last-child {
       margin-bottom: 0px; }
-    section.yoyoloops #city.right-side {
+    section.yoyoloops .city.right-side {
       padding: 5% 8% 5% 0%; }
-      section.yoyoloops #city.right-side p:first-child {
+      section.yoyoloops .city.right-side p:first-child {
         display: block; }
   section.yoyoloops .cascais {
     background-image: url("/img/cascais.jpg");
@@ -3386,3 +3386,4 @@ section.yoyoloops {
     height: 30px;
     border-radius: 15px;
     background-color: #ff5f6d; }
+

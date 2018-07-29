@@ -1,3 +1,8 @@
+$mobile: "(max-width: 767.98px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$laptop: "(min-width: 1024px) and (max-width: 1439px)";
+$desktop: "(min-width: 1440px)";
+
 section.yoyoloops {
     padding-bottom: 0;
 
@@ -19,7 +24,7 @@ section.yoyoloops {
         }
     }
 
-    #city {
+    .city {
         background-color: #eff1f6;
         padding: 5% 0% 5% 8%;
         font-weight: bold;

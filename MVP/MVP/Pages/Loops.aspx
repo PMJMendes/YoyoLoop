@@ -46,7 +46,7 @@
     
             <!-- CASCAIS -->
             <div class="row">
-                <div class="col-sm-4 mx-auto text-left" id="city">
+                <div class="city col-sm-4 mx-auto text-left" id="city-cascais">
                     <div class="">
                         <p class="loop text-uppercase">
                             <img src="/img/loopico_2@2x.png" alt="" class="img-responsive"/>
@@ -124,7 +124,7 @@
     
             <!-- COIMBRA -->
             <div class="row">
-                <div class="loop-mobile col-sm-4 mx-auto text-right right-side" id="city">
+                <div class="city loop-mobile col-sm-4 mx-auto text-right right-side" id="city-coimbra">
                     <p class="loop text-uppercase">
                         <img src="/img/loopico_2@2x.png" alt="" class="img-responsive"/>
                         Loop
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="loop-desktop col-sm-4 mx-auto text-right right-side" id="city">
+                <div class="city loop-desktop col-sm-4 mx-auto text-right right-side" id="city-coimbra">
                     <p class="loop text-uppercase">
                         <img src="/img/loopico_2@2x.png" alt="" class="img-responsive"/>
                         Loop
@@ -205,7 +205,7 @@
     
             <!-- LEIRIA -->
             <div class="row">
-                <div class="col-sm-4 mx-auto text-left" id="city">
+                <div class="city col-sm-4 mx-auto text-left" id="city-porto">
                     <p class="loop text-uppercase">
                         <img src="/img/loopico_2@2x.png" alt="" class="img-responsive"/>
                         Loop
