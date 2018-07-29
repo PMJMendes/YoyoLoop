@@ -565,7 +565,6 @@
     <Content Include="Scripts\Custom\blockUI-extension.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
     <Content Include="Scripts\Custom\profile-menu-popover.js" />
-    <Content Include="Scripts\Custom\scrollbar-register.js" />
     <Content Include="Scripts\Custom\show-popover.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />

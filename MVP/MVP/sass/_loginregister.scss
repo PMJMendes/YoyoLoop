@@ -153,5 +153,10 @@ input:checked {
 }
 
 .modal {
-    overflow-y: scroll;
+    @media #{$mobile} {
+        overflow-y: scroll;
+    }
+    @media #{$desktop} {
+        overflow: hidden;
+    }
 }

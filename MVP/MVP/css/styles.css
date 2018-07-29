@@ -2687,8 +2687,13 @@ input:checked {
   color: #c71610;
   background-color: #c71610; }
 
-.modal {
-  overflow-y: scroll; }
+@media (max-width: 767.98px) {
+  .modal {
+    overflow-y: scroll; } }
+
+@media (min-width: 1440px) {
+  .modal {
+    overflow: hidden; } }
 
 .terms {
   font-family: Lato; }
@@ -3226,4 +3231,3 @@ input:checked {
 
 body {
   font-family: Lato; }
-

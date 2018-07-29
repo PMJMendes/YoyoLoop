@@ -30,7 +30,6 @@ namespace MVP
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/navbar-scroll.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/profile-menu-popover.js") });
-            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/scrollbar-register.js") });
 
             // Check if update service has been running
             var service = new MasterService();
