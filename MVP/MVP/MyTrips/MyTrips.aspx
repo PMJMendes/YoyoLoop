@@ -39,7 +39,7 @@
                             <p class="travel__empty-state-main p-2">Ainda não tem viagens.</p>
                             <p class="travel__empty-state-sub p-2">Reserva a tua primeira viagem com a Yoyoloop!</p>
                             <p class="travel__empty-state-button">
-                                <a href="/Calendar/Calendar?Dest=Lisboa" class="d-flex align-items-center justify-content-center text-uppercase travel__empty-state-btn">Reserva Já</a>
+                                <a href="/Calendar/Calendar" OnClick="javascript:$.blockUI()" class="d-flex align-items-center justify-content-center text-uppercase travel__empty-state-btn">Reserva Já</a>
                             </p>
                         </div>
                     </div>
@@ -51,10 +51,8 @@
                     </ItemTemplate>
                 </asp:Repeater>
 
-                <h1 class="travel__main-title-past pt-5 pb-5">Viagens anteriores</h1>
-
-                <div id="PastBookings" Class="<%= RepPastBookings.Visible ? "hide" : "" %>">
-                    <h5>Não tem viagens anteriores</h5>
+                <div id="PastBookings" Class="<%= RepPastBookings.Visible ? "" : "hide" %>">
+                    <h1 class="travel__main-title-past pt-5 pb-5">Viagens anteriores</h1>
                 </div>
                 <asp:Repeater runat="server" ID="RepPastBookings" OnItemDataBound="RepPastBookings_ItemDataBound" Visible="false">
                     <ItemTemplate>
