@@ -9,7 +9,7 @@
 <asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .homepage__navbar {
-            background: unset
+            background: none
         }
             .homepage__navbar a {
                 color: #fbfbfb !important
