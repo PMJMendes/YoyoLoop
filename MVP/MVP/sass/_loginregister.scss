@@ -151,3 +151,12 @@ input:checked {
     color: #c71610;
     background-color: #c71610;
 }
+
+.modal {
+    @media #{$mobile} {
+        overflow-y: scroll;
+    }
+    @media #{$desktop} {
+        overflow: hidden;
+    }
+}
