@@ -10,5 +10,9 @@
   {
     "outputFile": "sass/_navigation.css",
     "inputFile": "sass/_navigation.scss"
+  },
+  {
+    "outputFile": "sass/_yoyoloops.css",
+    "inputFile": "sass/_yoyoloops.scss"
   }
 ]

@@ -28,6 +28,16 @@
         height: 600px;
     }
 
+    &__pic-four {
+        background-image: url(../img/destino.jpg) !important;
+        height: 600px;
+    }
+
+    &__pic-five {
+        background-image: url(../img/loop.jpg) !important;
+        height: 600px;
+    }
+
     a:hover {
         color: inherit;
         text-decoration: none;
@@ -50,6 +60,7 @@
 
         @media #{$mobile} {
             font-size: 40px;
+            width: 100%;
         }
     }
 
@@ -149,7 +160,6 @@
         &__first {
             height: 320px;
             background-color: #eff1f6;
-            padding-left: 100px;
 
             &__main-title {
                 font-size: 74px;
@@ -187,11 +197,111 @@
             }
         }
 
+        &__schedules {
+            background-image: url('../img/cascais.jpg');
+
+            &__label {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.43;
+                letter-spacing: 2px;
+                color: #ffffff;
+            }
+
+            &__text {
+                max-width: 260px;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2;
+                letter-spacing: normal;
+                color: #ffffff;
+            }
+
+            &__time {
+                color: #ffcd6a;
+                font-size: 12px;
+            }
+        }
+
         &__second {
             img {
                 width: 100%;
                 height: 100%;
                 max-height: 320px;
+            }
+
+            &--destinies-cascais {
+                color:white;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                background-image: url('../img/cascais.jpg');
+            }
+
+            &--destinies-lisboa {
+                color:white;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                background-image: url('../img/cascais.jpg');
+            }
+            
+            &--destinies-porto {
+                color:white;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                background-image: url('../img/cascais.jpg');
+
+                &--desktop {
+                    display: flex!important;
+                }
+
+                &--mobile {
+                    display: none!important;
+                }
+
+                @media #{$mobile} {
+                    &--desktop {
+                        display: none!important;
+                    }
+
+                    &--mobile {
+                        display: flex!important;
+                    }
+                }
+            }
+            
+            &--destinies-coimbra {
+                color:white;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                background-image: url('../img/cascais.jpg');
+
+                &--desktop {
+                    display: flex!important;
+                }
+
+                &--mobile {
+                    display: none!important;
+                }
+
+                @media #{$mobile} {
+                    &--desktop {
+                        display: none!important;
+                    }
+
+                    &--mobile {
+                        display: flex!important;
+                    }
+                }
             }
         }
     }
