@@ -57,7 +57,7 @@
                     </div>
                 </div>
     
-                <div class="col-sm-8 cascais" id="city-details">
+                <div class="city-details col-sm-8 cascais">
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="directions">
@@ -78,7 +78,7 @@
                         </div>
                     </div>
     
-                    <div class="row" id="access-points">
+                    <div class="access-points row">
                         <div class="col p-3">
                             <p class="ap-left text-uppercase">- Cascais Shopping</p>
                             <p class="ap-left text-uppercase">- E.Leclerc São Domingos de Rana  (Parque Superior)</p>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
     
-                    <div class="row" id="access-points">
+                    <div class="access-points row">
                         <div class="departures-1 half">
                             <div class="row">
                                 <div class="col-md-6 text-left pb-3">
@@ -132,7 +132,7 @@
                     <p class="name">Coimbra</p>
                     <p class="price">desde 12€</p>
                 </div>
-                <div class="col-sm-8 coimbra" id="city-details">
+                <div class="city-details col-sm-8 coimbra">
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="directions">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
     
-                    <div class="row" id="access-points">
+                    <div class="access-points row">
                         <div class="col p-3">
                             <p class="ap-left text-uppercase">- McDonald’s Av. Fernão de Magalhães</p>
                         </div>
@@ -164,7 +164,7 @@
                         </div>
                     </div>
 
-                    <div class="row" id="access-points">
+                    <div class="access-points row">
                         <div class="departures-1 half">
                             <div class="row">
                                 <div class="col-md-6 text-left pb-3">
@@ -214,7 +214,7 @@
                     <p class="price">desde 10€</p>
                 </div>
     
-                <div class="col-sm-8 leiria" id="city-details">
+                <div class="city-details col-sm-8 leiria">
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="directions">
@@ -235,7 +235,7 @@
                         </div>
                     </div>
     
-                    <div class="row" id="access-points">
+                    <div class="access-points row">
                         <div class="col p-3">
                             <p class="ap-left text-uppercase">- Largo da República</p>
                         </div>
@@ -246,7 +246,7 @@
                         </div>
                     </div>
     
-                    <div class="row" id="access-points">
+                    <div class="access-points row">
                         <div class="departures-1 half">
                             <div class="row">
                                 <div class="col-md-6 text-left pb-3">
