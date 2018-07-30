@@ -20,4 +20,12 @@
         Sys.WebForms.PageRequestManager.getInstance().add_endRequest(AjaxEnd);
         Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(AjaxBegin);
     }
+
+    function AjaxEnd(sender, args) {
+        $.unblockUI();
+    }
+
+    function AjaxBegin(sender, args) {
+        $.blockUI();
+    }
 }
