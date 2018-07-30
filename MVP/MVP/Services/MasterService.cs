@@ -60,8 +60,17 @@ namespace MVP.Services
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = true;
-                msg.Subject = "[YOYOLOOP] Please confirm your email";
-                msg.Body = "Please confirm your email by clicking <a href=\"" + callbackUrl + "\">here</a>.";
+                msg.Subject = "Bem-vindo à Yoyoloop!";
+                msg.Body = "Bem-vindo à Yoyoloop!<br />";
+                msg.Body += "<br />";
+                msg.Body += "Por favor confirma o teu endereço de email, clicando <a href=\"" + callbackUrl + "\">aqui</a>.<br />";
+                msg.Body += "<br />";
+                msg.Body += "Porque razão tenho de confirmar o meu email?<br />";
+                msg.Body += "<br />";
+                msg.Body += "<ul><li>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</li></ul>";
+                msg.Body += "<br />";
+                msg.Body += "Obrigado pela tua preferência!<br />";
+                msg.Body += "A equipa Yoyoloop.";
                 msg.To.Add(email);
                 msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
                 client.Send(msg);
