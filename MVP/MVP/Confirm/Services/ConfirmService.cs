@@ -79,37 +79,29 @@ namespace MVP.Services
         public void SendTicket(ConfirmDTO state)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                IsBodyHtml = true
-            };
+                msg.IsBodyHtml = true;
+                msg.Subject = "A sua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
 
-            msg.Subject = "A sua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
+                string body = "Caro " + state.UserContactName + ",";
+                body += "<br />";
+                body += "<br />A sua viagem está confirmada.<br />";
+                body += "<br />Código do bilhete: <h1>" + state.TicketCode.ToUpper() + "</h1>";
+                body += "<br />DETALHES DA VIAGEM:";
+                body += "<br />Origem: " + state.StartRegionName + " (" + state.StartAPName + ")";
+                body += "<br />Destino: " + state.EndRegionName + " (" + state.EndAPName + ")";
+                body += "<br />Hora: " + state.StartTime.ToString("R");
+                body += "<br />Lugares: " + state.Seats.ToString();
+                body += "<br />";
+                body += "<br />Pode fazer download do seu bilhete <a href=\"" + state.TicketURL + "\">aqui</a>.";
 
-            string body = "Caro " + state.UserContactName + ",";
-            body += "<br />";
-            body += "<br />A sua viagem está confirmada.<br />";
-            body += "<br />Código do bilhete: <h1>" + state.TicketCode.ToUpper() + "</h1>";
-            body += "<br />DETALHES DA VIAGEM:";
-            body += "<br />Origem: " + state.StartRegionName + " (" + state.StartAPName + ")";
-            body += "<br />Destino: " + state.EndRegionName + " (" + state.EndAPName + ")";
-            body += "<br />Hora: " + state.StartTime.ToString("R");
-            body += "<br />Lugares: " + state.Seats.ToString();
-            body += "<br />";
-            body += "<br />Pode fazer download do seu bilhete <a href=\"" + state.TicketURL + "\">aqui</a>.";
+                msg.Body = body;
 
-            msg.Body = body;
+                msg.To.Add(state.UserEmail);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
-            msg.To.Add(state.UserEmail);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
                 client.Send(msg);
-            }
-            finally
-            {
-                msg?.Dispose();
             }
         }
     }
