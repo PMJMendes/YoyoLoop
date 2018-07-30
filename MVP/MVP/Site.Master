@@ -76,7 +76,7 @@
                 <button class="navbar-toggler navbar-toggler-left" type="button" tabindex="-1" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-logo" href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
+                <a class="navbar-logo" OnClick="javascript:$.blockUI()" href="#"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
 
                 <asp:LoginView runat="server" ViewStateMode="Disabled">                
                     <AnonymousTemplate>
