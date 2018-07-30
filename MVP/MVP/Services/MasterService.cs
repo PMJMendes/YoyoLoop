@@ -77,14 +77,23 @@ namespace MVP.Services
             }
         }
 
-        public void SendResetPassword(string email, string callbackUrl)
+        public void SendResetPassword(string email, string callbackUrl, string homepageUrl)
         {
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = true;
-                msg.Subject = "[YOYOLOOP] Password reset confirmation";
-                msg.Body = "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>.";
+                msg.Subject = "Solicitada a recuperação de palavra-passe";
+                msg.Body = "Foi solicitada a recuperação de palavra-passe na tua conta da <a href=\"" + homepageUrl + "\">Yoyoloop</a>.<br />";
+                msg.Body += "<br />";
+                msg.Body += "Por favor altera a tua palavra-passe, clicando <a href=\"" + callbackUrl + "\">aqui</a>.<br />";
+                msg.Body += "<br />";
+                msg.Body += "Porque razão tenho de alterar a minha palavra passe?<br />";
+                msg.Body += "<br />";
+                msg.Body += "<ul><li>Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova paravra passe.</li></ul>";
+                msg.Body += "<br />";
+                msg.Body += "Obrigado pela tua preferência!<br />";
+                msg.Body += "A equipa Yoyoloop.";
                 msg.To.Add(msg.From);
                 msg.Bcc.Add(email);
                 msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
