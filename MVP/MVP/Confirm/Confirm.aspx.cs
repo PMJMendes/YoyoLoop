@@ -62,7 +62,8 @@ namespace MVP.Confirm
                         StartRegionName = "Start Region",
                         StartAPName = "Start AP",
                         EndRegionName = "End Region",
-                        EndAPName = "End AP"
+                        EndAPName = "End AP",
+                        InviteURL = "#"
                     };
 
                     HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
@@ -74,7 +75,10 @@ namespace MVP.Confirm
                     //Something went really terribly wrong here - email systems?
                     //Response.Redirect("/Calendar/Calendar");
                 }
-                pageData.TicketURL = Request.Url.Scheme + "://" + Request.Url.Authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
+                var scheme = Request.Url.Scheme;
+                var authority = Request.Url.Authority;
+                pageData.TicketURL = scheme + "://" + authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
+                pageData.InviteURL = scheme + "://" + authority + "/Profile/Invite";
             }
             else
             {
