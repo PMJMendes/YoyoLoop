@@ -20,15 +20,27 @@ namespace MVP.Account
         {
             string code = IdentityHelper.GetCodeFromRequest(Request);
             string userId = IdentityHelper.GetUserIdFromRequest(Request);
+            string book = HttpUtility.UrlDecode(Request.QueryString["bookid"]);
             if (code != null && userId != null)
             {
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var result = manager.ConfirmEmail(userId, code);
                 if (result.Succeeded)
                 {
-                    successPanel.Visible = true;
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Default.aspx';}, 5000);", true);
-                    return;
+                    if(book == null)
+                    {
+                        successPanel.Visible = true;
+                        redirectPanel.Visible = false;
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Default.aspx';}, 5000);", true);
+                        return;
+                    }
+                    else
+                    {
+                        successPanel.Visible = true;
+                        redirectPanel.Visible = true;
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Confirm/Confirm?Id=" + book + "';}, 5000);", true);
+                        return;
+                    }
                 }
             }
             successPanel.Visible = false;

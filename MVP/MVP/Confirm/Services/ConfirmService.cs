@@ -25,6 +25,7 @@ namespace MVP.Services
                 BookingId = Guid.Empty,
                 UserId = "",
                 UserEmail = "email@email.com",
+                UserEmailConfirmed = false,
                 Seats = 0,
                 Cost = 0,
                 TicketCode = "#MYTICKETYO",
@@ -57,12 +58,14 @@ namespace MVP.Services
                 }
                 else
                 {
+                    var user = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId);
                     var result = new ConfirmDTO
                     {
                         BookingId = booking.BookingId,
                         UserId = booking.UserId,
-                        UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email,
-                        UserContactName = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).ContactName,
+                        UserEmail = user.Email,
+                        UserEmailConfirmed = user.EmailConfirmed,
+                        UserContactName = user.ContactName,
                         Seats = booking.Seats,
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
@@ -99,6 +102,34 @@ namespace MVP.Services
                 body += "<br />";
                 body += "<br />Podes aceder ao teu bilhete em qualquer altura <a href='" + state.TicketURL + "'>aqui</a>.";
                 body += "<br />";
+                body += "<br />Convida amigos e viaja a 3€ <a href='" + state.InviteURL + "'>aqui</a>.";
+                body += "<br />";
+                body += "<br />Obrigado pela tua preferência!";
+                body += "<br />A equipa Yoyoloop.";
+
+                msg.Body = body;
+
+                msg.To.Add(state.UserEmail);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+                client.Send(msg);
+            }
+        }
+
+        public void SendUnconfirmedTicket(ConfirmDTO state, string callbackUrl)
+        {
+            SmtpClient client = new SmtpClient();
+            using (MailMessage msg = new MailMessage())
+            {
+                msg.IsBodyHtml = true;
+                msg.Subject = "A tua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
+
+                string body = "A tua viagem está confirmada.<br />";
+                body += "Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando <a href='" + callbackUrl + "'>aqui</a>.<br />";
+                body += "<br />";
+                body += "Porque razão tenho de confirmar o meu email?<br />";
+                body += "<br />";
+                body += "<ul><li>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</li></ul>";
                 body += "<br />Convida amigos e viaja a 3€ <a href='" + state.InviteURL + "'>aqui</a>.";
                 body += "<br />";
                 body += "<br />Obrigado pela tua preferência!";

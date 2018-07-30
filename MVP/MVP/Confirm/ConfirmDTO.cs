@@ -24,6 +24,7 @@ namespace MVP.Confirm
         public string EndAPLocation { get; set; }
 
         public string UserEmail { get; set; }
+        public bool UserEmailConfirmed { get; set; }
         public string UserContactName { get; set; }
 
         public string InviteURL { get; set; }
