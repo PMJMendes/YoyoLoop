@@ -285,7 +285,7 @@ namespace MVP.Services
                     }
                     else
                     {
-                        result.BookingValid = departures.Any();
+                        result.BookingValid = departures.Any(); // this doesn't work as a departure may already have a trip that didn't make it into the query
                     }
                 }
 
