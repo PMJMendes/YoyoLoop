@@ -21,7 +21,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css"/>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="<%= Context.VersionedContent("~/favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
 
     <!-- CSS -->
     <link href="<%= Context.VersionedContent("/css/bootstrap.min.css") %>"  rel="stylesheet">
