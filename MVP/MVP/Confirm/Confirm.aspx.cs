@@ -3,6 +3,7 @@ using System.Web;
 using MVP.Services;
 using Microsoft.AspNet.Identity;
 using System.Web.UI;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace MVP.Confirm
 {
@@ -54,6 +55,7 @@ namespace MVP.Confirm
                         BookingId = Guid.Empty,
                         UserId = "",
                         UserEmail = "email@email.com",
+                        UserEmailConfirmed = false,
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
@@ -79,6 +81,15 @@ namespace MVP.Confirm
                 var authority = Request.Url.Authority;
                 pageData.TicketURL = scheme + "://" + authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
                 pageData.InviteURL = scheme + "://" + authority + "/Profile/Invite";
+                if(!pageData.UserEmailConfirmed)
+                {
+                    var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                    var userid = User.Identity.GetUserId();
+                    string code = manager.GenerateEmailConfirmationToken(userid);
+                    string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, userid, Request);
+                    callbackUrl += "&bookid=" + pageData.BookingId;
+                    service.SendUnconfirmedTicket(pageData, callbackUrl);
+                }
             }
             else
             {
@@ -95,6 +106,16 @@ namespace MVP.Confirm
         protected void btnSMS_Click(object sender, EventArgs e)
         {
             Page.ClientScript.GetPostBackEventReference(new PostBackOptions(this));
+        }
+
+        protected void btnConfirmEmail_Click(object sender, EventArgs e)
+        {
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var userid = User.Identity.GetUserId();
+            string code = manager.GenerateEmailConfirmationToken(userid);
+            string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, userid, Request);
+            callbackUrl += "&bookid=" + pageData.BookingId;
+            service.SendUnconfirmedTicket(pageData, callbackUrl);
         }
     }
 }
