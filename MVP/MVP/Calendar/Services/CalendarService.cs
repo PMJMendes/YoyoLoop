@@ -91,6 +91,7 @@ namespace MVP.Services
 
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
+            var seats = state.Selection.Seats;
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
@@ -104,11 +105,13 @@ namespace MVP.Services
                 return result;
             }
 
-            if (!departures.Where(d => d.Occupancy < capacity).Any())
+            double ocup = (double)departures.Max(d => d.Occupancy) / (double)capacity;
+
+            if(lastminute && ocup == 0)
             {
-                result.Status = SlotStatus.BLACK;
+                result.Status = SlotStatus.NONE;
             }
-            else if (lastminute && departures.Where(d => d.Occupancy > 0 && !(d.Occupancy < capacity)).Any()) 
+            else if (lastminute && !departures.Where(d => d.Occupancy > 0 && (d.Occupancy + seats) <= capacity).Any())
             {
                 result.Status = SlotStatus.BLACK;
             }
@@ -116,9 +119,12 @@ namespace MVP.Services
             {
                 result.Status = SlotStatus.NONE;
             }
+            else if (!departures.Where(d => (d.Occupancy + seats) <= capacity).Any())
+            {
+                result.Status = SlotStatus.BLACK;
+            }
             else
             {
-                double ocup = (double)departures.Max(d => d.Occupancy) / (double)capacity;
                 if (ocup > 0.5)
                 {
                     result.Status = SlotStatus.RED;
@@ -126,10 +132,6 @@ namespace MVP.Services
                 else if (ocup > 0.25)
                 {
                     result.Status = SlotStatus.YELLOW;
-                }
-                else if (ocup == 0 && lastminute)
-                {
-                    result.Status = SlotStatus.NONE;
                 }
                 else
                 {
