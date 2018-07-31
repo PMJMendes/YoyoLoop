@@ -75,7 +75,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("0991CF9B-8628-4D51-9F7E-5DD62FDF40D5"),
                 Active = true,
                 Name = "Saldanha",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.2048154685012!2d-9.145343684245876!3d38.73606197959589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a055573db3%3A0xa8537ae3be555261!2sEstacionamento+Arco+do+Cego!5e0!3m2!1sen!2spt!4v1520944686536",
+                GoogleLocation = "https://goo.gl/maps/Vm8sMmDoaDS2",
                 Region = lis,
                 Default = true
             });
@@ -84,7 +84,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("C69A4ABB-3283-44F6-95AD-84B19AFA4293"),
                 Active = true,
                 Name = "Marquês de Pombal",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6877276049668!2d-9.153011484246155!3d38.72497787959761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933772ddf7079%3A0xbd88fe8d5ed78a8f!2sMarqu%C3%AAs+de+Pombal!5e0!3m2!1sen!2spt!4v1520944882384",
+                GoogleLocation = "https://goo.gl/maps/saiy8vbjEN42",
                 Region = lis
             });
             context.AccessPoint.AddOrUpdate(new AccessPoint()
@@ -92,7 +92,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("9835BEEC-B58B-4346-916C-AE066306DF30"),
                 Active = true,
                 Name = "Amoreiras",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.7653897715336!2d-9.164212184246127!3d38.72319507959786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19336f4880d94b%3A0xfa49cdd80dee6e0f!2sAmoreiras+Shopping+Center!5e0!3m2!1sen!2spt!4v1520944957439",
+                GoogleLocation = "https://goo.gl/maps/FQRZMpoyoQp",
                 Region = lis
             });
             context.AccessPoint.AddOrUpdate(new AccessPoint()
@@ -100,7 +100,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("EB786761-3F2F-4FEE-B8C5-8F4E6F61DC9A"),
                 Active = true,
                 Name = "Oriente",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.8195655014065!2d-9.10153358424507!3d38.76784227959075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193187d114c809%3A0xbe2b7b794170743e!2zRXN0YcOnw6NvIGRvIE9yaWVudGU!5e0!3m2!1sen!2spt!4v1520945058596",
+                GoogleLocation = "https://goo.gl/maps/QQwEhoDLE6p",
                 Region = lis
             });
 
@@ -109,7 +109,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("21BB4238-89AA-4770-B11B-C48D3C3875F8"),
                 Active = true,
                 Name = "Largo da República",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.939306646181!2d-8.812437284221797!3d39.74101417944929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd227368de1d62c1%3A0x2db0b26cb97cb3e2!2sLargo+da+Rep%C3%BAblica%2C+2400-137+Leiria!5e0!3m2!1sen!2spt!4v1520945189527",
+                GoogleLocation = "https://goo.gl/maps/x7tQLhReEMD2",
                 Region = lei,
                 Default = true
             });
@@ -119,7 +119,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("6E6277BB-B589-44E7-88CC-AC5AF8FC77E5"),
                 Active = true,
                 Name = "McDonald's Fernão Magalhães",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.6394507403716!2d-8.439764484210219!3d40.21708247938885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f91ce79f4b93%3A0x9336a37fbc5659a5!2sMcDonald&#39;s+Coimbra+Fern%C3%A3o+Magalh%C3%A3es!5e0!3m2!1sen!2spt!4v1520945436513",
+                GoogleLocation = "https://goo.gl/maps/wdaXE2mCVW32",
                 Region = coi,
                 Default = true
             });
@@ -129,7 +129,7 @@ namespace MVP.Migrations
                 AccessPointId = Guid.Parse("D58C109A-26A4-4578-8996-79859089A0AC"),
                 Active = true,
                 Name = "E.Leclerc SD Rana",
-                GoogleLocation = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.3628319905233!2d-9.332556684246455!3d38.70947797959993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf25912024f1%3A0xd5643e4a38faa7de!2sE.Leclerc+Caisdis%2C+Sociedade+de+Distribui%C3%A7%C3%A3o+S.A!5e0!3m2!1sen!2spt!4v1520945557352",
+                GoogleLocation = "https://goo.gl/maps/FHHzBfdFzc42",
                 Region = cas,
                 Default = true
             });
