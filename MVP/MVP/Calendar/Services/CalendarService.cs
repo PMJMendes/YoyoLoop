@@ -198,11 +198,11 @@ namespace MVP.Services
                     EndAPName = d.Key.DAP.Name,
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
-                        Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
+                        Status = lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
                                  date + dt.Departure.Time < threshold ? SlotStatus.NONE :
+                                 dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
                                  dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
                                  dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
-                                 lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
                                  SlotStatus.GREEN
                     }).OrderBy(ts => ts.Departure.Time).ToList()
                 }).ToList();
