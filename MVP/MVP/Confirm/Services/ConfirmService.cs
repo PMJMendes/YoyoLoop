@@ -32,8 +32,10 @@ namespace MVP.Services
                 StartTime = DateTime.Now,
                 StartRegionName = "Start Region",
                 StartAPName = "Start AP",
+                StartAPLocation = "#",
                 EndRegionName = "End Region",
-                EndAPName = "End AP"
+                EndAPName = "End AP",
+                EndAPLocation = "#"
             };
             return result;
         }
@@ -68,8 +70,11 @@ namespace MVP.Services
                         StartTime = booking.Trip.StartTime,
                         StartRegionName = booking.Trip.StartAccessPoint.Region.Name,
                         StartAPName = booking.Trip.StartAccessPoint.Name,
+                        StartAPLocation = booking.Trip.StartAccessPoint.GoogleLocation,
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
-                        EndAPName = booking.Trip.EndAccessPoint.Name
+                        EndAPName = booking.Trip.EndAccessPoint.Name,
+                        EndAPLocation = booking.Trip.EndAccessPoint.GoogleLocation,
+                        InviteURL = "#"
                     };
                     return result;
                 }
@@ -79,37 +84,32 @@ namespace MVP.Services
         public void SendTicket(ConfirmDTO state)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                IsBodyHtml = true
-            };
+                msg.IsBodyHtml = true;
+                msg.Subject = "A tua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
 
-            msg.Subject = "A sua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
+                string body = "A tua viagem está confirmada.<br />";
+                body += "Código do bilhete: " + state.TicketCode.ToUpper() + "<br />";
+                body += "<br />Data: " + state.StartTime.ToString("R");
+                body += "<br />Origem: " + state.StartRegionName + " (<a href='" + state.StartAPLocation + "'>" + state.StartAPName + "</a>)";
+                body += "<br />Destino: " + state.EndRegionName + " (<a href='" + state.EndAPLocation + "'>" + state.EndAPName + "</a>)";
+                body += "<br />Lugares: " + state.Seats.ToString();
+                body += "<br />Preço Final: " + state.Cost.ToString("C");
+                body += "<br />";
+                body += "<br />Podes aceder ao teu bilhete em qualquer altura <a href='" + state.TicketURL + "'>aqui</a>.";
+                body += "<br />";
+                body += "<br />Convida amigos e viaja a 3€ <a href='" + state.InviteURL + "'>aqui</a>.";
+                body += "<br />";
+                body += "<br />Obrigado pela tua preferência!";
+                body += "<br />A equipa Yoyoloop.";
 
-            string body = "Caro " + state.UserContactName + ",";
-            body += "<br />";
-            body += "<br />A sua viagem está confirmada.<br />";
-            body += "<br />Código do bilhete: <h1>" + state.TicketCode.ToUpper() + "</h1>";
-            body += "<br />DETALHES DA VIAGEM:";
-            body += "<br />Origem: " + state.StartRegionName + " (" + state.StartAPName + ")";
-            body += "<br />Destino: " + state.EndRegionName + " (" + state.EndAPName + ")";
-            body += "<br />Hora: " + state.StartTime.ToString("R");
-            body += "<br />Lugares: " + state.Seats.ToString();
-            body += "<br />";
-            body += "<br />Pode fazer download do seu bilhete <a href=\"" + state.TicketURL + "\">aqui</a>.";
+                msg.Body = body;
 
-            msg.Body = body;
+                msg.To.Add(state.UserEmail);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
-            msg.To.Add(state.UserEmail);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
                 client.Send(msg);
-            }
-            finally
-            {
-                msg?.Dispose();
             }
         }
     }

@@ -275,50 +275,42 @@ namespace MVP.Services
         public void SendInvoice(CheckoutDTO state)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                IsBodyHtml = false
-            };
+                msg.IsBodyHtml = false;
+                msg.Subject = "[YOYOLOOP] INVOICE: " + state.BookingId.ToString().Substring(0, 8);
 
-            msg.Subject = "[YOYOLOOP] INVOICE: " + state.BookingId.ToString().Substring(0, 8);
+                string body = "Data: " + DateTime.Now.ToString("R");
+                body += "\r\nBooking ID: " + state.BookingId.ToString();
+                body += "\r\nUser: " + state.UserEmail;
+                body += "\r\n";
+                body += "\r\nDETALHES DA VIAGEM:";
+                body += "\r\nOrigem: " + state.StartRegionName + " (" + state.StartAPName + ")";
+                body += "\r\nDestino: " + state.EndRegionName + " (" + state.EndAPName + ")";
+                body += "\r\nHora: " + state.StartTime.ToString("R");
+                body += "\r\nLugares: " + state.Seats.ToString();
+                body += "\r\n";
+                body += "\r\nDETALHES DO PAGAMENTO:";
+                body += "\r\nTarifa: " + state.FareType.ToString();
+                body += "\r\nPromocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
+                body += "\r\nStripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
+                body += "\r\nValor pago: " + state.Cost.ToString() + "€";
+                body += "\r\n";
+                body += "\r\nDADOS DE FACTURAÇÃO:";
+                body += "\r\nNome: " + state.Invoice.Name;
+                body += "\r\nEmpresa: " + state.Invoice.Company;
+                body += "\r\nNIF: " + state.Invoice.NIF;
+                body += "\r\nMorada: " + state.Invoice.Adress;
+                body += "\r\nCód. Postal: " + state.Invoice.ZIP;
+                body += "\r\nCidade: " + state.Invoice.City;
+                body += "\r\n";
 
-            string body = "Data: " + DateTime.Now.ToString("R");
-            body += "\r\nBooking ID: " + state.BookingId.ToString();
-            body += "\r\nUser: " + state.UserEmail;
-            body += "\r\n";
-            body += "\r\nDETALHES DA VIAGEM:";
-            body += "\r\nOrigem: " + state.StartRegionName + " (" + state.StartAPName + ")";
-            body += "\r\nDestino: " + state.EndRegionName + " (" + state.EndAPName + ")";
-            body += "\r\nHora: " + state.StartTime.ToString("R");
-            body += "\r\nLugares: " + state.Seats.ToString();
-            body += "\r\n";
-            body += "\r\nDETALHES DO PAGAMENTO:";
-            body += "\r\nTarifa: " + state.FareType.ToString();
-            body += "\r\nPromocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
-            body += "\r\nStripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
-            body += "\r\nValor pago: " + state.Cost.ToString() + "€";
-            body += "\r\n";
-            body += "\r\nDADOS DE FACTURAÇÃO:";
-            body += "\r\nNome: " + state.Invoice.Name;
-            body += "\r\nEmpresa: " + state.Invoice.Company;
-            body += "\r\nNIF: " + state.Invoice.NIF;
-            body += "\r\nMorada: " + state.Invoice.Adress;
-            body += "\r\nCód. Postal: " + state.Invoice.ZIP;
-            body += "\r\nCidade: " + state.Invoice.City;
-            body += "\r\n";
+                msg.Body = body;
 
-            msg.Body = body;
+                msg.To.Add(WebConfigurationManager.AppSettings["InvoiceProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
-            msg.To.Add(WebConfigurationManager.AppSettings["InvoiceProviderEmail"]);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
                 client.Send(msg);
-            }
-            finally
-            {
-                msg?.Dispose();
             }
         }
     }
