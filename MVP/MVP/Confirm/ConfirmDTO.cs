@@ -18,10 +18,14 @@ namespace MVP.Confirm
         public DateTime StartTime { get; set; }
         public string StartRegionName { get; set; }
         public string StartAPName { get; set; }
+        public string StartAPLocation { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
+        public string EndAPLocation { get; set; }
 
         public string UserEmail { get; set; }
         public string UserContactName { get; set; }
+
+        public string InviteURL { get; set; }
     }
 }

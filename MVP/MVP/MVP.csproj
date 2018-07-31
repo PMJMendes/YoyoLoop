@@ -394,6 +394,7 @@
     <Content Include="img\discover%402x.png" />
     <Content Include="img\discover%403x.png" />
     <Content Include="img\discover.png" />
+    <Content Include="img\double-ring-1s-200px.gif" />
     <Content Include="img\download%402x.png" />
     <Content Include="img\download%403x.png" />
     <Content Include="img\download.png" />

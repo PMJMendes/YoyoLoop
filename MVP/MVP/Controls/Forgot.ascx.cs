@@ -29,7 +29,8 @@ namespace MVP.Controls
 
             string code = manager.GeneratePasswordResetToken(user.Id);
             string callbackUrl = IdentityHelper.GetResetPasswordRedirectUrl(code, Request);
-            service.SendResetPassword(user.Email, callbackUrl);
+            string homepageUrl = Request.Url.Scheme + "://" + Request.Url.Authority;
+            service.SendResetPassword(user.Email, callbackUrl, homepageUrl);
             DisplayEmail.Visible = true;
             btnForgot.Enabled = false;
             ScriptManager.RegisterStartupScript(upForgot, upForgot.GetType(), "forgotPostBackKey", "__doPostBack('" + UniqueID + "', '');", true);
