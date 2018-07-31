@@ -91,6 +91,7 @@ namespace MVP.Services
 
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
+            var seats = state.Selection.Seats;
             var dayType = GetDayType(date);
             var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
@@ -104,11 +105,13 @@ namespace MVP.Services
                 return result;
             }
 
-            if (!departures.Where(d => d.Occupancy < capacity).Any())
+            double ocup = (double)departures.Max(d => d.Occupancy) / (double)capacity;
+
+            if(lastminute && ocup == 0)
             {
-                result.Status = SlotStatus.BLACK;
+                result.Status = SlotStatus.NONE;
             }
-            else if (lastminute && departures.Where(d => d.Occupancy > 0 && !(d.Occupancy < capacity)).Any()) 
+            else if (lastminute && !departures.Where(d => d.Occupancy > 0 && (d.Occupancy + seats) <= capacity).Any())
             {
                 result.Status = SlotStatus.BLACK;
             }
@@ -116,9 +119,12 @@ namespace MVP.Services
             {
                 result.Status = SlotStatus.NONE;
             }
+            else if (!departures.Where(d => (d.Occupancy + seats) <= capacity).Any())
+            {
+                result.Status = SlotStatus.BLACK;
+            }
             else
             {
-                double ocup = (double)departures.Max(d => d.Occupancy) / (double)capacity;
                 if (ocup > 0.5)
                 {
                     result.Status = SlotStatus.RED;
@@ -126,10 +132,6 @@ namespace MVP.Services
                 else if (ocup > 0.25)
                 {
                     result.Status = SlotStatus.YELLOW;
-                }
-                else if (ocup == 0 && lastminute)
-                {
-                    result.Status = SlotStatus.NONE;
                 }
                 else
                 {
@@ -196,11 +198,11 @@ namespace MVP.Services
                     EndAPName = d.Key.DAP.Name,
                     Times = d.Select(dt => new TimeSlot {
                         Departure = dt.Departure,
-                        Status = dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
+                        Status = lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
                                  date + dt.Departure.Time < threshold ? SlotStatus.NONE :
+                                 dt.Occupancy + state.Selection.Seats > capacity ? SlotStatus.BLACK :
                                  dt.Occupancy > (double)capacity * 0.5 ? SlotStatus.RED :
                                  dt.Occupancy > (double)capacity * 0.25 ? SlotStatus.YELLOW :
-                                 lastminute && dt.Occupancy == 0 ? SlotStatus.NONE :
                                  SlotStatus.GREEN
                     }).OrderBy(ts => ts.Departure.Time).ToList()
                 }).ToList();
@@ -240,13 +242,11 @@ namespace MVP.Services
                                                             d.DayType == dayType &&
                                                             d.Time == state.Selection.Time
                                                        )
-                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => (t.Status == TripStatus.PENDING || t.Status == TripStatus.BOOKED) &&
-                                                                              t.StartTime == starttime &&
-                                                                              t.StartTime >= threshold &&
-                                                                              t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
-                                                                              t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
-                                                                              t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity
-                                                                         ),
+                    .GroupJoin(model.Trip.Include(t => t.Bookings)
+                                         .Include(t => t.Departure).Where(t => (t.Status == TripStatus.PENDING || t.Status == TripStatus.BOOKED) &&
+                                                                                t.Departure.Route.RouteId == state.Selection.Route.RouteId &&
+                                                                                t.StartTime == starttime 
+                                                                                ),
                         d => d,
                         t => t.Departure,
                         (d, ts) => new { Departure = d, Trips = ts }
@@ -277,13 +277,18 @@ namespace MVP.Services
                 }
                 else
                 {
+                    var tripsvalid = departures.Any(d => d.Trips.Any(t => t.StartTime >= threshold &&
+                                                                          t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
+                                                                          t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
+                                                                          t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity));
                     if (lastminute)
                     {
-                        result.BookingValid = departures.Any(t => t.Trips.Any());
+                        result.BookingValid = tripsvalid;
                     }
                     else
                     {
-                        result.BookingValid = departures.Any();
+                        result.BookingValid = departures.Any(d => !d.Trips.Any()) || tripsvalid;
+                                              
                     }
                 }
 
