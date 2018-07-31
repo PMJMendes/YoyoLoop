@@ -242,13 +242,11 @@ namespace MVP.Services
                                                             d.DayType == dayType &&
                                                             d.Time == state.Selection.Time
                                                        )
-                    .GroupJoin(model.Trip.Include(t => t.Bookings).Where(t => (t.Status == TripStatus.PENDING || t.Status == TripStatus.BOOKED) &&
-                                                                              t.StartTime == starttime &&
-                                                                              t.StartTime >= threshold &&
-                                                                              t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
-                                                                              t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
-                                                                              t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity
-                                                                         ),
+                    .GroupJoin(model.Trip.Include(t => t.Bookings)
+                                         .Include(t => t.Departure).Where(t => (t.Status == TripStatus.PENDING || t.Status == TripStatus.BOOKED) &&
+                                                                                t.Departure.Route.RouteId == state.Selection.Route.RouteId &&
+                                                                                t.StartTime == starttime 
+                                                                                ),
                         d => d,
                         t => t.Departure,
                         (d, ts) => new { Departure = d, Trips = ts }
@@ -279,13 +277,18 @@ namespace MVP.Services
                 }
                 else
                 {
+                    var tripsvalid = departures.Any(d => d.Trips.Any(t => t.StartTime >= threshold &&
+                                                                          t.StartAccessPoint.AccessPointId == state.Selection.SAP.AccessPointId &&
+                                                                          t.EndAccessPoint.AccessPointId == state.Selection.DAP.AccessPointId &&
+                                                                          t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats) + state.Selection.Seats <= capacity));
                     if (lastminute)
                     {
-                        result.BookingValid = departures.Any(t => t.Trips.Any());
+                        result.BookingValid = tripsvalid;
                     }
                     else
                     {
-                        result.BookingValid = departures.Any(); // this doesn't work as a departure may already have a trip that didn't make it into the query
+                        result.BookingValid = departures.Any(d => !d.Trips.Any()) || tripsvalid;
+                                              
                     }
                 }
 
