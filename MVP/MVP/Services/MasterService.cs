@@ -291,7 +291,7 @@ namespace MVP.Services
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
-                msg.IsBodyHtml = false;
+                msg.IsBodyHtml = true;
                 msg.Subject = "[YOYOLOOP] Lista de Passageiros - Viagem: " + tripid.ToString().Substring(0, 8);
 
                 string body = string.Empty;
@@ -306,23 +306,23 @@ namespace MVP.Services
                     int ocup = trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
                     int free = capacity - ocup;
 
-                    body += "\r\nDETALHES DA VIAGEM:";
-                    body += "\r\nOrigem: " + trip.StartAccessPoint.Region.Name + " (" + trip.StartAccessPoint.Name + ")";
-                    body += "\r\nDestino: " + trip.EndAccessPoint.Region.Name + " (" + trip.EndAccessPoint.Name + ")";
-                    body += "\r\nHora: " + trip.StartTime.ToString("R");
-                    body += "\r\n";
-                    body += "\r\nOCUPAÇÃO:";
-                    body += "\r\nTotal de lugares: " + capacity.ToString();
-                    body += "\r\nLugares ocupados: " + ocup.ToString();
-                    body += "\r\nLugares disponíveis para venda: " + free.ToString();
-                    body += "\r\n";
-                    body += "\r\nPASSAGEIROS:";
+                    body += "<br />DETALHES DA VIAGEM:";
+                    body += "<br />Origem: " + trip.StartAccessPoint.Region.Name + " (<a href='" + trip.StartAccessPoint.GoogleLocation + "'>" + trip.StartAccessPoint.Name + "</a>)";
+                    body += "<br />Destino: " + trip.EndAccessPoint.Region.Name + " (<a href='" + trip.EndAccessPoint.GoogleLocation + "'>" + trip.EndAccessPoint.Name + "</a>)";
+                    body += "<br />Hora: " + trip.StartTime.ToString("R");
+                    body += "<br />";
+                    body += "<br />OCUPAÇÃO:";
+                    body += "<br />Total de lugares: " + capacity.ToString();
+                    body += "<br />Lugares ocupados: " + ocup.ToString();
+                    body += "<br />Lugares disponíveis para venda: " + free.ToString();
+                    body += "<br />";
+                    body += "<br />PASSAGEIROS:";
                     foreach (Booking b in trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
                     {
                         string contactname = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.ContactName;
                         string username = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.UserName;
-                        body += "\r\n" + contactname + " (" + username + "), " + b.Seats.ToString() + " lugar(es), Codigo: " + b.TicketCode.ToUpper();
-                        body += "\r\n";
+                        body += "<br />" + contactname + " (" + username + "), " + b.Seats.ToString() + " lugar(es), Codigo: " + b.TicketCode.ToUpper();
+                        body += "<br />";
                     }
                 }
 
