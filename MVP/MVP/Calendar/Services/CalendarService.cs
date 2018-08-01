@@ -115,7 +115,7 @@ namespace MVP.Services
             {
                 result.Status = SlotStatus.BLACK;
             }
-            else if (date == DateTime.Today && !departures.Where(d => d.Departure.Time < threshold).Any())
+            else if (date == DateTime.Today && !departures.Where(d => d.Departure.Time > threshold).Any())
             {
                 result.Status = SlotStatus.NONE;
             }
