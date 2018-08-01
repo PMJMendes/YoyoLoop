@@ -270,6 +270,7 @@
     <Content Include="Controls\DropdownFixed.ascx" />
     <Content Include="Controls\Forgot.ascx" />
     <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\Message.ascx" />
     <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -614,6 +615,7 @@
     <Content Include="Scripts\Custom\blockUI-extension.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
     <Content Include="Scripts\Custom\profile-menu-popover.js" />
+    <Content Include="Scripts\Custom\show-message.js" />
     <Content Include="Scripts\Custom\show-popover.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -699,6 +701,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
+    <Content Include="Test.aspx" />
     <Content Include="Ticket\Ticket.aspx" />
     <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="Update.aspx" />
@@ -935,6 +938,13 @@
     <Compile Include="Controls\Login.ascx.designer.cs">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Message.ascx.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Message.ascx.designer.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Register.ascx.cs">
       <DependentUpon>Register.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1073,6 +1083,7 @@
     <Compile Include="Models\EntityModel.cs" />
     <Compile Include="Models\Extensions\ContextExtensions.cs" />
     <Compile Include="Models\Extensions\IdentityExtensions.cs" />
+    <Compile Include="Models\Helpers\ApplicationHelpers.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="MyTrips\MyTrips.aspx.cs">
       <DependentUpon>MyTrips.aspx</DependentUpon>
@@ -1148,6 +1159,13 @@
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\MasterService.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ticket\Services\TicketService.cs" />
     <Compile Include="Ticket\Ticket.aspx.cs">
       <DependentUpon>Ticket.aspx</DependentUpon>
