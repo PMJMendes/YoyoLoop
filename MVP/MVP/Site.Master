@@ -21,7 +21,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css"/>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="<%= Context.VersionedContent("~/favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
 
     <!-- CSS -->
     <link href="<%= Context.VersionedContent("/css/bootstrap.min.css") %>"  rel="stylesheet">
@@ -46,7 +46,7 @@
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Path ="~/vendor/bootstrap/js/bootstrap.bundle.min.js" />
                 <asp:ScriptReference Name="respond" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
@@ -63,7 +63,7 @@
 
         <!-- BLOCKUI DIV -->
         <div id="divBlockUI" style="display:none;"> 
-            <h1>We are processing your request.  Please be patient.</h1> 
+            <img src="/img/double-ring-1s-200px.gif" />
         </div> 
 
         <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
@@ -73,17 +73,30 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">
             <div class="container-fluid">
-                <a class="navbar-logo" href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-left" type="button" tabindex="-1" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-logo" href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
+
+                <asp:LoginView runat="server" ViewStateMode="Disabled">                
+                    <AnonymousTemplate>
+                        <div class="placeholder">
+                        </div>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <a class="navbar-toggler navbar-toggler-right profile-menu-anchor" tabindex="-1">
+                            <img class="profile-menu__btn" src="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x, /img/userprofile-red@3x.png 3x">
+                        </a>
+                    </LoggedInTemplate>
+                </asp:LoginView>
+
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="d-flex align-items-center navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Calendar/Calendar">Loops & horarios</a>
+                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Pages/Loops">Loops & horarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" href="#services">Destinos</a>
+                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Pages/Destinos">Destinos</a>
                         </li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
@@ -96,7 +109,7 @@
                                     <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips">As minhas viagens</a>
                                 </li>
                                 <li class="nav-item my-auto">
-                                    <a id="ProfileMenuLink" tabindex="-1">
+                                    <a class="profile-desktop profile-menu-anchor"tabindex="-1">
                                         <img class="profile-menu__btn" src="/img/userprofile-red.png" srcset="/img/userprofile-red@2x.png 2x, /img/userprofile-red@3x.png 3x">
                                     </a>
                                 </li>

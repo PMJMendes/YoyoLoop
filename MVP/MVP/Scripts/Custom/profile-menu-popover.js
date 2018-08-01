@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#ProfileMenuLink').popover({
+    $('.profile-menu-anchor').popover({
         container: 'body',
         html: true,
         placement: 'bottom',

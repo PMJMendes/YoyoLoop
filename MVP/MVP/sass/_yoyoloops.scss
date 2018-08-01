@@ -1,0 +1,250 @@
+$mobile: "(max-width: 767.98px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$laptop: "(min-width: 1024px) and (max-width: 1439px)";
+$desktop: "(min-width: 1440px)";
+
+section.yoyoloops {
+    padding-bottom: 0;
+
+    .loop-desktop {
+        display: flex!important;
+    }
+
+    .loop-mobile {
+        display: none!important;
+    }
+
+    @media #{$mobile} {
+        .loop-desktop {
+            display: none!important;
+        }
+
+        .loop-mobile {
+            display: flex!important;
+        }
+    }
+
+    .city {
+        background-color: #eff1f6;
+        padding: 5% 0% 5% 8%;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .loop {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.60;
+            letter-spacing: 1.8px;
+            color: #838da7;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img {
+                width: 30px;
+                height: auto;
+                margin-right: 2%;
+            }
+        }
+
+        .name {
+            font-size: 74px;
+            color: #ff5f6d;
+
+            @media (max-width: 1200px) {
+                font-size: 50px;
+            }
+        }
+
+        .price {
+            font-size: 38px;
+            color: #535e7b;
+
+            @media (max-width: 1200px) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            margin-bottom: 4%;
+        }
+
+        p:last-child {
+            margin-bottom: 0px;
+        }
+
+        &.right-side {
+            padding: 5% 8% 5% 0%;
+
+            p:first-child {
+                display: block;
+            }
+        }
+    }
+
+    .cascais {
+        background-image: url('/img/cascais.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    .coimbra {
+        background-image: url('/img/coimbra.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    .leiria {
+        background-image: url('/img/leiria.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    .city-details {
+        padding: 1% 5% 0% 5%;
+
+        @media (max-width: 1200px) {
+            padding-bottom: 2%;
+        }
+
+        .directions {
+            display: flex;
+            justify-content: space-between;
+
+            div:first-child {
+                margin-left: 10%;
+            }
+
+            div:last-child {
+                margin-right: 10%;
+            }
+        }
+
+        img {
+            margin: 5%;
+
+            &.stop {
+                width: 40px;
+                height: 50px;
+                margin-bottom: 0%;
+            }
+
+            &.arrow {
+                width: 125px;
+                height: 40px;
+                margin: 0% 5%;
+
+                @media (max-width: 992px) {
+                    width: 80px;
+                    height: 25px;
+                }
+            }
+        }
+
+        p.city-name {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.44;
+            letter-spacing: 2px;
+        }
+
+        .access-points {
+            color: white;
+            font-size: 10px;
+            line-height: 1.89;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            p.ap-right {
+                margin-left: 30%;
+
+                @media (max-width: 768px) {
+                    margin-left:20%
+                }
+            }
+
+            p.timeline-left {
+                color: #ff5f6d;
+            }
+
+            p.timeline-right {
+                color: #ffcc66;
+            }
+            p.day-of-week {
+                color: #ffffff
+            }
+        }
+
+        .departures-1,
+        .departures-2 {
+            font-size: 12px;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.89;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .departures-1 {
+            padding-right: 15%;
+
+            p {
+                padding-right: 0;
+            }
+
+            @media (max-width: 1200px) {
+                padding-right: 5%;
+                font-size: 10px;
+            }
+
+            @media (min-width: 992px) {
+                padding-right: 10%;
+            }
+        }
+        .departures-2 {
+            padding-left: 20%;
+
+            @media (max-width: 1200px) {
+                padding-left: 10%;
+                font-size: 10px;
+            }
+
+            @media (min-width: 992px) {
+                padding-left: 15%;
+            }
+        }
+
+        .half {
+            width: 50%;
+        }
+    }
+
+    .btn-book {
+        color: white;
+        width: 136px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #ff5f6d;
+    }
+}

@@ -32,6 +32,10 @@ $desktop: "(min-width: 1440px)";
         padding-left: 60px;
         padding-right: 40px;
 
+        @media #{$mobile} {
+            padding: 0 !important;
+        }
+
         &--first {
             height: 1000px;
             background: red;
@@ -50,9 +54,7 @@ $desktop: "(min-width: 1440px)";
             padding-top: 30px;
         }
     }
-    
     // Section One stylings
-   
     // Section two stylings
     &__yoyoloop-main-description {
         font-size: 38px;
@@ -109,9 +111,7 @@ $desktop: "(min-width: 1440px)";
         font-weight: bold;
         color: #535e7b;
     }
-
     // Section three stylings
-
     &__promocode {
         &__text {
             font-size: 18px;
@@ -126,12 +126,16 @@ $desktop: "(min-width: 1440px)";
             border-radius: 4px;
             background-color: #ffffff;
             border: solid 1px rgba(102, 115, 134, 0.2);
-
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
             position: relative;
+
+            @media #{$mobile} {
+                margin-right: 0 !important;
+                margin-bottom: 10px;
+            }
         }
 
         &__label {
@@ -160,14 +164,11 @@ $desktop: "(min-width: 1440px)";
 
         &__reserve {
             @extend .invitefriends__reserve-btn;
-    
             margin: auto;
             width: 200px;
-        }    
+        }
     }
-    
     // Section four stylings
-
     &__any-question {
         font-family: Lato;
         font-size: 20px;
@@ -175,7 +176,6 @@ $desktop: "(min-width: 1440px)";
         line-height: 1.9;
         color: #535e7b;
     }
-
     // homepage reusable styles
     &__reserve-btn {
         height: 40px;
@@ -185,6 +185,11 @@ $desktop: "(min-width: 1440px)";
         font-weight: 900;
         color: #ffffff;
         text-transform: uppercase;
+
+
+        @media #{$mobile} {
+            font-size: 12px;
+        }
 
         &:hover {
             color: white !important;
@@ -222,14 +227,12 @@ $desktop: "(min-width: 1440px)";
         &--copied {
             top: -60px;
             left: 30px;
-    
             font-size: 14px;
             font-weight: 600;
             font-style: normal;
             font-stretch: normal;
             line-height: normal;
             color: #838da7;
-            
             display: flex;
             align-items: center;
             justify-content: center;
@@ -256,12 +259,11 @@ $desktop: "(min-width: 1440px)";
                 background-position: center;
                 margin-right: 15px;
             }
-        } 
+        }
 
         &--register {
             top: 60px;
             right: 0;
-            
             display: flex;
             align-items: center;
             justify-content: center;
@@ -280,7 +282,7 @@ $desktop: "(min-width: 1440px)";
                 clear: both;
             }
 
-            @media (max-width: 767px) { 
+            @media (max-width: 767px) {
                 top: 100px;
                 right: 50px;
             }
@@ -303,7 +305,6 @@ $desktop: "(min-width: 1440px)";
             .face {
                 width: 16px;
             }
-            
         }
 
         &__separator {

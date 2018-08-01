@@ -4,13 +4,15 @@
 
     for (i = 0; i < acc.length; i++) {
         $(acc[i]).click(function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
+            $('.accordion').removeClass('active');
+            $('.panel').removeClass('show');
 
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
+            var panel = this.nextElementSibling;
+            if ($(panel).hasClass('show')) {
+                $(panel).removeClass('show')
             } else {
-                panel.style.display = "block";
+                this.classList.toggle("active");
+                $(panel).addClass('show');
             }
         });
     }

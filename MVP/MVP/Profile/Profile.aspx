@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="col-md-4 left-menu">
-                        <div class="d-flex flex-column align-items-center text-left profile__menu">
+                        <div class="d-flex flex-column align-items-center text-left profile__menu sticky">
                             <a href="/Profile/Profile" OnClick="javascript:$.blockUI()" class="profile__menu__link profile__menu__link--selected">
                                 <img class="mr-2" src="/img/profile-selected.png" srcset="/img/profile-selected@2x.png 2x, /img/profile-selected@3x.png 3x">
                                 Dados pessoais

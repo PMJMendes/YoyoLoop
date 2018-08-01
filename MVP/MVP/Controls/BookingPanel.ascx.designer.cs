@@ -121,6 +121,42 @@ namespace MVP.Controls {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor lkNoPromo;
         
         /// <summary>
+        /// phPromoError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phPromoError;
+        
+        /// <summary>
+        /// ibPromoError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibPromoError;
+        
+        /// <summary>
+        /// phPromoCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phPromoCheck;
+        
+        /// <summary>
+        /// ibPromoCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibPromoCheck;
+        
+        /// <summary>
         /// tbPromo control.
         /// </summary>
         /// <remarks>
@@ -128,24 +164,6 @@ namespace MVP.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbPromo;
-        
-        /// <summary>
-        /// pnPromoError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnPromoError;
-        
-        /// <summary>
-        /// pnPromoCheck control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnPromoCheck;
         
         /// <summary>
         /// BtnBook control.

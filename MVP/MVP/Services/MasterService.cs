@@ -57,53 +57,47 @@ namespace MVP.Services
         {
 
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                Subject = "[YOYOLOOP] Please confirm your email",
-                Body = "Please confirm your email by clicking <a href=\"" + callbackUrl + "\">here</a>.",
-                IsBodyHtml = true
-            };
-
-            msg.To.Add(email);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
+                msg.IsBodyHtml = true;
+                msg.Subject = "Bem-vindo à Yoyoloop!";
+                msg.Body = "Bem-vindo à Yoyoloop!<br />";
+                msg.Body += "<br />";
+                msg.Body += "Por favor confirma o teu endereço de email, clicando <a href=\"" + callbackUrl + "\">aqui</a>.<br />";
+                msg.Body += "<br />";
+                msg.Body += "Porque razão tenho de confirmar o meu email?<br />";
+                msg.Body += "<br />";
+                msg.Body += "<ul><li>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</li></ul>";
+                msg.Body += "<br />";
+                msg.Body += "Obrigado pela tua preferência!<br />";
+                msg.Body += "A equipa Yoyoloop.";
+                msg.To.Add(email);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
                 client.Send(msg);
-            }
-            finally
-            {
-                if (msg != null)
-                {
-                    msg.Dispose();
-                }
             }
         }
 
-        public void SendResetPassword(string email, string callbackUrl)
+        public void SendResetPassword(string email, string callbackUrl, string homepageUrl)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                Subject = "[YOYOLOOP] Password reset confirmation",
-                Body = "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>.",
-                IsBodyHtml = true
-            };
-
-            msg.To.Add(msg.From);
-            msg.Bcc.Add(email);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
+                msg.IsBodyHtml = true;
+                msg.Subject = "Solicitada a recuperação de palavra-passe";
+                msg.Body = "Foi solicitada a recuperação de palavra-passe na tua conta da <a href=\"" + homepageUrl + "\">Yoyoloop</a>.<br />";
+                msg.Body += "<br />";
+                msg.Body += "Por favor altera a tua palavra-passe, clicando <a href=\"" + callbackUrl + "\">aqui</a>.<br />";
+                msg.Body += "<br />";
+                msg.Body += "Porque razão tenho de alterar a minha palavra passe?<br />";
+                msg.Body += "<br />";
+                msg.Body += "<ul><li>Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova paravra passe.</li></ul>";
+                msg.Body += "<br />";
+                msg.Body += "Obrigado pela tua preferência!<br />";
+                msg.Body += "A equipa Yoyoloop.";
+                msg.To.Add(msg.From);
+                msg.Bcc.Add(email);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
                 client.Send(msg);
-            }
-            finally
-            {
-                if (msg != null)
-                {
-                    msg.Dispose();
-                }
             }
         }
 
@@ -246,139 +240,118 @@ namespace MVP.Services
         public bool SendDailyList(DateTime date, List<Trip> trips, int capacity)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                IsBodyHtml = false
-            };
+                msg.IsBodyHtml = false;
+                msg.Subject = "[YOYOLOOP] Lista de Viagens - " + date.ToLongDateString();
+                string body = string.Empty;
 
-            msg.Subject = "[YOYOLOOP] Lista de Viagens - " + date.ToLongDateString();
-            string body = string.Empty;
-
-            if(!trips.Any())
-            {
-                body += "\r\nNão há viagens para " + date.ToLongDateString();
-            }
-            else
-            {
-                body += "\r\nViagens para " + date.ToLongDateString() + ":";
-                body += "\r\n";
-                body += "\r\n";
-                trips = trips.OrderBy(t => t.StartTime).ToList();
-                foreach (Trip t in trips)
+                if (!trips.Any())
                 {
-                    int ocup = t.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
-                    int free = capacity - ocup;
-                    body += t.StartTime.ToShortTimeString() + " > " + t.StartAccessPoint.Region.Name + " (" + t.StartAccessPoint.Name + ") para " + t.EndAccessPoint.Region.Name + " (" + t.EndAccessPoint.Name + ")";
+                    body += "\r\nNão há viagens para " + date.ToLongDateString();
+                }
+                else
+                {
+                    body += "\r\nViagens para " + date.ToLongDateString() + ":";
                     body += "\r\n";
-                    body += "\tLugares: " + capacity.ToString() + " total, " + ocup.ToString() + " vendidos, " + free.ToString() + " disponíveis";
                     body += "\r\n";
-                    body += "\r\n";
+                    trips = trips.OrderBy(t => t.StartTime).ToList();
+                    foreach (Trip t in trips)
+                    {
+                        int ocup = t.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
+                        int free = capacity - ocup;
+                        body += t.StartTime.ToShortTimeString() + " > " + t.StartAccessPoint.Region.Name + " (" + t.StartAccessPoint.Name + ") para " + t.EndAccessPoint.Region.Name + " (" + t.EndAccessPoint.Name + ")";
+                        body += "\r\n";
+                        body += "\tLugares: " + capacity.ToString() + " total, " + ocup.ToString() + " vendidos, " + free.ToString() + " disponíveis";
+                        body += "\r\n";
+                        body += "\r\n";
+                    }
+                }
+
+                msg.Body = body;
+
+                msg.To.Add(WebConfigurationManager.AppSettings["OperationsProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+                try
+                {
+                    client.Send(msg);
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    SendWarning(ex.Message);
+                    return false;
                 }
             }
-
-            msg.Body = body;
-
-            msg.To.Add(WebConfigurationManager.AppSettings["OperationsProviderEmail"]);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
-                client.Send(msg);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                SendWarning(ex.Message);
-                return false;
-            }
-            finally
-            {
-                msg?.Dispose();
-            }
-
         }
 
         public void SendPassengerList(Guid tripid)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                IsBodyHtml = false
-            };
+                msg.IsBodyHtml = true;
+                msg.Subject = "[YOYOLOOP] Lista de Passageiros - Viagem: " + tripid.ToString().Substring(0, 8);
 
-            msg.Subject = "[YOYOLOOP] Lista de Passageiros - Viagem: " + tripid.ToString().Substring(0, 8);
-            string body = string.Empty;
+                string body = string.Empty;
 
-            using (var model = new EntityModel())
-            {
-                var trip = model.Trip.Include(t => t.Bookings)
-                                     .Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
-                                     .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
-                                     .SingleOrDefault(t => t.TripId == tripid);
-                int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
-                int ocup = trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
-                int free = capacity - ocup;
-
-                body += "\r\nDETALHES DA VIAGEM:";
-                body += "\r\nOrigem: " + trip.StartAccessPoint.Region.Name + " (" + trip.StartAccessPoint.Name + ")";
-                body += "\r\nDestino: " + trip.EndAccessPoint.Region.Name + " (" + trip.EndAccessPoint.Name + ")";
-                body += "\r\nHora: " + trip.StartTime.ToString("R");
-                body += "\r\n";
-                body += "\r\nOCUPAÇÃO:";
-                body += "\r\nTotal de lugares: " + capacity.ToString();
-                body += "\r\nLugares ocupados: " + ocup.ToString();
-                body += "\r\nLugares disponíveis para venda: " + free.ToString();
-                body += "\r\n";
-                body += "\r\nPASSAGEIROS:";
-                foreach (Booking b in trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
+                using (var model = new EntityModel())
                 {
-                    string contactname = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.ContactName;
-                    string username = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.UserName;
-                    body += "\r\n" + contactname + " (" + username + "), " + b.Seats.ToString() + " lugar(es), Codigo: " + b.TicketCode.ToUpper();
-                    body += "\r\n";
+                    var trip = model.Trip.Include(t => t.Bookings)
+                                         .Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
+                                         .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
+                                         .SingleOrDefault(t => t.TripId == tripid);
+                    int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                    int ocup = trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
+                    int free = capacity - ocup;
+
+                    body += "<br />DETALHES DA VIAGEM:";
+                    body += "<br />Origem: " + trip.StartAccessPoint.Region.Name + " (<a href='" + trip.StartAccessPoint.GoogleLocation + "'>" + trip.StartAccessPoint.Name + "</a>)";
+                    body += "<br />Destino: " + trip.EndAccessPoint.Region.Name + " (<a href='" + trip.EndAccessPoint.GoogleLocation + "'>" + trip.EndAccessPoint.Name + "</a>)";
+                    body += "<br />Hora: " + trip.StartTime.ToString("R");
+                    body += "<br />";
+                    body += "<br />OCUPAÇÃO:";
+                    body += "<br />Total de lugares: " + capacity.ToString();
+                    body += "<br />Lugares ocupados: " + ocup.ToString();
+                    body += "<br />Lugares disponíveis para venda: " + free.ToString();
+                    body += "<br />";
+                    body += "<br />PASSAGEIROS:";
+                    foreach (Booking b in trip.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
+                    {
+                        string contactname = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.ContactName;
+                        string username = model.Users.SingleOrDefault(u => u.Id == b.UserId)?.UserName;
+                        body += "<br />" + contactname + " (" + username + "), " + b.Seats.ToString() + " lugar(es), Codigo: " + b.TicketCode.ToUpper();
+                        body += "<br />";
+                    }
                 }
-            }
 
-            msg.Body = body;
+                msg.Body = body;
 
-            msg.To.Add(WebConfigurationManager.AppSettings["OperationsProviderEmail"]);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+                msg.To.Add(WebConfigurationManager.AppSettings["OperationsProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
-            try
-            {
                 client.Send(msg);
-            }
-            finally
-            {
-                msg?.Dispose();
             }
         }
 
         private void SendWarning(string warning)
         {
             SmtpClient client = new SmtpClient();
-            MailMessage msg = new MailMessage
+            using (MailMessage msg = new MailMessage())
             {
-                IsBodyHtml = false
-            };
+                msg.IsBodyHtml = false;
+                msg.Subject = "[YOYOLOOP] System Warning";
+                string body = string.Empty;
 
-            msg.Subject = "[YOYOLOOP] System Warning";
-            string body = string.Empty;
+                body += warning + "\r\n";
 
-            body += warning + "\r\n";
+                msg.Body = body;
 
-            msg.Body = body;
+                msg.To.Add(WebConfigurationManager.AppSettings["SystemsProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
 
-            msg.To.Add(WebConfigurationManager.AppSettings["SystemsProviderEmail"]);
-            msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
-
-            try
-            {
                 client.Send(msg);
-            }
-            finally
-            {
-                msg?.Dispose();
             }
         }
     }
