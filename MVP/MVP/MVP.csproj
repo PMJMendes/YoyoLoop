@@ -702,7 +702,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
-    <Content Include="Test.aspx" />
     <Content Include="Ticket\Ticket.aspx" />
     <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="Update.aspx" />
@@ -1160,13 +1159,6 @@
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\MasterService.cs" />
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Ticket\Services\TicketService.cs" />
     <Compile Include="Ticket\Ticket.aspx.cs">
       <DependentUpon>Ticket.aspx</DependentUpon>
