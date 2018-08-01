@@ -13,7 +13,7 @@ namespace MVP
     {
         protected void btnEmail_Click(object sender, EventArgs e)
         {
-            ApplicationHelpers.ShowMessage(this, "Your email has been sent.");
+            ApplicationHelpers.ShowMessage(this, "The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog.");
         }
 
         protected void btnSMS_Click(object sender, EventArgs e)

@@ -1,0 +1,50 @@
+﻿$mobile: "(max-width: 767.98px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$laptop: "(min-width: 1024px) and (max-width: 1439px)";
+$desktop: "(min-width: 1440px)";
+
+.message {
+    font-family: Lato;
+    font-style: normal;
+    font-stretch: normal;
+
+    &__message {
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__message-text {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.78;
+        letter-spacing: 0.4px;
+        color: #838da7;
+    }
+
+    &__button {
+        width: 100px;
+        height: 42px;
+        border-radius: 21px;
+        background-color: #ff5f6d;
+        border-color: #ff5f6d;
+        box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3);
+
+        &:hover {
+            background-color: #ff5f6d;
+            border-color: #ff5f6d;
+            opacity: 0.9;
+        }
+    }
+
+    .modal {
+        @media #{$mobile} {
+            overflow-y: scroll;
+        }
+
+        @media #{$desktop} {
+            overflow: hidden;
+        }
+    }
+}

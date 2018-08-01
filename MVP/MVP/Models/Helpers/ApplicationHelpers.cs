@@ -12,7 +12,7 @@ namespace MVP.Models.Helpers
         public static void ShowMessage(Page page, string message)
         {
             var messageBox = (Message)page.Master.FindControl("message");
-            messageBox.MessageText = "Your email has been sent.";
+            messageBox.MessageText = message;
             var panel = (UpdatePanel)messageBox.FindControl("upMessage");
             panel.Update();
             ScriptManager.RegisterStartupScript(page, page.GetType(), "showMessageModalKey", "showMessage();", true);
