@@ -94,19 +94,13 @@
                         <div class="row pb-1">
                             <div class="col-12 price-base"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Ida" : "Idas" %>&nbsp;<span class="times"></span> <span class="price price-base"><%= PanelData.StandardCost.ToString("C") %></span></div>
                         </div>
-                        <!-- PriceItem Styles -->
-                        <div class="">
-                            <div class="row">
-                                <div class="col-12">Normal <span class="price pl-1"><%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">Discount <span class="price-green pl-1"><%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">Neutral <span class="pl-1"><%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                        </div>
-                        <!-- End of PriceItemStyles -->
+                        <asp:Repeater runat="server" ID="SummaryRepeater" OnItemDataBound="SummaryRepeater_ItemDataBound">
+                            <ItemTemplate>
+                                <div class="row">
+                                    <div class="col-12"><asp:Label runat="server" ID="lbPriceItemDescription"/>&nbsp<asp:Label runat="server" ID="lbPriceItemValue"/></div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
                 <!-- END OF RESUMO -->
@@ -178,6 +172,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="<%= BookingActive ? "hide" : "panel-end" %>"></div>
             </div>
         </div>
     </ContentTemplate>

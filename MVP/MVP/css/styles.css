@@ -2396,6 +2396,9 @@ header.head {
       color: #838da7 !important; }
       .checkout__menu__link--selected {
         color: #ff5f6d !important; }
+  .checkout__sticky {
+    position: sticky;
+    top: 120px; }
   .checkout .next-trip {
     font-family: Lato;
     margin-top: 8px;
@@ -2467,16 +2470,26 @@ header.head {
       .checkout .next-trip .pricing .total {
         font-weight: bold;
         letter-spacing: 0.4px;
-        color: #c1c6d3; }
+        color: #c1c6d3;
+        font-size: 12px; }
       .checkout .next-trip .pricing .times {
         font-size: 10px; }
       .checkout .next-trip .pricing .price {
-        color: #ff5f6d; }
+        color: #ff5f6d;
+        font-weight: bold; }
+      .checkout .next-trip .pricing .price-base {
+        font-size: 18px; }
+      .checkout .next-trip .pricing .price-green {
+        color: #2ecc71;
+        font-weight: bold; }
       .checkout .next-trip .pricing .total-price {
         font-size: 30px;
         font-weight: bold;
         letter-spacing: normal;
         color: #ff5f6d; }
+        @media (max-width: 767.98px) {
+          .checkout .next-trip .pricing .total-price {
+            font-size: 18px; } }
       .checkout .next-trip .pricing .promocode {
         font-size: 14px;
         font-weight: bold;
@@ -2513,6 +2526,8 @@ header.head {
     letter-spacing: 0.4px;
     text-align: left;
     color: #838da7; }
+  .checkout .panel-end:last-child {
+    padding-bottom: 16px; }
 
 .confirm-check {
   width: 20px;
