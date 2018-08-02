@@ -552,6 +552,8 @@ header.head {
       #book .next-trip .pricing .price {
         color: #ff5f6d;
         font-weight: bold; }
+      #book .next-trip .pricing .price-base {
+        font-size: 20px; }
       #book .next-trip .pricing .price-green {
         color: #2ecc71;
         font-weight: bold; }
