@@ -92,7 +92,7 @@
                     <div class="col-4 pl-4 text-uppercase total">Resumo</div>
                     <div class="col-8 pr-4 text-right">
                         <div class="row pb-1">
-                            <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Ida" : "Idas" %><span class="times"> </span> <span class="price price-base"><%= PanelData.StandardCost.ToString("C") %></span></div>
+                            <div class="col-12 price-base"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Ida" : "Idas" %>&nbsp;<span class="times"></span> <span class="price price-base"><%= PanelData.StandardCost.ToString("C") %></span></div>
                         </div>
                         <!-- PriceItem Styles -->
                         <div class="">
