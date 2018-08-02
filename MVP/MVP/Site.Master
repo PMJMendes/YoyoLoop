@@ -3,6 +3,7 @@
 <%@ Register Src="~/Controls/Login.ascx" TagPrefix="yoyo" TagName="Login" %>
 <%@ Register Src="~/Controls/Register.ascx" TagPrefix="yoyo" TagName="Register" %>
 <%@ Register Src="~/Controls/Forgot.ascx" TagPrefix="yoyo" TagName="Forgot" %>
+<%@ Register Src="~/Controls/Message.ascx" TagPrefix="yoyo" TagName="Message" %>
 
 <!DOCTYPE html>
 
@@ -66,9 +67,10 @@
             <img src="/img/double-ring-1s-200px.gif" />
         </div> 
 
-        <yoyo:Login id="login" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Login ID="login" runat="server" OnSignIn="UserSignIn" />
         <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
         <yoyo:Forgot ID="forgot" runat="server"/>
+        <yoyo:Message ID="message" runat="server"/>
 
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top homepage__navbar" id="main-nav">

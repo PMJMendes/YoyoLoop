@@ -3465,3 +3465,36 @@ section.yoyoloops {
     height: 30px;
     border-radius: 15px;
     background-color: #ff5f6d; }
+
+.message {
+  font-family: Lato;
+  font-style: normal;
+  font-stretch: normal; }
+  .message__message {
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px; }
+  .message__message-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.78;
+    letter-spacing: 0.4px;
+    color: #838da7; }
+  .message__button {
+    width: 100px;
+    height: 42px;
+    border-radius: 21px;
+    background-color: #ff5f6d;
+    border-color: #ff5f6d;
+    box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); }
+    .message__button:hover {
+      background-color: #ff5f6d;
+      border-color: #ff5f6d;
+      opacity: 0.9; }
+  @media (max-width: 767.98px) {
+    .message .modal {
+      overflow-y: scroll; } }
+  @media (min-width: 1440px) {
+    .message .modal {
+      overflow: hidden; } }

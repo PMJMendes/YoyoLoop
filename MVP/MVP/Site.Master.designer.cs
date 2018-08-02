@@ -58,6 +58,15 @@ namespace MVP {
         protected global::MVP.Controls.Forgot forgot;
         
         /// <summary>
+        /// message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Controls.Message message;
+        
+        /// <summary>
         /// btnLogout control.
         /// </summary>
         /// <remarks>
