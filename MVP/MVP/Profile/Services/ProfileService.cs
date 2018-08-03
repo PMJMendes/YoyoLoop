@@ -35,7 +35,14 @@ namespace MVP.Services
                     EmailConfirmed = user.EmailConfirmed,
                     //PhoneCountryCode = user.PhoneCountryCode,
                     PhoneNumber = user.PhoneNumber,
-                    PhoneNumberConfirmed = user.PhoneNumberConfirmed
+                    PhoneNumberConfirmed = user.PhoneNumberConfirmed,
+
+                    BillingName = user.BillingName,
+                    BillingCompany = user.BillingCompany,
+                    BillingNIF = user.BillingNIF,
+                    BillingAdress = user.BillingAdress,
+                    BillingZIP = user.BillingZIP,
+                    BillingCity = user.BillingCity
                 };
                 return result;
             }
@@ -49,6 +56,21 @@ namespace MVP.Services
                 user.ContactName = state.ContactName;
                 user.BirthDate = DateTime.Parse(state.BirthDate);
                 user.PhoneNumber = state.PhoneNumber;
+                model.SaveChanges();
+            }
+        }
+
+        public void UpdateBillingDetails(ProfileDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                user.BillingName = state.BillingName;
+                user.BillingCompany = state.BillingCompany;
+                user.BillingNIF = state.BillingNIF;
+                user.BillingAdress = state.BillingAdress;
+                user.BillingZIP = state.BillingZIP;
+                user.BillingCity = state.BillingCity;
                 model.SaveChanges();
             }
         }

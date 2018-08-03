@@ -15,5 +15,12 @@ namespace MVP.Profile
         public string PhoneCountryCode { get; set; }
         public string PhoneNumber { get; set; }
         public bool PhoneNumberConfirmed { get; set; }
+
+        public string BillingName { get; set; }
+        public string BillingCompany { get; set; }
+        public string BillingNIF { get; set; }
+        public string BillingAdress { get; set; }
+        public string BillingZIP { get; set; }
+        public string BillingCity { get; set; }
     }
 }

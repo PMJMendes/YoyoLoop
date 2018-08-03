@@ -18,6 +18,13 @@ namespace MVP.Models
         public string ContactName { get; set; }
         public DateTime BirthDate { get; set; }
 
+        public string BillingName { get; set; }
+        public string BillingCompany { get; set; }
+        public string BillingNIF { get; set; }
+        public string BillingAdress { get; set; }
+        public string BillingZIP { get; set; }
+        public string BillingCity { get; set; }
+
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
