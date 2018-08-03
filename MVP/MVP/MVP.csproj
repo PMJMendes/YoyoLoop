@@ -658,6 +658,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="sass\_message.scss" />
+    <Content Include="sass\_spinner.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

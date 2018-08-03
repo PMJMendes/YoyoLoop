@@ -64,8 +64,12 @@
 
         <!-- BLOCKUI DIV -->
         <div id="divBlockUI" style="display:none;"> 
-            <img src="/img/double-ring-1s-200px.gif" />
-        </div> 
+            <div class="lds-css ng-scope">
+                <div class="lds-spinner" style="width:100%;height:100%">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+        </div>
 
         <yoyo:Login ID="login" runat="server" OnSignIn="UserSignIn" />
         <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
@@ -78,7 +82,7 @@
                 <button class="navbar-toggler navbar-toggler-left" type="button" tabindex="-1" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-logo" href="/"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
+                <a class="navbar-logo" OnClick="javascript:$.blockUI()" href="#"><img src="/img/yoyo-logo.png" alt="" class="img-responsive logo" /></a>
 
                 <asp:LoginView runat="server" ViewStateMode="Disabled">                
                     <AnonymousTemplate>
