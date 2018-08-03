@@ -25,17 +25,26 @@ namespace MVP.Services
 
         private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
-        public CheckoutDTO GetInitialData()
+        public CheckoutDTO GetInitialData(string userid)
         {
-            var result = new CheckoutDTO();
-
-            return result;
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                var result = new CheckoutDTO
+                {
+                    BillingName = user.BillingName,
+                    BillingCompany = user.BillingCompany,
+                    BillingNIF = user.BillingNIF,
+                    BillingAdress = user.BillingAdress,
+                    BillingZIP = user.BillingZIP,
+                    BillingCity = user.BillingCity
+                };
+                return result;
+            }
         }
 
-        public CheckoutDTO GetBooking(Guid id)
+        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state)
         {
-            var result = new CheckoutDTO();
-
             using (var model = new EntityModel())
             {
                 var booking = model.Booking.Where(b => b.BookingId == id)
@@ -49,29 +58,29 @@ namespace MVP.Services
                                            .FirstOrDefault();
                 if(booking == null)
                 {
-                    result = null;
+                    state = null;
                 }
                 else
                 {
-                    result.BookingId = booking.BookingId;
-                    result.UserId = booking.UserId;
-                    result.UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email;
-                    result.BookingStatus = booking.Status;
-                    result.Seats = booking.Seats;
-                    result.FareType = booking.FareType;
-                    result.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
-                    result.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
-                    result.Promocode = booking.Promocode?.Code ?? string.Empty;
-                    result.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
-                    result.Cost = booking.Cost;
-                    result.StartTime = booking.Trip.StartTime;
-                    result.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
-                    result.StartAPName = booking.Trip.StartAccessPoint.Name;
-                    result.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
-                    result.EndAPName = booking.Trip.EndAccessPoint.Name;
+                    state.BookingId = booking.BookingId;
+                    state.UserId = booking.UserId;
+                    state.UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email;
+                    state.BookingStatus = booking.Status;
+                    state.Seats = booking.Seats;
+                    state.FareType = booking.FareType;
+                    state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
+                    state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
+                    state.Promocode = booking.Promocode?.Code ?? string.Empty;
+                    state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
+                    state.Cost = booking.Cost;
+                    state.StartTime = booking.Trip.StartTime;
+                    state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
+                    state.StartAPName = booking.Trip.StartAccessPoint.Name;
+                    state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
+                    state.EndAPName = booking.Trip.EndAccessPoint.Name;
                 }
             }
-            return result;
+            return state;
         }
 
         public BookingPanelDTO GetCheckoutPanelData(CheckoutDTO state)
@@ -300,7 +309,7 @@ namespace MVP.Services
                 body += "\r\nNome: " + state.Invoice.Name;
                 body += "\r\nEmpresa: " + state.Invoice.Company;
                 body += "\r\nNIF: " + state.Invoice.NIF;
-                body += "\r\nMorada: " + state.Invoice.Adress;
+                body += "\r\nMorada: " + state.Invoice.Address;
                 body += "\r\nCód. Postal: " + state.Invoice.ZIP;
                 body += "\r\nCidade: " + state.Invoice.City;
                 body += "\r\n";

@@ -12,6 +12,7 @@
 
     <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
+    <input type="hidden" name="hfStripeError" id="hfStripeError" />
 
     <div class="checkout">
         <div class="checkout__container checkout__container--first">
@@ -35,25 +36,25 @@
                             <ContentTemplate>
                                 <div id="billingform">
                                     <div class="checkout__label">Nome</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="DisplayName" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="name" autocomplete="on" Tabindex="1" />
 
                                     <div class="checkout__label">Nome da Empresa</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="Company" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="company" autocomplete="on" Tabindex="1" />
 
                                     <div class="checkout__label">NIF</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="true" CssClass="checkout__input checkout__input--nif" AutoCompleteType="Search" placeholder="000 000 000" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="false" CssClass="checkout__input checkout__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
                 
                                     <div class="checkout__label">Morada</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceAdress" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeStreetAddress" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceAddress" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="address" autocomplete="on" Tabindex="0" />
 
                                     <div class="row ml-0">
                                         <div class="row ml-0 mr-5 checkout__input--postal-code">
                                             <div class="checkout__label">Código postal</div>
-                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="true" CssClass="checkout__input" AutoCompleteType="HomeZipCode" placeholder="0000-000" />
+                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="false" CssClass="checkout__input" type="text" name="ZIP" autocomplete="on" Tabindex="0" placeholder="0000-000" />
                                         </div>
                                         <div class="row ml-0 checkout__input--city">
                                             <div class="checkout__label">Cidade</div>
-                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeCity" />
+                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="city" autocomplete="on" Tabindex="0" />
                                         </div>
                                     </div>
                                 </div>

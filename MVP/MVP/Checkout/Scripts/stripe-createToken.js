@@ -19,9 +19,9 @@ function createToken(e) {
 function stripeResponseHandler(status, response) {
     var $form = $('#MasterForm');
     if (response.error) {
-        //need something better here
         $.unblockUI();
-        alert(response.error.message);
+        $('#hfStripeError').val(response.error.message);
+        $form.get(0).submit();
     }
     else {
         var token = response.id;
