@@ -15,9 +15,11 @@
                             <ContentTemplate>
                                 <div class="profile__label">Nome</div>
                                 <asp:TextBox runat="server" ID="txtName" AutoPostBack="false" CssClass="profile__input profile__input--name" type="text" autocomplete="name" Tabindex="0" />
+                                <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="PersonalDetails" ControlToValidate="txtName" CssClass="text-danger" Display="Dynamic" ErrorMessage="O campo do nome é obrigatório." /></div>
 
                                 <div class="profile__label">Data de nascimento</div>
                                 <asp:TextBox runat="server" ID="txtBirthDate" AutoPostBack="false" CssClass="profile__input profile__input--birthday" type="text" autocomplete="bday" Tabindex="0" placeholder="DD / MM / AAAA" />
+                                <div class="profile__input--validator"><asp:CompareValidator runat="server" Type="Date" Operator="DataTypeCheck" ValidationGroup="PersonalDetails" ControlToValidate="txtBirthDate" CssClass="profile__input--validator text-danger" Display="Dynamic" ErrorMessage="Introduza uma data válida."/></div>
                 
                                 <div class="profile__label">Endereço de email</div>
                                 <div class="row ml-0">
@@ -49,11 +51,12 @@
                                         <div class="profile__confirm-check">Não Confirmado</div>
                                     </div>
                                 </div>
+                                <div class="profile__input--validator"><asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="PersonalDetails" ControlToValidate="txtPhoneNumber" CssClass="profile__input--validator text-danger" Display="Dynamic" ErrorMessage="Introduza um número válido."/></div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
 
                         <div class="mt-5 mb-5 profile__separator"></div>
-                        <asp:button runat="server" ID="btnProfileSave" OnClick="btnProfileSave_Click" CssClass="mb-5 profile__btn" type="submit" Text="Guardar" Tabindex="-1" />
+                        <asp:button runat="server" ID="btnProfileSave" CausesValidation="true" ValidationGroup="PersonalDetails" OnClick="btnProfileSave_Click" CssClass="mb-5 profile__btn" Text="Guardar" Tabindex="0" />
 
                         <h2 class="profile__sub-title">Alterar password</h2>
                         <div class="profile__label">Password atual</div>

@@ -80,6 +80,11 @@ $desktop: "(min-width: 1440px)";
             color: rgba(102, 115, 134, 0.5);
         }
 
+        &--validator {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
         &--name {
             max-width: 480px;
         }
@@ -160,6 +165,7 @@ $desktop: "(min-width: 1440px)";
         text-align: center;
         color: #ffffff;
         text-transform: uppercase;
+        outline: none;
     }
 
     &__white-btn {
@@ -173,6 +179,7 @@ $desktop: "(min-width: 1440px)";
         display: flex;
         align-items: center;
         justify-content: center;
+        outline: none;
 
         &--large {
             width: 260px;
@@ -185,6 +192,7 @@ $desktop: "(min-width: 1440px)";
             display: flex;
             align-items: center;
             justify-content: center;
+            outline: none;
         }
     }
 
