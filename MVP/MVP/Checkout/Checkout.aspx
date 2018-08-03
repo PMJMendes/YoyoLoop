@@ -116,7 +116,7 @@
                             O valor que pagaste será transformado em crédito e podes encontrá-lo
                             na tua conta para utilizar em futuras viagens.
                         </p>
-                        <div class="checkout__accept-terms-condition row pt-5 pb-5">
+                        <div class="checkout__accept-terms-condition row pt-4 pb-4">
                             <div class="col-md-6">
                                 <div class="form-check">
                                     <input id="cbTerms" class="form-check-input" type="checkbox">
