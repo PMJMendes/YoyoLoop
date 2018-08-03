@@ -119,9 +119,12 @@
                         <div class="checkout__accept-terms-condition row pt-5 pb-5">
                             <div class="col-md-6">
                                 <div class="form-check">
-                                    <input id="cbTerms" class="form-check-input" type="checkbox" value="">
-                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
-                                </div>  
+                                    <input id="cbTerms" class="form-check-input" type="checkbox">
+                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">&nbsp;Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
+                                </div>
+                                <div id="TermsError" class="checkout__terms-conditions--error checkout__terms-conditions--invisible text-danger">
+                                    <label>Tem de aceitar os Termos & condiçōes</label>
+                                </div>
                             </div>
                             <div class="checkout__accept-terms-condition--pay col-md-6">
                                 <button id="btnPay" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
@@ -132,5 +135,4 @@
             </div>
         </div>
     </div>
-
 </asp:Content>
