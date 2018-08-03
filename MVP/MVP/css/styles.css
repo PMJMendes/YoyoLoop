@@ -1076,7 +1076,8 @@ header.head {
     .profile__input--birthday {
       max-width: 190px; }
     .profile__input--email {
-      max-width: 360px; }
+      max-width: 360px;
+      line-height: 2.6; }
     .profile__input--country {
       max-width: 85px; }
     .profile__input--phone {
@@ -1121,6 +1122,28 @@ header.head {
     text-align: center;
     color: #ffffff;
     text-transform: uppercase; }
+  .profile__white-btn {
+    width: 209px;
+    height: 41px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: solid 2px #ff5f6d;
+    color: #ff5f6d !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .profile__white-btn--large {
+      width: 260px;
+      height: 41px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      border: solid 2px #ff5f6d;
+      color: #ff5f6d !important;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
   .profile__menu {
     padding: 10px;
     max-width: 250px;

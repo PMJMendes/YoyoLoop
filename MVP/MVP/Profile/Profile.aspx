@@ -14,14 +14,14 @@
                         <asp:UpdatePanel runat="server" ID="upProfileData" UpdateMode="Conditional">
                             <ContentTemplate>
                                 <div class="profile__label">Nome</div>
-                                <asp:TextBox runat="server" ID="txtName" AutoPostBack="true" CssClass="profile__input profile__input--name" type="text" AutoCompleteType="DisplayName" />
+                                <asp:TextBox runat="server" ID="txtName" AutoPostBack="false" CssClass="profile__input profile__input--name" type="text" autocomplete="name" Tabindex="0" />
 
                                 <div class="profile__label">Data de nascimento</div>
-                                <asp:TextBox runat="server" ID="txtBirthDate" AutoPostBack="true" CssClass="profile__input profile__input--birthday" type="text" placeholder="DD / MM / AAAA" />
+                                <asp:TextBox runat="server" ID="txtBirthDate" AutoPostBack="false" CssClass="profile__input profile__input--birthday" type="text" autocomplete="bday" Tabindex="0" placeholder="DD / MM / AAAA" />
                 
                                 <div class="profile__label">Endereço de email</div>
                                 <div class="row ml-0">
-                                    <asp:TextBox runat="server" ID="txtEmail" AutoPostBack="true" class="profile__input profile__input--email" type="text" />
+                                    <asp:Label runat="server" ID="txtEmail" class="profile__input profile__input--email" />
                                     <div class="<%= pageData.EmailConfirmed ? "row ml-0 align-items-center justify-content-center" : "hide" %>">
                                         <div class="ml-3 mr-3 confirm-check"></div>
                                         <div class="profile__confirm-check">Confirmado</div>
@@ -30,29 +30,30 @@
                                         <div class="ml-3 mr-3 confirm-notcheck"></div>
                                         <div class="profile__confirm-check">Não Confirmado</div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:LinkButton runat="server" ID="btnConfirmEmail" OnClick="btnConfirmEmail_Click" Text="Clique aqui para re-enviar o email de confirmação"/>
+                                        <asp:LinkButton runat="server" ID="btnConfirmEmail" OnClick="btnConfirmEmail_Click" CssClass="profile__white-btn text-uppercase">Re-enviar Link</asp:LinkButton>
                                     </div>
                                 </div>
 
                                 <div class="profile__label">Telemóvel</div>
                                 <div class="row ml-0">
-                                    <select class="profile__input profile__input--country">
+                                    <select class="profile__input profile__input--country" tabindex="-1">
                                         <option value="351">+351</option>
                                     </select>
-                                    <asp:TextBox runat="server" ID="txtPhoneNumber" AutoPostBack="true" CssClass="ml-2 profile__input profile__input--phone" type="text" placeholder="000 000 000" />
-
-                                    <!-- Phone confirmation hidden for now -->
-                                    <div class="hide row ml-0 align-items-center justify-content-center">
+                                    <asp:TextBox runat="server" ID="txtPhoneNumber" AutoPostBack="false" CssClass="ml-2 profile__input profile__input--phone" type="text" autocomplete="tel-national" Tabindex="0" placeholder="000 000 000" />
+                                    <div class="<%= pageData.PhoneNumberConfirmed ? "row ml-0 align-items-center justify-content-center" : "hide" %>">
                                         <div class="ml-3 mr-3 confirm-check"></div>
                                         <div class="profile__confirm-check">Confirmado</div>
+                                    </div>
+                                    <div class="<%= pageData.PhoneNumberConfirmed ? "hide" : "row ml-0 align-items-center justify-content-center" %>"">
+                                        <div class="ml-3 mr-3 confirm-notcheck"></div>
+                                        <div class="profile__confirm-check">Não Confirmado</div>
                                     </div>
                                 </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
 
                         <div class="mt-5 mb-5 profile__separator"></div>
-                        <button class="mb-5 profile__btn">Atualizar dados</button>
-                
+                        <asp:button runat="server" ID="btnProfileSave" OnClick="btnProfileSave_Click" CssClass="mb-5 profile__btn" type="submit" Text="Guardar" Tabindex="-1" />
 
                         <h2 class="profile__sub-title">Alterar password</h2>
                         <div class="profile__label">Password atual</div>

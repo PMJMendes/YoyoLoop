@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using MVP.Services;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using MVP.Models.Helpers;
 
 namespace MVP.Profile
 {
@@ -56,14 +57,22 @@ namespace MVP.Profile
             string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, pageData.UserId, Request);
             var service = new MasterService();
             service.SendEmailConfirmation(pageData.Email, callbackUrl);
-            btnConfirmEmail.Text = "Email de confirmação enviado";
-            btnConfirmEmail.Enabled = false;
+            ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.Email + "</span> com o link para poderes confirmar o teu email.");
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             Response.Redirect("/");
+        }
+
+        protected void btnProfileSave_Click(object sender, EventArgs e)
+        {
+            pageData.ContactName = txtName.Text;
+            pageData.BirthDate = txtBirthDate.Text;
+            pageData.PhoneNumber = txtPhoneNumber.Text;
+            service.UpdatePersonalDetails(pageData);
+            ApplicationHelpers.ShowMessage(this, "Os teus dados foram actualizados com sucesso.");
         }
     }
 }

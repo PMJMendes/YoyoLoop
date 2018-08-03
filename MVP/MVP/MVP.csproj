@@ -1065,6 +1065,10 @@
     <Compile Include="Migrations\201807241553336_UpdateService-Warning.Designer.cs">
       <DependentUpon>201807241553336_UpdateService-Warning.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808030021199_ApplicationUser-BirthDate.cs" />
+    <Compile Include="Migrations\201808030021199_ApplicationUser-BirthDate.Designer.cs">
+      <DependentUpon>201808030021199_ApplicationUser-BirthDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1335,6 +1339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807241553336_UpdateService-Warning.resx">
       <DependentUpon>201807241553336_UpdateService-Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030021199_ApplicationUser-BirthDate.resx">
+      <DependentUpon>201808030021199_ApplicationUser-BirthDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -90,6 +90,7 @@ $desktop: "(min-width: 1440px)";
 
         &--email {
             max-width: 360px;
+            line-height: 2.6;
         }
 
         &--country {
@@ -161,6 +162,32 @@ $desktop: "(min-width: 1440px)";
         text-transform: uppercase;
     }
 
+    &__white-btn {
+        width: 209px;
+        height: 41px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        border: solid 2px #ff5f6d;
+        color: #ff5f6d !important;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--large {
+            width: 260px;
+            height: 41px;
+            border-radius: 20px;
+            background-color: #ffffff;
+            border: solid 2px #ff5f6d;
+            color: #ff5f6d !important;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     &__menu {
         padding: 10px;
         max-width: 250px;
@@ -170,7 +197,7 @@ $desktop: "(min-width: 1440px)";
         border-style: solid;
 
         @media #{$mobile} {
-            display: none!important;
+            display: none !important;
         }
 
         &__separator {

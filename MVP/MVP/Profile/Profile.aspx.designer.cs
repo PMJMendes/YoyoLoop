@@ -46,7 +46,7 @@ namespace MVP.Profile {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.Label txtEmail;
         
         /// <summary>
         /// btnConfirmEmail control.
@@ -65,6 +65,15 @@ namespace MVP.Profile {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
+        
+        /// <summary>
+        /// btnProfileSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnProfileSave;
         
         /// <summary>
         /// btnLogout control.

@@ -14,5 +14,6 @@ namespace MVP.Profile
         public bool EmailConfirmed { get; set; }
         public string PhoneCountryCode { get; set; }
         public string PhoneNumber { get; set; }
+        public bool PhoneNumberConfirmed { get; set; }
     }
 }

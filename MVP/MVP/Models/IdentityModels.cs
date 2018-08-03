@@ -16,6 +16,7 @@ namespace MVP.Models
     {
         // YOYOLOOP EXTENDED PROPERTIES
         public string ContactName { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {

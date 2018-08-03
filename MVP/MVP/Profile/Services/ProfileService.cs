@@ -26,16 +26,30 @@ namespace MVP.Services
             using (var model = new EntityModel())
             {
                 var user = model.Users.FirstOrDefault(u => u.Id == userid);
-                var result = new ProfileDTO {
+                var result = new ProfileDTO
+                {
                     UserId = user.Id,
                     ContactName = user.ContactName,
-                    //BirthDate = user.BirthDate,
+                    BirthDate = user.BirthDate == DateTime.MinValue ? string.Empty : user.BirthDate.ToString("dd/MM/yyyy"),
                     Email = user.Email,
                     EmailConfirmed = user.EmailConfirmed,
                     //PhoneCountryCode = user.PhoneCountryCode,
-                    PhoneNumber = user.PhoneNumber
+                    PhoneNumber = user.PhoneNumber,
+                    PhoneNumberConfirmed = user.PhoneNumberConfirmed
                 };
                 return result;
+            }
+        }
+
+        public void UpdatePersonalDetails(ProfileDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                user.ContactName = state.ContactName;
+                user.BirthDate = DateTime.Parse(state.BirthDate);
+                user.PhoneNumber = state.PhoneNumber;
+                model.SaveChanges();
             }
         }
     }
