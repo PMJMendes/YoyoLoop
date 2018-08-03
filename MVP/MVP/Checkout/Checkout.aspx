@@ -12,6 +12,7 @@
 
     <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
+    <input type="hidden" name="hfStripeError" id="hfStripeError" />
 
     <div class="checkout">
         <div class="checkout__container checkout__container--first">
@@ -35,27 +36,34 @@
                             <ContentTemplate>
                                 <div id="billingform">
                                     <div class="checkout__label">Nome</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="DisplayName" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="name" autocomplete="on" Tabindex="1" />
 
                                     <div class="checkout__label">Nome da Empresa</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="Company" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="company" autocomplete="on" Tabindex="1" />
 
                                     <div class="checkout__label">NIF</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="true" CssClass="checkout__input checkout__input--nif" AutoCompleteType="Search" placeholder="000 000 000" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="false" CssClass="checkout__input checkout__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
                 
                                     <div class="checkout__label">Morada</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceAdress" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeStreetAddress" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceAddress" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="address" autocomplete="on" Tabindex="0" />
 
                                     <div class="row ml-0">
                                         <div class="row ml-0 mr-5 checkout__input--postal-code">
                                             <div class="checkout__label">Código postal</div>
-                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="true" CssClass="checkout__input" AutoCompleteType="HomeZipCode" placeholder="0000-000" />
+                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="false" CssClass="checkout__input" type="text" name="ZIP" autocomplete="on" Tabindex="0" placeholder="0000-000" />
                                         </div>
                                         <div class="row ml-0 checkout__input--city">
                                             <div class="checkout__label">Cidade</div>
-                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeCity" />
+                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="city" autocomplete="on" Tabindex="0" />
                                         </div>
                                     </div>
+                                    <div class="checkout__billing checkout__billing--checkbox pt-2">
+                                        <div class="form-check">
+                                            <input runat="server" ID="cbSaveDetails" class="form-check-input" type="checkbox">
+                                            <label class="form-check-label" for="cbSaveDetails">&nbsp;Guardar detalhes de facturação</label>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
@@ -108,12 +116,15 @@
                             O valor que pagaste será transformado em crédito e podes encontrá-lo
                             na tua conta para utilizar em futuras viagens.
                         </p>
-                        <div class="checkout__accept-terms-condition row pt-5 pb-5">
+                        <div class="checkout__accept-terms-condition row pt-4 pb-4">
                             <div class="col-md-6">
                                 <div class="form-check">
-                                    <input id="cbTerms" class="form-check-input" type="checkbox" value="">
-                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
-                                </div>  
+                                    <input id="cbTerms" class="form-check-input" type="checkbox">
+                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">&nbsp;Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
+                                </div>
+                                <div id="TermsError" class="checkout__terms-conditions--error checkout__terms-conditions--invisible text-danger">
+                                    <label>Tem de aceitar os Termos & condiçōes</label>
+                                </div>
                             </div>
                             <div class="checkout__accept-terms-condition--pay col-md-6">
                                 <button id="btnPay" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
@@ -124,5 +135,4 @@
             </div>
         </div>
     </div>
-
 </asp:Content>

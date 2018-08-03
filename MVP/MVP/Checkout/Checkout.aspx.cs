@@ -12,6 +12,8 @@ using MVP.Models;
 using MVP.Models.Entities;
 using MVP.Models.Extensions;
 using Microsoft.AspNet.Identity;
+using MVP.Models.Helpers;
+using System.Web.Services;
 
 namespace MVP.Checkout
 {
@@ -63,6 +65,7 @@ namespace MVP.Checkout
                 // StripeHandler
                 NameValueCollection nvc = Request.Form;
                 string hfStripeToken = nvc["hfStripeToken"];
+                string hfStripeError = nvc["hfStripeError"];
                 if (!string.IsNullOrEmpty(hfStripeToken))
                 {
                     pageData.Invoice = new CheckoutDTO.InvoiceData
@@ -70,31 +73,50 @@ namespace MVP.Checkout
                         Name = txtInvoiceName.Text,
                         Company = txtInvoiceCompany.Text,
                         NIF = txtInvoiceNIF.Text,
-                        Adress = txtInvoiceAdress.Text,
+                        Address = txtInvoiceAddress.Text,
                         ZIP = txtInvoiceZIP.Text,
                         City = txtInvoiceCity.Text
                     };
 
                     string error;
                     if (service.ProcessPayment(pageData, hfStripeToken, out error))
-                    {
+                    {   if(cbSaveDetails.Checked)
+                        {
+                            service.SaveBillingDetails(pageData);
+                        }
                         Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
                     }
                     else
                     {
-                        //HANDLE ERROR
-                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"" + error + "\")</SCRIPT>");
+                        //PAYMENT ERROR - need better error handling here
+                        ApplicationHelpers.ShowMessage(this, error);
                     }
+                }
+                else if (!string.IsNullOrEmpty(hfStripeError))
+                {
+                    //SUBMIT ERROR - need better error handling here
+                    ApplicationHelpers.ShowMessage(this, hfStripeError);
                 }
             }
 
             if (pageData == null)
             {
-                pageData = service.GetInitialData();
+                pageData = service.GetInitialData(User?.Identity.GetUserId());
+                InitializeControls();
                 ProcessQueryString();
                 Session["checkout.data"] = pageData;
                 UpdateCheckoutPanel();
             }
+        }
+
+        private void InitializeControls()
+        {
+            txtInvoiceName.Text = pageData.BillingName;
+            txtInvoiceCompany.Text = pageData.BillingCompany;
+            txtInvoiceNIF.Text = pageData.BillingNIF;
+            txtInvoiceAddress.Text = pageData.BillingAdress;
+            txtInvoiceZIP.Text = pageData.BillingZIP;
+            txtInvoiceCity.Text = pageData.BillingCity;
         }
 
         private void ProcessQueryString()
@@ -104,7 +126,7 @@ namespace MVP.Checkout
             
             if (Guid.TryParse(query["Id"], out id))
             {
-                pageData = service.GetBooking(id);
+                pageData = service.GetBooking(id, pageData);
                 if(pageData == null)
                 {
                     // temp blank values to stop page from crashing - eventually not needed when redirect is uncommented

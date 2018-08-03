@@ -1071,12 +1071,16 @@ header.head {
       opacity: 0.5;
       font-size: 14px;
       color: rgba(102, 115, 134, 0.5); }
+    .profile__input--validator {
+      margin-top: -10px;
+      margin-bottom: 10px; }
     .profile__input--name {
       max-width: 480px; }
     .profile__input--birthday {
       max-width: 190px; }
     .profile__input--email {
-      max-width: 360px; }
+      max-width: 360px;
+      line-height: 2.6; }
     .profile__input--country {
       max-width: 85px; }
     .profile__input--phone {
@@ -1120,7 +1124,32 @@ header.head {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    outline: none; }
+  .profile__white-btn {
+    width: 209px;
+    height: 41px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: solid 2px #ff5f6d;
+    color: #ff5f6d !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none; }
+    .profile__white-btn--large {
+      width: 260px;
+      height: 41px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      border: solid 2px #ff5f6d;
+      color: #ff5f6d !important;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none; }
   .profile__menu {
     padding: 10px;
     max-width: 250px;
@@ -2286,6 +2315,10 @@ header.head {
     .checkout__terms-conditions a {
       color: #ff5f6d;
       text-decoration: underline; }
+    .checkout__terms-conditions--error {
+      font-size: 16px; }
+    .checkout__terms-conditions--invisible {
+      visibility: hidden !important; }
   .checkout__label {
     font-size: 14px;
     font-weight: bold;

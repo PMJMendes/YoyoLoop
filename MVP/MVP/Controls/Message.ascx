@@ -10,7 +10,7 @@
                             <div class="message__message-text text-center"><%= MessageText %></div>
                         </div>
                         <div class="text-center">
-                            <button ID="btnOK" onclick="javascript:$('#messageModal').modal('hide')" class="message__button btn btn-primary">OK</button>
+                            <asp:Button runat="server" ID="btnOK" CausesValidation="false" OnClientClick="javascript:$('#messageModal').modal('hide')" CssClass="message__button btn btn-primary" Text="OK" />
                         </div>
                     </div>
                 </div>

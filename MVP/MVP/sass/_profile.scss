@@ -80,6 +80,11 @@ $desktop: "(min-width: 1440px)";
             color: rgba(102, 115, 134, 0.5);
         }
 
+        &--validator {
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
         &--name {
             max-width: 480px;
         }
@@ -90,6 +95,7 @@ $desktop: "(min-width: 1440px)";
 
         &--email {
             max-width: 360px;
+            line-height: 2.6;
         }
 
         &--country {
@@ -159,6 +165,35 @@ $desktop: "(min-width: 1440px)";
         text-align: center;
         color: #ffffff;
         text-transform: uppercase;
+        outline: none;
+    }
+
+    &__white-btn {
+        width: 209px;
+        height: 41px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        border: solid 2px #ff5f6d;
+        color: #ff5f6d !important;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+
+        &--large {
+            width: 260px;
+            height: 41px;
+            border-radius: 20px;
+            background-color: #ffffff;
+            border: solid 2px #ff5f6d;
+            color: #ff5f6d !important;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
     }
 
     &__menu {
@@ -170,7 +205,7 @@ $desktop: "(min-width: 1440px)";
         border-style: solid;
 
         @media #{$mobile} {
-            display: none!important;
+            display: none !important;
         }
 
         &__separator {
