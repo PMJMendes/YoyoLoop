@@ -106,12 +106,12 @@
 
                     <div class="col-md-4 left-menu">
                         <div class="d-flex flex-column align-items-center text-left profile__menu sticky">
-                            <a href="/Profile/Profile" OnClick="javascript:$.blockUI()" class="profile__menu__link profile__menu__link--selected">
+                            <a OnClick="javascript:$.blockUI()" href="/Profile/Profile" class="profile__menu__link profile__menu__link--selected">
                                 <img class="mr-2" src="/img/profile-selected.png" srcset="/img/profile-selected@2x.png 2x, /img/profile-selected@3x.png 3x">
                                 Dados pessoais
                             </a>
                             <div class="mt-3 mb-3 profile__menu__separator"></div>
-                            <a href="/Profile/Billing" OnClick="javascript:$.blockUI()" class="profile__menu__link">
+                            <a OnClick="javascript:$.blockUI()" href="/Profile/Billing" class="profile__menu__link">
                                 <img class="mr-2" src="/img/billing.png" srcset="/img/billing@2x.png 2x, /img/billing@3x.png 3x">
                                 Detalhes de Faturação
                             </a>
