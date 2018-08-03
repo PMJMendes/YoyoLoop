@@ -46,7 +46,7 @@ namespace MVP.Profile
         {
             txtName.Text = pageData.ContactName;
             txtBirthDate.Text = pageData.BirthDate;
-            txtEmail.Text = pageData.Email;
+            lbEmail.Text = pageData.Email;
             txtPhoneNumber.Text = pageData.PhoneNumber;
         }
 
@@ -55,8 +55,8 @@ namespace MVP.Profile
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             string code = manager.GenerateEmailConfirmationToken(pageData.UserId);
             string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, pageData.UserId, Request);
-            var service = new MasterService();
-            service.SendEmailConfirmation(pageData.Email, callbackUrl);
+            var masterservice = new MasterService();
+            masterservice.SendEmailConfirmation(pageData.Email, callbackUrl);
             ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.Email + "</span> com o link para poderes confirmar o teu email.");
         }
 
@@ -73,6 +73,27 @@ namespace MVP.Profile
             pageData.PhoneNumber = txtPhoneNumber.Text;
             service.UpdatePersonalDetails(pageData);
             ApplicationHelpers.ShowMessage(this, "Os teus dados foram actualizados com sucesso.");
+        }
+
+        protected void btnEmailSave_Click(object sender, EventArgs e)
+        {
+            string password = tbChangeEmailPassword.Text;
+            string newemail = txtChangeEmail.Text;
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var user = manager.FindById(User.Identity.GetUserId());
+            if(manager.CheckPassword(user, password))
+            {
+                service.ChangeEmail(user.Id, newemail);
+                string code = manager.GenerateEmailConfirmationToken(user.Id);
+                string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
+                var masterservice = new MasterService();
+                masterservice.SendEmailConfirmation(newemail, callbackUrl);
+                ApplicationHelpers.ShowMessage(this, "O teu endereço de email foi alterado com sucesso.<br/><br/>Enviámos um email para <span style='color: #ff5f6d;'>" + newemail + "</span> com um link para poderes confirmar o novo email.");
+            }
+            else
+            {
+                ApplicationHelpers.ShowMessage(this, "A password que introduziste está incorreta.");
+            }
         }
     }
 }

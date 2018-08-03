@@ -15,15 +15,15 @@
                             <ContentTemplate>
                                 <div class="profile__label">Nome</div>
                                 <asp:TextBox runat="server" ID="txtName" AutoPostBack="false" CssClass="profile__input profile__input--name" type="text" autocomplete="name" Tabindex="0" />
-                                <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="PersonalDetails" ControlToValidate="txtName" CssClass="text-danger" Display="Dynamic" ErrorMessage="O campo do nome é obrigatório." /></div>
+                                <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="PersonalDetails" ControlToValidate="txtName" CssClass="text-danger" Display="Dynamic" ErrorMessage="O campo do nome é obrigatório" /></div>
 
                                 <div class="profile__label">Data de nascimento</div>
                                 <asp:TextBox runat="server" ID="txtBirthDate" AutoPostBack="false" CssClass="profile__input profile__input--birthday" type="text" autocomplete="bday" Tabindex="0" placeholder="DD / MM / AAAA" />
-                                <div class="profile__input--validator"><asp:CompareValidator runat="server" Type="Date" Operator="DataTypeCheck" ValidationGroup="PersonalDetails" ControlToValidate="txtBirthDate" CssClass="profile__input--validator text-danger" Display="Dynamic" ErrorMessage="Introduza uma data válida."/></div>
+                                <div class="profile__input--validator"><asp:CompareValidator runat="server" Type="Date" Operator="DataTypeCheck" ValidationGroup="PersonalDetails" ControlToValidate="txtBirthDate" CssClass="profile__input--validator text-danger" Display="Dynamic" ErrorMessage="Introduza uma data válida"/></div>
                 
                                 <div class="profile__label">Endereço de email</div>
                                 <div class="row ml-0">
-                                    <asp:Label runat="server" ID="txtEmail" class="profile__input profile__input--email" />
+                                    <asp:Label runat="server" ID="lbEmail" class="profile__input profile__input--email" />
                                     <div class="<%= pageData.EmailConfirmed ? "row ml-0 align-items-center justify-content-center" : "hide" %>">
                                         <div class="ml-3 mr-3 confirm-check"></div>
                                         <div class="profile__confirm-check">Confirmado</div>
@@ -51,12 +51,33 @@
                                         <div class="profile__confirm-check">Não Confirmado</div>
                                     </div>
                                 </div>
-                                <div class="profile__input--validator"><asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="PersonalDetails" ControlToValidate="txtPhoneNumber" CssClass="profile__input--validator text-danger" Display="Dynamic" ErrorMessage="Introduza um número válido."/></div>
+                                <div class="profile__input--validator"><asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="PersonalDetails" ControlToValidate="txtPhoneNumber" CssClass="profile__input--validator text-danger" Display="Dynamic" ErrorMessage="Introduza um número válido"/></div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
 
                         <div class="mt-5 mb-5 profile__separator"></div>
                         <asp:button runat="server" ID="btnProfileSave" CausesValidation="true" ValidationGroup="PersonalDetails" OnClick="btnProfileSave_Click" CssClass="mb-5 profile__btn" Text="Guardar" Tabindex="0" />
+
+                        <asp:UpdatePanel runat="server" ID="upEmailChange" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <h2 class="profile__sub-title">Alterar endereço de email</h2>
+                                <div class="profile__label">Password atual</div>
+                                <asp:TextBox runat="server" id="tbChangeEmailPassword" TextMode="Password" CssClass="profile__input profile__input--password" placeholder="Password" Tabindex="1" />
+                                <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="tbChangeEmailPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="Introduz a tua password" /></div>
+                                <div class="profile__label">Novo endereço de email</div>
+                                <asp:TextBox runat="server" ID="txtChangeEmail" TextMode="Email" class="profile__input profile__input--email" Tabindex="1" />
+                                <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="txtChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="O endereço de email é obrigatório" /></div>
+                                <div class="profile__label">Repetir endereço de email</div>
+                                <asp:TextBox runat="server" ID="txtConfirmChangeEmail" class="profile__input profile__input--email" Tabindex="1" />
+                                <div class="profile__input--validator">
+                                    <asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="txtConfirmChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="Repetir o endereço de email é obrigatório" />
+                                    <asp:CompareValidator runat="server" ValidationGroup="ChangeEmail" ControlToCompare="txtChangeEmail" ControlToValidate="txtConfirmChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="Os endereços de email não coincidem" />
+                                </div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                
+                        <div class="mt-5 mb-5 profile__separator"></div>
+                        <asp:button runat="server" ID="btnEmailSave" CausesValidation="true" ValidationGroup="ChangeEmail" OnClick="btnEmailSave_Click" CssClass="mb-5 profile__btn" Text="Alterar email" Tabindex="1" />
 
                         <h2 class="profile__sub-title">Alterar password</h2>
                         <div class="profile__label">Password atual</div>

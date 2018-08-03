@@ -52,5 +52,17 @@ namespace MVP.Services
                 model.SaveChanges();
             }
         }
+
+        public void ChangeEmail(string userid, string newemail)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                user.UserName = newemail;
+                user.Email = newemail;
+                user.EmailConfirmed = false;
+                model.SaveChanges();
+            }
+        }
     }
 }

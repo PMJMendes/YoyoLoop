@@ -40,13 +40,13 @@ namespace MVP.Profile {
         protected global::System.Web.UI.WebControls.TextBox txtBirthDate;
         
         /// <summary>
-        /// txtEmail control.
+        /// lbEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtEmail;
+        protected global::System.Web.UI.WebControls.Label lbEmail;
         
         /// <summary>
         /// btnConfirmEmail control.
@@ -74,6 +74,51 @@ namespace MVP.Profile {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnProfileSave;
+        
+        /// <summary>
+        /// upEmailChange control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upEmailChange;
+        
+        /// <summary>
+        /// tbChangeEmailPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbChangeEmailPassword;
+        
+        /// <summary>
+        /// txtChangeEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtChangeEmail;
+        
+        /// <summary>
+        /// txtConfirmChangeEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmChangeEmail;
+        
+        /// <summary>
+        /// btnEmailSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEmailSave;
         
         /// <summary>
         /// btnLogout control.
