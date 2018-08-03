@@ -81,21 +81,27 @@
 
                         <h2 class="profile__sub-title">Alterar password</h2>
                         <div class="profile__label">Password atual</div>
-                        <input class="profile__input profile__input--password" type="text">
+                        <asp:TextBox runat="server" id="tbChangePasswordCurrentPassword" TextMode="Password" AutoPostBack="false" CssClass="profile__input profile__input--password" placeholder="Password" Tabindex="2" />
+                        <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="ChangePassword" ControlToValidate="tbChangePasswordCurrentPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="Introduz a tua password actual" /></div>
 
                         <div class="row ml-0">
                             <div class="row ml-0">
                                 <div class="profile__label">Nova password</div>
-                                <input class="profile__input profile__input--password" type="text">
+                                <asp:TextBox runat="server" id="tbChangePasswordNewPassword" TextMode="Password" AutoPostBack="false" CssClass="profile__input profile__input--password" placeholder="Password" Tabindex="2" />
                             </div>
                             <div class="row ml-0">
                                 <div class="profile__label">Repetir nova password</div>
-                                <input class="profile__input profile__input--password" type="text">
+                                <asp:TextBox runat="server" id="tbChangePasswordConfirmPassword" TextMode="Password" AutoPostBack="false" CssClass="profile__input profile__input--password" placeholder="Password" Tabindex="2" />
                             </div>
+                        </div>
+                        <div class="profile__input--validator">
+                            <asp:RequiredFieldValidator runat="server" ValidationGroup="ChangePassword" ControlToValidate="tbChangePasswordNewPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="A nova password é obrigatória" />
+                            <asp:RequiredFieldValidator runat="server" ValidationGroup="ChangePassword" ControlToValidate="tbChangePasswordConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="Repetir a nova password é obrigatório" />
+                            <asp:CompareValidator runat="server" ValidationGroup="ChangePassword" ControlToCompare="tbChangePasswordNewPassword" ControlToValidate="tbChangePasswordConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="As passwords não coincidem" />
                         </div>
                 
                         <div class="mt-5 mb-5 profile__separator"></div>
-                        <button class="mb-5 profile__btn">Alterar</button>
+                        <asp:button runat="server" ID="btnPasswordSave" CausesValidation="true" ValidationGroup="ChangePassword" OnClick="btnPasswordSave_Click" CssClass="mb-5 profile__btn" Text="Alterar password" Tabindex="2" />
                     </div>
 
                     <div class="col-md-4 left-menu">

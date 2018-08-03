@@ -121,6 +121,42 @@ namespace MVP.Profile {
         protected global::System.Web.UI.WebControls.Button btnEmailSave;
         
         /// <summary>
+        /// tbChangePasswordCurrentPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbChangePasswordCurrentPassword;
+        
+        /// <summary>
+        /// tbChangePasswordNewPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbChangePasswordNewPassword;
+        
+        /// <summary>
+        /// tbChangePasswordConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbChangePasswordConfirmPassword;
+        
+        /// <summary>
+        /// btnPasswordSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPasswordSave;
+        
+        /// <summary>
         /// btnLogout control.
         /// </summary>
         /// <remarks>

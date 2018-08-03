@@ -95,5 +95,28 @@ namespace MVP.Profile
                 ApplicationHelpers.ShowMessage(this, "A password que introduziste está incorreta.");
             }
         }
+
+        protected void btnPasswordSave_Click(object sender, EventArgs e)
+        {
+            string currentpassword = tbChangePasswordCurrentPassword.Text;
+            string newpassword = tbChangePasswordNewPassword.Text;
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var user = manager.FindById(User.Identity.GetUserId());
+            if (manager.CheckPassword(user, currentpassword))
+            {
+                if(manager.ChangePassword(user.Id, currentpassword, newpassword).Succeeded)
+                {
+                    ApplicationHelpers.ShowMessage(this, "A tua password foi alterada com sucesso.");
+                }
+                else
+                {
+                    ApplicationHelpers.ShowMessage(this, "Ocorreu um erro ao alterar a tua password.<br/><br/>Tenta outra vez ou <a href='#' style='color: #ff5f6d;'>contacta-nos</a>.");
+                }
+            }
+            else
+            {
+                ApplicationHelpers.ShowMessage(this, "A password que introduziste está incorreta.");
+            }
+        }
     }
 }
