@@ -40,7 +40,7 @@ namespace MVP.Services
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
-                    BillingAdress = user.BillingAdress,
+                    BillingAddress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
                     BillingCity = user.BillingCity
                 };
@@ -68,7 +68,7 @@ namespace MVP.Services
                 user.BillingName = state.BillingName;
                 user.BillingCompany = state.BillingCompany;
                 user.BillingNIF = state.BillingNIF;
-                user.BillingAdress = state.BillingAdress;
+                user.BillingAddress = state.BillingAddress;
                 user.BillingZIP = state.BillingZIP;
                 user.BillingCity = state.BillingCity;
                 model.SaveChanges();

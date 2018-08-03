@@ -35,7 +35,7 @@ namespace MVP.Services
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
-                    BillingAdress = user.BillingAdress,
+                    BillingAdress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
                     BillingCity = user.BillingCity
                 };
@@ -279,6 +279,21 @@ namespace MVP.Services
                 isvowel = !isvowel;
             }
             return result;
+        }
+
+        public void SaveBillingDetails(CheckoutDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                user.BillingName = state.Invoice.Name;
+                user.BillingCompany = state.Invoice.Company;
+                user.BillingNIF = state.Invoice.NIF;
+                user.BillingAddress = state.Invoice.Address;
+                user.BillingZIP = state.Invoice.ZIP;
+                user.BillingCity = state.Invoice.City;
+                model.SaveChanges();
+            }
         }
 
         public void SendInvoice(CheckoutDTO state)

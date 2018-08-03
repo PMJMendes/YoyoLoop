@@ -46,7 +46,7 @@ namespace MVP.Profile
             txtBillingName.Text = pageData.BillingName;
             txtBillingCompany.Text = pageData.BillingCompany;
             txtBillingNIF.Text = pageData.BillingNIF;
-            txtBillingAddress.Text = pageData.BillingAdress;
+            txtBillingAddress.Text = pageData.BillingAddress;
             txtBillingZIP.Text = pageData.BillingZIP;
             txtBillingCity.Text = pageData.BillingCity;
         }
@@ -56,7 +56,7 @@ namespace MVP.Profile
             pageData.BillingName = txtBillingName.Text;
             pageData.BillingCompany = txtBillingCompany.Text;
             pageData.BillingNIF = txtBillingNIF.Text;
-            pageData.BillingAdress = txtBillingAddress.Text;
+            pageData.BillingAddress = txtBillingAddress.Text;
             pageData.BillingZIP = txtBillingZIP.Text;
             pageData.BillingCity = txtBillingCity.Text;
             service.UpdateBillingDetails(pageData);

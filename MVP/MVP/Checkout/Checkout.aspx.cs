@@ -80,7 +80,10 @@ namespace MVP.Checkout
 
                     string error;
                     if (service.ProcessPayment(pageData, hfStripeToken, out error))
-                    {
+                    {   if(cbSaveDetails.Checked)
+                        {
+                            service.SaveBillingDetails(pageData);
+                        }
                         Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
                     }
                     else

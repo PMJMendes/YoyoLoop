@@ -1074,6 +1074,10 @@
     <Compile Include="Migrations\201808030548404_ApplicationUser-BillingDetails.Designer.cs">
       <DependentUpon>201808030548404_ApplicationUser-BillingDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808030915245_ApplicationUser-BillingDetails-CorrectTypo.cs" />
+    <Compile Include="Migrations\201808030915245_ApplicationUser-BillingDetails-CorrectTypo.Designer.cs">
+      <DependentUpon>201808030915245_ApplicationUser-BillingDetails-CorrectTypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1357,6 +1361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808030548404_ApplicationUser-BillingDetails.resx">
       <DependentUpon>201808030548404_ApplicationUser-BillingDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030915245_ApplicationUser-BillingDetails-CorrectTypo.resx">
+      <DependentUpon>201808030915245_ApplicationUser-BillingDetails-CorrectTypo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

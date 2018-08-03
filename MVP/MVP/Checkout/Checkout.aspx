@@ -57,6 +57,13 @@
                                             <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="city" autocomplete="on" Tabindex="0" />
                                         </div>
                                     </div>
+                                    <div class="checkout__billing checkout__billing--checkbox pt-2">
+                                        <div class="form-check">
+                                            <input runat="server" ID="cbSaveDetails" class="form-check-input" type="checkbox">
+                                            <label class="form-check-label" for="cbSaveDetails">&nbsp;Guardar detalhes de facturação</label>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
