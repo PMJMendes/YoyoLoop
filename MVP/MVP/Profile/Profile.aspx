@@ -62,13 +62,13 @@
                             <ContentTemplate>
                                 <h2 class="profile__sub-title">Alterar endereço de email</h2>
                                 <div class="profile__label">Password atual</div>
-                                <asp:TextBox runat="server" id="tbChangeEmailPassword" TextMode="Password" CssClass="profile__input profile__input--password" placeholder="Password" Tabindex="1" />
+                                <asp:TextBox runat="server" id="tbChangeEmailPassword" TextMode="Password" AutoPostBack="false" CssClass="profile__input profile__input--password" placeholder="Password" Tabindex="1" />
                                 <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="tbChangeEmailPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="Introduz a tua password" /></div>
                                 <div class="profile__label">Novo endereço de email</div>
-                                <asp:TextBox runat="server" ID="txtChangeEmail" TextMode="Email" class="profile__input profile__input--email" Tabindex="1" />
+                                <asp:TextBox runat="server" ID="txtChangeEmail" TextMode="Email" AutoPostBack="false" class="profile__input profile__input--email" Tabindex="1" />
                                 <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="txtChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="O endereço de email é obrigatório" /></div>
                                 <div class="profile__label">Repetir endereço de email</div>
-                                <asp:TextBox runat="server" ID="txtConfirmChangeEmail" class="profile__input profile__input--email" Tabindex="1" />
+                                <asp:TextBox runat="server" ID="txtConfirmChangeEmail" TextMode="Email" AutoPostBack="false" class="profile__input profile__input--email" Tabindex="1" />
                                 <div class="profile__input--validator">
                                     <asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="txtConfirmChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="Repetir o endereço de email é obrigatório" />
                                     <asp:CompareValidator runat="server" ValidationGroup="ChangeEmail" ControlToCompare="txtChangeEmail" ControlToValidate="txtConfirmChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="Os endereços de email não coincidem" />
