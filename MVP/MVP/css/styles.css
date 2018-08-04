@@ -710,7 +710,7 @@ header.head {
     cursor: default; }
 
 .hide {
-  display: none; }
+  display: none !important; }
 
 #destinationPopover {
   font-family: Lato;
@@ -1213,7 +1213,7 @@ header.head {
     .invitefriends__container--second {
       background: white; }
     .invitefriends__container--third {
-      padding: 80px 0;
+      padding: 60px 0;
       background: #eff1f6; }
     .invitefriends__container--forth {
       padding-top: 30px; }
