@@ -97,12 +97,14 @@
                     </div>
 
                     <div class="col-md-4 left-menu">
-                        <asp:UpdatePanel runat="server" ID="upCheckoutPanel" UpdateMode="Conditional">
-                            <ContentTemplate>
-                                <!-- BOOKING PANEL -->
-                                <yoyo:BookingPanel runat="server" ID="CheckoutPanel" BookingActive="false" />
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
+                        <div class="checkout__sticky">
+                            <asp:UpdatePanel runat="server" ID="upCheckoutPanel" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <!-- BOOKING PANEL -->
+                                    <yoyo:BookingPanel runat="server" ID="CheckoutPanel" BookingActive="false" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
                     </div>
                 </div>
 

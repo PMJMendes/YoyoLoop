@@ -131,23 +131,21 @@
             <div class='profile-menu__wrapper'>
                 <div class='d-flex flex-column align-items-center text-left'>
                     <a OnClick="javascript:$.blockUI()" href="/Profile/Profile" class="profile__menu__link <%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "profile__menu__link--selected" : "" %>">
-                        <img class='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "mr-2" : "hide" %>' src='/img/profile-selected.png' srcset='/img/profile-selected@2x.png 2x, /img/profile-selected@3x.png 3x'>
-                        <img class='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "hide" : "mr-2" %>' src='/img/profile.png' srcset='/img/profile@2x.png 2x, /img/profile@3x.png 3x'>
+                        <img class='mr-2' src='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "/img/profile-selected.png" : "/img/profile.png" %>' srcset='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "/img/profile-selected@2x.png 2x, /img/profile-selected@3x.png 3x" : "/img/profile@2x.png 2x, /img/profile@3x.png 3x" %>'>
                         O Meu Perfil
                     </a>
 
                     <div class='mt-3 mb-3 profile__menu__separator'></div>
                 
                     <a OnClick="javascript:$.blockUI()" href="/Profile/Billing" class="profile__menu__link <%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "profile__menu__link--selected" : "" %>">
-                        <img class='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "mr-2" : "hide" %>' src='/img/billing-selected.png' srcset='/img/billing-selected@2x.png 2x, /img/billing-selected@3x.png 3x'>
-                        <img class='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "hide" : "mr-2" %>' src='/img/billing.png' srcset='/img/billing@2x.png 2x, /img/billing@3x.png 3x'>
+                        <img class='mr-2' src='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "/img/billing-selected.png" : "/img/billing.png" %>' srcset='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "/img/billing-selected@2x.png 2x, /img/billing-selected@3x.png 3x" : "/img/billing@2x.png 2x, /img/billing@3x.png 3x" %>'>
                         Detalhes de Faturação
                     </a>
                 
                     <div class='mt-3 mb-3 profile__menu__separator'></div>
                 
-                    <a href='/pages/invitefriends.html' OnClick="javascript:$.blockUI()" class='profile__menu__link'>
-                        <img class='mr-2' src='/img/invitefriends.png' srcset='/img/invitefriends@2x.png 2x, /img/invitefriends@3x.png 3x'>
+                    <a OnClick="javascript:$.blockUI()" href='/Profile/Invite' class='profile__menu__link <%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Invite" ? "profile__menu__link--selected" : "" %>'>
+                        <img class='mr-2' src='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Invite" ? "/img/invitefriends-selected.png" : "/img/invitefriends.png" %>' srcset='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "/img/invitefriends-selected@2x.png 2x, /img/invitefriends-selected@3x.png 3x" : "/img/invitefriends@2x.png 2x, /img/invitefriends@3x.png 3x" %>'>
                         Convidar amigos
                     </a>
                 

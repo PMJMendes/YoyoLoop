@@ -77,17 +77,17 @@
 
                     <div class="col-md-4 left-menu">
                         <div class="d-flex flex-column align-items-center text-left profile__menu sticky">
-                            <a href="/Profile/Profile" OnClick="javascript:$.blockUI()" class="profile__menu__link">
+                            <a OnClick="javascript:$.blockUI()" href="/Profile/Profile" class="profile__menu__link">
                                 <img class="mr-2" src="/img/profile.png" srcset="/img/profile@2x.png 2x, /img/profile@3x.png 3x">
                                 Dados pessoais
                             </a>
                             <div class="mt-3 mb-3 profile__menu__separator"></div>
-                            <a href="/Profile/Billing" OnClick="javascript:$.blockUI()" class="profile__menu__link profile__menu__link--selected">
+                            <a OnClick="javascript:$.blockUI()" href="/Profile/Billing" class="profile__menu__link profile__menu__link--selected">
                                 <img class="mr-2" src="/img/billing-selected.png" srcset="/img/billing-selected@2x.png 2x, /img/billing-selected@3x.png 3x">
                                 Detalhes de Faturação
                             </a>
                             <div class="mt-3 mb-3 profile__menu__separator"></div>
-                            <a href="/pages/invitefriends.html" class="profile__menu__link">
+                            <a OnClick="javascript:$.blockUI()" href="/Profile/Invite" class="profile__menu__link">
                                 <img class="mr-2" src="/img/invitefriends.png" srcset="/img/invitefriends@2x.png 2x, /img/invitefriends@3x.png 3x">
                                 Convidar amigos
                             </a>

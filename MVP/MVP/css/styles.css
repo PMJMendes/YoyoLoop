@@ -552,6 +552,8 @@ header.head {
       #book .next-trip .pricing .price {
         color: #ff5f6d;
         font-weight: bold; }
+      #book .next-trip .pricing .price-base {
+        font-size: 18px; }
       #book .next-trip .pricing .price-green {
         color: #2ecc71;
         font-weight: bold; }
@@ -750,7 +752,8 @@ header.head {
     overflow: hidden;
     padding: 0; }
   #destinationPopover .show {
-    display: block; }
+    display: block;
+    width: 100%; }
   #destinationPopover .divider {
     margin-top: 5px;
     margin-bottom: 5px; }
@@ -1213,7 +1216,7 @@ header.head {
     .invitefriends__container--second {
       background: white; }
     .invitefriends__container--third {
-      padding: 80px 0;
+      padding: 60px 0;
       background: #eff1f6; }
     .invitefriends__container--forth {
       padding-top: 30px; }
@@ -2427,6 +2430,9 @@ header.head {
       color: #838da7 !important; }
       .checkout__menu__link--selected {
         color: #ff5f6d !important; }
+  .checkout__sticky {
+    position: sticky;
+    top: 120px; }
   .checkout .next-trip {
     font-family: Lato;
     margin-top: 8px;
@@ -2498,16 +2504,26 @@ header.head {
       .checkout .next-trip .pricing .total {
         font-weight: bold;
         letter-spacing: 0.4px;
-        color: #c1c6d3; }
+        color: #c1c6d3;
+        font-size: 12px; }
       .checkout .next-trip .pricing .times {
         font-size: 10px; }
       .checkout .next-trip .pricing .price {
-        color: #ff5f6d; }
+        color: #ff5f6d;
+        font-weight: bold; }
+      .checkout .next-trip .pricing .price-base {
+        font-size: 18px; }
+      .checkout .next-trip .pricing .price-green {
+        color: #2ecc71;
+        font-weight: bold; }
       .checkout .next-trip .pricing .total-price {
         font-size: 30px;
         font-weight: bold;
         letter-spacing: normal;
         color: #ff5f6d; }
+        @media (max-width: 767.98px) {
+          .checkout .next-trip .pricing .total-price {
+            font-size: 18px; } }
       .checkout .next-trip .pricing .promocode {
         font-size: 14px;
         font-weight: bold;
@@ -2544,6 +2560,8 @@ header.head {
     letter-spacing: 0.4px;
     text-align: left;
     color: #838da7; }
+  .checkout .panel-end:last-child {
+    padding-bottom: 16px; }
 
 .confirm-check {
   width: 20px;
@@ -3285,8 +3303,6 @@ input:checked {
       color: #535e7b; }
     .help .panel-title a[aria-expanded="true"] {
       color: #ff5f6d; }
-  .help .panel-default:last-child .panel-title {
-    border-width: 0; }
   .help .panel-body {
     font-size: 14px;
     font-weight: normal;
@@ -3303,12 +3319,16 @@ input:checked {
   .help .left-menu__entry {
     padding: 10px 20px;
     cursor: pointer; }
+    .help .left-menu__entry a {
+      color: #535e7b; }
     .help .left-menu__entry--selected {
       padding: 10px 20px;
       border-radius: 20px;
       background-color: #ff5f6d;
       color: white;
       box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); }
+      .help .left-menu__entry--selected a {
+        color: white; }
   @media (max-width: 767.98px) {
     .help .left-menu {
       display: none; } }
@@ -3320,19 +3340,27 @@ input:checked {
         display: flex;
         justify-content: center;
         color: white;
-        position: relative; }
-        .help .left-menu-mobile img {
-          margin-left: -30px;
-          margin-top: 20px;
-          height: 10px; }
-        .help .left-menu-mobile__select {
-          width: 350px;
-          height: 50px;
-          padding-left: 30px;
-          border-radius: 25px;
-          color: white;
-          background-color: #ff5f6d;
-          box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); } }
+        position: relative; } }
+    .help .left-menu-mobile img {
+      margin-left: -30px;
+      margin-top: 20px;
+      height: 10px; }
+    .help .left-menu-mobile select {
+      -moz-appearance: none;
+      /* Firefox */
+      -webkit-appearance: none;
+      /* Safari and Chrome */ }
+    .help .left-menu-mobile select option {
+      color: #535e7b;
+      background-color: white; }
+    .help .left-menu-mobile__select {
+      width: 350px;
+      height: 50px;
+      padding-left: 30px;
+      border-radius: 25px;
+      color: white;
+      background-color: #ff5f6d;
+      box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); }
 
 section.yoyoloops {
   padding-bottom: 0; }

@@ -116,7 +116,7 @@
                                 Detalhes de Faturação
                             </a>
                             <div class="mt-3 mb-3 profile__menu__separator"></div>
-                            <a href="/pages/invitefriends.html" class="profile__menu__link">
+                            <a OnClick="javascript:$.blockUI()" href="/Profile/Invite" class="profile__menu__link">
                                 <img class="mr-2" src="/img/invitefriends.png" srcset="/img/invitefriends@2x.png 2x, /img/invitefriends@3x.png 3x">
                                 Convidar amigos
                             </a>

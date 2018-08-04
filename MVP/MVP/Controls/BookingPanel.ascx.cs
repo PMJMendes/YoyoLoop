@@ -51,6 +51,7 @@ namespace MVP.Controls
                 Price = 0,
                 StandardCost = 0,
                 Cost = 0,
+                PriceSummary = new List<BookingPanelDTO.PriceItem>(),
                 Promocode = string.Empty,
                 PromoValid = false,
                 StartTime = DateTime.MinValue,
@@ -67,6 +68,9 @@ namespace MVP.Controls
         {
             PanelData = source;
             tbPromo.Text = PanelData.Promocode;
+            SummaryRepeater.DataSource = PanelData.PriceSummary;
+            SummaryRepeater.DataBind();
+
             if(PanelData.PromoValid)
             {
                 pnPromocode.Visible = true;
@@ -192,6 +196,33 @@ namespace MVP.Controls
             pnPromocode.Visible = false;
             phPromoCheck.Visible = false;
             phPromoError.Visible = false;
+        }
+
+        protected void SummaryRepeater_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.DataItem != null)
+            {
+                var priceitem = (BookingPanelDTO.PriceItem)e.Item.DataItem;
+                var desclabel = (Label)e.Item.FindControl("lbPriceItemDescription");
+                var pricelabel = (Label)e.Item.FindControl("lbPriceItemValue");
+                desclabel.Text = priceitem.Description;
+                pricelabel.Text = priceitem.Value;
+                switch (priceitem.Type)
+                {
+                    case (BookingPanelDTO.PriceItemType.NORMAL):
+                        pricelabel.CssClass = "price pl-1";
+                        break;
+                    case (BookingPanelDTO.PriceItemType.DISCOUNT):
+                        pricelabel.CssClass = "price-green pl-1";
+                        break;
+                    case (BookingPanelDTO.PriceItemType.NEUTRAL):
+                        pricelabel.CssClass = "pl-1";
+                        break;
+                    default:
+                        pricelabel.CssClass = "pl-1";
+                        break;
+                }
+            }
         }
     }
 }

@@ -283,6 +283,11 @@ $desktop: "(min-width: 1440px)";
         }
     }
 
+    &__sticky {
+        position: sticky;
+        top: 120px;
+    }
+
     .next-trip {
         font-family: Lato;
         margin-top: 8px;
@@ -363,7 +368,6 @@ $desktop: "(min-width: 1440px)";
                 font-family: Lato;
                 font-size: 14px;
                 font-weight: bold;
-                ;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: normal;
@@ -390,6 +394,7 @@ $desktop: "(min-width: 1440px)";
                 font-weight: bold;
                 letter-spacing: 0.4px;
                 color: #c1c6d3;
+                font-size: 12px;
             }
 
             .times {
@@ -398,6 +403,16 @@ $desktop: "(min-width: 1440px)";
 
             .price {
                 color: #ff5f6d;
+                font-weight: bold;
+            }
+
+            .price-base {
+                font-size: 18px;
+            }
+
+            .price-green {
+                color: #2ecc71;
+                font-weight: bold;
             }
 
             .total-price {
@@ -405,6 +420,11 @@ $desktop: "(min-width: 1440px)";
                 font-weight: bold;
                 letter-spacing: normal;
                 color: #ff5f6d;
+
+
+                @media #{$mobile} {
+                    font-size: 18px;
+                }
             }
 
             .promocode {
@@ -456,6 +476,12 @@ $desktop: "(min-width: 1440px)";
             letter-spacing: 0.4px;
             text-align: left;
             color: #838da7;
+        }
+    }
+
+    .panel-end {
+        &:last-child {
+            padding-bottom: 16px;
         }
     }
 }
