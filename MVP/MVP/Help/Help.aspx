@@ -143,12 +143,15 @@
                                     </div>
 
                                     <div class="left-menu-mobile mb-5">
-                                        <select class="left-menu-mobile__select">
-                                            <option value="0">Viagens e Loops</option>
-                                            <option value="1">Dashboard</option>
-                                            <option value="2">Convites</option>
-                                            <option value="3">Veículos Yoyoloop</option>
-                                            <option value="4">Descontos e Promoções</option>
+                                        <select runat="server" id="ddlMobileMenu" onchange="javascript:__doPostBack('<%= upHelp.ClientID %>', '');" onserverchange="ddlMobileMenu_ServerChange" class="left-menu-mobile__select" tabindex="-1">
+                                            <option value="Trip">Viagens e Loops</option>
+                                            <option value="Dashboard">Dashboard</option>
+                                            <option value="Invite">Convites</option>
+                                            <option value="Vehicle">Veículos Yoyoloop</option>
+                                            <option value="Promo">Descontos e Promoções</option>
+                                            <option value="Luggage">Malas e Bagagens</option>
+                                            <option value="Corporate">Empresas</option>
+                                            <option value="Drive">Conduzir um Yoyoloop</option>
                                         </select>
 
                                         <img src="/img/arr.png" srcset="/img/arr@2x.png 2x, /img/arr@3x.png 3x" class="arr">
