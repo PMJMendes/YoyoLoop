@@ -105,6 +105,14 @@ $desktop: "(min-width: 1440px)";
             color: #ff5f6d;
             text-decoration: underline;
         }
+
+        &--error {
+            font-size: 16px;
+        }
+
+        &--invisible {
+            visibility: hidden !important;
+        }
     }
 
     &__label {

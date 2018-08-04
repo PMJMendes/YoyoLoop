@@ -49,13 +49,13 @@ namespace MVP.Checkout {
         protected global::System.Web.UI.WebControls.TextBox txtInvoiceNIF;
         
         /// <summary>
-        /// txtInvoiceAdress control.
+        /// txtInvoiceAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInvoiceAdress;
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceAddress;
         
         /// <summary>
         /// txtInvoiceZIP control.
@@ -74,6 +74,15 @@ namespace MVP.Checkout {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtInvoiceCity;
+        
+        /// <summary>
+        /// cbSaveDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbSaveDetails;
         
         /// <summary>
         /// upPromocode control.
