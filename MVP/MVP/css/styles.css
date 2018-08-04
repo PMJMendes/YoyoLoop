@@ -712,7 +712,7 @@ header.head {
     cursor: default; }
 
 .hide {
-  display: none !important; }
+  display: none; }
 
 #destinationPopover {
   font-family: Lato;
@@ -3303,8 +3303,6 @@ input:checked {
       color: #535e7b; }
     .help .panel-title a[aria-expanded="true"] {
       color: #ff5f6d; }
-  .help .panel-default:last-child .panel-title {
-    border-width: 0; }
   .help .panel-body {
     font-size: 14px;
     font-weight: normal;
@@ -3321,12 +3319,16 @@ input:checked {
   .help .left-menu__entry {
     padding: 10px 20px;
     cursor: pointer; }
+    .help .left-menu__entry a {
+      color: #535e7b; }
     .help .left-menu__entry--selected {
       padding: 10px 20px;
       border-radius: 20px;
       background-color: #ff5f6d;
       color: white;
       box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3); }
+      .help .left-menu__entry--selected a {
+        color: white; }
   @media (max-width: 767.98px) {
     .help .left-menu {
       display: none; } }
