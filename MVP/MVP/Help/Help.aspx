@@ -30,7 +30,7 @@
                                             <p class="help__menu__text mb-0">Loops disponíveis?</p>
                                             <p class="help__menu__text mb-0">Como solicitar um novo loop?</p>
                                             <p class="help__menu__text mb-0">Métodos de pagamentos?</p>
-                                            <p class="help__menu__text mb-0">Métodos de pagamentos?</p>
+                                            <p class="help__menu__text mb-0">Facturas</p>
                                             <asp:LinkButton runat="server" ID="btnTopicTrip" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
                                         </div>
 
@@ -185,7 +185,7 @@
 
                                             <div id="collapse1-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -200,7 +200,7 @@
 
                                             <div id="collapse1-3" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -215,7 +215,7 @@
 
                                             <div id="collapse1-4" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -230,7 +230,7 @@
 
                                             <div id="collapse1-5" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -245,7 +245,7 @@
 
                                             <div id="collapse1-6" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -260,7 +260,7 @@
 
                                             <div id="collapse1-7" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -291,7 +291,7 @@
 
                                             <div id="collapse1-9" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                 </div>
                                             </div>
                                         </div>
@@ -303,13 +303,55 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-1">2 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-1">Como alterar dados pessoais?</a>
                                                 </h4>
                                             </div>
 
                                             <div id="2-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-2">Como adicionar/actualizar ou eliminar dados de pagamentos?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="2-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-3">A minha conta corrente</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="2-3" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-4">As minhas viagens a 3 Euros</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="2-4" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -322,13 +364,55 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse3-1">3 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-1">Quantos amigos posso convidar?</a>
                                                 </h4>
                                             </div>
 
-                                            <div id="collapse3-1" class="panel-collapse collapse">
+                                            <div id="3-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-2">Posso dar o meu cupão a amigos que já tenham utilizado a Yoyoloop?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="3-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-3">O que os meus amigos ganham por viajar com o meu cupão?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="3-3" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-4">O que é que eu ganho?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="3-4" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -341,13 +425,55 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse4-1">4 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-1">Todos os carros yoyoloop tem wifi?</a>
                                                 </h4>
                                             </div>
 
-                                            <div id="collapse4-1" class="panel-collapse collapse">
+                                            <div id="4-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-2">O motorista é mesmo profissional?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-3">Quantos lugares tem um carro da yoyoloop?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-3" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-4">Os carros da Yoyoloop são eléctricos?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-4" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -360,13 +486,27 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse5-1">5 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-1">Posso usar dois códigos promocionais para a mesma viagem?</a>
                                                 </h4>
                                             </div>
 
-                                            <div id="collapse5-1" class="panel-collapse collapse">
+                                            <div id="5-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-2">Tenho saldo na minha conta corrente e código promocionais disponíveis, como faço para usar um ou outro?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="5-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -379,13 +519,41 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse6-1">6 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-1">Posso levar malas?</a>
                                                 </h4>
                                             </div>
 
-                                            <div id="collapse6-1" class="panel-collapse collapse">
+                                            <div id="6-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-2">Quais os limites de tamanhos das bagagem?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="6-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-3">O que não posso levar comigo?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="6-3" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -398,13 +566,27 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse7-1">7 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-1">Posso emitir facturas com contribuinte?</a>
                                                 </h4>
                                             </div>
 
-                                            <div id="collapse7-1" class="panel-collapse collapse">
+                                            <div id="7-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    </br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-2">Posso saber quanto gastei no total?</a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="7-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
@@ -417,13 +599,13 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse8-1">8 Needs copy for questions?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-1">Como posso conduzir um Yoyoloop?</a>
                                                 </h4>
                                             </div>
 
-                                            <div id="collapse8-1" class="panel-collapse collapse">
+                                            <div id="8-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    Dummy text
+                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
                                                     </br>
                                                 </div>
                                             </div>
