@@ -597,6 +597,8 @@
     <Content Include="Pages\Loops.aspx" />
     <Content Include="Pages\Privacy.aspx" />
     <Content Include="Pages\Terms.aspx" />
+    <Content Include="Profile\Billing.aspx" />
+    <Content Include="Profile\Invite.aspx" />
     <Content Include="Profile\Profile.aspx" />
     <Content Include="sass\styles.css" />
     <Content Include="sass\styles.min.css" />
@@ -1065,6 +1067,18 @@
     <Compile Include="Migrations\201807241553336_UpdateService-Warning.Designer.cs">
       <DependentUpon>201807241553336_UpdateService-Warning.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808030021199_ApplicationUser-BirthDate.cs" />
+    <Compile Include="Migrations\201808030021199_ApplicationUser-BirthDate.Designer.cs">
+      <DependentUpon>201808030021199_ApplicationUser-BirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808030548404_ApplicationUser-BillingDetails.cs" />
+    <Compile Include="Migrations\201808030548404_ApplicationUser-BillingDetails.Designer.cs">
+      <DependentUpon>201808030548404_ApplicationUser-BillingDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808030915245_ApplicationUser-BillingDetails-CorrectTypo.cs" />
+    <Compile Include="Migrations\201808030915245_ApplicationUser-BillingDetails-CorrectTypo.Designer.cs">
+      <DependentUpon>201808030915245_ApplicationUser-BillingDetails-CorrectTypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1136,6 +1150,21 @@
     <Compile Include="Pages\Terms.aspx.designer.cs">
       <DependentUpon>Terms.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile\Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\Invite.aspx.cs">
+      <DependentUpon>Invite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Invite.aspx.designer.cs">
+      <DependentUpon>Invite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\InviteDTO.cs" />
     <Compile Include="Profile\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1144,6 +1173,7 @@
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile\ProfileDTO.cs" />
+    <Compile Include="Profile\Services\InviteService.cs" />
     <Compile Include="Profile\Services\ProfileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Strings.Designer.cs">
@@ -1335,6 +1365,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807241553336_UpdateService-Warning.resx">
       <DependentUpon>201807241553336_UpdateService-Warning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030021199_ApplicationUser-BirthDate.resx">
+      <DependentUpon>201808030021199_ApplicationUser-BirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030548404_ApplicationUser-BillingDetails.resx">
+      <DependentUpon>201808030548404_ApplicationUser-BillingDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030915245_ApplicationUser-BillingDetails-CorrectTypo.resx">
+      <DependentUpon>201808030915245_ApplicationUser-BillingDetails-CorrectTypo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
