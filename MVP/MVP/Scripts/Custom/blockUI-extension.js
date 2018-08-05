@@ -1,18 +1,11 @@
 ﻿function pageLoad() {
     $.blockUI.defaults.message = $('#divBlockUI');
     $.blockUI.defaults.baseZ = 2000;
-    $.blockUI.defaults.css = {
-        padding: 0,
-        margin: 0,
-        width: '30%',
-        top: '40%',
-        left: '35%',
-        textAlign: 'center',
-        cursor: 'wait'
-    }
+    $.blockUI.defaults.css = {}
+
     $.blockUI.defaults.overlayCSS = {
         backgroundColor: '#000',
-        opacity: 0.4,
+        opacity: 0.20,
         cursor: 'wait'
     }
 
