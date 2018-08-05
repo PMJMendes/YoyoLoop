@@ -95,6 +95,24 @@ namespace MVP.Services
             };
 
             result.StandardCost = result.StandardPrice * result.Seats;
+            result.PriceSummary = GetPriceSummary(result);
+
+            return result;
+        }
+
+        private List<BookingPanelDTO.PriceItem> GetPriceSummary(BookingPanelDTO paneldata)
+        {
+            var result = new List<BookingPanelDTO.PriceItem>();
+
+            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            {
+                result.Add(new BookingPanelDTO.PriceItem
+                {
+                    Description = "Promocode",
+                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C"),
+                    Type = BookingPanelDTO.PriceItemType.DISCOUNT
+                });
+            }
 
             return result;
         }
