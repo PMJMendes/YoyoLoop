@@ -270,7 +270,7 @@ namespace MVP.Services
 
                 result.StandardCost = result.StandardPrice * result.Seats;
                 result.Cost = result.Price * result.Seats;
-                result.PriceSummary = GetPriceSummary(result);
+                result.PriceSummary = new CheckoutService().GetPriceSummary(result);
 
                 if(trigger == "new")
                 {
@@ -295,23 +295,6 @@ namespace MVP.Services
 
                 return result;
             }
-        }
-
-        private List<BookingPanelDTO.PriceItem> GetPriceSummary (BookingPanelDTO paneldata)
-        {
-            var result = new List<BookingPanelDTO.PriceItem>();
-
-            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
-            {
-                result.Add(new BookingPanelDTO.PriceItem
-                {
-                    Description = "Promocode",
-                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C"),
-                    Type = BookingPanelDTO.PriceItemType.DISCOUNT
-                });
-            }
-
-            return result;
         }
 
         public void CheckPending()
