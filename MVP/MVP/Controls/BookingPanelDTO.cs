@@ -18,6 +18,7 @@ namespace MVP.Controls
         public decimal Price { get; set; }
         public decimal StandardCost { get; set; }
         public decimal Cost { get; set; }
+        public List<PriceItem> PriceSummary { get; set; }
         public string Promocode { get; set; }
         public bool PromoValid { get; set; }
 
@@ -26,5 +27,20 @@ namespace MVP.Controls
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
+
+        [Serializable]
+        public class PriceItem
+        {
+            public string Description { get; set; }
+            public string Value { get; set; }
+            public PriceItemType Type { get; set; }
+        }
+
+        public enum PriceItemType
+        {
+            NORMAL,
+            DISCOUNT,
+            NEUTRAL
+        }
     }
 }

@@ -706,6 +706,10 @@ header.head {
                 font-weight: bold;
             }
 
+            .price-base {
+                font-size: 18px;
+            }
+
             .price-green {
                 color: #2ecc71;
                 font-weight: bold;
@@ -983,6 +987,7 @@ header.head {
 
     .show {
         display: block;
+        width: 100%;
     }
 
     .divider {
