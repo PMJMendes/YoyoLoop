@@ -1100,7 +1100,8 @@ header.head {
       width: 100%;
       max-width: 250px; }
     .profile__input--payment-method {
-      max-width: 300px; }
+      min-width: 300px;
+      max-width: 450px; }
     .profile__input--card-number {
       max-width: 250px; }
   .profile__separator {
@@ -2379,6 +2380,10 @@ header.head {
       max-width: 300px; }
     .checkout__input--card-number {
       max-width: 280px; }
+      .checkout__input--card-number :disabled {
+        border: solid 1px rgba(102, 115, 134, 0.2) !important;
+        background-color: #ffffff !important;
+        color: #667386 !important; }
     .checkout__input--card-expiration {
       max-width: 100px; }
     .checkout__input--card-cvv {

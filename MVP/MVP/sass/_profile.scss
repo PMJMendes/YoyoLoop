@@ -128,7 +128,8 @@ $desktop: "(min-width: 1440px)";
         }
 
         &--payment-method {
-            max-width: 300px;
+            min-width: 300px;
+            max-width: 450px;
         }
 
         &--card-number {

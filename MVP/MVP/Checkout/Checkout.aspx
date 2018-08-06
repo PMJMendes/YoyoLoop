@@ -21,7 +21,13 @@
                     <div class="col-md-8">
                         <h1 class="checkout__main-title">Pagar e Confirmar</h1>
 
-                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:290px;width:100%;border:none" />
+                        <h2 class="checkout__sub-title">Pagamento</h2>
+                        <div class="checkout__label">Método de pagamento</div>
+                        <select class="checkout__input checkout__input--payment-method">
+                            <option value="card">Cartão de crédito</option>
+                        </select>
+
+                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:160px;width:100%;border:none" />
 
                         <!-- FACTURA -->
                         <div class="mt-5 mb-5 checkout__separator"></div>

@@ -600,6 +600,7 @@
     <Content Include="Profile\Billing.aspx" />
     <Content Include="Profile\Invite.aspx" />
     <Content Include="Profile\Profile.aspx" />
+    <Content Include="Profile\Scripts\stripe-createCardToken.js" />
     <Content Include="sass\styles.css" />
     <Content Include="sass\styles.min.css" />
     <Content Include="sass\_homepage.css" />

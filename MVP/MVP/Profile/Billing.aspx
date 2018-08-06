@@ -1,6 +1,17 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Billing.aspx.cs" Inherits="MVP.Profile.Billing" %>
+<%@ Import Namespace="MVP.Profile" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <asp:ScriptManagerProxy runat="server">
+        <Scripts>
+            <asp:ScriptReference Path="https://js.stripe.com/v2/" />
+        </Scripts>
+    </asp:ScriptManagerProxy>
+
+    <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />
+    <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
+    <input type="hidden" name="hfStripeError" id="hfStripeError" />
 
     <div class="profile">
         <div class="profile__container profile__container--first">
@@ -53,24 +64,45 @@
                         <div class="mt-5 mb-5 profile__separator"></div>
                         <asp:button runat="server" ID="btnBillingSave" CausesValidation="true" ValidationGroup="BillingDetails" OnClick="btnBillingSave_Click" CssClass="mb-5 profile__btn" Text="Actualizar dados" Tabindex="0" />
 
-                        <!-- Credit Card Details -->
-                        <h2 class="profile__sub-title">Pagamento</h2>
-                        <div class="profile__label">Método de pagamento</div>
-                        <select class="profile__input profile__input--payment-method">
-                            <option value="card">Cartão de crédito</option>
-                        </select>
+                        <asp:UpdatePanel runat="server" ID="upPaymentMethods" UpdateMode="Conditional" ClientIDMode="Static">
+                            <ContentTemplate>
+                                <h2 class="profile__sub-title">Pagamento</h2>
+                                <div class="profile__label">Método de pagamento</div>
+                                <asp:DropDownList runat="server" ID="ddlCardMenu" AutoPostBack="true" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="ddlCardMenu_SelectedIndexChanged" CssClass="profile__input profile__input--payment-method" tabindex="-1" />
 
-                        <div class="profile__label">Nome do titular</div>
-                        <input class="profile__input profile__input--name" type="text" placeholder="Pedro Meireles">
+                                <asp:PlaceHolder runat="server" ID="phCardDisplay" Visible="true">
+                                    <div class="checkout__label">Nome do titular</div>
+                                    <asp:TextBox runat="server" ID="tbCardHolderName" CssClass="checkout__input checkout__input--name" type="text" placeholder="" />
                 
-                        <div class="profile__label">Número do cartão</div>
-                        <input class="profile__input profile__input--card-number" type="text" placeholder="Número do cartão"> 
-                        <!-- TODO: MISSING CARD PNG -->
+                                    <div class="row checkout__card-info">
+                                        <div class="col-md-7">
+                                            <div class="checkout__label">Número do cartão</div>
+                                            <asp:TextBox runat="server" ID="tbCardNumber" Enabled="false" CssClass="checkout__input checkout__input--card-number" type="text" placeholder="0000 0000 0000 0000" />
+                                        </div>
+                                        <div class="col-md-3 d-flex align-items-end">
+                                            <asp:TextBox runat="server" ID="tbCardExpiry" CssClass="checkout__input checkout__input--card-expiration" type="text" placeholder="MM/YY" />
+                                        </div>
+                                    </div>
+                                    <div class="checkout checkout__billing checkout__billing--checkbox pt-1">
+                                        <div class="form-check">
+                                            <input runat="server" ID="cbDefaultCard" class="form-check-input" type="checkbox">
+                                            <label class="form-check-label" for="cbDefaultCard">&nbsp;Cartão principal</label>
+                                        </div>
+                                    </div>
 
-                        <div class="mt-5 mb-5 profile__separator"></div>
-                        <button class="mb-5 profile__btn">Alterar</button>
-                        <!-- End of Credit Card Details -->
+                                    <div class="mt-4 mb-5 profile__separator"></div>
+                                    <asp:Button runat="server" ID="btnUpdateCard" OnClick="btnUpdateCard_Click" CssClass="mb-5 profile__btn mr-5" tabindex="-1" Text="Alterar" />
+                                    <asp:Button runat="server" ID="btnRemoveCard" OnClick="btnRemoveCard_Click" CssClass="mb-5 profile__btn mr-5" tabindex="-1" Text="Remover" />
+                                </asp:PlaceHolder>
 
+                                <asp:PlaceHolder runat="server" ID="phCardEntry" Visible="false">
+                                    <iframe runat="server" name="ifPayForm" src="/Checkout/Payform.aspx" scrolling="no" style="height:160px;width:100%;border:none" />
+                                    <div class="mt-4 mb-5 profile__separator"></div>
+                                    <button id="btnAddCard" OnClick="createToken(event)" class="mb-5 profile__btn" tabindex="-1">Adicionar</button>
+                                </asp:PlaceHolder>
+
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
                     </div>
 
                     <div class="col-md-4 left-menu">
