@@ -1085,6 +1085,10 @@
     <Compile Include="Migrations\201808060150585_ApplicationUser-StripeCustomerId.Designer.cs">
       <DependentUpon>201808060150585_ApplicationUser-StripeCustomerId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808062341194_Booking-StripeChargeId.cs" />
+    <Compile Include="Migrations\201808062341194_Booking-StripeChargeId.Designer.cs">
+      <DependentUpon>201808062341194_Booking-StripeChargeId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1383,6 +1387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808060150585_ApplicationUser-StripeCustomerId.resx">
       <DependentUpon>201808060150585_ApplicationUser-StripeCustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062341194_Booking-StripeChargeId.resx">
+      <DependentUpon>201808062341194_Booking-StripeChargeId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
