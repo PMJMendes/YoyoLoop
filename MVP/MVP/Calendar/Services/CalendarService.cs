@@ -14,6 +14,7 @@ namespace MVP.Services
 {
     public class CalendarService
     {
+        private readonly CheckoutService CheckoutService = new CheckoutService();
         public static object Booking_Lock = new object();
 
         public CalendarDTO GetInitialData()
@@ -270,7 +271,7 @@ namespace MVP.Services
 
                 result.StandardCost = result.StandardPrice * result.Seats;
                 result.Cost = result.Price * result.Seats;
-                result.PriceSummary = new CheckoutService().GetPriceSummary(result);
+                result.PriceSummary = CheckoutService.GetPriceSummary(result);
 
                 if(trigger == "new")
                 {
