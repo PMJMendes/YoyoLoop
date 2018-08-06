@@ -21,6 +21,9 @@ namespace MVP.Services
 {
     public class ProfileService
     {
+        private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
+        private readonly StripeCardService stripeCardService = new StripeCardService();
+
         public ProfileDTO GetInitialData(string userid)
         {
             using (var model = new EntityModel())
@@ -55,9 +58,9 @@ namespace MVP.Services
             state.StripeCardList = new List<ListItem>();
             if (!string.IsNullOrEmpty(state.StripeCustomerId))
             {
-                state.StripeCustomerDefaultSourceId = new StripeCustomerService().Get(state.StripeCustomerId).DefaultSourceId;
+                state.StripeCustomerDefaultSourceId = stripeCustomerService.Get(state.StripeCustomerId).DefaultSourceId;
 
-                var cardlist = new StripeCardService().List(state.StripeCustomerId);
+                var cardlist = stripeCardService.List(state.StripeCustomerId);
                 var defaultcard = cardlist.FirstOrDefault(c => c.Id == state.StripeCustomerDefaultSourceId);
 
                 if (defaultcard != null)
@@ -90,8 +93,7 @@ namespace MVP.Services
 
         public StripeCard GetCard(ProfileDTO state, string cardid)
         {
-            var cardService = new StripeCardService();
-            StripeCard result = cardService.Get(state.StripeCustomerId, cardid);
+            StripeCard result = stripeCardService.Get(state.StripeCustomerId, cardid);
             return result;
         }
 
@@ -106,11 +108,9 @@ namespace MVP.Services
                     Email = state.Email
                 };
 
-                var customerService = new StripeCustomerService();
-
                 try
                 {
-                    var customer = customerService.Create(customerOptions);
+                    var customer = stripeCustomerService.Create(customerOptions);
                     if(customer != null)
                     {
                         state.StripeCustomerId = customer.Id;
@@ -136,11 +136,9 @@ namespace MVP.Services
                     SourceToken = stripeToken
                 };
 
-                var cardService = new StripeCardService();
-
                 try
                 {
-                    cardService.Create(state.StripeCustomerId, cardOptions);
+                    stripeCardService.Create(state.StripeCustomerId, cardOptions);
                 }
                 catch (StripeException ex)
                 {
@@ -156,11 +154,9 @@ namespace MVP.Services
 
         public bool RemoveCard(ProfileDTO state, string cardid, out string error)
         {
-            var cardService = new StripeCardService();
-
             try
             {
-                StripeDeleted card = cardService.Delete(state.StripeCustomerId, cardid);
+                StripeDeleted card = stripeCardService.Delete(state.StripeCustomerId, cardid);
             }
             catch (StripeException ex)
             {
@@ -191,11 +187,10 @@ namespace MVP.Services
                 ExpirationMonth = date.Month,
                 ExpirationYear = date.Year
             };
-            var cardService = new StripeCardService();
 
             try
             {
-                StripeCard card = cardService.Update(state.StripeCustomerId, cardid, cardOptions);
+                StripeCard card = stripeCardService.Update(state.StripeCustomerId, cardid, cardOptions);
             }
             catch (StripeException ex)
             {
@@ -220,11 +215,9 @@ namespace MVP.Services
                 DefaultSource = cardid
             };
 
-            var customerService = new StripeCustomerService();
-
             try
             {
-                StripeCustomer customer = customerService.Update(state.StripeCustomerId, customerOptions);
+                StripeCustomer customer = stripeCustomerService.Update(state.StripeCustomerId, customerOptions);
                 state.StripeCustomerDefaultSourceId = customer.DefaultSourceId;
             }
             catch (StripeException)

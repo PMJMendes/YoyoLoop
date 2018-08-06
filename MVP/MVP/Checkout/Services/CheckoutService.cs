@@ -21,9 +21,13 @@ namespace MVP.Services
 {
     public class CheckoutService
     {
+        private readonly static string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
+        private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
+        private readonly StripeCardService stripeCardService = new StripeCardService();
+        private readonly StripeChargeService stripeChargeService = new StripeChargeService(stripePrivateKey);
+        
         public static object Checkout_Lock = new object();
 
-        private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
         public CheckoutDTO GetInitialData(string userid)
         {
@@ -134,9 +138,9 @@ namespace MVP.Services
             state.StripeCardList = new List<ListItem>();
             if (!string.IsNullOrEmpty(state.StripeCustomerId))
             {
-                state.StripeCustomerDefaultSourceId = new StripeCustomerService().Get(state.StripeCustomerId).DefaultSourceId;
+                state.StripeCustomerDefaultSourceId = stripeCustomerService.Get(state.StripeCustomerId).DefaultSourceId;
 
-                var cardlist = new StripeCardService().List(state.StripeCustomerId);
+                var cardlist = stripeCardService.List(state.StripeCustomerId);
                 var defaultcard = cardlist.FirstOrDefault(c => c.Id == state.StripeCustomerDefaultSourceId);
 
                 if (defaultcard != null)
@@ -169,8 +173,7 @@ namespace MVP.Services
 
         public StripeCard GetCard(CheckoutDTO state, string cardid)
         {
-            var cardService = new StripeCardService();
-            StripeCard result = cardService.Get(state.StripeCustomerId, cardid);
+            StripeCard result = stripeCardService.Get(state.StripeCustomerId, cardid);
             return result;
         }
 
@@ -225,11 +228,9 @@ namespace MVP.Services
                     myCharge.CustomerId = state.StripeCustomerId;
                 }
 
-                var chargeService = new StripeChargeService(stripePrivateKey);
-
                 try
                 {
-                    var stripeCharge = chargeService.Create(myCharge);
+                    var stripeCharge = stripeChargeService.Create(myCharge);
                     if(stripeCharge != null)
                     {
                         state.StripeChargeID = stripeCharge.Id;
@@ -263,11 +264,9 @@ namespace MVP.Services
                     Email = state.UserEmail
                 };
 
-                var customerService = new StripeCustomerService();
-
                 try
                 {
-                    var customer = customerService.Create(customerOptions);
+                    var customer = stripeCustomerService.Create(customerOptions);
                     if (customer != null)
                     {
                         state.StripeCustomerId = customer.Id;
@@ -303,11 +302,10 @@ namespace MVP.Services
                     SourceToken = stripeToken
                 };
 
-                var cardService = new StripeCardService();
                 StripeCard card;
                 try
                 {
-                    card = cardService.Create(state.StripeCustomerId, cardOptions);
+                    card = stripeCardService.Create(state.StripeCustomerId, cardOptions);
                 }
                 catch (StripeException ex)
                 {
