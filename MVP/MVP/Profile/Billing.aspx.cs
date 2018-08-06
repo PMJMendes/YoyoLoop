@@ -81,7 +81,6 @@ namespace MVP.Profile
         {
             UpdateBillingSection();
             GetCardData();
-            UpdatePaymentSection();
         }
 
         private void UpdateBillingSection()
@@ -136,7 +135,7 @@ namespace MVP.Profile
             tbCardHolderName.Text = card.Name;
             tbCardNumber.Text = "Termina em " + card.Last4;
             tbCardExpiry.Text = card.ExpirationMonth.ToString("00") + "/" + card.ExpirationYear.ToString("00");
-            if(cardid == pageData.StripedCustomerDefaultSourceId)
+            if(cardid == pageData.StripeCustomerDefaultSourceId)
             {
                 cbDefaultCard.Checked = true;
             }

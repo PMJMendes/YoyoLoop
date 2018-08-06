@@ -2355,6 +2355,10 @@ header.head {
       color: rgba(102, 115, 134, 0.5); }
     .checkout__input--name {
       max-width: 450px; }
+      .checkout__input--name :disabled {
+        border: solid 1px rgba(102, 115, 134, 0.2) !important;
+        background-color: #ffffff !important;
+        color: #667386 !important; }
     .checkout__input--birthday {
       max-width: 190px; }
     .checkout__input--email {
@@ -2377,7 +2381,7 @@ header.head {
       width: 100%;
       max-width: 250px; }
     .checkout__input--payment-method {
-      max-width: 300px; }
+      max-width: 450px; }
     .checkout__input--card-number {
       max-width: 280px; }
       .checkout__input--card-number :disabled {
@@ -2386,6 +2390,10 @@ header.head {
         color: #667386 !important; }
     .checkout__input--card-expiration {
       max-width: 100px; }
+      .checkout__input--card-expiration :disabled {
+        border: solid 1px rgba(102, 115, 134, 0.2) !important;
+        background-color: #ffffff !important;
+        color: #667386 !important; }
     .checkout__input--card-cvv {
       max-width: 80px; }
     .checkout__input--promocode {

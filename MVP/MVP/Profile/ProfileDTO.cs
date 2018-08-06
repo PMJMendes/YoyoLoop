@@ -25,7 +25,7 @@ namespace MVP.Profile
         public string BillingCity { get; set; }
 
         public string StripeCustomerId { get; set; }
-        public string StripedCustomerDefaultSourceId { get; set; }
+        public string StripeCustomerDefaultSourceId { get; set; }
         public List<ListItem> StripeCardList { get; set; }
     }
 }

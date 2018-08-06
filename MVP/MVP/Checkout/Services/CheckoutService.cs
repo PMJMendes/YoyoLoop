@@ -32,6 +32,10 @@ namespace MVP.Services
                 var user = model.Users.FirstOrDefault(u => u.Id == userid);
                 var result = new CheckoutDTO
                 {
+                    UserEmail = user.Email,
+                    UserContactName = user.ContactName,
+                    StripeCustomerId = user.StripeCustomerId,
+
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
@@ -64,7 +68,6 @@ namespace MVP.Services
                 {
                     state.BookingId = booking.BookingId;
                     state.UserId = booking.UserId;
-                    state.UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email;
                     state.BookingStatus = booking.Status;
                     state.Seats = booking.Seats;
                     state.FareType = booking.FareType;
@@ -126,6 +129,52 @@ namespace MVP.Services
             return result;
         }
 
+        public CheckoutDTO GetStripeCustomerData(CheckoutDTO state)
+        {
+            state.StripeCardList = new List<ListItem>();
+            if (!string.IsNullOrEmpty(state.StripeCustomerId))
+            {
+                state.StripeCustomerDefaultSourceId = new StripeCustomerService().Get(state.StripeCustomerId).DefaultSourceId;
+
+                var cardlist = new StripeCardService().List(state.StripeCustomerId);
+                var defaultcard = cardlist.FirstOrDefault(c => c.Id == state.StripeCustomerDefaultSourceId);
+
+                if (defaultcard != null)
+                {
+                    state.StripeCardList.Add(new ListItem
+                    {
+                        Value = defaultcard.Id,
+                        Text = "Cartão " + defaultcard.Brand + " terminado em " + defaultcard.Last4
+                    });
+                }
+
+                foreach (StripeCard card in cardlist.Where(c => c.Id != state.StripeCustomerDefaultSourceId))
+                {
+                    state.StripeCardList.Add(new ListItem
+                    {
+                        Value = card.Id,
+                        Text = "Cartão " + card.Brand + " terminado em " + card.Last4
+                    });
+                }
+            }
+
+            state.StripeCardList.Add(new ListItem
+            {
+                Value = "new",
+                Text = "Novo cartão de crédito"
+            });
+
+            return state;
+        }
+
+        public StripeCard GetCard(CheckoutDTO state, string cardid)
+        {
+            var cardService = new StripeCardService();
+            StripeCard result = cardService.Get(state.StripeCustomerId, cardid);
+            return result;
+        }
+
+
         public CheckoutDTO CheckPromo(CheckoutDTO state)
         {
             CheckoutDTO result = state;
@@ -148,7 +197,7 @@ namespace MVP.Services
             return result;
         }
 
-        public bool ProcessPayment(CheckoutDTO state, string stripeToken, out string error)
+        public bool ProcessPayment(CheckoutDTO state, string source, out string error)
         {
             lock (Checkout_Lock)
             {
@@ -168,8 +217,13 @@ namespace MVP.Services
                     Amount = (int)(state.Cost * 100),
                     Currency = "EUR",
                     Description = state.BookingId.ToString(),
-                    SourceTokenOrExistingSourceId = stripeToken
+                    SourceTokenOrExistingSourceId = source
                 };
+
+                if(!string.IsNullOrEmpty(state.StripeCustomerId) && source.Substring(0, 3) != "tok")
+                {
+                    myCharge.CustomerId = state.StripeCustomerId;
+                }
 
                 var chargeService = new StripeChargeService(stripePrivateKey);
 
@@ -195,6 +249,81 @@ namespace MVP.Services
                 error = string.Empty;
                 SendInvoice(state);
                 return true;
+            }
+        }
+
+        public bool AddCard(CheckoutDTO state, string stripeToken, out string error)
+        {
+            if (string.IsNullOrEmpty(state.StripeCustomerId))
+            {
+                var customerOptions = new StripeCustomerCreateOptions()
+                {
+                    SourceToken = stripeToken,
+                    Description = state.UserContactName + "(" + state.UserEmail + ")",
+                    Email = state.UserEmail
+                };
+
+                var customerService = new StripeCustomerService();
+
+                try
+                {
+                    var customer = customerService.Create(customerOptions);
+                    if (customer != null)
+                    {
+                        state.StripeCustomerId = customer.Id;
+                        state.StripeCustomerDefaultSourceId = customer.DefaultSourceId;
+                        using (var model = new EntityModel())
+                        {
+                            var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                            user.StripeCustomerId = customer.Id;
+                            model.SaveChanges();
+                        }
+                    }
+                }
+                catch (StripeException ex)
+                {
+                    StripeError stripeError = ex.StripeError;
+                    error = stripeError.ErrorType;
+                    return false;
+                }
+
+                if(ProcessPayment(state, state.StripeCustomerDefaultSourceId, out error))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                var cardOptions = new StripeCardCreateOptions()
+                {
+                    SourceToken = stripeToken
+                };
+
+                var cardService = new StripeCardService();
+                StripeCard card;
+                try
+                {
+                    card = cardService.Create(state.StripeCustomerId, cardOptions);
+                }
+                catch (StripeException ex)
+                {
+                    StripeError stripeError = ex.StripeError;
+                    error = stripeError.ErrorType;
+                    return false;
+                }
+
+                if (ProcessPayment(state, card.Id, out error))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 

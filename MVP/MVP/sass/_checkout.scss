@@ -162,6 +162,12 @@ $desktop: "(min-width: 1440px)";
 
         &--name {
             max-width: 450px;
+
+            :disabled {
+                border: solid 1px rgba(102, 115, 134, 0.2) !important;
+                background-color: #ffffff !important;
+                color: #667386 !important;
+            }
         }
 
         &--birthday {
@@ -206,7 +212,7 @@ $desktop: "(min-width: 1440px)";
         }
 
         &--payment-method {
-            max-width: 300px;
+            max-width: 450px;
         }
 
         &--card-number {
@@ -218,19 +224,25 @@ $desktop: "(min-width: 1440px)";
                 color: #667386 !important;
             }
         }
-    
-    &--card-expiration {
-        max-width: 100px;
-    }
 
-    &--card-cvv {
-        max-width: 80px;
-    }
+        &--card-expiration {
+            max-width: 100px;
 
-    &--promocode {
-        max-width: 300px;
+            :disabled {
+                border: solid 1px rgba(102, 115, 134, 0.2) !important;
+                background-color: #ffffff !important;
+                color: #667386 !important;
+            }
+        }
+
+        &--card-cvv {
+            max-width: 80px;
+        }
+
+        &--promocode {
+            max-width: 300px;
+        }
     }
-}
 
     &__separator {
         max-width: 600px;

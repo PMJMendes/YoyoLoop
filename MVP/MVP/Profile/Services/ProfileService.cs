@@ -44,7 +44,7 @@ namespace MVP.Services
                     BillingZIP = user.BillingZIP,
                     BillingCity = user.BillingCity,
 
-                    StripeCustomerId = user.StripeCustomerId,
+                    StripeCustomerId = user.StripeCustomerId
                 };
                 return result;
             }
@@ -55,10 +55,10 @@ namespace MVP.Services
             state.StripeCardList = new List<ListItem>();
             if (!string.IsNullOrEmpty(state.StripeCustomerId))
             {
-                state.StripedCustomerDefaultSourceId = new StripeCustomerService().Get(state.StripeCustomerId).DefaultSourceId;
+                state.StripeCustomerDefaultSourceId = new StripeCustomerService().Get(state.StripeCustomerId).DefaultSourceId;
 
                 var cardlist = new StripeCardService().List(state.StripeCustomerId);
-                var defaultcard = cardlist.FirstOrDefault(c => c.Id == state.StripedCustomerDefaultSourceId);
+                var defaultcard = cardlist.FirstOrDefault(c => c.Id == state.StripeCustomerDefaultSourceId);
 
                 if (defaultcard != null)
                 {
@@ -69,7 +69,7 @@ namespace MVP.Services
                     });
                 }
 
-                foreach (StripeCard card in cardlist.Where(c => c.Id != state.StripedCustomerDefaultSourceId))
+                foreach (StripeCard card in cardlist.Where(c => c.Id != state.StripeCustomerDefaultSourceId))
                 {
                     state.StripeCardList.Add(new ListItem
                     {
@@ -204,7 +204,7 @@ namespace MVP.Services
                 return false;
             }
 
-            if(defaultsource && cardid != state.StripedCustomerDefaultSourceId)
+            if(defaultsource && cardid != state.StripeCustomerDefaultSourceId)
             {
                 UpdateDefaultSource(state, cardid);
             }
@@ -225,7 +225,7 @@ namespace MVP.Services
             try
             {
                 StripeCustomer customer = customerService.Update(state.StripeCustomerId, customerOptions);
-                state.StripedCustomerDefaultSourceId = customer.DefaultSourceId;
+                state.StripeCustomerDefaultSourceId = customer.DefaultSourceId;
             }
             catch (StripeException)
             {

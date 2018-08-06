@@ -21,7 +21,7 @@ function stripeResponseHandler(status, response) {
     if (response.error) {
         $.unblockUI();
         $('#hfStripeError').val(response.error.message);
-        $form.get(0).submit();
+        __doPostBack('upPaymentMethods', '');
     }
     else {
         var token = response.id;
