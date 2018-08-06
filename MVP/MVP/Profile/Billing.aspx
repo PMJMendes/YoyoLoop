@@ -54,23 +54,21 @@
                         <asp:button runat="server" ID="btnBillingSave" CausesValidation="true" ValidationGroup="BillingDetails" OnClick="btnBillingSave_Click" CssClass="mb-5 profile__btn" Text="Actualizar dados" Tabindex="0" />
 
                         <!-- Credit Card Details -->
-                        <div class="hide">
-                            <h2 class="profile__sub-title">Pagamento</h2>
-                            <div class="profile__label">Método de pagamento</div>
-                            <select class="profile__input profile__input--payment-method">
-                                <option value="card">Cartão de crédito</option>
-                            </select>
+                        <h2 class="profile__sub-title">Pagamento</h2>
+                        <div class="profile__label">Método de pagamento</div>
+                        <select class="profile__input profile__input--payment-method">
+                            <option value="card">Cartão de crédito</option>
+                        </select>
 
-                            <div class="profile__label">Nome do titular</div>
-                            <input class="profile__input profile__input--name" type="text" placeholder="Pedro Meireles">
+                        <div class="profile__label">Nome do titular</div>
+                        <input class="profile__input profile__input--name" type="text" placeholder="Pedro Meireles">
                 
-                            <div class="profile__label">Número do cartão</div>
-                            <input class="profile__input profile__input--card-number" type="text" placeholder="Número do cartão"> 
-                            <!-- TODO: MISSING CARD PNG -->
+                        <div class="profile__label">Número do cartão</div>
+                        <input class="profile__input profile__input--card-number" type="text" placeholder="Número do cartão"> 
+                        <!-- TODO: MISSING CARD PNG -->
 
-                            <div class="mt-5 mb-5 profile__separator"></div>
-                            <button class="mb-5 profile__btn">Alterar</button>
-                        </div>
+                        <div class="mt-5 mb-5 profile__separator"></div>
+                        <button class="mb-5 profile__btn">Alterar</button>
                         <!-- End of Credit Card Details -->
 
                     </div>

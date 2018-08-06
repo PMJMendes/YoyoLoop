@@ -18,6 +18,8 @@ namespace MVP.Models
         public string ContactName { get; set; }
         public DateTime BirthDate { get; set; }
 
+        public string StripeCustomerId { get; set; }
+
         public string BillingName { get; set; }
         public string BillingCompany { get; set; }
         public string BillingNIF { get; set; }
