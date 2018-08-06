@@ -18,6 +18,8 @@ namespace MVP.Models.Entities
         public Fare.FareType FareType { get; set; }
         public Promocode Promocode { get; set; }
         public Decimal Cost { get; set; }
+
+        public string StripeChargeId { get; set; }
     }
 
     public enum BookingStatus
