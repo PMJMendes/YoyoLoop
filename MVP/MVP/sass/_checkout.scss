@@ -162,6 +162,12 @@ $desktop: "(min-width: 1440px)";
 
         &--name {
             max-width: 450px;
+
+            :disabled {
+                border: solid 1px rgba(102, 115, 134, 0.2) !important;
+                background-color: #ffffff !important;
+                color: #667386 !important;
+            }
         }
 
         &--birthday {
@@ -206,15 +212,27 @@ $desktop: "(min-width: 1440px)";
         }
 
         &--payment-method {
-            max-width: 300px;
+            max-width: 450px;
         }
 
         &--card-number {
             max-width: 280px;
+
+            :disabled {
+                border: solid 1px rgba(102, 115, 134, 0.2) !important;
+                background-color: #ffffff !important;
+                color: #667386 !important;
+            }
         }
 
         &--card-expiration {
             max-width: 100px;
+
+            :disabled {
+                border: solid 1px rgba(102, 115, 134, 0.2) !important;
+                background-color: #ffffff !important;
+                color: #667386 !important;
+            }
         }
 
         &--card-cvv {

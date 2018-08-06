@@ -128,13 +128,12 @@ $desktop: "(min-width: 1440px)";
         }
 
         &--payment-method {
-            max-width: 300px;
+            min-width: 300px;
+            max-width: 450px;
         }
 
         &--card-number {
             max-width: 250px;
-            background: url(/img/red-dot.png) no-repeat right;
-            background-position: 90%;
         }
     }
 

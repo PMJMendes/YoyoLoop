@@ -21,7 +21,40 @@
                     <div class="col-md-8">
                         <h1 class="checkout__main-title">Pagar e Confirmar</h1>
 
-                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:290px;width:100%;border:none" />
+                        <asp:UpdatePanel runat="server" ID="upCheckoutPaymentForm" UpdateMode="Conditional" ClientIDMode="Static">
+                            <ContentTemplate>
+
+                                <h2 class="checkout__sub-title">Pagamento</h2>
+                                <div class="checkout__label">Método de pagamento</div>
+                                <asp:DropDownList runat="server" ID="ddlCardMenu" AutoPostBack="true" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="ddlCardMenu_SelectedIndexChanged" CssClass="checkout__input checkout__input--payment-method" tabindex="-1" />
+
+                                <asp:PlaceHolder runat="server" ID="phCardDisplay" Visible="true">
+                                    <div class="checkout__label">Nome do titular</div>
+                                    <asp:TextBox runat="server" ID="tbCardHolderName" Enabled="false" CssClass="checkout__input checkout__input--name" type="text" placeholder="" />
+                
+                                    <div class="row checkout__card-info">
+                                        <div class="col-md-7">
+                                            <div class="checkout__label">Número do cartão</div>
+                                            <asp:TextBox runat="server" ID="tbCardNumber" Enabled="false" CssClass="checkout__input checkout__input--card-number" type="text" placeholder="0000 0000 0000 0000" />
+                                        </div>
+                                        <div class="col-md-3 d-flex align-items-end">
+                                            <asp:TextBox runat="server" ID="tbCardExpiry" Enabled="false" CssClass="checkout__input checkout__input--card-expiration" type="text" placeholder="MM/YY" />
+                                        </div>
+                                    </div>
+                                </asp:PlaceHolder>
+
+                                <asp:PlaceHolder runat="server" ID="phCardEntry" Visible="false">
+                                    <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:160px;width:100%;border:none" />
+                                    <div class="checkout checkout__billing checkout__billing--checkbox pt-1">
+                                        <div class="form-check">
+                                            <input runat="server" ID="cbSaveCard" class="form-check-input" type="checkbox">
+                                            <label class="form-check-label" for="cbSaveCard">&nbsp;Guardar dados do cartão</label>
+                                        </div>
+                                    </div>
+                                </asp:PlaceHolder>
+
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
 
                         <!-- FACTURA -->
                         <div class="mt-5 mb-5 checkout__separator"></div>
@@ -112,26 +145,36 @@
                     <div class="col-md-8">
                         <div class="mt-5 mb-5 checkout__separator"></div>
 
-                        <h3 class="checkout__sub-title-policy">Política de cancelamento</h3>
-                        <p class="checkout__policy-text">
-                            Podes cancelar a tua viagem até 48 horas antes da hora de partida. 
-                            O valor que pagaste será transformado em crédito e podes encontrá-lo
-                            na tua conta para utilizar em futuras viagens.
-                        </p>
-                        <div class="checkout__accept-terms-condition row pt-4 pb-4">
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input id="cbTerms" class="form-check-input" type="checkbox">
-                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">&nbsp;Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
+                        <asp:UpdatePanel runat="server" ID="upCheckoutPayButton" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <h3 class="checkout__sub-title-policy">Política de cancelamento</h3>
+                                <p class="checkout__policy-text">
+                                    Podes cancelar a tua viagem até 48 horas antes da hora de partida. 
+                                    O valor que pagaste será transformado em crédito e podes encontrá-lo
+                                    na tua conta para utilizar em futuras viagens.
+                                </p>
+                                <div class="checkout__accept-terms-condition row pt-4 pb-4">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input id="cbTerms" class="form-check-input" type="checkbox">
+                                            <label class="checkout__terms-conditions form-check-label" for="cbTerms">&nbsp;Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
+                                        </div>
+                                        <div id="TermsError" class="checkout__terms-conditions--error checkout__terms-conditions--invisible text-danger">
+                                            <label>Tem de aceitar os Termos & condiçōes</label>
+                                        </div>
+                                    </div>
+                                    <div class="checkout__accept-terms-condition--pay col-md-6">
+                                        <asp:PlaceHolder runat="server" ID="phPay" Visible="true">
+                                            <asp:Button runat="server" ID="btnPay" OnClientClick="return ValidateTerms()" OnClick="btnPay_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Pagar" />
+                                        </asp:PlaceHolder>
+                                        <asp:PlaceHolder runat="server" ID="phPayNew" Visible="false">
+                                            <button id="btnPayNew" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
+                                        </asp:PlaceHolder>
+                                    </div>
                                 </div>
-                                <div id="TermsError" class="checkout__terms-conditions--error checkout__terms-conditions--invisible text-danger">
-                                    <label>Tem de aceitar os Termos & condiçōes</label>
-                                </div>
-                            </div>
-                            <div class="checkout__accept-terms-condition--pay col-md-6">
-                                <button id="btnPay" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
-                            </div>
-                        </div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+
                     </div>
                 </div>
             </div>

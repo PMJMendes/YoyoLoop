@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace MVP.Profile
 {
@@ -22,5 +23,9 @@ namespace MVP.Profile
         public string BillingAddress { get; set; }
         public string BillingZIP { get; set; }
         public string BillingCity { get; set; }
+
+        public string StripeCustomerId { get; set; }
+        public string StripeCustomerDefaultSourceId { get; set; }
+        public List<ListItem> StripeCardList { get; set; }
     }
 }

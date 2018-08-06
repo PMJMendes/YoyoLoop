@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 using MVP.Models.Entities;
 
 namespace MVP.Checkout
@@ -10,6 +11,7 @@ namespace MVP.Checkout
     {
         public Guid BookingId { get; set; }
         public string UserId { get; set; }
+        public string UserContactName { get; set; }
         public string UserEmail { get; set; }
         public BookingStatus BookingStatus { get; set; }
 
@@ -35,6 +37,10 @@ namespace MVP.Checkout
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
         public string EndAPName { get; set; }
+
+        public string StripeCustomerId { get; set; }
+        public string StripeCustomerDefaultSourceId { get; set; }
+        public List<ListItem> StripeCardList { get; set; }
 
         public string StripeChargeID { get; set; }
 
