@@ -3,12 +3,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:ScriptManagerProxy runat="server">
-        <Scripts>
-            <asp:ScriptReference Path="https://js.stripe.com/v2/" />
-        </Scripts>
-    </asp:ScriptManagerProxy>
-
     <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
     <input type="hidden" name="hfStripeError" id="hfStripeError" />
