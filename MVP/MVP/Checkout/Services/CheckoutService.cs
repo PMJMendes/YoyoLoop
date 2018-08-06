@@ -109,7 +109,7 @@ namespace MVP.Services
             return result;
         }
 
-        private List<BookingPanelDTO.PriceItem> GetPriceSummary(BookingPanelDTO paneldata)
+        public List<BookingPanelDTO.PriceItem> GetPriceSummary(BookingPanelDTO paneldata)
         {
             var result = new List<BookingPanelDTO.PriceItem>();
 
