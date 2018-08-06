@@ -71,10 +71,6 @@ namespace MVP.Checkout
                             string error;
                             if (service.ProcessPayment(pageData, hfStripeToken, out error))
                             {
-                                if (cbSaveDetails.Checked)
-                                {
-                                    service.SaveBillingDetails(pageData);
-                                }
                                 Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
                             }
                             else
@@ -88,10 +84,6 @@ namespace MVP.Checkout
                             string error;
                             if (service.AddCard(pageData, hfStripeToken, out error))
                             {
-                                if (cbSaveDetails.Checked)
-                                {
-                                    service.SaveBillingDetails(pageData);
-                                }
                                 Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
                             }
                             else
@@ -187,6 +179,10 @@ namespace MVP.Checkout
                 ZIP = txtInvoiceZIP.Text,
                 City = txtInvoiceCity.Text
             };
+            if (cbSaveDetails.Checked)
+            {
+                service.SaveBillingDetails(pageData);
+            }
         }
 
         protected void DisplayCard(string cardid)
@@ -308,10 +304,6 @@ namespace MVP.Checkout
             string error;
             if (service.ProcessPayment(pageData, ddlCardMenu.SelectedValue, out error))
             {
-                if (cbSaveDetails.Checked)
-                {
-                    service.SaveBillingDetails(pageData);
-                }
                 Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
             }
             else
