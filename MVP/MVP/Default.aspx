@@ -231,7 +231,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="#" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
+                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
                     </div>
                   </div>
               </div>
@@ -285,7 +285,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="#" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
+                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Leiria" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
                     </div>
                   </div>
               </div>
@@ -339,7 +339,7 @@
                   </div>
 
                   <div class="col-md-4">
-                      <a href="#" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
+                      <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Coimbra" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
                   </div>
                 </div>
               </div>
