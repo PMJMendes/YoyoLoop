@@ -57,7 +57,9 @@ namespace MVP
 
         private void UpdateSuggestModal()
         {
-            if(!string.IsNullOrEmpty(localData.UserEmail))
+            tbSuggestEmail.Text = string.Empty;
+            tbSuggestBody.Text = string.Empty;
+            if (!string.IsNullOrEmpty(localData.UserEmail))
             {
                 tbSuggestEmail.Enabled = false;
                 tbSuggestEmail.Text = localData.UserEmail;
@@ -77,6 +79,7 @@ namespace MVP
         {
             masterService.SendSuggestion(tbSuggestEmail.Text, tbSuggestBody.Text);
             ApplicationHelpers.ShowMessage(this, "A tua sugestão foi enviada");
+            UpdateSuggestModal();
         }
     }
 }
