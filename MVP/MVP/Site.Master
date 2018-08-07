@@ -177,7 +177,7 @@
                     <div class="container-fluid">
                         <div class="footer__first-row row p-5">
                             <div class="col-md-3 d-flex align-items-center">
-                                <img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/>
+                                <a OnClick="javascript:$.blockUI()" href="/"><img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/></a>
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">yoyoloop</h2></p>
