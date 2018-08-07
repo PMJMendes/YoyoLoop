@@ -50,7 +50,6 @@
     &__main-title {
         width: 50%;
         margin: 0 auto;
-
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -80,7 +79,7 @@
         color: #535e7b;
         cursor: pointer;
     }
-    
+
     &__any-question {
         font-family: Lato;
         font-size: 20px;
@@ -89,11 +88,10 @@
         color: #535e7b;
 
         @media #{$mobile} {
-            margin-right: 0!important;
+            margin-right: 0 !important;
             margin-bottom: 10px;
         }
     }
-
     // homepage reusable styles
     &__reserve-btn {
         height: 40px;
@@ -118,7 +116,36 @@
             &:hover {
                 color: #535e7b !important;
             }
-            
+
+            @media #{$mobile} {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__question-btn {
+        height: 40px;
+        border-radius: 20px;
+        background-color: #ff5f6d;
+        font-size: 16px;
+        font-weight: 900;
+        color: #ffffff;
+        text-transform: uppercase;
+
+        &:hover {
+            color: white !important;
+        }
+
+        &--white {
+            border-radius: 20px;
+            background-color: white;
+            color: #535e7b;
+            border: solid 2px #535e7b;
+
+            &:hover {
+                color: #535e7b !important;
+            }
+
             @media #{$mobile} {
                 font-size: 12px;
             }
@@ -137,7 +164,7 @@
         margin: 0 auto;
         background-color: #d5dbe9;
 
-        @media (max-width: 980px) { 
+        @media (max-width: 980px) {
             display: none;
         }
     }
@@ -190,7 +217,7 @@
                 color: #535e7b;
             }
 
-            @media (max-width: 767px) { 
+            @media (max-width: 767px) {
                 padding-left: 0;
                 display: flex;
                 align-items: center;
@@ -233,7 +260,7 @@
             }
 
             &--destinies-cascais {
-                color:white;
+                color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -242,16 +269,16 @@
             }
 
             &--destinies-lisboa {
-                color:white;
+                color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
                 background-image: url('/img/cascais.jpg');
             }
-            
+
             &--destinies-porto {
-                color:white;
+                color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -259,26 +286,26 @@
                 background-image: url('/img/cascais.jpg');
 
                 &--desktop {
-                    display: flex!important;
+                    display: flex !important;
                 }
 
                 &--mobile {
-                    display: none!important;
+                    display: none !important;
                 }
 
                 @media #{$mobile} {
                     &--desktop {
-                        display: none!important;
+                        display: none !important;
                     }
 
                     &--mobile {
-                        display: flex!important;
+                        display: flex !important;
                     }
                 }
             }
-            
+
             &--destinies-coimbra {
-                color:white;
+                color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -286,20 +313,20 @@
                 background-image: url('/img/cascais.jpg');
 
                 &--desktop {
-                    display: flex!important;
+                    display: flex !important;
                 }
 
                 &--mobile {
-                    display: none!important;
+                    display: none !important;
                 }
 
                 @media #{$mobile} {
                     &--desktop {
-                        display: none!important;
+                        display: none !important;
                     }
 
                     &--mobile {
-                        display: flex!important;
+                        display: flex !important;
                     }
                 }
             }
@@ -331,15 +358,19 @@
         &--image1 {
             background-image: url("http://via.placeholder.com/400x400");
         }
+
         &--image2 {
             background-image: url("http://via.placeholder.com/400x400");
         }
+
         &--image3 {
             background-image: url("http://via.placeholder.com/400x400");
         }
+
         &--image4 {
             background-image: url("http://via.placeholder.com/400x400");
         }
+
         &--image5 {
             background-image: url("http://via.placeholder.com/400x400");
         }
@@ -403,12 +434,12 @@
             text-align: left;
             color: #8b9398;
 
-            @media (max-width: 980px) { 
+            @media (max-width: 980px) {
                 max-width: 80%;
             }
         }
 
-        @media (max-width: 980px) { 
+        @media (max-width: 980px) {
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -444,7 +475,7 @@
             background-size: cover;
             width: 100%;
             height: 300px;
-            
+
             &--big {
                 height: 600px;
             }
@@ -452,18 +483,23 @@
             &__pic-2 {
                 background-image: url(/img/contactos.jpg) !important;
             }
+
             &__pic-3 {
                 background-image: url(/img/destino.jpg) !important;
             }
+
             &__pic-4 {
                 background-image: url(/img/actor-car.jpeg) !important;
             }
+
             &__pic-5 {
                 background-image: url(/img/comoviajar.jpg) !important;
             }
+
             &__pic-6 {
                 background-image: url(/img/comofunciona.jpg) !important;
             }
+
             &__pic-7 {
                 background-image: url(/img/loop.jpg) !important;
             }

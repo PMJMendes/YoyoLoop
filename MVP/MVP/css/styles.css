@@ -2901,6 +2901,26 @@ input:checked {
       @media (max-width: 767.98px) {
         .static-page__reserve-btn--white {
           font-size: 12px; } }
+  .static-page__question-btn {
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ff5f6d;
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase; }
+    .static-page__question-btn:hover {
+      color: white !important; }
+    .static-page__question-btn--white {
+      border-radius: 20px;
+      background-color: white;
+      color: #535e7b;
+      border: solid 2px #535e7b; }
+      .static-page__question-btn--white:hover {
+        color: #535e7b !important; }
+      @media (max-width: 767.98px) {
+        .static-page__question-btn--white {
+          font-size: 12px; } }
   .static-page__separator {
     width: 80%;
     margin: 0 auto;
