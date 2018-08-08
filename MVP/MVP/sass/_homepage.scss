@@ -353,6 +353,30 @@ $desktop: "(min-width: 1440px)";
             color: #8b9398;
         }
     }
+
+    &__suggest {
+
+        &--text {
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            text-align: left;
+            color: #c1c6d3;
+        }
+
+        &--input {
+            &::placeholder {
+                font-size: 14px;
+                line-height: 2.29;
+                letter-spacing: 0.8px;
+                color: #667386;
+            }
+
+            &:disabled {
+                background-color: white !important;
+                border: 1px solid #ced4da !important;
+            }
+        }
+    }
     // homepage reusable styles
     &__reserve-btn {
         height: 40px;

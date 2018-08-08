@@ -469,7 +469,7 @@ namespace MVP.Calendar
         {
             var query = Request.QueryString;
 
-            if (query["Dest"] != null && query["Dest"] != string.Empty)
+            if (!string.IsNullOrEmpty(query["Dest"]))
             {
                 Guid? dest = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
                 if (pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Count() != 0)
@@ -500,6 +500,27 @@ namespace MVP.Calendar
                         var item = DdlStartRegion.DataSource.First();
                         DdlStartRegion.SelectedText = item.Text;
                         DdlStartRegion_ItemSelected(this.FindControl("DdlStartRegion"), new DropdownMenuButton.ItemSelectedEventArgs() { Item = item.Value });
+                    }
+                }
+                if (!string.IsNullOrEmpty(query["Ori"]))
+                {
+                    Guid? origin = pageData.Routes.Where(r => r.StartRegion.Name == query["Ori"]).Select(er => er.StartRegion).FirstOrDefault()?.LoopedRegionId;
+                    if (GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId == origin).Count() != 0)
+                    {
+                        var startregion = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).Select(er => er.StartRegion).FirstOrDefault().LoopedRegionId.ToString();
+                        var startap = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).FirstOrDefault()?.StartRegion?.AccessPoints?
+                                                                .Where(ap => ap.Default)
+                                                                .Select(ap => ap.AccessPointId).FirstOrDefault().ToString();
+                        localData.Values.StartRegion = startregion;
+                        DdlStartRegion.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).Select(er => er.StartRegion).FirstOrDefault()?.Name;
+
+                        localData.Values.StartAP = startap;
+                        DdlStartAP.DataSource = DdlStartAP_GetData();
+                        DdlStartAP.ListDataBind();
+                        DdlStartAP.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).FirstOrDefault()?.StartRegion?.AccessPoints?
+                                                               .Where(ap => ap.Default)
+                                                               .Select(ap => ap.Name).FirstOrDefault();
+                        CheckParams();
                     }
                 }
             }

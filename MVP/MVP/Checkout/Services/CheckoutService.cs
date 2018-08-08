@@ -21,21 +21,38 @@ namespace MVP.Services
 {
     public class CheckoutService
     {
+        private readonly static string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
+        private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
+        private readonly StripeCardService stripeCardService = new StripeCardService();
+        private readonly StripeChargeService stripeChargeService = new StripeChargeService(stripePrivateKey);
+        
         public static object Checkout_Lock = new object();
 
-        private readonly string stripePrivateKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
 
-        public CheckoutDTO GetInitialData()
+        public CheckoutDTO GetInitialData(string userid)
         {
-            var result = new CheckoutDTO();
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                var result = new CheckoutDTO
+                {
+                    UserEmail = user.Email,
+                    UserContactName = user.ContactName,
+                    StripeCustomerId = user.StripeCustomerId,
 
-            return result;
+                    BillingName = user.BillingName,
+                    BillingCompany = user.BillingCompany,
+                    BillingNIF = user.BillingNIF,
+                    BillingAdress = user.BillingAddress,
+                    BillingZIP = user.BillingZIP,
+                    BillingCity = user.BillingCity
+                };
+                return result;
+            }
         }
 
-        public CheckoutDTO GetBooking(Guid id)
+        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state)
         {
-            var result = new CheckoutDTO();
-
             using (var model = new EntityModel())
             {
                 var booking = model.Booking.Where(b => b.BookingId == id)
@@ -49,29 +66,28 @@ namespace MVP.Services
                                            .FirstOrDefault();
                 if(booking == null)
                 {
-                    result = null;
+                    state = null;
                 }
                 else
                 {
-                    result.BookingId = booking.BookingId;
-                    result.UserId = booking.UserId;
-                    result.UserEmail = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId).Email;
-                    result.BookingStatus = booking.Status;
-                    result.Seats = booking.Seats;
-                    result.FareType = booking.FareType;
-                    result.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
-                    result.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
-                    result.Promocode = booking.Promocode?.Code ?? string.Empty;
-                    result.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
-                    result.Cost = booking.Cost;
-                    result.StartTime = booking.Trip.StartTime;
-                    result.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
-                    result.StartAPName = booking.Trip.StartAccessPoint.Name;
-                    result.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
-                    result.EndAPName = booking.Trip.EndAccessPoint.Name;
+                    state.BookingId = booking.BookingId;
+                    state.UserId = booking.UserId;
+                    state.BookingStatus = booking.Status;
+                    state.Seats = booking.Seats;
+                    state.FareType = booking.FareType;
+                    state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
+                    state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
+                    state.Promocode = booking.Promocode?.Code ?? string.Empty;
+                    state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
+                    state.Cost = booking.Cost;
+                    state.StartTime = booking.Trip.StartTime;
+                    state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
+                    state.StartAPName = booking.Trip.StartAccessPoint.Name;
+                    state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
+                    state.EndAPName = booking.Trip.EndAccessPoint.Name;
                 }
             }
-            return result;
+            return state;
         }
 
         public BookingPanelDTO GetCheckoutPanelData(CheckoutDTO state)
@@ -95,9 +111,72 @@ namespace MVP.Services
             };
 
             result.StandardCost = result.StandardPrice * result.Seats;
+            result.PriceSummary = GetPriceSummary(result);
 
             return result;
         }
+
+        public List<BookingPanelDTO.PriceItem> GetPriceSummary(BookingPanelDTO paneldata)
+        {
+            var result = new List<BookingPanelDTO.PriceItem>();
+
+            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            {
+                result.Add(new BookingPanelDTO.PriceItem
+                {
+                    Description = "Promocode",
+                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C"),
+                    Type = BookingPanelDTO.PriceItemType.DISCOUNT
+                });
+            }
+
+            return result;
+        }
+
+        public CheckoutDTO GetStripeCustomerData(CheckoutDTO state)
+        {
+            state.StripeCardList = new List<ListItem>();
+            if (!string.IsNullOrEmpty(state.StripeCustomerId))
+            {
+                state.StripeCustomerDefaultSourceId = stripeCustomerService.Get(state.StripeCustomerId).DefaultSourceId;
+
+                var cardlist = stripeCardService.List(state.StripeCustomerId);
+                var defaultcard = cardlist.FirstOrDefault(c => c.Id == state.StripeCustomerDefaultSourceId);
+
+                if (defaultcard != null)
+                {
+                    state.StripeCardList.Add(new ListItem
+                    {
+                        Value = defaultcard.Id,
+                        Text = "Cartão " + defaultcard.Brand + " terminado em " + defaultcard.Last4
+                    });
+                }
+
+                foreach (StripeCard card in cardlist.Where(c => c.Id != state.StripeCustomerDefaultSourceId))
+                {
+                    state.StripeCardList.Add(new ListItem
+                    {
+                        Value = card.Id,
+                        Text = "Cartão " + card.Brand + " terminado em " + card.Last4
+                    });
+                }
+            }
+
+            state.StripeCardList.Add(new ListItem
+            {
+                Value = "new",
+                Text = "Novo cartão de crédito"
+            });
+
+            return state;
+        }
+
+        public StripeCard GetCard(CheckoutDTO state, string cardid)
+        {
+            StripeCard result = stripeCardService.Get(state.StripeCustomerId, cardid);
+            return result;
+        }
+
 
         public CheckoutDTO CheckPromo(CheckoutDTO state)
         {
@@ -121,7 +200,7 @@ namespace MVP.Services
             return result;
         }
 
-        public bool ProcessPayment(CheckoutDTO state, string stripeToken, out string error)
+        public bool ProcessPayment(CheckoutDTO state, string source, out string error)
         {
             lock (Checkout_Lock)
             {
@@ -141,14 +220,17 @@ namespace MVP.Services
                     Amount = (int)(state.Cost * 100),
                     Currency = "EUR",
                     Description = state.BookingId.ToString(),
-                    SourceTokenOrExistingSourceId = stripeToken
+                    SourceTokenOrExistingSourceId = source
                 };
 
-                var chargeService = new StripeChargeService(stripePrivateKey);
+                if(!string.IsNullOrEmpty(state.StripeCustomerId) && source.Substring(0, 3) != "tok")
+                {
+                    myCharge.CustomerId = state.StripeCustomerId;
+                }
 
                 try
                 {
-                    var stripeCharge = chargeService.Create(myCharge);
+                    var stripeCharge = stripeChargeService.Create(myCharge);
                     if(stripeCharge != null)
                     {
                         state.StripeChargeID = stripeCharge.Id;
@@ -171,6 +253,78 @@ namespace MVP.Services
             }
         }
 
+        public bool AddCard(CheckoutDTO state, string stripeToken, out string error)
+        {
+            if (string.IsNullOrEmpty(state.StripeCustomerId))
+            {
+                var customerOptions = new StripeCustomerCreateOptions()
+                {
+                    SourceToken = stripeToken,
+                    Description = state.UserContactName + "(" + state.UserEmail + ")",
+                    Email = state.UserEmail
+                };
+
+                try
+                {
+                    var customer = stripeCustomerService.Create(customerOptions);
+                    if (customer != null)
+                    {
+                        state.StripeCustomerId = customer.Id;
+                        state.StripeCustomerDefaultSourceId = customer.DefaultSourceId;
+                        using (var model = new EntityModel())
+                        {
+                            var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                            user.StripeCustomerId = customer.Id;
+                            model.SaveChanges();
+                        }
+                    }
+                }
+                catch (StripeException ex)
+                {
+                    StripeError stripeError = ex.StripeError;
+                    error = stripeError.ErrorType;
+                    return false;
+                }
+
+                if(ProcessPayment(state, state.StripeCustomerDefaultSourceId, out error))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                var cardOptions = new StripeCardCreateOptions()
+                {
+                    SourceToken = stripeToken
+                };
+
+                StripeCard card;
+                try
+                {
+                    card = stripeCardService.Create(state.StripeCustomerId, cardOptions);
+                }
+                catch (StripeException ex)
+                {
+                    StripeError stripeError = ex.StripeError;
+                    error = stripeError.ErrorType;
+                    return false;
+                }
+
+                if (ProcessPayment(state, card.Id, out error))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public void UpdateBooking(CheckoutDTO state, BookingStatus status)
         {
             using (var model = new EntityModel())
@@ -184,6 +338,7 @@ namespace MVP.Services
                     booking.FareType = state.FareType;
                     booking.Promocode = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode.ToUpper());
                     booking.Cost = state.Cost;
+                    booking.StripeChargeId = state.StripeChargeID;
 
                     model.SaveChanges();
 
@@ -272,6 +427,21 @@ namespace MVP.Services
             return result;
         }
 
+        public void SaveBillingDetails(CheckoutDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                user.BillingName = state.Invoice.Name;
+                user.BillingCompany = state.Invoice.Company;
+                user.BillingNIF = state.Invoice.NIF;
+                user.BillingAddress = state.Invoice.Address;
+                user.BillingZIP = state.Invoice.ZIP;
+                user.BillingCity = state.Invoice.City;
+                model.SaveChanges();
+            }
+        }
+
         public void SendInvoice(CheckoutDTO state)
         {
             SmtpClient client = new SmtpClient();
@@ -300,7 +470,7 @@ namespace MVP.Services
                 body += "\r\nNome: " + state.Invoice.Name;
                 body += "\r\nEmpresa: " + state.Invoice.Company;
                 body += "\r\nNIF: " + state.Invoice.NIF;
-                body += "\r\nMorada: " + state.Invoice.Adress;
+                body += "\r\nMorada: " + state.Invoice.Address;
                 body += "\r\nCód. Postal: " + state.Invoice.ZIP;
                 body += "\r\nCidade: " + state.Invoice.City;
                 body += "\r\n";

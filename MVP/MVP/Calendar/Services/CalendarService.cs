@@ -14,6 +14,7 @@ namespace MVP.Services
 {
     public class CalendarService
     {
+        private readonly CheckoutService CheckoutService = new CheckoutService();
         public static object Booking_Lock = new object();
 
         public CalendarDTO GetInitialData()
@@ -115,7 +116,7 @@ namespace MVP.Services
             {
                 result.Status = SlotStatus.BLACK;
             }
-            else if (date == DateTime.Today && !departures.Where(d => d.Departure.Time < threshold).Any())
+            else if (date == DateTime.Today && !departures.Where(d => d.Departure.Time > threshold).Any())
             {
                 result.Status = SlotStatus.NONE;
             }
@@ -270,6 +271,7 @@ namespace MVP.Services
 
                 result.StandardCost = result.StandardPrice * result.Seats;
                 result.Cost = result.Price * result.Seats;
+                result.PriceSummary = CheckoutService.GetPriceSummary(result);
 
                 if(trigger == "new")
                 {

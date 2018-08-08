@@ -49,7 +49,7 @@
                                     /img/cart@3x.png 3x"
                                     class="clock">
                                 </div>
-                                <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.StandardCost.ToString("C") %></asp:label></strong></div>
+                                <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.StandardPrice.ToString("C") %> / por Lugar</asp:label></strong></div>
                             </div>
 
                     </div>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="row pt-3 trip">
+                <div class="row pt-3 trip mb-4">
                     <div class="col-8">
                         <div class="row p-1 text-uppercase start-end">
                             <div class="col-12 pl-4">Destino</div>
@@ -91,28 +91,16 @@
                 <div class="row pricing">
                     <div class="col-4 pl-4 text-uppercase total">Resumo</div>
                     <div class="col-8 pr-4 text-right">
-                        <div class="row <%= PanelData.PromoValid ? "" : "hide" %>">
-                            <div class="col-12"><s><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= PanelData.StandardPrice.ToString("C") %></span></s></div>
+                        <div class="row pb-1">
+                            <div class="col-12 price-base"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Ida" : "Idas" %>&nbsp;<span class="times"></span> <span class="price price-base"><%= PanelData.StandardCost.ToString("C") %></span></div>
                         </div>
-                        <div class="row">
-                            <div class="col-12"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Lugar" : "Lugares" %><span class="times"> x</span> <span class="price"><%= PanelData.Price.ToString("C") %></span></div>
-                        </div>
-                        <!-- PriceItem Styles -->
-                        <div class="hide">
-                            <div class="row pb-1">
-                                <div class="col-12">Promocode <span class="price pl-1"><%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">Promocode <span class="price-green pl-1">-<%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">Promocode <span class="price-green pl-1">-<%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">Promocode <span class="pl-1">-<%= PanelData.Price.ToString("C") %></span></div>
-                            </div>
-                        </div>
-                        <!-- End of PriceItemStyles -->
+                        <asp:Repeater runat="server" ID="SummaryRepeater" OnItemDataBound="SummaryRepeater_ItemDataBound">
+                            <ItemTemplate>
+                                <div class="row">
+                                    <div class="col-12"><asp:Label runat="server" ID="lbPriceItemDescription"/>&nbsp<asp:Label runat="server" ID="lbPriceItemValue"/></div>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
                 <!-- END OF RESUMO -->
@@ -121,9 +109,6 @@
                 <div class="row pricing">
                     <div class="col-6 pl-4 align-self-end text-uppercase total">Preço Final</div>
                     <div class="col-6 pr-4 text-right">
-                        <div class="row <%= PanelData.PromoValid ? "" : "hide" %>">
-                            <div class="col-12 total-price"><s><%= PanelData.StandardCost.ToString("C") %></s></div>
-                        </div>
                         <div class="row">
                             <div class="col-12 total-price"><%= PanelData.Cost.ToString("C") %></div>
                         </div>
@@ -187,6 +172,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="<%= BookingActive ? "hide" : "panel-end" %>"></div>
             </div>
         </div>
     </ContentTemplate>

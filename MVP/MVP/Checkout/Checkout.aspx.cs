@@ -12,6 +12,8 @@ using MVP.Models;
 using MVP.Models.Entities;
 using MVP.Models.Extensions;
 using Microsoft.AspNet.Identity;
+using MVP.Models.Helpers;
+using System.Web.Services;
 
 namespace MVP.Checkout
 {
@@ -38,11 +40,6 @@ namespace MVP.Checkout
                 //Response.Redirect("/");
             }
 
-            //STOP MAINCONTENT UPDATES from CHILD panels
-            UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
-            masterpanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
-            masterpanel.ChildrenAsTriggers = false;
-
             InitData();
         }
 
@@ -63,38 +60,137 @@ namespace MVP.Checkout
                 // StripeHandler
                 NameValueCollection nvc = Request.Form;
                 string hfStripeToken = nvc["hfStripeToken"];
+                string hfStripeError = nvc["hfStripeError"];
                 if (!string.IsNullOrEmpty(hfStripeToken))
                 {
-                    pageData.Invoice = new CheckoutDTO.InvoiceData
+                    if(ddlCardMenu.SelectedValue == "new")
                     {
-                        Name = txtInvoiceName.Text,
-                        Company = txtInvoiceCompany.Text,
-                        NIF = txtInvoiceNIF.Text,
-                        Adress = txtInvoiceAdress.Text,
-                        ZIP = txtInvoiceZIP.Text,
-                        City = txtInvoiceCity.Text
-                    };
-
-                    string error;
-                    if (service.ProcessPayment(pageData, hfStripeToken, out error))
-                    {
-                        Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                        GetInvoiceData();
+                        if (!cbSaveCard.Checked)
+                        {
+                            string error;
+                            if (service.ProcessPayment(pageData, hfStripeToken, out error))
+                            {
+                                Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                            }
+                            else
+                            {
+                                //PAYMENT ERROR - need better error handling here
+                                ApplicationHelpers.ShowMessage(this, error);
+                            }
+                        }
+                        else
+                        {
+                            string error;
+                            if (service.AddCard(pageData, hfStripeToken, out error))
+                            {
+                                Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                            }
+                            else
+                            {
+                                //PAYMENT ERROR - need better error handling here
+                                ApplicationHelpers.ShowMessage(this, error);
+                            }
+                        }
                     }
-                    else
-                    {
-                        //HANDLE ERROR
-                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"" + error + "\")</SCRIPT>");
-                    }
+                }
+                else if (!string.IsNullOrEmpty(hfStripeError))
+                {
+                    //SUBMIT ERROR - need better error handling here
+                    ApplicationHelpers.ShowMessage(this, hfStripeError);
                 }
             }
 
             if (pageData == null)
             {
-                pageData = service.GetInitialData();
+                pageData = service.GetInitialData(User?.Identity.GetUserId());
+                InitializeControls();
                 ProcessQueryString();
                 Session["checkout.data"] = pageData;
                 UpdateCheckoutPanel();
             }
+        }
+
+        private void InitializeControls()
+        {
+            UpdateBillingSection();
+            GetCardData();
+        }
+
+        private void UpdateBillingSection()
+        {
+            txtInvoiceName.Text = pageData.BillingName;
+            txtInvoiceCompany.Text = pageData.BillingCompany;
+            txtInvoiceNIF.Text = pageData.BillingNIF;
+            txtInvoiceAddress.Text = pageData.BillingAdress;
+            txtInvoiceZIP.Text = pageData.BillingZIP;
+            txtInvoiceCity.Text = pageData.BillingCity;
+            upBillingForm.Update();
+        }
+
+        private void UpdatePaymentSection()
+        {
+            if (ddlCardMenu.SelectedValue == "new")
+            {
+                //STOP MAINCONTENT UPDATES from CHILD panels while StripeForm is up
+                UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
+                masterpanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+                masterpanel.ChildrenAsTriggers = false;
+
+                phCardEntry.Visible = true;
+                phPayNew.Visible = true;
+                phCardDisplay.Visible = false;
+                phPay.Visible = false;
+            }
+            else
+            {
+                //RESUME MAINCONTENT UPDATES from CHILD panels while StripeForm is hidden
+                UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
+                masterpanel.UpdateMode = UpdatePanelUpdateMode.Always;
+                masterpanel.ChildrenAsTriggers = true;
+
+                phCardEntry.Visible = false;
+                phPayNew.Visible = false;
+                phCardDisplay.Visible = true;
+                phPay.Visible = true;
+                DisplayCard(ddlCardMenu.SelectedValue);
+            }
+            upCheckoutPaymentForm.Update();
+            upCheckoutPayButton.Update();
+        }
+
+        private void GetCardData()
+        {
+            pageData = service.GetStripeCustomerData(pageData);
+            ddlCardMenu.DataSource = pageData.StripeCardList;
+            ddlCardMenu.DataBind();
+            ddlCardMenu.Width = (pageData.StripeCardList.OrderByDescending(l => l.Text.Length).First().Text.Length) * 10;
+            UpdatePaymentSection();
+        }
+
+        private void GetInvoiceData()
+        {
+            pageData.Invoice = new CheckoutDTO.InvoiceData
+            {
+                Name = txtInvoiceName.Text,
+                Company = txtInvoiceCompany.Text,
+                NIF = txtInvoiceNIF.Text,
+                Address = txtInvoiceAddress.Text,
+                ZIP = txtInvoiceZIP.Text,
+                City = txtInvoiceCity.Text
+            };
+            if (cbSaveDetails.Checked)
+            {
+                service.SaveBillingDetails(pageData);
+            }
+        }
+
+        protected void DisplayCard(string cardid)
+        {
+            Stripe.StripeCard card = service.GetCard(pageData, cardid);
+            tbCardHolderName.Text = card.Name;
+            tbCardNumber.Text = "Termina em " + card.Last4;
+            tbCardExpiry.Text = card.ExpirationMonth.ToString("00") + "/" + card.ExpirationYear.ToString("00");
         }
 
         private void ProcessQueryString()
@@ -104,7 +200,7 @@ namespace MVP.Checkout
             
             if (Guid.TryParse(query["Id"], out id))
             {
-                pageData = service.GetBooking(id);
+                pageData = service.GetBooking(id, pageData);
                 if(pageData == null)
                 {
                     // temp blank values to stop page from crashing - eventually not needed when redirect is uncommented
@@ -194,6 +290,26 @@ namespace MVP.Checkout
                     pnPromoCheck.Visible = true;
                     pnPromoError.Visible = false;
                 }
+            }
+        }
+
+        protected void ddlCardMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdatePaymentSection();
+        }
+
+        protected void btnPay_Click(object sender, EventArgs e)
+        {
+            GetInvoiceData();
+            string error;
+            if (service.ProcessPayment(pageData, ddlCardMenu.SelectedValue, out error))
+            {
+                Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+            }
+            else
+            {
+                //PAYMENT ERROR - need better error handling here
+                ApplicationHelpers.ShowMessage(this, error);
             }
         }
     }

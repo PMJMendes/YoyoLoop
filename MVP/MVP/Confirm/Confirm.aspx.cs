@@ -4,6 +4,7 @@ using MVP.Services;
 using Microsoft.AspNet.Identity;
 using System.Web.UI;
 using Microsoft.AspNet.Identity.Owin;
+using MVP.Models.Helpers;
 
 namespace MVP.Confirm
 {
@@ -101,6 +102,7 @@ namespace MVP.Confirm
         protected void btnEmail_Click(object sender, EventArgs e)
         {
             service.SendTicket(pageData);
+            ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> com os detalhes do teu bilhete.");
         }
 
         protected void btnSMS_Click(object sender, EventArgs e)
@@ -116,6 +118,7 @@ namespace MVP.Confirm
             string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, userid, Request);
             callbackUrl += "&bookid=" + pageData.BookingId;
             service.SendUnconfirmedTicket(pageData, callbackUrl);
+            ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> com o link para poderes confirmar o teu email.");
         }
     }
 }

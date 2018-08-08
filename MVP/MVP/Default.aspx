@@ -1,6 +1,54 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MVP._Default" %>
+<%@ MasterType virtualpath="~/Site.Master" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <!-- SUGGEST TRIP -->
+    <div class="login modal fade" ID="modalSuggestLoop" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <div class="login__main-title text-uppercase col-12">
+                            Não encontras a tua cidade?
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <hr class="login__separator">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center pt-3 pb-3">
+                        <div class="homepage homepage__ suggest homepage__suggest--text d-flex align-items-center justify-content-center text-center col-12 p-0">
+                            Queres que a Yoyoloop te dê boleia até à tua cidade?<br>
+                            Sugere um loop e fica atento às novidades!                  
+                        </div>
+                    </div>
+                    <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <asp:TextBox runat="server" ID="tbSuggestEmail" TextMode="Email" CssClass="homepage homepage__suggest homepage__suggest--input form-control" aria-describedby="emailHelp" placeholder="O teu endereço de email" />
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <asp:TextBox runat="server" ID="tbSuggestBody" TextMode="MultiLine" Rows="6" CssClass="form-control"  placeholder="A tua sugestão" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="login__forgot-password col-md-6"></div>
+                        <div class="login__log-in col-md-6">
+                            <asp:Button runat="server" ID="btnSuggestSend" OnClientClick="javascript:$('#modalSuggestLoop').modal('hide')" OnClick="btnSuggestSend_Click" CssClass="login__login btn btn-primary" Text="Enviar" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SUGGEST TRIP -->
 
     <div class="homepage">
       <div class="homepage__container homepage__container--first">
@@ -12,7 +60,7 @@
   
           <div class="row row-no-padding justify-content-between mt-5">
             <div class="homepage__where-to-go">Para onde queres ir?</div>
-            <a href="#" class="homepage__find-city">Não encontras a tua cidade?</a>
+            <a href="#" class="homepage__find-city" data-toggle="modal" data-target="#modalSuggestLoop" tabindex="-1">Não encontras a tua cidade?</a>
           </div>
   
           <div class="row row-no-padding mt-3 mb-5">
@@ -131,7 +179,7 @@
         <div class="container-fluid">
           <div class="row row-no-padding justify-content-between align-items-center mb-4">
             <div class="homepage__popular-loops__title">Loops Populares</div>
-            <a href="#" class="homepage__see-all">Ver todos</a>
+            <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="homepage__see-all">Ver todos</a>
           </div>
 
           <div class="row row-no-padding pb-5">
@@ -183,7 +231,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="#" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
+                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
                     </div>
                   </div>
               </div>
@@ -237,7 +285,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="#" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
+                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Leiria" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
                     </div>
                   </div>
               </div>
@@ -291,7 +339,7 @@
                   </div>
 
                   <div class="col-md-4">
-                      <a href="#" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
+                      <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Coimbra" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center">Reservar</a>
                   </div>
                 </div>
               </div>
@@ -301,7 +349,7 @@
               <div class="homepage__popular-loops__search w-100 h-100 d-flex flex-column align-items-center justify-content-center">
                 <img class="mt-4" src="/img/search.png" srcset="/img/search@2x.png 2x, /img/search@3x.png 3x">
                 <div class="mt-3 mb-3 homepage__popular-loops__search__title">Não encontras a tua cidade?</div>
-                <a href="#" class="mb-4 homepage__popular-loops__search__btn d-flex align-items-center justify-content-center">Sugere um loop</a>
+                <a href="#" class="mb-4 homepage__popular-loops__search__btn d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#modalSuggestLoop" tabindex="-1">Sugere um loop</a>
               </div>
             </div>
           </div>

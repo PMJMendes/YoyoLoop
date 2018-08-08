@@ -71,7 +71,7 @@
 
                 <div class="row justify-content-center mb-5 align-items-center mt-5">
                     <div class="invitefriends__any-question mr-5">Tens alguma pergunta?</div>
-                    <button class="invitefriends__reserve-btn invitefriends__reserve-btn--white" >Lê as nossas Perguntas Frequentes</button>
+                    <a OnClick="javascript:$.blockUI()" href="/Help/Help" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" >Lê as nossas Perguntas Frequentes</a>
                 </div>
             </div>
         </div>

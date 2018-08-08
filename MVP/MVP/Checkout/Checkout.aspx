@@ -4,14 +4,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:ScriptManagerProxy runat="server">
-        <Scripts>
-            <asp:ScriptReference Path="https://js.stripe.com/v2/" />
-        </Scripts>
-    </asp:ScriptManagerProxy>
-
     <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />
     <input type="hidden" name="hfStripeToken" id="hfStripeToken" />
+    <input type="hidden" name="hfStripeError" id="hfStripeError" />
 
     <div class="checkout">
         <div class="checkout__container checkout__container--first">
@@ -20,7 +15,40 @@
                     <div class="col-md-8">
                         <h1 class="checkout__main-title">Pagar e Confirmar</h1>
 
-                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:290px;width:100%;border:none" />
+                        <asp:UpdatePanel runat="server" ID="upCheckoutPaymentForm" UpdateMode="Conditional" ClientIDMode="Static">
+                            <ContentTemplate>
+
+                                <h2 class="checkout__sub-title">Pagamento</h2>
+                                <div class="checkout__label">Método de pagamento</div>
+                                <asp:DropDownList runat="server" ID="ddlCardMenu" AutoPostBack="true" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="ddlCardMenu_SelectedIndexChanged" CssClass="checkout__input checkout__input--payment-method" tabindex="-1" />
+
+                                <asp:PlaceHolder runat="server" ID="phCardDisplay" Visible="true">
+                                    <div class="checkout__label">Nome do titular</div>
+                                    <asp:TextBox runat="server" ID="tbCardHolderName" Enabled="false" CssClass="checkout__input checkout__input--name" type="text" placeholder="" />
+                
+                                    <div class="row checkout__card-info">
+                                        <div class="col-md-7">
+                                            <div class="checkout__label">Número do cartão</div>
+                                            <asp:TextBox runat="server" ID="tbCardNumber" Enabled="false" CssClass="checkout__input checkout__input--card-number" type="text" placeholder="0000 0000 0000 0000" />
+                                        </div>
+                                        <div class="col-md-3 d-flex align-items-end">
+                                            <asp:TextBox runat="server" ID="tbCardExpiry" Enabled="false" CssClass="checkout__input checkout__input--card-expiration" type="text" placeholder="MM/YY" />
+                                        </div>
+                                    </div>
+                                </asp:PlaceHolder>
+
+                                <asp:PlaceHolder runat="server" ID="phCardEntry" Visible="false">
+                                    <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:160px;width:100%;border:none" />
+                                    <div class="checkout checkout__billing checkout__billing--checkbox pt-1">
+                                        <div class="form-check">
+                                            <input runat="server" ID="cbSaveCard" class="form-check-input" type="checkbox">
+                                            <label class="form-check-label" for="cbSaveCard">&nbsp;Guardar dados do cartão</label>
+                                        </div>
+                                    </div>
+                                </asp:PlaceHolder>
+
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
 
                         <!-- FACTURA -->
                         <div class="mt-5 mb-5 checkout__separator"></div>
@@ -35,27 +63,34 @@
                             <ContentTemplate>
                                 <div id="billingform">
                                     <div class="checkout__label">Nome</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="DisplayName" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceName" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="name" autocomplete="on" Tabindex="1" />
 
                                     <div class="checkout__label">Nome da Empresa</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="true" CssClass="checkout__input checkout__input--billing-name" AutoCompleteType="Company" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="company" autocomplete="on" Tabindex="1" />
 
                                     <div class="checkout__label">NIF</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="true" CssClass="checkout__input checkout__input--nif" AutoCompleteType="Search" placeholder="000 000 000" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="false" CssClass="checkout__input checkout__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
                 
                                     <div class="checkout__label">Morada</div>
-                                    <asp:TextBox runat="server" ID="txtInvoiceAdress" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeStreetAddress" />
+                                    <asp:TextBox runat="server" ID="txtInvoiceAddress" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="address" autocomplete="on" Tabindex="0" />
 
                                     <div class="row ml-0">
                                         <div class="row ml-0 mr-5 checkout__input--postal-code">
                                             <div class="checkout__label">Código postal</div>
-                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="true" CssClass="checkout__input" AutoCompleteType="HomeZipCode" placeholder="0000-000" />
+                                            <asp:TextBox runat="server" ID="txtInvoiceZIP" AutoPostback="false" CssClass="checkout__input" type="text" name="ZIP" autocomplete="on" Tabindex="0" placeholder="0000-000" />
                                         </div>
                                         <div class="row ml-0 checkout__input--city">
                                             <div class="checkout__label">Cidade</div>
-                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="true" CssClass="checkout__input checkout__input--company" AutoCompleteType="HomeCity" />
+                                            <asp:TextBox runat="server" ID="txtInvoiceCity" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="city" autocomplete="on" Tabindex="0" />
                                         </div>
                                     </div>
+                                    <div class="checkout__billing checkout__billing--checkbox pt-2">
+                                        <div class="form-check">
+                                            <input runat="server" ID="cbSaveDetails" class="form-check-input" type="checkbox">
+                                            <label class="form-check-label" for="cbSaveDetails">&nbsp;Guardar detalhes de facturação</label>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
@@ -89,12 +124,14 @@
                     </div>
 
                     <div class="col-md-4 left-menu">
-                        <asp:UpdatePanel runat="server" ID="upCheckoutPanel" UpdateMode="Conditional">
-                            <ContentTemplate>
-                                <!-- BOOKING PANEL -->
-                                <yoyo:BookingPanel runat="server" ID="CheckoutPanel" BookingActive="false" />
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
+                        <div class="checkout__sticky">
+                            <asp:UpdatePanel runat="server" ID="upCheckoutPanel" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <!-- BOOKING PANEL -->
+                                    <yoyo:BookingPanel runat="server" ID="CheckoutPanel" BookingActive="false" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
                     </div>
                 </div>
 
@@ -102,27 +139,39 @@
                     <div class="col-md-8">
                         <div class="mt-5 mb-5 checkout__separator"></div>
 
-                        <h3 class="checkout__sub-title-policy">Política de cancelamento</h3>
-                        <p class="checkout__policy-text">
-                            Podes cancelar a tua viagem até 48 horas antes da hora de partida. 
-                            O valor que pagaste será transformado em crédito e podes encontrá-lo
-                            na tua conta para utilizar em futuras viagens.
-                        </p>
-                        <div class="checkout__accept-terms-condition row pt-5 pb-5">
-                            <div class="col-md-6">
-                                <div class="form-check">
-                                    <input id="cbTerms" class="form-check-input" type="checkbox" value="">
-                                    <label class="checkout__terms-conditions form-check-label" for="cbTerms">Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
-                                </div>  
-                            </div>
-                            <div class="checkout__accept-terms-condition--pay col-md-6">
-                                <button id="btnPay" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
-                            </div>
-                        </div>
+                        <asp:UpdatePanel runat="server" ID="upCheckoutPayButton" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <h3 class="checkout__sub-title-policy">Política de cancelamento</h3>
+                                <p class="checkout__policy-text">
+                                    Podes cancelar a tua viagem até 48 horas antes da hora de partida. 
+                                    O valor que pagaste será transformado em crédito e podes encontrá-lo
+                                    na tua conta para utilizar em futuras viagens.
+                                </p>
+                                <div class="checkout__accept-terms-condition row pt-4 pb-4">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input id="cbTerms" class="form-check-input" type="checkbox">
+                                            <label class="checkout__terms-conditions form-check-label" for="cbTerms">&nbsp;Aceito os <a class="" href="/Pages/Terms" target="_blank">Termos & condiçōes</a></label>
+                                        </div>
+                                        <div id="TermsError" class="checkout__terms-conditions--error checkout__terms-conditions--invisible text-danger">
+                                            <label>Tem de aceitar os Termos & condiçōes</label>
+                                        </div>
+                                    </div>
+                                    <div class="checkout__accept-terms-condition--pay col-md-6">
+                                        <asp:PlaceHolder runat="server" ID="phPay" Visible="true">
+                                            <asp:Button runat="server" ID="btnPay" OnClientClick="return ValidateTerms()" OnClick="btnPay_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Pagar" />
+                                        </asp:PlaceHolder>
+                                        <asp:PlaceHolder runat="server" ID="phPayNew" Visible="false">
+                                            <button id="btnPayNew" OnClick="createToken(event)" class="btn btn-light btn-xl text-uppercase">Pagar</button>
+                                        </asp:PlaceHolder>
+                                    </div>
+                                </div>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </asp:Content>

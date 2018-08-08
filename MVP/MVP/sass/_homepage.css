@@ -239,6 +239,19 @@
     line-height: 1.6;
     text-align: center;
     color: #8b9398; }
+  .homepage__suggest--text {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #c1c6d3; }
+  .homepage__suggest--input::placeholder {
+    font-size: 14px;
+    line-height: 2.29;
+    letter-spacing: 0.8px;
+    color: #667386; }
+  .homepage__suggest--input:disabled {
+    background-color: white !important;
+    border: 1px solid #ced4da !important; }
   .homepage__reserve-btn, .homepage__where-to-card__reserve, .homepage__popular-loops__footer__reserve {
     height: 40px;
     border-radius: 20px;

@@ -13,6 +13,78 @@ namespace MVP.Checkout {
     public partial class Checkout {
         
         /// <summary>
+        /// upCheckoutPaymentForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upCheckoutPaymentForm;
+        
+        /// <summary>
+        /// ddlCardMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCardMenu;
+        
+        /// <summary>
+        /// phCardDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phCardDisplay;
+        
+        /// <summary>
+        /// tbCardHolderName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCardHolderName;
+        
+        /// <summary>
+        /// tbCardNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCardNumber;
+        
+        /// <summary>
+        /// tbCardExpiry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCardExpiry;
+        
+        /// <summary>
+        /// phCardEntry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phCardEntry;
+        
+        /// <summary>
+        /// cbSaveCard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbSaveCard;
+        
+        /// <summary>
         /// upBillingForm control.
         /// </summary>
         /// <remarks>
@@ -49,13 +121,13 @@ namespace MVP.Checkout {
         protected global::System.Web.UI.WebControls.TextBox txtInvoiceNIF;
         
         /// <summary>
-        /// txtInvoiceAdress control.
+        /// txtInvoiceAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInvoiceAdress;
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceAddress;
         
         /// <summary>
         /// txtInvoiceZIP control.
@@ -74,6 +146,15 @@ namespace MVP.Checkout {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtInvoiceCity;
+        
+        /// <summary>
+        /// cbSaveDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbSaveDetails;
         
         /// <summary>
         /// upPromocode control.
@@ -137,5 +218,41 @@ namespace MVP.Checkout {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MVP.Controls.BookingPanel CheckoutPanel;
+        
+        /// <summary>
+        /// upCheckoutPayButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upCheckoutPayButton;
+        
+        /// <summary>
+        /// phPay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phPay;
+        
+        /// <summary>
+        /// btnPay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPay;
+        
+        /// <summary>
+        /// phPayNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phPayNew;
     }
 }
