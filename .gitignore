@@ -322,5 +322,5 @@ ASALocalRun/
 *.binlog
 
 # Webcompiler generated css
-/MVP/MVP/css/styles.css
-/MVP/MVP/css/styles.min.css
+MVP/MVP/css/styles.css
+MVP/MVP/css/styles.min.css
