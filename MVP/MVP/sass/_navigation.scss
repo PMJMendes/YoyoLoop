@@ -59,6 +59,10 @@ $desktop: "(min-width: 1440px)";
         letter-spacing: 0.8px;
         text-align: center;
         color: #fbfbfb;
+
+        &--selected {
+            color: #ff5f6d !important;
+        }
     }
 
     p {

@@ -3,11 +3,14 @@
 <asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
         .homepage__navbar {
-            background: none
+            background: none;
         }
-            .homepage__navbar a {
-                color: #fbfbfb !important
-            }
+        .homepage__navbar a {
+            color: #fbfbfb !important;
+        }
+        .homepage__navbar a.nav-link--selected {
+            color: #ff5f6d !important;
+        }
      </style>
 </asp:Content>
 
