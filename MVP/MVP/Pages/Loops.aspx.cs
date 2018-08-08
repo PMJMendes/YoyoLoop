@@ -9,9 +9,47 @@ namespace MVP.Pages
 {
     public partial class Loops : System.Web.UI.Page
     {
+        public class PageState
+        {
+            public string Loop;
+        }
+
+        protected PageState localData;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            localData = null;
 
+            if (IsPostBack)
+            {
+                localData = (PageState)Session["loops.data"];
+            }
+
+            if (localData == null)
+            {
+                localData = new PageState();
+                var query = Request.QueryString;
+
+                if (!string.IsNullOrEmpty(query["Loop"]))
+                {
+                    switch (query["Loop"])
+                    {
+                        case "Lisboa-Cascais":
+                            localData.Loop = "lisboa-cascais";
+                            break;
+                        case "Lisboa-Coimbra":
+                            localData.Loop = "lisboa-coimbra";
+                            break;
+                        case "Lisboa-Porto":
+                            localData.Loop = "lisboa-porto";
+                            break;
+                        default:
+                            localData.Loop = string.Empty;
+                            break;
+                    }
+                }
+                Session["loops.data"] = localData;
+            }
         }
     }
 }

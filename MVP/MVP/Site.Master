@@ -194,9 +194,9 @@
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">Loops</h2></p>
-                                <p><a class="" href="#">Lisboa &rarr; Cascais</a></p>
-                                <p><a class="" href="#">Lisboa &rarr; Coimbra</a></p>
-                                <p><a class="" href="#">Lisboa &rarr; Porto</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Cascais" class="">Lisboa &rarr; Cascais</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" class="">Lisboa &rarr; Coimbra</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Porto" class="">Lisboa &rarr; Porto</a></p>
                             </div>
                             <div class="footer__column col-md-3">
                                 <div class="row">

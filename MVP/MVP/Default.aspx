@@ -179,7 +179,7 @@
         <div class="container-fluid">
           <div class="row row-no-padding justify-content-between align-items-center mb-4">
             <div class="homepage__popular-loops__title">Loops Populares</div>
-            <a href="#" class="homepage__see-all">Ver todos</a>
+            <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="homepage__see-all">Ver todos</a>
           </div>
 
           <div class="row row-no-padding pb-5">
