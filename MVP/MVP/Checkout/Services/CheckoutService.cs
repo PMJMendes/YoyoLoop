@@ -338,6 +338,7 @@ namespace MVP.Services
                     booking.FareType = state.FareType;
                     booking.Promocode = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode.ToUpper());
                     booking.Cost = state.Cost;
+                    booking.StripeChargeId = state.StripeChargeID;
 
                     model.SaveChanges();
 
