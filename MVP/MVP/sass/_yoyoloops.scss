@@ -114,7 +114,7 @@ section.yoyoloops {
     }
 
     .city-details {
-        padding: 1% 5% 0% 5%;
+        padding: 3% 5% 0% 5%;
 
         @media (max-width: 1200px) {
             padding-bottom: 2%;
@@ -247,4 +247,31 @@ section.yoyoloops {
         border-radius: 15px;
         background-color: #ff5f6d;
     }
+}
+
+.loop-cascais-img {
+    background-image: url('/img/cascais.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.loop-coimbra-img {
+    background-image: url('/img/coimbra.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.loop-leiria-img {
+    background-image: url('/img/leiria.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow: hidden;
 }

@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="row pt-3 trip">
+                <div class="row pt-3 trip mb-4">
                     <div class="col-8">
                         <div class="row p-1 text-uppercase start-end">
                             <div class="col-12 pl-4">Destino</div>

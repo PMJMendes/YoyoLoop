@@ -99,10 +99,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="d-flex align-items-center navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Pages/Loops">Loops & horarios</a>
+                            <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/Pages/Loops" ? "nav-link--selected" : "" %>">Loops & horarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/Pages/Destinos">Destinos</a>
+                            <a OnClick="javascript:$.blockUI()" href="/Pages/Destinos" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/Pages/Destinos" ? "nav-link--selected" : "" %>">Destinos</a>
                         </li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
@@ -112,7 +112,7 @@
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <li class="nav-item">
-                                    <a class="nav-link js-scroll-trigger text-uppercase" OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips">As minhas viagens</a>
+                                    <a OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/MyTrips/MyTrips" ? "nav-link--selected" : "" %>">As minhas viagens</a>
                                 </li>
                                 <li class="nav-item my-auto">
                                     <a class="profile-desktop profile-menu-anchor"tabindex="-1">
@@ -176,27 +176,27 @@
                     <div class="container-fluid">
                         <div class="footer__first-row row p-5">
                             <div class="col-md-3 d-flex align-items-center">
-                                <img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/>
+                                <a OnClick="javascript:$.blockUI()" href="/"><img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/></a>
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">yoyoloop</h2></p>
-                                <p><a class="" href="#">Sobre nós</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/About" class="">Sobre nós</a></p>
                                 <p><a class="" href="#">Como funciona</a></p>
-                                <p><a class="" OnClick="javascript:$.blockUI()" href="/Help/Help">Ajuda</a></p>
-                                <p><a class="" href="#">Contacto</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Help/Help" class="">Ajuda</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="">Contacto</a></p>
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">Destinos</h2></p>
-                                <p><a class="" href="#">&rarr; Cascais</a></p>
-                                <p><a class="" href="#">&rarr; Coimbra</a></p>
-                                <p><a class="" href="#">&rarr; Porto</a></p>
-                                <p><a class="" href="#">&rarr; Lisboa</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Cascais" class="">&rarr; Cascais</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Coimbra" class="">&rarr; Coimbra</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Porto" class="">&rarr; Porto</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Lisboa" class="">&rarr; Lisboa</a></p>
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">Loops</h2></p>
-                                <p><a class="" href="#">Lisboa &rarr; Cascais</a></p>
-                                <p><a class="" href="#">Lisboa &rarr; Coimbra</a></p>
-                                <p><a class="" href="#">Lisboa &rarr; Porto</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Cascais" class="">Lisboa &rarr; Cascais</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" class="">Lisboa &rarr; Coimbra</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Porto" class="">Lisboa &rarr; Porto</a></p>
                             </div>
                             <div class="footer__column col-md-3">
                                 <div class="row">

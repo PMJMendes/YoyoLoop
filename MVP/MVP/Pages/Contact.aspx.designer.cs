@@ -7,37 +7,64 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVP {
+namespace MVP.Pages {
     
     
-    public partial class _Default {
+    public partial class Contact {
         
         /// <summary>
-        /// tbSuggestEmail control.
+        /// upContactForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbSuggestEmail;
+        protected global::System.Web.UI.UpdatePanel upContactForm;
         
         /// <summary>
-        /// tbSuggestBody control.
+        /// tbName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbSuggestBody;
+        protected global::System.Web.UI.WebControls.TextBox tbName;
         
         /// <summary>
-        /// btnSuggestSend control.
+        /// tbEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSuggestSend;
+        protected global::System.Web.UI.WebControls.TextBox tbEmail;
+        
+        /// <summary>
+        /// tbSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbSubject;
+        
+        /// <summary>
+        /// tbBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbBody;
+        
+        /// <summary>
+        /// btnSend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSend;
         
         /// <summary>
         /// Master property.

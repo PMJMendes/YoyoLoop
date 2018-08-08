@@ -591,6 +591,8 @@
     <Content Include="MyTrips\PastTicket.ascx" />
     <Content Include="MyTrips\Ticket.ascx" />
     <Content Include="favicon.ico" />
+    <Content Include="Pages\About.aspx" />
+    <Content Include="Pages\Contact.aspx" />
     <Content Include="Pages\Destinos.aspx" />
     <Content Include="Pages\Loops.aspx" />
     <Content Include="Pages\Privacy.aspx" />
@@ -1117,6 +1119,20 @@
     </Compile>
     <Compile Include="MyTrips\Ticket.ascx.designer.cs">
       <DependentUpon>Ticket.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Destinos.aspx.cs">
       <DependentUpon>Destinos.aspx</DependentUpon>

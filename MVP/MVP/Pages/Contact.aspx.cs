@@ -8,12 +8,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MVP
+namespace MVP.Pages
 {
-    public partial class _Default : Page
+    public partial class Contact : System.Web.UI.Page
     {
         public class PageState
         {
+            public string UserContactName;
             public string UserEmail;
         }
 
@@ -29,57 +30,63 @@ namespace MVP
         {
             localData = null;
 
-            if(IsPostBack)
+            if (IsPostBack)
             {
-                localData = (PageState)Session["homepage.data"];
+                localData = (PageState)Session["contact.data"];
             }
 
-            if(localData == null)
+            if (localData == null)
             {
                 localData = new PageState();
                 if (User?.Identity.IsAuthenticated == false)
                 {
+                    localData.UserContactName = string.Empty;
                     localData.UserEmail = string.Empty;
                 }
                 else
                 {
+                    localData.UserContactName = User.Identity.GetUserContactName();
                     localData.UserEmail = User.Identity.GetUserEmail();
                 }
-                Session["homepage.data"] = localData;
+                Session["contact.data"] = localData;
                 InitializeControls();
             }
         }
 
         private void InitializeControls()
         {
-            UpdateSuggestModal();
+            UpdateContactPanel();
         }
 
-        private void UpdateSuggestModal()
+        private void UpdateContactPanel()
         {
-            tbSuggestEmail.Text = string.Empty;
-            tbSuggestBody.Text = string.Empty;
+            tbName.Text = string.Empty;
+            tbEmail.Text = string.Empty;
+            tbSubject.Text = string.Empty;
+            tbBody.Text = string.Empty;
             if (!string.IsNullOrEmpty(localData.UserEmail))
             {
-                tbSuggestEmail.Enabled = false;
-                tbSuggestEmail.Text = localData.UserEmail;
+                tbName.Text = localData.UserContactName;
+                tbEmail.Text = localData.UserEmail;
             }
+            upContactForm.Update();
         }
 
         protected void UserSignIn(object sender, EventArgs e)
         {
             if (User?.Identity.IsAuthenticated == true)
             {
+                localData.UserContactName = User.Identity.GetUserContactName();
                 localData.UserEmail = User.Identity.GetUserEmail();
-                UpdateSuggestModal();
+                UpdateContactPanel();
             }
         }
 
-        protected void btnSuggestSend_Click(object sender, EventArgs e)
+        protected void btnSend_Click(object sender, EventArgs e)
         {
-            masterService.SendSuggestion(tbSuggestEmail.Text, tbSuggestBody.Text);
-            ApplicationHelpers.ShowMessage(this, "A tua sugestão foi enviada");
-            UpdateSuggestModal();
+            masterService.SendContactMessage(tbName.Text, tbEmail.Text, tbSubject.Text, tbBody.Text);
+            ApplicationHelpers.ShowMessage(this, "A tua mensagem foi enviada");
+            UpdateContactPanel();
         }
     }
 }

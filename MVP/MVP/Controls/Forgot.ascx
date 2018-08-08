@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Forgot.ascx.cs" Inherits="MVP.Controls.Forgot" %>
 
-<div class="login modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <asp:UpdatePanel runat="server" ID="upForgot" UpdateMode="Always">
-            <ContentTemplate>
+<asp:UpdatePanel runat="server" ID="upForgot" UpdateMode="Conditional">
+    <ContentTemplate>
+        <div class="login modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row text-center">
@@ -29,20 +29,20 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="login__log-in col-md-6">
-                                <asp:Button runat="server" ID="btnForgot" CausesValidation="true" ValidationGroup="Forgot" OnClick="btnForgot_Click" Text="Enviar" CssClass="login__login btn btn-primary"/>
+                        <div class="flex-row align-items-center">
+                            <div class="login__log-in login__reset--center">
+                                <asp:Button runat="server" ID="btnForgot" CausesValidation="true" ValidationGroup="Forgot" OnClick="btnForgot_Click" Text="Enviar" CssClass="login__login btn btn-primary login__reset--center"/>
+                                <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+                                    <p class="text-danger">
+                                        <asp:Literal runat="server" ID="FailureText" />
+                                    </p>
+                                </asp:PlaceHolder>
+                                <asp:PlaceHolder runat="server" ID="DisplayEmail" Visible="false">
+                                    <p class="text-info">
+                                        Please check your email to reset your password.
+                                    </p>
+                                </asp:PlaceHolder>
                             </div>
-                            <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
-                                <p class="text-danger">
-                                    <asp:Literal runat="server" ID="FailureText" />
-                                </p>
-                            </asp:PlaceHolder>
-                            <asp:PlaceHolder runat="server" ID="DisplayEmail" Visible="false">
-                                <p class="text-info">
-                                    Please check your email to reset your password.
-                                </p>
-                            </asp:PlaceHolder>
                         </div>
                     </div>
             
@@ -51,7 +51,7 @@
                         <div class="col-12 text-center text-uppercase">Ainda não tens conta? <a class="pl-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Registar</a></div>
                     </div>
                 </div>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-    </div>
-</div>
+            </div>
+        </div>
+    </ContentTemplate>
+</asp:UpdatePanel>

@@ -354,5 +354,53 @@ namespace MVP.Services
                 client.Send(msg);
             }
         }
+
+        public void SendSuggestion(string senderemail, string text)
+        {
+            SmtpClient client = new SmtpClient();
+            using (MailMessage msg = new MailMessage())
+            {
+                msg.IsBodyHtml = false;
+                msg.Subject = "[YOYOLOOP] Sugestão de Loop";
+                string body = string.Empty;
+
+                body += "Sugestão enviada por: " + senderemail + "\r\n";
+                body += "\r\n";
+                body += "Mensagem: " + "\r\n";
+                body += text;
+
+                msg.Body = body;
+
+                msg.To.Add(WebConfigurationManager.AppSettings["SuggestionProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+                client.Send(msg);
+            }
+        }
+
+        public void SendContactMessage(string senderName, string senderEmail, string senderSubject, string senderBody)
+        {
+            SmtpClient client = new SmtpClient();
+            using (MailMessage msg = new MailMessage())
+            {
+                msg.IsBodyHtml = false;
+                msg.Subject = "[YOYOLOOP] Mensagem Recebida";
+                string body = string.Empty;
+
+                body += "Mensagem enviada por: " + senderName + " (" + senderEmail + ")" + "\r\n";
+                body += "\r\n";
+                body += "Assunto: " + senderSubject + "\r\n";
+                body += "\r\n";
+                body += "Mensagem: " + "\r\n";
+                body += senderBody;
+
+                msg.Body = body;
+
+                msg.To.Add(WebConfigurationManager.AppSettings["ContactProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+                client.Send(msg);
+            }
+        }
     }
 }
