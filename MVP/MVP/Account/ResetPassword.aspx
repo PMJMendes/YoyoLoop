@@ -12,8 +12,6 @@
                             <h5 class="travel__main-title">Enter your new password.</h5>
                             <hr />
 
-                            <asp:ValidationSummary runat="server" CssClass="text-danger" ValidationGroup="Reset"/>
-
                             <div class="form-group">
                                 <div class="col-md-10">
                                     <asp:TextBox runat="server" id="Email" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Endereço de email" />
@@ -35,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="login__log-in col-md-offset-2 col-md-10">
-                                    <asp:Button runat="server" CausesValidation="true" ValidationGroup="Reset" OnClick="Reset_Click" Text="Reset" CssClass="login__login btn btn-primar" />
+                                    <asp:Button runat="server" CausesValidation="true" ValidationGroup="Reset" OnClick="Reset_Click" Text="Reset" CssClass="login__login btn btn-primary" />
                                 </div>
                             </div>
                             <br />

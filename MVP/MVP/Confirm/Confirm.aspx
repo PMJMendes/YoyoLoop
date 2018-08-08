@@ -143,7 +143,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <div class="travel__copy-bold">
-                        Em caso de problemas, <a href="#" style="color: #ff5f6d;">contacta-nos</a>.
+                        Em caso de problemas, <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" style="color: #ff5f6d;">contacta-nos</a>.
                     </div>
                 </div>
                 <div class="travel__my-tickets">

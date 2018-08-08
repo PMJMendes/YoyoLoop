@@ -59,33 +59,41 @@ $desktop: "(min-width: 1440px)";
 
     &__facebook-row {
         @media #{$mobile} {
-            text-align: center!important;
+            text-align: center !important;
             margin-bottom: 10px;
         }
     }
 
     &__google-row {
         @media #{$mobile} {
-            text-align: center!important;
+            text-align: center !important;
         }
     }
 
     &__forgot-password {
         @media #{$mobile} {
-            text-align: center!important;
+            text-align: center !important;
         }
     }
 
     &__log-in {
         @media #{$mobile} {
-            text-align: center!important;
+            text-align: center !important;
+        }
+    }
+
+    &__reset {
+        &--center {
+            width: 200px;
+            margin: auto;
         }
     }
 
     &__campaigns {
         padding-left: 30px;
+
         @media #{$mobile} {
-            text-align: center!important;
+            text-align: center !important;
         }
     }
 
@@ -122,6 +130,7 @@ $desktop: "(min-width: 1440px)";
 
     &__forgot-password {
         padding-left: 30px;
+
         a {
             font-size: 14px;
             font-weight: bold;

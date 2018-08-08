@@ -115,7 +115,7 @@
             
                             <div class="row justify-content-center mb-5 align-items-center mt-5">
                                 <div class="invitefriends__any-question mr-5">Não encontras a tua pergunta?</div>
-                                <button class="invitefriends__reserve-btn invitefriends__reserve-btn--white" >CONTACTA-NOS</button>
+                                <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" >CONTACTA-NOS</a>
                             </div>
                         </asp:PlaceHolder>
 
@@ -622,7 +622,7 @@
             
                             <div class="row justify-content-center mb-5 align-items-center mt-5">
                                 <div class="invitefriends__any-question mr-5">Não encontras a tua pergunta?</div>
-                                <button class="invitefriends__reserve-btn invitefriends__reserve-btn--white" >CONTACTA-NOS</button>
+                                <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" >CONTACTA-NOS</a>
                             </div>
                         </asp:PlaceHolder>
 
