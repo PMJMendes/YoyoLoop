@@ -181,7 +181,7 @@
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">yoyoloop</h2></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/About" class="">Sobre nós</a></p>
-                                <p><a class="" href="#">Como funciona</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/HowTo" class="">Como funciona</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Help/Help" class="">Ajuda</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="">Contacto</a></p>
                             </div>

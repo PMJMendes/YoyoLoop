@@ -38,9 +38,52 @@
         height: 600px;
     }
 
+    &__pic-six {
+        background-image: url(/img/comofunciona.jpg) !important;
+        height: 600px;
+    }
+
+    &__pic-seven {
+        background-image: url(/img/comoviajar.jpg) !important;
+        height: 100%;
+    }
+
     &__pic-contactos {
         background-image: url(/img/contactos.jpg) !important;
         height: 600px;
+    }
+
+    &__how-to {
+        background-color: #eff1f6;
+
+        &--icon {
+            width: 65px;
+            height: 65px;
+        }
+
+        h3 {
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.44;
+            letter-spacing: 0.5px;
+            text-align: left;
+            color: #535e7b;
+        }
+
+
+        @media #{$mobile} {
+            padding: 0 !important;
+        }
+    }
+
+    &__how-to-img {
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     a:hover {
@@ -207,6 +250,10 @@
     &__center-container {
         margin: 0 auto;
         max-width: 1026px;
+
+        &--gray {
+            background-color: #eff1f6;
+        }
     }
 
     &__first {
@@ -260,6 +307,10 @@
         }
 
         &__schedules {
+            background-image: url('/img/cascais.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
 
             &__label {
                 font-size: 20px;
