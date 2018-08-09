@@ -345,6 +345,9 @@
     <Content Include="img\capacidade%402x.png" />
     <Content Include="img\capacidade%403x.png" />
     <Content Include="img\capacidade.png" />
+    <Content Include="img\card%402x.png" />
+    <Content Include="img\card%403x.png" />
+    <Content Include="img\card.png" />
     <Content Include="img\carro%402x.png" />
     <Content Include="img\carro%403x.png" />
     <Content Include="img\carro.png" />
@@ -503,6 +506,9 @@
     <Content Include="img\pin%402x.png" />
     <Content Include="img\pin%403x.png" />
     <Content Include="img\pin.png" />
+    <Content Include="img\pontos%402x.png" />
+    <Content Include="img\pontos%403x.png" />
+    <Content Include="img\pontos.png" />
     <Content Include="img\preco%402x.png" />
     <Content Include="img\preco%403x.png" />
     <Content Include="img\preco.png" />
@@ -556,6 +562,9 @@
     <Content Include="img\ticket%402x.png" />
     <Content Include="img\ticket%403x.png" />
     <Content Include="img\ticket.png" />
+    <Content Include="img\tickets%402x.png" />
+    <Content Include="img\tickets%403x.png" />
+    <Content Include="img\tickets.png" />
     <Content Include="img\transfer%402x.png" />
     <Content Include="img\transfer%403x.png" />
     <Content Include="img\transfer.png" />
@@ -594,6 +603,7 @@
     <Content Include="Pages\About.aspx" />
     <Content Include="Pages\Contact.aspx" />
     <Content Include="Pages\Destinos.aspx" />
+    <Content Include="Pages\HowTo.aspx" />
     <Content Include="Pages\Loops.aspx" />
     <Content Include="Pages\Privacy.aspx" />
     <Content Include="Pages\Terms.aspx" />
@@ -1140,6 +1150,13 @@
     </Compile>
     <Compile Include="Pages\Destinos.aspx.designer.cs">
       <DependentUpon>Destinos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HowTo.aspx.cs">
+      <DependentUpon>HowTo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HowTo.aspx.designer.cs">
+      <DependentUpon>HowTo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Loops.aspx.cs">
       <DependentUpon>Loops.aspx</DependentUpon>
