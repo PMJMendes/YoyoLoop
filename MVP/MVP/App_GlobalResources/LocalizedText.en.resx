@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AnyPlace" xml:space="preserve">
-    <value>Qualquer Sítio</value>
+  <data name="SiteMaster_NavBar_Destinations" xml:space="preserve">
+    <value>Destinations</value>
   </data>
-  <data name="AnyTime" xml:space="preserve">
-    <value>Qualquer Hora</value>
+  <data name="SiteMaster_NavBar_LoopsAndSchedules" xml:space="preserve">
+    <value>Loops &amp; Schedules</value>
+  </data>
+  <data name="SiteMaster_NavBar_MyTrips" xml:space="preserve">
+    <value>My trips</value>
+  </data>
+  <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
+    <value>Register/Login</value>
   </data>
 </root>
