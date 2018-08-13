@@ -270,25 +270,33 @@ namespace MVP.Checkout
 
         protected void tbPromo_TextChanged(object sender, EventArgs e)
         {
-            pageData.Promocode = tbPromo.Text;
+            pageData.Promocode = tbPromo.Text.ToUpper();
             pageData = service.CheckPromo(pageData);
             UpdateCheckoutPanel();
             if (pageData.Promocode == string.Empty)
             {
-                pnPromoCheck.Visible = false;
-                pnPromoError.Visible = false;
+                phPromoCheck.Visible = false;
+                phPromoError.Visible = false;
+                tbPromo.Attributes.Add("placeholder", "Código promocional");
+                tbPromo.Enabled = true;
             }
             else
             {
                 if (!pageData.PromoValid)
                 {
-                    pnPromoCheck.Visible = false;
-                    pnPromoError.Visible = true;
+                    phPromoCheck.Visible = false;
+                    phPromoError.Visible = true;
+                    tbPromo.Text = string.Empty;
+                    tbPromo.Attributes.Add("placeholder", string.Empty);
+                    tbPromo.Enabled = false;
                 }
                 else
                 {
-                    pnPromoCheck.Visible = true;
-                    pnPromoError.Visible = false;
+                    phPromoCheck.Visible = true;
+                    phPromoError.Visible = false;
+                    tbPromo.Text = string.Empty;
+                    tbPromo.Attributes.Add("placeholder", string.Empty);
+                    tbPromo.Enabled = false;
                 }
             }
         }
@@ -311,6 +319,12 @@ namespace MVP.Checkout
                 //PAYMENT ERROR - need better error handling here
                 ApplicationHelpers.ShowMessage(this, error);
             }
+        }
+
+        protected void ClearPromo_Click(object sender, ImageClickEventArgs e)
+        {
+            tbPromo.Text = string.Empty;
+            tbPromo_TextChanged(tbPromo, new EventArgs());
         }
     }
 }
