@@ -61,6 +61,150 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Entrar.
+        /// </summary>
+        internal static string Controls_Login_btnLogin_Text {
+            get {
+                return ResourceManager.GetString("Controls_Login_btnLogin_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lembrar-me da &lt;br&gt;password.
+        /// </summary>
+        internal static string Controls_Login_cbRememberMe {
+            get {
+                return ResourceManager.GetString("Controls_Login_cbRememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esqueci-me da password.
+        /// </summary>
+        internal static string Controls_Login_ForgotPassword {
+            get {
+                return ResourceManager.GetString("Controls_Login_ForgotPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid login attempt.
+        /// </summary>
+        internal static string Controls_Login_LoginMessageFailure_Text {
+            get {
+                return ResourceManager.GetString("Controls_Login_LoginMessageFailure_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login sucessful.
+        /// </summary>
+        internal static string Controls_Login_LoginMessageSucess_Text {
+            get {
+                return ResourceManager.GetString("Controls_Login_LoginMessageSucess_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to or.
+        /// </summary>
+        internal static string Controls_Login_LoginOr {
+            get {
+                return ResourceManager.GetString("Controls_Login_LoginOr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yoyoloop Login.
+        /// </summary>
+        internal static string Controls_Login_MainTitle {
+            get {
+                return ResourceManager.GetString("Controls_Login_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda não tens conta?.
+        /// </summary>
+        internal static string Controls_Login_NoAccount {
+            get {
+                return ResourceManager.GetString("Controls_Login_NoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registar.
+        /// </summary>
+        internal static string Controls_Login_RegisterLink {
+            get {
+                return ResourceManager.GetString("Controls_Login_RegisterLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Controls_Login_tbLoginEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Controls_Login_tbLoginEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Controls_Login_tbLoginPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password field is required..
+        /// </summary>
+        internal static string Controls_Login_tbLoginPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Regista-te com o teu email.
+        /// </summary>
+        internal static string Controls_Login_WithEmail {
+            get {
+                return ResourceManager.GetString("Controls_Login_WithEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Facebook.
+        /// </summary>
+        internal static string Controls_Login_WithFacebook {
+            get {
+                return ResourceManager.GetString("Controls_Login_WithFacebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Google.
+        /// </summary>
+        internal static string Controls_Login_WithGoogle {
+            get {
+                return ResourceManager.GetString("Controls_Login_WithGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Destinos.
         /// </summary>
         internal static string SiteMaster_NavBar_Destinations {

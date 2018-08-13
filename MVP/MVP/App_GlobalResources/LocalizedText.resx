@@ -117,6 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Controls_Login_btnLogin_Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="Controls_Login_cbRememberMe" xml:space="preserve">
+    <value>Lembrar-me da &lt;br&gt;password</value>
+  </data>
+  <data name="Controls_Login_ForgotPassword" xml:space="preserve">
+    <value>Esqueci-me da password</value>
+  </data>
+  <data name="Controls_Login_LoginMessageFailure_Text" xml:space="preserve">
+    <value>Invalid login attempt</value>
+  </data>
+  <data name="Controls_Login_LoginMessageSucess_Text" xml:space="preserve">
+    <value>Login sucessful</value>
+  </data>
+  <data name="Controls_Login_LoginOr" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="Controls_Login_MainTitle" xml:space="preserve">
+    <value>Yoyoloop Login</value>
+  </data>
+  <data name="Controls_Login_NoAccount" xml:space="preserve">
+    <value>Ainda não tens conta?</value>
+  </data>
+  <data name="Controls_Login_RegisterLink" xml:space="preserve">
+    <value>Registar</value>
+  </data>
+  <data name="Controls_Login_tbLoginEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Controls_Login_tbLoginEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+  </data>
+  <data name="Controls_Login_tbLoginPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Controls_Login_tbLoginPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The password field is required.</value>
+  </data>
+  <data name="Controls_Login_WithEmail" xml:space="preserve">
+    <value>Regista-te com o teu email</value>
+  </data>
+  <data name="Controls_Login_WithFacebook" xml:space="preserve">
+    <value>com Facebook</value>
+  </data>
+  <data name="Controls_Login_WithGoogle" xml:space="preserve">
+    <value>com Google</value>
+  </data>
   <data name="SiteMaster_NavBar_Destinations" xml:space="preserve">
     <value>Destinos</value>
   </data>
