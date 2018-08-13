@@ -19,6 +19,7 @@ namespace MVP
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        protected string CurrentLanguage;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -86,6 +87,22 @@ namespace MVP
                     throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
                 }
             }
+
+            CurrentLanguage = "Português";
+            HttpCookie langCookie = Request.Cookies["langCookie"];
+            if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
+            {
+                switch(langCookie.Value)
+                {
+                    case "en-US":
+                        CurrentLanguage = "Inglês";
+                        break;
+                    case "pt-PT":
+                    default:
+                        CurrentLanguage = "Português";
+                        break;
+                }
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -99,5 +116,18 @@ namespace MVP
             PassSignIn?.Invoke(this, e);
         }
 
+        protected void btnChangeLangPortuguese_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["langCookie"].Value = "pt-PT";
+            Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
+            ScriptManager.RegisterStartupScript(upChangeLanguage, upChangeLanguage.GetType(), "changeLangPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('', '');},1);", true);
+        }
+
+        protected void btnChangeLangEnglish_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["langCookie"].Value = "en-US";
+            Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
+            ScriptManager.RegisterStartupScript(upChangeLanguage, upChangeLanguage.GetType(), "changeLangPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('', '');},1);", true);
+        }
     }
 }

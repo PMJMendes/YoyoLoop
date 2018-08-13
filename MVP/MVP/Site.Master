@@ -99,20 +99,20 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="d-flex align-items-center navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/Pages/Loops" ? "nav-link--selected" : "" %>">Loops & horarios</a>
+                            <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/Pages/Loops" ? "nav-link--selected" : "" %>"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_NavBar_LoopsAndSchedules%>"/></a>
                         </li>
                         <li class="nav-item">
-                            <a OnClick="javascript:$.blockUI()" href="/Pages/Destinos" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/Pages/Destinos" ? "nav-link--selected" : "" %>">Destinos</a>
+                            <a OnClick="javascript:$.blockUI()" href="/Pages/Destinos" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/Pages/Destinos" ? "nav-link--selected" : "" %>"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_NavBar_Destinations%>"/></a>
                         </li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
                                 <li class="nav-item">
-                                    <button type="button" onclick="return false" class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" data-toggle="modal" data-target="#loginModal">Registar/Entrar</button>
+                                    <button type="button" onclick="return false" class="nav-link js-scroll-trigger btn btn-light btn-xl text-uppercase" data-toggle="modal" data-target="#loginModal"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_NavBar_RegisterLogin%>"/></button>
                                 </li>
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <li class="nav-item">
-                                    <a OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/MyTrips/MyTrips" ? "nav-link--selected" : "" %>">As minhas viagens</a>
+                                    <a OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips" class="nav-link js-scroll-trigger text-uppercase <%= HttpContext.Current.Request.Url.AbsolutePath == "/MyTrips/MyTrips" ? "nav-link--selected" : "" %>"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_NavBar_MyTrips%>"/></a>
                                 </li>
                                 <li class="nav-item my-auto">
                                     <a class="profile-desktop profile-menu-anchor"tabindex="-1">
@@ -201,18 +201,23 @@
                             <div class="footer__column col-md-3">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="footer__dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <img src="/img/language.png"
-                                                srcset="/img/language@2x.png 2x,
-                                                    /img/language@3x.png 3x"
-                                                class="language pr-2">
-                                                Português
-                                            </button>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Inglês</a>
-                                            </div>
-                                        </div>
+                                        <asp:UpdatePanel runat="server" ID="upChangeLanguage" UpdateMode="Conditional">
+                                            <ContentTemplate>
+                                                <div class="footer__dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <img src="/img/language.png"
+                                                        srcset="/img/language@2x.png 2x,
+                                                            /img/language@3x.png 3x"
+                                                        class="language pr-2">
+                                                        <%= CurrentLanguage %>
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <asp:LinkButton runat="server" ID="btnChangeLangPortuguese" OnClientClick="javascript:$.blockUI()" OnClick="btnChangeLangPortuguese_Click" class="dropdown-item">Português</asp:LinkButton>
+                                                        <asp:LinkButton runat="server" ID="btnChangeLangEnglish" OnClientClick="javascript:$.blockUI()" OnClick="btnChangeLangEnglish_Click" class="dropdown-item">Inglês</asp:LinkButton>
+                                                    </div>
+                                                </div>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
                                     </div>
                                 </div>
                                 <div class="row pt-4">

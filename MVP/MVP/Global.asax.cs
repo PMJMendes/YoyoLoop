@@ -8,6 +8,8 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Configuration;
 using Stripe;
+using System.Threading;
+using System.Globalization;
 
 namespace MVP
 {
@@ -22,6 +24,16 @@ namespace MVP
             // Stripe
             var secretKey = WebConfigurationManager.AppSettings["StripeSecretKey"];
             StripeConfiguration.SetApiKey(secretKey);
+        }
+
+        protected void Application_BeginRequest(Object sender, EventArgs e)
+        {
+            HttpCookie langCookie = Request.Cookies["langCookie"];
+            if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(langCookie.Value, false);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(langCookie.Value, false);
+            }
         }
     }
 }
