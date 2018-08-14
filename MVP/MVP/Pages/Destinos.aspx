@@ -216,7 +216,7 @@
                         <div class="static-page__box-container__first__main-title">Lisboa</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--cascais p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
@@ -455,7 +455,7 @@
                         <div class="static-page__box-container__first__main-title">Porto</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--cascais p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
@@ -694,7 +694,7 @@
                         <div class="static-page__box-container__first__main-title">Coimbra</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--cascais p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
@@ -933,7 +933,7 @@
                         <div class="static-page__box-container__first__main-title">Cascais</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--cascais p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">

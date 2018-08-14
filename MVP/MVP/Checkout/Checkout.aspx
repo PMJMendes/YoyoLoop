@@ -98,25 +98,32 @@
 
                         <asp:UpdatePanel runat="server" ID="upPromocode" UpdateMode="Conditional">
                             <ContentTemplate>
-                                <asp:Panel runat="server" ID="pnPromocode" Visible="true">
+                                <asp:Panel runat="server" ID="pnPromocode" CssClass="checkout__promocode checkout__promocode--active" Visible="true">
                                     <div class="mt-5 mb-5 checkout__separator"></div>
                                     <div class="checkout__label">Código promocional</div>
-                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="checkout__input checkout__input--promocode" placeholder="Inserir codigo promocional" aria-label="Inserir codigo promocional" aria-describedby="basic-addon2" />
-                                    <asp:panel runat="server" ID="pnPromoError" class="input-group-append" Visible="false">
-                                        <span class="input-group-text">
-                                            <img src="/img/alert.png"
-                                                srcset="/img/alert@2x.png 2x,
-                                                /img/alert@3x.png 3x">
+                                    <asp:Placeholder runat="server" ID="phPromoError" Visible="false">
+                                        <span class="input-group-text text-center checkout__promocode checkout__promocode--promocode-error">
+                                            <%= pageData.Promocode %>
                                         </span>
-                                    </asp:panel>
-                                    <asp:panel runat="server" ID="pnPromoCheck" CssClass="input-group-append" Visible="false">
-                                        <span class="input-group-text">
-                                            <img src="/img/check.png"
-                                                srcset="/img/check@2x.png 2x,
-                                                /img/check@3x.png 3x"
-                                                class="check">
+                                        <span class="input-group-text checkout__promocode checkout__promocode--promocode-clean">
+                                            <asp:ImageButton runat="server" ID="ibPromoError" OnClick="ClearPromo_Click" src="/img/closebtn.png"
+                                                srcset="/img/closebtn@2x.png 2x,
+                                                        /img/closebtn@3x.png 3x"
+                                                class="closebtn" tabindex="-1" />
                                         </span>
-                                    </asp:panel>
+                                    </asp:Placeholder>
+                                    <asp:Placeholder runat="server" ID="phPromoCheck" Visible="false">
+                                        <span class="input-group-text text-center checkout__promocode checkout__promocode--promocode-approved">
+                                            <%= pageData.Promocode %>
+                                        </span>
+                                        <span class="input-group-text checkout__promocode checkout__promocode--promocode-clean">
+                                            <asp:ImageButton runat="server" ID="ibPromoCheck" OnClick="ClearPromo_Click" src="/img/closebtn.png"
+                                                srcset="/img/closebtn@2x.png 2x,
+                                                        /img/closebtn@3x.png 3x"
+                                                class="closebtn" tabindex="-1" />
+                                        </span>                                            
+                                    </asp:Placeholder>
+                                    <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="checkout__input checkout__input--promocode" placeholder="Inserir código" aria-label="Inserir código" aria-describedby="basic-addon2" />
                                 </asp:Panel>
                             </ContentTemplate>
                         </asp:UpdatePanel>
