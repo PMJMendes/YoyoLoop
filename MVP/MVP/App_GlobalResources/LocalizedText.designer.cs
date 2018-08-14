@@ -205,6 +205,204 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Continuar.
+        /// </summary>
+        internal static string Controls_Register_btnRegisterContinue_Text {
+            get {
+                return ResourceManager.GetString("Controls_Register_btnRegisterContinue_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quero receber campanhas&lt;br&gt;promocionais da Yoyoloop.
+        /// </summary>
+        internal static string Controls_Register_cbRegisterCampaigns {
+            get {
+                return ResourceManager.GetString("Controls_Register_cbRegisterCampaigns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já tens conta?.
+        /// </summary>
+        internal static string Controls_Register_HaveAccount {
+            get {
+                return ResourceManager.GetString("Controls_Register_HaveAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fazer login.
+        /// </summary>
+        internal static string Controls_Register_LoginLink {
+            get {
+                return ResourceManager.GetString("Controls_Register_LoginLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yoyoloop login.
+        /// </summary>
+        internal static string Controls_Register_MainTitle {
+            get {
+                return ResourceManager.GetString("Controls_Register_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro.
+        /// </summary>
+        internal static string Controls_Register_RegisterMessage_Failure {
+            get {
+                return ResourceManager.GetString("Controls_Register_RegisterMessage_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to or.
+        /// </summary>
+        internal static string Controls_Register_RegisterOr {
+            get {
+                return ResourceManager.GetString("Controls_Register_RegisterOr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email and confirmation email do not match..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir Endereço de email.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The confirm email field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir password.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The confirm password field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterName_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterName_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterName_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterName_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para receberes o teu bilhete,&lt;br&gt;primeiro precisamos dos teus dados.
+        /// </summary>
+        internal static string Controls_Register_WithEmail {
+            get {
+                return ResourceManager.GetString("Controls_Register_WithEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Facebook.
+        /// </summary>
+        internal static string Controls_Register_WithFacebook {
+            get {
+                return ResourceManager.GetString("Controls_Register_WithFacebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Google.
+        /// </summary>
+        internal static string Controls_Register_WithGoogle {
+            get {
+                return ResourceManager.GetString("Controls_Register_WithGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Destinos.
         /// </summary>
         internal static string SiteMaster_NavBar_Destinations {

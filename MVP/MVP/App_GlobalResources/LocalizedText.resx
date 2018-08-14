@@ -177,4 +177,71 @@
   <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
     <value>Registar/Entrar</value>
   </data>
+  <data name="Controls_Register_btnRegisterContinue_Text" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="Controls_Register_cbRegisterCampaigns" xml:space="preserve">
+    <value>Quero receber campanhas&lt;br&gt;promocionais da Yoyoloop</value>
+  </data>
+  <data name="Controls_Register_HaveAccount" xml:space="preserve">
+    <value>Já tens conta?</value>
+  </data>
+  <data name="Controls_Register_LoginLink" xml:space="preserve">
+    <value>Fazer login</value>
+  </data>
+  <data name="Controls_Register_MainTitle" xml:space="preserve">
+    <value>Yoyoloop login</value>
+  </data>
+  <data name="Controls_Register_RegisterMessage_Failure" xml:space="preserve">
+    <value>Ocorreu um erro</value>
+    <comment>O identity devolve erros especificos, mas só estão traduzidos em pt-BR - traduzir é um endeavour</comment>
+  </data>
+  <data name="Controls_Register_RegisterOr" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The email and confirmation email do not match.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_placeholder" xml:space="preserve">
+    <value>Repetir Endereço de email</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The confirm email field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_placeholder" xml:space="preserve">
+    <value>Repetir password</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The confirm password field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Controls_Register_tbRegisterEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterName_placeholder" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Controls_Register_tbRegisterName_Validator_ErrorMessage" xml:space="preserve">
+    <value>The name field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Controls_Register_tbRegisterPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The password field is required.</value>
+  </data>
+  <data name="Controls_Register_WithEmail" xml:space="preserve">
+    <value>Para receberes o teu bilhete,&lt;br&gt;primeiro precisamos dos teus dados</value>
+  </data>
+  <data name="Controls_Register_WithFacebook" xml:space="preserve">
+    <value>com Facebook</value>
+  </data>
+  <data name="Controls_Register_WithGoogle" xml:space="preserve">
+    <value>com Google</value>
+  </data>
 </root>
