@@ -244,4 +244,34 @@
   <data name="Controls_Register_WithGoogle" xml:space="preserve">
     <value>com Google</value>
   </data>
+  <data name="Controls_Forgot_btnForgot_Text" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Controls_Forgot_MainTitle" xml:space="preserve">
+    <value>Yoyoloop login</value>
+  </data>
+  <data name="Controls_Forgot_NoAccount" xml:space="preserve">
+    <value>Ainda não tens conta?</value>
+  </data>
+  <data name="Controls_Forgot_RegisterLink" xml:space="preserve">
+    <value>Registar</value>
+  </data>
+  <data name="Controls_Forgot_ResultMessage_Failure" xml:space="preserve">
+    <value>This user does not exist.</value>
+  </data>
+  <data name="Controls_Forgot_ResultMessage_Success" xml:space="preserve">
+    <value>Please check your email to reset your password.</value>
+  </data>
+  <data name="Controls_Forgot_SubTitle_1" xml:space="preserve">
+    <value>Esqueceste a password?</value>
+  </data>
+  <data name="Controls_Forgot_SubTitle_2" xml:space="preserve">
+    <value>Introduz o teu email</value>
+  </data>
+  <data name="Controls_Forgot_tbForgotEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+  </data>
 </root>

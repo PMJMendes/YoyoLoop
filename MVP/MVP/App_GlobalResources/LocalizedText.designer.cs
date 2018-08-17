@@ -61,6 +61,96 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string Controls_Forgot_btnForgot_Text {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_btnForgot_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yoyoloop login.
+        /// </summary>
+        internal static string Controls_Forgot_MainTitle {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda não tens conta?.
+        /// </summary>
+        internal static string Controls_Forgot_NoAccount {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_NoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registar.
+        /// </summary>
+        internal static string Controls_Forgot_RegisterLink {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_RegisterLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This user does not exist..
+        /// </summary>
+        internal static string Controls_Forgot_ResultMessage_Failure {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_ResultMessage_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please check your email to reset your password..
+        /// </summary>
+        internal static string Controls_Forgot_ResultMessage_Success {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_ResultMessage_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esqueceste a password?.
+        /// </summary>
+        internal static string Controls_Forgot_SubTitle_1 {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_SubTitle_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduz o teu email.
+        /// </summary>
+        internal static string Controls_Forgot_SubTitle_2 {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_SubTitle_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Controls_Forgot_tbForgotEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_tbForgotEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Controls_Forgot_tbForgotEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_tbForgotEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Entrar.
         /// </summary>
         internal static string Controls_Login_btnLogin_Text {

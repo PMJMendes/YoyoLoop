@@ -22,7 +22,7 @@ namespace MVP.Controls
             ApplicationUser user = manager.FindByName(TbForgotEmail.Text);
             if (user == null)
             {
-                FailureText.Text = "This user does not exist.";
+                FailureText.Text = Resources.LocalizedText.Controls_Forgot_ResultMessage_Failure;
                 ErrorMessage.Visible = true;
                 return;
             }
