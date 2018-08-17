@@ -495,6 +495,96 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Destinos.
         /// </summary>
+        internal static string SiteMaster_Footer_Destinos {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Destinos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inglês.
+        /// </summary>
+        internal static string SiteMaster_Footer_Language_English {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Language_English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Português.
+        /// </summary>
+        internal static string SiteMaster_Footer_Language_Portuguese {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Language_Portuguese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops.
+        /// </summary>
+        internal static string SiteMaster_Footer_Loops {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Loops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Politica de privacidade.
+        /// </summary>
+        internal static string SiteMaster_Footer_Privacy {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos e Condiçōes.
+        /// </summary>
+        internal static string SiteMaster_Footer_Terms {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Terms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sobre nós.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_About {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contacto.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_Contact {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ajuda.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_Help {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como funciona.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_HowTo {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_HowTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destinos.
+        /// </summary>
         internal static string SiteMaster_NavBar_Destinations {
             get {
                 return ResourceManager.GetString("SiteMaster_NavBar_Destinations", resourceCulture);

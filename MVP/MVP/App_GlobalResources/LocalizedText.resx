@@ -274,6 +274,36 @@
   <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
   </data>
+  <data name="SiteMaster_Footer_Destinos" xml:space="preserve">
+    <value>Destinos</value>
+  </data>
+  <data name="SiteMaster_Footer_Language_English" xml:space="preserve">
+    <value>Inglês</value>
+  </data>
+  <data name="SiteMaster_Footer_Language_Portuguese" xml:space="preserve">
+    <value>Português</value>
+  </data>
+  <data name="SiteMaster_Footer_Loops" xml:space="preserve">
+    <value>Loops</value>
+  </data>
+  <data name="SiteMaster_Footer_Privacy" xml:space="preserve">
+    <value>Politica de privacidade</value>
+  </data>
+  <data name="SiteMaster_Footer_Terms" xml:space="preserve">
+    <value>Termos e Condiçōes</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_About" xml:space="preserve">
+    <value>Sobre nós</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_Contact" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_HowTo" xml:space="preserve">
+    <value>Como funciona</value>
+  </data>
   <data name="SiteMaster_ProfileMenu_Billing" xml:space="preserve">
     <value>Detalhes de Faturação</value>
   </data>
