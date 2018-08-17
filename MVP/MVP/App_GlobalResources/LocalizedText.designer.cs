@@ -493,6 +493,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Validation of Anti-XSRF token failed..
+        /// </summary>
+        internal static string SiteMaster_Errors_AntiXSRF {
+            get {
+                return ResourceManager.GetString("SiteMaster_Errors_AntiXSRF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Destinos.
         /// </summary>
         internal static string SiteMaster_Footer_Destinos {
