@@ -527,5 +527,41 @@ namespace Resources {
                 return ResourceManager.GetString("SiteMaster_NavBar_RegisterLogin", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de Faturação.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Billing {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Billing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convidar amigos.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Invite {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Logout {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Meu Perfil.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Profile {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Profile", resourceCulture);
+            }
+        }
     }
 }

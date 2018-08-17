@@ -274,4 +274,16 @@
   <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
   </data>
+  <data name="SiteMaster_ProfileMenu_Billing" xml:space="preserve">
+    <value>Detalhes de Faturação</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Invite" xml:space="preserve">
+    <value>Convidar amigos</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Profile" xml:space="preserve">
+    <value>O Meu Perfil</value>
+  </data>
 </root>
