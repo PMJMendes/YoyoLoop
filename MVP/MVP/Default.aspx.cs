@@ -78,7 +78,7 @@ namespace MVP
         protected void btnSuggestSend_Click(object sender, EventArgs e)
         {
             masterService.SendSuggestion(tbSuggestEmail.Text, tbSuggestBody.Text);
-            ApplicationHelpers.ShowMessage(this, "A tua sugestão foi enviada");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.HomePage_SuggestLoop_SuggestSend_Message);
             UpdateSuggestModal();
         }
     }

@@ -274,6 +274,129 @@
   <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
   </data>
+  <data name="HomePage_MainTitle" xml:space="preserve">
+    <value>Vê passar os autocarros e apanha boleia à porta de casa</value>
+  </data>
+  <data name="HomePage_PopularLoops_CantFind" xml:space="preserve">
+    <value>Não encontras a tua cidade?</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Capacity" xml:space="preserve">
+    <value>Capacidade</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Duration" xml:space="preserve">
+    <value>Duracao</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Free" xml:space="preserve">
+    <value>Grátis</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Price" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Price_From" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Seats" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="HomePage_PopularLoops_ReserveLink" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="HomePage_PopularLoops_SeeAll_Link" xml:space="preserve">
+    <value>Ver todos</value>
+  </data>
+  <data name="HomePage_PopularLoops_SuggestLink" xml:space="preserve">
+    <value>Sugere um loop</value>
+  </data>
+  <data name="HomePage_PopularLoops_Title" xml:space="preserve">
+    <value>Loops Populares</value>
+  </data>
+  <data name="HomePage_SubTitle" xml:space="preserve">
+    <value>Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro.</value>
+  </data>
+  <data name="HomePage_SuggestLink" xml:space="preserve">
+    <value>Não encontras a tua cidade?</value>
+  </data>
+  <data name="HomePage_SuggestLoop_btnSuggestSend" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="HomePage_SuggestLoop_MainTitle" xml:space="preserve">
+    <value>Não encontras a tua cidade?</value>
+  </data>
+  <data name="HomePage_SuggestLoop_SuggestSend_Message" xml:space="preserve">
+    <value>A tua sugestão foi enviada</value>
+  </data>
+  <data name="HomePage_SuggestLoop_tbSuggestBody_placeholder" xml:space="preserve">
+    <value>A tua sugestão</value>
+  </data>
+  <data name="HomePage_SuggestLoop_tbSuggestEmail_placeholder" xml:space="preserve">
+    <value>O teu endereço de email</value>
+  </data>
+  <data name="HomePage_SuggestLoop_Text" xml:space="preserve">
+    <value>Queres que a Yoyoloop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!</value>
+  </data>
+  <data name="HomePage_WhereToCard_Location_And" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="HomePage_WhereToCard_Location_From" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="HomePage_WhereToCard_Price_From" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="HomePage_WhereToCard_ReserveLink" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="HomePage_WhereToCard_When_Everyday" xml:space="preserve">
+    <value>Todos os dias</value>
+  </data>
+  <data name="HomePage_WhereToGo" xml:space="preserve">
+    <value>Para onde queres ir?</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_Content" xml:space="preserve">
+    <value>Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante.</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_SubTitle" xml:space="preserve">
+    <value>Menos desgaste,&lt;br&gt;mais na carteira</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_Title" xml:space="preserve">
+    <value>Acessível</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_Content" xml:space="preserve">
+    <value>Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_SubTitle" xml:space="preserve">
+    <value>Pick up e drop off&lt;br&gt;convenientes</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_Title" xml:space="preserve">
+    <value>Conveniente</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_Content" xml:space="preserve">
+    <value>Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada.</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_SubTitle" xml:space="preserve">
+    <value>Lugar marcado,&lt;br&gt;à hora marcada</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_Title" xml:space="preserve">
+    <value>Fiável</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_Content" xml:space="preserve">
+    <value>Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono.</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_SubTitle" xml:space="preserve">
+    <value>Menos carros,&lt;br&gt;mais cidade</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_Title" xml:space="preserve">
+    <value>Sustentável</value>
+  </data>
+  <data name="HomePage_Why_Title" xml:space="preserve">
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
+  </data>
+  <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
+    <value>O único transporte ponto a ponto alternativo aos autocarros,&lt;br&gt; comboios e boleias tradicionais</value>
+  </data>
+  <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
+    <value>O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Leiria e Coimbra sem paragens e a preço de autocarro.</value>
+  </data>
   <data name="SiteMaster_Errors_AntiXSRF" xml:space="preserve">
     <value>Validation of Anti-XSRF token failed.</value>
   </data>

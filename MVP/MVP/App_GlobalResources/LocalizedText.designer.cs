@@ -493,6 +493,375 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vê passar os autocarros e apanha boleia à porta de casa.
+        /// </summary>
+        internal static string HomePage_MainTitle {
+            get {
+                return ResourceManager.GetString("HomePage_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua cidade?.
+        /// </summary>
+        internal static string HomePage_PopularLoops_CantFind {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_CantFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capacidade.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Capacity {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Capacity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duracao.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Duration {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grátis.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Free {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preço.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Price {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desde.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Price_From {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Price_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugares.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Seats {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string HomePage_PopularLoops_ReserveLink {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_ReserveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ver todos.
+        /// </summary>
+        internal static string HomePage_PopularLoops_SeeAll_Link {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_SeeAll_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sugere um loop.
+        /// </summary>
+        internal static string HomePage_PopularLoops_SuggestLink {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_SuggestLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops Populares.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Title {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro..
+        /// </summary>
+        internal static string HomePage_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua cidade?.
+        /// </summary>
+        internal static string HomePage_SuggestLink {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_btnSuggestSend {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_btnSuggestSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua cidade?.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_MainTitle {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua sugestão foi enviada.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_SuggestSend_Message {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_SuggestSend_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua sugestão.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_tbSuggestBody_placeholder {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_tbSuggestBody_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu endereço de email.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_tbSuggestEmail_placeholder {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_tbSuggestEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queres que a Yoyoloop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_Text {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e.
+        /// </summary>
+        internal static string HomePage_WhereToCard_Location_And {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_Location_And", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to De.
+        /// </summary>
+        internal static string HomePage_WhereToCard_Location_From {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_Location_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desde.
+        /// </summary>
+        internal static string HomePage_WhereToCard_Price_From {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_Price_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string HomePage_WhereToCard_ReserveLink {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_ReserveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os dias.
+        /// </summary>
+        internal static string HomePage_WhereToCard_When_Everyday {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_When_Everyday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para onde queres ir?.
+        /// </summary>
+        internal static string HomePage_WhereToGo {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToGo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante..
+        /// </summary>
+        internal static string HomePage_Why_Card_Accessible_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Accessible_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos desgaste,&lt;br&gt;mais na carteira.
+        /// </summary>
+        internal static string HomePage_Why_Card_Accessible_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Accessible_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acessível.
+        /// </summary>
+        internal static string HomePage_Why_Card_Accessible_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Accessible_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
+        /// </summary>
+        internal static string HomePage_Why_Card_Convenient_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Convenient_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick up e drop off&lt;br&gt;convenientes.
+        /// </summary>
+        internal static string HomePage_Why_Card_Convenient_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Convenient_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conveniente.
+        /// </summary>
+        internal static string HomePage_Why_Card_Convenient_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Convenient_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada..
+        /// </summary>
+        internal static string HomePage_Why_Card_Reliable_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Reliable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugar marcado,&lt;br&gt;à hora marcada.
+        /// </summary>
+        internal static string HomePage_Why_Card_Reliable_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Reliable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiável.
+        /// </summary>
+        internal static string HomePage_Why_Card_Reliable_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Reliable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono..
+        /// </summary>
+        internal static string HomePage_Why_Card_Sustainable_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Sustainable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos carros,&lt;br&gt;mais cidade.
+        /// </summary>
+        internal static string HomePage_Why_Card_Sustainable_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Sustainable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sustentável.
+        /// </summary>
+        internal static string HomePage_Why_Card_Sustainable_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Sustainable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        /// </summary>
+        internal static string HomePage_Why_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O único transporte ponto a ponto alternativo aos autocarros,&lt;br&gt; comboios e boleias tradicionais.
+        /// </summary>
+        internal static string HomePage_Yoyoloop_MainDescription {
+            get {
+                return ResourceManager.GetString("HomePage_Yoyoloop_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Leiria e Coimbra sem paragens e a preço de autocarro..
+        /// </summary>
+        internal static string HomePage_Yoyoloop_SubDescription {
+            get {
+                return ResourceManager.GetString("HomePage_Yoyoloop_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Validation of Anti-XSRF token failed..
         /// </summary>
         internal static string SiteMaster_Errors_AntiXSRF {
