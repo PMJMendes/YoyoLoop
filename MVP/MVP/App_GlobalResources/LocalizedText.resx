@@ -484,4 +484,90 @@
   <data name="Account_ResetPassword_tbPassword_Validator_ErrorMessage" xml:space="preserve">
     <value>The password field is required.</value>
   </data>
+  <data name="Calendar_BookingPanel_Booking_ErrorMessage" xml:space="preserve">
+    <value>Sorry but this trip is no longer available.</value>
+  </data>
+  <data name="Calendar_CalendarHeader_btnToday_Text" xml:space="preserve">
+    <value>Hoje</value>
+  </data>
+  <data name="Calendar_CalendarPlaceholder_Text" xml:space="preserve">
+    <value>Escolhe o Destino e Origem da viagem</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup" xml:space="preserve">
+    <value>Ocupação:</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_High" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_Low" xml:space="preserve">
+    <value>Baixa</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_Med" xml:space="preserve">
+    <value>Média</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Fri" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Mon" xml:space="preserve">
+    <value>Seg</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Sat" xml:space="preserve">
+    <value>Sab</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Sun" xml:space="preserve">
+    <value>Dom</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Thu" xml:space="preserve">
+    <value>Qui</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Tue" xml:space="preserve">
+    <value>Ter</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Wed" xml:space="preserve">
+    <value>Qua</value>
+  </data>
+  <data name="Calendar_Controls_CalendarTable_DayInfoText_BLACK" xml:space="preserve">
+    <value>Esgotado</value>
+    <comment>Cuidado com o tamanho, tem que caber no dia</comment>
+  </data>
+  <data name="Calendar_Controls_CalendarTable_DayInfoText_RED" xml:space="preserve">
+    <value>Quase cheio</value>
+    <comment>Cuidado com o tamanho, tem que caber no dia</comment>
+  </data>
+  <data name="Calendar_Controls_Popover_Header_DestinationLabel" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Calendar_Controls_Popover_Header_OriginLabel" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Calendar_Header_APDropdown_Label" xml:space="preserve">
+    <value>Paragem</value>
+  </data>
+  <data name="Calendar_Header_APDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Escolher paragem</value>
+  </data>
+  <data name="Calendar_Header_cbReturnTrip_Label" xml:space="preserve">
+    <value>Ida e volta</value>
+  </data>
+  <data name="Calendar_Header_DestinationDropdown_Label" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Calendar_Header_DestinationDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Escolher destino</value>
+  </data>
+  <data name="Calendar_Header_OriginDropdown_Label" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Calendar_Header_OriginDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Escolher origem</value>
+  </data>
+  <data name="Calendar_Header_SeatsDropdown_Label" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="General_Seat" xml:space="preserve">
+    <value>lugar</value>
+  </data>
+  <data name="General_Seats" xml:space="preserve">
+    <value>lugares</value>
+  </data>
 </root>

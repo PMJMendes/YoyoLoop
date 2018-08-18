@@ -187,6 +187,240 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry but this trip is no longer available..
+        /// </summary>
+        internal static string Calendar_BookingPanel_Booking_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Calendar_BookingPanel_Booking_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hoje.
+        /// </summary>
+        internal static string Calendar_CalendarHeader_btnToday_Text {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarHeader_btnToday_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolhe o Destino e Origem da viagem.
+        /// </summary>
+        internal static string Calendar_CalendarPlaceholder_Text {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarPlaceholder_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocupação:.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alta.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup_High {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup_High", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baixa.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup_Low {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup_Low", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Média.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup_Med {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup_Med", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Fri {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Fri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seg.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Mon {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Mon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sab.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Sat {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Sat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dom.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Sun {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Sun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qui.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Thu {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Thu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ter.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Tue {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Tue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qua.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Wed {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Wed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esgotado.
+        /// </summary>
+        internal static string Calendar_Controls_CalendarTable_DayInfoText_BLACK {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_CalendarTable_DayInfoText_BLACK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quase cheio.
+        /// </summary>
+        internal static string Calendar_Controls_CalendarTable_DayInfoText_RED {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_CalendarTable_DayInfoText_RED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Calendar_Controls_Popover_Header_DestinationLabel {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_Popover_Header_DestinationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Calendar_Controls_Popover_Header_OriginLabel {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_Popover_Header_OriginLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragem.
+        /// </summary>
+        internal static string Calendar_Header_APDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_APDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolher paragem.
+        /// </summary>
+        internal static string Calendar_Header_APDropdown_SelectionPrompt {
+            get {
+                return ResourceManager.GetString("Calendar_Header_APDropdown_SelectionPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ida e volta.
+        /// </summary>
+        internal static string Calendar_Header_cbReturnTrip_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_cbReturnTrip_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Calendar_Header_DestinationDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_DestinationDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolher destino.
+        /// </summary>
+        internal static string Calendar_Header_DestinationDropdown_SelectionPrompt {
+            get {
+                return ResourceManager.GetString("Calendar_Header_DestinationDropdown_SelectionPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Calendar_Header_OriginDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_OriginDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolher origem.
+        /// </summary>
+        internal static string Calendar_Header_OriginDropdown_SelectionPrompt {
+            get {
+                return ResourceManager.GetString("Calendar_Header_OriginDropdown_SelectionPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugares.
+        /// </summary>
+        internal static string Calendar_Header_SeatsDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_SeatsDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar.
         /// </summary>
         internal static string Controls_Forgot_btnForgot_Text {
@@ -615,6 +849,24 @@ namespace Resources {
         internal static string Controls_Register_WithGoogle {
             get {
                 return ResourceManager.GetString("Controls_Register_WithGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lugar.
+        /// </summary>
+        internal static string General_Seat {
+            get {
+                return ResourceManager.GetString("General_Seat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lugares.
+        /// </summary>
+        internal static string General_Seats {
+            get {
+                return ResourceManager.GetString("General_Seats", resourceCulture);
             }
         }
         
