@@ -442,4 +442,13 @@
   <data name="SiteMaster_ProfileMenu_Profile" xml:space="preserve">
     <value>O Meu Perfil</value>
   </data>
+  <data name="Account_ConfirmEmail_Error" xml:space="preserve">
+    <value>An error has occurred.</value>
+  </data>
+  <data name="Account_ConfirmEmail_MainTitle" xml:space="preserve">
+    <value>Obrigado por confirmares o teu email.</value>
+  </data>
+  <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
+    <value>Vais ser redirecionado para o teu bilhete dentro de segundos.</value>
+  </data>
 </root>

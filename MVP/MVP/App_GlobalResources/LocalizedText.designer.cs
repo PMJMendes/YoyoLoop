@@ -61,6 +61,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error has occurred..
+        /// </summary>
+        internal static string Account_ConfirmEmail_Error {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado por confirmares o teu email..
+        /// </summary>
+        internal static string Account_ConfirmEmail_MainTitle {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vais ser redirecionado para o teu bilhete dentro de segundos..
+        /// </summary>
+        internal static string Account_ConfirmEmail_TicketRedirect {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_TicketRedirect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar.
         /// </summary>
         internal static string Controls_Forgot_btnForgot_Text {
