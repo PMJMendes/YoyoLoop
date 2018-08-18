@@ -451,4 +451,37 @@
   <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
     <value>Vais ser redirecionado para o teu bilhete dentro de segundos.</value>
   </data>
+  <data name="Account_ResetPassword_btnReset_Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Account_ResetPassword_ErrorMessage" xml:space="preserve">
+    <value>An error has occurred.</value>
+  </data>
+  <data name="Account_ResetPassword_MainTitle" xml:space="preserve">
+    <value>Enter your new password</value>
+  </data>
+  <data name="Account_ResetPassword_SuccessMessage" xml:space="preserve">
+    <value>Your password was changed sucessfully.</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_placeholder" xml:space="preserve">
+    <value>Repetir password</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The confirm password field is required.</value>
+  </data>
+  <data name="Account_ResetPassword_tbEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Account_ResetPassword_tbEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+  </data>
+  <data name="Account_ResetPassword_tbPassword_placeholder" xml:space="preserve">
+    <value>Nova password</value>
+  </data>
+  <data name="Account_ResetPassword_tbPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The password field is required.</value>
+  </data>
 </root>

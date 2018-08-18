@@ -88,6 +88,105 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Account_ResetPassword_btnReset_Text {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_btnReset_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error has occurred..
+        /// </summary>
+        internal static string Account_ResetPassword_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your new password.
+        /// </summary>
+        internal static string Account_ResetPassword_MainTitle {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password was changed sucessfully..
+        /// </summary>
+        internal static string Account_ResetPassword_SuccessMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_SuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        /// </summary>
+        internal static string Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir password.
+        /// </summary>
+        internal static string Account_ResetPassword_tbConfirmPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbConfirmPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The confirm password field is required..
+        /// </summary>
+        internal static string Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Account_ResetPassword_tbEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Account_ResetPassword_tbEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova password.
+        /// </summary>
+        internal static string Account_ResetPassword_tbPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password field is required..
+        /// </summary>
+        internal static string Account_ResetPassword_tbPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar.
         /// </summary>
         internal static string Controls_Forgot_btnForgot_Text {

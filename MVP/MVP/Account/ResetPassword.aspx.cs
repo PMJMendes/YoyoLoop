@@ -56,7 +56,7 @@ namespace MVP.Account
             FormPanel.Visible = false;
             errorPanel.Visible = true;
             successPanel.Visible = false;
-            ErrorMessage.Text = "An error has occurred.";
+            ErrorMessage.Text = Resources.LocalizedText.Account_ResetPassword_ErrorMessage;
         }
     }
 }
