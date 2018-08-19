@@ -421,6 +421,231 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Guardar detalhes de facturação.
+        /// </summary>
+        internal static string Checkout_Billing_cbSaveDetails_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_cbSaveDetails_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morada.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceAddress_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceAddress_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cidade.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceCity_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceCity_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome da Empresa.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceCompany_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceCompany_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceName_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NIF.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceNIF_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceNIF_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código postal.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceZIP_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceZIP_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de facturação.
+        /// </summary>
+        internal static string Checkout_Billing_Title {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This booking has expired.
+        /// </summary>
+        internal static string Checkout_BookingExpired_Message {
+            get {
+                return ResourceManager.GetString("Checkout_BookingExpired_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar novamente.
+        /// </summary>
+        internal static string Checkout_BookingExpired_RedirectLink_Text {
+            get {
+                return ResourceManager.GetString("Checkout_BookingExpired_RedirectLink_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagar.
+        /// </summary>
+        internal static string Checkout_btnPay_Text {
+            get {
+                return ResourceManager.GetString("Checkout_btnPay_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Método de pagamento.
+        /// </summary>
+        internal static string Checkout_ddlCardMenu_Label {
+            get {
+                return ResourceManager.GetString("Checkout_ddlCardMenu_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagar e Confirmar.
+        /// </summary>
+        internal static string Checkout_MainTitle {
+            get {
+                return ResourceManager.GetString("Checkout_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar dados do cartão.
+        /// </summary>
+        internal static string Checkout_Payform_cbSaveCard_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Payform_cbSaveCard_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome do titular.
+        /// </summary>
+        internal static string Checkout_Payform_tbCardHolderName_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Payform_tbCardHolderName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número do cartão.
+        /// </summary>
+        internal static string Checkout_Payform_tbCardNumber_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Payform_tbCardNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tem de aceitar os Termos &amp; condiçōes.
+        /// </summary>
+        internal static string Checkout_Policy_cbTerms_Error {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_cbTerms_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aceito os.
+        /// </summary>
+        internal static string Checkout_Policy_cbTerms_Label1 {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_cbTerms_Label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos &amp; condiçōes.
+        /// </summary>
+        internal static string Checkout_Policy_cbTerms_Label2 {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_cbTerms_Label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Política de cancelamento.
+        /// </summary>
+        internal static string Checkout_Policy_SubTitle {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podes cancelar a tua viagem até 48 horas antes da hora de partida. O valor que pagaste será transformado em crédito e podes encontrá-lo tua conta para utilizar em futuras viagens..
+        /// </summary>
+        internal static string Checkout_Policy_Text {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código promocional.
+        /// </summary>
+        internal static string Checkout_Promocode_tbPromo_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Promocode_tbPromo_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserir código.
+        /// </summary>
+        internal static string Checkout_Promocode_tbPromo_placeholder {
+            get {
+                return ResourceManager.GetString("Checkout_Promocode_tbPromo_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Booking no longer valid.
+        /// </summary>
+        internal static string Checkout_Service_ProcessPayment_BookingErrorMessage {
+            get {
+                return ResourceManager.GetString("Checkout_Service_ProcessPayment_BookingErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagamento.
+        /// </summary>
+        internal static string Checkout_SubTitle {
+            get {
+                return ResourceManager.GetString("Checkout_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar.
         /// </summary>
         internal static string Controls_Forgot_btnForgot_Text {
@@ -853,6 +1078,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Promocode.
+        /// </summary>
+        internal static string General_Promocode {
+            get {
+                return ResourceManager.GetString("General_Promocode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to lugar.
         /// </summary>
         internal static string General_Seat {
@@ -867,6 +1101,42 @@ namespace Resources {
         internal static string General_Seats {
             get {
                 return ResourceManager.GetString("General_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cartão.
+        /// </summary>
+        internal static string General_StripeCard_Card {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termina em.
+        /// </summary>
+        internal static string General_StripeCard_Card_CardNumber_EndsIn {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card_CardNumber_EndsIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to terminado em.
+        /// </summary>
+        internal static string General_StripeCard_Card_EndingIn {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card_EndingIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo cartão de crédito.
+        /// </summary>
+        internal static string General_StripeCard_Card_New {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card_New", resourceCulture);
             }
         }
         
@@ -1407,6 +1677,105 @@ namespace Resources {
         internal static string SiteMaster_ProfileMenu_Profile {
             get {
                 return ResourceManager.GetString("SiteMaster_ProfileMenu_Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card was declined..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_card_declined {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_card_declined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card has expired..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_expired_card {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_expired_card", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s security code is incorrect..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_incorrect_cvc {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_incorrect_cvc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card number is incorrect..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_incorrect_number {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_incorrect_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s zip code failed validation..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_incorrect_zip {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_incorrect_zip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s security code is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_cvc {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_cvc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s expiration month is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_expiry_month {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_expiry_month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s expiration year is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_expiry_year {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_expiry_year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card number is not a valid credit card number..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_number {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao validar o método de pagamento.
+        /// </summary>
+        internal static string Stripe_ErrorHandling_PaymentMethodValidation_Generic {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_PaymentMethodValidation_Generic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao efectuar o pagamento.
+        /// </summary>
+        internal static string Stripe_ErrorHandling_ProcessPayment_Generic {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_ProcessPayment_Generic", resourceCulture);
             }
         }
     }

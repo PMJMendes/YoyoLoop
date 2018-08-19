@@ -21,7 +21,12 @@ function stripeResponseHandler(status, response) {
     var $form = $('#MasterForm');
     if (response.error) {
         $.unblockUI();
-        $('#hfStripeError').val(response.error.message);
+        if (response.error.type === 'card_error') {
+            $('#hfStripeError').val(response.error.code);
+        }
+        else {
+            $('#hfStripeError').val('generic_error');
+        }
         __doPostBack('upCheckoutPaymentForm', '');
     }
     else {

@@ -16,6 +16,8 @@ using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
+using System.Globalization;
+using MVP.Models.Helpers;
 
 namespace MVP.Services
 {
@@ -124,8 +126,8 @@ namespace MVP.Services
             {
                 result.Add(new BookingPanelDTO.PriceItem
                 {
-                    Description = "Promocode",
-                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C"),
+                    Description = Resources.LocalizedText.General_Promocode,
+                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultUICulture()),
                     Type = BookingPanelDTO.PriceItemType.DISCOUNT
                 });
             }
@@ -148,7 +150,7 @@ namespace MVP.Services
                     state.StripeCardList.Add(new ListItem
                     {
                         Value = defaultcard.Id,
-                        Text = "Cartão " + defaultcard.Brand + " terminado em " + defaultcard.Last4
+                        Text = Resources.LocalizedText.General_StripeCard_Card + " " + defaultcard.Brand + " " + Resources.LocalizedText.General_StripeCard_Card_EndingIn + " " + defaultcard.Last4
                     });
                 }
 
@@ -157,7 +159,7 @@ namespace MVP.Services
                     state.StripeCardList.Add(new ListItem
                     {
                         Value = card.Id,
-                        Text = "Cartão " + card.Brand + " terminado em " + card.Last4
+                        Text = Resources.LocalizedText.General_StripeCard_Card + " " + card.Brand + " " + Resources.LocalizedText.General_StripeCard_Card_EndingIn + " " + card.Last4
                     });
                 }
             }
@@ -165,7 +167,7 @@ namespace MVP.Services
             state.StripeCardList.Add(new ListItem
             {
                 Value = "new",
-                Text = "Novo cartão de crédito"
+                Text = Resources.LocalizedText.General_StripeCard_Card_New
             });
 
             return state;
@@ -210,7 +212,7 @@ namespace MVP.Services
                     var booking = model.Booking.Include(b => b.Trip).SingleOrDefault(b => b.BookingId == state.BookingId && b.Status == BookingStatus.PENDING && b.Trip.StartTime > threshold);
                     if (booking == null)
                     {
-                        error = "Booking no longer valid.";
+                        error = Resources.LocalizedText.Checkout_Service_ProcessPayment_BookingErrorMessage;
                         return false;
                     }
                 }
@@ -239,9 +241,11 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-
-                    // Handle error
-                    error = stripeError.ErrorType;
+                    error = StripeErrorHandler(stripeError.Code);
+                    if(string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_ProcessPayment_Generic;
+                    }
                     return false;
                 }
 
@@ -253,6 +257,47 @@ namespace MVP.Services
             }
         }
 
+        public string StripeErrorHandler(string error)
+        {
+            string result;
+
+            switch (error)
+            {
+                case "incorrect_number":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_number;
+                    break;
+                case "invalid_number":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_number;
+                    break;
+                case "invalid_expiry_month":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_expiry_month;
+                    break;
+                case "invalid_expiry_year":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_expiry_year;
+                    break;
+                case "invalid_cvc":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_cvc;
+                    break;
+                case "expired_card":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_expired_card;
+                    break;
+                case "incorrect_cvc":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_cvc;
+                    break;
+                case "incorrect_zip":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_zip;
+                    break;
+                case "card_declined":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_card_declined;
+                    break;
+                default:
+                    result = string.Empty;
+                    break;
+            }
+
+            return result;
+        }
+
         public bool AddCard(CheckoutDTO state, string stripeToken, out string error)
         {
             if (string.IsNullOrEmpty(state.StripeCustomerId))
@@ -260,7 +305,7 @@ namespace MVP.Services
                 var customerOptions = new StripeCustomerCreateOptions()
                 {
                     SourceToken = stripeToken,
-                    Description = state.UserContactName + "(" + state.UserEmail + ")",
+                    Description = state.UserContactName + " (" + state.UserEmail + ")",
                     Email = state.UserEmail
                 };
 
@@ -282,11 +327,15 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = stripeError.ErrorType;
+                    error = StripeErrorHandler(stripeError.Code);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
                     return false;
                 }
 
-                if(ProcessPayment(state, state.StripeCustomerDefaultSourceId, out error))
+                if (ProcessPayment(state, state.StripeCustomerDefaultSourceId, out error))
                 {
                     return true;
                 }
@@ -310,7 +359,11 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = stripeError.ErrorType;
+                    error = StripeErrorHandler(stripeError.Code);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
                     return false;
                 }
 
@@ -444,20 +497,22 @@ namespace MVP.Services
 
         public void SendInvoice(CheckoutDTO state)
         {
+            // THIS IS AN INTERNAL EMAIL - NOT TRANSLATED AT THIS POINT BUT WE MIGHT WANT TO IN THE FUTURE
+
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = false;
                 msg.Subject = "[YOYOLOOP] INVOICE: " + state.BookingId.ToString().Substring(0, 8);
 
-                string body = "Data: " + DateTime.Now.ToString("R");
+                string body = "Data: " + DateTime.Now.ToString("R", ApplicationHelpers.DefaultUICulture());
                 body += "\r\nBooking ID: " + state.BookingId.ToString();
                 body += "\r\nUser: " + state.UserEmail;
                 body += "\r\n";
                 body += "\r\nDETALHES DA VIAGEM:";
                 body += "\r\nOrigem: " + state.StartRegionName + " (" + state.StartAPName + ")";
                 body += "\r\nDestino: " + state.EndRegionName + " (" + state.EndAPName + ")";
-                body += "\r\nHora: " + state.StartTime.ToString("R");
+                body += "\r\nHora: " + state.StartTime.ToString("R", ApplicationHelpers.DefaultUICulture());
                 body += "\r\nLugares: " + state.Seats.ToString();
                 body += "\r\n";
                 body += "\r\nDETALHES DO PAGAMENTO:";

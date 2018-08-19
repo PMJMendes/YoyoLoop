@@ -13,6 +13,33 @@ namespace MVP.Checkout {
     public partial class Checkout {
         
         /// <summary>
+        /// phError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phError;
+        
+        /// <summary>
+        /// lkErrorRedirect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkErrorRedirect;
+        
+        /// <summary>
+        /// phCheckout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phCheckout;
+        
+        /// <summary>
         /// upCheckoutPaymentForm control.
         /// </summary>
         /// <remarks>
