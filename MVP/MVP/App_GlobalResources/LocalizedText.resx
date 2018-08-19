@@ -693,4 +693,142 @@
   <data name="Checkout_BookingExpired_RedirectLink_Text" xml:space="preserve">
     <value>Reservar novamente</value>
   </data>
+  <data name="Confirm_Invite_btnShare_Text" xml:space="preserve">
+    <value>share</value>
+  </data>
+  <data name="Confirm_Invite_Description" xml:space="preserve">
+    <value>Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro.</value>
+  </data>
+  <data name="Confirm_Invite_Title" xml:space="preserve">
+    <value>Convida mais amigos e viaja por apenas 3€</value>
+  </data>
+  <data name="Confirm_InvoiceSend" xml:space="preserve">
+    <value>Vamos enviar a tua fatura para</value>
+  </data>
+  <data name="Confirm_MainTitle" xml:space="preserve">
+    <value>A tua viagem está confirmada</value>
+  </data>
+  <data name="Confirm_MyTickets" xml:space="preserve">
+    <value>Os teus Bilhetes</value>
+  </data>
+  <data name="Confirm_MyTickets_AddToCalendar" xml:space="preserve">
+    <value>Adicionar ao calendário</value>
+  </data>
+  <data name="Confirm_MyTickets_btnDownload_Text" xml:space="preserve">
+    <value>download</value>
+  </data>
+  <data name="Confirm_MyTickets_btnEmail_Text" xml:space="preserve">
+    <value>Receber por email</value>
+  </data>
+  <data name="Confirm_MyTickets_btnSMS_Text" xml:space="preserve">
+    <value>Receber por SMS</value>
+  </data>
+  <data name="Confirm_SubTitle" xml:space="preserve">
+    <value>Encontra o teu bilhete em</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_btnResendLink_Text" xml:space="preserve">
+    <value>Re-enviar Link</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Problems" xml:space="preserve">
+    <value>Em caso de problemas,</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Problems_ContactLink" xml:space="preserve">
+    <value>contacta-nos</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Text" xml:space="preserve">
+    <value>Para teres acesso ao teu bilhete, confirma por favor o teu email.&lt;br&gt;Enviámos link de acesso ao teu bilhete para</value>
+  </data>
+  <data name="Controls_Ticket_Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Controls_Ticket_Going" xml:space="preserve">
+    <value>IDA</value>
+  </data>
+  <data name="Controls_Ticket_Origin" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Controls_Ticket_Return" xml:space="preserve">
+    <value>VOLTA</value>
+  </data>
+  <data name="Controls_Ticket_Ticket" xml:space="preserve">
+    <value>BILHETE</value>
+  </data>
+  <data name="Controls_Ticket_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Controls_Ticket_YourTrip" xml:space="preserve">
+    <value>A tua viagem</value>
+  </data>
+  <data name="Confirm_MyTickets_Calendar_ShowMessage_Text" xml:space="preserve">
+    <value>Infelizmente o serviço de Calendário não se encontra disponível</value>
+  </data>
+  <data name="Confirm_MyTickets_Email_ShowMessage_Text1" xml:space="preserve">
+    <value>Enviámos um email para</value>
+  </data>
+  <data name="Confirm_MyTickets_Email_ShowMessage_Text2" xml:space="preserve">
+    <value>com os detalhes do teu bilhete.</value>
+  </data>
+  <data name="Confirm_MyTickets_SMS_ShowMessage_Text" xml:space="preserve">
+    <value>Infelizmente o serviço de SMS não se encontra disponível</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_AccessTicket" xml:space="preserve">
+    <value>Podes aceder ao teu bilhete em qualquer altura</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_FinalCost" xml:space="preserve">
+    <value>Preço Final</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
+    <value>Convida amigos e viaja a 3€</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Seats" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
+    <value>Obrigado pela tua preferência!</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
+    <value>Código do bilhete</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_TripConfirmed" xml:space="preserve">
+    <value>A tua viagem está confirmada.</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_YoyoloopTeam" xml:space="preserve">
+    <value>A equipa Yoyoloop.</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_HereLink" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject1" xml:space="preserve">
+    <value>A tua viagem de</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject2" xml:space="preserve">
+    <value>para</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject3" xml:space="preserve">
+    <value>está confirmada</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer" xml:space="preserve">
+    <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail" xml:space="preserve">
+    <value>Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy" xml:space="preserve">
+    <value>Porque razão tenho de confirmar o meu email?</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1" xml:space="preserve">
+    <value>Enviámos um email para</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2" xml:space="preserve">
+    <value>com o link para poderes confirmar o teu email.</value>
+  </data>
 </root>

@@ -25,7 +25,7 @@ namespace MVP.Models.Helpers
         {
             Configuration config = WebConfigurationManager.OpenWebConfiguration("/");
             GlobalizationSection global = (GlobalizationSection)config.GetSection("system.web/globalization");
-            CultureInfo result = CultureInfo.CreateSpecificCulture(global.UICulture);
+            CultureInfo result = CultureInfo.CreateSpecificCulture(global.Culture);
 
             return result;
         }

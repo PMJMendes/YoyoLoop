@@ -7,16 +7,16 @@
 
             <!-- CONFIRMED EMAIL -->
             <div class="<%= pageData.UserEmailConfirmed ? "container-fluid" : "hide" %>">
-                <h1 class="travel__main-title">A tua viagem está confirmada</h1>
+                <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MainTitle%>"/></h1>
 
                 <div class="travel__sub-title mb-5">
-                    Encontra o teu bilhete em  <a OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips" class="travel__sub-title--red travel__sub-title--link">As Minhas Viagens</a>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_SubTitle%>"/>  <a OnClick="javascript:$.blockUI()" href="/MyTrips/MyTrips" class="travel__sub-title--red travel__sub-title--link"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_NavBar_MyTrips%>"/></a>
                 </div>
 
                 <!-- START CARD -->
                 <div class="row ml-0 pl-0 travel__card">
                     <div class="col-md-8 pr-0 travel__card__first">
-                        <div class="travel__card__first__your-trip mb-3">A tua viagem</div>
+                        <div class="travel__card__first__your-trip mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_YourTrip%>"/></div>
                         <div class="row">
                             <div class="col-md-1 d-flex align-items-center flex-column travel__card__first__path">
                                 <div class="white-circle"></div>
@@ -25,14 +25,14 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="travel__card__first__from">
-                                    <div class="travel__card__first__point">Origem</div>
+                                    <div class="travel__card__first__point"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Origin%>"/></div>
                                     <div class="travel__card__first__city"><%= pageData.StartRegionName.ToUpper() %></div>
                                     <div class="travel__card__first__area"><%= pageData.StartAPName %></div>
                                     <div class="travel__card__first__location"><%= "<br>" %></div>
                                 </div>
 
                                 <div class="travel__card__first__to mt-3">
-                                    <div class="travel__card__first__point">Destino</div>
+                                    <div class="travel__card__first__point"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Destination%>"/></div>
                                     <div class="travel__card__first__city"><%= pageData.EndRegionName.ToUpper() %></div>
                                     <div class="travel__card__first__area"><%= pageData.EndAPName %></div>
                                     <div class="travel__card__first__location"><%= "<br>" %></div>
@@ -45,7 +45,7 @@
                                         <%= pageData.StartTime.ToString("dd MMMM").ToUpper() %>, <%= pageData.StartTime.ToString("ddd").ToUpper() %>
                                     </div>
                                     <div class="travel__card__first__text">
-                                        IDA
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Going%>"/>
                                     </div>
                                 </div>
 
@@ -58,7 +58,7 @@
 
                                 <div class="travel__card__first__text">
                                     <img class="mr-2 cart" src="/img/cart-black.png" srcset="/img/cart-black@2x.png 2x, /img/cart-black@3x.png 3x">
-                                    <%= pageData.Cost.ToString("C") %>
+                                    <%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultUICulture()) %>
                                 </div>
 
                                 <!-- HIDDEN FOR NOW -->
@@ -69,7 +69,7 @@
                                             15 MARÇO,  QUARTA
                                         </div>
                                         <div class="travel__card__first__text">
-                                            VOLTA
+                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Return%>"/>
                                         </div>  
                                     </div>
 
@@ -93,40 +93,40 @@
                     <div class="col-md-4 pl-0 travel__card__last text-right">
                         <img class="travel__card__separator" src="/img/path.png" srcset="/img/path@2x.png 2x, /img/path@3x.png 3x">
 
-                        <p class="travel__card__last__gray-text">BILHETE</p>
+                        <p class="travel__card__last__gray-text"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Ticket%>"/></p>
                         <p class="travel__card__last__ticket-number"><%= pageData.TicketCode.ToUpper() %></p>
                         <p class="travel__card__last__users">
-                            <img src="/img/users-black.png" srcset="/img/users-black@2x.png 2x, /img/users-black@3x.png 3x"> <%= pageData.Seats.ToString() %> <%= pageData.Seats == 1 ? "Lugar" : "Lugares" %>
+                            <img src="/img/users-black.png" srcset="/img/users-black@2x.png 2x, /img/users-black@3x.png 3x"> <%= pageData.Seats.ToString() %> <%= pageData.Seats == 1 ? Resources.LocalizedText.General_Seat : Resources.LocalizedText.General_Seats %>
                         </p>
-                        <p class="travel__card__last__gray-text">TOTAL</p>
-                        <p class="travel__card__last__price"><%= pageData.Cost.ToString("C") %></p>
+                        <p class="travel__card__last__gray-text"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Total%>"/></p>
+                        <p class="travel__card__last__price"><%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultUICulture()) %></p>
                     </div>
                 </div>
                 <!-- END CARD -->
 
                 <div class="d-flex justify-content-between align-items-center mt-3">
-                    <div class="travel__copy-bold">Vamos enviar a tua fatura para <span style="color: #ff5f6d;"><%= pageData.UserEmail %></span></div>
+                    <div class="travel__copy-bold"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_InvoiceSend%>"/> <span style="color: #ff5f6d;"><%= pageData.UserEmail %></span></div>
                 </div>
 
                 <div class="travel__separator mt-5 mb-5"></div>
 
-                <div class="travel__my-tickets">Os teus Bilhetes</div>
+                <div class="travel__my-tickets"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets%>"/></div>
 
                 <div class="row travel__get-tickets pt-5 pb-5">
                     <div class="col-md-3 pb-3 d-flex justify-content-center">
-                        <asp:LinkButton runat="server" ID="btnEmail" OnClick="btnEmail_Click" CssClass="travel__white-btn text-uppercase">Receber por email</asp:LinkButton>
+                        <asp:LinkButton runat="server" ID="btnEmail" OnClick="btnEmail_Click" CssClass="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnEmail_Text%>"/></asp:LinkButton>
                     </div>
                     <div class="col-md-3 pb-3 d-flex justify-content-center">
-                        <asp:LinkButton runat="server" ID="btnSMS" OnClick="btnSMS_Click" CssClass="travel__white-btn text-uppercase">Receber por SMS</asp:LinkButton>
+                        <asp:LinkButton runat="server" ID="btnSMS" OnClick="btnSMS_Click" CssClass="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnSMS_Text%>"/></asp:LinkButton>
                     </div>
                     <div class="col-md-3 pb-3 d-flex justify-content-center">
-                        <a href="/Ticket/Ticket?Id=<%= pageData.BookingId.ToString() %>" target="_blank" class="travel__white-btn text-uppercase">download</a>
+                        <a href="/Ticket/Ticket?Id=<%= pageData.BookingId.ToString() %>" target="_blank" class="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnDownload_Text%>"/></a>
                     </div>
                     <div class="col-md-3 pb-3 d-flex justify-content-center align-items-center">
-                        <a href="#" class="travel__card__first__text text-uppercase">
+                        <asp:LinkButton runat="server" ID="btnCalendar" OnClick="btnCalendar_Click" class="travel__card__first__text text-uppercase">
                             <img class="mr-2" src="/img/calendar-black.png" srcset="/img/calendar-black@2x.png 2x, /img/calendar-black@3x.png 3x">
-                            Adicionar ao calendário
-                        </a>
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_AddToCalendar%>"/>
+                        </asp:LinkButton>
                     </div>
                 </div>
             </div>
@@ -134,22 +134,21 @@
 
             <!-- UNCONFIRMED EMAIL -->
             <div class="<%= pageData.UserEmailConfirmed ? "hide" : "container-fluid" %>">
-                <h1 class="travel__main-title">A tua viagem está confirmada</h1>
+                <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MainTitle%>"/></h1>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <div class="travel__copy-bold">
-                        Para teres acesso ao teu bilhete, confirma por favor o teu email.<br />
-                        Enviámos link de acesso ao teu bilhete para <span style="color: #ff5f6d;"><%= pageData.UserEmail %></span>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_UnconfirmedEmail_Text%>"/> <span style="color: #ff5f6d;"><%= pageData.UserEmail %></span>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <div class="travel__copy-bold">
-                        Em caso de problemas, <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" style="color: #ff5f6d;">contacta-nos</a>.
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_UnconfirmedEmail_Problems%>"/> <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" style="color: #ff5f6d;"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_UnconfirmedEmail_Problems_ContactLink%>"/></a>.
                     </div>
                 </div>
                 <div class="travel__my-tickets">
                     <div class="row travel__get-tickets pt-5 pb-5">
                         <div class="col-md-3 pb-3 d-flex justify-content-center">
-                            <asp:LinkButton runat="server" ID="btnConfirmEmail" OnClick="btnConfirmEmail_Click" CssClass="travel__white-btn text-uppercase">Re-enviar Link</asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="btnConfirmEmail" OnClick="btnConfirmEmail_Click" CssClass="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_UnconfirmedEmail_btnResendLink_Text%>"/></asp:LinkButton>
                         </div>
                     </div>
                 </div>
@@ -218,7 +217,7 @@
                             srcset="/img/share@2x.png 2x,
                             /img/share@3x.png 3x"
                             class="mr-2">
-                        share
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_Invite_btnShare_Text%>"/>
                     </button>
                 </div>
             </div>
@@ -226,9 +225,7 @@
             <div class="row pt-5 pb-5">
                 <div class="col-md-12 text-center">
                     <p class="travel__invite-friends--description">
-                        Reserva o teu lugar num transfer de sete lugares conduzido
-                        por um motorista profissional e <br> aproveita uma viagem sem paragens, 
-                        com wifi a bordo e a preço de autocarro.
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_Invite_Description%>"/>
                     </p>
                 </div>
             </div>

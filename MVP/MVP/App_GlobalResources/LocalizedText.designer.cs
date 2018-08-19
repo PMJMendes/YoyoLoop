@@ -646,6 +646,357 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to share.
+        /// </summary>
+        internal static string Confirm_Invite_btnShare_Text {
+            get {
+                return ResourceManager.GetString("Confirm_Invite_btnShare_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro..
+        /// </summary>
+        internal static string Confirm_Invite_Description {
+            get {
+                return ResourceManager.GetString("Confirm_Invite_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convida mais amigos e viaja por apenas 3€.
+        /// </summary>
+        internal static string Confirm_Invite_Title {
+            get {
+                return ResourceManager.GetString("Confirm_Invite_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vamos enviar a tua fatura para.
+        /// </summary>
+        internal static string Confirm_InvoiceSend {
+            get {
+                return ResourceManager.GetString("Confirm_InvoiceSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem está confirmada.
+        /// </summary>
+        internal static string Confirm_MainTitle {
+            get {
+                return ResourceManager.GetString("Confirm_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus Bilhetes.
+        /// </summary>
+        internal static string Confirm_MyTickets {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adicionar ao calendário.
+        /// </summary>
+        internal static string Confirm_MyTickets_AddToCalendar {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_AddToCalendar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to download.
+        /// </summary>
+        internal static string Confirm_MyTickets_btnDownload_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_btnDownload_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receber por email.
+        /// </summary>
+        internal static string Confirm_MyTickets_btnEmail_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_btnEmail_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receber por SMS.
+        /// </summary>
+        internal static string Confirm_MyTickets_btnSMS_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_btnSMS_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infelizmente o serviço de Calendário não se encontra disponível.
+        /// </summary>
+        internal static string Confirm_MyTickets_Calendar_ShowMessage_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_Calendar_ShowMessage_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviámos um email para.
+        /// </summary>
+        internal static string Confirm_MyTickets_Email_ShowMessage_Text1 {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_Email_ShowMessage_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com os detalhes do teu bilhete..
+        /// </summary>
+        internal static string Confirm_MyTickets_Email_ShowMessage_Text2 {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_Email_ShowMessage_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infelizmente o serviço de SMS não se encontra disponível.
+        /// </summary>
+        internal static string Confirm_MyTickets_SMS_ShowMessage_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_SMS_ShowMessage_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podes aceder ao teu bilhete em qualquer altura.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_AccessTicket {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_AccessTicket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Date {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Destination {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preço Final.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_FinalCost {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_FinalCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convida amigos e viaja a 3€.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Invite {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Origin {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugares.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Seats {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_ThankYou {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_ThankYou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código do bilhete.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_TicketCode {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_TicketCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem está confirmada..
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_TripConfirmed {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_TripConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_YoyoloopTeam {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_YoyoloopTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aqui.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_HereLink {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_HereLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem de.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Subject1 {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Subject1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to para.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Subject2 {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Subject2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to está confirmada.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Subject3 {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Subject3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email..
+        /// </summary>
+        internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando.
+        /// </summary>
+        internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porque razão tenho de confirmar o meu email?.
+        /// </summary>
+        internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encontra o teu bilhete em.
+        /// </summary>
+        internal static string Confirm_SubTitle {
+            get {
+                return ResourceManager.GetString("Confirm_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re-enviar Link.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_btnResendLink_Text {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_btnResendLink_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Em caso de problemas,.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_Problems {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_Problems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to contacta-nos.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_Problems_ContactLink {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_Problems_ContactLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviámos um email para.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1 {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com o link para poderes confirmar o teu email..
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2 {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para teres acesso ao teu bilhete, confirma por favor o teu email.&lt;br&gt;Enviámos link de acesso ao teu bilhete para.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_Text {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar.
         /// </summary>
         internal static string Controls_Forgot_btnForgot_Text {
@@ -1074,6 +1425,69 @@ namespace Resources {
         internal static string Controls_Register_WithGoogle {
             get {
                 return ResourceManager.GetString("Controls_Register_WithGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Controls_Ticket_Destination {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IDA.
+        /// </summary>
+        internal static string Controls_Ticket_Going {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Going", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Controls_Ticket_Origin {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VOLTA.
+        /// </summary>
+        internal static string Controls_Ticket_Return {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BILHETE.
+        /// </summary>
+        internal static string Controls_Ticket_Ticket {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Ticket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TOTAL.
+        /// </summary>
+        internal static string Controls_Ticket_Total {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem.
+        /// </summary>
+        internal static string Controls_Ticket_YourTrip {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_YourTrip", resourceCulture);
             }
         }
         
