@@ -12,7 +12,7 @@
                             class="calendar-grey">
                     </div>
                     <div class="col-8"><asp:label runat="server" ID="LbDate"><%= PanelData.StartTime.ToString("dd MMMM").ToUpper() %>, <%= PanelData.StartTime.ToString("dddd").ToUpper() %></asp:label></div>
-                        <div class="col-2 text-right text-uppercase direction">Ida</div>
+                        <div class="col-2 text-right text-uppercase direction"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_Going%>"/></div>
                     </div>
 
                     <hr class="divider">
@@ -27,7 +27,7 @@
                                         /img/users@3x.png 3x"
                                         class="users">
                                 </div>
-                                <div class="col-8"><strong><asp:label runat="server" ID="LbSeats"><%= PanelData.Seats.ToString() %><%= PanelData.Seats == 1 ? " Lugar" : " Lugares" %></asp:label></strong></div>
+                                <div class="col-8"><strong><asp:label runat="server" ID="LbSeats"><%= PanelData.Seats.ToString() %><%= PanelData.Seats == 1 ? " " + Resources.LocalizedText.General_Seat : " " + Resources.LocalizedText.General_Seats %></asp:label></strong></div>
                             </div>
 
                             <!--HORA-->
@@ -49,7 +49,7 @@
                                     /img/cart@3x.png 3x"
                                     class="clock">
                                 </div>
-                                <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.StandardPrice.ToString("C") %> / por Lugar</asp:label></strong></div>
+                                <div class="col-8"><strong><asp:label runat="server" ID="LbCost"><%= PanelData.StandardPrice.ToString("C", ApplicationHelpers.DefaultCulture()) %> / <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_Price_PerSeat%>"/></asp:label></strong></div>
                             </div>
 
                     </div>
@@ -60,7 +60,7 @@
                 <div class="row trip">
                     <div class="col-8">
                         <div class="row p-1 text-uppercase start-end">
-                            <div class="col-12 pl-4">Origem</div>
+                            <div class="col-12 pl-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_Origin%>"/></div>
                         </div>
                         <div class="row p-1 text-uppercase city-name">
                             <div class="col-12 pl-4"><asp:label runat="server" ID="LbStartRegion"><%= PanelData.StartRegionName %></asp:label></div>
@@ -74,7 +74,7 @@
                 <div class="row pt-3 trip mb-4">
                     <div class="col-8">
                         <div class="row p-1 text-uppercase start-end">
-                            <div class="col-12 pl-4">Destino</div>
+                            <div class="col-12 pl-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_Destination%>"/></div>
                         </div>
                         <div class="row p-1 text-uppercase city-name">
                             <div class="col-12 pl-4"><asp:label runat="server" ID="LbEndRegion"><%= PanelData.EndRegionName %></asp:label></div>
@@ -89,10 +89,10 @@
 
                 <!-- RESUMO -->
                 <div class="row pricing">
-                    <div class="col-4 pl-4 text-uppercase total">Resumo</div>
+                    <div class="col-4 pl-4 text-uppercase total"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_PriceSummary%>"/></div>
                     <div class="col-8 pr-4 text-right">
                         <div class="row pb-1">
-                            <div class="col-12 price-base"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? "Ida" : "Idas" %>&nbsp;<span class="times"></span> <span class="price price-base"><%= PanelData.StandardCost.ToString("C") %></span></div>
+                            <div class="col-12 price-base"><%= PanelData.Seats.ToString() %> <%= PanelData.Seats == 1 ? Resources.LocalizedText.Controls_BookingPanel_Going : Resources.LocalizedText.Controls_BookingPanel_Goings %>&nbsp;<span class="times"></span> <span class="price price-base"><%= PanelData.StandardCost.ToString("C", ApplicationHelpers.DefaultCulture()) %></span></div>
                         </div>
                         <asp:Repeater runat="server" ID="SummaryRepeater" OnItemDataBound="SummaryRepeater_ItemDataBound">
                             <ItemTemplate>
@@ -107,10 +107,10 @@
                 
                 <!-- PREÇO FINAL -->
                 <div class="row pricing">
-                    <div class="col-6 pl-4 align-self-end text-uppercase total">Preço Final</div>
+                    <div class="col-6 pl-4 align-self-end text-uppercase total"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_FinalPrice%>"/></div>
                     <div class="col-6 pr-4 text-right">
                         <div class="row">
-                            <div class="col-12 total-price"><%= PanelData.Cost.ToString("C") %></div>
+                            <div class="col-12 total-price"><%= PanelData.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %></div>
                         </div>
                     </div>
                 </div>
@@ -124,14 +124,14 @@
                             <div id="divNoPromocode" class="<%= pnPromocode.Visible ? "hide" : "" %>">
                                 <div class="row">
                                     <div class="col-12 text-center promocode">
-                                        <a runat="server" id="lkPromo" OnServerClick="lkPromo_ServerClick">Tenho um código promocional</a>
+                                        <a runat="server" id="lkPromo" OnServerClick="lkPromo_ServerClick"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_Promocode_HaveLink%>"/></a>
                                     </div>
                                 </div>
                             </div>
                             <asp:Panel runat="server" ID="pnPromocode" Visible="false">
                                 <div class="row">
                                     <div class="col-12 text-center promocode promocode--active">
-                                        <a runat="server" id="lkNoPromo" OnServerClick="lkPromo_ServerClick">Não tenho código promocional</a>
+                                        <a runat="server" id="lkNoPromo" OnServerClick="lkPromo_ServerClick"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_Promocode_DontHaveLink%>"/></a>
                                     </div>
                                 </div>
                                 <div class="row p-3">
@@ -159,14 +159,14 @@
                                                         class="closebtn" tabindex="-1" />
                                                 </span>                                            
                                             </asp:Placeholder>
-                                            <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="form-control" placeholder="Inserir código" aria-label="Inserir código" aria-describedby="basic-addon2" />
+                                            <asp:Textbox runat="server" ID="tbPromo" OnTextChanged="tbPromo_TextChanged" type="text" AutoComplete="promocode" AutoPostback="true" CssClass="form-control" placeholder="<%$ Resources:LocalizedText, Controls_BookingPanel_Promocode_tbPromo_placeholder%>" aria-label="<%$ Resources:LocalizedText, Controls_BookingPanel_Promocode_tbPromo_placeholder%>" aria-describedby="basic-addon2" />
                                         </div>
                                     </div>
                                 </div>
                             </asp:Panel>
                             <div class="row p-4">
                                 <div class="col-12 text-center">
-                                    <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="Reservar" />
+                                    <asp:button runat="server" ID="BtnBook" OnClick="BtnBook_Click" CssClass="btn btn-light btn-xl text-uppercase" Text="<%$ Resources:LocalizedText, Controls_BookingPanel_btnBook_Text%>" />
                                 </div>
                             </div>
                         </div>

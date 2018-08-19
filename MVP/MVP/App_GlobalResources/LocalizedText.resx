@@ -831,4 +831,40 @@
   <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2" xml:space="preserve">
     <value>com o link para poderes confirmar o teu email.</value>
   </data>
+  <data name="Controls_BookingPanel_btnBook_Text" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="Controls_BookingPanel_btnBook_Unavailable_Text" xml:space="preserve">
+    <value>Viagem indisponível</value>
+  </data>
+  <data name="Controls_BookingPanel_Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Controls_BookingPanel_FinalPrice" xml:space="preserve">
+    <value>Preço Final</value>
+  </data>
+  <data name="Controls_BookingPanel_Going" xml:space="preserve">
+    <value>Ida</value>
+  </data>
+  <data name="Controls_BookingPanel_Goings" xml:space="preserve">
+    <value>Idas</value>
+  </data>
+  <data name="Controls_BookingPanel_Origin" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Controls_BookingPanel_PriceSummary" xml:space="preserve">
+    <value>Resumo</value>
+  </data>
+  <data name="Controls_BookingPanel_Price_PerSeat" xml:space="preserve">
+    <value>por Lugar</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_DontHaveLink" xml:space="preserve">
+    <value>Não tenho código promocional</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_HaveLink" xml:space="preserve">
+    <value>Tenho um código promocional</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_tbPromo_placeholder" xml:space="preserve">
+    <value>Inserir código</value>
+  </data>
 </root>

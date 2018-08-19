@@ -127,7 +127,7 @@ namespace MVP.Services
                 result.Add(new BookingPanelDTO.PriceItem
                 {
                     Description = Resources.LocalizedText.General_Promocode,
-                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultUICulture()),
+                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultCulture()),
                     Type = BookingPanelDTO.PriceItemType.DISCOUNT
                 });
             }
@@ -505,14 +505,14 @@ namespace MVP.Services
                 msg.IsBodyHtml = false;
                 msg.Subject = "[YOYOLOOP] INVOICE: " + state.BookingId.ToString().Substring(0, 8);
 
-                string body = "Data: " + DateTime.Now.ToString("R", ApplicationHelpers.DefaultUICulture());
+                string body = "Data: " + DateTime.Now.ToString("R", ApplicationHelpers.DefaultCulture());
                 body += "\r\nBooking ID: " + state.BookingId.ToString();
                 body += "\r\nUser: " + state.UserEmail;
                 body += "\r\n";
                 body += "\r\nDETALHES DA VIAGEM:";
                 body += "\r\nOrigem: " + state.StartRegionName + " (" + state.StartAPName + ")";
                 body += "\r\nDestino: " + state.EndRegionName + " (" + state.EndAPName + ")";
-                body += "\r\nHora: " + state.StartTime.ToString("R", ApplicationHelpers.DefaultUICulture());
+                body += "\r\nHora: " + state.StartTime.ToString("R", ApplicationHelpers.DefaultCulture());
                 body += "\r\nLugares: " + state.Seats.ToString();
                 body += "\r\n";
                 body += "\r\nDETALHES DO PAGAMENTO:";

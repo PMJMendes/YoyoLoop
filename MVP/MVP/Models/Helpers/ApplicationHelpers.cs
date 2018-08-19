@@ -21,7 +21,7 @@ namespace MVP.Models.Helpers
             ScriptManager.RegisterStartupScript(page, page.GetType(), "showMessageModalKey", "showMessage();", true);
         }
 
-        public static CultureInfo DefaultUICulture()
+        public static CultureInfo DefaultCulture()
         {
             Configuration config = WebConfigurationManager.OpenWebConfiguration("/");
             GlobalizationSection global = (GlobalizationSection)config.GetSection("system.web/globalization");

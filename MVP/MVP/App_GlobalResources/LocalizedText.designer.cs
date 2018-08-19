@@ -997,6 +997,114 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string Controls_BookingPanel_btnBook_Text {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_btnBook_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagem indisponível.
+        /// </summary>
+        internal static string Controls_BookingPanel_btnBook_Unavailable_Text {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_btnBook_Unavailable_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Controls_BookingPanel_Destination {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preço Final.
+        /// </summary>
+        internal static string Controls_BookingPanel_FinalPrice {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_FinalPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ida.
+        /// </summary>
+        internal static string Controls_BookingPanel_Going {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Going", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Idas.
+        /// </summary>
+        internal static string Controls_BookingPanel_Goings {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Goings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Controls_BookingPanel_Origin {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resumo.
+        /// </summary>
+        internal static string Controls_BookingPanel_PriceSummary {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_PriceSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to por Lugar.
+        /// </summary>
+        internal static string Controls_BookingPanel_Price_PerSeat {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Price_PerSeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não tenho código promocional.
+        /// </summary>
+        internal static string Controls_BookingPanel_Promocode_DontHaveLink {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Promocode_DontHaveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tenho um código promocional.
+        /// </summary>
+        internal static string Controls_BookingPanel_Promocode_HaveLink {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Promocode_HaveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserir código.
+        /// </summary>
+        internal static string Controls_BookingPanel_Promocode_tbPromo_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Promocode_tbPromo_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar.
         /// </summary>
         internal static string Controls_Forgot_btnForgot_Text {
