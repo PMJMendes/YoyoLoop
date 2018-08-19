@@ -1663,6 +1663,654 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua pergunta?.
+        /// </summary>
+        internal static string Help_CantFind {
+            get {
+                return ResourceManager.GetString("Help_CantFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CONTACTA-NOS.
+        /// </summary>
+        internal static string Help_CantFind_ContactUs {
+            get {
+                return ResourceManager.GetString("Help_CantFind_ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voltar.
+        /// </summary>
+        internal static string Help_Detailed_btnBack_Text {
+            get {
+                return ResourceManager.GetString("Help_Detailed_btnBack_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Precisas de ajuda?.
+        /// </summary>
+        internal static string Help_MainTitle {
+            get {
+                return ResourceManager.GetString("Help_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;rarr; Ver todos.
+        /// </summary>
+        internal static string Help_SeeAllLink {
+            get {
+                return ResourceManager.GetString("Help_SeeAllLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perguntas frequentes.
+        /// </summary>
+        internal static string Help_SubTitle {
+            get {
+                return ResourceManager.GetString("Help_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empresas.
+        /// </summary>
+        internal static string Help_Topic_Corporate {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso emitir facturas com contribuinte?.
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TaxInvoices {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TaxInvoices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TaxInvoices_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TaxInvoices_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso saber quanto gastei no total?.
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TotalSpending {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TotalSpending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TotalSpending_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TotalSpending_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descontos e Promoções.
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tenho saldo na minha conta corrente e código promocionais disponíveis, como faço para usar um ou outro?.
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndBalance {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso usar dois códigos promocionais para a mesma viagem?.
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_TwoPromocodes {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_TwoPromocodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conduzir um Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_Drive {
+            get {
+                return ResourceManager.GetString("Help_Topic_Drive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como posso conduzir um Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_Drive_Question_HowTo {
+            get {
+                return ResourceManager.GetString("Help_Topic_Drive_Question_HowTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Drive_Question_HowTo_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Drive_Question_HowTo_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convites.
+        /// </summary>
+        internal static string Help_Topic_Invite {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O que os meus amigos ganham por viajar com o meu cupão?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_FriendsBenefits {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_FriendsBenefits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_FriendsBenefits_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_FriendsBenefits_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso dar o meu cupão a amigos que já tenham utilizado a Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_GiftToYoyoUsers {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_GiftToYoyoUsers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_GiftToYoyoUsers_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_GiftToYoyoUsers_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantos amigos posso convidar?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_HowManyFriends {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_HowManyFriends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_HowManyFriends_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_HowManyFriends_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O que é que eu ganho?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_MyBenefits {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_MyBenefits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_MyBenefits_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_MyBenefits_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Malas e Bagagens.
+        /// </summary>
+        internal static string Help_Topic_Luggage {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso levar malas?.
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_CanIBring {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_CanIBring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_CanIBring_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_CanIBring_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O que não posso levar comigo?.
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_NotAllowed {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_NotAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_NotAllowed_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_NotAllowed_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quais os Limites de tamanhos das bagagem?.
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_SizeLimit {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_SizeLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_SizeLimit_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_SizeLimit_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagens e loops.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops disponíveis?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_AvailableLoops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso comprar a viagem no ponto de partida?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_BuyAtDeparture {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_BuyAtDeparture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancelar um loop?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Cancel {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Cancel_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Cancel_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nao consegui marcar a viagem online, e agora?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_CouldNotBook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como faço download do meu bilhete?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_DownloadTicket {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_DownloadTicket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quanto custa um loop?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_HowMuch {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_HowMuch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_HowMuch_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_HowMuch_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facturas.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Invoices {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Invoices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Invoices_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Invoices_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Métodos de pagamento?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_PaymentMethods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como solicitar um novo loop?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_SuggestLoop {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_SuggestLoop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Dashboard.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como adicionar/actualizar ou eliminar dados de pagamentos?.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_AddChangePaymentDetails {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_AddChangePaymentDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como alterar dados pessoais?.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_ChangePersonalDetails {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_ChangePersonalDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A minha conta corrente.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_CurrentAccount {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_CurrentAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_CurrentAccount_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_CurrentAccount_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As minhas viagens a 3 Euros.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_MGMTrips {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_MGMTrips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_MGMTrips_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_MGMTrips_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os Carros Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os carros da Yoyoloop são eléctricos?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Electric {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Electric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Electric_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Electric_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Motorista é mesmo profissional?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_ProfessionalDriver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantos lugares tem um carro da yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Seats {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Seats_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Seats_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os carros yoyoloop tem wifi?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Wifi {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Wifi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Wifi_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Wifi_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vê passar os autocarros e apanha boleia à porta de casa.
         /// </summary>
         internal static string HomePage_MainTitle {
