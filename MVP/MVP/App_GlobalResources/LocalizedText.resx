@@ -1083,4 +1083,64 @@
   <data name="Help_Topic_YoyoloopCars_Question_Wifi_Answer" xml:space="preserve">
     <value>A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável.</value>
   </data>
+  <data name="Controls_Ticket_BookAgain" xml:space="preserve">
+    <value>Reservar novamente</value>
+  </data>
+  <data name="Controls_Ticket_btnBooking_Text" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="Controls_Ticket_btnViewBooking_Text" xml:space="preserve">
+    <value>Ver reserva</value>
+  </data>
+  <data name="Controls_Ticket_Canceled" xml:space="preserve">
+    <value>Cancelada</value>
+  </data>
+  <data name="Controls_Ticket_Completed" xml:space="preserve">
+    <value>Completada</value>
+  </data>
+  <data name="Controls_Ticket_Details" xml:space="preserve">
+    <value>ver Detalhe</value>
+  </data>
+  <data name="Controls_Ticket_Pending" xml:space="preserve">
+    <value>Pendente</value>
+  </data>
+  <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
+    <value>Reserva Já</value>
+  </data>
+  <data name="MyTrips_Empty_MainTitle" xml:space="preserve">
+    <value>Ainda não tem viagens.</value>
+  </data>
+  <data name="MyTrips_Empty_SubTitle" xml:space="preserve">
+    <value>Reserva a tua primeira viagem com a Yoyoloop!</value>
+  </data>
+  <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
+    <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!</value>
+  </data>
+  <data name="MyTrips_Invite_How" xml:space="preserve">
+    <value>Como viajar por 3€ para qualquer destino</value>
+  </data>
+  <data name="MyTrips_Invite_OfferTrips_Description" xml:space="preserve">
+    <value>Os teus amigos viajam para qualquer destino por apenas 3€.</value>
+  </data>
+  <data name="MyTrips_Invite_OfferTrips_Title" xml:space="preserve">
+    <value>Oferece viagens</value>
+  </data>
+  <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
+    <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
+  </data>
+  <data name="MyTrips_Invite_Recommend_Title" xml:space="preserve">
+    <value>Recomenda a Yoyoloop</value>
+  </data>
+  <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
+    <value>Viaja por 3€!</value>
+  </data>
+  <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
+    <value>Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
+  </data>
+  <data name="MyTrips_MainTitle" xml:space="preserve">
+    <value>As Minhas Viagens</value>
+  </data>
+  <data name="MyTrips_PastTrips_MainTitle" xml:space="preserve">
+    <value>Viagens anteriores</value>
+  </data>
 </root>

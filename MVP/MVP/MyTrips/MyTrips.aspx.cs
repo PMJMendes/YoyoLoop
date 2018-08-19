@@ -19,8 +19,7 @@ namespace MVP.MyTrips
         {
             if (User?.Identity.IsAuthenticated == false)
             {
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
-                //Response.Redirect("/");
+                Response.Redirect("/");
             }
             InitData();
             Initialize_Repeaters();

@@ -58,7 +58,7 @@
 
                                 <div class="travel__card__first__text">
                                     <img class="mr-2 cart" src="/img/cart-black.png" srcset="/img/cart-black@2x.png 2x, /img/cart-black@3x.png 3x">
-                                    <%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultUICulture()) %>
+                                    <%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %>
                                 </div>
 
                                 <!-- HIDDEN FOR NOW -->
@@ -99,7 +99,7 @@
                             <img src="/img/users-black.png" srcset="/img/users-black@2x.png 2x, /img/users-black@3x.png 3x"> <%= pageData.Seats.ToString() %> <%= pageData.Seats == 1 ? Resources.LocalizedText.General_Seat : Resources.LocalizedText.General_Seats %>
                         </p>
                         <p class="travel__card__last__gray-text"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Total%>"/></p>
-                        <p class="travel__card__last__price"><%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultUICulture()) %></p>
+                        <p class="travel__card__last__price"><%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %></p>
                     </div>
                 </div>
                 <!-- END CARD -->

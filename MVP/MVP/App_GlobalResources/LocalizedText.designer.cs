@@ -1537,11 +1537,65 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reservar novamente.
+        /// </summary>
+        internal static string Controls_Ticket_BookAgain {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_BookAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string Controls_Ticket_btnBooking_Text {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_btnBooking_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ver reserva.
+        /// </summary>
+        internal static string Controls_Ticket_btnViewBooking_Text {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_btnViewBooking_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancelada.
+        /// </summary>
+        internal static string Controls_Ticket_Canceled {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Canceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completada.
+        /// </summary>
+        internal static string Controls_Ticket_Completed {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Destino.
         /// </summary>
         internal static string Controls_Ticket_Destination {
             get {
                 return ResourceManager.GetString("Controls_Ticket_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ver Detalhe.
+        /// </summary>
+        internal static string Controls_Ticket_Details {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Details", resourceCulture);
             }
         }
         
@@ -1560,6 +1614,15 @@ namespace Resources {
         internal static string Controls_Ticket_Origin {
             get {
                 return ResourceManager.GetString("Controls_Ticket_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pendente.
+        /// </summary>
+        internal static string Controls_Ticket_Pending {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Pending", resourceCulture);
             }
         }
         
@@ -2676,6 +2739,123 @@ namespace Resources {
         internal static string HomePage_Yoyoloop_SubDescription {
             get {
                 return ResourceManager.GetString("HomePage_Yoyoloop_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva Já.
+        /// </summary>
+        internal static string MyTrips_Empty_btnBookNow_Text {
+            get {
+                return ResourceManager.GetString("MyTrips_Empty_btnBookNow_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda não tem viagens..
+        /// </summary>
+        internal static string MyTrips_Empty_MainTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_Empty_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva a tua primeira viagem com a Yoyoloop!.
+        /// </summary>
+        internal static string MyTrips_Empty_SubTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_Empty_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!.
+        /// </summary>
+        internal static string MyTrips_Invite_Code_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Code_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como viajar por 3€ para qualquer destino.
+        /// </summary>
+        internal static string MyTrips_Invite_How {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_How", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 3€..
+        /// </summary>
+        internal static string MyTrips_Invite_OfferTrips_Description {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_OfferTrips_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oferece viagens.
+        /// </summary>
+        internal static string MyTrips_Invite_OfferTrips_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_OfferTrips_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional.
+        /// </summary>
+        internal static string MyTrips_Invite_Recommend_Description {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Recommend_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop.
+        /// </summary>
+        internal static string MyTrips_Invite_Recommend_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Recommend_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viaja por 3€!.
+        /// </summary>
+        internal static string MyTrips_Invite_Travel_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Travel_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        /// </summary>
+        internal static string MyTrips_Invite_Travel_Title_Description {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Travel_Title_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As Minhas Viagens.
+        /// </summary>
+        internal static string MyTrips_MainTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagens anteriores.
+        /// </summary>
+        internal static string MyTrips_PastTrips_MainTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_PastTrips_MainTitle", resourceCulture);
             }
         }
         
