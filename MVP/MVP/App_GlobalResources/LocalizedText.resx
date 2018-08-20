@@ -1194,6 +1194,33 @@
   <data name="StaticPages_About_Why_Sustainable_Title" xml:space="preserve">
     <value>Sustentável</value>
   </data>
+  <data name="StaticPages_Contact_Bookings" xml:space="preserve">
+    <value>Reservas</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_btnSend_text" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_Send_ShowMessage" xml:space="preserve">
+    <value>A tua mensagem foi enviada</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbBody_Label" xml:space="preserve">
+    <value>Mensagem</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbEmail_Label" xml:space="preserve">
+    <value>Endereço de E-mail</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbName_Label" xml:space="preserve">
+    <value>Nome completo</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbSubject_Label" xml:space="preserve">
+    <value>Assunto</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_Title" xml:space="preserve">
+    <value>Deixa-nos uma mensagem</value>
+  </data>
+  <data name="StaticPages_Contact_Title" xml:space="preserve">
+    <value>Contactos</value>
+  </data>
   <data name="StaticPages_FAQ_Questions" xml:space="preserve">
     <value>Tens alguma pergunta?</value>
   </data>

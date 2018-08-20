@@ -3184,6 +3184,87 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reservas.
+        /// </summary>
+        internal static string StaticPages_Contact_Bookings {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_Bookings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_btnSend_text {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_btnSend_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua mensagem foi enviada.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_Send_ShowMessage {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_Send_ShowMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mensagem.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbBody_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbBody_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de E-mail.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbEmail_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome completo.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbName_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assunto.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbSubject_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbSubject_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa-nos uma mensagem.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contactos.
+        /// </summary>
+        internal static string StaticPages_Contact_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tens alguma pergunta?.
         /// </summary>
         internal static string StaticPages_FAQ_Questions {
