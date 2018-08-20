@@ -5515,6 +5515,267 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Condições gerais para utilizadores da goodlife! em ofertas disponíveis no site www.yoyoloop.com.
+        /// </summary>
+        internal static string StaticPages_Terms_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos e Condições.
+        /// </summary>
+        internal static string StaticPages_Terms_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. Partes e objeto.
+        /// </summary>
+        internal static string StaticPages_Terms_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.4 Os cupões disponibilizados em www.goodlife.com.pt não representam um compromisso firme e inequívoco assumido pelo utilizador na compra de determinado bem ou serviço, na medida em que podem ser livremente trocados pelo utilizador até à respetiva data de validade por qualquer outro cupão que nesse momento esteja em comercialização, ainda que respeite a parceiros ou serviços absolutamente diferenciados do original, podendo por exemplo trocar-se um cupão respeitante a serviços de restauração por um outro re [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Four {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.1 As presentes condições gerais de utilização regulam a relação entre a Circunland S.A., NIPC 508 123 224, com sede na Estrada da Outurela, 118, Parque Holanda - Edifício Holanda, 2790-114 Carnaxide, de doravante designada por GOODLIFE! e o utilizador como tal registado em www.goodlife.com.pt..
+        /// </summary>
+        internal static string StaticPages_Terms_One_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.3 No website www.goodlife.com.pt a goodlife! promove uma plataforma de compras coletivas na qual os utilizadores podem adquirir:.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Three {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to i) cupões que atribuem o direito a adquirir variados serviços ou produtos a prestar ou fornecer diretamente por outras empresas devidamente identificadas em cada caso e designados por Parceiros. Através do nosso website, os utilizadores poderão adquirir os referidos cupões que lhes atribuirão o direito a adquirir produtos e serviços, com desconto sobre o preço regularmente praticado nas lojas físicas. Os emitentes dos cupões e prestadores dos produtos ou serviços indicados nos cupões são os Parceiros indica [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Three_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Three_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ii) variados produtos fornecidos diretamente pela goodlife! o que acontece nos casos dos produtos anunciados em que não seja identificado nem publicitado, no website e no cupão, nenhum parceiro como fornecedor. Nestes casos, ao contrário dos referidos na alínea anterior, a goodlife! assume a posição legal e contratual de vendedora do produto e recebe o pagamento em nome próprio, para todos os efeitos legais..
+        /// </summary>
+        internal static string StaticPages_Terms_One_Three_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Three_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.2 Este acordo determina os termos e condições que se aplicam ao uso do website por parte do utilizador final. A sua utilização está sujeita à prévia aceitação dos termos e condições gerais de uso doravante descritos no momento do registo como utilizador. As condições de utilização aplicáveis são novamente aceites pelo utilizador com a confirmação no respetivo botão aquando do processo de encomenda. Estas condições de utilização encontram-se em www.goodlife.com.pt e podem ser acedidas, impressas ou guardad [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3. Livre resolução.
+        /// </summary>
+        internal static string StaticPages_Terms_Three {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.1 Direito de livre resolução.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O consumidor tem o direito de livre resolução do presente contrato no prazo de 14 dias de calendário, sem necessidade de indicar qualquer motivo..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_A {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O prazo para exercício do direito de livre resolução expira 14 dias a contar do dia seguinte ao dia.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to a) da celebração do contrato, no caso de um contrato de prestação de serviços ou de um contrato de fornecimento de água, de gás ou de eletricidade, caso não sejam postos à venda em volume ou quantidade limitados, de aquecimento urbano ou de conteúdos digitais que não sejam fornecidos num suporte material;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_a {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_a", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to b) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física dos bens, no caso de um contrato de compra e venda;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_b {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to c) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do último bem, no caso de um contrato em que o consumidor encomendou vários bens numa única encomenda e os bens são entregues separadamente;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_c {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to d) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do último lote ou da última parte, no caso de um contrato relativo à entrega de um bem constituído por vários lotes ou partes.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_d {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do primeiro bem, no caso de um contrato de entrega periódica de bens durante um determinado período..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_e {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_e", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A fim de exercer o seu direito de livre resolução, tem de nos comunicar a sua decisão de resolução do presente contrato por meio de uma declaração inequívoca (por exemplo, carta enviada pelo correio, fax ou correio eletrónico) para вюeve utilizar o modelo de formulário de resolução..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_C {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para que o prazo de livre resolução seja respeitado, basta que a sua comunicação referente ao exercício do direito de livre resolução seja enviada antes do termo do prazo de resolução. Efeitos da livre resolução.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_D {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Em caso de resolução do presente contrato, ser-lhe-ão reembolsados todos os pagamentos efetuados (com exceção de custos suplementares resultantes da sua escolha de uma modalidade de envio diferente da modalidade menos onerosa de envio normal por nós oferecida), sem demora injustificada e, em qualquer caso, o mais tardar 14 dias a contar da data em que formos informados da sua decisão de resolução do presente contrato..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_E {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_E", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Efetuamos esses reembolsos em crédito na sua conta cliente em www.goodlife.com.pt ou, se não nos confirmar o seu acordo, usando o mesmo meio de pagamento que usou na transação inicial; em qualquer caso, não incorre em quaisquer custos como consequência de tal reembolso, que não os custos diretos da devolução dos bens..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_F {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_F", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reteremos o reembolso até termos recebido o cupão ou os bens devolvidos, ou até que apresente prova do envio dos bens, consoante o que ocorrer primeiro..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_G {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_G", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deve devolver os bens ou entregar-no-los, sem demora injustificada dentro dos 14 dias a contar do dia em que nos informar da livre resolução do contrato..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_H {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_H", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Considera-se que o prazo é respeitado se devolver os bens antes do termo do prazo de 14 dias..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_I {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_I", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No caso de um contrato de prestação de serviços ou de um contrato de fornecimento de água, gás ou eletricidade, caso não sejam postos à venda em volume ou quantidade limitados, ou de aquecimento urbano, se tiver solicitado que a prestação de serviços ou o fornecimento de água/gás/eletricidade/aquecimento urbano comece durante o prazo de livre resolução, pagar-nos-á um montante razoável proporcional ao que lhe foi fornecido até ao momento em que nos comunicou a sua resolução do presente contrato, em relação  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_J {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_J", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.2 Condições da devolução dos bens.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2. Compra de cupões.
+        /// </summary>
+        internal static string StaticPages_Terms_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para adquirir um cupão em www.goodlife.com.pt deve seguir os seguintes passos:&lt;br /&gt;1) Carregar no botão &quot;comprar&quot; na página inicial.&lt;br /&gt;2) Escolher a quantidade desejada de cupões a adquirir.&lt;br /&gt;3) Indicar o seu nome e endereço de e-mail e password para fazer o login. Caso ainda não esteja registado deverá preencher o formulário de registo.&lt;br /&gt;4) Escolha o método de pagamento pretendido, multibanco ou cartão de crédito ou outro meio de pagamento disponível no website. No primeiro caso ser-lhe-á atrib [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_Two_A {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The card was declined..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_card_declined {
