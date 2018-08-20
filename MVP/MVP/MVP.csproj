@@ -742,6 +742,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalizedText.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\LocalizedText.pt.designer.cs">
+      <DependentUpon>LocalizedText.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="App_GlobalResources\LocalizedText.en.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1220,6 +1225,10 @@
     <Content Include="App_GlobalResources\LocalizedText.en.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>LocalizedText.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\LocalizedText.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedText.pt.designer.cs</LastGenOutput>
     </Content>
     <EmbeddedResource Include="Migrations\201801131725141_InitialCreate.resx">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>
