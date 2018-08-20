@@ -68,7 +68,7 @@ namespace MVP.Services
                     state.StripeCardList.Add(new ListItem
                     {
                         Value = defaultcard.Id,
-                        Text = "Cartão " + defaultcard.Brand + " terminado em " + defaultcard.Last4
+                        Text = Resources.LocalizedText.General_StripeCard_Card + " " + defaultcard.Brand + " " + Resources.LocalizedText.General_StripeCard_Card_EndingIn + " " + defaultcard.Last4
                     });
                 }
 
@@ -77,7 +77,7 @@ namespace MVP.Services
                     state.StripeCardList.Add(new ListItem
                     {
                         Value = card.Id,
-                        Text = "Cartão " + card.Brand + " terminado em " + card.Last4
+                        Text = Resources.LocalizedText.General_StripeCard_Card + " " + card.Brand + " " + Resources.LocalizedText.General_StripeCard_Card_EndingIn + " " + card.Last4
                     });
                 }
             }
@@ -85,7 +85,7 @@ namespace MVP.Services
             state.StripeCardList.Add(new ListItem
             {
                 Value = "new",
-                Text = "Novo cartão de crédito"
+                Text = Resources.LocalizedText.General_StripeCard_Card_New
             });
 
             return state;
@@ -104,7 +104,7 @@ namespace MVP.Services
                 var customerOptions = new StripeCustomerCreateOptions()
                 {
                     SourceToken = stripeToken,
-                    Description = state.ContactName + "(" + state.Email + ")",
+                    Description = state.ContactName + " (" + state.Email + ")",
                     Email = state.Email
                 };
 
@@ -125,7 +125,11 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = stripeError.ErrorType;
+                    error = StripeErrorHandler(stripeError.Code);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
                     return false;
                 }
             }
@@ -143,7 +147,11 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = stripeError.ErrorType;
+                    error = StripeErrorHandler(stripeError.Code);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
                     return false;
                 }
             }
@@ -161,7 +169,11 @@ namespace MVP.Services
             catch (StripeException ex)
             {
                 StripeError stripeError = ex.StripeError;
-                error = stripeError.ErrorType;
+                error = StripeErrorHandler(stripeError.Code);
+                if (string.IsNullOrEmpty(error))
+                {
+                    error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                }
                 return false;
             }
 
@@ -176,7 +188,7 @@ namespace MVP.Services
             {
                 if(!DateTime.TryParseExact(expire, "MM/yyyy", null, System.Globalization.DateTimeStyles.None, out date))
                 {
-                    error = "A data introduzida é invalida";
+                    error = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_date_format;
                     return false;
                 }
             }
@@ -195,7 +207,11 @@ namespace MVP.Services
             catch (StripeException ex)
             {
                 StripeError stripeError = ex.StripeError;
-                error = stripeError.ErrorType;
+                error = StripeErrorHandler(stripeError.Code);
+                if (string.IsNullOrEmpty(error))
+                {
+                    error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                }
                 return false;
             }
 
@@ -226,6 +242,47 @@ namespace MVP.Services
             }
 
             return state;
+        }
+
+        public string StripeErrorHandler(string error)
+        {
+            string result;
+
+            switch (error)
+            {
+                case "incorrect_number":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_number;
+                    break;
+                case "invalid_number":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_number;
+                    break;
+                case "invalid_expiry_month":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_expiry_month;
+                    break;
+                case "invalid_expiry_year":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_expiry_year;
+                    break;
+                case "invalid_cvc":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_cvc;
+                    break;
+                case "expired_card":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_expired_card;
+                    break;
+                case "incorrect_cvc":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_cvc;
+                    break;
+                case "incorrect_zip":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_zip;
+                    break;
+                case "card_declined":
+                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_card_declined;
+                    break;
+                default:
+                    result = string.Empty;
+                    break;
+            }
+
+            return result;
         }
 
         public void UpdatePersonalDetails(ProfileDTO state)

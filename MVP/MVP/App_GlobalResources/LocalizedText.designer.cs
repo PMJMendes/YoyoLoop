@@ -2860,6 +2860,285 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Os teus dados foram actualizados com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_BillingDetails_Save_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingDetails_Save_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Actualizar dados.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_btnBillingSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_btnBillingSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morada.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingAddress_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingAddress_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo da morada é obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cidade.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingCity_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingCity_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome da Empresa.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingCompany_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingCompany_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingName_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo do nome é obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NIF.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingNIF_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingNIF_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduza um número válido.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo do NIF é obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código postal.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingZIP_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingZIP_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de Faturação.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_Title {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adicionar.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_btnAddCard_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_btnAddCard_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cartão principal.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Método de pagamento.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome do titular.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número do cartão.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_tbCardNumber_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_tbCardNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagamento.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_Title {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu cartão foi adicionado com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethods_AddCard_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethods_AddCard_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O cartão foi removido com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethods_RemoveCard_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethods_RemoveCard_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O cartão foi actualizado com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethods_UpdateCard_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethods_UpdateCard_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Meu perfil.
+        /// </summary>
+        internal static string Profile_MainTitle {
+            get {
+                return ResourceManager.GetString("Profile_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de Faturação.
+        /// </summary>
+        internal static string Profile_Menu_BillingDetails {
+            get {
+                return ResourceManager.GetString("Profile_Menu_BillingDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convidar amigos.
+        /// </summary>
+        internal static string Profile_Menu_Invite {
+            get {
+                return ResourceManager.GetString("Profile_Menu_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string Profile_Menu_Logout {
+            get {
+                return ResourceManager.GetString("Profile_Menu_Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dados pessoais.
+        /// </summary>
+        internal static string Profile_Menu_PersonalDetails {
+            get {
+                return ResourceManager.GetString("Profile_Menu_PersonalDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Validation of Anti-XSRF token failed..
         /// </summary>
         internal static string SiteMaster_Errors_AntiXSRF {
@@ -5826,6 +6105,15 @@ namespace Resources {
         internal static string Stripe_ErrorHandling_CardError_invalid_cvc {
             get {
                 return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_cvc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s expiration date is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_date_format {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_date_format", resourceCulture);
             }
         }
         

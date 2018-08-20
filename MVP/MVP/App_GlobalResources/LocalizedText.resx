@@ -1926,6 +1926,99 @@
   <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
     <value>Loops &amp; Horários</value>
   </data>
+  <data name="Profile_Billing_BillingDetails_Save_SucessMessage" xml:space="preserve">
+    <value>Os teus dados foram actualizados com sucesso</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_btnBillingSave_Text" xml:space="preserve">
+    <value>Actualizar dados</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingAddress_Label" xml:space="preserve">
+    <value>Morada</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo da morada é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCity_Label" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage" xml:space="preserve">
+    <value>Obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCompany_Label" xml:space="preserve">
+    <value>Nome da Empresa</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingName_Label" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo do nome é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_Label" xml:space="preserve">
+    <value>NIF</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage" xml:space="preserve">
+    <value>Introduza um número válido</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo do NIF é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingZIP_Label" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage" xml:space="preserve">
+    <value>Obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_Title" xml:space="preserve">
+    <value>Detalhes de Faturação</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnAddCard_Text" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label" xml:space="preserve">
+    <value>Cartão principal</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label" xml:space="preserve">
+    <value>Método de pagamento</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label" xml:space="preserve">
+    <value>Nome do titular</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_tbCardNumber_Label" xml:space="preserve">
+    <value>Número do cartão</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_Title" xml:space="preserve">
+    <value>Pagamento</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_AddCard_SucessMessage" xml:space="preserve">
+    <value>O teu cartão foi adicionado com sucesso</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_RemoveCard_SucessMessage" xml:space="preserve">
+    <value>O cartão foi removido com sucesso</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_UpdateCard_SucessMessage" xml:space="preserve">
+    <value>O cartão foi actualizado com sucesso</value>
+  </data>
+  <data name="Profile_MainTitle" xml:space="preserve">
+    <value>O Meu perfil</value>
+  </data>
+  <data name="Profile_Menu_BillingDetails" xml:space="preserve">
+    <value>Detalhes de Faturação</value>
+  </data>
+  <data name="Profile_Menu_Invite" xml:space="preserve">
+    <value>Convidar amigos</value>
+  </data>
+  <data name="Profile_Menu_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Profile_Menu_PersonalDetails" xml:space="preserve">
+    <value>Dados pessoais</value>
+  </data>
   <data name="StaticPages_Privacy_Eight" xml:space="preserve">
     <value>8. Nos termos legais, o utilizador tem, a todo o momento, direito à informação gratuita sobre os dados armazenados e eventualmente a correcção, bloqueio ou eliminação desses dados. Os pedidos de informação, correcção ou eliminação devem ser enviados por e-mail para clientes@goodlife.pt ou para goodlife! - Circunland S.A., - Estrada de Outurela, 118 - Parque Holanda - Edifício Holanda - 2790-114 Carnaxide.</value>
   </data>
@@ -2057,5 +2150,8 @@
   </data>
   <data name="StaticPages_Terms_Two_A" xml:space="preserve">
     <value>Para adquirir um cupão em www.goodlife.com.pt deve seguir os seguintes passos:&lt;br /&gt;1) Carregar no botão "comprar" na página inicial.&lt;br /&gt;2) Escolher a quantidade desejada de cupões a adquirir.&lt;br /&gt;3) Indicar o seu nome e endereço de e-mail e password para fazer o login. Caso ainda não esteja registado deverá preencher o formulário de registo.&lt;br /&gt;4) Escolha o método de pagamento pretendido, multibanco ou cartão de crédito ou outro meio de pagamento disponível no website. No primeiro caso ser-lhe-á atribuída uma entidade e referência multibanco para proceder posteriormente ao pagamento. No segundo caso deverá fornecer os seguintes dados bancários: tipo de cartão de crédito, data de validade e número do mesmo, nome e apelido do titular do cartão e o código de segurança de três dígitos indicados no verso do cartão.&lt;br /&gt;5) Ao premir o botão "comprar" e com a confirmação das condições de utilização a entrega da sua ordem de compra efetiva-se. A aceitação do contrato de compra por parte da goodlife! é feita através da confirmação sob a forma do envio do código do cupão.&lt;br /&gt;6) Decorrido o prazo de venda estabelecido, será enviado o cupão por e-mail caso o número mínimo de participantes seja atingido e tenhamos registado com sucesso o seu pagamento. &lt;br /&gt;7) Imprimir o cupão e apresentar o mesmo no estabelecimento do Parceiro. Nos casos de cupão de serviço ou produto a levantar no Parceiro ou aguardar o envio do produto no prazo publicitado para a morada indicada, nos demais casos.&lt;br /&gt;</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_date_format" xml:space="preserve">
+    <value>The card's expiration date is invalid.</value>
   </data>
 </root>

@@ -53,19 +53,22 @@ namespace MVP.Profile
                     string error;
                     if (service.AddCard(pageData, hfStripeToken, out error))
                     {
-                        ApplicationHelpers.ShowMessage(this, "O teu cartão foi adicionado com sucesso");
+                        ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_Billing_PaymentMethods_AddCard_SucessMessage);
                         GetCardData();
                     }
                     else
                     {
-                        //PAYMENT ERROR - need better error handling here
                         ApplicationHelpers.ShowMessage(this, error);
                     }
                 }
                 else if (!string.IsNullOrEmpty(hfStripeError))
                 {
-                    //SUBMIT ERROR - need better error handling here
-                    ApplicationHelpers.ShowMessage(this, hfStripeError);
+                    string error = service.StripeErrorHandler(hfStripeError);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
+                    ApplicationHelpers.ShowMessage(this, error);
                 }
             }
 
@@ -133,7 +136,7 @@ namespace MVP.Profile
         {
             Stripe.StripeCard card = service.GetCard(pageData, cardid);
             tbCardHolderName.Text = card.Name;
-            tbCardNumber.Text = "Termina em " + card.Last4;
+            tbCardNumber.Text = Resources.LocalizedText.General_StripeCard_Card_CardNumber_EndsIn + " " + card.Last4;
             tbCardExpiry.Text = card.ExpirationMonth.ToString("00") + "/" + card.ExpirationYear.ToString("00");
             if(cardid == pageData.StripeCustomerDefaultSourceId)
             {
@@ -154,7 +157,7 @@ namespace MVP.Profile
             pageData.BillingZIP = txtBillingZIP.Text;
             pageData.BillingCity = txtBillingCity.Text;
             service.UpdateBillingDetails(pageData);
-            ApplicationHelpers.ShowMessage(this, "Os teus dados foram actualizados com sucesso.");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_Billing_BillingDetails_Save_SucessMessage);
         }
 
         protected void ddlCardMenu_SelectedIndexChanged(object sender, EventArgs e)
@@ -173,12 +176,11 @@ namespace MVP.Profile
             string error;
             if (service.UpdateCard(pageData, ddlCardMenu.SelectedValue, tbCardHolderName.Text, tbCardExpiry.Text, cbDefaultCard.Checked, out error))
             {
-                ApplicationHelpers.ShowMessage(this, "O cartão foi actualizado com sucesso");
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_Billing_PaymentMethods_UpdateCard_SucessMessage);
                 GetCardData();
             }
             else
             {
-                //UPDATE ERROR - need better error handling here
                 ApplicationHelpers.ShowMessage(this, error);
             }
         }
@@ -188,12 +190,11 @@ namespace MVP.Profile
             string error;
             if (service.RemoveCard(pageData, ddlCardMenu.SelectedValue, out error))
             {
-                ApplicationHelpers.ShowMessage(this, "O cartão foi removido com sucesso");
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_Billing_PaymentMethods_RemoveCard_SucessMessage);
                 GetCardData();
             }
             else
             {
-                //REMOVE ERROR - need better error handling here
                 ApplicationHelpers.ShowMessage(this, error);
             }
         }
