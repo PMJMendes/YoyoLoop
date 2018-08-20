@@ -4678,6 +4678,708 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Autocarro.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Bus {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Bus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carro próprio.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Car {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Car", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Boleias tradicionais.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Ride {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Ride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comboio.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Train {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Train", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Cascais e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Cascais.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Cascais em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Cascais e Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Cascais e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Coimbra.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Coimbra e Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Porto e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para o Porto.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Porto em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Coimbra e Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_Book {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_Book", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_From {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Cascais Shopping&lt;br /&gt;- E.Leclerc São Domingos de Rana  (Parque Superior).
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Amoreiras (Torre 1)&lt;br /&gt;- Saldanha (Estacionamento do Arco do cego).
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Cascais.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - McDonald’s Av. Fernão de Magalhães&lt;br /&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Saldanha (Estacionamento)&lt;br /&gt;- Gare do Oriente.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Coimbra.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os dias.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Saldanha (Estacionamento)&lt;br /&gt;- Gare do Oriente.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Largo da República&lt;br /&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os dias.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas do Porto.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Revolucionar a mobilidade entre cidades, &lt;br&gt;um Loop de cada vez.
+        /// </summary>
+        internal static string StaticPages_Loops_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa..
+        /// </summary>
+        internal static string StaticPages_Loops_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops &amp; Horários.
+        /// </summary>
+        internal static string StaticPages_Loops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The card was declined..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_card_declined {
