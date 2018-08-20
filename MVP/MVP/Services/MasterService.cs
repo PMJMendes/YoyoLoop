@@ -245,29 +245,29 @@ namespace MVP.Services
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
-                msg.IsBodyHtml = false;
+                msg.IsBodyHtml = true;
                 msg.Subject = "[YOYOLOOP] Lista de Viagens - " + date.ToString("D", ApplicationHelpers.DefaultCulture());
                 string body = string.Empty;
 
                 if (!trips.Any())
                 {
-                    body += "\r\nNão há viagens para " + date.ToString("D", ApplicationHelpers.DefaultCulture());
+                    body += "<br>Não há viagens para " + date.ToString("D", ApplicationHelpers.DefaultCulture());
                 }
                 else
                 {
-                    body += "\r\nViagens para " + date.ToString("D", ApplicationHelpers.DefaultCulture()) + ":";
-                    body += "\r\n";
-                    body += "\r\n";
+                    body += "<br>Viagens para " + date.ToString("D", ApplicationHelpers.DefaultCulture()) + ":";
+                    body += "<br>";
+                    body += "<br>";
                     trips = trips.OrderBy(t => t.StartTime).ToList();
                     foreach (Trip t in trips)
                     {
                         int ocup = t.Bookings.Where(b => b.Status == BookingStatus.BOOKED).Sum(b => b.Seats);
                         int free = capacity - ocup;
                         body += t.StartTime.ToShortTimeString() + " > " + t.StartAccessPoint.Region.Name + " (" + t.StartAccessPoint.Name + ") para " + t.EndAccessPoint.Region.Name + " (" + t.EndAccessPoint.Name + ")";
-                        body += "\r\n";
-                        body += "\tLugares: " + capacity.ToString() + " total, " + ocup.ToString() + " vendidos, " + free.ToString() + " disponíveis";
-                        body += "\r\n";
-                        body += "\r\n";
+                        body += "<br>";
+                        body += "&nbsp;&nbsp;&nbsp;&nbsp;Lugares: " + capacity.ToString() + " total, " + ocup.ToString() + " vendidos, " + free.ToString() + " disponíveis";
+                        body += "<br>";
+                        body += "<br>";
                     }
                 }
 
@@ -345,11 +345,11 @@ namespace MVP.Services
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
-                msg.IsBodyHtml = false;
+                msg.IsBodyHtml = true;
                 msg.Subject = "[YOYOLOOP] System Warning";
                 string body = string.Empty;
 
-                body += warning + "\r\n";
+                body += warning + "<br>";
 
                 msg.Body = body;
 
@@ -367,13 +367,13 @@ namespace MVP.Services
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
-                msg.IsBodyHtml = false;
+                msg.IsBodyHtml = true;
                 msg.Subject = "[YOYOLOOP] Sugestão de Loop";
                 string body = string.Empty;
 
-                body += "Sugestão enviada por: " + senderemail + "\r\n";
-                body += "\r\n";
-                body += "Mensagem: " + "\r\n";
+                body += "Sugestão enviada por: " + senderemail + "<br>";
+                body += "<br>";
+                body += "Mensagem: " + "<br>";
                 body += text;
 
                 msg.Body = body;
@@ -392,15 +392,15 @@ namespace MVP.Services
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
-                msg.IsBodyHtml = false;
+                msg.IsBodyHtml = true;
                 msg.Subject = "[YOYOLOOP] Mensagem Recebida";
                 string body = string.Empty;
 
-                body += "Mensagem enviada por: " + senderName + " (" + senderEmail + ")" + "\r\n";
-                body += "\r\n";
-                body += "Assunto: " + senderSubject + "\r\n";
-                body += "\r\n";
-                body += "Mensagem: " + "\r\n";
+                body += "Mensagem enviada por: " + senderName + " (" + senderEmail + ")" + "<br>";
+                body += "<br>";
+                body += "Assunto: " + senderSubject + "<br>";
+                body += "<br>";
+                body += "Mensagem: " + "<br>";
                 body += senderBody;
 
                 msg.Body = body;
