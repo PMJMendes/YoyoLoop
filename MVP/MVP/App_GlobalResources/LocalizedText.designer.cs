@@ -3094,6 +3094,186 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convida os teus amigos e viaja por apenas 3€.
+        /// </summary>
+        internal static string Profile_Invite_MainTitle {
+            get {
+                return ResourceManager.GetString("Profile_Invite_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda tens.
+        /// </summary>
+        internal static string Profile_Invite_MGMTrips1 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_MGMTrips1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to viagens de 3€ para aproveitar.
+        /// </summary>
+        internal static string Profile_Invite_MGMTrips2 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_MGMTrips2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copiar Link.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_btnCopyLink_Text {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_btnCopyLink_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_btnShare_Text {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_btnShare_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copied to clipboard.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_CopiedPopover {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_CopiedPopover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar por Email.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_email {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar no facebook.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_facebook {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_facebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar no linkedin.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_linkedin {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_linkedin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar no twitter.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_twitter {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_twitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já poupaste.
+        /// </summary>
+        internal static string Profile_Invite_Saved {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Saved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 3€.
+        /// </summary>
+        internal static string Profile_Invite_Why_Offer_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Offer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oferece viagens.
+        /// </summary>
+        internal static string Profile_Invite_Why_Offer_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Offer_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional.
+        /// </summary>
+        internal static string Profile_Invite_Why_Recommend_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Recommend_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop.
+        /// </summary>
+        internal static string Profile_Invite_Why_Recommend_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Recommend_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        /// </summary>
+        internal static string Profile_Invite_Why_Travel_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Travel_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viaja por 3€!.
+        /// </summary>
+        internal static string Profile_Invite_Why_Travel_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Travel_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Porto e Coimbra sem paragens e a preço de autocarro..
+        /// </summary>
+        internal static string Profile_Invite_YoyoloopWhy_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_YoyoloopWhy_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        /// </summary>
+        internal static string Profile_Invite_YoyoloopWhy_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_YoyoloopWhy_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O Meu perfil.
         /// </summary>
         internal static string Profile_MainTitle {

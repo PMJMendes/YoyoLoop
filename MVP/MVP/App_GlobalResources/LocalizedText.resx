@@ -2004,6 +2004,66 @@
   <data name="Profile_Billing_PaymentMethods_UpdateCard_SucessMessage" xml:space="preserve">
     <value>O cartão foi actualizado com sucesso</value>
   </data>
+  <data name="Profile_Invite_MainTitle" xml:space="preserve">
+    <value>Convida os teus amigos e viaja por apenas 3€</value>
+  </data>
+  <data name="Profile_Invite_MGMTrips1" xml:space="preserve">
+    <value>Ainda tens</value>
+  </data>
+  <data name="Profile_Invite_MGMTrips2" xml:space="preserve">
+    <value>viagens de 3€ para aproveitar</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_btnCopyLink_Text" xml:space="preserve">
+    <value>Copiar Link</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_btnShare_Text" xml:space="preserve">
+    <value>Partilhar</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_CopiedPopover" xml:space="preserve">
+    <value>Copied to clipboard</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_email" xml:space="preserve">
+    <value>Enviar por Email</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_facebook" xml:space="preserve">
+    <value>Partilhar no facebook</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_linkedin" xml:space="preserve">
+    <value>Partilhar no linkedin</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_twitter" xml:space="preserve">
+    <value>Partilhar no twitter</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
+    <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!</value>
+  </data>
+  <data name="Profile_Invite_Saved" xml:space="preserve">
+    <value>Já poupaste</value>
+  </data>
+  <data name="Profile_Invite_Why_Offer_Description" xml:space="preserve">
+    <value>Os teus amigos viajam para qualquer destino por apenas 3€</value>
+  </data>
+  <data name="Profile_Invite_Why_Offer_Title" xml:space="preserve">
+    <value>Oferece viagens</value>
+  </data>
+  <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
+    <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
+  </data>
+  <data name="Profile_Invite_Why_Recommend_Title" xml:space="preserve">
+    <value>Recomenda a Yoyoloop</value>
+  </data>
+  <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
+    <value>Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
+  </data>
+  <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
+    <value>Viaja por 3€!</value>
+  </data>
+  <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
+    <value>O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Porto e Coimbra sem paragens e a preço de autocarro.</value>
+  </data>
+  <data name="Profile_Invite_YoyoloopWhy_Title" xml:space="preserve">
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
+  </data>
   <data name="Profile_MainTitle" xml:space="preserve">
     <value>O Meu perfil</value>
   </data>
