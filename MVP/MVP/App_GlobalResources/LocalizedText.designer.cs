@@ -3031,6 +3031,177 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A revolucionar as cidades, um loop de cada vez..
+        /// </summary>
+        internal static string StaticPages_About_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_About_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SOBRE NOS.
+        /// </summary>
+        internal static string StaticPages_About_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cada um dos nossos shuttles são veículos de sete lugares. Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem..
+        /// </summary>
+        internal static string StaticPages_About_Shuttles_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Shuttles_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os nossos shuttles.
+        /// </summary>
+        internal static string StaticPages_About_Shuttles_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Shuttles_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br/&gt;&lt;br/&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string StaticPages_About_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_About_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante..
+        /// </summary>
+        internal static string StaticPages_About_Why_Accessible_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Accessible_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos desgaste,&lt;br&gt;mais na carteira.
+        /// </summary>
+        internal static string StaticPages_About_Why_Accessible_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Accessible_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acessível.
+        /// </summary>
+        internal static string StaticPages_About_Why_Accessible_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Accessible_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
+        /// </summary>
+        internal static string StaticPages_About_Why_Convenient_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Convenient_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick up e drop off&lt;br&gt;convenientes.
+        /// </summary>
+        internal static string StaticPages_About_Why_Convenient_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Convenient_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conveniente.
+        /// </summary>
+        internal static string StaticPages_About_Why_Convenient_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Convenient_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada..
+        /// </summary>
+        internal static string StaticPages_About_Why_Reliable_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Reliable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugar marcado,&lt;br&gt;à hora marcada.
+        /// </summary>
+        internal static string StaticPages_About_Why_Reliable_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Reliable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiável.
+        /// </summary>
+        internal static string StaticPages_About_Why_Reliable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Reliable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono..
+        /// </summary>
+        internal static string StaticPages_About_Why_Sustainable_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Sustainable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos carros,&lt;br&gt;mais cidade.
+        /// </summary>
+        internal static string StaticPages_About_Why_Sustainable_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Sustainable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sustentável.
+        /// </summary>
+        internal static string StaticPages_About_Why_Sustainable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Sustainable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tens alguma pergunta?.
+        /// </summary>
+        internal static string StaticPages_FAQ_Questions {
+            get {
+                return ResourceManager.GetString("StaticPages_FAQ_Questions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lê as nossas Perguntas Frequentes.
+        /// </summary>
+        internal static string StaticPages_FAQ_Questions_HelpLink {
+            get {
+                return ResourceManager.GetString("StaticPages_FAQ_Questions_HelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The card was declined..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_card_declined {
