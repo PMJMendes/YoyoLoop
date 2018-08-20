@@ -3319,6 +3319,415 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alterar email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A password que introduziste está incorreta.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu endereço de email foi alterado com sucesso.&lt;br/&gt;&lt;br/&gt;Enviámos um email para.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com um link para poderes confirmar o novo email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password atual.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduz a tua password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O endereço de email é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os endereços de email não coincidem.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMe" +
+                        "ssage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir o endereço de email é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_Title {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao alterar a tua password.&lt;br/&gt;&lt;br/&gt;Tenta outra vez ou.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to contacta-nos.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua password foi alterada com sucesso.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A password que introduziste está incorreta.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As passwords não coincidem.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMe" +
+                        "ssage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir nova password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir a nova password é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password atual.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduz a tua password actual.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbNewPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbNewPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A nova password é obrigatória.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_Title {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re-enviar Link.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviámos um email para.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com o link para poderes confirmar o teu email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus dados foram actualizados com sucesso.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduza uma data válida.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data de nascimento.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AAAA / MM / DD.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbEmail_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbName_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo do nome é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduza um número válido.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessa" +
+                        "ge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telemóvel.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dados pessoais.
+        /// </summary>
+        internal static string Profile_PersonalDetails_Title {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Validation of Anti-XSRF token failed..
         /// </summary>
         internal static string SiteMaster_Errors_AntiXSRF {

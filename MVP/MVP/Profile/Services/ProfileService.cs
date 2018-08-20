@@ -33,7 +33,7 @@ namespace MVP.Services
                 {
                     UserId = user.Id,
                     ContactName = user.ContactName,
-                    BirthDate = user.BirthDate == DateTime.MinValue ? string.Empty : user.BirthDate.ToString("dd/MM/yyyy"),
+                    BirthDate = user.BirthDate == DateTime.MinValue ? string.Empty : user.BirthDate.ToString("yyyy/MM/dd"),
                     Email = user.Email,
                     EmailConfirmed = user.EmailConfirmed,
                     //PhoneCountryCode = user.PhoneCountryCode,

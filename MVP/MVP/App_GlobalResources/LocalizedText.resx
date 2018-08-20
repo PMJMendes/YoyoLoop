@@ -2079,6 +2079,141 @@
   <data name="Profile_Menu_PersonalDetails" xml:space="preserve">
     <value>Dados pessoais</value>
   </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text" xml:space="preserve">
+    <value>Alterar email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure" xml:space="preserve">
+    <value>A password que introduziste está incorreta</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1" xml:space="preserve">
+    <value>O teu endereço de email foi alterado com sucesso.&lt;br/&gt;&lt;br/&gt;Enviámos um email para</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2" xml:space="preserve">
+    <value>com um link para poderes confirmar o novo email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label" xml:space="preserve">
+    <value>Password atual</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Introduz a tua password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label" xml:space="preserve">
+    <value>Novo endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage" xml:space="preserve">
+    <value>O endereço de email é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label" xml:space="preserve">
+    <value>Repetir endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Os endereços de email não coincidem</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage" xml:space="preserve">
+    <value>Repetir o endereço de email é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_Title" xml:space="preserve">
+    <value>Alterar endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text" xml:space="preserve">
+    <value>Alterar password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1" xml:space="preserve">
+    <value>Ocorreu um erro ao alterar a tua password.&lt;br/&gt;&lt;br/&gt;Tenta outra vez ou</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2" xml:space="preserve">
+    <value>contacta-nos</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess" xml:space="preserve">
+    <value>A tua password foi alterada com sucesso</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword" xml:space="preserve">
+    <value>A password que introduziste está incorreta</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>As passwords não coincidem</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label" xml:space="preserve">
+    <value>Repetir nova password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Repetir a nova password é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label" xml:space="preserve">
+    <value>Password atual</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Introduz a tua password actual</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Label" xml:space="preserve">
+    <value>Nova password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>A nova password é obrigatória</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_Title" xml:space="preserve">
+    <value>Alterar password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text" xml:space="preserve">
+    <value>Re-enviar Link</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1" xml:space="preserve">
+    <value>Enviámos um email para</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2" xml:space="preserve">
+    <value>com o link para poderes confirmar o teu email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage" xml:space="preserve">
+    <value>Os teus dados foram actualizados com sucesso</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Introduza uma data válida</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label" xml:space="preserve">
+    <value>Data de nascimento</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder" xml:space="preserve">
+    <value>AAAA / MM / DD</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed" xml:space="preserve">
+    <value>Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Label" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed" xml:space="preserve">
+    <value>Não Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Label" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo do nome é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Introduza um número válido</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed" xml:space="preserve">
+    <value>Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label" xml:space="preserve">
+    <value>Telemóvel</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed" xml:space="preserve">
+    <value>Não Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_Title" xml:space="preserve">
+    <value>Dados pessoais</value>
+  </data>
   <data name="StaticPages_Privacy_Eight" xml:space="preserve">
     <value>8. Nos termos legais, o utilizador tem, a todo o momento, direito à informação gratuita sobre os dados armazenados e eventualmente a correcção, bloqueio ou eliminação desses dados. Os pedidos de informação, correcção ou eliminação devem ser enviados por e-mail para clientes@goodlife.pt ou para goodlife! - Circunland S.A., - Estrada de Outurela, 118 - Parque Holanda - Edifício Holanda - 2790-114 Carnaxide.</value>
   </data>
