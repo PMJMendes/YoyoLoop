@@ -1663,6 +1663,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Não foi possivel encontrar o seu bilhete..
+        /// </summary>
+        internal static string DownloadTicket_ErrorMessage {
+            get {
+                return ResourceManager.GetString("DownloadTicket_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Promocode.
         /// </summary>
         internal static string General_Promocode {

@@ -1926,6 +1926,9 @@
   <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
     <value>Loops &amp; Horários</value>
   </data>
+  <data name="DownloadTicket_ErrorMessage" xml:space="preserve">
+    <value>Não foi possivel encontrar o seu bilhete.</value>
+  </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
     <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
   </data>

@@ -97,7 +97,7 @@
         </div>
         <p class="travel__card-past__last__users">
             <img src="/img/users-black.png" srcset="/img/users-black@2x.png 2x, /img/users-black@3x.png 3x">
-            <%= TicketBooking.Seats.ToString() %> <%= TicketBooking.Seats == 1 ? Resources.LocalizedText.General_Seat : Resources.LocalizedText.General_Seats %>
+            <%= TicketBooking.Seats.ToString() %> <%= TicketBooking.Seats == 1 ? " " + Resources.LocalizedText.General_Seat : " " + Resources.LocalizedText.General_Seats %>
         </p>
         <p class="travel__card-past__last__gray-text pb-0 mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Total%>"/></p>
         <p class="travel__card-past__last__price"><%= TicketBooking.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %></p>
