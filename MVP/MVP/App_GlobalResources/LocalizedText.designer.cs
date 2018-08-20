@@ -3265,6 +3265,1338 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Cascais a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Cascais, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP CASCAIS.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Coimbra, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Coimbra.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Coimbra.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP COIMBRA.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios&lt;br&gt; da cidade de Lisboa e o quinto maior concelho do país em termos de população..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Cascais_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Cascais_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Coimbra_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Coimbra_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, &lt;br&gt;todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Lisboa_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Lisboa_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Porto_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Porto_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino a.
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to voltar.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_btnBack_text {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_btnBack_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horários.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_Schedules {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_Schedules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_Stops {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_Stops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops com destino a.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tempo de viagem.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como chegar até ao teu transfer da Yoyoloop.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_Stops_StopCard_HowToGet {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_Stops_StopCard_HowToGet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DESTINO POPULAR.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Cascais a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Lisboa, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Lisboa.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Lisboa.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP LISBOA.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destinos populares.
+        /// </summary>
+        internal static string StaticPages_Destinos_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Revolucionar a mobilidade entre cidades, &lt;br&gt; Loop de cada vez.
+        /// </summary>
+        internal static string StaticPages_Destinos_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para o Porto a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para o Porto, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para o Porto.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens no Porto.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP PORTO.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha boleia a preço de autocarro.
+        /// </summary>
+        internal static string StaticPages_Destinos_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos desgaste, mais na carteira.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Accessible_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Accessible_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acessível.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Accessible_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Accessible_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick up e drop off convenientes.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Conveninent_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Conveninent_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conveniente.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Conveninent_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Conveninent_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugar marcado, à hora marcada.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Reliable_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Reliable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiável.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Reliable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Reliable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos carros, mais cidade.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Sustainable_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Sustainable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sustentável.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Sustainable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Sustainable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tens alguma pergunta?.
         /// </summary>
         internal static string StaticPages_FAQ_Questions {
