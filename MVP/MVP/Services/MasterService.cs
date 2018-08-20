@@ -115,7 +115,7 @@ namespace MVP.Services
                 var threshold = model.UpdateService.First().WarningThreshold;
                 if (elapsed > threshold)
                 {
-                    SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R", ApplicationHelpers.DefaultCulture()));
+                    SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("F", ApplicationHelpers.DefaultCulture()));
                     model.UpdateService.First().Warning = true;
                     model.SaveChanges();
                 }
@@ -314,7 +314,7 @@ namespace MVP.Services
                     body += "<br />DETALHES DA VIAGEM:";
                     body += "<br />Origem: " + trip.StartAccessPoint.Region.Name + " (<a href='" + trip.StartAccessPoint.GoogleLocation + "'>" + trip.StartAccessPoint.Name + "</a>)";
                     body += "<br />Destino: " + trip.EndAccessPoint.Region.Name + " (<a href='" + trip.EndAccessPoint.GoogleLocation + "'>" + trip.EndAccessPoint.Name + "</a>)";
-                    body += "<br />Hora: " + trip.StartTime.ToString("R", ApplicationHelpers.DefaultCulture());
+                    body += "<br />Hora: " + trip.StartTime.ToString("F", ApplicationHelpers.DefaultCulture());
                     body += "<br />";
                     body += "<br />OCUPAÇÃO:";
                     body += "<br />Total de lugares: " + capacity.ToString();

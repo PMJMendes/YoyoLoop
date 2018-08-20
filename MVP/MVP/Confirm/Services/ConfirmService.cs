@@ -95,7 +95,7 @@ namespace MVP.Services
 
                 string body = Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_TripConfirmed + "<br />";
                 body += Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_TicketCode + ": " + state.TicketCode.ToUpper() + "<br />";
-                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Date + ": " + state.StartTime.ToString("R");
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Date + ": " + state.StartTime.ToString("F");
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Origin + ": " + state.StartRegionName + " (<a href='" + state.StartAPLocation + "'>" + state.StartAPName + "</a>)";
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Destination + ": " + state.EndRegionName + " (<a href='" + state.EndAPLocation + "'>" + state.EndAPName + "</a>)";
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Seats + ": " + state.Seats.ToString();
