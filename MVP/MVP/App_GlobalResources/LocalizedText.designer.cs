@@ -4615,6 +4615,69 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e a preço de autocarro.
+        /// </summary>
+        internal static string StaticPages_HowTo_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa..
+        /// </summary>
+        internal static string StaticPages_HowTo_MainSubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_MainSubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to como apanhar boleia da yoyoloop?.
+        /// </summary>
+        internal static string StaticPages_HowTo_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 3€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
+        /// </summary>
+        internal static string StaticPages_HowTo_StepFour {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepFour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 - Escolhe onde queres ir e o teu ponto de partida e chegada preferidos..
+        /// </summary>
+        internal static string StaticPages_HowTo_StepOne {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 - Faz o download do teu bilhete e apresenta-o ao motorista no ponto de partida..
+        /// </summary>
+        internal static string StaticPages_HowTo_StepThree {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepThree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 - Paga o teu bilhete com cartão de crédito e com 100% segurança..
+        /// </summary>
+        internal static string StaticPages_HowTo_StepTwo {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepTwo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The card was declined..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_card_declined {

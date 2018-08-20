@@ -1671,4 +1671,25 @@
   <data name="StaticPages_FAQ_Questions_HelpLink" xml:space="preserve">
     <value>Lê as nossas Perguntas Frequentes</value>
   </data>
+  <data name="StaticPages_HowTo_MainDescription" xml:space="preserve">
+    <value>Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e a preço de autocarro</value>
+  </data>
+  <data name="StaticPages_HowTo_MainSubDescription" xml:space="preserve">
+    <value>A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa.</value>
+  </data>
+  <data name="StaticPages_HowTo_MainTitle" xml:space="preserve">
+    <value>como apanhar boleia da yoyoloop?</value>
+  </data>
+  <data name="StaticPages_HowTo_StepFour" xml:space="preserve">
+    <value>4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 3€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!</value>
+  </data>
+  <data name="StaticPages_HowTo_StepOne" xml:space="preserve">
+    <value>1 - Escolhe onde queres ir e o teu ponto de partida e chegada preferidos.</value>
+  </data>
+  <data name="StaticPages_HowTo_StepThree" xml:space="preserve">
+    <value>3 - Faz o download do teu bilhete e apresenta-o ao motorista no ponto de partida.</value>
+  </data>
+  <data name="StaticPages_HowTo_StepTwo" xml:space="preserve">
+    <value>2 - Paga o teu bilhete com cartão de crédito e com 100% segurança.</value>
+  </data>
 </root>
