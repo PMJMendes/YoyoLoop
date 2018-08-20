@@ -1926,6 +1926,54 @@
   <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
     <value>Loops &amp; Horários</value>
   </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
+    <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmEmail" xml:space="preserve">
+    <value>Por favor confirma o teu endereço de email, clicando</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmWhy" xml:space="preserve">
+    <value>Porque razão tenho de confirmar o meu email?</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_HereLink" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_Thankyou" xml:space="preserve">
+    <value>Obrigado pela tua preferência!</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_Title" xml:space="preserve">
+    <value>Bem-vindo à Yoyoloop!</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_YoyoloopTeam" xml:space="preserve">
+    <value>A equipa Yoyoloop.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Subject" xml:space="preserve">
+    <value>Bem-vindo à Yoyoloop!</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_HereLink" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetAnswer" xml:space="preserve">
+    <value>Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe.</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetPassword" xml:space="preserve">
+    <value>Por favor altera a tua palavra-passe, clicando</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetWhy" xml:space="preserve">
+    <value>Porque razão tenho de alterar a minha palavra passe?</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_Thankyou" xml:space="preserve">
+    <value>Obrigado pela tua preferência!</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_Title" xml:space="preserve">
+    <value>Foi solicitada a recuperação de palavra-passe na tua conta da</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_YoyoloopTeam" xml:space="preserve">
+    <value>A equipa Yoyoloop.</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
+    <value>Solicitada a recuperação de palavra-passe</value>
+  </data>
   <data name="Profile_Billing_BillingDetails_Save_SucessMessage" xml:space="preserve">
     <value>Os teus dados foram actualizados com sucesso</value>
   </data>

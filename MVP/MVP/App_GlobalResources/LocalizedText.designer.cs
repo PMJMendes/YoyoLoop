@@ -2743,6 +2743,150 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email..
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_ConfirmAnswer {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_ConfirmAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por favor confirma o teu endereço de email, clicando.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_ConfirmEmail {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_ConfirmEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porque razão tenho de confirmar o meu email?.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_ConfirmWhy {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_ConfirmWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aqui.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_HereLink {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_HereLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_Thankyou {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_Thankyou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bem-vindo à Yoyoloop!.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_Title {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_YoyoloopTeam {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_YoyoloopTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bem-vindo à Yoyoloop!.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Subject {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aqui.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_HereLink {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_HereLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe..
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_ResetAnswer {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_ResetAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por favor altera a tua palavra-passe, clicando.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_ResetPassword {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_ResetPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porque razão tenho de alterar a minha palavra passe?.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_ResetWhy {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_ResetWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_Thankyou {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_Thankyou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foi solicitada a recuperação de palavra-passe na tua conta da.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_Title {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_YoyoloopTeam {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_YoyoloopTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Solicitada a recuperação de palavra-passe.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Subject {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reserva Já.
         /// </summary>
         internal static string MyTrips_Empty_btnBookNow_Text {

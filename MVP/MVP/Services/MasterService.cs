@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using MVP.Models;
 using MVP.Models.Entities;
+using MVP.Models.Helpers;
 
 namespace MVP.Services
 {
@@ -60,17 +61,17 @@ namespace MVP.Services
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = true;
-                msg.Subject = "Bem-vindo à Yoyoloop!";
-                msg.Body = "Bem-vindo à Yoyoloop!<br />";
+                msg.Subject = Resources.LocalizedText.MasterService_SendEmailConfirmation_Subject;
+                msg.Body = Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_Title + "<br />";
                 msg.Body += "<br />";
-                msg.Body += "Por favor confirma o teu endereço de email, clicando <a href=\"" + callbackUrl + "\">aqui</a>.<br />";
+                msg.Body += Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_ConfirmEmail + " <a href=\"" + callbackUrl + "\">" + Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_HereLink + "</a>.<br />";
                 msg.Body += "<br />";
-                msg.Body += "Porque razão tenho de confirmar o meu email?<br />";
+                msg.Body += Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_ConfirmWhy + "<br />";
                 msg.Body += "<br />";
-                msg.Body += "<ul><li>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</li></ul>";
+                msg.Body += "<ul><li>" + Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_ConfirmAnswer + "</li></ul>";
                 msg.Body += "<br />";
-                msg.Body += "Obrigado pela tua preferência!<br />";
-                msg.Body += "A equipa Yoyoloop.";
+                msg.Body += Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_Thankyou + "<br />";
+                msg.Body += Resources.LocalizedText.MasterService_SendEmailConfirmation_Body_YoyoloopTeam;
                 msg.To.Add(email);
                 msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
                 client.Send(msg);
@@ -83,17 +84,17 @@ namespace MVP.Services
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = true;
-                msg.Subject = "Solicitada a recuperação de palavra-passe";
-                msg.Body = "Foi solicitada a recuperação de palavra-passe na tua conta da <a href=\"" + homepageUrl + "\">Yoyoloop</a>.<br />";
+                msg.Subject = Resources.LocalizedText.MasterService_SendResetPassword_Subject;
+                msg.Body = Resources.LocalizedText.MasterService_SendResetPassword_Body_Title + " <a href=\"" + homepageUrl + "\">Yoyoloop</a>.<br />";
                 msg.Body += "<br />";
-                msg.Body += "Por favor altera a tua palavra-passe, clicando <a href=\"" + callbackUrl + "\">aqui</a>.<br />";
+                msg.Body += Resources.LocalizedText.MasterService_SendResetPassword_Body_ResetPassword + " <a href=\"" + callbackUrl + "\">" + Resources.LocalizedText.MasterService_SendResetPassword_Body_HereLink + "</a>.<br />";
                 msg.Body += "<br />";
-                msg.Body += "Porque razão tenho de alterar a minha palavra passe?<br />";
+                msg.Body += Resources.LocalizedText.MasterService_SendResetPassword_Body_ResetWhy + "<br />";
                 msg.Body += "<br />";
-                msg.Body += "<ul><li>Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova paravra passe.</li></ul>";
+                msg.Body += "<ul><li>" + Resources.LocalizedText.MasterService_SendResetPassword_Body_ResetAnswer + "</li></ul>";
                 msg.Body += "<br />";
-                msg.Body += "Obrigado pela tua preferência!<br />";
-                msg.Body += "A equipa Yoyoloop.";
+                msg.Body += Resources.LocalizedText.MasterService_SendResetPassword_Body_Thankyou + "<br />";
+                msg.Body += Resources.LocalizedText.MasterService_SendResetPassword_Body_YoyoloopTeam;
                 msg.To.Add(msg.From);
                 msg.Bcc.Add(email);
                 msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
@@ -114,7 +115,7 @@ namespace MVP.Services
                 var threshold = model.UpdateService.First().WarningThreshold;
                 if (elapsed > threshold)
                 {
-                    SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R"));
+                    SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("R", ApplicationHelpers.DefaultCulture()));
                     model.UpdateService.First().Warning = true;
                     model.SaveChanges();
                 }
@@ -239,20 +240,22 @@ namespace MVP.Services
 
         public bool SendDailyList(DateTime date, List<Trip> trips, int capacity)
         {
+            // THIS IS AN INTERNAL EMAIL - NOT TRANSLATED AT THIS POINT
+
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = false;
-                msg.Subject = "[YOYOLOOP] Lista de Viagens - " + date.ToLongDateString();
+                msg.Subject = "[YOYOLOOP] Lista de Viagens - " + date.ToString("D", ApplicationHelpers.DefaultCulture());
                 string body = string.Empty;
 
                 if (!trips.Any())
                 {
-                    body += "\r\nNão há viagens para " + date.ToLongDateString();
+                    body += "\r\nNão há viagens para " + date.ToString("D", ApplicationHelpers.DefaultCulture());
                 }
                 else
                 {
-                    body += "\r\nViagens para " + date.ToLongDateString() + ":";
+                    body += "\r\nViagens para " + date.ToString("D", ApplicationHelpers.DefaultCulture()) + ":";
                     body += "\r\n";
                     body += "\r\n";
                     trips = trips.OrderBy(t => t.StartTime).ToList();
@@ -288,6 +291,8 @@ namespace MVP.Services
 
         public void SendPassengerList(Guid tripid)
         {
+            // THIS IS AN INTERNAL EMAIL - NOT TRANSLATED AT THIS POINT
+
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
@@ -309,7 +314,7 @@ namespace MVP.Services
                     body += "<br />DETALHES DA VIAGEM:";
                     body += "<br />Origem: " + trip.StartAccessPoint.Region.Name + " (<a href='" + trip.StartAccessPoint.GoogleLocation + "'>" + trip.StartAccessPoint.Name + "</a>)";
                     body += "<br />Destino: " + trip.EndAccessPoint.Region.Name + " (<a href='" + trip.EndAccessPoint.GoogleLocation + "'>" + trip.EndAccessPoint.Name + "</a>)";
-                    body += "<br />Hora: " + trip.StartTime.ToString("R");
+                    body += "<br />Hora: " + trip.StartTime.ToString("R", ApplicationHelpers.DefaultCulture());
                     body += "<br />";
                     body += "<br />OCUPAÇÃO:";
                     body += "<br />Total de lugares: " + capacity.ToString();
@@ -357,6 +362,8 @@ namespace MVP.Services
 
         public void SendSuggestion(string senderemail, string text)
         {
+            // THIS IS AN INTERNAL EMAIL - NOT TRANSLATED AT THIS POINT
+
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
@@ -380,6 +387,8 @@ namespace MVP.Services
 
         public void SendContactMessage(string senderName, string senderEmail, string senderSubject, string senderBody)
         {
+            // THIS IS AN INTERNAL EMAIL - NOT TRANSLATED AT THIS POINT
+
             SmtpClient client = new SmtpClient();
             using (MailMessage msg = new MailMessage())
             {
