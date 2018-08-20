@@ -691,7 +691,6 @@
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
     <Content Include="Ticket\Ticket.aspx" />
-    <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="Update.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -1127,15 +1126,6 @@
       <DependentUpon>Ticket.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ticket\TicketDTO.cs" />
-    <Compile Include="TripExplorer\Explore.aspx.cs">
-      <DependentUpon>Explore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TripExplorer\Explore.aspx.designer.cs">
-      <DependentUpon>Explore.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TripExplorer\ExploreDTO.cs" />
-    <Compile Include="TripExplorer\Services\ExploreService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
