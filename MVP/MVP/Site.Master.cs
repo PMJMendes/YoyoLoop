@@ -120,14 +120,14 @@ namespace MVP
         {
             Response.Cookies["langCookie"].Value = "pt-PT";
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
-            ScriptManager.RegisterStartupScript(upChangeLanguage, upChangeLanguage.GetType(), "changeLangPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('', '');},1);", true);
+            Response.Redirect(Request.Url.PathAndQuery);
         }
 
         protected void btnChangeLangEnglish_Click(object sender, EventArgs e)
         {
             Response.Cookies["langCookie"].Value = "en-US";
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
-            ScriptManager.RegisterStartupScript(upChangeLanguage, upChangeLanguage.GetType(), "changeLangPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('', '');},1);", true);
+            Response.Redirect(Request.Url.PathAndQuery);
         }
     }
 }
