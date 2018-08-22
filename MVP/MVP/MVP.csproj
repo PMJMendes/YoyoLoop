@@ -349,6 +349,7 @@
     <Content Include="img\cascais %281%29.jpg" />
     <Content Include="img\cascais.jpg" />
     <Content Include="img\Cascais.png" />
+    <Content Include="img\cascaisLoop.png" />
     <Content Include="img\check%402x.png" />
     <Content Include="img\check%403x.png" />
     <Content Include="img\check.png" />
@@ -363,6 +364,7 @@
     <Content Include="img\closebtn.png" />
     <Content Include="img\coimbra.jpg" />
     <Content Include="img\Coimbra.png" />
+    <Content Include="img\coimbraLoop.png" />
     <Content Include="img\comboio%402x.png" />
     <Content Include="img\comboio%403x.png" />
     <Content Include="img\comboio.png" />
@@ -375,6 +377,9 @@
     <Content Include="img\conveniente%402x.png" />
     <Content Include="img\conveniente%403x.png" />
     <Content Include="img\conveniente.png" />
+    <Content Include="img\curve%402x.png" />
+    <Content Include="img\curve%403x.png" />
+    <Content Include="img\curve.png" />
     <Content Include="img\destino.jpg" />
     <Content Include="img\diners-club%402x.png" />
     <Content Include="img\diners-club%403x.png" />
@@ -435,6 +440,10 @@
     <Content Include="img\instagram.png" />
     <Content Include="img\invitefriends%402x.png" />
     <Content Include="img\invitefriends%403x.png" />
+    <Content Include="img\Invitefriends-bg.png" />
+    <Content Include="img\invitefriends-selected%402x.png" />
+    <Content Include="img\invitefriends-selected%403x.png" />
+    <Content Include="img\invitefriends-selected.png" />
     <Content Include="img\invitefriends.png" />
     <Content Include="img\jcb%402x.png" />
     <Content Include="img\jcb%403x.png" />
@@ -444,6 +453,7 @@
     <Content Include="img\language.png" />
     <Content Include="img\leiria.jpg" />
     <Content Include="img\Leiria.png" />
+    <Content Include="img\leiriaLoop.png" />
     <Content Include="img\linkedin%402x.png" />
     <Content Include="img\linkedin%403x.png" />
     <Content Include="img\linkedin-btn%402x.png" />
