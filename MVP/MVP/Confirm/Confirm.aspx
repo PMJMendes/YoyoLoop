@@ -157,81 +157,81 @@
             <!-- END OF UNCONFIRMED EMAIL -->
         </div>
 
-        <div class="container-fluid travel__invite-friends pt-5 pb-5">
-            <div class="row pt-5 pb-5">
-                <div class="col-md-12 text-center">
-                    <h2 class="travel__invite-friends--title">
-                        Convida mais amigos e viaja por apenas 3€
-                    </h2>
-                </div>
-            </div>
+        <asp:UpdatePanel runat="server" ID="upPromoshare" UpdateMode="Conditional">
+            <ContentTemplate>
+                <div class="invitefriends__container invitefriends__container--third invitefriends__container--third--checkout">
 
-            <div class="d-flex justify-content-center pt-5">
-                <div class="col-md-6 text-right">
-                    <button type="button" class="travel__invite-friends--facebook btn btn-primary text-uppercase">
-                        <img src="/img/facebook-login.png"
-                            srcset="/img/facebook-login@2x.png 2x,
-                            /img/facebook-login@3x.png 3x"
-                            class="mr-2">
-                        Facebook
-                    </button>
-                </div>
-                <div class="col-md-6 text-left">
-                    <button type="button" class="travel__invite-friends--google btn btn-primary text-uppercase">
-                        <img src="/img/google-login.png"
-                            srcset="/img/google-login@2x.png 2x,
-                            /img/google-login@3x.png 3x"
-                            class="mr-2">
-                        Google
-                    </button>
-                </div>
-            </div>
+                    <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-4 invitefriends__promocode">
+                        <p class="invitefriends__promocode__text mb-5 text-center title">Convida os teus amigos e viaja por 3€</p>
+                        <p class="invitefriends__promocode__text mb-5 text-center">Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!</p>
 
-            <div class="d-flex justify-content-center pt-4">
-                <div class="col-md-6 text-right">
-                    <button type="button" class="travel__invite-friends--twitter btn btn-primary text-uppercase">
-                        <img src="/img/twiter.png"
-                            srcset="/img/twiter@2x.png 2x,
-                            /img/twiter@3x.png 3x"
-                            class="mr-2">
-                        Twitter
-                    </button>
-                </div>
-                <div class="col-md-6 text-left">
-                    <button type="button" class="travel__invite-friends--linkedin btn btn-primary text-uppercase d-flex justify-content-center align-items-center">
-                        <img src="/img/linkedin-btn.png"
-                            srcset="/img/linkedin-btn@2x.png 2x,
-                            /img/linkedin-btn@3x.png 3x"
-                            class="mr-2">
-                        Linkedin
-                    </button>
-                </div>
-            </div>
+                        <asp:PlaceHolder runat="server" ID="phCopyLink" Visible="true">
+                            <div id="copy-link-1" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
+                                <div class="invitefriends__promocode__input mr-5">
+                                    <div class="invitefriends__promocode__label">promocode</div>
+                                </div>
+                                <%-- <asp:LinkButton runat="server" ID="btnCopyLink" OnClick="btnCopyLink_Click" CssClass="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Copiar Link" />--%>
+                            </div>
+                        </asp:PlaceHolder>
 
-            <div class="d-flex justify-content-center align-items-center pt-4">
-                <div class="col-md-6">
-                    <p class="travel__invite-friends--or text-uppercase text-right">- OU -</p>
-                </div>
-                <div class="col-md-6 text-left">
-                    <button type="button" class="travel__invite-friends--share btn btn-primary text-uppercase">
-                        <img src="/img/share.png"
-                            srcset="/img/share@2x.png 2x,
-                            /img/share@3x.png 3x"
-                            class="mr-2">
-                        share
-                    </button>
-                </div>
-            </div>
+                        <asp:PlaceHolder runat="server" ID="phLinkCopied" Visible="false">
+                            <div id="copy-link-2" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
 
-            <div class="row pt-5 pb-5">
-                <div class="col-md-12 text-center">
-                    <p class="travel__invite-friends--description">
-                        Reserva o teu lugar num transfer de sete lugares conduzido
-                        por um motorista profissional e <br> aproveita uma viagem sem paragens, 
-                        com wifi a bordo e a preço de autocarro.
-                    </p>
+                                <!-- Copied popover -->
+                                <div class="invitefriends__popover invitefriends__popover--copied">
+                                    <div class="check">
+
+                                    </div>
+                                    Copied to clipboard
+                                </div>
+                                <!-- End of copied popover -->
+
+                                <div runat="server" id="PromocodeInput" class="invitefriends__promocode__input mr-5">
+                                    <div class="invitefriends__promocode__label">sgdsfgdfgdfg</div>
+                                    <div class="invitefriends__promocode__copy">Copy Link</div>
+                                </div>
+                                <%--<asp:LinkButton runat="server" ID="btnShare" OnClick="btnShare_Click" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Partilhar" />--%>
+
+                                <asp:PlaceHolder runat="server" ID="phSharePopover" Visible="false">
+                                    <!-- Share Popover -->
+                                    <div class="invitefriends__popover invitefriends__popover--register">
+                                        <div class="invitefriends__popover__link">
+                                            <img src="/img/face.png" srcset="/img/face@2x.png 2x, /img/face@3x.png 3x" class="face">
+                                            Partilhar no facebook
+                                        </div>
+                    
+                                        <div class="invitefriends__popover__separator"></div>
+
+                                        <div class="invitefriends__popover__link">
+                                            <img src="/img/twitter.png" srcset="/img/twitter@2x.png 2x, /img/twitter@3x.png 3x">
+                                            Partilhar no twitter
+                                        </div>
+
+                                        <div class="invitefriends__popover__separator"></div>
+
+                                        <div class="invitefriends__popover__link">
+                                            <img src="/img/linkedin.png" srcset="/img/linkedin@2x.png 2x, /img/linkedin@3x.png 3x">
+                                            Partilhar no linkedin
+                                        </div>
+
+                                        <div class="invitefriends__popover__separator"></div>
+
+                                        <div class="invitefriends__popover__link">
+                                            <img src="/img/email.png" srcset="/img/email@2x.png 2x, /img/email@3x.png 3x">
+                                            Enviar por Email
+                                        </div>
+                                    </div>
+                                    <!-- End of Share Popover -->
+                                </asp:PlaceHolder>
+                            </div>
+                        </asp:PlaceHolder>
+                        <p class="invitefriends__promocode__text mt-5 mb-3 text-center">
+                            Reserva o teu lugar num transfer de 7 lugares conduzido por um motorista profissional e<br />
+                            aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
 </asp:Content>

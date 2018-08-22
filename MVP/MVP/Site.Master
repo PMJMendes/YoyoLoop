@@ -175,7 +175,7 @@
                 <div class="footer__container d-flex flex-column justify-content-center">
                     <div class="container-fluid">
                         <div class="footer__first-row row p-5">
-                            <div class="col-md-3 d-flex align-items-center">
+                            <div class="col-md-3 d-flex align-items-center logo">
                                 <a OnClick="javascript:$.blockUI()" href="/"><img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/></a>
                             </div>
                             <div class="footer__column col-md-2">
@@ -221,19 +221,19 @@
                                     </div>
                                 </div>
                                 <div class="row pt-4">
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <img src="/img/jcb.png"
                                         srcset="/img/jcb@2x.png 2x,
                                                 /img/jcb@3x.png 3x"
                                         class="jcb">
                                     </div>
-                                    <div class="col-md-3 pl-0">
+                                    <div class="col-3 pl-0">
                                         <img src="/img/diners-club.png"
                                         srcset="/img/diners-club@2x.png 2x,
                                                 /img/diners-club@3x.png 3x"
                                         class="diners-club">
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <img src="/img/discover.png"
                                         srcset="/img/discover@2x.png 2x,
                                                 /img/discover@3x.png 3x"
@@ -241,19 +241,19 @@
                                     </div>
                                 </div>
                                 <div class="row pt-4">
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <img src="/img/amex.png"
                                         srcset="/img/amex@2x.png 2x,
                                                 /img/amex@3x.png 3x"
                                         class="amex">
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <img src="/img/visa.png"
                                         srcset="/img/visa@2x.png 2x,
                                                 /img/visa@3x.png 3x"
                                         class="visa">
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <img src="/img/master-card.png"
                                         srcset="/img/master-card@2x.png 2x,
                                                 /img/master-card@3x.png 3x"
@@ -286,8 +286,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-md-6 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Privacy">Politica de privacidade</a></div>
-                                    <div class="col-md-6 pl-0 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Terms">Termos e Condiçōes</a></div>
+                                    <div class="col-md-6 text-right privacy"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Privacy">Politica de privacidade</a></div>
+                                    <div class="col-md-6 pl-0 text-right conditions"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Terms">Termos e Condiçōes</a></div>
                                 </div>
                             </div>
                         </div>
