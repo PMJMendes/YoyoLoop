@@ -23,6 +23,7 @@ namespace MVP.Services
     {
         private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
         private readonly StripeCardService stripeCardService = new StripeCardService();
+        private readonly CheckoutService checkoutService = new CheckoutService();
 
         public ProfileDTO GetInitialData(string userid)
         {
@@ -125,7 +126,7 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = StripeErrorHandler(stripeError.Code);
+                    error = checkoutService.StripeErrorHandler(stripeError.Code);
                     if (string.IsNullOrEmpty(error))
                     {
                         error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
@@ -147,7 +148,7 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = StripeErrorHandler(stripeError.Code);
+                    error = checkoutService.StripeErrorHandler(stripeError.Code);
                     if (string.IsNullOrEmpty(error))
                     {
                         error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
@@ -169,7 +170,7 @@ namespace MVP.Services
             catch (StripeException ex)
             {
                 StripeError stripeError = ex.StripeError;
-                error = StripeErrorHandler(stripeError.Code);
+                error = checkoutService.StripeErrorHandler(stripeError.Code);
                 if (string.IsNullOrEmpty(error))
                 {
                     error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
@@ -207,7 +208,7 @@ namespace MVP.Services
             catch (StripeException ex)
             {
                 StripeError stripeError = ex.StripeError;
-                error = StripeErrorHandler(stripeError.Code);
+                error = checkoutService.StripeErrorHandler(stripeError.Code);
                 if (string.IsNullOrEmpty(error))
                 {
                     error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
@@ -242,47 +243,6 @@ namespace MVP.Services
             }
 
             return state;
-        }
-
-        public string StripeErrorHandler(string error)
-        {
-            string result;
-
-            switch (error)
-            {
-                case "incorrect_number":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_number;
-                    break;
-                case "invalid_number":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_number;
-                    break;
-                case "invalid_expiry_month":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_expiry_month;
-                    break;
-                case "invalid_expiry_year":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_expiry_year;
-                    break;
-                case "invalid_cvc":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_cvc;
-                    break;
-                case "expired_card":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_expired_card;
-                    break;
-                case "incorrect_cvc":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_cvc;
-                    break;
-                case "incorrect_zip":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_incorrect_zip;
-                    break;
-                case "card_declined":
-                    result = Resources.LocalizedText.Stripe_ErrorHandling_CardError_card_declined;
-                    break;
-                default:
-                    result = string.Empty;
-                    break;
-            }
-
-            return result;
         }
 
         public void UpdatePersonalDetails(ProfileDTO state)
