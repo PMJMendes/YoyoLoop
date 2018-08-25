@@ -132,28 +132,28 @@
                 <div class='d-flex flex-column align-items-center text-left'>
                     <a OnClick="javascript:$.blockUI()" href="/Profile/Profile" class="profile__menu__link <%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "profile__menu__link--selected" : "" %>">
                         <img class='mr-2' src='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "/img/profile-selected.png" : "/img/profile.png" %>' srcset='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Profile" ? "/img/profile-selected@2x.png 2x, /img/profile-selected@3x.png 3x" : "/img/profile@2x.png 2x, /img/profile@3x.png 3x" %>'>
-                        O Meu Perfil
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_ProfileMenu_Profile%>"/>
                     </a>
 
                     <div class='mt-3 mb-3 profile__menu__separator'></div>
                 
                     <a OnClick="javascript:$.blockUI()" href="/Profile/Billing" class="profile__menu__link <%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "profile__menu__link--selected" : "" %>">
                         <img class='mr-2' src='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "/img/billing-selected.png" : "/img/billing.png" %>' srcset='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "/img/billing-selected@2x.png 2x, /img/billing-selected@3x.png 3x" : "/img/billing@2x.png 2x, /img/billing@3x.png 3x" %>'>
-                        Detalhes de Faturação
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_ProfileMenu_Billing%>"/>
                     </a>
                 
                     <div class='mt-3 mb-3 profile__menu__separator'></div>
                 
                     <a OnClick="javascript:$.blockUI()" href='/Profile/Invite' class='profile__menu__link <%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Invite" ? "profile__menu__link--selected" : "" %>'>
                         <img class='mr-2' src='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Invite" ? "/img/invitefriends-selected.png" : "/img/invitefriends.png" %>' srcset='<%= HttpContext.Current.Request.Url.AbsolutePath == "/Profile/Billing" ? "/img/invitefriends-selected@2x.png 2x, /img/invitefriends-selected@3x.png 3x" : "/img/invitefriends@2x.png 2x, /img/invitefriends@3x.png 3x" %>'>
-                        Convidar amigos
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_ProfileMenu_Invite%>"/>
                     </a>
                 
                     <div class='mt-3 mb-3 profile__menu__separator'></div>
                 
                     <asp:LinkButton runat="server" ID="btnLogout" OnClientClick="javascript:$.blockUI()" OnClick="btnLogout_Click" CssClass="profile__menu__link">
                         <img class='mr-2' src='/img/logout.png' srcset='/img/logout@2x.png 2x, /img/logout@3x.png 3x'>
-                        Logout
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_ProfileMenu_Logout%>"/>
                     </asp:LinkButton>
 
                 </div>
@@ -180,20 +180,20 @@
                             </div>
                             <div class="footer__column col-md-2">
                                 <p><h2 class="text-uppercase">yoyoloop</h2></p>
-                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/About" class="">Sobre nós</a></p>
-                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/HowTo" class="">Como funciona</a></p>
-                                <p><a OnClick="javascript:$.blockUI()" href="/Help/Help" class="">Ajuda</a></p>
-                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="">Contacto</a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/About" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_About%>"/></a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/HowTo" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_HowTo%>"/></a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Help/Help" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_Help%>"/></a></p>
+                                <p><a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_Contact%>"/></a></p>
                             </div>
                             <div class="footer__column col-md-2">
-                                <p><h2 class="text-uppercase">Destinos</h2></p>
+                                <p><h2 class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Destinos%>"/></h2></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Cascais" class="">&rarr; Cascais</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Coimbra" class="">&rarr; Coimbra</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Porto" class="">&rarr; Porto</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Lisboa" class="">&rarr; Lisboa</a></p>
                             </div>
                             <div class="footer__column col-md-2">
-                                <p><h2 class="text-uppercase">Loops</h2></p>
+                                <p><h2 class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Loops%>"/></h2></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Cascais" class="">Lisboa &rarr; Cascais</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" class="">Lisboa &rarr; Coimbra</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Porto" class="">Lisboa &rarr; Porto</a></p>
@@ -212,8 +212,8 @@
                                                         <%= CurrentLanguage %>
                                                     </button>
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <asp:LinkButton runat="server" ID="btnChangeLangPortuguese" OnClientClick="javascript:$.blockUI()" OnClick="btnChangeLangPortuguese_Click" class="dropdown-item">Português</asp:LinkButton>
-                                                        <asp:LinkButton runat="server" ID="btnChangeLangEnglish" OnClientClick="javascript:$.blockUI()" OnClick="btnChangeLangEnglish_Click" class="dropdown-item">Inglês</asp:LinkButton>
+                                                        <asp:LinkButton runat="server" ID="btnChangeLangPortuguese" OnClientClick="javascript:$.blockUI()" OnClick="btnChangeLangPortuguese_Click" class="dropdown-item"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Language_Portuguese%>"/></asp:LinkButton>
+                                                        <asp:LinkButton runat="server" ID="btnChangeLangEnglish" OnClientClick="javascript:$.blockUI()" OnClick="btnChangeLangEnglish_Click" class="dropdown-item"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Language_English%>"/></asp:LinkButton>
                                                     </div>
                                                 </div>
                                             </ContentTemplate>
@@ -286,8 +286,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-md-6 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Privacy">Politica de privacidade</a></div>
-                                    <div class="col-md-6 pl-0 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Terms">Termos e Condiçōes</a></div>
+                                    <div class="col-md-6 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Privacy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Privacy%>"/></a></div>
+                                    <div class="col-md-6 pl-0 text-right"><a class="" OnClick="javascript:$.blockUI()" href="/Pages/Terms"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Terms%>"/></a></div>
                                 </div>
                             </div>
                         </div>

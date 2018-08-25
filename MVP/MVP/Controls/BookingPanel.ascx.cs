@@ -100,7 +100,7 @@ namespace MVP.Controls
                 BtnBook.BackColor = System.Drawing.Color.Gray;
                 BtnBook.ForeColor = System.Drawing.Color.White;
                 BtnBook.BorderColor = System.Drawing.Color.Black;
-                BtnBook.Text = "Viagem indisponível";
+                BtnBook.Text = Resources.LocalizedText.Controls_BookingPanel_btnBook_Unavailable_Text;
                 BtnBook.Enabled = false;
             }
             if(PanelData.Trigger == "promo")
@@ -110,7 +110,7 @@ namespace MVP.Controls
                     PanelData.PromoValid = false;
                     phPromoCheck.Visible = false;
                     phPromoError.Visible = false;
-                    tbPromo.Attributes.Add("placeholder", "Código promocional");
+                    tbPromo.Attributes.Add("placeholder", Resources.LocalizedText.Controls_BookingPanel_Promocode_tbPromo_placeholder);
                     tbPromo.Enabled = true;
                 }
                 else
@@ -182,7 +182,7 @@ namespace MVP.Controls
             {
                 l.ForeColor = System.Drawing.Color.Empty;
             }
-            BtnBook.Text = "Reservar";
+            BtnBook.Text = Resources.LocalizedText.Controls_BookingPanel_btnBook_Text;
             BtnBook.Enabled = true;
             BtnBook.ForeColor = System.Drawing.Color.Empty;
             BtnBook.BackColor = System.Drawing.Color.Empty;

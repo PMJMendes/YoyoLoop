@@ -102,6 +102,12 @@
             font-weight: 500;
             line-height: 2.5;
             color: #ff5f6d;
+
+            a:visited {
+                font-weight: 500 !important;
+                line-height: 2.5 !important;
+                color: #ff5f6d !important;
+            }
         }
     }
 

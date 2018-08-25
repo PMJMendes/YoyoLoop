@@ -8,7 +8,7 @@
                         <div class="modal-body">
                             <div class="row text-center">
                                 <div class="login__main-title text-uppercase col-12">
-                                    Yoyoloop login
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_MainTitle%>"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -23,7 +23,7 @@
                                         srcset="../img/facebook-login@2x.png 2x,
                                         ../img/facebook-login@3x.png 3x"
                                         class="facebook-login mr-2">
-                                        com Facebook
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_WithFacebook%>"/>
                                     </button>
                                 </div>
                                 <div class="login__google-row col-md-6 text-left">
@@ -32,47 +32,49 @@
                                         srcset="../img/google-login@2x.png 2x,
                                         ../img/google-login@3x.png 3x"
                                         class="google-login mr-2">
-                                        com Google
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_WithGoogle%>"/>
                                     </button>
                                 </div>
                             </div>
                             <div class="d-flex flex-row align-items-center pt-3 pb-3">
                                 <div class="col-5 pr-0"><hr></div>
-                                <div class="login__or d-flex align-items-center justify-content-center col-2 text-uppercase p-0">or</div>
+                                <div class="login__or d-flex align-items-center justify-content-center col-2 text-uppercase p-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_RegisterOr%>"/></div>
                                 <div class="col-5 pl-0 text-left"><hr></div>
                             </div>
                             <div class="login__with--email row">
-                                <div class="col-12 text-center text-uppercase">Para receberes o teu bilhete,<br>
-                                    primeiro precisamos dos teus dados
+                                <div class="col-12 text-center text-uppercase">
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_WithEmail%>"/>
+                                </div>
+                                <div class="col-12 text-center text-danger">
+                                    <asp:Literal runat="server" ID="RegisterErrorMessage" /> 
                                 </div>
                             </div>
-                            <span class="text-danger"> <!-- I need styling for error message summary -->
-                                <asp:Literal runat="server" ID="RegisterErrorMessage" /> 
+                            <span class="text-danger">
                                 <asp:ValidationSummary runat="server" ID="RegisterErrorSummary" ValidationGroup="Register" />
                             </span>
                             <div class="login__form d-flex flex-row align-items-center pt-3 pb-3">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" id="TbRegisterName" CssClass="form-control login__input" placeholder="Nome" />
-                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterName" CssClass="text-danger" Display="Dynamic" ErrorMessage="The name field is required." /> <!-- I need a css for this -->
+                                        <asp:TextBox runat="server" id="TbRegisterName" CssClass="form-control login__input" placeholder="<%$ Resources:LocalizedText, Controls_Register_tbRegisterName_placeholder%>" />
+                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterName" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterName_Validator_ErrorMessage%>" /> <!-- I need a css for this -->
                                     </div>
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" id="TbRegisterEmail" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Endereço de email" />
+                                        <asp:TextBox runat="server" id="TbRegisterEmail" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="<%$ Resources:LocalizedText, Controls_Register_tbRegisterEmail_placeholder%>" />
                                         <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The email field is required." /> <!-- I need a css for this -->
                                     </div>
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" id="TbRegisterConfirmEmail" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Repetir Endereço de email" />
-                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterConfirmEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm email field is required." /> <!-- I need a css for this -->
-                                        <asp:CompareValidator runat="server" ValidationGroup="Register" ControlToCompare="TbRegisterEmail" ControlToValidate="TbRegisterConfirmEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="The email and confirmation email do not match." /> <!-- I need a css for this -->
+                                        <asp:TextBox runat="server" id="TbRegisterConfirmEmail" TextMode="Email" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmEmail_placeholder%>" />
+                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterConfirmEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage%>" /> <!-- I need a css for this -->
+                                        <asp:CompareValidator runat="server" ValidationGroup="Register" ControlToCompare="TbRegisterEmail" ControlToValidate="TbRegisterConfirmEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage" /> <!-- I need a css for this -->
                                     </div>
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" id="TbRegisterPassword" TextMode="Password" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Password" />
-                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The password field is required." /> <!-- I need a css for this -->
+                                        <asp:TextBox runat="server" id="TbRegisterPassword" TextMode="Password" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="<%$ Resources:LocalizedText, Controls_Register_tbRegisterPassword_placeholder%>" />
+                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterPassword_Validator_ErrorMessage%>" /> <!-- I need a css for this -->
                                     </div>
                                     <div class="form-group">
-                                        <asp:TextBox runat="server" id="TbRegisterConfirmPassword" TextMode="Password" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="Repetir password" />
-                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." /> <!-- I need a css for this -->
-                                        <asp:CompareValidator runat="server" ValidationGroup="Register" ControlToCompare="TbRegisterPassword" ControlToValidate="TbRegisterConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." /> <!-- I need a css for this -->
+                                        <asp:TextBox runat="server" id="TbRegisterConfirmPassword" TextMode="Password" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmPassword_placeholder%>" />
+                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage%>" /> <!-- I need a css for this -->
+                                        <asp:CompareValidator runat="server" ValidationGroup="Register" ControlToCompare="TbRegisterPassword" ControlToValidate="TbRegisterConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage%>" /> <!-- I need a css for this -->
                                     </div>
                                 </div>
                             </div>
@@ -82,20 +84,19 @@
                                     <div class="form-group">
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input login__input--checkbox" id="campaigns">
-                                            <label class="form-check-label login__input--label" for="campaigns">Quero receber campanhas <br> promocionais da Yoyoloop
-                                            </label>
+                                            <label class="form-check-label login__input--label" for="campaigns"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_cbRegisterCampaigns%>"/></label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="login__log-in col-md-6">
-                                    <asp:Button runat="server" Id="btnRegisterContinue" CausesValidation="true" ValidationGroup="Register" CssClass="login__login btn btn-primary" Text="Continuar" OnClick="CreateUser_Click"/>
+                                    <asp:Button runat="server" Id="btnRegisterContinue" CausesValidation="true" ValidationGroup="Register" CssClass="login__login btn btn-primary" Text="<%$ Resources:LocalizedText, Controls_Register_btnRegisterContinue_Text%>" OnClick="CreateUser_Click"/>
                                 </div>
                             </div>
                         </div>
             
                         <hr class="login__separator--grey">
                         <div class="login__with--email row pb-5 pt-3">
-                            <div class="col-12 text-center text-uppercase">Já tens conta? <a class="pl-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Fazer login</a></div>
+                            <div class="col-12 text-center text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_HaveAccount%>"/> <a class="pl-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Register_LoginLink%>"/></a></div>
                         </div>
                     </div>
             </ContentTemplate>

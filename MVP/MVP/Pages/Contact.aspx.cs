@@ -85,7 +85,7 @@ namespace MVP.Pages
         protected void btnSend_Click(object sender, EventArgs e)
         {
             masterService.SendContactMessage(tbName.Text, tbEmail.Text, tbSubject.Text, tbBody.Text);
-            ApplicationHelpers.ShowMessage(this, "A tua mensagem foi enviada");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.StaticPages_Contact_ContactForm_Send_ShowMessage);
             UpdateContactPanel();
         }
     }

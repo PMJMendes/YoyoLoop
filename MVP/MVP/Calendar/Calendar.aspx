@@ -45,26 +45,26 @@
                     <div class="row">
                         <!-- DESTINO -->
                         <div class="col-lg-4 col-md-4 text-left">
-                            <span class="text-uppercase">Destino</span>
-                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="Escolher destino" OnItemSelected="DdlEndRegion_ItemSelected" />
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_DestinationDropdown_Label%>"/></span>
+                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_DestinationDropdown_SelectionPrompt%>" OnItemSelected="DdlEndRegion_ItemSelected" />
                         </div>
                         <!-- PARAGENS -->
                         <div class="col-lg-8 col-md-8 mx-auto text-left">
-                            <span class="text-uppercase">Paragem</span>
-                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndAP" SelectionPrompt="Escolher paragem" OnItemSelected="DdlEndAP_ItemSelected" />
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_Label%>"/></span>
+                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndAP" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_SelectionPrompt%>" OnItemSelected="DdlEndAP_ItemSelected" />
                         </div>
                     </div>
 
                     <div class="row mt-3">
                         <!-- ORIGEM -->
                         <div class="col-lg-4 col-md-4 text-left">
-                            <span class="text-uppercase">Origem</span>
-                            <yoyo:DropdownMenuButton runat="server" ID="DdlStartRegion" SelectionPrompt="Escolher origem" OnItemSelected="DdlStartRegion_ItemSelected" />
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_OriginDropdown_Label%>"/></span>
+                            <yoyo:DropdownMenuButton runat="server" ID="DdlStartRegion" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_OriginDropdown_SelectionPrompt%>" OnItemSelected="DdlStartRegion_ItemSelected" />
                         </div>      
                         <!-- PARAGENS -->
                         <div class="col-lg-8 col-md-8 mx-auto text-left">
-                            <span class="text-uppercase">Paragem</span>
-                            <yoyo:DropdownMenuButton runat="server" ID="DdlStartAP" SelectionPrompt="Escolher paragem" OnItemSelected="DdlStartAP_ItemSelected" />
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_Label%>"/></span>
+                            <yoyo:DropdownMenuButton runat="server" ID="DdlStartAP" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_SelectionPrompt%>" OnItemSelected="DdlStartAP_ItemSelected" />
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <!-- LUGARES -->
                     <div class="row">
                         <div class="col col-xs-6">
-                            <span class="text-uppercase">Lugares</span>
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_SeatsDropdown_Label%>"/></span>
                             <yoyo:DropdownFixed runat="server" ID="DdlSeats" OnItemSelected="DdlSeats_ItemSelected" />
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="cbReturnTrip">
                                 <label class="form-check-label text-uppercase" for="cbReturnTrip">
-                                    Ida e volta
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_cbReturnTrip_Label%>"/>
                                 </label>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
             <!-- PLACEHOLDER DIV -->
             <div ID="Placeholder" Class="<%= pnCalendar.Visible ? "hide" : "d-flex align-items-center justify-content-center mb-5" %>">
                 <div class="col-md-12 text-center">
-                    <h6 class="calendar-placeholder-text text-uppercase pt-4 pb-4">Escolhe o Destino e Origem da viagem</h6>
+                    <h6 class="calendar-placeholder-text text-uppercase pt-4 pb-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarPlaceholder_Text%>"/></h6>
                     <img class="img-responsive illustration" src="/img/illustration.png"  style="max-width: 1200px;">
                 </div>
             </div>
@@ -139,7 +139,7 @@
 
                         <!-- Today button -->
                         <div class="my-auto col text-right">
-                            <asp:button id="BtnMonthToday" runat="server" OnClick="CalBtnMonthToday" CssClass=" btn btn-today text-uppercase" Text="Hoje" />
+                            <asp:button id="BtnMonthToday" runat="server" OnClick="CalBtnMonthToday" CssClass=" btn btn-today text-uppercase" Text="<%$ Resources:LocalizedText, Calendar_CalendarHeader_btnToday_Text%>" />
                         </div>
                     </div>
                     <!-- END OF CALENDAR HEADER -->
@@ -175,19 +175,23 @@
                         <hr class="d-block d-sm-none">
                         <header>
                             <div class="row p-1 text-uppercase">
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Seg</h5>
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Ter</h5>
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Qua</h5>
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Qui</h5>
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Sex</h5>
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Sab</h5>
-                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center">Dom</h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Mon%>"/></h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Tue%>"/></h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Wed%>"/></h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Thu%>"/></h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Fri%>"/></h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Sat%>"/></h5>
+                                <h5 class="col p-1 m-0 text-center d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Header_Weekdays_Sun%>"/></h5>
                             </div>
                         </header>
                         <hr class="d-block d-sm-none">
-                        <div class="row border border-bottom-0">
-                            <yoyo:CalendarTable runat="server" id="CalDate" PopoverWrapper="destinationPopover" OnDaySelected="CalDate_DaySelected" OnTimeSelected="CalDate_TimeSelected" />
-                        </div>
+                            <asp:UpdatePanel runat="server" ID="upCalendarPanel">
+                                <ContentTemplate>
+                                    <div class="row border border-bottom-0">
+                                        <yoyo:CalendarTable runat="server" id="CalDate" PopoverWrapper="destinationPopover" OnDaySelected="CalDate_DaySelected" OnTimeSelected="CalDate_TimeSelected" />
+                                    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                         <hr class="d-block d-sm-none">
                     </div>
 
@@ -217,27 +221,27 @@
                     <!-- CALENDAR FOOTER -->
                     <div class="row p-3" id="calendar-footer">
                         <div class="col-6 text-nowrap">
-                            Ocupação:
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup%>"/>
                             <span class="pl-2">
                                 <img src="/img/ellipse-red.png"
                                     srcset="/img/ellipse-red@2x.png 2x,
                                         /img/ellipse-red@3x.png 3x"
                                     class="EllipseRed">
-                                Alta
+                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_High%>"/>
                             </span>
                             <span class="pl-2">
                                 <img src="/img/ellipse-yellow.png"
                                     srcset="/img/ellipse-yellow@2x.png 2x,
                                     /img/ellipse-yellow@3x.png 3x"
                                     class="EllipseRed">
-                                Média
+                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_Med%>"/>
                             </span>
                             <span class="pl-2">
                                 <img src="/img/ellipse-green.png"
                                     srcset="/img/ellipse-green@2x.png 2x,
                                     /img/ellipse-green@3x.png 3x"
                                     class="EllipseRed">
-                                Baixa
+                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_Low%>"/>
                             </span>
                         </div>
                     </div> 
@@ -247,8 +251,9 @@
                 <!-- LATERAL -->
                 <div ID="Lateral" class="col-lg-4 col-md-4 <%= pnCalendar.Visible ? "" : "hide" %>">
 
-                    <!--PROXIMA VIAGEM-->
-                    <div class="<%= BookingPanel.Visible ? "hide" : "sticky" %>">
+                    <!--PROXIMA VIAGEM HIDDEN FOR NOW -->
+                    <%--<div class="<%= BookingPanel.Visible ? "hide" : "sticky" %>">--%>
+                    <div class="hide">
                         <div class="row p-3 text-uppercase">
                             <div class="col-lg-12 d-flex justify-content-center align-self-center">
                                 Proxima Viagem

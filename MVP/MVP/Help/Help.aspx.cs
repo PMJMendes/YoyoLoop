@@ -56,7 +56,6 @@ namespace MVP.Help
         protected void MainTopicSelect(object sender, EventArgs e)
         {
             LinkButton button = (LinkButton)sender;
-            button.CssClass += "left-menu__entry--selected";
             string topic = button.ID;
 
             switch(topic)
@@ -132,16 +131,15 @@ namespace MVP.Help
             ShowHelpList();
         }
 
-        protected void ddlMobileMenu_ServerChange(object sender, EventArgs e)
-        {
-            localData.SelectedTopic = ddlMobileMenu.Value;
-            ShowHelpList();
-        }
-
         protected void btnBack_Click(object sender, EventArgs e)
         {
             ShowHelpMain();
         }
 
+        protected void ddlMobileMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            localData.SelectedTopic = ddlMobileMenu.SelectedValue;
+            ShowHelpList();
+        }
     }
 }

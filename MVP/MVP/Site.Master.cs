@@ -84,22 +84,22 @@ namespace MVP
                 // Validate the Anti-XSRF token
                 if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
                 {
-                    throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
+                    throw new InvalidOperationException(Resources.LocalizedText.SiteMaster_Errors_AntiXSRF);
                 }
             }
 
-            CurrentLanguage = "Português";
+            CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
             HttpCookie langCookie = Request.Cookies["langCookie"];
             if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
             {
                 switch(langCookie.Value)
                 {
                     case "en-US":
-                        CurrentLanguage = "Inglês";
+                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
                         break;
                     case "pt-PT":
                     default:
-                        CurrentLanguage = "Português";
+                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
                         break;
                 }
             }

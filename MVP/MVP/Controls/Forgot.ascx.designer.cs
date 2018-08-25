@@ -22,24 +22,6 @@ namespace MVP.Controls {
         protected global::System.Web.UI.UpdatePanel upForgot;
         
         /// <summary>
-        /// TbForgotEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbForgotEmail;
-        
-        /// <summary>
-        /// btnForgot control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnForgot;
-        
-        /// <summary>
         /// ErrorMessage control.
         /// </summary>
         /// <remarks>
@@ -65,5 +47,23 @@ namespace MVP.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder DisplayEmail;
+        
+        /// <summary>
+        /// TbForgotEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TbForgotEmail;
+        
+        /// <summary>
+        /// btnForgot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnForgot;
     }
 }

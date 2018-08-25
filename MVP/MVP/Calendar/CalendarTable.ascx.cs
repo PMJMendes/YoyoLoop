@@ -148,11 +148,11 @@ namespace MVP.Calendar
                     control.Flag = CalendarDay.DayFlag.Available;
                     break;
                 case SlotStatus.RED:
-                    control.InfoText = "Quase cheio";
+                    control.InfoText = Resources.LocalizedText.Calendar_Controls_CalendarTable_DayInfoText_RED;
                     control.Flag = CalendarDay.DayFlag.Limited;
                     break;
                 case SlotStatus.BLACK:
-                    control.InfoText = "Esgotado";
+                    control.InfoText = Resources.LocalizedText.Calendar_Controls_CalendarTable_DayInfoText_BLACK;
                     control.Flag = CalendarDay.DayFlag.Unavailable;
                     break;
                 case SlotStatus.NONE:

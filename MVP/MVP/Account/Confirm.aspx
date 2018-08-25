@@ -7,15 +7,15 @@
             <div class="container-fluid">
                 <div style="position:relative;top:100px;left:-50px;text-align:center">
                     <asp:PlaceHolder runat="server" ID="successPanel" ViewStateMode="Disabled" Visible="true">
-                            <h1 class="travel__main-title">Obrigado por confirmares o teu email.</h1>
+                            <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Account_ConfirmEmail_MainTitle%>"/></h1>
                             <asp:PlaceHolder runat="server" ID="redirectPanel" ViewStateMode="Disabled" Visible="false">
                                 <div class="travel__copy-bold" style="position:relative;top:50px;left:-50px;text-align:center">
-                                    Vais ser redirecionado para o teu bilhete dentro de segundos.
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Account_ConfirmEmail_TicketRedirect%>"/>
                                 </div>
                             </asp:PlaceHolder>
                     </asp:PlaceHolder>
                     <asp:PlaceHolder runat="server" ID="errorPanel" ViewStateMode="Disabled" Visible="false">
-                            <h1 class="travel__main-title">An error has occurred.</h1>
+                            <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Account_ConfirmEmail_Error%>"/></h1>
                     </asp:PlaceHolder>
                 </div>
             </div>

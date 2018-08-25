@@ -61,6 +61,3925 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error has occurred..
+        /// </summary>
+        internal static string Account_ConfirmEmail_Error {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado por confirmares o teu email..
+        /// </summary>
+        internal static string Account_ConfirmEmail_MainTitle {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vais ser redirecionado para o teu bilhete dentro de segundos..
+        /// </summary>
+        internal static string Account_ConfirmEmail_TicketRedirect {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_TicketRedirect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string Account_ResetPassword_btnReset_Text {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_btnReset_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error has occurred..
+        /// </summary>
+        internal static string Account_ResetPassword_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your new password.
+        /// </summary>
+        internal static string Account_ResetPassword_MainTitle {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password was changed sucessfully..
+        /// </summary>
+        internal static string Account_ResetPassword_SuccessMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_SuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        /// </summary>
+        internal static string Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir password.
+        /// </summary>
+        internal static string Account_ResetPassword_tbConfirmPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbConfirmPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The confirm password field is required..
+        /// </summary>
+        internal static string Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Account_ResetPassword_tbEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Account_ResetPassword_tbEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova password.
+        /// </summary>
+        internal static string Account_ResetPassword_tbPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password field is required..
+        /// </summary>
+        internal static string Account_ResetPassword_tbPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Account_ResetPassword_tbPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry but this trip is no longer available..
+        /// </summary>
+        internal static string Calendar_BookingPanel_Booking_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Calendar_BookingPanel_Booking_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hoje.
+        /// </summary>
+        internal static string Calendar_CalendarHeader_btnToday_Text {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarHeader_btnToday_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolhe o Destino e Origem da viagem.
+        /// </summary>
+        internal static string Calendar_CalendarPlaceholder_Text {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarPlaceholder_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocupação:.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alta.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup_High {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup_High", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Baixa.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup_Low {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup_Low", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Média.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Footer_Ocup_Med {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Footer_Ocup_Med", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Fri {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Fri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seg.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Mon {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Mon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sab.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Sat {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Sat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dom.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Sun {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Sun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qui.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Thu {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Thu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ter.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Tue {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Tue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qua.
+        /// </summary>
+        internal static string Calendar_CalendarTable_Header_Weekdays_Wed {
+            get {
+                return ResourceManager.GetString("Calendar_CalendarTable_Header_Weekdays_Wed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esgotado.
+        /// </summary>
+        internal static string Calendar_Controls_CalendarTable_DayInfoText_BLACK {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_CalendarTable_DayInfoText_BLACK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quase cheio.
+        /// </summary>
+        internal static string Calendar_Controls_CalendarTable_DayInfoText_RED {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_CalendarTable_DayInfoText_RED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Calendar_Controls_Popover_Header_DestinationLabel {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_Popover_Header_DestinationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Calendar_Controls_Popover_Header_OriginLabel {
+            get {
+                return ResourceManager.GetString("Calendar_Controls_Popover_Header_OriginLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragem.
+        /// </summary>
+        internal static string Calendar_Header_APDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_APDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolher paragem.
+        /// </summary>
+        internal static string Calendar_Header_APDropdown_SelectionPrompt {
+            get {
+                return ResourceManager.GetString("Calendar_Header_APDropdown_SelectionPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ida e volta.
+        /// </summary>
+        internal static string Calendar_Header_cbReturnTrip_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_cbReturnTrip_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Calendar_Header_DestinationDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_DestinationDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolher destino.
+        /// </summary>
+        internal static string Calendar_Header_DestinationDropdown_SelectionPrompt {
+            get {
+                return ResourceManager.GetString("Calendar_Header_DestinationDropdown_SelectionPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Calendar_Header_OriginDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_OriginDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolher origem.
+        /// </summary>
+        internal static string Calendar_Header_OriginDropdown_SelectionPrompt {
+            get {
+                return ResourceManager.GetString("Calendar_Header_OriginDropdown_SelectionPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugares.
+        /// </summary>
+        internal static string Calendar_Header_SeatsDropdown_Label {
+            get {
+                return ResourceManager.GetString("Calendar_Header_SeatsDropdown_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar detalhes de facturação.
+        /// </summary>
+        internal static string Checkout_Billing_cbSaveDetails_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_cbSaveDetails_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morada.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceAddress_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceAddress_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cidade.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceCity_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceCity_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome da Empresa.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceCompany_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceCompany_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceName_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NIF.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceNIF_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceNIF_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código postal.
+        /// </summary>
+        internal static string Checkout_Billing_tbInvoiceZIP_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_tbInvoiceZIP_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de facturação.
+        /// </summary>
+        internal static string Checkout_Billing_Title {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This booking has expired.
+        /// </summary>
+        internal static string Checkout_BookingExpired_Message {
+            get {
+                return ResourceManager.GetString("Checkout_BookingExpired_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar novamente.
+        /// </summary>
+        internal static string Checkout_BookingExpired_RedirectLink_Text {
+            get {
+                return ResourceManager.GetString("Checkout_BookingExpired_RedirectLink_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagar.
+        /// </summary>
+        internal static string Checkout_btnPay_Text {
+            get {
+                return ResourceManager.GetString("Checkout_btnPay_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Método de pagamento.
+        /// </summary>
+        internal static string Checkout_ddlCardMenu_Label {
+            get {
+                return ResourceManager.GetString("Checkout_ddlCardMenu_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagar e Confirmar.
+        /// </summary>
+        internal static string Checkout_MainTitle {
+            get {
+                return ResourceManager.GetString("Checkout_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar dados do cartão.
+        /// </summary>
+        internal static string Checkout_Payform_cbSaveCard_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Payform_cbSaveCard_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome do titular.
+        /// </summary>
+        internal static string Checkout_Payform_tbCardHolderName_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Payform_tbCardHolderName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número do cartão.
+        /// </summary>
+        internal static string Checkout_Payform_tbCardNumber_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Payform_tbCardNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tem de aceitar os Termos &amp; condiçōes.
+        /// </summary>
+        internal static string Checkout_Policy_cbTerms_Error {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_cbTerms_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aceito os.
+        /// </summary>
+        internal static string Checkout_Policy_cbTerms_Label1 {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_cbTerms_Label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos &amp; condiçōes.
+        /// </summary>
+        internal static string Checkout_Policy_cbTerms_Label2 {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_cbTerms_Label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Política de cancelamento.
+        /// </summary>
+        internal static string Checkout_Policy_SubTitle {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podes cancelar a tua viagem até 48 horas antes da hora de partida. O valor que pagaste será transformado em crédito e podes encontrá-lo tua conta para utilizar em futuras viagens..
+        /// </summary>
+        internal static string Checkout_Policy_Text {
+            get {
+                return ResourceManager.GetString("Checkout_Policy_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código promocional.
+        /// </summary>
+        internal static string Checkout_Promocode_tbPromo_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Promocode_tbPromo_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserir código.
+        /// </summary>
+        internal static string Checkout_Promocode_tbPromo_placeholder {
+            get {
+                return ResourceManager.GetString("Checkout_Promocode_tbPromo_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Booking no longer valid.
+        /// </summary>
+        internal static string Checkout_Service_ProcessPayment_BookingErrorMessage {
+            get {
+                return ResourceManager.GetString("Checkout_Service_ProcessPayment_BookingErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagamento.
+        /// </summary>
+        internal static string Checkout_SubTitle {
+            get {
+                return ResourceManager.GetString("Checkout_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to share.
+        /// </summary>
+        internal static string Confirm_Invite_btnShare_Text {
+            get {
+                return ResourceManager.GetString("Confirm_Invite_btnShare_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro..
+        /// </summary>
+        internal static string Confirm_Invite_Description {
+            get {
+                return ResourceManager.GetString("Confirm_Invite_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convida mais amigos e viaja por apenas 3€.
+        /// </summary>
+        internal static string Confirm_Invite_Title {
+            get {
+                return ResourceManager.GetString("Confirm_Invite_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vamos enviar a tua fatura para.
+        /// </summary>
+        internal static string Confirm_InvoiceSend {
+            get {
+                return ResourceManager.GetString("Confirm_InvoiceSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem está confirmada.
+        /// </summary>
+        internal static string Confirm_MainTitle {
+            get {
+                return ResourceManager.GetString("Confirm_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus Bilhetes.
+        /// </summary>
+        internal static string Confirm_MyTickets {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adicionar ao calendário.
+        /// </summary>
+        internal static string Confirm_MyTickets_AddToCalendar {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_AddToCalendar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to download.
+        /// </summary>
+        internal static string Confirm_MyTickets_btnDownload_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_btnDownload_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receber por email.
+        /// </summary>
+        internal static string Confirm_MyTickets_btnEmail_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_btnEmail_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Receber por SMS.
+        /// </summary>
+        internal static string Confirm_MyTickets_btnSMS_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_btnSMS_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infelizmente o serviço de Calendário não se encontra disponível.
+        /// </summary>
+        internal static string Confirm_MyTickets_Calendar_ShowMessage_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_Calendar_ShowMessage_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviámos um email para.
+        /// </summary>
+        internal static string Confirm_MyTickets_Email_ShowMessage_Text1 {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_Email_ShowMessage_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com os detalhes do teu bilhete..
+        /// </summary>
+        internal static string Confirm_MyTickets_Email_ShowMessage_Text2 {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_Email_ShowMessage_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infelizmente o serviço de SMS não se encontra disponível.
+        /// </summary>
+        internal static string Confirm_MyTickets_SMS_ShowMessage_Text {
+            get {
+                return ResourceManager.GetString("Confirm_MyTickets_SMS_ShowMessage_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podes aceder ao teu bilhete em qualquer altura.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_AccessTicket {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_AccessTicket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Date {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Destination {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preço Final.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_FinalCost {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_FinalCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convida amigos e viaja a 3€.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Invite {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Origin {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugares.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_Seats {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_ThankYou {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_ThankYou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código do bilhete.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_TicketCode {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_TicketCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem está confirmada..
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_TripConfirmed {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_TripConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_YoyoloopTeam {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_YoyoloopTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aqui.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_HereLink {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_HereLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem de.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Subject1 {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Subject1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to para.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Subject2 {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Subject2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to está confirmada.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Subject3 {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Subject3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email..
+        /// </summary>
+        internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando.
+        /// </summary>
+        internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porque razão tenho de confirmar o meu email?.
+        /// </summary>
+        internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encontra o teu bilhete em.
+        /// </summary>
+        internal static string Confirm_SubTitle {
+            get {
+                return ResourceManager.GetString("Confirm_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re-enviar Link.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_btnResendLink_Text {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_btnResendLink_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Em caso de problemas,.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_Problems {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_Problems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to contacta-nos.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_Problems_ContactLink {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_Problems_ContactLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviámos um email para.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1 {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com o link para poderes confirmar o teu email..
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2 {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para teres acesso ao teu bilhete, confirma por favor o teu email.&lt;br&gt;Enviámos link de acesso ao teu bilhete para.
+        /// </summary>
+        internal static string Confirm_UnconfirmedEmail_Text {
+            get {
+                return ResourceManager.GetString("Confirm_UnconfirmedEmail_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string Controls_BookingPanel_btnBook_Text {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_btnBook_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagem indisponível.
+        /// </summary>
+        internal static string Controls_BookingPanel_btnBook_Unavailable_Text {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_btnBook_Unavailable_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Controls_BookingPanel_Destination {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preço Final.
+        /// </summary>
+        internal static string Controls_BookingPanel_FinalPrice {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_FinalPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ida.
+        /// </summary>
+        internal static string Controls_BookingPanel_Going {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Going", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Idas.
+        /// </summary>
+        internal static string Controls_BookingPanel_Goings {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Goings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Controls_BookingPanel_Origin {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resumo.
+        /// </summary>
+        internal static string Controls_BookingPanel_PriceSummary {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_PriceSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to por Lugar.
+        /// </summary>
+        internal static string Controls_BookingPanel_Price_PerSeat {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Price_PerSeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não tenho código promocional.
+        /// </summary>
+        internal static string Controls_BookingPanel_Promocode_DontHaveLink {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Promocode_DontHaveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tenho um código promocional.
+        /// </summary>
+        internal static string Controls_BookingPanel_Promocode_HaveLink {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Promocode_HaveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserir código.
+        /// </summary>
+        internal static string Controls_BookingPanel_Promocode_tbPromo_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_BookingPanel_Promocode_tbPromo_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string Controls_Forgot_btnForgot_Text {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_btnForgot_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yoyoloop login.
+        /// </summary>
+        internal static string Controls_Forgot_MainTitle {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda não tens conta?.
+        /// </summary>
+        internal static string Controls_Forgot_NoAccount {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_NoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registar.
+        /// </summary>
+        internal static string Controls_Forgot_RegisterLink {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_RegisterLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This user does not exist..
+        /// </summary>
+        internal static string Controls_Forgot_ResultMessage_Failure {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_ResultMessage_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please check your email to reset your password..
+        /// </summary>
+        internal static string Controls_Forgot_ResultMessage_Success {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_ResultMessage_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esqueceste a password?.
+        /// </summary>
+        internal static string Controls_Forgot_SubTitle_1 {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_SubTitle_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduz o teu email.
+        /// </summary>
+        internal static string Controls_Forgot_SubTitle_2 {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_SubTitle_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Controls_Forgot_tbForgotEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_tbForgotEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Controls_Forgot_tbForgotEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Forgot_tbForgotEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entrar.
+        /// </summary>
+        internal static string Controls_Login_btnLogin_Text {
+            get {
+                return ResourceManager.GetString("Controls_Login_btnLogin_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lembrar-me da &lt;br&gt;password.
+        /// </summary>
+        internal static string Controls_Login_cbRememberMe {
+            get {
+                return ResourceManager.GetString("Controls_Login_cbRememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esqueci-me da password.
+        /// </summary>
+        internal static string Controls_Login_ForgotPassword {
+            get {
+                return ResourceManager.GetString("Controls_Login_ForgotPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid login attempt.
+        /// </summary>
+        internal static string Controls_Login_LoginMessageFailure_Text {
+            get {
+                return ResourceManager.GetString("Controls_Login_LoginMessageFailure_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login sucessful.
+        /// </summary>
+        internal static string Controls_Login_LoginMessageSucess_Text {
+            get {
+                return ResourceManager.GetString("Controls_Login_LoginMessageSucess_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to or.
+        /// </summary>
+        internal static string Controls_Login_LoginOr {
+            get {
+                return ResourceManager.GetString("Controls_Login_LoginOr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yoyoloop Login.
+        /// </summary>
+        internal static string Controls_Login_MainTitle {
+            get {
+                return ResourceManager.GetString("Controls_Login_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda não tens conta?.
+        /// </summary>
+        internal static string Controls_Login_NoAccount {
+            get {
+                return ResourceManager.GetString("Controls_Login_NoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registar.
+        /// </summary>
+        internal static string Controls_Login_RegisterLink {
+            get {
+                return ResourceManager.GetString("Controls_Login_RegisterLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Controls_Login_tbLoginEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Controls_Login_tbLoginEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Controls_Login_tbLoginPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password field is required..
+        /// </summary>
+        internal static string Controls_Login_tbLoginPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Login_tbLoginPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Regista-te com o teu email.
+        /// </summary>
+        internal static string Controls_Login_WithEmail {
+            get {
+                return ResourceManager.GetString("Controls_Login_WithEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Facebook.
+        /// </summary>
+        internal static string Controls_Login_WithFacebook {
+            get {
+                return ResourceManager.GetString("Controls_Login_WithFacebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Google.
+        /// </summary>
+        internal static string Controls_Login_WithGoogle {
+            get {
+                return ResourceManager.GetString("Controls_Login_WithGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continuar.
+        /// </summary>
+        internal static string Controls_Register_btnRegisterContinue_Text {
+            get {
+                return ResourceManager.GetString("Controls_Register_btnRegisterContinue_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quero receber campanhas&lt;br&gt;promocionais da Yoyoloop.
+        /// </summary>
+        internal static string Controls_Register_cbRegisterCampaigns {
+            get {
+                return ResourceManager.GetString("Controls_Register_cbRegisterCampaigns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já tens conta?.
+        /// </summary>
+        internal static string Controls_Register_HaveAccount {
+            get {
+                return ResourceManager.GetString("Controls_Register_HaveAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fazer login.
+        /// </summary>
+        internal static string Controls_Register_LoginLink {
+            get {
+                return ResourceManager.GetString("Controls_Register_LoginLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yoyoloop login.
+        /// </summary>
+        internal static string Controls_Register_MainTitle {
+            get {
+                return ResourceManager.GetString("Controls_Register_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro.
+        /// </summary>
+        internal static string Controls_Register_RegisterMessage_Failure {
+            get {
+                return ResourceManager.GetString("Controls_Register_RegisterMessage_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to or.
+        /// </summary>
+        internal static string Controls_Register_RegisterOr {
+            get {
+                return ResourceManager.GetString("Controls_Register_RegisterOr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email and confirmation email do not match..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir Endereço de email.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The confirm email field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir password.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The confirm password field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterEmail_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterEmail_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterEmail_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterName_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterName_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterName_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterName_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password field is required..
+        /// </summary>
+        internal static string Controls_Register_tbRegisterPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para receberes o teu bilhete,&lt;br&gt;primeiro precisamos dos teus dados.
+        /// </summary>
+        internal static string Controls_Register_WithEmail {
+            get {
+                return ResourceManager.GetString("Controls_Register_WithEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Facebook.
+        /// </summary>
+        internal static string Controls_Register_WithFacebook {
+            get {
+                return ResourceManager.GetString("Controls_Register_WithFacebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com Google.
+        /// </summary>
+        internal static string Controls_Register_WithGoogle {
+            get {
+                return ResourceManager.GetString("Controls_Register_WithGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar novamente.
+        /// </summary>
+        internal static string Controls_Ticket_BookAgain {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_BookAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string Controls_Ticket_btnBooking_Text {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_btnBooking_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ver reserva.
+        /// </summary>
+        internal static string Controls_Ticket_btnViewBooking_Text {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_btnViewBooking_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancelada.
+        /// </summary>
+        internal static string Controls_Ticket_Canceled {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Canceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completada.
+        /// </summary>
+        internal static string Controls_Ticket_Completed {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino.
+        /// </summary>
+        internal static string Controls_Ticket_Destination {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ver Detalhe.
+        /// </summary>
+        internal static string Controls_Ticket_Details {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IDA.
+        /// </summary>
+        internal static string Controls_Ticket_Going {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Going", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origem.
+        /// </summary>
+        internal static string Controls_Ticket_Origin {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pendente.
+        /// </summary>
+        internal static string Controls_Ticket_Pending {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Pending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VOLTA.
+        /// </summary>
+        internal static string Controls_Ticket_Return {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BILHETE.
+        /// </summary>
+        internal static string Controls_Ticket_Ticket {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Ticket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TOTAL.
+        /// </summary>
+        internal static string Controls_Ticket_Total {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua viagem.
+        /// </summary>
+        internal static string Controls_Ticket_YourTrip {
+            get {
+                return ResourceManager.GetString("Controls_Ticket_YourTrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não foi possivel encontrar o seu bilhete..
+        /// </summary>
+        internal static string DownloadTicket_ErrorMessage {
+            get {
+                return ResourceManager.GetString("DownloadTicket_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Promocode.
+        /// </summary>
+        internal static string General_Promocode {
+            get {
+                return ResourceManager.GetString("General_Promocode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lugar.
+        /// </summary>
+        internal static string General_Seat {
+            get {
+                return ResourceManager.GetString("General_Seat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to lugares.
+        /// </summary>
+        internal static string General_Seats {
+            get {
+                return ResourceManager.GetString("General_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cartão.
+        /// </summary>
+        internal static string General_StripeCard_Card {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termina em.
+        /// </summary>
+        internal static string General_StripeCard_Card_CardNumber_EndsIn {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card_CardNumber_EndsIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to terminado em.
+        /// </summary>
+        internal static string General_StripeCard_Card_EndingIn {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card_EndingIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo cartão de crédito.
+        /// </summary>
+        internal static string General_StripeCard_Card_New {
+            get {
+                return ResourceManager.GetString("General_StripeCard_Card_New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua pergunta?.
+        /// </summary>
+        internal static string Help_CantFind {
+            get {
+                return ResourceManager.GetString("Help_CantFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CONTACTA-NOS.
+        /// </summary>
+        internal static string Help_CantFind_ContactUs {
+            get {
+                return ResourceManager.GetString("Help_CantFind_ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voltar.
+        /// </summary>
+        internal static string Help_Detailed_btnBack_Text {
+            get {
+                return ResourceManager.GetString("Help_Detailed_btnBack_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Precisas de ajuda?.
+        /// </summary>
+        internal static string Help_MainTitle {
+            get {
+                return ResourceManager.GetString("Help_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;rarr; Ver todos.
+        /// </summary>
+        internal static string Help_SeeAllLink {
+            get {
+                return ResourceManager.GetString("Help_SeeAllLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perguntas frequentes.
+        /// </summary>
+        internal static string Help_SubTitle {
+            get {
+                return ResourceManager.GetString("Help_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Empresas.
+        /// </summary>
+        internal static string Help_Topic_Corporate {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso emitir facturas com contribuinte?.
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TaxInvoices {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TaxInvoices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TaxInvoices_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TaxInvoices_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso saber quanto gastei no total?.
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TotalSpending {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TotalSpending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_TotalSpending_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_TotalSpending_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descontos e Promoções.
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tenho saldo na minha conta corrente e código promocionais disponíveis, como faço para usar um ou outro?.
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndBalance {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso usar dois códigos promocionais para a mesma viagem?.
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_TwoPromocodes {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_TwoPromocodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conduzir um Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_Drive {
+            get {
+                return ResourceManager.GetString("Help_Topic_Drive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como posso conduzir um Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_Drive_Question_HowTo {
+            get {
+                return ResourceManager.GetString("Help_Topic_Drive_Question_HowTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Drive_Question_HowTo_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Drive_Question_HowTo_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convites.
+        /// </summary>
+        internal static string Help_Topic_Invite {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O que os meus amigos ganham por viajar com o meu cupão?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_FriendsBenefits {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_FriendsBenefits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_FriendsBenefits_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_FriendsBenefits_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso dar o meu cupão a amigos que já tenham utilizado a Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_GiftToYoyoUsers {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_GiftToYoyoUsers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_GiftToYoyoUsers_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_GiftToYoyoUsers_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantos amigos posso convidar?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_HowManyFriends {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_HowManyFriends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_HowManyFriends_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_HowManyFriends_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O que é que eu ganho?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_MyBenefits {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_MyBenefits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_MyBenefits_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_MyBenefits_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Malas e Bagagens.
+        /// </summary>
+        internal static string Help_Topic_Luggage {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso levar malas?.
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_CanIBring {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_CanIBring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_CanIBring_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_CanIBring_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O que não posso levar comigo?.
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_NotAllowed {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_NotAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_NotAllowed_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_NotAllowed_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quais os Limites de tamanhos das bagagem?.
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_SizeLimit {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_SizeLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_Luggage_Question_SizeLimit_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Luggage_Question_SizeLimit_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagens e loops.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops disponíveis?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_AvailableLoops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso comprar a viagem no ponto de partida?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_BuyAtDeparture {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_BuyAtDeparture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancelar um loop?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Cancel {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Cancel_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Cancel_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nao consegui marcar a viagem online, e agora?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_CouldNotBook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como faço download do meu bilhete?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_DownloadTicket {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_DownloadTicket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quanto custa um loop?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_HowMuch {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_HowMuch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_HowMuch_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_HowMuch_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facturas.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Invoices {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Invoices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_Invoices_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_Invoices_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Métodos de pagamento?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_PaymentMethods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como solicitar um novo loop?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_SuggestLoop {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_SuggestLoop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Dashboard.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como adicionar/actualizar ou eliminar dados de pagamentos?.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_AddChangePaymentDetails {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_AddChangePaymentDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como alterar dados pessoais?.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_ChangePersonalDetails {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_ChangePersonalDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A minha conta corrente.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_CurrentAccount {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_CurrentAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_CurrentAccount_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_CurrentAccount_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As minhas viagens a 3 Euros.
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_MGMTrips {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_MGMTrips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_UserDashboard_Question_MGMTrips_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_MGMTrips_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os Carros Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os carros da Yoyoloop são eléctricos?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Electric {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Electric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Electric_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Electric_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Motorista é mesmo profissional?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_ProfessionalDriver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantos lugares tem um carro da yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Seats {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Seats_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Seats_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os carros yoyoloop tem wifi?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Wifi {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Wifi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Wifi_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Wifi_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vê passar os autocarros e apanha boleia à porta de casa.
+        /// </summary>
+        internal static string HomePage_MainTitle {
+            get {
+                return ResourceManager.GetString("HomePage_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua cidade?.
+        /// </summary>
+        internal static string HomePage_PopularLoops_CantFind {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_CantFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capacidade.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Capacity {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Capacity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duracao.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Duration {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grátis.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Free {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preço.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Price {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desde.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Price_From {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Price_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugares.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Features_Seats {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Features_Seats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string HomePage_PopularLoops_ReserveLink {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_ReserveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ver todos.
+        /// </summary>
+        internal static string HomePage_PopularLoops_SeeAll_Link {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_SeeAll_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sugere um loop.
+        /// </summary>
+        internal static string HomePage_PopularLoops_SuggestLink {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_SuggestLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops Populares.
+        /// </summary>
+        internal static string HomePage_PopularLoops_Title {
+            get {
+                return ResourceManager.GetString("HomePage_PopularLoops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro..
+        /// </summary>
+        internal static string HomePage_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua cidade?.
+        /// </summary>
+        internal static string HomePage_SuggestLink {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_btnSuggestSend {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_btnSuggestSend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não encontras a tua cidade?.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_MainTitle {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua sugestão foi enviada.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_SuggestSend_Message {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_SuggestSend_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua sugestão.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_tbSuggestBody_placeholder {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_tbSuggestBody_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu endereço de email.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_tbSuggestEmail_placeholder {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_tbSuggestEmail_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queres que a Yoyoloop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!.
+        /// </summary>
+        internal static string HomePage_SuggestLoop_Text {
+            get {
+                return ResourceManager.GetString("HomePage_SuggestLoop_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e.
+        /// </summary>
+        internal static string HomePage_WhereToCard_Location_And {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_Location_And", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to De.
+        /// </summary>
+        internal static string HomePage_WhereToCard_Location_From {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_Location_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desde.
+        /// </summary>
+        internal static string HomePage_WhereToCard_Price_From {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_Price_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string HomePage_WhereToCard_ReserveLink {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_ReserveLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os dias.
+        /// </summary>
+        internal static string HomePage_WhereToCard_When_Everyday {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToCard_When_Everyday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para onde queres ir?.
+        /// </summary>
+        internal static string HomePage_WhereToGo {
+            get {
+                return ResourceManager.GetString("HomePage_WhereToGo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante..
+        /// </summary>
+        internal static string HomePage_Why_Card_Accessible_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Accessible_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos desgaste,&lt;br&gt;mais na carteira.
+        /// </summary>
+        internal static string HomePage_Why_Card_Accessible_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Accessible_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acessível.
+        /// </summary>
+        internal static string HomePage_Why_Card_Accessible_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Accessible_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
+        /// </summary>
+        internal static string HomePage_Why_Card_Convenient_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Convenient_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick up e drop off&lt;br&gt;convenientes.
+        /// </summary>
+        internal static string HomePage_Why_Card_Convenient_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Convenient_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conveniente.
+        /// </summary>
+        internal static string HomePage_Why_Card_Convenient_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Convenient_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada..
+        /// </summary>
+        internal static string HomePage_Why_Card_Reliable_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Reliable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugar marcado,&lt;br&gt;à hora marcada.
+        /// </summary>
+        internal static string HomePage_Why_Card_Reliable_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Reliable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiável.
+        /// </summary>
+        internal static string HomePage_Why_Card_Reliable_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Reliable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono..
+        /// </summary>
+        internal static string HomePage_Why_Card_Sustainable_Content {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Sustainable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos carros,&lt;br&gt;mais cidade.
+        /// </summary>
+        internal static string HomePage_Why_Card_Sustainable_SubTitle {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Sustainable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sustentável.
+        /// </summary>
+        internal static string HomePage_Why_Card_Sustainable_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Card_Sustainable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        /// </summary>
+        internal static string HomePage_Why_Title {
+            get {
+                return ResourceManager.GetString("HomePage_Why_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O único transporte ponto a ponto alternativo aos autocarros,&lt;br&gt; comboios e boleias tradicionais.
+        /// </summary>
+        internal static string HomePage_Yoyoloop_MainDescription {
+            get {
+                return ResourceManager.GetString("HomePage_Yoyoloop_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Leiria e Coimbra sem paragens e a preço de autocarro..
+        /// </summary>
+        internal static string HomePage_Yoyoloop_SubDescription {
+            get {
+                return ResourceManager.GetString("HomePage_Yoyoloop_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email..
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_ConfirmAnswer {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_ConfirmAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por favor confirma o teu endereço de email, clicando.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_ConfirmEmail {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_ConfirmEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porque razão tenho de confirmar o meu email?.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_ConfirmWhy {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_ConfirmWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aqui.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_HereLink {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_HereLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_Thankyou {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_Thankyou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bem-vindo à Yoyoloop!.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_Title {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Body_YoyoloopTeam {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Body_YoyoloopTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bem-vindo à Yoyoloop!.
+        /// </summary>
+        internal static string MasterService_SendEmailConfirmation_Subject {
+            get {
+                return ResourceManager.GetString("MasterService_SendEmailConfirmation_Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aqui.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_HereLink {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_HereLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe..
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_ResetAnswer {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_ResetAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por favor altera a tua palavra-passe, clicando.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_ResetPassword {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_ResetPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porque razão tenho de alterar a minha palavra passe?.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_ResetWhy {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_ResetWhy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_Thankyou {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_Thankyou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foi solicitada a recuperação de palavra-passe na tua conta da.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_Title {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Body_YoyoloopTeam {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Body_YoyoloopTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Solicitada a recuperação de palavra-passe.
+        /// </summary>
+        internal static string MasterService_SendResetPassword_Subject {
+            get {
+                return ResourceManager.GetString("MasterService_SendResetPassword_Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva Já.
+        /// </summary>
+        internal static string MyTrips_Empty_btnBookNow_Text {
+            get {
+                return ResourceManager.GetString("MyTrips_Empty_btnBookNow_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda não tem viagens..
+        /// </summary>
+        internal static string MyTrips_Empty_MainTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_Empty_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva a tua primeira viagem com a Yoyoloop!.
+        /// </summary>
+        internal static string MyTrips_Empty_SubTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_Empty_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!.
+        /// </summary>
+        internal static string MyTrips_Invite_Code_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Code_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como viajar por 3€ para qualquer destino.
+        /// </summary>
+        internal static string MyTrips_Invite_How {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_How", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 3€..
+        /// </summary>
+        internal static string MyTrips_Invite_OfferTrips_Description {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_OfferTrips_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oferece viagens.
+        /// </summary>
+        internal static string MyTrips_Invite_OfferTrips_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_OfferTrips_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional.
+        /// </summary>
+        internal static string MyTrips_Invite_Recommend_Description {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Recommend_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop.
+        /// </summary>
+        internal static string MyTrips_Invite_Recommend_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Recommend_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viaja por 3€!.
+        /// </summary>
+        internal static string MyTrips_Invite_Travel_Title {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Travel_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        /// </summary>
+        internal static string MyTrips_Invite_Travel_Title_Description {
+            get {
+                return ResourceManager.GetString("MyTrips_Invite_Travel_Title_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As Minhas Viagens.
+        /// </summary>
+        internal static string MyTrips_MainTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagens anteriores.
+        /// </summary>
+        internal static string MyTrips_PastTrips_MainTitle {
+            get {
+                return ResourceManager.GetString("MyTrips_PastTrips_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus dados foram actualizados com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_BillingDetails_Save_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingDetails_Save_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Actualizar dados.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_btnBillingSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_btnBillingSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Morada.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingAddress_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingAddress_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo da morada é obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cidade.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingCity_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingCity_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome da Empresa.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingCompany_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingCompany_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingName_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo do nome é obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NIF.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingNIF_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingNIF_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduza um número válido.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo do NIF é obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código postal.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingZIP_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingZIP_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obrigatório.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de Faturação.
+        /// </summary>
+        internal static string Profile_Billing_BillingForm_Title {
+            get {
+                return ResourceManager.GetString("Profile_Billing_BillingForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adicionar.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_btnAddCard_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_btnAddCard_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cartão principal.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Método de pagamento.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome do titular.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número do cartão.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_tbCardNumber_Label {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_tbCardNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagamento.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethodsForm_Title {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethodsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu cartão foi adicionado com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethods_AddCard_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethods_AddCard_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O cartão foi removido com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethods_RemoveCard_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethods_RemoveCard_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O cartão foi actualizado com sucesso.
+        /// </summary>
+        internal static string Profile_Billing_PaymentMethods_UpdateCard_SucessMessage {
+            get {
+                return ResourceManager.GetString("Profile_Billing_PaymentMethods_UpdateCard_SucessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convida os teus amigos e viaja por apenas 3€.
+        /// </summary>
+        internal static string Profile_Invite_MainTitle {
+            get {
+                return ResourceManager.GetString("Profile_Invite_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ainda tens.
+        /// </summary>
+        internal static string Profile_Invite_MGMTrips1 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_MGMTrips1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to viagens de 3€ para aproveitar.
+        /// </summary>
+        internal static string Profile_Invite_MGMTrips2 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_MGMTrips2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copiar Link.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_btnCopyLink_Text {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_btnCopyLink_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_btnShare_Text {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_btnShare_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copied to clipboard.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_CopiedPopover {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_CopiedPopover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar por Email.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_email {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar no facebook.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_facebook {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_facebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar no linkedin.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_linkedin {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_linkedin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilhar no twitter.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMenu_twitter {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_twitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Já poupaste.
+        /// </summary>
+        internal static string Profile_Invite_Saved {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Saved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 3€.
+        /// </summary>
+        internal static string Profile_Invite_Why_Offer_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Offer_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oferece viagens.
+        /// </summary>
+        internal static string Profile_Invite_Why_Offer_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Offer_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional.
+        /// </summary>
+        internal static string Profile_Invite_Why_Recommend_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Recommend_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomenda a Yoyoloop.
+        /// </summary>
+        internal static string Profile_Invite_Why_Recommend_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Recommend_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        /// </summary>
+        internal static string Profile_Invite_Why_Travel_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Travel_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viaja por 3€!.
+        /// </summary>
+        internal static string Profile_Invite_Why_Travel_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Why_Travel_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Porto e Coimbra sem paragens e a preço de autocarro..
+        /// </summary>
+        internal static string Profile_Invite_YoyoloopWhy_Description {
+            get {
+                return ResourceManager.GetString("Profile_Invite_YoyoloopWhy_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        /// </summary>
+        internal static string Profile_Invite_YoyoloopWhy_Title {
+            get {
+                return ResourceManager.GetString("Profile_Invite_YoyoloopWhy_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Meu perfil.
+        /// </summary>
+        internal static string Profile_MainTitle {
+            get {
+                return ResourceManager.GetString("Profile_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de Faturação.
+        /// </summary>
+        internal static string Profile_Menu_BillingDetails {
+            get {
+                return ResourceManager.GetString("Profile_Menu_BillingDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convidar amigos.
+        /// </summary>
+        internal static string Profile_Menu_Invite {
+            get {
+                return ResourceManager.GetString("Profile_Menu_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string Profile_Menu_Logout {
+            get {
+                return ResourceManager.GetString("Profile_Menu_Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dados pessoais.
+        /// </summary>
+        internal static string Profile_Menu_PersonalDetails {
+            get {
+                return ResourceManager.GetString("Profile_Menu_PersonalDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A password que introduziste está incorreta.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu endereço de email foi alterado com sucesso.&lt;br/&gt;&lt;br/&gt;Enviámos um email para.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com um link para poderes confirmar o novo email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password atual.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduz a tua password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O endereço de email é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os endereços de email não coincidem.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMe" +
+                        "ssage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir o endereço de email é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangeEmail_Title {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangeEmail_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao alterar a tua password.&lt;br/&gt;&lt;br/&gt;Tenta outra vez ou.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to contacta-nos.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua password foi alterada com sucesso.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A password que introduziste está incorreta.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As passwords não coincidem.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMe" +
+                        "ssage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir nova password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir a nova password é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password atual.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduz a tua password actual.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbNewPassword_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbNewPassword_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A nova password é obrigatória.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alterar password.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ChangePassword_Title {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ChangePassword_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re-enviar Link.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviámos um email para.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to com o link para poderes confirmar o teu email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2 {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os teus dados foram actualizados com sucesso.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduza uma data válida.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data de nascimento.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AAAA / MM / DD.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de email.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbEmail_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbName_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo do nome é obrigatório.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Introduza um número válido.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessa" +
+                        "ge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telemóvel.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não Confirmado.
+        /// </summary>
+        internal static string Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dados pessoais.
+        /// </summary>
+        internal static string Profile_PersonalDetails_Title {
+            get {
+                return ResourceManager.GetString("Profile_PersonalDetails_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation of Anti-XSRF token failed..
+        /// </summary>
+        internal static string SiteMaster_Errors_AntiXSRF {
+            get {
+                return ResourceManager.GetString("SiteMaster_Errors_AntiXSRF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destinos.
+        /// </summary>
+        internal static string SiteMaster_Footer_Destinos {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Destinos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inglês.
+        /// </summary>
+        internal static string SiteMaster_Footer_Language_English {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Language_English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Português.
+        /// </summary>
+        internal static string SiteMaster_Footer_Language_Portuguese {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Language_Portuguese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops.
+        /// </summary>
+        internal static string SiteMaster_Footer_Loops {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Loops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Politica de privacidade.
+        /// </summary>
+        internal static string SiteMaster_Footer_Privacy {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos e Condiçōes.
+        /// </summary>
+        internal static string SiteMaster_Footer_Terms {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Terms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sobre nós.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_About {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contacto.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_Contact {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ajuda.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_Help {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como funciona.
+        /// </summary>
+        internal static string SiteMaster_Footer_Yoyoloop_HowTo {
+            get {
+                return ResourceManager.GetString("SiteMaster_Footer_Yoyoloop_HowTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Destinos.
         /// </summary>
         internal static string SiteMaster_NavBar_Destinations {
@@ -93,6 +4012,2895 @@ namespace Resources {
         internal static string SiteMaster_NavBar_RegisterLogin {
             get {
                 return ResourceManager.GetString("SiteMaster_NavBar_RegisterLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes de Faturação.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Billing {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Billing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convidar amigos.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Invite {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Invite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Logout {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Meu Perfil.
+        /// </summary>
+        internal static string SiteMaster_ProfileMenu_Profile {
+            get {
+                return ResourceManager.GetString("SiteMaster_ProfileMenu_Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A revolucionar as cidades, um loop de cada vez..
+        /// </summary>
+        internal static string StaticPages_About_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_About_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SOBRE NOS.
+        /// </summary>
+        internal static string StaticPages_About_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cada um dos nossos shuttles são veículos de sete lugares. Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem..
+        /// </summary>
+        internal static string StaticPages_About_Shuttles_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Shuttles_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os nossos shuttles.
+        /// </summary>
+        internal static string StaticPages_About_Shuttles_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Shuttles_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br/&gt;&lt;br/&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        /// </summary>
+        internal static string StaticPages_About_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_About_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante..
+        /// </summary>
+        internal static string StaticPages_About_Why_Accessible_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Accessible_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos desgaste,&lt;br&gt;mais na carteira.
+        /// </summary>
+        internal static string StaticPages_About_Why_Accessible_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Accessible_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acessível.
+        /// </summary>
+        internal static string StaticPages_About_Why_Accessible_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Accessible_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
+        /// </summary>
+        internal static string StaticPages_About_Why_Convenient_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Convenient_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick up e drop off&lt;br&gt;convenientes.
+        /// </summary>
+        internal static string StaticPages_About_Why_Convenient_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Convenient_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conveniente.
+        /// </summary>
+        internal static string StaticPages_About_Why_Convenient_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Convenient_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada..
+        /// </summary>
+        internal static string StaticPages_About_Why_Reliable_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Reliable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugar marcado,&lt;br&gt;à hora marcada.
+        /// </summary>
+        internal static string StaticPages_About_Why_Reliable_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Reliable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiável.
+        /// </summary>
+        internal static string StaticPages_About_Why_Reliable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Reliable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono..
+        /// </summary>
+        internal static string StaticPages_About_Why_Sustainable_Content {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Sustainable_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos carros,&lt;br&gt;mais cidade.
+        /// </summary>
+        internal static string StaticPages_About_Why_Sustainable_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Sustainable_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sustentável.
+        /// </summary>
+        internal static string StaticPages_About_Why_Sustainable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_About_Why_Sustainable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservas.
+        /// </summary>
+        internal static string StaticPages_Contact_Bookings {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_Bookings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_btnSend_text {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_btnSend_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A tua mensagem foi enviada.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_Send_ShowMessage {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_Send_ShowMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mensagem.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbBody_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbBody_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de E-mail.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbEmail_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbEmail_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome completo.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbName_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assunto.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_tbSubject_Label {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_tbSubject_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa-nos uma mensagem.
+        /// </summary>
+        internal static string StaticPages_Contact_ContactForm_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_ContactForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contactos.
+        /// </summary>
+        internal static string StaticPages_Contact_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Contact_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Cascais a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Cascais, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP CASCAIS.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Cascais_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Cascais_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Coimbra, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Coimbra.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Coimbra.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP COIMBRA.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Coimbra_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios&lt;br&gt; da cidade de Lisboa e o quinto maior concelho do país em termos de população..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Cascais_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Cascais_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Coimbra_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Coimbra_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, &lt;br&gt;todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Lisboa_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Lisboa_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Porto_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Porto_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destino a.
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to voltar.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_btnBack_text {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_btnBack_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horários.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_Schedules {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_Schedules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_Stops {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_Stops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops com destino a.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tempo de viagem.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_LoopCard_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_LoopCard_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como chegar até ao teu transfer da Yoyoloop.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_Stops_StopCard_HowToGet {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_Stops_StopCard_HowToGet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DESTINO POPULAR.
+        /// </summary>
+        internal static string StaticPages_Destinos_Details_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Details_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Cascais a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Lisboa, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Lisboa.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Lisboa.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP LISBOA.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Lisboa_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Lisboa_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destinos populares.
+        /// </summary>
+        internal static string StaticPages_Destinos_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Revolucionar a mobilidade entre cidades, &lt;br&gt; Loop de cada vez.
+        /// </summary>
+        internal static string StaticPages_Destinos_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para o Porto a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para o Porto, a alternativa ao carro e ao comboio.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para o Porto.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TAGUS PARK.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cascais Shopping.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to São Domingos de Rana.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospital de Cascais.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Second_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lagoas Park.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_StopCard_Third_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens no Porto.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP PORTO.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Porto_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Porto_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha boleia a preço de autocarro.
+        /// </summary>
+        internal static string StaticPages_Destinos_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos desgaste, mais na carteira.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Accessible_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Accessible_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acessível.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Accessible_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Accessible_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick up e drop off convenientes.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Conveninent_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Conveninent_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conveniente.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Conveninent_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Conveninent_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lugar marcado, à hora marcada.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Reliable_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Reliable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiável.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Reliable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Reliable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menos carros, mais cidade.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Sustainable_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Sustainable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sustentável.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Sustainable_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Sustainable_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        /// </summary>
+        internal static string StaticPages_Destinos_Why_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Why_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tens alguma pergunta?.
+        /// </summary>
+        internal static string StaticPages_FAQ_Questions {
+            get {
+                return ResourceManager.GetString("StaticPages_FAQ_Questions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lê as nossas Perguntas Frequentes.
+        /// </summary>
+        internal static string StaticPages_FAQ_Questions_HelpLink {
+            get {
+                return ResourceManager.GetString("StaticPages_FAQ_Questions_HelpLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e a preço de autocarro.
+        /// </summary>
+        internal static string StaticPages_HowTo_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa..
+        /// </summary>
+        internal static string StaticPages_HowTo_MainSubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_MainSubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to como apanhar boleia da yoyoloop?.
+        /// </summary>
+        internal static string StaticPages_HowTo_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 3€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
+        /// </summary>
+        internal static string StaticPages_HowTo_StepFour {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepFour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 - Escolhe onde queres ir e o teu ponto de partida e chegada preferidos..
+        /// </summary>
+        internal static string StaticPages_HowTo_StepOne {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3 - Faz o download do teu bilhete e apresenta-o ao motorista no ponto de partida..
+        /// </summary>
+        internal static string StaticPages_HowTo_StepThree {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepThree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 - Paga o teu bilhete com cartão de crédito e com 100% segurança..
+        /// </summary>
+        internal static string StaticPages_HowTo_StepTwo {
+            get {
+                return ResourceManager.GetString("StaticPages_HowTo_StepTwo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarro.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Bus {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Bus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carro próprio.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Car {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Car", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Boleias tradicionais.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Ride {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Ride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comboio.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Train {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Train", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Cascais e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Cascais.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Cascais em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Cascais e Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCascais_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Cascais e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Coimbra.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Coimbra e Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Porto e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para o Porto.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Porto em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Coimbra e Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservar.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_Book {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_Book", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to desde.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_From {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Cascais Shopping&lt;br /&gt;- E.Leclerc São Domingos de Rana  (Parque Superior).
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Amoreiras (Torre 1)&lt;br /&gt;- Saldanha (Estacionamento do Arco do cego).
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Cascais.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - McDonald’s Av. Fernão de Magalhães&lt;br /&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Saldanha (Estacionamento)&lt;br /&gt;- Gare do Oriente.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Coimbra.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os dias.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Saldanha (Estacionamento)&lt;br /&gt;- Gare do Oriente.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Largo da República&lt;br /&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Todos os dias.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas do Porto.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Revolucionar a mobilidade entre cidades, &lt;br&gt;um Loop de cada vez.
+        /// </summary>
+        internal static string StaticPages_Loops_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa..
+        /// </summary>
+        internal static string StaticPages_Loops_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops &amp; Horários.
+        /// </summary>
+        internal static string StaticPages_Loops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 8. Nos termos legais, o utilizador tem, a todo o momento, direito à informação gratuita sobre os dados armazenados e eventualmente a correcção, bloqueio ou eliminação desses dados. Os pedidos de informação, correcção ou eliminação devem ser enviados por e-mail para clientes@goodlife.pt ou para goodlife! - Circunland S.A., - Estrada de Outurela, 118 - Parque Holanda - Edifício Holanda - 2790-114 Carnaxide..
+        /// </summary>
+        internal static string StaticPages_Privacy_Eight {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Eight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5. A goodlife! transmitirá quaisquer dados pessoais a terceiros caso isso seja necessário para cumprir regulamentos legais (por exemplo, da lei de proteção de dados) como no caso da transmissão de dados a autoridades de perseguição penal e inspecção para fins de defesa de perigos para a segurança pública..
+        /// </summary>
+        internal static string StaticPages_Privacy_Five {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Five", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4. O nosso website utiliza uma tecnologia chamada cookies. Para facilitar e personalizar a experiência do Utilizador final com o site, a goodlife! armazena cookies no seu computador. Os Cookies são pequenos arquivos de texto que são armazenados no computador do utilizador. A maioria dos Cookies utilizados no nosso site serão apagados do disco rígido do utilizador automaticamente ao encerrar a sessão do navegador (chamados Cookies de sessão) . Outros tipos de Cookies permanecerão no computador e possibilitam [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Privacy_Four {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O www.yoyoloop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto u [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Privacy_Intro {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Política de Privacidade.
+        /// </summary>
+        internal static string StaticPages_Privacy_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. A goodlife! está autorizada a recolher dados pessoais. São considerados dados pessoais do utilizador os dados relativos ao nome, endereço electrónico, morada. O responsável pelo tratamento dos dados é a Circunland S.A. e a finalidade do tratamento reside na gestão de clientes e marketing..
+        /// </summary>
+        internal static string StaticPages_Privacy_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7. Armazenamos o texto do contrato e enviamos os dados da encomenda bem como as nossas condições gerais de venda por e-mail. As condições gerais de venda podem ser consultadas online no site www.goodlife.com.pt. As suas encomendas antigas podem ser consultadas na nossa área de login de cliente..
+        /// </summary>
+        internal static string StaticPages_Privacy_Seven {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Seven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 6. Salvo oposição expressa aquando do registo ou em momento posterior, a goodlife! está autorizada a utilizar e processar os dados pessoais do utilizador para fins de acções de marketing (e-mail, newsletter, etc.)..
+        /// </summary>
+        internal static string StaticPages_Privacy_Six {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Six", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A inclusão nestes programas de publicidade pode ser cancelada a qualquer momento, por exemplo através de um e-mail para o endereço clientes@goodlife.pt. O cancelamento é possível em qualquer momento através de um link no e-mail..
+        /// </summary>
+        internal static string StaticPages_Privacy_Six_A {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Six_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop! reconhece a importância de proteger os seus dados pessoais, qualquer que seja a sua natureza. Por esse motivo desenvolvemos um conjunto de medidas de segurança que visam a protecção dos seus dados..
+        /// </summary>
+        internal static string StaticPages_Privacy_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3. A goodlife! utiliza alguns sistemas de tracking de terceiros, como por exemplo o Google Analytics, um serviço de análise de internet da Google Inc. O Google Analytics utiliza Cookies (arquivos de texto) que são armazenados no computador do utilizador e possibilitam posteriormente a análise de utilização do site. As informações geradas a partir dos Cookies a respeito da utilização do site (incluindo o endereço IP) serão transmitidos a um servidor nos Estados Unidos e lá armazenados..
+        /// </summary>
+        internal static string StaticPages_Privacy_Three {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Google utilizará essas informações para analisar a utilização do site e para fornecer relatórios sobre a utilização aos operadores de sites, bem como o fornecimento de outros serviços ligados à utilização do site e da internet. O Google transmitirá também essas informações a terceiros, caso seja imposto por lei ou no caso em que o terceiro processe esses dados por ordem do Google. O Google não ligará seu endereço IP a outros dados..
+        /// </summary>
+        internal static string StaticPages_Privacy_Three_A {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Three_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O utilizador pode impedir a instalação de Cookies configurando o seu navegador. Avisamos que neste caso a totalidade das funções do site não será disponível..
+        /// </summary>
+        internal static string StaticPages_Privacy_Three_B {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Three_B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ao utilizar o site o utilizador concorda com o processamento dos dados levantados pelo Google na forma e na finalidade anteriormente descrita..
+        /// </summary>
+        internal static string StaticPages_Privacy_Three_C {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Three_C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2. Processamos e utilizamos os dados pessoais do utilizador para fins de realização e execução do contrato de utilização e dos contratos de compra com a goodlife! Isto abrange a transmissão dos dados pessoais a empresas de serviços ou empresas de &quot;outsourcing&quot; que contribuam para melhorar ou facilitar as operações através da goodlife! , como (sem se limitar a) meios de pagamentos, seguros ou intermediários na gestão de pagamentos e outros. Estas empresas ou sites de internet têm no geral politicas de privac [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Privacy_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Condições gerais para utilizadores da goodlife! em ofertas disponíveis no site www.yoyoloop.com.
+        /// </summary>
+        internal static string StaticPages_Terms_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos e Condições.
+        /// </summary>
+        internal static string StaticPages_Terms_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. Partes e objeto.
+        /// </summary>
+        internal static string StaticPages_Terms_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.4 Os cupões disponibilizados em www.goodlife.com.pt não representam um compromisso firme e inequívoco assumido pelo utilizador na compra de determinado bem ou serviço, na medida em que podem ser livremente trocados pelo utilizador até à respetiva data de validade por qualquer outro cupão que nesse momento esteja em comercialização, ainda que respeite a parceiros ou serviços absolutamente diferenciados do original, podendo por exemplo trocar-se um cupão respeitante a serviços de restauração por um outro re [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Four {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.1 As presentes condições gerais de utilização regulam a relação entre a Circunland S.A., NIPC 508 123 224, com sede na Estrada da Outurela, 118, Parque Holanda - Edifício Holanda, 2790-114 Carnaxide, de doravante designada por GOODLIFE! e o utilizador como tal registado em www.goodlife.com.pt..
+        /// </summary>
+        internal static string StaticPages_Terms_One_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.3 No website www.goodlife.com.pt a goodlife! promove uma plataforma de compras coletivas na qual os utilizadores podem adquirir:.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Three {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to i) cupões que atribuem o direito a adquirir variados serviços ou produtos a prestar ou fornecer diretamente por outras empresas devidamente identificadas em cada caso e designados por Parceiros. Através do nosso website, os utilizadores poderão adquirir os referidos cupões que lhes atribuirão o direito a adquirir produtos e serviços, com desconto sobre o preço regularmente praticado nas lojas físicas. Os emitentes dos cupões e prestadores dos produtos ou serviços indicados nos cupões são os Parceiros indica [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Three_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Three_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ii) variados produtos fornecidos diretamente pela goodlife! o que acontece nos casos dos produtos anunciados em que não seja identificado nem publicitado, no website e no cupão, nenhum parceiro como fornecedor. Nestes casos, ao contrário dos referidos na alínea anterior, a goodlife! assume a posição legal e contratual de vendedora do produto e recebe o pagamento em nome próprio, para todos os efeitos legais..
+        /// </summary>
+        internal static string StaticPages_Terms_One_Three_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Three_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.2 Este acordo determina os termos e condições que se aplicam ao uso do website por parte do utilizador final. A sua utilização está sujeita à prévia aceitação dos termos e condições gerais de uso doravante descritos no momento do registo como utilizador. As condições de utilização aplicáveis são novamente aceites pelo utilizador com a confirmação no respetivo botão aquando do processo de encomenda. Estas condições de utilização encontram-se em www.goodlife.com.pt e podem ser acedidas, impressas ou guardad [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_One_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_One_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3. Livre resolução.
+        /// </summary>
+        internal static string StaticPages_Terms_Three {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.1 Direito de livre resolução.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O consumidor tem o direito de livre resolução do presente contrato no prazo de 14 dias de calendário, sem necessidade de indicar qualquer motivo..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_A {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O prazo para exercício do direito de livre resolução expira 14 dias a contar do dia seguinte ao dia.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to a) da celebração do contrato, no caso de um contrato de prestação de serviços ou de um contrato de fornecimento de água, de gás ou de eletricidade, caso não sejam postos à venda em volume ou quantidade limitados, de aquecimento urbano ou de conteúdos digitais que não sejam fornecidos num suporte material;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_a {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_a", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to b) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física dos bens, no caso de um contrato de compra e venda;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_b {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_b", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to c) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do último bem, no caso de um contrato em que o consumidor encomendou vários bens numa única encomenda e os bens são entregues separadamente;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_c {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to d) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do último lote ou da última parte, no caso de um contrato relativo à entrega de um bem constituído por vários lotes ou partes.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_d {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_d", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do primeiro bem, no caso de um contrato de entrega periódica de bens durante um determinado período..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_B_e {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_e", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A fim de exercer o seu direito de livre resolução, tem de nos comunicar a sua decisão de resolução do presente contrato por meio de uma declaração inequívoca (por exemplo, carta enviada pelo correio, fax ou correio eletrónico) para вюeve utilizar o modelo de formulário de resolução..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_C {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_C", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para que o prazo de livre resolução seja respeitado, basta que a sua comunicação referente ao exercício do direito de livre resolução seja enviada antes do termo do prazo de resolução. Efeitos da livre resolução.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_D {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_D", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Em caso de resolução do presente contrato, ser-lhe-ão reembolsados todos os pagamentos efetuados (com exceção de custos suplementares resultantes da sua escolha de uma modalidade de envio diferente da modalidade menos onerosa de envio normal por nós oferecida), sem demora injustificada e, em qualquer caso, o mais tardar 14 dias a contar da data em que formos informados da sua decisão de resolução do presente contrato..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_E {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_E", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Efetuamos esses reembolsos em crédito na sua conta cliente em www.goodlife.com.pt ou, se não nos confirmar o seu acordo, usando o mesmo meio de pagamento que usou na transação inicial; em qualquer caso, não incorre em quaisquer custos como consequência de tal reembolso, que não os custos diretos da devolução dos bens..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_F {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_F", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reteremos o reembolso até termos recebido o cupão ou os bens devolvidos, ou até que apresente prova do envio dos bens, consoante o que ocorrer primeiro..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_G {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_G", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deve devolver os bens ou entregar-no-los, sem demora injustificada dentro dos 14 dias a contar do dia em que nos informar da livre resolução do contrato..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_H {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_H", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Considera-se que o prazo é respeitado se devolver os bens antes do termo do prazo de 14 dias..
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_I {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_I", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No caso de um contrato de prestação de serviços ou de um contrato de fornecimento de água, gás ou eletricidade, caso não sejam postos à venda em volume ou quantidade limitados, ou de aquecimento urbano, se tiver solicitado que a prestação de serviços ou o fornecimento de água/gás/eletricidade/aquecimento urbano comece durante o prazo de livre resolução, pagar-nos-á um montante razoável proporcional ao que lhe foi fornecido até ao momento em que nos comunicou a sua resolução do presente contrato, em relação  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_One_J {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_One_J", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.2 Condições da devolução dos bens.
+        /// </summary>
+        internal static string StaticPages_Terms_Three_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Three_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2. Compra de cupões.
+        /// </summary>
+        internal static string StaticPages_Terms_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para adquirir um cupão em www.goodlife.com.pt deve seguir os seguintes passos:&lt;br /&gt;1) Carregar no botão &quot;comprar&quot; na página inicial.&lt;br /&gt;2) Escolher a quantidade desejada de cupões a adquirir.&lt;br /&gt;3) Indicar o seu nome e endereço de e-mail e password para fazer o login. Caso ainda não esteja registado deverá preencher o formulário de registo.&lt;br /&gt;4) Escolha o método de pagamento pretendido, multibanco ou cartão de crédito ou outro meio de pagamento disponível no website. No primeiro caso ser-lhe-á atrib [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string StaticPages_Terms_Two_A {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two_A", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card was declined..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_card_declined {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_card_declined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card has expired..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_expired_card {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_expired_card", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s security code is incorrect..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_incorrect_cvc {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_incorrect_cvc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card number is incorrect..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_incorrect_number {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_incorrect_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s zip code failed validation..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_incorrect_zip {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_incorrect_zip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s security code is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_cvc {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_cvc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s expiration date is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_date_format {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_date_format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s expiration month is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_expiry_month {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_expiry_month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card&apos;s expiration year is invalid..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_expiry_year {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_expiry_year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The card number is not a valid credit card number..
+        /// </summary>
+        internal static string Stripe_ErrorHandling_CardError_invalid_number {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_CardError_invalid_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao validar o método de pagamento.
+        /// </summary>
+        internal static string Stripe_ErrorHandling_PaymentMethodValidation_Generic {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_PaymentMethodValidation_Generic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao efectuar o pagamento.
+        /// </summary>
+        internal static string Stripe_ErrorHandling_ProcessPayment_Generic {
+            get {
+                return ResourceManager.GetString("Stripe_ErrorHandling_ProcessPayment_Generic", resourceCulture);
             }
         }
     }
