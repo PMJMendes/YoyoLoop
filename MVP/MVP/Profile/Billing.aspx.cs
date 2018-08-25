@@ -17,6 +17,7 @@ namespace MVP.Profile
     {
         protected readonly string stripePublishableKey = WebConfigurationManager.AppSettings["StripePublishableKey"];
         private readonly ProfileService service = new ProfileService();
+        private readonly CheckoutService checkoutService = new CheckoutService();
         protected ProfileDTO pageData;
 
         protected void Page_Init(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace MVP.Profile
                 }
                 else if (!string.IsNullOrEmpty(hfStripeError))
                 {
-                    string error = service.StripeErrorHandler(hfStripeError);
+                    string error = checkoutService.StripeErrorHandler(hfStripeError);
                     if (string.IsNullOrEmpty(error))
                     {
                         error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
