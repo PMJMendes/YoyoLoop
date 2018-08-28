@@ -12,7 +12,7 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <header class="head text-center d-flex pb-5">
+    <header class="head text-center d-flex pb-5 invitefriends--image">
         <div class="container-fluid">
             <div class="row">
                 <div class="invitefriends__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_MainTitle%>"/></div>
