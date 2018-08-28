@@ -30,18 +30,6 @@
                 </p>
 
                 <p class="terms__content">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Three_A%>"/>
-                </p>
-  
-                <p class="terms__content">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Three_B%>"/>
-                </p>
-
-                <p class="terms__content">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Three_C%>"/>
-                </p>
-
-                <p class="terms__content">
                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Four%>"/>
                 </p>
 
@@ -54,15 +42,15 @@
                 </p>
 
                 <p class="terms__content">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Six_A%>"/>
-                </p>
-
-                <p class="terms__content">
                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Seven%>"/>
                 </p>
 
                 <p class="terms__content">
                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Eight%>"/>
+                </p>
+
+                <p class="terms__content">
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Privacy_Nine%>"/>
                 </p>
 
                 <div class="terms__separator mt-5 mb-5"></div>

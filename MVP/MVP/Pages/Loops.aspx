@@ -57,7 +57,7 @@
         <section class="yoyoloops">
             <div class="container-fluid">
     
-                <!-- CASCAIS -->
+                <!-- LEIRIA -->
                 <div class="row">
                     <div class="city col-sm-4 mx-auto text-left">
                         <div class="">
@@ -65,7 +65,7 @@
                                 <img src="/img/loopico_2@2x.png" alt="" class="img-responsive"/>
                                 Loop
                             </p>
-                            <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Cascais" tabindex="-1">Cascais</a></p>
+                            <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Leiria" tabindex="-1">Leiria</a></p>
                             <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 5€</p>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                                 <div class="directions">
                                     <div class="text-center">
                                         <p><img src="/img/stopred_2@3x.png" alt="" class="img-responsive stop"/></p>
-                                        <p class="city-name text-uppercase">Cascais</p>
+                                        <p class="city-name text-uppercase">Leiria</p>
                                     </div>
             
                                     <div class="">
@@ -92,11 +92,11 @@
     
                         <div class="access-points row">
                             <div class="col p-3">
-                                <p class="ap-left text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais%>"/></p>
+                                <p class="ap-left text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria%>"/></p>
                             </div>
         
                             <div class="col p-3">
-                                <p class="ap-right text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa%>"/></p>
+                                <p class="ap-right text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_APs_Lisboa%>"/></p>
                             </div>
                         </div>
     
@@ -104,12 +104,12 @@
                             <div class="departures-1 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais%>"/></p>
-                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days%>"/></p>
-                                        <p class="text-uppercase timeline-left"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Days%>"/></p>
+                                        <p class="text-uppercase timeline-left"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times%>"/></p>
                                     </div>
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Leiria" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,13 +117,13 @@
                             <div class="departures-2 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa%>"/></p>
-                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days%>"/></p>
-                                        <p class="text-uppercase timeline-right"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Days%>"/></p>
+                                        <p class="text-uppercase timeline-right"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Times%>"/></p>
                                     </div>
 
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Linha%20de%20Cascais&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Leiria&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -330,11 +330,11 @@
     </div>
     <!-- END OF LOOPS -->
     
-    <!-- CASCAIS -->
-    <div class="<%= localData.Loop == "lisboa-cascais" ? "" : "hide" %>">
+    <!-- LEIRIA -->
+    <div class="<%= localData.Loop == "lisboa-leiria" ? "" : "hide" %>">
         <header class="head text-center d-flex pb-5 static-page__pic-one">
             <div class="container-fluid d-flex flex-column justify-content-center">
-                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_MainTitle%>"/></h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
                     <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/></a>
                 </div>
@@ -348,7 +348,7 @@
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_MainDescription%>"/></div>
+                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_MainDescription%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -357,7 +357,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_SubDescription%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_SubDescription%>"/>
                     </div>
                 </div>
             </div>
@@ -365,16 +365,16 @@
 
         <div class="homepage__container static-page__box-container p-0 mt-5 mb-5">
 
-            <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais">
+            <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Leiria">
                 <div class="row">
                     <div class="col-md-4 static-page__box-container__first d-flex align-items-left flex-column justify-content-center pl-5">
                         <div class="static-page__box-container__first__sub-title">
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
                             <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Title%>"/>
                         </div>
-                        <div class="static-page__box-container__first__main-title">Cascais</div>
+                        <div class="static-page__box-container__first__main-title">Leiria</div>
                         <div class="static-page__box-container__first__extra-title mt-2">
-                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_LoopCard_Title%>"/>
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Title%>"/>
                         </div>
                     </div>
 
@@ -385,7 +385,7 @@
                                 <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Stops%>"/></div>
                                 <div>
                                     <div class="static-page__box-container__schedules__text text-uppercase">
-                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_LoopCard_APs%>"/>
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_APs%>"/>
                                     </div>
                                 </div>
                             </div>
@@ -394,12 +394,12 @@
                                 <img src="/img/horarios.png" srcset="/img/horarios@2x.png 2x, /img/horarios@3x.png 3x">
                                 <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Schedules%>"/></div>
                         
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_LoopCard_Days%>"/></div>
-                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_LoopCard_Times1%>"/></span>
-                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_LoopCard_Times2%>"/></span>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Days%>"/></div>
+                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Times1%>"/></span>
+                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Times2%>"/></span>
 
                                 <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_TravelTime%>"/></div>
-                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_LoopCard__TravelTime%>"/></div>
+                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime%>"/></div>
                             </div>
                         </div>
                     </div>
@@ -410,11 +410,11 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - cascais</div>
+                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - leiria</div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_Why%>"/></div>
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -423,7 +423,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_Why_Description%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Description%>"/>
                     </div>
                 </div>
             </div>
@@ -434,7 +434,7 @@
                 <img src="/img/bus.png" srcset="/img/bus@2x.png 2x, /img/bus@3x.png 3x">
                 <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Bus%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_Why_Bus_Reasons%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Bus_Reasons%>"/>
                 </div>
             </div>
 
@@ -444,7 +444,7 @@
                 <img src="/img/comboio.png" srcset="/img/comboio@2x.png 2x, /img/comboio@3x.png 3x">
                 <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Train%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_Why_Train_Reasons%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Train_Reasons%>"/>
                 </div>
             </div>
         </div>
@@ -456,7 +456,7 @@
                 <img src="/img/boleia.png" srcset="/img/boleia@2x.png 2x, /img/boleia@3x.png 3x">
                 <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Ride%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_Why_Ride_Reasons%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons%>"/>
                 </div>
             </div>
 
@@ -466,12 +466,12 @@
                 <img src="/img/carro.png" srcset="/img/carro@2x.png 2x, /img/carro@3x.png 3x">
                 <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Car%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCascais_Why_Car_Reasons%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Car_Reasons%>"/>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END OF CASCAIS -->
+    <!-- END OF LEIRIA -->
 
     <!-- COIMBRA -->
     <div class="<%= localData.Loop == "lisboa-coimbra" ? "" : "hide" %>">
@@ -717,10 +717,10 @@
 
         <div class="row">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column pr-0 mr-0">
-                <img src="/img/bus.png" srcset="/img/bus@2x.png 2x, /img/bus@3x.png 3x">
-                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Bus%>"/></div>
+                <img src="/img/pontos.png" srcset="/img/pontos@2x.png 2x, /img/pontos@3x.png 3x">
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Plane%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Bus_Reasons%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Plane_Reasons%>"/>
                 </div>
             </div>
 

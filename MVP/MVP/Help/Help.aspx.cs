@@ -81,8 +81,11 @@ namespace MVP.Help
                 case "btnTopicCorporate":
                     localData.SelectedTopic = "Corporate";
                     break;
-                case "btnTopicDrive":
-                    localData.SelectedTopic = "Drive";
+                case "btnTopicPartners":
+                    localData.SelectedTopic = "Partners";
+                    break;
+                case "btnTopicCareers":
+                    localData.SelectedTopic = "Careers";
                     break;
                 default:
                     localData.SelectedTopic = "None";
@@ -120,8 +123,11 @@ namespace MVP.Help
                 case "btnMenuTopicCorporate":
                     localData.SelectedTopic = "Corporate";
                     break;
-                case "btnMenuTopicDrive":
-                    localData.SelectedTopic = "Drive";
+                case "btnMenuTopicPartners":
+                    localData.SelectedTopic = "Partners";
+                    break;
+                case "btnMenuTopicCareers":
+                    localData.SelectedTopic = "Careers";
                     break;
                 default:
                     localData.SelectedTopic = "None";

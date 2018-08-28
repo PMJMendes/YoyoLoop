@@ -117,4 +117,2337 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Account_ConfirmEmail_Error" xml:space="preserve">
+    <value>Ocorreu um erro</value>
+  </data>
+  <data name="Account_ConfirmEmail_MainTitle" xml:space="preserve">
+    <value>Obrigado por confirmares o teu email.</value>
+  </data>
+  <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
+    <value>Vais ser redirecionado para o teu bilhete dentro de segundos.</value>
+  </data>
+  <data name="Account_ResetPassword_btnReset_Text" xml:space="preserve">
+    <value>Re-iniciado</value>
+  </data>
+  <data name="Account_ResetPassword_ErrorMessage" xml:space="preserve">
+    <value>Ocorreu um erro</value>
+  </data>
+  <data name="Account_ResetPassword_MainTitle" xml:space="preserve">
+    <value>Insere a tua password</value>
+  </data>
+  <data name="Account_ResetPassword_SuccessMessage" xml:space="preserve">
+    <value>A tua password foi alterada com sucesso</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>As password e a confirmação de password são diferentes.</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_placeholder" xml:space="preserve">
+    <value>Repetir palavra-passe</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo palavra-passe é obrigatório.</value>
+  </data>
+  <data name="Account_ResetPassword_tbEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Account_ResetPassword_tbEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>O email é obrigatório.</value>
+  </data>
+  <data name="Account_ResetPassword_tbPassword_placeholder" xml:space="preserve">
+    <value>Nova palavra-passe</value>
+  </data>
+  <data name="Account_ResetPassword_tbPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo palavra-passe é obrigatório.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Calendar_BookingPanel_Booking_ErrorMessage" xml:space="preserve">
+    <value>Lamentamos mas essa viagem não está disponível.</value>
+  </data>
+  <data name="Calendar_CalendarHeader_btnToday_Text" xml:space="preserve">
+    <value>Hoje</value>
+  </data>
+  <data name="Calendar_CalendarPlaceholder_Text" xml:space="preserve">
+    <value>Escolhe o Destino e Origem da viagem</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup" xml:space="preserve">
+    <value>Ocupação:</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_High" xml:space="preserve">
+    <value>Alta</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_Low" xml:space="preserve">
+    <value>Baixa</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_Med" xml:space="preserve">
+    <value>Média</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Fri" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Mon" xml:space="preserve">
+    <value>Seg</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Sat" xml:space="preserve">
+    <value>Sab</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Sun" xml:space="preserve">
+    <value>Dom</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Thu" xml:space="preserve">
+    <value>Qui</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Tue" xml:space="preserve">
+    <value>Ter</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Wed" xml:space="preserve">
+    <value>Qua</value>
+  </data>
+  <data name="Calendar_Controls_CalendarTable_DayInfoText_BLACK" xml:space="preserve">
+    <value>Esgotado</value>
+    <comment>Careful about size, needs to fit inside the day square</comment>
+  </data>
+  <data name="Calendar_Controls_CalendarTable_DayInfoText_RED" xml:space="preserve">
+    <value>Quase cheio</value>
+    <comment>Careful about size, needs to fit inside the day square</comment>
+  </data>
+  <data name="Calendar_Controls_Popover_Header_DestinationLabel" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Calendar_Controls_Popover_Header_OriginLabel" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Calendar_Header_APDropdown_Label" xml:space="preserve">
+    <value>Paragem</value>
+  </data>
+  <data name="Calendar_Header_APDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Escolher paragem</value>
+  </data>
+  <data name="Calendar_Header_cbReturnTrip_Label" xml:space="preserve">
+    <value>Ida e volta</value>
+  </data>
+  <data name="Calendar_Header_DestinationDropdown_Label" xml:space="preserve">
+    <value>Destino</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Calendar_Header_DestinationDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Escolher destino</value>
+  </data>
+  <data name="Calendar_Header_OriginDropdown_Label" xml:space="preserve">
+    <value>Origem</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Calendar_Header_OriginDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Escolher origem</value>
+  </data>
+  <data name="Calendar_Header_SeatsDropdown_Label" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="Checkout_Billing_cbSaveDetails_Label" xml:space="preserve">
+    <value>Guardar detalhes de facturação</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceAddress_Label" xml:space="preserve">
+    <value>Morada</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceCity_Label" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceCompany_Label" xml:space="preserve">
+    <value>Nome da Empresa</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceName_Label" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceNIF_Label" xml:space="preserve">
+    <value>NIF</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceZIP_Label" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="Checkout_Billing_Title" xml:space="preserve">
+    <value>Detalhes de facturação</value>
+  </data>
+  <data name="Checkout_BookingExpired_Message" xml:space="preserve">
+    <value>Esta reserva expirou</value>
+  </data>
+  <data name="Checkout_BookingExpired_RedirectLink_Text" xml:space="preserve">
+    <value>Reservar novamente</value>
+  </data>
+  <data name="Checkout_btnPay_Text" xml:space="preserve">
+    <value>Pagar</value>
+  </data>
+  <data name="Checkout_ddlCardMenu_Label" xml:space="preserve">
+    <value>Método de pagamento</value>
+  </data>
+  <data name="Checkout_MainTitle" xml:space="preserve">
+    <value>Pagar e Confirmar</value>
+  </data>
+  <data name="Checkout_Payform_cbSaveCard_Label" xml:space="preserve">
+    <value>Guardar dados do cartão</value>
+  </data>
+  <data name="Checkout_Payform_tbCardHolderName_Label" xml:space="preserve">
+    <value>Nome do titular</value>
+  </data>
+  <data name="Checkout_Payform_tbCardNumber_Label" xml:space="preserve">
+    <value>Número do cartão</value>
+  </data>
+  <data name="Checkout_Policy_cbTerms_Error" xml:space="preserve">
+    <value>Tem de aceitar os Termos e Condiçōes</value>
+  </data>
+  <data name="Checkout_Policy_cbTerms_Label1" xml:space="preserve">
+    <value>Aceito os</value>
+  </data>
+  <data name="Checkout_Policy_cbTerms_Label2" xml:space="preserve">
+    <value>Termos e Condiçōes</value>
+  </data>
+  <data name="Checkout_Policy_SubTitle" xml:space="preserve">
+    <value>Política de cancelamento</value>
+  </data>
+  <data name="Checkout_Policy_Text" xml:space="preserve">
+    <value>Podes cancelar a tua viagem até 48 horas antes da hora de partida. O valor que pagaste será transformado em crédito e podes encontrá-lo tua conta para utilizar em futuras viagens.</value>
+  </data>
+  <data name="Checkout_Promocode_tbPromo_Label" xml:space="preserve">
+    <value>Código promocional</value>
+  </data>
+  <data name="Checkout_Promocode_tbPromo_placeholder" xml:space="preserve">
+    <value>Inserir código</value>
+  </data>
+  <data name="Checkout_Service_ProcessPayment_BookingErrorMessage" xml:space="preserve">
+    <value>Reserva inválida</value>
+  </data>
+  <data name="Checkout_SubTitle" xml:space="preserve">
+    <value>Pagamento</value>
+  </data>
+  <data name="Confirm_Invite_btnShare_Text" xml:space="preserve">
+    <value>Partilhar</value>
+  </data>
+  <data name="Confirm_Invite_Description" xml:space="preserve">
+    <value>Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de comboio.</value>
+  </data>
+  <data name="Confirm_Invite_Title" xml:space="preserve">
+    <value>Convida amigos e viaja por apenas 1€</value>
+  </data>
+  <data name="Confirm_InvoiceSend" xml:space="preserve">
+    <value>Vamos enviar a tua fatura para</value>
+  </data>
+  <data name="Confirm_MainTitle" xml:space="preserve">
+    <value>A tua viagem está confirmada</value>
+  </data>
+  <data name="Confirm_MyTickets" xml:space="preserve">
+    <value>Os teus Bilhetes</value>
+  </data>
+  <data name="Confirm_MyTickets_AddToCalendar" xml:space="preserve">
+    <value>Adicionar ao calendário</value>
+  </data>
+  <data name="Confirm_MyTickets_btnDownload_Text" xml:space="preserve">
+    <value>Descarregar</value>
+  </data>
+  <data name="Confirm_MyTickets_btnEmail_Text" xml:space="preserve">
+    <value>Receber por email</value>
+  </data>
+  <data name="Confirm_MyTickets_btnSMS_Text" xml:space="preserve">
+    <value>Receber por SMS</value>
+  </data>
+  <data name="Confirm_MyTickets_Calendar_ShowMessage_Text" xml:space="preserve">
+    <value>Infelizmente o serviço de Calendário não se encontra disponível</value>
+  </data>
+  <data name="Confirm_MyTickets_Email_ShowMessage_Text1" xml:space="preserve">
+    <value>Enviámos um email para</value>
+  </data>
+  <data name="Confirm_MyTickets_Email_ShowMessage_Text2" xml:space="preserve">
+    <value>com o teu bilhete.</value>
+  </data>
+  <data name="Confirm_MyTickets_SMS_ShowMessage_Text" xml:space="preserve">
+    <value>Infelizmente o serviço de SMS não se encontra disponível</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_AccessTicket" xml:space="preserve">
+    <value>Podes aceder ao teu bilhete em qualquer altura</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Destination" xml:space="preserve">
+    <value>Destino</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_FinalCost" xml:space="preserve">
+    <value>Preço Final</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
+    <value>Convida amigos e viaja por apenas 1€</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
+    <value>Origem</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Seats" xml:space="preserve">
+    <value>Lugares</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
+    <value>Obrigado por escolheres a Yoyoloop!</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
+    <value>Código do bilhete</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_TripConfirmed" xml:space="preserve">
+    <value>A tua viagem está confirmada.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_YoyoloopTeam" xml:space="preserve">
+    <value>A equipa Yoyoloop.</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_HereLink" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject1" xml:space="preserve">
+    <value>A tua viagem de</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject2" xml:space="preserve">
+    <value>para</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject3" xml:space="preserve">
+    <value>está confirmada</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer" xml:space="preserve">
+    <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail" xml:space="preserve">
+    <value>Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy" xml:space="preserve">
+    <value>Porque razão tenho de confirmar o meu email?</value>
+  </data>
+  <data name="Confirm_SubTitle" xml:space="preserve">
+    <value>Encontra o teu bilhete em</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_btnResendLink_Text" xml:space="preserve">
+    <value>Re-enviar Link</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Problems" xml:space="preserve">
+    <value>Em caso de problemas,</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Problems_ContactLink" xml:space="preserve">
+    <value>contacta-nos</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1" xml:space="preserve">
+    <value>Enviámos um email para</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2" xml:space="preserve">
+    <value>com o link para poderes confirmar o teu email.</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Text" xml:space="preserve">
+    <value>Para teres acesso ao teu bilhete, confirma por favor o teu email.&lt;br&gt;Enviámos link de acesso ao teu bilhete para</value>
+  </data>
+  <data name="Controls_BookingPanel_btnBook_Text" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="Controls_BookingPanel_btnBook_Unavailable_Text" xml:space="preserve">
+    <value>Viagem indisponível</value>
+  </data>
+  <data name="Controls_BookingPanel_Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Controls_BookingPanel_FinalPrice" xml:space="preserve">
+    <value>Preço Final</value>
+  </data>
+  <data name="Controls_BookingPanel_Going" xml:space="preserve">
+    <value>Ida</value>
+  </data>
+  <data name="Controls_BookingPanel_Goings" xml:space="preserve">
+    <value>Idas</value>
+  </data>
+  <data name="Controls_BookingPanel_Origin" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Controls_BookingPanel_PriceSummary" xml:space="preserve">
+    <value>Resumo</value>
+  </data>
+  <data name="Controls_BookingPanel_Price_PerSeat" xml:space="preserve">
+    <value>por Lugar</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_DontHaveLink" xml:space="preserve">
+    <value>Não tenho código promocional</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_HaveLink" xml:space="preserve">
+    <value>Tenho um código promocional</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_tbPromo_placeholder" xml:space="preserve">
+    <value>Inserir código</value>
+  </data>
+  <data name="Controls_Forgot_btnForgot_Text" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Controls_Forgot_MainTitle" xml:space="preserve">
+    <value>Yoyoloop login</value>
+  </data>
+  <data name="Controls_Forgot_NoAccount" xml:space="preserve">
+    <value>Ainda não tens conta?</value>
+  </data>
+  <data name="Controls_Forgot_RegisterLink" xml:space="preserve">
+    <value>Registar</value>
+  </data>
+  <data name="Controls_Forgot_ResultMessage_Failure" xml:space="preserve">
+    <value>O utilizador não existe.</value>
+  </data>
+  <data name="Controls_Forgot_ResultMessage_Success" xml:space="preserve">
+    <value>Por favor vê o teu email para definires nova password.</value>
+  </data>
+  <data name="Controls_Forgot_SubTitle_1" xml:space="preserve">
+    <value>Esqueceste a palavra-passe?</value>
+  </data>
+  <data name="Controls_Forgot_SubTitle_2" xml:space="preserve">
+    <value>Introduz o teu email</value>
+  </data>
+  <data name="Controls_Forgot_tbForgotEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo de email é obrigatório</value>
+  </data>
+  <data name="Controls_Login_btnLogin_Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="Controls_Login_cbRememberMe" xml:space="preserve">
+    <value>Lembrar-me da &lt;br&gt;palavra-passe</value>
+  </data>
+  <data name="Controls_Login_ForgotPassword" xml:space="preserve">
+    <value>Esqueci-me da palavra-passe</value>
+  </data>
+  <data name="Controls_Login_LoginMessageFailure_Text" xml:space="preserve">
+    <value>Incicio de sessão inválido</value>
+  </data>
+  <data name="Controls_Login_LoginMessageSucess_Text" xml:space="preserve">
+    <value>Início de sessão com sucesso</value>
+  </data>
+  <data name="Controls_Login_LoginOr" xml:space="preserve">
+    <value>ou</value>
+  </data>
+  <data name="Controls_Login_MainTitle" xml:space="preserve">
+    <value>Sessão Yoyoloop</value>
+  </data>
+  <data name="Controls_Login_NoAccount" xml:space="preserve">
+    <value>Ainda não tens conta?</value>
+  </data>
+  <data name="Controls_Login_RegisterLink" xml:space="preserve">
+    <value>Registar</value>
+  </data>
+  <data name="Controls_Login_tbLoginEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Controls_Login_tbLoginEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo de email é obrigatório</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Login_tbLoginPassword_placeholder" xml:space="preserve">
+    <value>Palavra-passe</value>
+  </data>
+  <data name="Controls_Login_tbLoginPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo palavra-passe é obrigatório.</value>
+  </data>
+  <data name="Controls_Login_WithEmail" xml:space="preserve">
+    <value>Regista-te com o teu email</value>
+  </data>
+  <data name="Controls_Login_WithFacebook" xml:space="preserve">
+    <value>com Facebook</value>
+  </data>
+  <data name="Controls_Login_WithGoogle" xml:space="preserve">
+    <value>com Google</value>
+  </data>
+  <data name="Controls_Register_btnRegisterContinue_Text" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="Controls_Register_cbRegisterCampaigns" xml:space="preserve">
+    <value>Quero receber campanhas&lt;br&gt;promocionais da Yoyoloop</value>
+  </data>
+  <data name="Controls_Register_HaveAccount" xml:space="preserve">
+    <value>Já tens conta?</value>
+  </data>
+  <data name="Controls_Register_LoginLink" xml:space="preserve">
+    <value>Fazer login</value>
+  </data>
+  <data name="Controls_Register_MainTitle" xml:space="preserve">
+    <value>Yoyoloop login</value>
+  </data>
+  <data name="Controls_Register_RegisterMessage_Failure" xml:space="preserve">
+    <value>Ocorreu um erro</value>
+    <comment>O identity devolve erros especificos, mas só estão traduzidos em pt-BR - traduzir é um endeavour</comment>
+  </data>
+  <data name="Controls_Register_RegisterOr" xml:space="preserve">
+    <value>ou</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>O email e a palavra-passe não coincidem.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_placeholder" xml:space="preserve">
+    <value>Repetir Endereço de email</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo de confirmação de email é obrigatório.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>A palavra-passe e a confirmação não coincidem.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_placeholder" xml:space="preserve">
+    <value>Repetir password</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo de confirmação da palavra-passe é obrigatório.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterEmail_placeholder" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Controls_Register_tbRegisterEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo de email é obrigatório</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_tbRegisterName_placeholder" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Controls_Register_tbRegisterName_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo Nome é obrigatório.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterPassword_placeholder" xml:space="preserve">
+    <value>Palavra-passe</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_tbRegisterPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo palavra-passe é obrigatório.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_WithEmail" xml:space="preserve">
+    <value>Para receberes o teu bilhete,&lt;br&gt;primeiro precisamos dos teus dados</value>
+  </data>
+  <data name="Controls_Register_WithFacebook" xml:space="preserve">
+    <value>com Facebook</value>
+  </data>
+  <data name="Controls_Register_WithGoogle" xml:space="preserve">
+    <value>com Google</value>
+  </data>
+  <data name="Controls_Ticket_BookAgain" xml:space="preserve">
+    <value>Reservar novamente</value>
+  </data>
+  <data name="Controls_Ticket_btnBooking_Text" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="Controls_Ticket_btnViewBooking_Text" xml:space="preserve">
+    <value>Ver reserva</value>
+  </data>
+  <data name="Controls_Ticket_Canceled" xml:space="preserve">
+    <value>Cancelada</value>
+  </data>
+  <data name="Controls_Ticket_Completed" xml:space="preserve">
+    <value>Completada</value>
+  </data>
+  <data name="Controls_Ticket_Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Controls_Ticket_Details" xml:space="preserve">
+    <value>ver Detalhe</value>
+  </data>
+  <data name="Controls_Ticket_Going" xml:space="preserve">
+    <value>IDA</value>
+  </data>
+  <data name="Controls_Ticket_Origin" xml:space="preserve">
+    <value>Origem</value>
+  </data>
+  <data name="Controls_Ticket_Pending" xml:space="preserve">
+    <value>Pendente</value>
+  </data>
+  <data name="Controls_Ticket_Return" xml:space="preserve">
+    <value>VOLTA</value>
+  </data>
+  <data name="Controls_Ticket_Ticket" xml:space="preserve">
+    <value>BILHETE</value>
+  </data>
+  <data name="Controls_Ticket_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Controls_Ticket_YourTrip" xml:space="preserve">
+    <value>A tua viagem</value>
+  </data>
+  <data name="DownloadTicket_ErrorMessage" xml:space="preserve">
+    <value>Não foi possivel encontrar o teu bilhete.</value>
+  </data>
+  <data name="General_Promocode" xml:space="preserve">
+    <value>Promocode</value>
+  </data>
+  <data name="General_Seat" xml:space="preserve">
+    <value>lugar</value>
+  </data>
+  <data name="General_Seats" xml:space="preserve">
+    <value>lugares</value>
+  </data>
+  <data name="General_StripeCard_Card" xml:space="preserve">
+    <value>Cartão</value>
+  </data>
+  <data name="General_StripeCard_Card_CardNumber_EndsIn" xml:space="preserve">
+    <value>Termina em</value>
+  </data>
+  <data name="General_StripeCard_Card_EndingIn" xml:space="preserve">
+    <value>terminado em</value>
+  </data>
+  <data name="General_StripeCard_Card_New" xml:space="preserve">
+    <value>Novo cartão de crédito</value>
+  </data>
+  <data name="Help_CantFind" xml:space="preserve">
+    <value>Não encontras a tua pergunta?</value>
+  </data>
+  <data name="Help_CantFind_ContactUs" xml:space="preserve">
+    <value>CONTACTA-NOS</value>
+  </data>
+  <data name="Help_Detailed_btnBack_Text" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="Help_MainTitle" xml:space="preserve">
+    <value>Precisas de ajuda?</value>
+  </data>
+  <data name="Help_SeeAllLink" xml:space="preserve">
+    <value>&amp;rarr; Ver todos</value>
+  </data>
+  <data name="Help_SubTitle" xml:space="preserve">
+    <value>Perguntas frequentes</value>
+  </data>
+  <data name="Help_Topic_Careers" xml:space="preserve">
+    <value>Carreiras na Yoyoloop</value>
+  </data>
+  <data name="Help_Topic_Careers_Question_HowTo" xml:space="preserve">
+    <value>Como posso conduzir um Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_Careers_Question_HowTo_Answer" xml:space="preserve">
+    <value>A nossa equipa está a crescer! Se tens interesse em juntar-te à nossa equipa, por favor envia o teu CV para careers@Yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_Corporate" xml:space="preserve">
+    <value>Empresas</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_CorporatePricing" xml:space="preserve">
+    <value>Têm preços especiais para empresas?</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_CorporatePricing_Answer" xml:space="preserve">
+    <value>A Yoyoloop oferece preços especiais para empresas, que incluem descontos especiais e programas de lançamento do serviço para os colaboradores da empresa.
+Para mais informações, contacte-nos por favor em empresas@Yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TaxInvoices" xml:space="preserve">
+    <value>Posso emitir faturas com contribuinte?</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TaxInvoices_Answer" xml:space="preserve">
+    <value>Sim. Assim que selecionares a viagem que pretendes realizar, basta selecionar a caixa que diz “Empresa” e inserir o NIF no formulário dos Detalhes de Faturação.</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TotalSpending" xml:space="preserve">
+    <value>Posso saber quanto gastei no total?</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TotalSpending_Answer" xml:space="preserve">
+    <value>A Yoyoloop envia aos clientes empresariais um email com um resumo mensal de todas as viagens efetuadas ao longo de um mês e os respetivos custos.</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo" xml:space="preserve">
+    <value>Descontos e promoções</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM" xml:space="preserve">
+    <value>Como posso reservar as viagens a 1€ e os códigos promocionais?</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer" xml:space="preserve">
+    <value>Para usufruir das viagens a 1€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todas as viagens a 1€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem para qualquer destino a 1€.
+Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a tua viagem. Cola aqui o código, clica em “Reservar” e já está!
+</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes" xml:space="preserve">
+    <value>Posso usar dois códigos promocionais para a mesma viagem?</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer" xml:space="preserve">
+    <value>Não. Cada código promocional só pode ser descontado para uma viagem.</value>
+  </data>
+  <data name="Help_Topic_Invite" xml:space="preserve">
+    <value>Convidar amigos</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_FriendsBenefits" xml:space="preserve">
+    <value>O que ganham os meus amigos por viajar com o meu código promocional?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_FriendsBenefits_Answer" xml:space="preserve">
+    <value>Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da Yoyoloop.</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
+    <value>Posso partilhar o meu código promocional com amigos que já tenham usado a Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_GiftToYoyoUsers_Answer" xml:space="preserve">
+    <value>Não. Cada amigo com quem partilhares o teu código promocional só poderá usá-lo uma vez.</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_HowManyFriends" xml:space="preserve">
+    <value>Quantos amigos posso convidar?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_HowManyFriends_Answer" xml:space="preserve">
+    <value>Podes convidar todos os amigos que quiseres! Quantos mais amigos convidares, mais viagens a 1€ ganhas assim que eles viajarem pela primeira vez.</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_MyBenefits" xml:space="preserve">
+    <value>O que é que eu ganho?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_MyBenefits_Answer" xml:space="preserve">
+    <value>Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
+    <value>Onde posso partilhar o meu código promocional?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_Share_Answer" xml:space="preserve">
+    <value>Podes enviar o teu código promocional através do Facebook, WhatsApp, Twitter, LinkedIn ou por email. Também podes simplesmente copiar o código e partilhá-lo da forma que preferires com os teus amigos.</value>
+  </data>
+  <data name="Help_Topic_Luggage" xml:space="preserve">
+    <value>Malas e Bagagens</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_CanIBring" xml:space="preserve">
+    <value>Posso levar malas/bagagem?</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_CanIBring_Answer" xml:space="preserve">
+    <value>Sim, desde que estejam dentro dos limites de bagagem da Yoyoloop.</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_NotAllowed" xml:space="preserve">
+    <value>O que não posso levar comigo?</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_NotAllowed_Answer" xml:space="preserve">
+    <value>Nos veículos da Yoyoloop não é possível levar instrumentos afiados, armas, animais de estimação, nem materiais inflamáveis ou com odores intensos. Em caso de dúvida, envia um email para reservas@Yoyoloop.com para saber se podes ou não transportar o teu objeto.</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_SizeLimit" xml:space="preserve">
+    <value>Qual é o limite de tamanho das malas/bagagem?</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_SizeLimit_Answer" xml:space="preserve">
+    <value>Podes transportar uma bagagem de mão (56cm x 45cm x 25cm) semelhantes às malas de cabine que são permitidas nas viagens de avião.</value>
+  </data>
+  <data name="Help_Topic_Partners" xml:space="preserve">
+    <value>Parceiros Yoyoloop</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_HowTo" xml:space="preserve">
+    <value>Como se tornar parceiro da Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_HowTo_Answer" xml:space="preserve">
+    <value>Por favor contacte a nossa equipa de parcerias pelo email: parceiros@Yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_PartnerProgram" xml:space="preserve">
+    <value>Programa de parceiros Yoyoloop</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_PartnerProgram_Answer" xml:space="preserve">
+    <value>O nosso programa de parceiros está em desenvolvimento. Se a sua empresa trrabalha na área do Turismo e possui frota própria, temos interesse em falar consigo.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops" xml:space="preserve">
+    <value>Viagens e Loops</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AssignedSeats" xml:space="preserve">
+    <value>Existem lugares marcados?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AssignedSeats_Answer" xml:space="preserve">
+    <value>O teu lugar está garantido mas, para já, ainda não é possível marcar um lugar específico no veículo.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AvailableLoops" xml:space="preserve">
+    <value>Quais são os loops disponíveis?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer" xml:space="preserve">
+    <value>A Yoyoloop tem loops de Lisboa para o Porto, Coimbra e Leiria e, ainda, loops desde o Porto, Coimbra e Leiria até Lisboa.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_BuyAtDeparture" xml:space="preserve">
+    <value>Posso comprar a viagem no ponto de partida?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer" xml:space="preserve">
+    <value>É possível comprar uma viagem através da versão mobile do site da Yoyoloop onde quer que estejas. Caso ainda haja lugares vagos, basta comprares a tua viagem e mostrar o bilhete quando o teu motorista chegar.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Cancel" xml:space="preserve">
+    <value>Qual a política de cancelamento da Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Cancel_Answer" xml:space="preserve">
+    <value>Sim, é possível cancelar uma viagem até 48 horas antes da hora de partida. O valor que pagaste será transformado em crédito e podes encontrá-lo na tua conta para utilizar em futuras viagens.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_ChangeDate" xml:space="preserve">
+    <value>Como posso alterar a data da minha viagem?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_ChangeDate_Answer" xml:space="preserve">
+    <value>Sim, podes alterar a data e hora da tua viagem até 48 horas antes da partida. É possível fazer a alteração por telefone — +351 926 475 250 — ou por email — reservas@Yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_CouldNotBook" xml:space="preserve">
+    <value>Não consegui marcar a viagem online. E agora?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer" xml:space="preserve">
+    <value>Podes fazer uma reserva por email — reservas@Yoyoloop.com — ou por telefone, através do +351 926 475 250. Em alternativa, podes simplesmente aparecer no local de partida da viagem 15 minutos antes da hora de partida e comprar o teu bilhete diretamente ao motorista da Yoyoloop.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DifferentAP" xml:space="preserve">
+    <value>Posso pedir que me venham buscar a um ponto diferente?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DifferentAP_Answer" xml:space="preserve">
+    <value>A Yoyoloop é um serviço com pontos de partida e de chegada predefinidos, pelo que não é possível irmos buscar-te a um ponto diferente. No entanto, estamos sempre disponíveis para criar novos pontos de partida e/ou chegada no futuro. Se tiveres alguma sugestão, envia-nos um email para reservas@Yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DownloadTicket" xml:space="preserve">
+    <value>Como faço download do meu bilhete?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer" xml:space="preserve">
+    <value>Podes receber o teu bilhete por email, SMS ou podes fazer o download em PDF. Após a compra do bilhete, escolhe a opção que preferires e apresenta o teu bilhete quando o teu motorista chegar. Evita imprimir o bilhete e mostra-o no teu smartphone!</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_FindAP" xml:space="preserve">
+    <value>Onde posso encontrar o ponto de partida e ponto de chegada da minha viagem?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_FindAP_Answer" xml:space="preserve">
+    <value>Podes encontrar o ponto de partida e chegada da tua viagem no teu bilhete em “Origem” e “Destino”, respetivamente.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_GuaranteedSeat" xml:space="preserve">
+    <value>O meu lugar está garantido?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_GuaranteedSeat_Answer" xml:space="preserve">
+    <value>Assim que comprares o teu bilhete, o teu lugar está garantido. Quando o teu motorista chegar ao ponto de partida que escolheste, basta mostrar o bilhete e aproveitar a viagem.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_HowMuch" xml:space="preserve">
+    <value>Qual é o preço por loop?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
+    <value>Os valores dos bilhetes para os Loops atuais são os seguintes:
+Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem
+Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem
+Lisboa - Leiria / Leiria- Lisboa: desde 16€ por viagem
+Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.
+Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloop.com . </value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Invoices" xml:space="preserve">
+    <value>Emitem fatura com número de contribuinte?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Invoices_Answer" xml:space="preserve">
+    <value>Sim. Assim que selecionares a viagem que pretendes realizar, basta inserir o NIF no formulário dos Detalhes de Faturação.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_PaymentMethods" xml:space="preserve">
+    <value>Quais os métodos de pagamento que aceitam?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer" xml:space="preserve">
+    <value>A Yoyoloop aceita Multibanco e cartões de crédito das redes Visa, Mastercard, American Express, entre outras.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_SuggestLoop" xml:space="preserve">
+    <value>Como posso sugerir um novo loop?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer" xml:space="preserve">
+    <value>Para sugerir um novo loop, vai até à nossa homepage e clica em “Não encontras a tua cidade?”. Deixa-nos o teu email e sugestão e, consoante a procura, vamos considerar criar um novo loop até à tua cidade. Fica atento às novidades!</value>
+  </data>
+  <data name="Help_Topic_UserDashboard" xml:space="preserve">
+    <value>O meu perfil</value>
+  </data>
+  <data name="Help_Topic_UserDashboard_Question_WhatCanIDo" xml:space="preserve">
+    <value>O que posso fazer com o meu perfil na Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_UserDashboard_Question_WhatCanIDo_Answer" xml:space="preserve">
+    <value>No teu perfil,  é possível:&lt;br&gt;
+Alterar os teus dados pessoais;&lt;br&gt;
+Adicionar, atualizar ou eliminar dados de pagamento;&lt;br&gt;
+Verificar a tua conta corrente e o crédito atual;&lt;br&gt;
+Ver viagens futuras e viagens anteriores;&lt;br&gt;
+Convidar amigos para a Yoyoloop;&lt;br&gt;
+Ver quantas viagens a €1 tens disponível para usufruir.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars" xml:space="preserve">
+    <value>Veículos Yoyoloop</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Children" xml:space="preserve">
+    <value>Os veículos da Yoyoloop têm capacidade para transportar crianças?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Children_Answer" xml:space="preserve">
+    <value>Infelizmente, não temos condições para transportar crianças com idade inferior a 12 anos, uma vez que os veículos não dispõem de cadeiras de criança. Além do mais, as crianças entre os 12 e os 18 anos deverão viajar acompanhadas por um adulto.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Electric" xml:space="preserve">
+    <value>Os veículos da Yoyoloop são elétricos?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Electric_Answer" xml:space="preserve">
+    <value>Ainda não. Os nossos transfers atuais são veículos de oito lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Insurance" xml:space="preserve">
+    <value>Tenho cobertura de seguro quando viajo com a Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Insurance_Answer" xml:space="preserve">
+    <value>Sim. A Yoyoloop é uma agência de viagens registada no Registo Nacional de Agências de Viagens e Turismo (RNAVTnº 7744), logo os clientes da Yoyoloop beneficiam da proteção do Fundo de Garantia de Viagens e Turismo. Adicionalmente, a Yoyoloop tem um seguro de responsabilidade civil no valor de €250.000. Lê mais sobre este assunto na página do Turismo de Portugal.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_ProfessionalDriver" xml:space="preserve">
+    <value>O motorista é mesmo profissional?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer" xml:space="preserve">
+    <value>A Yoyoloop apenas trabalha com motoristas profissionais. Todos eles passaram no nosso processo de seleção e são membros permanentes da nossa equipa.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Seats" xml:space="preserve">
+    <value>Quantos lugares tem um veículo da Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Seats_Answer" xml:space="preserve">
+    <value>De momento, os nossos transfers são Mercedes V-class com 8 lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Wifi" xml:space="preserve">
+    <value>Os veículos da Yoyoloop têm todos wifi?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Wifi_Answer" xml:space="preserve">
+    <value>Sim, todos os veículos da Yoyoloop contam com wifi a bordo para assegurar uma viagem mais proveitosa.</value>
+  </data>
+  <data name="HomePage_MainTitle" xml:space="preserve">
+    <value>Apanha boleia de um transfer premium a preço de comboio</value>
+  </data>
+  <data name="HomePage_PopularLoops_CantFind" xml:space="preserve">
+    <value>Não encontras a tua cidade?</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Capacity" xml:space="preserve">
+    <value>Capacidade</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Duration" xml:space="preserve">
+    <value>Duração</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Free" xml:space="preserve">
+    <value>Grátis</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Price" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Price_From" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Seats" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="HomePage_PopularLoops_ReserveLink" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="HomePage_PopularLoops_SeeAll_Link" xml:space="preserve">
+    <value>Ver todos</value>
+  </data>
+  <data name="HomePage_PopularLoops_SuggestLink" xml:space="preserve">
+    <value>Sugere um loop</value>
+  </data>
+  <data name="HomePage_PopularLoops_Title" xml:space="preserve">
+    <value>Loops Populares</value>
+  </data>
+  <data name="HomePage_SubTitle" xml:space="preserve">
+    <value>Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio.</value>
+  </data>
+  <data name="HomePage_SuggestLink" xml:space="preserve">
+    <value>Não encontras a tua cidade?</value>
+  </data>
+  <data name="HomePage_SuggestLoop_btnSuggestSend" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="HomePage_SuggestLoop_MainTitle" xml:space="preserve">
+    <value>Não encontras a tua cidade?</value>
+  </data>
+  <data name="HomePage_SuggestLoop_SuggestSend_Message" xml:space="preserve">
+    <value>A tua sugestão foi enviada</value>
+  </data>
+  <data name="HomePage_SuggestLoop_tbSuggestBody_placeholder" xml:space="preserve">
+    <value>A tua sugestão</value>
+  </data>
+  <data name="HomePage_SuggestLoop_tbSuggestEmail_placeholder" xml:space="preserve">
+    <value>O teu endereço de email</value>
+  </data>
+  <data name="HomePage_SuggestLoop_Text" xml:space="preserve">
+    <value>Queres que a Yoyoloop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!</value>
+  </data>
+  <data name="HomePage_WhereToCard_Location_And" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="HomePage_WhereToCard_Location_From" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="HomePage_WhereToCard_Price_From" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="HomePage_WhereToCard_ReserveLink" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="HomePage_WhereToCard_When_Everyday" xml:space="preserve">
+    <value>Todos os dias</value>
+  </data>
+  <data name="HomePage_WhereToGo" xml:space="preserve">
+    <value>Para onde queres ir?</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_Content" xml:space="preserve">
+    <value>Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante.</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_SubTitle" xml:space="preserve">
+    <value>Menos desgaste,&lt;br&gt;mais na carteira</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_Title" xml:space="preserve">
+    <value>Acessível</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_Content" xml:space="preserve">
+    <value>Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_SubTitle" xml:space="preserve">
+    <value>Pick up e drop off&lt;br&gt;convenientes</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_Title" xml:space="preserve">
+    <value>Conveniente</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_Content" xml:space="preserve">
+    <value>Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada.</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_SubTitle" xml:space="preserve">
+    <value>Lugar marcado,&lt;br&gt;à hora marcada</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_Title" xml:space="preserve">
+    <value>Fiável</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_Content" xml:space="preserve">
+    <value>Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono.</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_SubTitle" xml:space="preserve">
+    <value>Menos carros,&lt;br&gt;mais cidade</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_Title" xml:space="preserve">
+    <value>Sustentável</value>
+  </data>
+  <data name="HomePage_Why_Title" xml:space="preserve">
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
+  </data>
+  <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
+    <value>O único transporte ponto a ponto alternativo ao comboios, avião e carro particular.</value>
+  </data>
+  <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
+    <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
+    <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmEmail" xml:space="preserve">
+    <value>Por favor confirma o teu endereço de email, clicando</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmWhy" xml:space="preserve">
+    <value>Porque razão tenho de confirmar o meu email?</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_HereLink" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_Thankyou" xml:space="preserve">
+    <value>Obrigado pela tua preferência!</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_Title" xml:space="preserve">
+    <value>Bem-vindo à Yoyoloop!</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_YoyoloopTeam" xml:space="preserve">
+    <value>A equipa Yoyoloop.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Subject" xml:space="preserve">
+    <value>Bem-vindo à Yoyoloop!</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_HereLink" xml:space="preserve">
+    <value>aqui</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetAnswer" xml:space="preserve">
+    <value>Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetPassword" xml:space="preserve">
+    <value>Por favor altera a tua palavra-passe, clicando</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetWhy" xml:space="preserve">
+    <value>Porque razão tenho de alterar a minha palavra passe?</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_Thankyou" xml:space="preserve">
+    <value>Obrigado pela tua preferência!</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_Title" xml:space="preserve">
+    <value>Foi solicitada a recuperação de palavra-passe na tua conta da</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_YoyoloopTeam" xml:space="preserve">
+    <value>A equipa Yoyoloop.</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
+    <value>Solicitada a recuperação de palavra-passe</value>
+  </data>
+  <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
+    <value>Reserva Já</value>
+  </data>
+  <data name="MyTrips_Empty_MainTitle" xml:space="preserve">
+    <value>Ainda não tem viagens.</value>
+  </data>
+  <data name="MyTrips_Empty_SubTitle" xml:space="preserve">
+    <value>Reserva a tua primeira viagem com a Yoyoloop!</value>
+  </data>
+  <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
+    <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!</value>
+  </data>
+  <data name="MyTrips_Invite_How" xml:space="preserve">
+    <value>Como viajar por 1€ para qualquer destino</value>
+  </data>
+  <data name="MyTrips_Invite_OfferTrips_Description" xml:space="preserve">
+    <value>Os teus amigos viajam para qualquer destino por apenas 1€.</value>
+  </data>
+  <data name="MyTrips_Invite_OfferTrips_Title" xml:space="preserve">
+    <value>Oferece viagens</value>
+  </data>
+  <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
+    <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
+  </data>
+  <data name="MyTrips_Invite_Recommend_Title" xml:space="preserve">
+    <value>Recomenda a Yoyoloop</value>
+  </data>
+  <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
+    <value>Viaja por 1€!</value>
+  </data>
+  <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
+    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
+  </data>
+  <data name="MyTrips_MainTitle" xml:space="preserve">
+    <value>As Minhas Viagens</value>
+  </data>
+  <data name="MyTrips_PastTrips_MainTitle" xml:space="preserve">
+    <value>Viagens anteriores</value>
+  </data>
+  <data name="Profile_Billing_BillingDetails_Save_SucessMessage" xml:space="preserve">
+    <value>Os teus dados foram actualizados com sucesso</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_btnBillingSave_Text" xml:space="preserve">
+    <value>Actualizar dados</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingAddress_Label" xml:space="preserve">
+    <value>Morada</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo da morada é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCity_Label" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo Cidade é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCompany_Label" xml:space="preserve">
+    <value>Nome da Empresa</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingName_Label" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo do nome é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_Label" xml:space="preserve">
+    <value>NIF</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage" xml:space="preserve">
+    <value>Introduza um número válido</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo do NIF é obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingZIP_Label" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage" xml:space="preserve">
+    <value>Obrigatório</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_Title" xml:space="preserve">
+    <value>Detalhes de Faturação</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnAddCard_Text" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label" xml:space="preserve">
+    <value>Cartão principal</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label" xml:space="preserve">
+    <value>Método de pagamento</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label" xml:space="preserve">
+    <value>Nome do titular</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_tbCardNumber_Label" xml:space="preserve">
+    <value>Número do cartão</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_Title" xml:space="preserve">
+    <value>Pagamento</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_AddCard_SucessMessage" xml:space="preserve">
+    <value>O teu cartão foi adicionado com sucesso</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_RemoveCard_SucessMessage" xml:space="preserve">
+    <value>O cartão foi removido com sucesso</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_UpdateCard_SucessMessage" xml:space="preserve">
+    <value>O cartão foi actualizado com sucesso</value>
+  </data>
+  <data name="Profile_Invite_MainTitle" xml:space="preserve">
+    <value>Convida os teus amigos e viaja por apenas 1€</value>
+  </data>
+  <data name="Profile_Invite_MGMTrips1" xml:space="preserve">
+    <value>Ainda tens</value>
+  </data>
+  <data name="Profile_Invite_MGMTrips2" xml:space="preserve">
+    <value>viagens de 1€ para aproveitar</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_btnCopyLink_Text" xml:space="preserve">
+    <value>Copiar Link</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_btnShare_Text" xml:space="preserve">
+    <value>Partilhar</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_CopiedPopover" xml:space="preserve">
+    <value>Copied to clipboard</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_email" xml:space="preserve">
+    <value>Enviar por Email</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_facebook" xml:space="preserve">
+    <value>Partilhar no facebook</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_linkedin" xml:space="preserve">
+    <value>Partilhar no linkedin</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_twitter" xml:space="preserve">
+    <value>Partilhar no twitter</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
+    <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!</value>
+  </data>
+  <data name="Profile_Invite_Saved" xml:space="preserve">
+    <value>Já poupaste</value>
+  </data>
+  <data name="Profile_Invite_Why_Offer_Description" xml:space="preserve">
+    <value>Os teus amigos viajam para qualquer destino por apenas 1€</value>
+  </data>
+  <data name="Profile_Invite_Why_Offer_Title" xml:space="preserve">
+    <value>Oferece viagens</value>
+  </data>
+  <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
+    <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
+  </data>
+  <data name="Profile_Invite_Why_Recommend_Title" xml:space="preserve">
+    <value>Recomenda a Yoyoloop</value>
+  </data>
+  <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
+    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
+  </data>
+  <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
+    <value>Viaja por 1€!</value>
+  </data>
+  <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
+    <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
+  </data>
+  <data name="Profile_Invite_YoyoloopWhy_Title" xml:space="preserve">
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
+  </data>
+  <data name="Profile_MainTitle" xml:space="preserve">
+    <value>O Meu perfil</value>
+  </data>
+  <data name="Profile_Menu_BillingDetails" xml:space="preserve">
+    <value>Detalhes de Faturação</value>
+  </data>
+  <data name="Profile_Menu_Invite" xml:space="preserve">
+    <value>Convidar amigos</value>
+  </data>
+  <data name="Profile_Menu_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Profile_Menu_PersonalDetails" xml:space="preserve">
+    <value>Dados pessoais</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text" xml:space="preserve">
+    <value>Alterar email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure" xml:space="preserve">
+    <value>A password que introduziste está incorreta</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1" xml:space="preserve">
+    <value>O teu endereço de email foi alterado com sucesso.&lt;br/&gt;&lt;br/&gt;Enviámos um email para</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2" xml:space="preserve">
+    <value>com um link para poderes confirmar o novo email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label" xml:space="preserve">
+    <value>Password atual</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Introduz a tua password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label" xml:space="preserve">
+    <value>Novo endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage" xml:space="preserve">
+    <value>O endereço de email é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label" xml:space="preserve">
+    <value>Repetir endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Os endereços de email não coincidem</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage" xml:space="preserve">
+    <value>Repetir o endereço de email é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_Title" xml:space="preserve">
+    <value>Alterar endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text" xml:space="preserve">
+    <value>Alterar password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1" xml:space="preserve">
+    <value>Ocorreu um erro ao alterar a tua password.&lt;br/&gt;&lt;br/&gt;Tenta outra vez ou</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2" xml:space="preserve">
+    <value>contacta-nos</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess" xml:space="preserve">
+    <value>A tua password foi alterada com sucesso</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword" xml:space="preserve">
+    <value>A password que introduziste está incorreta</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>As passwords não coincidem</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label" xml:space="preserve">
+    <value>Repetir nova password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Repetir a nova password é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label" xml:space="preserve">
+    <value>Password atual</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Introduz a tua password actual</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Label" xml:space="preserve">
+    <value>Nova password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>A nova password é obrigatória</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_Title" xml:space="preserve">
+    <value>Alterar password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text" xml:space="preserve">
+    <value>Re-enviar Link</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1" xml:space="preserve">
+    <value>Enviámos um email para</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2" xml:space="preserve">
+    <value>com o link para poderes confirmar o teu email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage" xml:space="preserve">
+    <value>Os teus dados foram actualizados com sucesso</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Introduza uma data válida</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label" xml:space="preserve">
+    <value>Data de nascimento</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder" xml:space="preserve">
+    <value>AAAA / MM / DD</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed" xml:space="preserve">
+    <value>Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Label" xml:space="preserve">
+    <value>Endereço de email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed" xml:space="preserve">
+    <value>Não Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Label" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage" xml:space="preserve">
+    <value>O campo do nome é obrigatório</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Introduza um número válido</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed" xml:space="preserve">
+    <value>Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label" xml:space="preserve">
+    <value>Telemóvel</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed" xml:space="preserve">
+    <value>Não Confirmado</value>
+  </data>
+  <data name="Profile_PersonalDetails_Title" xml:space="preserve">
+    <value>Dados pessoais</value>
+  </data>
+  <data name="SiteMaster_Errors_AntiXSRF" xml:space="preserve">
+    <value>Validation of Anti-XSRF token failed.</value>
+    <comment>??? em que contexto acontece este erro?</comment>
+  </data>
+  <data name="SiteMaster_Footer_Destinos" xml:space="preserve">
+    <value>Destinos</value>
+  </data>
+  <data name="SiteMaster_Footer_Language_English" xml:space="preserve">
+    <value>Inglês</value>
+  </data>
+  <data name="SiteMaster_Footer_Language_Portuguese" xml:space="preserve">
+    <value>Português</value>
+  </data>
+  <data name="SiteMaster_Footer_Loops" xml:space="preserve">
+    <value>Loops</value>
+  </data>
+  <data name="SiteMaster_Footer_Privacy" xml:space="preserve">
+    <value>Politica de privacidade</value>
+  </data>
+  <data name="SiteMaster_Footer_Terms" xml:space="preserve">
+    <value>Termos e Condiçōes</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_About" xml:space="preserve">
+    <value>Sobre nós</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_Contact" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_HowTo" xml:space="preserve">
+    <value>Como funciona</value>
+  </data>
+  <data name="SiteMaster_NavBar_Destinations" xml:space="preserve">
+    <value>Destinos</value>
+  </data>
+  <data name="SiteMaster_NavBar_LoopsAndSchedules" xml:space="preserve">
+    <value>Loops &amp; horarios</value>
+  </data>
+  <data name="SiteMaster_NavBar_MyTrips" xml:space="preserve">
+    <value>As minhas viagens</value>
+  </data>
+  <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
+    <value>Registar/Entrar</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Billing" xml:space="preserve">
+    <value>Detalhes de Faturação</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Invite" xml:space="preserve">
+    <value>Convidar amigos</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Logout" xml:space="preserve">
+    <value>Terminar sessão</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Profile" xml:space="preserve">
+    <value>O Meu Perfil</value>
+  </data>
+  <data name="StaticPages_About_MainDescription" xml:space="preserve">
+    <value>A revolucionar as cidades, um Loop de cada vez.</value>
+  </data>
+  <data name="StaticPages_About_MainTitle" xml:space="preserve">
+    <value>Sobre nós</value>
+  </data>
+  <data name="StaticPages_About_Shuttles_SubTitle" xml:space="preserve">
+    <value>Cada um dos nossos shuttles são veículos de luxo de 8 lugares (Mercedes V-class Avantgarde, com estofos em pele). Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem</value>
+  </data>
+  <data name="StaticPages_About_Shuttles_Title" xml:space="preserve">
+    <value>Os nossos shuttles</value>
+  </data>
+  <data name="StaticPages_About_SubDescription" xml:space="preserve">
+    <value>A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;
+&lt;br&gt;
+Foi por isso que criámos um serviço de transfer ao preço do comboio, alternativo ao automóvel particular, aos comboios e ao avião, com a diferença de ser mais acessível, conveniente, fiável e sustentável.</value>
+  </data>
+  <data name="StaticPages_About_Why_Accessible_Content" xml:space="preserve">
+    <value>Por um loop, chegas a pagar 75% menos do que se levasses o teu próprio carro e exactamente o mesmo do que pagarias por ir de autocarro ou outros transportes — e ainda tens uma viagem muito mais confortável e menos desgastante.</value>
+  </data>
+  <data name="StaticPages_About_Why_Accessible_SubTitle" xml:space="preserve">
+    <value>Menos desgaste,&lt;br&gt;mais na carteira</value>
+  </data>
+  <data name="StaticPages_About_Why_Accessible_Title" xml:space="preserve">
+    <value>Acessível</value>
+  </data>
+  <data name="StaticPages_About_Why_Convenient_Content" xml:space="preserve">
+    <value>Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
+  </data>
+  <data name="StaticPages_About_Why_Convenient_SubTitle" xml:space="preserve">
+    <value>Pick up e drop off&lt;br&gt;convenientes</value>
+  </data>
+  <data name="StaticPages_About_Why_Convenient_Title" xml:space="preserve">
+    <value>Conveniente</value>
+  </data>
+  <data name="StaticPages_About_Why_Reliable_Content" xml:space="preserve">
+    <value>Um motorista profissional dá-te boleia com locais e horas de partida fixas. Basta escolheres o teu ponto de saída, reservar a tua viagem, e sentares-te no teu lugar à hora marcada.</value>
+  </data>
+  <data name="StaticPages_About_Why_Reliable_SubTitle" xml:space="preserve">
+    <value>Lugar marcado,&lt;br&gt;à hora marcada</value>
+  </data>
+  <data name="StaticPages_About_Why_Reliable_Title" xml:space="preserve">
+    <value>Fiável</value>
+  </data>
+  <data name="StaticPages_About_Why_Sustainable_Content" xml:space="preserve">
+    <value>Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono.</value>
+  </data>
+  <data name="StaticPages_About_Why_Sustainable_SubTitle" xml:space="preserve">
+    <value>Menos carros,&lt;br&gt;mais cidade</value>
+  </data>
+  <data name="StaticPages_About_Why_Sustainable_Title" xml:space="preserve">
+    <value>Sustentável</value>
+  </data>
+  <data name="StaticPages_Contact_Bookings" xml:space="preserve">
+    <value>Reservas</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_btnSend_text" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_Send_ShowMessage" xml:space="preserve">
+    <value>A tua mensagem foi enviada</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbBody_Label" xml:space="preserve">
+    <value>Mensagem</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbEmail_Label" xml:space="preserve">
+    <value>Endereço de E-mail</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbName_Label" xml:space="preserve">
+    <value>Nome completo</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbSubject_Label" xml:space="preserve">
+    <value>Assunto</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_Title" xml:space="preserve">
+    <value>Deixa-nos uma mensagem</value>
+  </data>
+  <data name="StaticPages_Contact_Title" xml:space="preserve">
+    <value>Contactos</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Description" xml:space="preserve">
+    <value>A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa e vice-versa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>Saídas de Lisboa: 8:00 - 14:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>Saídas de Coimbra: 11:00 - 16:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te de Lisboa até Coimbra em apenas 90 minutos</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_MainDescription" xml:space="preserve">
+    <value>
+Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
+&lt;br&gt;
+Com a Yoyoloop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de autocarro. Aproveita uma viagem mais rápida e confortável até à Avenida Fernão de Magalhães.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_MainTitle" xml:space="preserve">
+    <value>Deixa o carro em casa e vem de transfer para Coimbra</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_Description" xml:space="preserve">
+    <value>Se apanhares um transfer para Coimbra a partir de Lisboa, podes escolher partir de várias paragens diferentes, tais como Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande ou Gare do Oriente. As chegadas a Coimbra serão na Av. Fernão de Magalhães ou na Portagem. Saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>A Avenida Fernão de Magalhães é central na baixa de Coimbra, com acessos fáceis de carro ou de transfortes públicos de qualquer ponto da cidade. </value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>2, 13, 20, 36</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Autocarros</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Av. Fernão de Magalhães</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description" xml:space="preserve">
+    <value>A Portagem é um ponto de encontro por excelência em Coimbra, com acesso directo ao comércio e serviços da baixa da Cidade.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
+    <value>10; 13; 18; 20; 43</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
+    <value>Autocarro</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title" xml:space="preserve">
+    <value>Portagem</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_SubTitle" xml:space="preserve">
+    <value>Paragens em Coimbra</value>
+    <comment>coimbra só tens duas paragens. coloquei vazio as paragens third, forth and fifth</comment>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_Title" xml:space="preserve">
+    <value>LOOP COIMBRA</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_SubDescription" xml:space="preserve">
+    <value>Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Coimbra_Description" xml:space="preserve">
+    <value>Com mais de 100 mil habitantes e sendo um importante polo universitário, Coimbra gera um movimento constante de estudantes e profissionais com Lisboa e também com o Porto.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Leiria_Description" xml:space="preserve">
+    <value>A cidade de Leiria é o ponto central de uma região Oeste com grande dinamismo empresarial. A cidade é bem servida de auto-estradas, mas infelizmente as ligações de comboio e autocarro deixam muito a desejar.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Lisboa_Description" xml:space="preserve">
+    <value>Com mais de 2 milhões de habitantes na Grande Lisboa, &lt;br&gt;todos os dias entram 370 mil carros na capital num constante pára-arranca.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Porto_Description" xml:space="preserve">
+    <value>Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. </value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Title" xml:space="preserve">
+    <value>Destino a</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_btnBack_text" xml:space="preserve">
+    <value>voltar</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_Schedules" xml:space="preserve">
+    <value>Horários</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_Stops" xml:space="preserve">
+    <value>Paragens</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_Title" xml:space="preserve">
+    <value>Loops com destino a</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_TravelTime" xml:space="preserve">
+    <value>Tempo de viagem</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_Stops_StopCard_HowToGet" xml:space="preserve">
+    <value>Como chegar até ao teu transfer da Yoyoloop</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_Title" xml:space="preserve">
+    <value>DESTINO POPULAR</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Description" xml:space="preserve">
+    <value>A Yoyoloop dá-te boleia para Leiria a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>Saídas de Lisboa: 12:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>Saídas de Leiria: 15:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_MainDescription" xml:space="preserve">
+    <value>Apanha um transfer da Yoyoloop para Leiria, a alternativa ao carro particular e aos autocarros</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_MainTitle" xml:space="preserve">
+    <value>Deixa o carro em casa apanha um transfer premium para Leiria.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_Description" xml:space="preserve">
+    <value>Se apanhares um transfer para Leiria a partir de Lisboa, podes escolher partir de zonas importantes da cidade como as Amoreiras, Campo Grande, Gare do Oriente, Marquês de Pombal ou Sete Rios. A chegada a Leiria será no Largo da Reública, bem no centro de Leiria e com acesso fácil à zona universitária.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>O Largo da Reública está no centro de Leiria. É aqui que está a Câmara municipal, o Tribunal e outros serviços públicos e comércio. Adicionalmente, fica muito perto do Instituto Politécnico de Leiria.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Autocarros e carro privado</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Largo da República</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_SubTitle" xml:space="preserve">
+    <value>Paragens em Leiria</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_Title" xml:space="preserve">
+    <value>LOOP LEIRIA</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_SubDescription" xml:space="preserve">
+    <value>Leiria é uma das cidades Portuguesas mais importantes, leiderando uma região Oeste e albergando um vibrante tecido empresarial e um polo universitário importante. Apesar de estar perto de Lisboa, as ligações de transportes públicos a Leiria deixam bastante a desejar, sobretudo no que diz respeio às ligações de comboio.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Description" xml:space="preserve">
+    <value>A Yoyoloop dá-te boleia para Lisboa a partir do Porto, Coimbra e Leiria. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>Saídas do Porto 7:30 - 8:30 - 18:00 - 19:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>Saídas de Coimbra 11:00 - 16:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te do Porto até Lisboa em duas horas e meia.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_MainDescription" xml:space="preserve">
+    <value>Apanha um transfer da Yoyoloop para Lisboa, a alternativa ao carro e ao comboio</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_MainTitle" xml:space="preserve">
+    <value>Deixa o carro em casa e vem de transfer para Lisboa</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_Description" xml:space="preserve">
+    <value>Se apanhares um transfer para Lisboa, podes escolher parar nas principais zonas de escritórios da capital e ainda ficar a poucos passos de uma estação de metro. Quando voltares para a tua cidade de origem, aproveita para tomar uma bica enquanto esperas pela tua boleia. Lembra-te, com a Yoyoloop, tens lugar marcado à hora marcada!</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description" xml:space="preserve">
+    <value>Além de ser a zona de residência do Jardim Zoológico de Lisboa, Sete Rios é conhecido por ser outra das mais importantes estações ferroviárias e rodoviárias da cidade. É especialmente importante para quem vem da linha de Sintra e da Margem Sul, assim como para quem chega de autocarro vindo de todos os cantos do país, especialmente da zona sul e região oeste.&lt;br&gt;
+&lt;br&gt;
+Sete Rios é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Cascais.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details" xml:space="preserve">
+    <value>Linha Amarela e Linha Vermelha</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title" xml:space="preserve">
+    <value>Sete Rios</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>As Torres das Amoreiras são um dos edifícios mais icónicos da cidade de Lisboa. Apesar de ser uma zona residencial de excelência e um das principais pólos de escritórios da capital, a zona das Amoreiras não está devidamente servida pela rede de transportes da cidade, especialmente pelo Metropolitano de Lisboa. É um incómodo para os residentes lisboetas, mas é ainda mais doloroso para quem vem dos arredores da capital.&lt;br&gt;
+&lt;br&gt;
+A Torre 3 das Amoreiras é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Leiria.
+</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>758; 783</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Autocarro</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Amoreiras</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description" xml:space="preserve">
+    <value>O Marquês de Pombal dispensa apresentações. É uma zona de escritórios por excelência, mas também de alguma actividade turística. É um ponto de entrada importante da cidade de Lisboa, sobretudo para quem vem da zona de Cascais, e é servido de vários transportes públicos, incluindo duas linhas de metro.&lt;br&gt;
+&lt;br&gt;
+O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details" xml:space="preserve">
+    <value>Linha Azul e Linha Amarela</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title" xml:space="preserve">
+    <value>Marquês de Pombal</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description" xml:space="preserve">
+    <value>O Campo Grande é, desde há muitos anos, uma zona de transportes importante. É aqui que chegam a maior parte dos autocarros suburbanos provenientes da região Oeste. A crescente presença de grandes empresas na zona, assim como a Universidade Lusófona de Lisboa e várias faculdades da Universidade de Lisboa nas proximidades, reforçou ainda mais a importância de ligar devidamente o Campo Grande.&lt;br&gt;
+&lt;br&gt;
+O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Cascais.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
+    <value>Linha Verde, Linha Amarela</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
+    <value>Metro e autocarros suburbanos região Oeste</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title" xml:space="preserve">
+    <value>Campo Grande</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description" xml:space="preserve">
+    <value>A Gare do Oriente é uma das mais importantes estações ferroviárias e rodoviárias da cidade de Lisboa. A sua ligação privilegiada ao Aeroporto de Lisboa pela Avenida de Berlim também contribui para a importância desta zona icónica. Todos os dias, a Gare do Oriente recebe centenas de milhares de pessoas provenientes de vários pontos dos arredores da capital.&lt;br&gt;
+&lt;br&gt;
+A Gare do Oriente é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details" xml:space="preserve">
+    <value>Linha Vermelha</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title" xml:space="preserve">
+    <value>Metro, Comboios Suburbanos, Autocarros Suburbanos</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title" xml:space="preserve">
+    <value>Gare do Oriente</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_SubTitle" xml:space="preserve">
+    <value>Paragens em Lisboa</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_Title" xml:space="preserve">
+    <value>LOOP LISBOA</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_SubDescription" xml:space="preserve">
+    <value>Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca.&lt;br&gt;
+&lt;br&gt;
+As alternativas deixam a desejar. Os autocarros e os comboios são demorados, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
+&lt;br&gt;
+Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem mais rápida e confortável até pontos estratégicos da cidade, do Saldanha à Gare do Oriente.</value>
+  </data>
+  <data name="StaticPages_Destinos_MainDescription" xml:space="preserve">
+    <value>Destinos populares</value>
+  </data>
+  <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
+    <value>A Revolucionar a mobilidade entre cidades, &lt;br&gt; Loop de cada vez</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
+    <value>A Yoyoloop dá-te boleia para o Porto a partir de Lisboa e de Coimbra. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>Saídas de Coimbra: 15:00</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas duas horas e meia.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_MainDescription" xml:space="preserve">
+    <value>Esquece o comboio e o avião e vem de transfer premium para o Porto</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_MainTitle" xml:space="preserve">
+    <value>Deixa o carro em casa e vem de transfer premium para o Porto</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_Description" xml:space="preserve">
+    <value>A rede de transportes públicos do Porto deixa a desejar. Os autocarros e os comboios são demorados e o Metro do Porto serve apenas os subúrbios e uma faixa do centro da cidade. Para quem vem de outras cidades, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
+&lt;br&gt;
+Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais rápida e confortável até à Avenida da Boavista, Casa da Música, Trindade, NorteShopping ou GaiaShopping.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description" xml:space="preserve">
+    <value>A Avenida da Boavista concentra várias zonas de escitórios da zona do Porto. Pela sua dimensão, a Yoyoloop optou por disponbilibizar duas paragens na Av. da Boavista. Uma paragem na zona ascente, junto an Hotel Crown Plaza e perto dos Hoteis Porto palácio e Sheraton Porto e uma segunda paragem na zona Poente, no Edifício Oceanos, perto do colégio de Nossa Sra. do Rosário.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details" xml:space="preserve">
+    <value>503 e 504</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title" xml:space="preserve">
+    <value>STCP:</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title" xml:space="preserve">
+    <value>Avenida de Boavista</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>A Casa da Música é uma das principais salas de concerto do Porto e um dos ícones da cidade. Está localizada na Avenida da Boavista, uma das principais avenidas do Porto, e está bem servida de cinco linhas de metro. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>Autocarro STCP: 203, 208, 507, 704, 803</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Metro: Casa da Música (linha A, B, C, E, F)</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Casa da Música</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description" xml:space="preserve">
+    <value>A estação da Trindade é o maior interface de transportes do centro do Porto, a dois passos da Avenida dos Aliados e perto de zonas de escritórios, comércio e de instituições públicas.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details" xml:space="preserve">
+    <value>A; B; C; D; E</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title" xml:space="preserve">
+    <value>Trindade</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_Description" xml:space="preserve">
+    <value>O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
+    <value>&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
+    <value>Autocarro STCP: 903, 907</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_Title" xml:space="preserve">
+    <value>GaiaShopping</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_Description" xml:space="preserve">
+    <value>Com mais de 260 lojas, o Norte Shopping, localizado na Senhora da Hora, é o maior centro comercial de região Norte. Além disso, tem um centro de escritórios muito importante, servindo de sede a algumas das maiores empresas nacionais. É de muito fácil acesso, já que fica muito perto de uma estação de metro servida de cinco linhas. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details" xml:space="preserve">
+    <value>Autocarro STCP: 205, 504, 506, 507, 601&lt;br&gt;
+Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title" xml:space="preserve">
+    <value>Metro: Sete Bicas (linha A, B, C, E, F)</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_Title" xml:space="preserve">
+    <value>NorteShopping</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_SubTitle" xml:space="preserve">
+    <value>Paragens no Porto</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_Title" xml:space="preserve">
+    <value>LOOP PORTO</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_SubDescription" xml:space="preserve">
+    <value>Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. Num estudo recente, foi revelado que o Porto é a pior cidade do país para andar de carro, com mais de 27 horas por ano passadas no trânsito — muitas delas passadas na congestionada VCI.
+</value>
+  </data>
+  <data name="StaticPages_Destinos_SubDescription" xml:space="preserve">
+    <value>Apanha boleia a preço de autocarro</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Accessible_Description" xml:space="preserve">
+    <value>Menos desgaste, mais na carteira</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Accessible_Title" xml:space="preserve">
+    <value>Acessível</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Conveninent_Description" xml:space="preserve">
+    <value>Pick up e drop off convenientes</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Conveninent_Title" xml:space="preserve">
+    <value>Conveniente</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Reliable_Description" xml:space="preserve">
+    <value>Lugar marcado, à hora marcada</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Reliable_Title" xml:space="preserve">
+    <value>Fiável</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Sustainable_Description" xml:space="preserve">
+    <value>Menos carros, mais cidade</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Sustainable_Title" xml:space="preserve">
+    <value>Sustentável</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Title" xml:space="preserve">
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
+  </data>
+  <data name="StaticPages_FAQ_Questions" xml:space="preserve">
+    <value>Tens alguma pergunta?</value>
+  </data>
+  <data name="StaticPages_FAQ_Questions_HelpLink" xml:space="preserve">
+    <value>Lê as nossas Perguntas Frequentes</value>
+  </data>
+  <data name="StaticPages_HowTo_MainDescription" xml:space="preserve">
+    <value>Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e ao preço do comboio</value>
+  </data>
+  <data name="StaticPages_HowTo_MainSubDescription" xml:space="preserve">
+    <value>A Yoyoloop tem viagens de Lisboa para o Porto, Coimbra e Leiria e retorno. Adicionalmente a Yoyoloop tem viagens do Porto para Coimbra e retorno.</value>
+  </data>
+  <data name="StaticPages_HowTo_MainTitle" xml:space="preserve">
+    <value>como apanhar boleia da Yoyoloop?</value>
+  </data>
+  <data name="StaticPages_HowTo_StepFour" xml:space="preserve">
+    <value>4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!</value>
+  </data>
+  <data name="StaticPages_HowTo_StepOne" xml:space="preserve">
+    <value>1 - Escolhe onde queres ir e o teu ponto de partida e chegada preferidos.</value>
+  </data>
+  <data name="StaticPages_HowTo_StepThree" xml:space="preserve">
+    <value>3 - Faz o download do teu bilhete e apresenta-o ao motorista no ponto de partida.</value>
+  </data>
+  <data name="StaticPages_HowTo_StepTwo" xml:space="preserve">
+    <value>2 - Paga o teu bilhete com cartão de crédito e com 100% segurança.</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Bus" xml:space="preserve">
+    <value>Autocarro</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Car" xml:space="preserve">
+    <value>Carro próprio</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Plane" xml:space="preserve">
+    <value>Avião</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Ride" xml:space="preserve">
+    <value>Boleias tradicionais</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Train" xml:space="preserve">
+    <value>Comboio</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_APs" xml:space="preserve">
+    <value>→ Av. Fernão de Magalhães&lt;br /&gt;→ Portagem&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Times1" xml:space="preserve">
+    <value>Saida de Lisboa: 8:00 - 14:00</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Times2" xml:space="preserve">
+    <value>Saída do Porto: 12:00</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Title" xml:space="preserve">
+    <value>desde 26€ por viagem de ida</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas uma hora e trinta minutos</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_MainDescription" xml:space="preserve">
+    <value>Cansado de conduzir nas viegens entre Lisboa e Coimbra?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_MainTitle" xml:space="preserve">
+    <value>Deixa o carro em casa e vem de transfer premium para Coimbra</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_SubDescription" xml:space="preserve">
+    <value>Quando chega a hora de voltar a casa no final de um dia de trabalho ou ao fim de uma semana de aulas na faculdade, os transportes de Lisboa para Coimbra não são muitos.&lt;br&gt;
+&lt;br&gt;
+Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
+&lt;br&gt;
+A Yoyoloop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why" xml:space="preserve">
+    <value>Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons" xml:space="preserve">
+    <value>→ A viagem é mais demorada&lt;br /&gt;
+→ Há várias paragens pelo caminho&lt;br /&gt;
+→ A viagem é desconfortável e barulhenta&lt;br /&gt;
+→ Só podes partir de Sete Rios ou do Oriente&lt;br /&gt;
+→ É frequente o wifi não funcionar e não tens onde carregar o teu smartphone&lt;br /&gt;
+→ A tua bagagem tem de ir no porão e pode demorar algum tempo a recolhê-la à chegada&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons" xml:space="preserve">
+    <value>→ Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br /&gt;
+→ Viagem com paragens no caso de dares boleia a outras pessoas&lt;br /&gt;
+→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Description" xml:space="preserve">
+    <value>Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons" xml:space="preserve">
+    <value>→ Conta com partidas diárias&lt;br /&gt;
+→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br /&gt;
+→ Beneficia de locais de partida e chegada em pontos centrais da tua cidade&lt;br /&gt;
+→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br /&gt;
+→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons" xml:space="preserve">
+    <value>→ A viagem é mais demorada&lt;br /&gt;
+→ A viagem conta com várias paragens&lt;br /&gt;
+→ A viagem é desconfortável e barulhenta&lt;br /&gt;
+→ Os atrasos, avarias e greves são frequentes&lt;br /&gt;
+→ Só podes partir do Oriente ou de Santa Apolónia&lt;br /&gt;
+→ Só consegues carregar o teu smartphone se fores em primeira classe&lt;br /&gt;
+→ O ponto de chegada Coimbra B não é tão conveniente quanto a Av. Fernão de Magalhães&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_APs" xml:space="preserve">
+    <value>→ Largo da República</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Times1" xml:space="preserve">
+    <value>Saídas de Lisboa: 12:00</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Times2" xml:space="preserve">
+    <value>Saídas de Leiria: 15:00</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Title" xml:space="preserve">
+    <value>Desde 16€ por viagem de ida</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_MainDescription" xml:space="preserve">
+    <value>Cansado de conduzir entre Leiria e Lisboa?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_MainTitle" xml:space="preserve">
+    <value>Deixa o carro em casa e vem de transfer premium para Leiria</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_SubDescription" xml:space="preserve">
+    <value>Para quem vive e trabalha na zona de Leiria, o carro particular acaba por ser a única alternativa fiável para fazer este trajecto no dia-a-dia. No entanto, o custo total desta viagem incluindo portagens, combustível, seguros e desgaste to carro coresponde a cerca de 50€, sendo ainda necessário resolver o problema do estacionamento à chegada a Lisboa. Infelizmente, os investimentos na melhoria do serviço de comboios na linha do Oeste continuam a ser adiados de há muitos anos a esta parte. </value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why" xml:space="preserve">
+    <value>Porquê apanhar um transfer entre Lisboa e Leiria em vez de outros transportes?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Bus_Reasons" xml:space="preserve">
+    <value>→ As linhas de autocarros têm várias paragens e demoram muito tempo.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Car_Reasons" xml:space="preserve">
+    <value>→ Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Não é possível utilizar o tempo para trabalhar ou relaxar se estás a conduzir o teu carro.&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Description" xml:space="preserve">
+    <value>→ Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de oito lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons" xml:space="preserve">
+    <value>→ Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Train_Reasons" xml:space="preserve">
+    <value>→ Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A linha do Oeste tem se vindo a degradar de forma significativa&lt;br/&gt;→ A viagem é barulhenta e as carruagens não são confortáveis &lt;br/&gt;→ O único ponto de chegada é a Gare do Oriente, sendo necessário apanhar outro transporte para chegares ao teu destino final em Lisboa.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_APs" xml:space="preserve">
+    <value>→ Av. da Boavista &lt;br /&gt;→Casa da Musica&lt;br /&gt;→ GaiaShopping&lt;br /&gt;→Norteshopping&lt;br /&gt;→Trindade</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times1" xml:space="preserve">
+    <value>Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times2" xml:space="preserve">
+    <value>Saídas do Porto: 7:30 - 8:30 - 18:00 - 19:00</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
+    <value>desde 36€ por viagem</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
+    <value>O transfer da Yoyoloop leva-te de Lisboa até ao Porto em duas horas e meia.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_MainDescription" xml:space="preserve">
+    <value>Sem check-in, sem filas de segurança, diretamente para o centro da cidade.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_MainTitle" xml:space="preserve">
+    <value> Apanha um transfer premium entre Lisboa e o Porto ao preço do comboio.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_SubDescription" xml:space="preserve">
+    <value>Quando chega a hora de voltar a casa no final de um dia de trabalho ou ao fim de uma semana de aulas na faculdade, há vários transportes de Lisboa para o Porto, mas não são os mais viáveis, nem os mais confortáveis.&lt;br&gt;
+&lt;br&gt;
+Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
+&lt;br&gt;
+Ao contrário do que parece, a própria ponte aérea entre Lisboa e o Porto não é a alternativa mais rápida e mais barata pela necessidade de chegar com antecedência ao aeroporto, passar pela fila (às vezes, interminável) da segurança e apanhar um táxi ou outro transporte até ao centro da cidade.&lt;br&gt;
+&lt;br&gt;
+A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares. </value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Bus_Reasons" xml:space="preserve">
+    <value>→ A viagem é mais demorada&lt;br/&gt;
+→ Há várias paragens pelo caminho&lt;br/&gt;
+→ A viagem é desconfortável e barulhenta&lt;br/&gt;
+→ É frequente o wifi não funcionar e não tens onde carregar o teu smartphone&lt;br/&gt;
+→ Só podes partir de Sete Rios ou do Oriente e parar no Campo 24 de Agosto&lt;br/&gt;
+→ A tua bagagem tem de ir no porão e pode demorar algum tempo a recolhê-la à chegada&lt;br/&gt;
+</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Car_Reasons" xml:space="preserve">
+    <value>→ Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;
+→ Viagem com paragens no caso de dares boleia a outras pessoas&lt;br/&gt;
+→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Description" xml:space="preserve">
+    <value>→ Conta com partidas de 30 em 30 minutos, ao início e ao final do dia&lt;br/&gt;
+→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;
+→ Beneficia de locais de partida e chegada em pontos centrais da tua cidade&lt;br/&gt;
+→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;
+→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Plane_Reasons" xml:space="preserve">
+    <value>→ Não tens internet no avião&lt;br/&gt;
+→ É necessário passares pela fila da segurança no aeroporto&lt;br/&gt;
+→ O tráfego aéreo no aeroporto de Lisboa provoca atrasos frequentes&lt;br/&gt;
+→ Tens de chegar ao aeroporto com, pelo menos, 1 hora de antecedência&lt;br/&gt;
+→ Se levares mala de cabine, há a possibilidade de ser despachada para o porão&lt;br/&gt;
+→ Precisas de apanhar um táxi ou outro transporte alternativo até ao centro do Porto&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Ride_Reasons" xml:space="preserve">
+    <value>→ Podes demorar muito tempo se não fores pela auto-estrada&lt;br/&gt;
+→ Se o carro for cheio, pode ser uma viagem desconfortável, podes não ter espaço para a tua bagagem e podes ter várias paragens para deixar os outros passageiros&lt;br/&gt;
+→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Train_Reasons" xml:space="preserve">
+    <value>→ A viagem é mais demorada&lt;br/&gt;
+→ A viagem conta com várias paragens&lt;br/&gt;
+→ A viagem é desconfortável e barulhenta&lt;br/&gt;
+→ Os atrasos, avarias e greves são frequentes&lt;br/&gt;
+→ Só consegues carregar o teu smartphone se fores em primeira classe&lt;br/&gt;
+→ Só podes partir do Oriente ou Santa Apolónia e parar em Gaia e Campanhã&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_Book" xml:space="preserve">
+    <value>Reservar</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_From" xml:space="preserve">
+    <value>desde</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra" xml:space="preserve">
+    <value>- Av. Fernão de Magalhães&lt;br /&gt;- Portagem&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa" xml:space="preserve">
+    <value>- Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra" xml:space="preserve">
+    <value>Saidas de Coimbra</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times" xml:space="preserve">
+    <value>8:00 - 14:00</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa" xml:space="preserve">
+    <value>Saidas de Lisboa</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days" xml:space="preserve">
+    <value>Todos os dias</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times" xml:space="preserve">
+    <value>11:00 - 16:00</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria" xml:space="preserve">
+    <value>- Praça de República&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_APs_Lisboa" xml:space="preserve">
+    <value>- Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria" xml:space="preserve">
+    <value>Saída de Leiria</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times" xml:space="preserve">
+    <value>15:00</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa" xml:space="preserve">
+    <value>Saidas de Lisboa</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Times" xml:space="preserve">
+    <value>12:00</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa" xml:space="preserve">
+    <value>- Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto" xml:space="preserve">
+    <value>- Av. da Boavista&lt;br /&gt;- Casa da Música&lt;br /&gt;- GaiaShopping&lt;br /&gt;- NorteShopping&lt;br /&gt;- Trindade&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa" xml:space="preserve">
+    <value>Saidas de Lisboa</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times" xml:space="preserve">
+    <value>7:30 - 8:30 - 18:00 - 19:00</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto" xml:space="preserve">
+    <value>Saidas do Porto</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days" xml:space="preserve">
+    <value>Dias úteis</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times" xml:space="preserve">
+    <value>7:30  -  8:00  -  9:30  -  10:30</value>
+  </data>
+  <data name="StaticPages_Loops_MainTitle" xml:space="preserve">
+    <value>A Revolucionar a mobilidade entre cidades, &lt;br&gt;um Loop de cada vez</value>
+  </data>
+  <data name="StaticPages_Loops_SubDescription" xml:space="preserve">
+    <value>A Yoyoloop tem loops entre Lisboa e o Porto, Coimbra e Leiria e, ainda, loops desde o Porto e Coimbra.</value>
+  </data>
+  <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
+    <value>Loops &amp; Horários</value>
+  </data>
+  <data name="StaticPages_Privacy_Eight" xml:space="preserve">
+    <value>8. Por quanto tempo conservamos os seus dados pessoais?&lt;br&gt;
+&lt;br&gt;
+Sem prejuízo de outros prazos previstos na legislação em vigor, nomeadamente em matéria fiscal, contabilística e de responsabilidade contratual, os dados recolhidos através deste sítio manter-se-ão conservados durante o período de tempo em que o utilizador se encontrar registado, sendo eliminados quando o utilizador requerer a eliminação dos mesmos ou do seu registo, nos termos do ponto seguinte.</value>
+  </data>
+  <data name="StaticPages_Privacy_Five" xml:space="preserve">
+    <value>5. Onde são guardados os dados do Utilizador?&lt;br&gt;
+&lt;br&gt;
+A equipa da Yoyoloop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
+Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Caso deseje ser removido da nossa base de dados, poderá exercer esse direito, contactando-nos através dos diversos meios disponíveis no site.&lt;br&gt;
+A Yoyoloop não guarda diretamente os dados de pagamento dos utilizadores - recorrendo para tal a um parceiro especialista - Stripe. Os termos e condições do nosso parceiro podem ser consultados em LINK DO STRIPE&lt;br&gt;
+Por forma a garantir que os dados guardados do Utilizador estão actualizados e em conformidade, o Utilizador pode através do website da Yoyoloop:&lt;br&gt;
+&lt;br&gt;
+Actualizar o seu nome.&lt;br&gt;
+Actualizar a sua morada.&lt;br&gt;
+Actualizar os seus dados de contacto: Número de telemóvel e Email.&lt;br&gt;
+Actualizar os seus método de pagamento e dados fiscais.&lt;br&gt;
+Eliminar permanentemente a sua conta.&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Privacy_Four" xml:space="preserve">
+    <value>4. Quem tem acesso aos dados pessoais do utilizador?&lt;br&gt;
+A Yoyoloop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei.</value>
+  </data>
+  <data name="StaticPages_Privacy_MainTitle" xml:space="preserve">
+    <value>Política de Privacidade</value>
+  </data>
+  <data name="StaticPages_Privacy_Nine" xml:space="preserve">
+    <value>9. Links para outros sites&lt;br&gt;
+&lt;br&gt;
+Dentro no website da yoyoloop, poderão encontrar-se links para websites terceiros e se o Utilizador seguir um desses Links, deverá notar que cada um desses websites tem a sua própria política de privacidade e a que a yoyoloop não aceita qualquer responsabilidade ou obrigação referente a essas políticas.</value>
+  </data>
+  <data name="StaticPages_Privacy_One" xml:space="preserve">
+    <value>1.  Âmbito desta Política de Privacidade&lt;br&gt;
+&lt;br&gt;
+A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da Yoyoloop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
+Os dados recolhidos ou fornecidos pelo utilizador não serão processados para quaisquer outros fins que não os aqui especificados. &lt;br&gt;
+A Yoyoloop reserva-se no direito de atualizar ou modificar a sua Política de Privacidade a qualquer momento, nomeadamente, de forma a adaptá-la a alterações legislativas.</value>
+  </data>
+  <data name="StaticPages_Privacy_Seven" xml:space="preserve">
+    <value>7. Direitos do utilizador ao abrigo do regulamento geral de proteção de dados.&lt;br&gt;
+&lt;br&gt;
+O Utilizador tem o direito de acesso, à retificação, ao esquecimento, à portabilidade dos dados, a limitar ou opor-se ao tratamento dos seus dados pessoais, a apresentar reclamação e a recorrer a ação judicial.</value>
+  </data>
+  <data name="StaticPages_Privacy_Six" xml:space="preserve">
+    <value>6. A Yoyoloop utiliza cookies no seu Website?&lt;br&gt;
+&lt;br&gt;
+O website da Yoyoloop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à Yoyoloop proporcionar a melhor experiência de utilização.</value>
+  </data>
+  <data name="StaticPages_Privacy_SubTitle" xml:space="preserve">
+    <value>A Yoyoloop! reconhece a importância de proteger os seus dados pessoais, qualquer que seja a sua natureza. Por esse motivo desenvolvemos um conjunto de medidas de segurança que visam a protecção dos seus dados.</value>
+  </data>
+  <data name="StaticPages_Privacy_Three" xml:space="preserve">
+    <value>3. A Yoyoloop utiliza os dados pessoais recolhidos para fins de Marketing e Publicidade?&lt;br&gt;
+ &lt;br&gt;
+A Yoyoloop não utilizará os seus dados pessoais para lhe enviar qualquer correio ou mensagem não solicitada cujo não tenha recebido o seu consentimento explícito. A Yoyoloop não vende nem negocia os seus dados com terceiros.</value>
+  </data>
+  <data name="StaticPages_Privacy_Two" xml:space="preserve">
+    <value>2. Para que efeitos são guardados dados pessoais do Utilizador ?&lt;br&gt;
+&lt;br&gt;
+Os dados recolhidos nos diferentes formulários do website destinam-se exclusivamente ao processamento dos pedidos dos utilizadores, por exemplo:&lt;br&gt;
+i) Envio de bilhetes por correio electrónico.&lt;br&gt;
+ii) Prestar suporte técnico ou comercial.&lt;br&gt;
+iii) Recuperar ou pedir nova password.&lt;br&gt;
+iv) Confirmação de registo de conta.&lt;br&gt;
+Os dados recolhidos não serão usados para qualquer outro fim.
+</value>
+  </data>
+  <data name="StaticPages_Terms_MainTitle" xml:space="preserve">
+    <value>Termos e Condições</value>
+  </data>
+  <data name="StaticPages_Terms_One" xml:space="preserve">
+    <value>1.  Âmbito Geral</value>
+  </data>
+  <data name="StaticPages_Terms_One_One" xml:space="preserve">
+    <value>1.1 Política de Privacidade&lt;br&gt;
+Antes de utilizar o nosso website ou serviços da Yoyoloop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade.</value>
+  </data>
+  <data name="StaticPages_Terms_Three" xml:space="preserve">
+    <value>3. Reembolsos e reclamações </value>
+  </data>
+  <data name="StaticPages_Terms_Three_One" xml:space="preserve">
+    <value>3.1 Reembolsos</value>
+  </data>
+  <data name="StaticPages_Terms_Three_Two" xml:space="preserve">
+    <value>3.2 Reclamações</value>
+  </data>
+  <data name="StaticPages_Terms_Two" xml:space="preserve">
+    <value>2. Utilizar o Website e Serviços da Yoyoloop</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Five" xml:space="preserve">
+    <value>2.5 Condições gerais de utilização&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Four" xml:space="preserve">
+    <value>2.4 Preços e disponibilidades&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Terms_Two_One" xml:space="preserve">
+    <value>2.1 Direitos de Autor&lt;br&gt;
+Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conteúdo digital representadas no website,não podem ser copiados, distribuídos, modificados ou colocados noutros websites, sem autorização prévia por escrito de um membro da equipa da Yoyoloop.</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Three" xml:space="preserve">
+    <value>2.3 Reservas no website da Yoyoloop&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Two" xml:space="preserve">
+    <value>2.2. Deveres do Utilizador e Cliente&lt;br&gt;</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_card_declined" xml:space="preserve">
+    <value>O cartão foi declinado.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_expired_card" xml:space="preserve">
+    <value>O cartão está expirado.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_incorrect_cvc" xml:space="preserve">
+    <value>O código de segurança não está correcto.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_incorrect_number" xml:space="preserve">
+    <value>O número do cartão não está correcto.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_incorrect_zip" xml:space="preserve">
+    <value>O código postal não é válido.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_cvc" xml:space="preserve">
+    <value>O código de segurança não é válido.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_date_format" xml:space="preserve">
+    <value>A data de expiração não é válida.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_expiry_month" xml:space="preserve">
+    <value>O mês da data de expiração não é válido.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_expiry_year" xml:space="preserve">
+    <value>O ano da data de expiração não é válido.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_number" xml:space="preserve">
+    <value>O número de cartão não é válido.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_PaymentMethodValidation_Generic" xml:space="preserve">
+    <value>Ocorreu um erro ao validar o método de pagamento</value>
+  </data>
+  <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
+    <value>Ocorreu um erro ao efectuar o pagamento</value>
+  </data>
 </root>

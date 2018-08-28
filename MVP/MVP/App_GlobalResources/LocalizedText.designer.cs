@@ -61,7 +61,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error has occurred..
+        ///   Looks up a localized string similar to Ocorreu um erro.
         /// </summary>
         internal static string Account_ConfirmEmail_Error {
             get {
@@ -88,7 +88,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reset.
+        ///   Looks up a localized string similar to Re-iniciado.
         /// </summary>
         internal static string Account_ResetPassword_btnReset_Text {
             get {
@@ -97,7 +97,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error has occurred..
+        ///   Looks up a localized string similar to Ocorreu um erro.
         /// </summary>
         internal static string Account_ResetPassword_ErrorMessage {
             get {
@@ -106,7 +106,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter your new password.
+        ///   Looks up a localized string similar to Insere a tua password.
         /// </summary>
         internal static string Account_ResetPassword_MainTitle {
             get {
@@ -115,7 +115,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your password was changed sucessfully..
+        ///   Looks up a localized string similar to A tua password foi alterada com sucesso.
         /// </summary>
         internal static string Account_ResetPassword_SuccessMessage {
             get {
@@ -124,7 +124,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        ///   Looks up a localized string similar to As password e a confirmação de password são diferentes..
         /// </summary>
         internal static string Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage {
             get {
@@ -133,7 +133,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Repetir password.
+        ///   Looks up a localized string similar to Repetir palavra-passe.
         /// </summary>
         internal static string Account_ResetPassword_tbConfirmPassword_placeholder {
             get {
@@ -142,7 +142,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The confirm password field is required..
+        ///   Looks up a localized string similar to O campo palavra-passe é obrigatório..
         /// </summary>
         internal static string Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage {
             get {
@@ -160,7 +160,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email field is required..
+        ///   Looks up a localized string similar to O email é obrigatório..
         /// </summary>
         internal static string Account_ResetPassword_tbEmail_Validator_ErrorMessage {
             get {
@@ -169,7 +169,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nova password.
+        ///   Looks up a localized string similar to Nova palavra-passe.
         /// </summary>
         internal static string Account_ResetPassword_tbPassword_placeholder {
             get {
@@ -178,7 +178,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The password field is required..
+        ///   Looks up a localized string similar to O campo palavra-passe é obrigatório..
         /// </summary>
         internal static string Account_ResetPassword_tbPassword_Validator_ErrorMessage {
             get {
@@ -187,7 +187,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry but this trip is no longer available..
+        ///   Looks up a localized string similar to Lamentamos mas essa viagem não está disponível..
         /// </summary>
         internal static string Calendar_BookingPanel_Booking_ErrorMessage {
             get {
@@ -493,7 +493,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This booking has expired.
+        ///   Looks up a localized string similar to Esta reserva expirou.
         /// </summary>
         internal static string Checkout_BookingExpired_Message {
             get {
@@ -565,7 +565,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tem de aceitar os Termos &amp; condiçōes.
+        ///   Looks up a localized string similar to Tem de aceitar os Termos e Condiçōes.
         /// </summary>
         internal static string Checkout_Policy_cbTerms_Error {
             get {
@@ -583,7 +583,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Termos &amp; condiçōes.
+        ///   Looks up a localized string similar to Termos e Condiçōes.
         /// </summary>
         internal static string Checkout_Policy_cbTerms_Label2 {
             get {
@@ -628,7 +628,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Booking no longer valid.
+        ///   Looks up a localized string similar to Reserva inválida.
         /// </summary>
         internal static string Checkout_Service_ProcessPayment_BookingErrorMessage {
             get {
@@ -646,7 +646,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to share.
+        ///   Looks up a localized string similar to Partilhar.
         /// </summary>
         internal static string Confirm_Invite_btnShare_Text {
             get {
@@ -655,7 +655,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro..
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de comboio..
         /// </summary>
         internal static string Confirm_Invite_Description {
             get {
@@ -664,7 +664,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convida mais amigos e viaja por apenas 3€.
+        ///   Looks up a localized string similar to Convida amigos e viaja por apenas 1€.
         /// </summary>
         internal static string Confirm_Invite_Title {
             get {
@@ -709,7 +709,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to download.
+        ///   Looks up a localized string similar to Descarregar.
         /// </summary>
         internal static string Confirm_MyTickets_btnDownload_Text {
             get {
@@ -754,7 +754,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to com os detalhes do teu bilhete..
+        ///   Looks up a localized string similar to com o teu bilhete..
         /// </summary>
         internal static string Confirm_MyTickets_Email_ShowMessage_Text2 {
             get {
@@ -808,7 +808,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convida amigos e viaja a 3€.
+        ///   Looks up a localized string similar to Convida amigos e viaja por apenas 1€.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_Invite {
             get {
@@ -835,7 +835,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Obrigado pela tua preferência!.
+        ///   Looks up a localized string similar to Obrigado por escolheres a Yoyoloop!.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_ThankYou {
             get {
@@ -1141,7 +1141,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This user does not exist..
+        ///   Looks up a localized string similar to O utilizador não existe..
         /// </summary>
         internal static string Controls_Forgot_ResultMessage_Failure {
             get {
@@ -1150,7 +1150,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please check your email to reset your password..
+        ///   Looks up a localized string similar to Por favor vê o teu email para definires nova password..
         /// </summary>
         internal static string Controls_Forgot_ResultMessage_Success {
             get {
@@ -1159,7 +1159,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Esqueceste a password?.
+        ///   Looks up a localized string similar to Esqueceste a palavra-passe?.
         /// </summary>
         internal static string Controls_Forgot_SubTitle_1 {
             get {
@@ -1186,7 +1186,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email field is required..
+        ///   Looks up a localized string similar to O campo de email é obrigatório.
         /// </summary>
         internal static string Controls_Forgot_tbForgotEmail_Validator_ErrorMessage {
             get {
@@ -1204,7 +1204,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lembrar-me da &lt;br&gt;password.
+        ///   Looks up a localized string similar to Lembrar-me da &lt;br&gt;palavra-passe.
         /// </summary>
         internal static string Controls_Login_cbRememberMe {
             get {
@@ -1213,7 +1213,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Esqueci-me da password.
+        ///   Looks up a localized string similar to Esqueci-me da palavra-passe.
         /// </summary>
         internal static string Controls_Login_ForgotPassword {
             get {
@@ -1222,7 +1222,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid login attempt.
+        ///   Looks up a localized string similar to Incicio de sessão inválido.
         /// </summary>
         internal static string Controls_Login_LoginMessageFailure_Text {
             get {
@@ -1231,7 +1231,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Login sucessful.
+        ///   Looks up a localized string similar to Início de sessão com sucesso.
         /// </summary>
         internal static string Controls_Login_LoginMessageSucess_Text {
             get {
@@ -1240,7 +1240,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to or.
+        ///   Looks up a localized string similar to ou.
         /// </summary>
         internal static string Controls_Login_LoginOr {
             get {
@@ -1249,7 +1249,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yoyoloop Login.
+        ///   Looks up a localized string similar to Sessão Yoyoloop.
         /// </summary>
         internal static string Controls_Login_MainTitle {
             get {
@@ -1285,7 +1285,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email field is required..
+        ///   Looks up a localized string similar to O campo de email é obrigatório.
         /// </summary>
         internal static string Controls_Login_tbLoginEmail_Validator_ErrorMessage {
             get {
@@ -1294,7 +1294,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password.
+        ///   Looks up a localized string similar to Palavra-passe.
         /// </summary>
         internal static string Controls_Login_tbLoginPassword_placeholder {
             get {
@@ -1303,7 +1303,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The password field is required..
+        ///   Looks up a localized string similar to O campo palavra-passe é obrigatório..
         /// </summary>
         internal static string Controls_Login_tbLoginPassword_Validator_ErrorMessage {
             get {
@@ -1393,7 +1393,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to or.
+        ///   Looks up a localized string similar to ou.
         /// </summary>
         internal static string Controls_Register_RegisterOr {
             get {
@@ -1402,7 +1402,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email and confirmation email do not match..
+        ///   Looks up a localized string similar to O email e a palavra-passe não coincidem..
         /// </summary>
         internal static string Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage {
             get {
@@ -1420,7 +1420,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The confirm email field is required..
+        ///   Looks up a localized string similar to O campo de confirmação de email é obrigatório..
         /// </summary>
         internal static string Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage {
             get {
@@ -1429,7 +1429,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        ///   Looks up a localized string similar to A palavra-passe e a confirmação não coincidem..
         /// </summary>
         internal static string Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage {
             get {
@@ -1447,7 +1447,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The confirm password field is required..
+        ///   Looks up a localized string similar to O campo de confirmação da palavra-passe é obrigatório..
         /// </summary>
         internal static string Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage {
             get {
@@ -1465,7 +1465,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The email field is required..
+        ///   Looks up a localized string similar to O campo de email é obrigatório.
         /// </summary>
         internal static string Controls_Register_tbRegisterEmail_Validator_ErrorMessage {
             get {
@@ -1483,7 +1483,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The name field is required..
+        ///   Looks up a localized string similar to O campo Nome é obrigatório..
         /// </summary>
         internal static string Controls_Register_tbRegisterName_Validator_ErrorMessage {
             get {
@@ -1492,7 +1492,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Password.
+        ///   Looks up a localized string similar to Palavra-passe.
         /// </summary>
         internal static string Controls_Register_tbRegisterPassword_placeholder {
             get {
@@ -1501,7 +1501,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The password field is required..
+        ///   Looks up a localized string similar to O campo palavra-passe é obrigatório..
         /// </summary>
         internal static string Controls_Register_tbRegisterPassword_Validator_ErrorMessage {
             get {
@@ -1663,7 +1663,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Não foi possivel encontrar o seu bilhete..
+        ///   Looks up a localized string similar to Não foi possivel encontrar o teu bilhete..
         /// </summary>
         internal static string DownloadTicket_ErrorMessage {
             get {
@@ -1789,6 +1789,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Carreiras na Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_Careers {
+            get {
+                return ResourceManager.GetString("Help_Topic_Careers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como posso conduzir um Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_Careers_Question_HowTo {
+            get {
+                return ResourceManager.GetString("Help_Topic_Careers_Question_HowTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A nossa equipa está a crescer! Se tens interesse em juntar-te à nossa equipa, por favor envia o teu CV para careers@Yoyoloop.com..
+        /// </summary>
+        internal static string Help_Topic_Careers_Question_HowTo_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Careers_Question_HowTo_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Empresas.
         /// </summary>
         internal static string Help_Topic_Corporate {
@@ -1798,7 +1825,26 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Posso emitir facturas com contribuinte?.
+        ///   Looks up a localized string similar to Têm preços especiais para empresas?.
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_CorporatePricing {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_CorporatePricing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop oferece preços especiais para empresas, que incluem descontos especiais e programas de lançamento do serviço para os colaboradores da empresa.
+        ///Para mais informações, contacte-nos por favor em empresas@Yoyoloop.com..
+        /// </summary>
+        internal static string Help_Topic_Corporate_Question_CorporatePricing_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Corporate_Question_CorporatePricing_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso emitir faturas com contribuinte?.
         /// </summary>
         internal static string Help_Topic_Corporate_Question_TaxInvoices {
             get {
@@ -1807,7 +1853,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Sim. Assim que selecionares a viagem que pretendes realizar, basta selecionar a caixa que diz “Empresa” e inserir o NIF no formulário dos Detalhes de Faturação..
         /// </summary>
         internal static string Help_Topic_Corporate_Question_TaxInvoices_Answer {
             get {
@@ -1825,7 +1871,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to A Yoyoloop envia aos clientes empresariais um email com um resumo mensal de todas as viagens efetuadas ao longo de um mês e os respetivos custos..
         /// </summary>
         internal static string Help_Topic_Corporate_Question_TotalSpending_Answer {
             get {
@@ -1834,7 +1880,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Descontos e Promoções.
+        ///   Looks up a localized string similar to Descontos e promoções.
         /// </summary>
         internal static string Help_Topic_DiscountAndPromo {
             get {
@@ -1843,20 +1889,23 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tenho saldo na minha conta corrente e código promocionais disponíveis, como faço para usar um ou outro?.
+        ///   Looks up a localized string similar to Como posso reservar as viagens a 1€ e os códigos promocionais?.
         /// </summary>
-        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndBalance {
+        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndMGM {
             get {
-                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndBalance", resourceCulture);
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndMGM", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Para usufruir das viagens a 1€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todas as viagens a 1€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem para qualquer destino a 1€.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a tua viagem. Cola aqui o código, clica em “Reservar” e já está!
+        ///.
         /// </summary>
-        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer {
+        internal static string Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer {
             get {
-                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer", resourceCulture);
+                return ResourceManager.GetString("Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer", resourceCulture);
             }
         }
         
@@ -1870,7 +1919,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Não. Cada código promocional só pode ser descontado para uma viagem..
         /// </summary>
         internal static string Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer {
             get {
@@ -1879,34 +1928,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Conduzir um Yoyoloop.
-        /// </summary>
-        internal static string Help_Topic_Drive {
-            get {
-                return ResourceManager.GetString("Help_Topic_Drive", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Como posso conduzir um Yoyoloop?.
-        /// </summary>
-        internal static string Help_Topic_Drive_Question_HowTo {
-            get {
-                return ResourceManager.GetString("Help_Topic_Drive_Question_HowTo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
-        /// </summary>
-        internal static string Help_Topic_Drive_Question_HowTo_Answer {
-            get {
-                return ResourceManager.GetString("Help_Topic_Drive_Question_HowTo_Answer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Convites.
+        ///   Looks up a localized string similar to Convidar amigos.
         /// </summary>
         internal static string Help_Topic_Invite {
             get {
@@ -1915,7 +1937,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O que os meus amigos ganham por viajar com o meu cupão?.
+        ///   Looks up a localized string similar to O que ganham os meus amigos por viajar com o meu código promocional?.
         /// </summary>
         internal static string Help_Topic_Invite_Question_FriendsBenefits {
             get {
@@ -1924,7 +1946,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da Yoyoloop..
         /// </summary>
         internal static string Help_Topic_Invite_Question_FriendsBenefits_Answer {
             get {
@@ -1933,7 +1955,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Posso dar o meu cupão a amigos que já tenham utilizado a Yoyoloop?.
+        ///   Looks up a localized string similar to Posso partilhar o meu código promocional com amigos que já tenham usado a Yoyoloop?.
         /// </summary>
         internal static string Help_Topic_Invite_Question_GiftToYoyoUsers {
             get {
@@ -1942,7 +1964,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Não. Cada amigo com quem partilhares o teu código promocional só poderá usá-lo uma vez..
         /// </summary>
         internal static string Help_Topic_Invite_Question_GiftToYoyoUsers_Answer {
             get {
@@ -1960,7 +1982,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Podes convidar todos os amigos que quiseres! Quantos mais amigos convidares, mais viagens a 1€ ganhas assim que eles viajarem pela primeira vez..
         /// </summary>
         internal static string Help_Topic_Invite_Question_HowManyFriends_Answer {
             get {
@@ -1978,11 +2000,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!.
         /// </summary>
         internal static string Help_Topic_Invite_Question_MyBenefits_Answer {
             get {
                 return ResourceManager.GetString("Help_Topic_Invite_Question_MyBenefits_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Onde posso partilhar o meu código promocional?.
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_Share {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podes enviar o teu código promocional através do Facebook, WhatsApp, Twitter, LinkedIn ou por email. Também podes simplesmente copiar o código e partilhá-lo da forma que preferires com os teus amigos..
+        /// </summary>
+        internal static string Help_Topic_Invite_Question_Share_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Invite_Question_Share_Answer", resourceCulture);
             }
         }
         
@@ -1996,7 +2036,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Posso levar malas?.
+        ///   Looks up a localized string similar to Posso levar malas/bagagem?.
         /// </summary>
         internal static string Help_Topic_Luggage_Question_CanIBring {
             get {
@@ -2005,7 +2045,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Sim, desde que estejam dentro dos limites de bagagem da Yoyoloop..
         /// </summary>
         internal static string Help_Topic_Luggage_Question_CanIBring_Answer {
             get {
@@ -2023,7 +2063,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Nos veículos da Yoyoloop não é possível levar instrumentos afiados, armas, animais de estimação, nem materiais inflamáveis ou com odores intensos. Em caso de dúvida, envia um email para reservas@Yoyoloop.com para saber se podes ou não transportar o teu objeto..
         /// </summary>
         internal static string Help_Topic_Luggage_Question_NotAllowed_Answer {
             get {
@@ -2032,7 +2072,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quais os Limites de tamanhos das bagagem?.
+        ///   Looks up a localized string similar to Qual é o limite de tamanho das malas/bagagem?.
         /// </summary>
         internal static string Help_Topic_Luggage_Question_SizeLimit {
             get {
@@ -2041,7 +2081,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Podes transportar uma bagagem de mão (56cm x 45cm x 25cm) semelhantes às malas de cabine que são permitidas nas viagens de avião..
         /// </summary>
         internal static string Help_Topic_Luggage_Question_SizeLimit_Answer {
             get {
@@ -2050,7 +2090,52 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Viagens e loops.
+        ///   Looks up a localized string similar to Parceiros Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_Partners {
+            get {
+                return ResourceManager.GetString("Help_Topic_Partners", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como se tornar parceiro da Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_Partners_Question_HowTo {
+            get {
+                return ResourceManager.GetString("Help_Topic_Partners_Question_HowTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Por favor contacte a nossa equipa de parcerias pelo email: parceiros@Yoyoloop.com..
+        /// </summary>
+        internal static string Help_Topic_Partners_Question_HowTo_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Partners_Question_HowTo_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Programa de parceiros Yoyoloop.
+        /// </summary>
+        internal static string Help_Topic_Partners_Question_PartnerProgram {
+            get {
+                return ResourceManager.GetString("Help_Topic_Partners_Question_PartnerProgram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O nosso programa de parceiros está em desenvolvimento. Se a sua empresa trrabalha na área do Turismo e possui frota própria, temos interesse em falar consigo..
+        /// </summary>
+        internal static string Help_Topic_Partners_Question_PartnerProgram_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_Partners_Question_PartnerProgram_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viagens e Loops.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops {
             get {
@@ -2059,7 +2144,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loops disponíveis?.
+        ///   Looks up a localized string similar to Existem lugares marcados?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_AssignedSeats {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_AssignedSeats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O teu lugar está garantido mas, para já, ainda não é possível marcar um lugar específico no veículo..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_AssignedSeats_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_AssignedSeats_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quais são os loops disponíveis?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops {
             get {
@@ -2068,7 +2171,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para o Porto, Coimbra e Leiria e, ainda, loops desde o Porto, Coimbra e Leiria até Lisboa..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer {
             get {
@@ -2086,7 +2189,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to É possível comprar uma viagem através da versão mobile do site da Yoyoloop onde quer que estejas. Caso ainda haja lugares vagos, basta comprares a tua viagem e mostrar o bilhete quando o teu motorista chegar..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer {
             get {
@@ -2095,7 +2198,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cancelar um loop?.
+        ///   Looks up a localized string similar to Qual a política de cancelamento da Yoyoloop?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_Cancel {
             get {
@@ -2104,7 +2207,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Sim, é possível cancelar uma viagem até 48 horas antes da hora de partida. O valor que pagaste será transformado em crédito e podes encontrá-lo na tua conta para utilizar em futuras viagens..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_Cancel_Answer {
             get {
@@ -2113,7 +2216,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nao consegui marcar a viagem online, e agora?.
+        ///   Looks up a localized string similar to Como posso alterar a data da minha viagem?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_ChangeDate {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_ChangeDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sim, podes alterar a data e hora da tua viagem até 48 horas antes da partida. É possível fazer a alteração por telefone — +351 926 475 250 — ou por email — reservas@Yoyoloop.com..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_ChangeDate_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_ChangeDate_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não consegui marcar a viagem online. E agora?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook {
             get {
@@ -2122,11 +2243,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Podes fazer uma reserva por email — reservas@Yoyoloop.com — ou por telefone, através do +351 926 475 250. Em alternativa, podes simplesmente aparecer no local de partida da viagem 15 minutos antes da hora de partida e comprar o teu bilhete diretamente ao motorista da Yoyoloop..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer {
             get {
                 return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Posso pedir que me venham buscar a um ponto diferente?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_DifferentAP {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_DifferentAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop é um serviço com pontos de partida e de chegada predefinidos, pelo que não é possível irmos buscar-te a um ponto diferente. No entanto, estamos sempre disponíveis para criar novos pontos de partida e/ou chegada no futuro. Se tiveres alguma sugestão, envia-nos um email para reservas@Yoyoloop.com..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_DifferentAP_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_DifferentAP_Answer", resourceCulture);
             }
         }
         
@@ -2140,7 +2279,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Podes receber o teu bilhete por email, SMS ou podes fazer o download em PDF. Após a compra do bilhete, escolhe a opção que preferires e apresenta o teu bilhete quando o teu motorista chegar. Evita imprimir o bilhete e mostra-o no teu smartphone!.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer {
             get {
@@ -2149,7 +2288,43 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quanto custa um loop?.
+        ///   Looks up a localized string similar to Onde posso encontrar o ponto de partida e ponto de chegada da minha viagem?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_FindAP {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_FindAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podes encontrar o ponto de partida e chegada da tua viagem no teu bilhete em “Origem” e “Destino”, respetivamente..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_FindAP_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_FindAP_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O meu lugar está garantido?.
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_GuaranteedSeat {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_GuaranteedSeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assim que comprares o teu bilhete, o teu lugar está garantido. Quando o teu motorista chegar ao ponto de partida que escolheste, basta mostrar o bilhete e aproveitar a viagem..
+        /// </summary>
+        internal static string Help_Topic_TripsAndLoops_Question_GuaranteedSeat_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_TripsAndLoops_Question_GuaranteedSeat_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Qual é o preço por loop?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_HowMuch {
             get {
@@ -2158,7 +2333,15 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Os valores dos bilhetes para os Loops atuais são os seguintes:&lt;br&gt;
+        ///&lt;br&gt;
+        ///Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem&lt;br&gt;
+        ///Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem&lt;br&gt;
+        ///Lisboa - Leiria / Leiria- Lisboa: desde 16€ por viagem&lt;br&gt;
+        ///&lt;br&gt;
+        ///Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloop.com . .
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_HowMuch_Answer {
             get {
@@ -2167,7 +2350,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Facturas.
+        ///   Looks up a localized string similar to Emitem fatura com número de contribuinte?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_Invoices {
             get {
@@ -2176,7 +2359,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Sim. Assim que selecionares a viagem que pretendes realizar, basta inserir o NIF no formulário dos Detalhes de Faturação..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_Invoices_Answer {
             get {
@@ -2185,7 +2368,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Métodos de pagamento?.
+        ///   Looks up a localized string similar to Quais os métodos de pagamento que aceitam?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods {
             get {
@@ -2194,7 +2377,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to A Yoyoloop aceita Multibanco e cartões de crédito das redes Visa, Mastercard, American Express, entre outras..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer {
             get {
@@ -2203,7 +2386,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como solicitar um novo loop?.
+        ///   Looks up a localized string similar to Como posso sugerir um novo loop?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_SuggestLoop {
             get {
@@ -2212,7 +2395,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Para sugerir um novo loop, vai até à nossa homepage e clica em “Não encontras a tua cidade?”. Deixa-nos o teu email e sugestão e, consoante a procura, vamos considerar criar um novo loop até à tua cidade. Fica atento às novidades!.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer {
             get {
@@ -2221,7 +2404,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User Dashboard.
+        ///   Looks up a localized string similar to O meu perfil.
         /// </summary>
         internal static string Help_Topic_UserDashboard {
             get {
@@ -2230,79 +2413,31 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como adicionar/actualizar ou eliminar dados de pagamentos?.
+        ///   Looks up a localized string similar to O que posso fazer com o meu perfil na Yoyoloop?.
         /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_AddChangePaymentDetails {
+        internal static string Help_Topic_UserDashboard_Question_WhatCanIDo {
             get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_AddChangePaymentDetails", resourceCulture);
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_WhatCanIDo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to No teu perfil,  é possível:&lt;br&gt;
+        ///Alterar os teus dados pessoais;&lt;br&gt;
+        ///Adicionar, atualizar ou eliminar dados de pagamento;&lt;br&gt;
+        ///Verificar a tua conta corrente e o crédito atual;&lt;br&gt;
+        ///Ver viagens futuras e viagens anteriores;&lt;br&gt;
+        ///Convidar amigos para a Yoyoloop;&lt;br&gt;
+        ///Ver quantas viagens a €1 tens disponível para usufruir..
         /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer {
+        internal static string Help_Topic_UserDashboard_Question_WhatCanIDo_Answer {
             get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer", resourceCulture);
+                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_WhatCanIDo_Answer", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como alterar dados pessoais?.
-        /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_ChangePersonalDetails {
-            get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_ChangePersonalDetails", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
-        /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer {
-            get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A minha conta corrente.
-        /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_CurrentAccount {
-            get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_CurrentAccount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
-        /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_CurrentAccount_Answer {
-            get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_CurrentAccount_Answer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to As minhas viagens a 3 Euros.
-        /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_MGMTrips {
-            get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_MGMTrips", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
-        /// </summary>
-        internal static string Help_Topic_UserDashboard_Question_MGMTrips_Answer {
-            get {
-                return ResourceManager.GetString("Help_Topic_UserDashboard_Question_MGMTrips_Answer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Os Carros Yoyoloop.
+        ///   Looks up a localized string similar to Veículos Yoyoloop.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars {
             get {
@@ -2311,7 +2446,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os carros da Yoyoloop são eléctricos?.
+        ///   Looks up a localized string similar to Os veículos da Yoyoloop têm capacidade para transportar crianças?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Children {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Children", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Infelizmente, não temos condições para transportar crianças com idade inferior a 12 anos, uma vez que os veículos não dispõem de cadeiras de criança. Além do mais, as crianças entre os 12 e os 18 anos deverão viajar acompanhadas por um adulto..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Children_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Children_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os veículos da Yoyoloop são elétricos?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Electric {
             get {
@@ -2320,7 +2473,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Ainda não. Os nossos transfers atuais são veículos de oito lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Electric_Answer {
             get {
@@ -2329,7 +2482,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Motorista é mesmo profissional?.
+        ///   Looks up a localized string similar to Tenho cobertura de seguro quando viajo com a Yoyoloop?.
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Insurance {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Insurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sim. A Yoyoloop é uma agência de viagens registada no Registo Nacional de Agências de Viagens e Turismo (RNAVTnº 7744), logo os clientes da Yoyoloop beneficiam da proteção do Fundo de Garantia de Viagens e Turismo. Adicionalmente, a Yoyoloop tem um seguro de responsabilidade civil no valor de €250.000. Lê mais sobre este assunto na página do Turismo de Portugal..
+        /// </summary>
+        internal static string Help_Topic_YoyoloopCars_Question_Insurance_Answer {
+            get {
+                return ResourceManager.GetString("Help_Topic_YoyoloopCars_Question_Insurance_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O motorista é mesmo profissional?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver {
             get {
@@ -2338,7 +2509,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to A Yoyoloop apenas trabalha com motoristas profissionais. Todos eles passaram no nosso processo de seleção e são membros permanentes da nossa equipa..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer {
             get {
@@ -2347,7 +2518,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quantos lugares tem um carro da yoyoloop?.
+        ///   Looks up a localized string similar to Quantos lugares tem um veículo da Yoyoloop?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Seats {
             get {
@@ -2356,7 +2527,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to De momento, os nossos transfers são Mercedes V-class com 8 lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Seats_Answer {
             get {
@@ -2365,7 +2536,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Todos os carros yoyoloop tem wifi?.
+        ///   Looks up a localized string similar to Os veículos da Yoyoloop têm todos wifi?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Wifi {
             get {
@@ -2374,7 +2545,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to Sim, todos os veículos da Yoyoloop contam com wifi a bordo para assegurar uma viagem mais proveitosa..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Wifi_Answer {
             get {
@@ -2383,7 +2554,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vê passar os autocarros e apanha boleia à porta de casa.
+        ///   Looks up a localized string similar to Apanha boleia de um transfer premium a preço de comboio.
         /// </summary>
         internal static string HomePage_MainTitle {
             get {
@@ -2410,7 +2581,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Duracao.
+        ///   Looks up a localized string similar to Duração.
         /// </summary>
         internal static string HomePage_PopularLoops_Features_Duration {
             get {
@@ -2491,7 +2662,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro..
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio..
         /// </summary>
         internal static string HomePage_SubTitle {
             get {
@@ -2734,7 +2905,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O único transporte ponto a ponto alternativo aos autocarros,&lt;br&gt; comboios e boleias tradicionais.
+        ///   Looks up a localized string similar to O único transporte ponto a ponto alternativo ao comboios, avião e carro particular..
         /// </summary>
         internal static string HomePage_Yoyoloop_MainDescription {
             get {
@@ -2743,7 +2914,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Leiria e Coimbra sem paragens e a preço de autocarro..
+        ///   Looks up a localized string similar to O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio..
         /// </summary>
         internal static string HomePage_Yoyoloop_SubDescription {
             get {
@@ -2923,7 +3094,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!.
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!.
         /// </summary>
         internal static string MyTrips_Invite_Code_Title {
             get {
@@ -2932,7 +3103,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como viajar por 3€ para qualquer destino.
+        ///   Looks up a localized string similar to Como viajar por 1€ para qualquer destino.
         /// </summary>
         internal static string MyTrips_Invite_How {
             get {
@@ -2941,7 +3112,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 3€..
+        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 1€..
         /// </summary>
         internal static string MyTrips_Invite_OfferTrips_Description {
             get {
@@ -2977,7 +3148,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Viaja por 3€!.
+        ///   Looks up a localized string similar to Viaja por 1€!.
         /// </summary>
         internal static string MyTrips_Invite_Travel_Title {
             get {
@@ -2986,7 +3157,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
         /// </summary>
         internal static string MyTrips_Invite_Travel_Title_Description {
             get {
@@ -3058,7 +3229,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Obrigatório.
+        ///   Looks up a localized string similar to O campo Cidade é obrigatório.
         /// </summary>
         internal static string Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage {
             get {
@@ -3247,7 +3418,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convida os teus amigos e viaja por apenas 3€.
+        ///   Looks up a localized string similar to Convida os teus amigos e viaja por apenas 1€.
         /// </summary>
         internal static string Profile_Invite_MainTitle {
             get {
@@ -3265,7 +3436,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to viagens de 3€ para aproveitar.
+        ///   Looks up a localized string similar to viagens de 1€ para aproveitar.
         /// </summary>
         internal static string Profile_Invite_MGMTrips2 {
             get {
@@ -3337,7 +3508,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!.
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!.
         /// </summary>
         internal static string Profile_Invite_Promoshare_Title {
             get {
@@ -3355,7 +3526,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 3€.
+        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 1€.
         /// </summary>
         internal static string Profile_Invite_Why_Offer_Description {
             get {
@@ -3391,7 +3562,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recebe uma viagem a 3€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
         /// </summary>
         internal static string Profile_Invite_Why_Travel_Description {
             get {
@@ -3400,7 +3571,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Viaja por 3€!.
+        ///   Looks up a localized string similar to Viaja por 1€!.
         /// </summary>
         internal static string Profile_Invite_Why_Travel_Title {
             get {
@@ -3409,7 +3580,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O autocarro é demorado, há falta de comboios directos, nem sempre há boleias e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Cascais, Porto e Coimbra sem paragens e a preço de autocarro..
+        ///   Looks up a localized string similar to O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio..
         /// </summary>
         internal static string Profile_Invite_YoyoloopWhy_Description {
             get {
@@ -4034,7 +4205,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Logout.
+        ///   Looks up a localized string similar to Terminar sessão.
         /// </summary>
         internal static string SiteMaster_ProfileMenu_Logout {
             get {
@@ -4052,7 +4223,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A revolucionar as cidades, um loop de cada vez..
+        ///   Looks up a localized string similar to A revolucionar as cidades, um Loop de cada vez..
         /// </summary>
         internal static string StaticPages_About_MainDescription {
             get {
@@ -4061,7 +4232,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SOBRE NOS.
+        ///   Looks up a localized string similar to Sobre nós.
         /// </summary>
         internal static string StaticPages_About_MainTitle {
             get {
@@ -4070,7 +4241,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cada um dos nossos shuttles são veículos de sete lugares. Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem..
+        ///   Looks up a localized string similar to Cada um dos nossos shuttles são veículos de luxo de 8 lugares (Mercedes V-class Avantgarde, com estofos em pele). Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem.
         /// </summary>
         internal static string StaticPages_About_Shuttles_SubTitle {
             get {
@@ -4088,7 +4259,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br/&gt;&lt;br/&gt;Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
+        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Foi por isso que criámos um serviço de transfer ao preço do comboio, alternativo ao automóvel particular, aos comboios e ao avião, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
         /// </summary>
         internal static string StaticPages_About_SubDescription {
             get {
@@ -4286,286 +4459,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Cascais a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_LoopCard_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dias úteis.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Days {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Days", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1 {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2 {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Cascais, a alternativa ao carro e ao comboio.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_MainDescription {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_MainDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Cascais.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_MainTitle {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_MainTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 23, 112, 119, 125.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TAGUS PARK.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cascais Shopping.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_First_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_First_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to São Domingos de Rana.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hospital de Cascais.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 129&lt;br&gt;.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Lagoas Park.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Paragens em Cascais.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_SubTitle {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_SubTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to LOOP CASCAIS.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_Stops_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_Stops_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string StaticPages_Destinos_Cascais_SubDescription {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Cascais_SubDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa e vice-versa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_LoopCard_Description {
             get {
@@ -4583,7 +4477,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        ///   Looks up a localized string similar to Saídas de Lisboa: 8:00 - 14:00.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1 {
             get {
@@ -4592,7 +4486,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        ///   Looks up a localized string similar to Saídas de Coimbra: 11:00 - 16:00.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2 {
             get {
@@ -4601,7 +4495,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Lisboa até Coimbra em apenas 90 minutos.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime {
             get {
@@ -4610,7 +4504,10 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Coimbra, a alternativa ao carro e ao comboio.
+        ///   Looks up a localized string similar to 
+        ///Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Com a Yoyoloop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de aut [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_MainDescription {
             get {
@@ -4628,7 +4525,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        ///   Looks up a localized string similar to Se apanhares um transfer para Coimbra a partir de Lisboa, podes escolher partir de várias paragens diferentes, tais como Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande ou Gare do Oriente. As chegadas a Coimbra serão na Av. Fernão de Magalhães ou na Portagem. Saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_Description {
             get {
@@ -4637,43 +4534,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 23, 112, 119, 125.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TAGUS PARK.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to A Avenida Fernão de Magalhães é central na baixa de Coimbra, com acessos fáceis de carro ou de transfortes públicos de qualquer ponto da cidade. .
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description {
             get {
@@ -4682,7 +4543,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        ///   Looks up a localized string similar to 2, 13, 20, 36.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details {
             get {
@@ -4691,7 +4552,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Autocarros.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title {
             get {
@@ -4700,7 +4561,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cascais Shopping.
+        ///   Looks up a localized string similar to Av. Fernão de Magalhães.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title {
             get {
@@ -4709,43 +4570,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to São Domingos de Rana.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to A Portagem é um ponto de encontro por excelência em Coimbra, com acesso directo ao comércio e serviços da baixa da Cidade..
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description {
             get {
@@ -4754,7 +4579,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        ///   Looks up a localized string similar to 10; 13; 18; 20; 43.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details {
             get {
@@ -4763,7 +4588,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Autocarro.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title {
             get {
@@ -4772,47 +4597,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hospital de Cascais.
+        ///   Looks up a localized string similar to Portagem.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title {
             get {
                 return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 129&lt;br&gt;.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Lagoas Park.
-        /// </summary>
-        internal static string StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title", resourceCulture);
             }
         }
         
@@ -4835,7 +4624,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento..
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_SubDescription {
             get {
@@ -4844,20 +4633,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios&lt;br&gt; da cidade de Lisboa e o quinto maior concelho do país em termos de população..
-        /// </summary>
-        internal static string StaticPages_Destinos_DestinationCard_Cascais_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Cascais_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        ///   Looks up a localized string similar to Com mais de 100 mil habitantes e sendo um importante polo universitário, Coimbra gera um movimento constante de estudantes e profissionais com Lisboa e também com o Porto..
         /// </summary>
         internal static string StaticPages_Destinos_DestinationCard_Coimbra_Description {
             get {
                 return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Coimbra_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A cidade de Leiria é o ponto central de uma região Oeste com grande dinamismo empresarial. A cidade é bem servida de auto-estradas, mas infelizmente as ligações de comboio e autocarro deixam muito a desejar..
+        /// </summary>
+        internal static string StaticPages_Destinos_DestinationCard_Leiria_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_DestinationCard_Leiria_Description", resourceCulture);
             }
         }
         
@@ -4871,7 +4660,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca..
+        ///   Looks up a localized string similar to Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. .
         /// </summary>
         internal static string StaticPages_Destinos_DestinationCard_Porto_Description {
             get {
@@ -4952,7 +4741,142 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Cascais a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Leiria a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_LoopCard_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_LoopCard_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_LoopCard_Schedules_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_LoopCard_Schedules_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saídas de Lisboa: 12:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_LoopCard_Schedules_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_LoopCard_Schedules_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saídas de Leiria: 15:00.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_LoopCard_Schedules_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_LoopCard_Schedules_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Leiria, a alternativa ao carro particular e aos autocarros.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa apanha um transfer premium para Leiria..
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se apanhares um transfer para Leiria a partir de Lisboa, podes escolher partir de zonas importantes da cidade como as Amoreiras, Campo Grande, Gare do Oriente, Marquês de Pombal ou Sete Rios. A chegada a Leiria será no Largo da Reública, bem no centro de Leiria e com acesso fácil à zona universitária..
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Largo da Reública está no centro de Leiria. É aqui que está a Câmara municipal, o Tribunal e outros serviços públicos e comércio. Adicionalmente, fica muito perto do Instituto Politécnico de Leiria..
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_StopCard_First_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_StopCard_First_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Autocarros e carro particular.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Largo da República.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_StopCard_First_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_StopCard_First_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paragens em Leiria.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_SubTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LOOP LEIRIA.
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_Stops_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_Stops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leiria é uma das cidades Portuguesas mais importantes, leiderando uma região Oeste e albergando um vibrante tecido empresarial e um polo universitário importante. Apesar de estar perto de Lisboa, as ligações de transportes públicos a Leiria deixam bastante a desejar, sobretudo no que diz respeio às ligações de comboio..
+        /// </summary>
+        internal static string StaticPages_Destinos_Leiria_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Destinos_Leiria_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Lisboa a partir do Porto, Coimbra e Leiria. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Description {
             get {
@@ -4970,7 +4894,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        ///   Looks up a localized string similar to Saídas do Porto 7:30 - 8:30 - 18:00 - 19:00.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1 {
             get {
@@ -4979,7 +4903,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        ///   Looks up a localized string similar to Saídas de Coimbra 11:00 - 16:00.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2 {
             get {
@@ -4988,7 +4912,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até Lisboa em duas horas e meia..
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime {
             get {
@@ -5015,7 +4939,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        ///   Looks up a localized string similar to Se apanhares um transfer para Lisboa, podes escolher parar nas principais zonas de escritórios da capital e ainda ficar a poucos passos de uma estação de metro. Quando voltares para a tua cidade de origem, aproveita para tomar uma bica enquanto esperas pela tua boleia. Lembra-te, com a Yoyoloop, tens lugar marcado à hora marcada!.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_Description {
             get {
@@ -5024,7 +4948,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        ///   Looks up a localized string similar to Além de ser a zona de residência do Jardim Zoológico de Lisboa, Sete Rios é conhecido por ser outra das mais importantes estações ferroviárias e rodoviárias da cidade. É especialmente importante para quem vem da linha de Sintra e da Margem Sul, assim como para quem chega de autocarro vindo de todos os cantos do país, especialmente da zona sul e região oeste.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Sete Rios é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria,  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description {
             get {
@@ -5033,7 +4959,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        ///   Looks up a localized string similar to Linha Amarela e Linha Vermelha.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details {
             get {
@@ -5042,7 +4968,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        ///   Looks up a localized string similar to Metro.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title {
             get {
@@ -5051,7 +4977,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TAGUS PARK.
+        ///   Looks up a localized string similar to Sete Rios.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title {
             get {
@@ -5060,7 +4986,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to As Torres das Amoreiras são um dos edifícios mais icónicos da cidade de Lisboa. Apesar de ser uma zona residencial de excelência e um das principais pólos de escritórios da capital, a zona das Amoreiras não está devidamente servida pela rede de transportes da cidade, especialmente pelo Metropolitano de Lisboa. É um incómodo para os residentes lisboetas, mas é ainda mais doloroso para quem vem dos arredores da capital.&lt;br&gt;
+        ///&lt;br&gt;
+        ///A Torre 3 das Amoreiras é um dos pontos de partida da Yoyoloop na cidade de Lisbo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description {
             get {
@@ -5069,7 +4997,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        ///   Looks up a localized string similar to 758; 783.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details {
             get {
@@ -5078,7 +5006,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Autocarro.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title {
             get {
@@ -5087,7 +5015,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cascais Shopping.
+        ///   Looks up a localized string similar to Amoreiras.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title {
             get {
@@ -5096,7 +5024,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to O Marquês de Pombal dispensa apresentações. É uma zona de escritórios por excelência, mas também de alguma actividade turística. É um ponto de entrada importante da cidade de Lisboa, sobretudo para quem vem da zona de Cascais, e é servido de vários transportes públicos, incluindo duas linhas de metro.&lt;br&gt;
+        ///&lt;br&gt;
+        ///O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra..
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description {
             get {
@@ -5105,7 +5035,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        ///   Looks up a localized string similar to Linha Azul e Linha Amarela.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details {
             get {
@@ -5114,7 +5044,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Metro.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title {
             get {
@@ -5123,7 +5053,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to São Domingos de Rana.
+        ///   Looks up a localized string similar to Marquês de Pombal.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title {
             get {
@@ -5132,7 +5062,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to O Campo Grande é, desde há muitos anos, uma zona de transportes importante. É aqui que chegam a maior parte dos autocarros suburbanos provenientes da região Oeste. A crescente presença de grandes empresas na zona, assim como a Universidade Lusófona de Lisboa e várias faculdades da Universidade de Lisboa nas proximidades, reforçou ainda mais a importância de ligar devidamente o Campo Grande.&lt;br&gt;
+        ///&lt;br&gt;
+        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description {
             get {
@@ -5141,7 +5073,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        ///   Looks up a localized string similar to Linha Verde, Linha Amarela.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details {
             get {
@@ -5150,7 +5082,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Metro e autocarros suburbanos região Oeste.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title {
             get {
@@ -5159,7 +5091,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hospital de Cascais.
+        ///   Looks up a localized string similar to Campo Grande.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title {
             get {
@@ -5168,7 +5100,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to A Gare do Oriente é uma das mais importantes estações ferroviárias e rodoviárias da cidade de Lisboa. A sua ligação privilegiada ao Aeroporto de Lisboa pela Avenida de Berlim também contribui para a importância desta zona icónica. Todos os dias, a Gare do Oriente recebe centenas de milhares de pessoas provenientes de vários pontos dos arredores da capital.&lt;br&gt;
+        ///&lt;br&gt;
+        ///A Gare do Oriente é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Le [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description {
             get {
@@ -5177,7 +5111,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        ///   Looks up a localized string similar to Linha Vermelha.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details {
             get {
@@ -5186,7 +5120,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        ///   Looks up a localized string similar to Metro, Comboios Suburbanos, Autocarros Suburbanos.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title {
             get {
@@ -5195,7 +5129,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lagoas Park.
+        ///   Looks up a localized string similar to Gare do Oriente.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title {
             get {
@@ -5222,7 +5156,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Com mais de 2 milhões de habitantes na Grande Lisboa, todos os dias entram 370 mil carros na capital num constante pára-arranca.&lt;br&gt;
+        ///&lt;br&gt;
+        ///As alternativas deixam a desejar. Os autocarros e os comboios são demorados, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem mai [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_SubDescription {
             get {
@@ -5249,7 +5187,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para o Porto a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para o Porto a partir de Lisboa e de Coimbra. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Description {
             get {
@@ -5267,7 +5205,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        ///   Looks up a localized string similar to Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times1 {
             get {
@@ -5276,7 +5214,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        ///   Looks up a localized string similar to Saídas de Coimbra: 15:00.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times2 {
             get {
@@ -5285,7 +5223,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas duas horas e meia..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime {
             get {
@@ -5294,7 +5232,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para o Porto, a alternativa ao carro e ao comboio.
+        ///   Looks up a localized string similar to Esquece o comboio e o avião e vem de transfer premium para o Porto.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_MainDescription {
             get {
@@ -5303,7 +5241,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para o Porto.
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer premium para o Porto.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_MainTitle {
             get {
@@ -5312,7 +5250,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se apanhares um transfer para Cascais a partir de Lisboa, podes escolher partir de seis paragens diferentes até ao Cascais Shopping, Hospital de Cascais, Lagoas Park, São Domingos de Rana ou Tagus Park. Do Marquês de Pombal à Gare do Oriente, saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        ///   Looks up a localized string similar to A rede de transportes públicos do Porto deixa a desejar. Os autocarros e os comboios são demorados e o Metro do Porto serve apenas os subúrbios e uma faixa do centro da cidade. Para quem vem de outras cidades, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais ráp [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_Description {
             get {
@@ -5321,7 +5261,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Tagus Park é um parque de ciência e tecnologia localizado no epicentro dos concelhos de Oeiras, Sintra e Cascais.&lt;br/&gt;&lt;br/&gt;Aqui encontra-se de tudo um pouco, desde empresas de vários ramos a duas universidades, uma incubadora de startups e algumas das maiores empresas nacionais como o Millennium BCP ou o Novo Banco, uma farmácia, restaurantes, agências bancárias e ginásios..
+        ///   Looks up a localized string similar to A Avenida da Boavista concentra várias zonas de escitórios da zona do Porto. Pela sua dimensão, a Yoyoloop optou por disponbilibizar duas paragens na Av. da Boavista. Uma paragem na zona ascente, junto an Hotel Crown Plaza e perto dos Hoteis Porto palácio e Sheraton Porto e uma segunda paragem na zona Poente, no Edifício Oceanos, perto do colégio de Nossa Sra. do Rosário..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description {
             get {
@@ -5330,7 +5270,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 23, 112, 119, 125.
+        ///   Looks up a localized string similar to 503 e 504.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details {
             get {
@@ -5339,7 +5279,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        ///   Looks up a localized string similar to STCP:.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title {
             get {
@@ -5348,7 +5288,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TAGUS PARK.
+        ///   Looks up a localized string similar to Avenida de Boavista.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title {
             get {
@@ -5357,7 +5297,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Cascais Shopping é o principal estabelecimento comercial do concelho de Cascais com mais de 200 lojas, cinema e hipermercado Continente.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o centro comercial é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to A Casa da Música é uma das principais salas de concerto do Porto e um dos ícones da cidade. Está localizada na Avenida da Boavista, uma das principais avenidas do Porto, e está bem servida de cinco linhas de metro. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Description {
             get {
@@ -5366,7 +5306,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 406, 417, 418, 455, 456, 462&lt;br&gt;Giro 400&lt;br&gt;Giro 401&lt;br&gt;busCas Estoril.
+        ///   Looks up a localized string similar to Autocarro STCP: 203, 208, 507, 704, 803.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details {
             get {
@@ -5375,7 +5315,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Metro: Casa da Música (linha A, B, C, E, F).
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title {
             get {
@@ -5384,7 +5324,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cascais Shopping.
+        ///   Looks up a localized string similar to Casa da Música.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Title {
             get {
@@ -5393,7 +5333,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O E. Leclerc de São Domingos de Rana é um dos maiores hipermercados do concelho de Cascais e conta com estacionamento grátis.&lt;br/&gt;&lt;br/&gt;É um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to A estação da Trindade é o maior interface de transportes do centro do Porto, a dois passos da Avenida dos Aliados e perto de zonas de escritórios, comércio e de instituições públicas..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description {
             get {
@@ -5402,7 +5342,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to busCas SDR&lt;br&gt;busCas SDR Norte.
+        ///   Looks up a localized string similar to A; B; C; D; E.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details {
             get {
@@ -5411,7 +5351,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Metro.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title {
             get {
@@ -5420,7 +5360,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to São Domingos de Rana.
+        ///   Looks up a localized string similar to Trindade.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title {
             get {
@@ -5429,7 +5369,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inaugurado em 2010, o novo Hospital de Cascais Dr. José de Almeida serve a população do concelho de Cascais e oito freguesias do concelho de Sintra.&lt;br/&gt;&lt;br/&gt;Localizado na freguesia de Alcabideche, o estabelecimento de saúde é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Description {
             get {
@@ -5438,7 +5378,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 411, 417, 456, 462, 490&lt;br&gt;busCas Malveira Hospital&lt;br&gt;busCas Cascais Hospital.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details {
             get {
@@ -5447,7 +5387,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Scotturb:.
+        ///   Looks up a localized string similar to Autocarro STCP: 903, 907.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title {
             get {
@@ -5456,7 +5396,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hospital de Cascais.
+        ///   Looks up a localized string similar to GaiaShopping.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Title {
             get {
@@ -5465,7 +5405,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Lagoas Park, situado em Porto Salvo, no concelho de Oeiras, alberga cerca de 100 empresas, tais como a SAP Portugal, a Teixeira Duarte ou a Pfizer.&lt;br/&gt;&lt;br/&gt;O Lagoas Park é um dos pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to Com mais de 260 lojas, o Norte Shopping, localizado na Senhora da Hora, é o maior centro comercial de região Norte. Além disso, tem um centro de escritórios muito importante, servindo de sede a algumas das maiores empresas nacionais. É de muito fácil acesso, já que fica muito perto de uma estação de metro servida de cinco linhas. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Description {
             get {
@@ -5474,7 +5414,8 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 129&lt;br&gt;.
+        ///   Looks up a localized string similar to Autocarro STCP: 205, 504, 506, 507, 601&lt;br&gt;
+        ///Autocarro Resende: 111, 116, 119, 121, 122, 123, 130.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details {
             get {
@@ -5483,7 +5424,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autocarro Vimeca:.
+        ///   Looks up a localized string similar to Metro: Sete Bicas (linha A, B, C, E, F).
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title {
             get {
@@ -5492,7 +5433,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lagoas Park.
+        ///   Looks up a localized string similar to NorteShopping.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Title {
             get {
@@ -5519,7 +5460,8 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Com 210 mil habitantes, Cascais é um dos principais subúrbios da cidade de Lisboa e o quinto maior concelho do país em termos de população. Apesar de ser uma zona predominantemente residencial e apesar das excelentes iniciativas municipais no concelho, ainda existem deficiências graves na ligação por transporte público entre Cascais e Lisboa.&lt;br/&gt;&lt;br/&gt;O comboio serve apenas a orla costeira e a maioria dos pontos de acesso contam com parques de estacionamento pagos. Adicionalmente, o Metropolitano de Lisboa  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. Num estudo recente, foi revelado que o Porto é a pior cidade do país para andar de carro, com mais de 27 horas por ano passadas no trânsito — muitas delas passadas na congestionada VCI.
+        ///.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_SubDescription {
             get {
@@ -5636,7 +5578,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e a preço de autocarro.
+        ///   Looks up a localized string similar to Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e ao preço do comboio.
         /// </summary>
         internal static string StaticPages_HowTo_MainDescription {
             get {
@@ -5645,7 +5587,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa..
+        ///   Looks up a localized string similar to A Yoyoloop tem viagens de Lisboa para o Porto, Coimbra e Leiria e retorno. Adicionalmente a Yoyoloop tem viagens do Porto para Coimbra e retorno..
         /// </summary>
         internal static string StaticPages_HowTo_MainSubDescription {
             get {
@@ -5654,7 +5596,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to como apanhar boleia da yoyoloop?.
+        ///   Looks up a localized string similar to como apanhar boleia da Yoyoloop?.
         /// </summary>
         internal static string StaticPages_HowTo_MainTitle {
             get {
@@ -5663,7 +5605,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 3€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
+        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
         /// </summary>
         internal static string StaticPages_HowTo_StepFour {
             get {
@@ -5717,6 +5659,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Avião.
+        /// </summary>
+        internal static string StaticPages_Loops_Details_Why_Plane {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_Details_Why_Plane", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Boleias tradicionais.
         /// </summary>
         internal static string StaticPages_Loops_Details_Why_Ride {
@@ -5735,142 +5686,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_LoopCard_APs {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_APs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dias úteis.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Days {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Days", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Times1 {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Times1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Times2 {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Times2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_LoopCard_Title {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_LoopCard__TravelTime {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_LoopCard__TravelTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Cascais e Lisboa?.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_MainDescription {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_MainDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Cascais.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_MainTitle {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_MainTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_SubDescription {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_SubDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Cascais em vez de outros transportes?.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_Why {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Cascais e Lisboa.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_Why_Bus_Reasons {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Bus_Reasons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_Why_Car_Reasons {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Car_Reasons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_Why_Description {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_Why_Ride_Reasons {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Ride_Reasons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
-        /// </summary>
-        internal static string StaticPages_Loops_LisboaCascais_Why_Train_Reasons {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LisboaCascais_Why_Train_Reasons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        ///   Looks up a localized string similar to → Av. Fernão de Magalhães&lt;br /&gt;→ Portagem&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_APs {
             get {
@@ -5888,7 +5704,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        ///   Looks up a localized string similar to Saida de Lisboa: 8:00 - 14:00.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Times1 {
             get {
@@ -5897,7 +5713,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        ///   Looks up a localized string similar to Saída do Porto: 12:00.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Times2 {
             get {
@@ -5906,7 +5722,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        ///   Looks up a localized string similar to desde 26€ por viagem de ida.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Title {
             get {
@@ -5915,7 +5731,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas uma hora e trinta minutos.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime {
             get {
@@ -5924,7 +5740,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Cascais e Lisboa?.
+        ///   Looks up a localized string similar to Cansado de conduzir nas viegens entre Lisboa e Coimbra?.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_MainDescription {
             get {
@@ -5933,7 +5749,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para Coimbra.
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer premium para Coimbra.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_MainTitle {
             get {
@@ -5942,7 +5758,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Quando chega a hora de voltar a casa no final de um dia de trabalho ou ao fim de uma semana de aulas na faculdade, os transportes de Lisboa para Coimbra não são muitos.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
+        ///&lt;br&gt;
+        ///A Yoyoloop oferece-t [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_SubDescription {
             get {
@@ -5960,7 +5780,12 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Coimbra e Lisboa.
+        ///   Looks up a localized string similar to → A viagem é mais demorada&lt;br /&gt;
+        ///→ Há várias paragens pelo caminho&lt;br /&gt;
+        ///→ A viagem é desconfortável e barulhenta&lt;br /&gt;
+        ///→ Só podes partir de Sete Rios ou do Oriente&lt;br /&gt;
+        ///→ É frequente o wifi não funcionar e não tens onde carregar o teu smartphone&lt;br /&gt;
+        ///→ A tua bagagem tem de ir no porão e pode demorar algum tempo a recolhê-la à chegada&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons {
             get {
@@ -5969,7 +5794,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br /&gt;
+        ///→ Viagem com paragens no caso de dares boleia a outras pessoas&lt;br /&gt;
+        ///→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons {
             get {
@@ -5978,7 +5805,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_Why_Description {
             get {
@@ -5987,7 +5814,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        ///   Looks up a localized string similar to → Conta com partidas diárias&lt;br /&gt;
+        ///→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br /&gt;
+        ///→ Beneficia de locais de partida e chegada em pontos centrais da tua cidade&lt;br /&gt;
+        ///→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br /&gt;
+        ///→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons {
             get {
@@ -5996,7 +5827,13 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        ///   Looks up a localized string similar to → A viagem é mais demorada&lt;br /&gt;
+        ///→ A viagem conta com várias paragens&lt;br /&gt;
+        ///→ A viagem é desconfortável e barulhenta&lt;br /&gt;
+        ///→ Os atrasos, avarias e greves são frequentes&lt;br /&gt;
+        ///→ Só podes partir do Oriente ou de Santa Apolónia&lt;br /&gt;
+        ///→ Só consegues carregar o teu smartphone se fores em primeira classe&lt;br /&gt;
+        ///→ O ponto de chegada Coimbra B não é tão conveniente quanto a Av. Fernão de Magalhães&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons {
             get {
@@ -6005,7 +5842,142 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Cascais Shopping&lt;br /&gt;→ Hospital de Cascais&lt;br /&gt;→ Lagoas Park&lt;br /&gt;→ S. Domingos de Rana&lt;br /&gt;→ Tagus Park.
+        ///   Looks up a localized string similar to → Largo da República.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_LoopCard_APs {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_LoopCard_APs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_LoopCard_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_LoopCard_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saídas de Lisboa: 12:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_LoopCard_Times1 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_LoopCard_Times1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saídas de Leiria: 15:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_LoopCard_Times2 {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_LoopCard_Times2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desde 16€ por viagem de ida.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_LoopCard_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_LoopCard_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos..
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cansado de conduzir entre Leiria e Lisboa?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer premium para Leiria.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Para quem vive e trabalha na zona de Leiria, o carro particular acaba por ser a única alternativa fiável para fazer este trajecto no dia-a-dia. No entanto, o custo total desta viagem incluindo portagens, combustível, seguros e desgaste to carro coresponde a cerca de 50€, sendo ainda necessário resolver o problema do estacionamento à chegada a Lisboa. Infelizmente, os investimentos na melhoria do serviço de comboios na linha do Oeste continuam a ser adiados de há muitos anos a esta parte. .
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porquê apanhar um transfer entre Lisboa e Leiria em vez de outros transportes?.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_Why {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_Why", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → As linhas de autocarros têm várias paragens e demoram muito tempo..
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_Why_Bus_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_Why_Bus_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Não é possível utilizar o tempo para trabalhar ou relaxar se estás a conduzir o teu carro.&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_Why_Car_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_Why_Car_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de oito lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa..
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_Why_Description {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_Why_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A linha do Oeste tem se vindo a degradar de forma significativa&lt;br/&gt;→ A viagem é barulhenta e as carruagens não são confortáveis &lt;br/&gt;→ O único ponto de chegada é a Gare do Oriente, sendo necessário apanhar outro transporte para chegares ao teu destino final em Lisboa..
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaLeiria_Why_Train_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaLeiria_Why_Train_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Av. da Boavista &lt;br /&gt;→Casa da Musica&lt;br /&gt;→ GaiaShopping&lt;br /&gt;→Norteshopping&lt;br /&gt;→Trindade.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_APs {
             get {
@@ -6023,7 +5995,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30.
+        ///   Looks up a localized string similar to Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times1 {
             get {
@@ -6032,7 +6004,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 18:00  -  18:30  -  19:00  -  19:30  -  20:00.
+        ///   Looks up a localized string similar to Saídas do Porto: 7:30 - 8:30 - 18:00 - 19:00.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times2 {
             get {
@@ -6041,7 +6013,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to desde &lt;span style=&quot;font-weight: 800&quot;&gt;50€&lt;/span&gt; por semana por&lt;br/&gt;10 viagens ou &lt;span style=&quot;font-weight: 800&quot;&gt;8€&lt;/span&gt; por viagem.
+        ///   Looks up a localized string similar to desde 36€ por viagem.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Title {
             get {
@@ -6050,7 +6022,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Cascais até &lt;br/&gt;Lisboa em apenas 30 minutos.
+        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Lisboa até ao Porto em duas horas e meia..
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard__TravelTime {
             get {
@@ -6059,7 +6031,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cansado do trânsito na A5 &lt;br/&gt;nas viagens entre Porto e Lisboa?.
+        ///   Looks up a localized string similar to Sem check-in, sem filas de segurança, diretamente para o centro da cidade..
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_MainDescription {
             get {
@@ -6068,7 +6040,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deixa o carro em casa e vem de transfer para o Porto.
+        ///   Looks up a localized string similar to  Apanha um transfer premium entre Lisboa e o Porto ao preço do comboio..
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_MainTitle {
             get {
@@ -6077,7 +6049,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.&lt;br/&gt;&lt;br/&gt;A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estaci [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Quando chega a hora de voltar a casa no final de um dia de trabalho ou ao fim de uma semana de aulas na faculdade, há vários transportes de Lisboa para o Porto, mas não são os mais viáveis, nem os mais confortáveis.&lt;br&gt;
+        ///&lt;br&gt;
+        ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está n [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_SubDescription {
             get {
@@ -6095,7 +6069,13 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Não há qualquer autocarro directo entre Coimbra e Lisboa.
+        ///   Looks up a localized string similar to → A viagem é mais demorada&lt;br/&gt;
+        ///→ Há várias paragens pelo caminho&lt;br/&gt;
+        ///→ A viagem é desconfortável e barulhenta&lt;br/&gt;
+        ///→ É frequente o wifi não funcionar e não tens onde carregar o teu smartphone&lt;br/&gt;
+        ///→ Só podes partir de Sete Rios ou do Oriente e parar no Campo 24 de Agosto&lt;br/&gt;
+        ///→ A tua bagagem tem de ir no porão e pode demorar algum tempo a recolhê-la à chegada&lt;br/&gt;
+        ///.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_Why_Bus_Reasons {
             get {
@@ -6104,7 +6084,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil&lt;br/&gt;.
+        ///   Looks up a localized string similar to → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;
+        ///→ Viagem com paragens no caso de dares boleia a outras pessoas&lt;br/&gt;
+        ///→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_Why_Car_Reasons {
             get {
@@ -6113,7 +6095,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Conta com partidas frequentes de segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa.
+        ///   Looks up a localized string similar to → Conta com partidas de 30 em 30 minutos, ao início e ao final do dia&lt;br/&gt;
+        ///→ Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio&lt;br/&gt;
+        ///→ Beneficia de locais de partida e chegada em pontos centrais da tua cidade&lt;br/&gt;
+        ///→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;
+        ///→ Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_Why_Description {
             get {
@@ -6122,7 +6108,23 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;.
+        ///   Looks up a localized string similar to → Não tens internet no avião&lt;br/&gt;
+        ///→ É necessário passares pela fila da segurança no aeroporto&lt;br/&gt;
+        ///→ O tráfego aéreo no aeroporto de Lisboa provoca atrasos frequentes&lt;br/&gt;
+        ///→ Tens de chegar ao aeroporto com, pelo menos, 1 hora de antecedência&lt;br/&gt;
+        ///→ Se levares mala de cabine, há a possibilidade de ser despachada para o porão&lt;br/&gt;
+        ///→ Precisas de apanhar um táxi ou outro transporte alternativo até ao centro do Porto&lt;br/&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LisboaPorto_Why_Plane_Reasons {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LisboaPorto_Why_Plane_Reasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to → Podes demorar muito tempo se não fores pela auto-estrada&lt;br/&gt;
+        ///→ Se o carro for cheio, pode ser uma viagem desconfortável, podes não ter espaço para a tua bagagem e podes ter várias paragens para deixar os outros passageiros&lt;br/&gt;
+        ///→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_Why_Ride_Reasons {
             get {
@@ -6131,7 +6133,12 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A viagem até Lisboa conta com, pelo menos, dez paragens &lt;br/&gt;→ A viagem é barulhenta e nem sempre tens lugar para te sentar &lt;br/&gt;→ O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  &lt;br/&gt;ligação direta com a linha verde do metro de Lisboa &lt;br/&gt;.
+        ///   Looks up a localized string similar to → A viagem é mais demorada&lt;br/&gt;
+        ///→ A viagem conta com várias paragens&lt;br/&gt;
+        ///→ A viagem é desconfortável e barulhenta&lt;br/&gt;
+        ///→ Os atrasos, avarias e greves são frequentes&lt;br/&gt;
+        ///→ Só consegues carregar o teu smartphone se fores em primeira classe&lt;br/&gt;
+        ///→ Só podes partir do Oriente ou Santa Apolónia e parar em Gaia e Campanhã&lt;br/&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_Why_Train_Reasons {
             get {
@@ -6158,79 +6165,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - Cascais Shopping&lt;br /&gt;- E.Leclerc São Domingos de Rana  (Parque Superior).
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_APs_Cascais", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to - Amoreiras (Torre 1)&lt;br /&gt;- Saldanha (Estacionamento do Arco do cego).
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_APs_Lisboa", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Saidas de Cascais.
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dias úteis.
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Days", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Cascais_Times", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Saidas de Lisboa.
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dias úteis.
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Days", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
-        /// </summary>
-        internal static string StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times {
-            get {
-                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaCascais_Departures_Lisboa_Times", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to - McDonald’s Av. Fernão de Magalhães&lt;br /&gt;.
+        ///   Looks up a localized string similar to - Av. Fernão de Magalhães&lt;br /&gt;- Portagem&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra {
             get {
@@ -6239,7 +6174,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - Saldanha (Estacionamento)&lt;br /&gt;- Gare do Oriente.
+        ///   Looks up a localized string similar to - Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa {
             get {
@@ -6266,7 +6201,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        ///   Looks up a localized string similar to 8:00 - 14:00.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times {
             get {
@@ -6293,7 +6228,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        ///   Looks up a localized string similar to 11:00 - 16:00.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times {
             get {
@@ -6302,7 +6237,79 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - Saldanha (Estacionamento)&lt;br /&gt;- Gare do Oriente.
+        ///   Looks up a localized string similar to - Praça de República&lt;br /&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_APs_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_APs_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saída de Leiria.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saidas de Lisboa.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dias úteis.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Days {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12:00.
+        /// </summary>
+        internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Times {
+            get {
+                return ResourceManager.GetString("StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Times", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa {
             get {
@@ -6311,7 +6318,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - Largo da República&lt;br /&gt;.
+        ///   Looks up a localized string similar to - Av. da Boavista&lt;br /&gt;- Casa da Música&lt;br /&gt;- GaiaShopping&lt;br /&gt;- NorteShopping&lt;br /&gt;- Trindade&lt;br /&gt;.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto {
             get {
@@ -6329,7 +6336,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Todos os dias.
+        ///   Looks up a localized string similar to Dias úteis.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days {
             get {
@@ -6338,7 +6345,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:15 - 8:15 – 8:45.
+        ///   Looks up a localized string similar to 7:30 - 8:30 - 18:00 - 19:00.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times {
             get {
@@ -6365,7 +6372,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times {
             get {
@@ -6383,7 +6390,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa..
+        ///   Looks up a localized string similar to A Yoyoloop tem loops entre Lisboa e o Porto, Coimbra e Leiria e, ainda, loops desde o Porto e Coimbra..
         /// </summary>
         internal static string StaticPages_Loops_SubDescription {
             get {
@@ -6401,7 +6408,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 8. Nos termos legais, o utilizador tem, a todo o momento, direito à informação gratuita sobre os dados armazenados e eventualmente a correcção, bloqueio ou eliminação desses dados. Os pedidos de informação, correcção ou eliminação devem ser enviados por e-mail para clientes@goodlife.pt ou para goodlife! - Circunland S.A., - Estrada de Outurela, 118 - Parque Holanda - Edifício Holanda - 2790-114 Carnaxide..
+        ///   Looks up a localized string similar to 8. Por quanto tempo conservamos os seus dados pessoais?&lt;br&gt;
+        ///&lt;br&gt;
+        ///Sem prejuízo de outros prazos previstos na legislação em vigor, nomeadamente em matéria fiscal, contabilística e de responsabilidade contratual, os dados recolhidos através deste sítio manter-se-ão conservados durante o período de tempo em que o utilizador se encontrar registado, sendo eliminados quando o utilizador requerer a eliminação dos mesmos ou do seu registo, nos termos do ponto seguinte..
         /// </summary>
         internal static string StaticPages_Privacy_Eight {
             get {
@@ -6410,7 +6419,10 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5. A goodlife! transmitirá quaisquer dados pessoais a terceiros caso isso seja necessário para cumprir regulamentos legais (por exemplo, da lei de proteção de dados) como no caso da transmissão de dados a autoridades de perseguição penal e inspecção para fins de defesa de perigos para a segurança pública..
+        ///   Looks up a localized string similar to 5. Onde são guardados os dados do Utilizador?&lt;br&gt;
+        ///&lt;br&gt;
+        ///A equipa da Yoyoloop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
+        ///Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Caso  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Five {
             get {
@@ -6419,7 +6431,8 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4. O nosso website utiliza uma tecnologia chamada cookies. Para facilitar e personalizar a experiência do Utilizador final com o site, a goodlife! armazena cookies no seu computador. Os Cookies são pequenos arquivos de texto que são armazenados no computador do utilizador. A maioria dos Cookies utilizados no nosso site serão apagados do disco rígido do utilizador automaticamente ao encerrar a sessão do navegador (chamados Cookies de sessão) . Outros tipos de Cookies permanecerão no computador e possibilitam [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 4. Quem tem acesso aos dados pessoais do utilizador?&lt;br&gt;
+        ///A Yoyoloop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei..
         /// </summary>
         internal static string StaticPages_Privacy_Four {
             get {
@@ -6428,7 +6441,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O www.yoyoloop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto u [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to O www.Yoyoloop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto u [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Intro {
             get {
@@ -6446,7 +6459,22 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. A goodlife! está autorizada a recolher dados pessoais. São considerados dados pessoais do utilizador os dados relativos ao nome, endereço electrónico, morada. O responsável pelo tratamento dos dados é a Circunland S.A. e a finalidade do tratamento reside na gestão de clientes e marketing..
+        ///   Looks up a localized string similar to 9. Links para outros sites&lt;br&gt;
+        ///&lt;br&gt;
+        ///Dentro no website da yoyoloop, poderão encontrar-se links para websites terceiros e se o Utilizador seguir um desses Links, deverá notar que cada um desses websites tem a sua própria política de privacidade e a que a yoyoloop não aceita qualquer responsabilidade ou obrigação referente a essas políticas..
+        /// </summary>
+        internal static string StaticPages_Privacy_Nine {
+            get {
+                return ResourceManager.GetString("StaticPages_Privacy_Nine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.  Âmbito desta Política de Privacidade&lt;br&gt;
+        ///&lt;br&gt;
+        ///A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da Yoyoloop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
+        ///Os dados recolhidos ou fornecidos pelo utilizador não serão processados para quaisquer outros fins que não os aqui especificados. &lt;br&gt;
+        ///A Yoyoloop reserva-se  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_One {
             get {
@@ -6455,7 +6483,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7. Armazenamos o texto do contrato e enviamos os dados da encomenda bem como as nossas condições gerais de venda por e-mail. As condições gerais de venda podem ser consultadas online no site www.goodlife.com.pt. As suas encomendas antigas podem ser consultadas na nossa área de login de cliente..
+        ///   Looks up a localized string similar to 7. Direitos do utilizador ao abrigo do regulamento geral de proteção de dados.&lt;br&gt;
+        ///&lt;br&gt;
+        ///O Utilizador tem o direito de acesso, à retificação, ao esquecimento, à portabilidade dos dados, a limitar ou opor-se ao tratamento dos seus dados pessoais, a apresentar reclamação e a recorrer a ação judicial..
         /// </summary>
         internal static string StaticPages_Privacy_Seven {
             get {
@@ -6464,20 +6494,13 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 6. Salvo oposição expressa aquando do registo ou em momento posterior, a goodlife! está autorizada a utilizar e processar os dados pessoais do utilizador para fins de acções de marketing (e-mail, newsletter, etc.)..
+        ///   Looks up a localized string similar to 6. A Yoyoloop utiliza cookies no seu Website?&lt;br&gt;
+        ///&lt;br&gt;
+        ///O website da Yoyoloop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à Yo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Six {
             get {
                 return ResourceManager.GetString("StaticPages_Privacy_Six", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A inclusão nestes programas de publicidade pode ser cancelada a qualquer momento, por exemplo através de um e-mail para o endereço clientes@goodlife.pt. O cancelamento é possível em qualquer momento através de um link no e-mail..
-        /// </summary>
-        internal static string StaticPages_Privacy_Six_A {
-            get {
-                return ResourceManager.GetString("StaticPages_Privacy_Six_A", resourceCulture);
             }
         }
         
@@ -6491,7 +6514,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3. A goodlife! utiliza alguns sistemas de tracking de terceiros, como por exemplo o Google Analytics, um serviço de análise de internet da Google Inc. O Google Analytics utiliza Cookies (arquivos de texto) que são armazenados no computador do utilizador e possibilitam posteriormente a análise de utilização do site. As informações geradas a partir dos Cookies a respeito da utilização do site (incluindo o endereço IP) serão transmitidos a um servidor nos Estados Unidos e lá armazenados..
+        ///   Looks up a localized string similar to 3. A Yoyoloop utiliza os dados pessoais recolhidos para fins de Marketing e Publicidade?&lt;br&gt;
+        /// &lt;br&gt;
+        ///A Yoyoloop não utilizará os seus dados pessoais para lhe enviar qualquer correio ou mensagem não solicitada cujo não tenha recebido o seu consentimento explícito. A Yoyoloop não vende nem negocia os seus dados com terceiros..
         /// </summary>
         internal static string StaticPages_Privacy_Three {
             get {
@@ -6500,34 +6525,15 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O Google utilizará essas informações para analisar a utilização do site e para fornecer relatórios sobre a utilização aos operadores de sites, bem como o fornecimento de outros serviços ligados à utilização do site e da internet. O Google transmitirá também essas informações a terceiros, caso seja imposto por lei ou no caso em que o terceiro processe esses dados por ordem do Google. O Google não ligará seu endereço IP a outros dados..
-        /// </summary>
-        internal static string StaticPages_Privacy_Three_A {
-            get {
-                return ResourceManager.GetString("StaticPages_Privacy_Three_A", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O utilizador pode impedir a instalação de Cookies configurando o seu navegador. Avisamos que neste caso a totalidade das funções do site não será disponível..
-        /// </summary>
-        internal static string StaticPages_Privacy_Three_B {
-            get {
-                return ResourceManager.GetString("StaticPages_Privacy_Three_B", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ao utilizar o site o utilizador concorda com o processamento dos dados levantados pelo Google na forma e na finalidade anteriormente descrita..
-        /// </summary>
-        internal static string StaticPages_Privacy_Three_C {
-            get {
-                return ResourceManager.GetString("StaticPages_Privacy_Three_C", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 2. Processamos e utilizamos os dados pessoais do utilizador para fins de realização e execução do contrato de utilização e dos contratos de compra com a goodlife! Isto abrange a transmissão dos dados pessoais a empresas de serviços ou empresas de &quot;outsourcing&quot; que contribuam para melhorar ou facilitar as operações através da goodlife! , como (sem se limitar a) meios de pagamentos, seguros ou intermediários na gestão de pagamentos e outros. Estas empresas ou sites de internet têm no geral politicas de privac [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 2. Para que efeitos são guardados dados pessoais do Utilizador ?&lt;br&gt;
+        ///&lt;br&gt;
+        ///Os dados recolhidos nos diferentes formulários do website destinam-se exclusivamente ao processamento dos pedidos dos utilizadores, por exemplo:&lt;br&gt;
+        ///i) Envio de bilhetes por correio electrónico.&lt;br&gt;
+        ///ii) Prestar suporte técnico ou comercial.&lt;br&gt;
+        ///iii) Recuperar ou pedir nova password.&lt;br&gt;
+        ///iv) Confirmação de registo de conta.&lt;br&gt;
+        ///Os dados recolhidos não serão usados para qualquer outro fim.
+        ///.
         /// </summary>
         internal static string StaticPages_Privacy_Two {
             get {
@@ -6554,7 +6560,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. Partes e objeto.
+        ///   Looks up a localized string similar to 1.  Âmbito Geral.
         /// </summary>
         internal static string StaticPages_Terms_One {
             get {
@@ -6563,16 +6569,8 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.4 Os cupões disponibilizados em www.goodlife.com.pt não representam um compromisso firme e inequívoco assumido pelo utilizador na compra de determinado bem ou serviço, na medida em que podem ser livremente trocados pelo utilizador até à respetiva data de validade por qualquer outro cupão que nesse momento esteja em comercialização, ainda que respeite a parceiros ou serviços absolutamente diferenciados do original, podendo por exemplo trocar-se um cupão respeitante a serviços de restauração por um outro re [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string StaticPages_Terms_One_Four {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_One_Four", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 1.1 As presentes condições gerais de utilização regulam a relação entre a Circunland S.A., NIPC 508 123 224, com sede na Estrada da Outurela, 118, Parque Holanda - Edifício Holanda, 2790-114 Carnaxide, de doravante designada por GOODLIFE! e o utilizador como tal registado em www.goodlife.com.pt..
+        ///   Looks up a localized string similar to 1.1 Política de Privacidade&lt;br&gt;
+        ///Antes de utilizar o nosso website ou serviços da Yoyoloop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade..
         /// </summary>
         internal static string StaticPages_Terms_One_One {
             get {
@@ -6581,7 +6579,8 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.3 No website www.goodlife.com.pt a goodlife! promove uma plataforma de compras coletivas na qual os utilizadores podem adquirir:.
+        ///   Looks up a localized string similar to 1.3 Aceitação dos Termos de Utilização&lt;br&gt;
+        ///Ao aceder a este website, o utilizador declara ter lido, compreendido e aceite os Termos de Utilização abaixo descritos, sem necessidade de qualquer outro consentimento posterior..
         /// </summary>
         internal static string StaticPages_Terms_One_Three {
             get {
@@ -6590,25 +6589,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to i) cupões que atribuem o direito a adquirir variados serviços ou produtos a prestar ou fornecer diretamente por outras empresas devidamente identificadas em cada caso e designados por Parceiros. Através do nosso website, os utilizadores poderão adquirir os referidos cupões que lhes atribuirão o direito a adquirir produtos e serviços, com desconto sobre o preço regularmente praticado nas lojas físicas. Os emitentes dos cupões e prestadores dos produtos ou serviços indicados nos cupões são os Parceiros indica [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string StaticPages_Terms_One_Three_One {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_One_Three_One", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ii) variados produtos fornecidos diretamente pela goodlife! o que acontece nos casos dos produtos anunciados em que não seja identificado nem publicitado, no website e no cupão, nenhum parceiro como fornecedor. Nestes casos, ao contrário dos referidos na alínea anterior, a goodlife! assume a posição legal e contratual de vendedora do produto e recebe o pagamento em nome próprio, para todos os efeitos legais..
-        /// </summary>
-        internal static string StaticPages_Terms_One_Three_Two {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_One_Three_Two", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 1.2 Este acordo determina os termos e condições que se aplicam ao uso do website por parte do utilizador final. A sua utilização está sujeita à prévia aceitação dos termos e condições gerais de uso doravante descritos no momento do registo como utilizador. As condições de utilização aplicáveis são novamente aceites pelo utilizador com a confirmação no respetivo botão aquando do processo de encomenda. Estas condições de utilização encontram-se em www.goodlife.com.pt e podem ser acedidas, impressas ou guardad [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 1.2 Sobre os Termos e Condições&lt;br&gt;
+        ///A Yoyoloop reserva o direito de adicionar, alterar ou eliminar qualquer um dos Termos de Utilização do seu website e serviços através da atualização do conteúdo desta página e da respectiva comunicação aos seus utilizadores.&lt;br&gt;
+        ///Os Termos e Condições da Yoyoloop abrangem este website, assim como outros sites que mencionam a mesma política..
         /// </summary>
         internal static string StaticPages_Terms_One_Two {
             get {
@@ -6617,7 +6600,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3. Livre resolução.
+        ///   Looks up a localized string similar to 3. Reembolsos e reclamações .
         /// </summary>
         internal static string StaticPages_Terms_Three {
             get {
@@ -6626,7 +6609,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3.1 Direito de livre resolução.
+        ///   Looks up a localized string similar to 3.1 Reembolsos.
         /// </summary>
         internal static string StaticPages_Terms_Three_One {
             get {
@@ -6635,142 +6618,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O consumidor tem o direito de livre resolução do presente contrato no prazo de 14 dias de calendário, sem necessidade de indicar qualquer motivo..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_A {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_A", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O prazo para exercício do direito de livre resolução expira 14 dias a contar do dia seguinte ao dia.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_B {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_B", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to a) da celebração do contrato, no caso de um contrato de prestação de serviços ou de um contrato de fornecimento de água, de gás ou de eletricidade, caso não sejam postos à venda em volume ou quantidade limitados, de aquecimento urbano ou de conteúdos digitais que não sejam fornecidos num suporte material;.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_B_a {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_a", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to b) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física dos bens, no caso de um contrato de compra e venda;.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_B_b {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_b", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to c) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do último bem, no caso de um contrato em que o consumidor encomendou vários bens numa única encomenda e os bens são entregues separadamente;.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_B_c {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_c", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to d) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do último lote ou da última parte, no caso de um contrato relativo à entrega de um bem constituído por vários lotes ou partes.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_B_d {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_d", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to e) em que adquire ou um terceiro por si indicado, que não seja o transportador, adquire a posse física do primeiro bem, no caso de um contrato de entrega periódica de bens durante um determinado período..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_B_e {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_B_e", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A fim de exercer o seu direito de livre resolução, tem de nos comunicar a sua decisão de resolução do presente contrato por meio de uma declaração inequívoca (por exemplo, carta enviada pelo correio, fax ou correio eletrónico) para вюeve utilizar o modelo de formulário de resolução..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_C {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_C", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Para que o prazo de livre resolução seja respeitado, basta que a sua comunicação referente ao exercício do direito de livre resolução seja enviada antes do termo do prazo de resolução. Efeitos da livre resolução.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_D {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_D", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Em caso de resolução do presente contrato, ser-lhe-ão reembolsados todos os pagamentos efetuados (com exceção de custos suplementares resultantes da sua escolha de uma modalidade de envio diferente da modalidade menos onerosa de envio normal por nós oferecida), sem demora injustificada e, em qualquer caso, o mais tardar 14 dias a contar da data em que formos informados da sua decisão de resolução do presente contrato..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_E {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_E", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Efetuamos esses reembolsos em crédito na sua conta cliente em www.goodlife.com.pt ou, se não nos confirmar o seu acordo, usando o mesmo meio de pagamento que usou na transação inicial; em qualquer caso, não incorre em quaisquer custos como consequência de tal reembolso, que não os custos diretos da devolução dos bens..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_F {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_F", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reteremos o reembolso até termos recebido o cupão ou os bens devolvidos, ou até que apresente prova do envio dos bens, consoante o que ocorrer primeiro..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_G {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_G", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Deve devolver os bens ou entregar-no-los, sem demora injustificada dentro dos 14 dias a contar do dia em que nos informar da livre resolução do contrato..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_H {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_H", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Considera-se que o prazo é respeitado se devolver os bens antes do termo do prazo de 14 dias..
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_I {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_I", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No caso de um contrato de prestação de serviços ou de um contrato de fornecimento de água, gás ou eletricidade, caso não sejam postos à venda em volume ou quantidade limitados, ou de aquecimento urbano, se tiver solicitado que a prestação de serviços ou o fornecimento de água/gás/eletricidade/aquecimento urbano comece durante o prazo de livre resolução, pagar-nos-á um montante razoável proporcional ao que lhe foi fornecido até ao momento em que nos comunicou a sua resolução do presente contrato, em relação  [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string StaticPages_Terms_Three_One_J {
-            get {
-                return ResourceManager.GetString("StaticPages_Terms_Three_One_J", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 3.2 Condições da devolução dos bens.
+        ///   Looks up a localized string similar to 3.2 Reclamações.
         /// </summary>
         internal static string StaticPages_Terms_Three_Two {
             get {
@@ -6779,7 +6627,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2. Compra de cupões.
+        ///   Looks up a localized string similar to 2. Utilizar o Website e Serviços da Yoyoloop.
         /// </summary>
         internal static string StaticPages_Terms_Two {
             get {
@@ -6788,16 +6636,53 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Para adquirir um cupão em www.goodlife.com.pt deve seguir os seguintes passos:&lt;br /&gt;1) Carregar no botão &quot;comprar&quot; na página inicial.&lt;br /&gt;2) Escolher a quantidade desejada de cupões a adquirir.&lt;br /&gt;3) Indicar o seu nome e endereço de e-mail e password para fazer o login. Caso ainda não esteja registado deverá preencher o formulário de registo.&lt;br /&gt;4) Escolha o método de pagamento pretendido, multibanco ou cartão de crédito ou outro meio de pagamento disponível no website. No primeiro caso ser-lhe-á atrib [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 2.5 Condições gerais de utilização&lt;br&gt;.
         /// </summary>
-        internal static string StaticPages_Terms_Two_A {
+        internal static string StaticPages_Terms_Two_Five {
             get {
-                return ResourceManager.GetString("StaticPages_Terms_Two_A", resourceCulture);
+                return ResourceManager.GetString("StaticPages_Terms_Two_Five", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card was declined..
+        ///   Looks up a localized string similar to 2.4 Preços e disponibilidades&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Terms_Two_Four {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two_Four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.1 Direitos de Autor&lt;br&gt;
+        ///Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conteúdo digital representadas no website,não podem ser copiados, distribuídos, modificados ou colocados noutros websites, sem autorização prévia por escrito de um membro da equipa da Yoyoloop..
+        /// </summary>
+        internal static string StaticPages_Terms_Two_One {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two_One", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.3 Reservas no website da Yoyoloop&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Terms_Two_Three {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two_Three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.2. Deveres do Utilizador e Cliente&lt;br&gt;.
+        /// </summary>
+        internal static string StaticPages_Terms_Two_Two {
+            get {
+                return ResourceManager.GetString("StaticPages_Terms_Two_Two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O cartão foi declinado..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_card_declined {
             get {
@@ -6806,7 +6691,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card has expired..
+        ///   Looks up a localized string similar to O cartão está expirado..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_expired_card {
             get {
@@ -6815,7 +6700,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card&apos;s security code is incorrect..
+        ///   Looks up a localized string similar to O código de segurança não está correcto..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_incorrect_cvc {
             get {
@@ -6824,7 +6709,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card number is incorrect..
+        ///   Looks up a localized string similar to O número do cartão não está correcto..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_incorrect_number {
             get {
@@ -6833,7 +6718,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card&apos;s zip code failed validation..
+        ///   Looks up a localized string similar to O código postal não é válido..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_incorrect_zip {
             get {
@@ -6842,7 +6727,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card&apos;s security code is invalid..
+        ///   Looks up a localized string similar to O código de segurança não é válido..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_invalid_cvc {
             get {
@@ -6851,7 +6736,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card&apos;s expiration date is invalid..
+        ///   Looks up a localized string similar to A data de expiração não é válida..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_invalid_date_format {
             get {
@@ -6860,7 +6745,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card&apos;s expiration month is invalid..
+        ///   Looks up a localized string similar to O mês da data de expiração não é válido..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_invalid_expiry_month {
             get {
@@ -6869,7 +6754,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card&apos;s expiration year is invalid..
+        ///   Looks up a localized string similar to O ano da data de expiração não é válido..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_invalid_expiry_year {
             get {
@@ -6878,7 +6763,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The card number is not a valid credit card number..
+        ///   Looks up a localized string similar to O número de cartão não é válido..
         /// </summary>
         internal static string Stripe_ErrorHandling_CardError_invalid_number {
             get {

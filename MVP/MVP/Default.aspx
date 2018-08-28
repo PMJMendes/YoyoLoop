@@ -78,7 +78,7 @@
                 
                 <div class="homepage__where-to-card__separator mb-3"></div>
 
-                <div class="homepage__where-to-card__from mb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Location_From%>"/> leiria, Cascais <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Location_And%>"/> coimbra</div>
+                <div class="homepage__where-to-card__from mb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Location_From%>"/> leiria, porto <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Location_And%>"/> coimbra</div>
                 <div class="homepage__where-to-card__when mb-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_When_Everyday%>"/></div>
                 <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_ReserveLink%>"/></a>
               </div>
@@ -129,7 +129,7 @@
             <div class="col-md-6 col-lg-3 pl-0">
               <div class="homepage__where-to-card homepage__where-to-card--cascais mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
-                  <div class="homepage__where-to-card__header__city">Cascais</div>
+                  <div class="homepage__where-to-card__header__city">Porto</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">
                     <div class="flex-column">
                       <div class="homepage__where-to-card__header__price__from"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Price_From%>"/></div>
@@ -143,7 +143,7 @@
 
                 <div class="homepage__where-to-card__from mb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Location_From%>"/> Lisboa</div>
                 <div class="homepage__where-to-card__when mb-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_When_Everyday%>"/></div>
-                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Linha%20de%20Cascais" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_ReserveLink%>"/></a>
+                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Porto" class="homepage__where-to-card__reserve mb-5 d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_ReserveLink%>"/></a>
               </div>
             </div>
           </div>
@@ -187,7 +187,7 @@
                   <div class="row align-items-center pt-4">
                     <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center flex-column">
                         <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                        <span class="homepage__popular-loops__city">Cascais</span>
+                        <span class="homepage__popular-loops__city">Porto</span>
                     </div>
                     <div class="col-sm-4 col-xs-12 d-flex justify-content-center">
                         <img src="/img/arrows.png" srcset="/img/arrows@2x.png 2x, /img/arrows@3x.png 3x">
@@ -230,7 +230,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_ReserveLink%>"/></a>
+                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Porto" class="homepage__popular-loops__footer__reserve d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_ReserveLink%>"/></a>
                     </div>
                   </div>
               </div>

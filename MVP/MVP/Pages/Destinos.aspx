@@ -54,7 +54,7 @@
                     <div class="col-md-5 static-page__box-container__first d-flex flex-column justify-content-center pl-5">
                         <div class="static-page__box-container__first__sub-title">
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_NavBar_LoopsAndSchedules%>"/>
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Title%>"/>
                         </div>
                         <div class="static-page__box-container__first__main-title">Lisboa</div>
                     </div>
@@ -86,7 +86,7 @@
             </div>
         </a>
 
-        <a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Cascais" tabindex="-1" >
+        <a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Leiria" tabindex="-1" >
             <div class="homepage__container static-page__box-container p-0">
                 <div class="row">
                     <div class="col-md-5 static-page__box-container__first d-flex flex-column justify-content-center pl-5">
@@ -94,10 +94,10 @@
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
                             <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Title%>"/>
                         </div>
-                        <div class="static-page__box-container__first__main-title">Cascais</div>
+                        <div class="static-page__box-container__first__main-title">Leiria</div>
                     </div>
                     <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-cascais p-5 m-0 d-flex justify-content-center align-items-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Cascais_Description%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Leiria_Description%>"/>
                     </div>
                 </div>
             </div>
@@ -752,88 +752,14 @@
             </div>
         </div>
 
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image3 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Third_Description%>"/>
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Third_HowToGet_Details%>"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image4 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopyellow.png" srcset="/img/stopyellow@2x.png 2x, /img/stopyellow@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_Description%>"/>
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fourth_HowToGet_Details%>"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5 mb-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image5 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_Description%>"/>
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_Stops_StopCard_Fifth_HowToGet_Details%>"/>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- END OF COIMBRA -->
 
-    <!-- CASCAIS -->
-    <div class="<%= localData.Destino == "cascais" ? "" : "hide" %>">
+    <!-- LEIRIA -->
+    <div class="<%= localData.Destino == "leiria" ? "" : "hide" %>">
         <header class="head text-center d-flex pb-5 static-page__pic-four">
             <div class="container-fluid d-flex flex-column justify-content-center">
-                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_MainTitle%>"/></h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
                     <a OnClick="javascript:$.blockUI()" href="/Pages/Destinos" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/></a>
                 </div>
@@ -847,7 +773,7 @@
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_MainDescription%>"/></div>
+                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_MainDescription%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -856,13 +782,13 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_SubDescription%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_SubDescription%>"/>
                     </div>
                 </div>
             </div>
         </div>
 
-        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Linha%20de%20Cascais" tabindex="-1" >
+        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Leiria" tabindex="-1" >
             <div class="homepage__container static-page__box-container p-0 mt-5 mb-5">
                 <div class="row">
                     <div class="col-md-4 static-page__box-container__first d-flex flex-column justify-content-center pl-5">
@@ -870,7 +796,7 @@
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
                             <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Title%>"/>
                         </div>
-                        <div class="static-page__box-container__first__main-title">Cascais</div>
+                        <div class="static-page__box-container__first__main-title">Leiria</div>
                     </div>
 
                     <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
@@ -879,7 +805,7 @@
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
                                 <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Stops%>"/></div>
                                 <div class="static-page__box-container__schedules__text text-center">
-                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_LoopCard_Description%>"/>
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_LoopCard_Description%>"/>
                                 </div>
                             </div>
     
@@ -887,12 +813,12 @@
                                 <img src="/img/horarios.png" srcset="/img/horarios@2x.png 2x, /img/horarios@3x.png 3x">
                                 <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Schedules%>"/></div>
                         
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_LoopCard_Schedules_Days%>"/></div>
-                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_LoopCard_Schedules_Times1%>"/></span>
-                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_LoopCard_Schedules_Times2%>"/></span>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_LoopCard_Schedules_Days%>"/></div>
+                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_LoopCard_Schedules_Times1%>"/></span>
+                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_LoopCard_Schedules_Times2%>"/></span>
 
                                 <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_TravelTime%>"/></div>
-                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_LoopCard_Schedules_TravelTime%>"/></div>
+                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime%>"/></div>
                             </div>
                         </div>
                     </div>
@@ -903,11 +829,11 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_Title%>"/></div>
+                <div class="homepage__yoyoloop"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_Title%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_SubTitle%>"/></div>
+                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_SubTitle%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -916,7 +842,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_Description%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_Description%>"/>
                     </div>
                 </div>
             </div>
@@ -926,11 +852,11 @@
         <div class="row static-page__box2 d-flex align-items-center justify-content-center ml-5 mr-5">
             <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image1 d-flex align-items-center justify-content-center flex-column">
                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_First_Title%>"/></div>
+                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_StopCard_First_Title%>"/></div>
             </div>
 
             <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_First_Description%>"/>
+                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_StopCard_First_Description%>"/>
             </div>
 
             <div class="col-md-4 p-4">
@@ -939,118 +865,17 @@
                 </div>
 
                 <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Title%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Title%>"/>
                 </div>
 
                 <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_First_HowToGet_Details%>"/>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image2 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopyellow.png" srcset="/img/stopyellow@2x.png 2x, /img/stopyellow@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Second_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Second_Description%>"/>             
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Second_HowToGet_Details%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details%>"/>
                 </div>
             </div>
         </div>
 
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image3 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Third_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Third_Description%>"/>
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Third_HowToGet_Details%>"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image4 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopyellow.png" srcset="/img/stopyellow@2x.png 2x, /img/stopyellow@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_Description%>"/>
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fourth_HowToGet_Details%>"/>
-                </div>
-            
-            </div>
-        </div>
-
-        <div class="row static-page__box2 d-flex align-items-center justify-content-center mt-3 ml-5 mr-5 mb-5">
-            <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image5 d-flex align-items-center justify-content-center flex-column">
-                <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                <div class="mt-4 text-uppercase static-page__box2__image__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Title%>"/></div>
-            </div>
-
-            <div class="col-md-4 static-page__box2__text1 pt-5 pb-5 pr-4 pl-4">
-                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_Description%>"/>
-            </div>
-
-            <div class="col-md-4 p-4">
-                <div class="static-page__box2__text2 text-uppercase text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Stops_StopCard_HowToGet%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 static-page__box2__text3--bold text-center mb-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Title%>"/>
-                </div>
-
-                <div class="static-page__box2__text3 text-center mb-1">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Cascais_Stops_StopCard_Fifth_HowToGet_Details%>"/>
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- END OF CASCAIS -->
+    <!-- END OF LEIRIA -->
     
     <div class="static-page__container static-page__container--forth">
         <div class="container-fluid d-flex flex-column justify-content-center">    
