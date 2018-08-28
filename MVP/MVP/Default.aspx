@@ -183,7 +183,7 @@
 
           <div class="row row-no-padding pb-5">
             <div class="col-lg-6 col-md-12 pl-0 mt-2">
-              <div class="homepage__popular-loops">
+              <div class="homepage__popular-loops homepage__popular-loops--image1">
                   <div class="row align-items-center pt-4">
                     <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center flex-column">
                         <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
@@ -237,7 +237,7 @@
             </div>
 
             <div class="col-lg-6 col-md-12 pl-0 mt-2">
-              <div class="homepage__popular-loops">
+              <div class="homepage__popular-loops homepage__popular-loops--image2">
                   <div class="row align-items-center pt-4">
                     <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center flex-column">
                         <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
@@ -291,7 +291,7 @@
             </div>
 
             <div class="col-lg-6 col-md-12 pl-0 mt-2">
-              <div class="homepage__popular-loops">
+              <div class="homepage__popular-loops homepage__popular-loops--image3">
                 <div class="row align-items-center pt-4">
                   <div class="col-sm-4 col-xs-12 d-flex justify-content-center align-items-center flex-column">
                       <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
