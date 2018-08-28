@@ -65,7 +65,8 @@ namespace MVP.Confirm
                         StartAPName = "Start AP",
                         EndRegionName = "End Region",
                         EndAPName = "End AP",
-                        InviteURL = "#"
+                        InviteURL = "#",
+                        MGMCode = "#mypromocode"
                     };
                     Response.Redirect("/");
                 }

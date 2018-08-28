@@ -6,6 +6,14 @@ $desktop: "(min-width: 1440px)";
 .invitefriends {
     font-family: Lato;
 
+    &--image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        background-image: url('/img/Invitefriends-bg.png') !important;
+    }
+
     &__navbar {
         background: white;
 
@@ -26,6 +34,11 @@ $desktop: "(min-width: 1440px)";
         font-weight: bold;
         text-align: center;
         color: #ffffff;
+
+        @media #{$mobile} {
+            font-size: 26px;
+            margin: 10px;
+        }
     }
 
     &__container {
@@ -48,6 +61,26 @@ $desktop: "(min-width: 1440px)";
         &--third {
             padding: 60px 0;
             background: #eff1f6;
+
+            &--checkout {
+                p {
+                    color: #fff;
+                    font-weight: normal;
+                }
+
+                p.title {
+                    font-size: 36px;
+                    color: #fff;
+                    font-weight: normal;
+                }
+
+                background-image: url('/img/Invitefriends-bg.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+            }
         }
 
         &--forth {

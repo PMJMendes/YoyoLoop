@@ -28,5 +28,6 @@ namespace MVP.Confirm
         public string UserContactName { get; set; }
 
         public string InviteURL { get; set; }
+        public string MGMCode { get; set; }
     }
 }

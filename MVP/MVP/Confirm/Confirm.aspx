@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="travel">
+
         <div class="travel__container">
 
             <!-- CONFIRMED EMAIL -->
@@ -156,27 +157,18 @@
             <!-- END OF UNCONFIRMED EMAIL -->
         </div>
 
-        <div class="container-fluid travel__invite-friends pt-5 pb-5">
-            <div class="row pt-5 pb-5">
-                <div class="col-md-12 text-center">
-                    <h2 class="travel__invite-friends--title">
-                        Convida mais amigos e viaja por apenas 3€
-                    </h2>
-                </div>
-            </div>
-
         <asp:UpdatePanel runat="server" ID="upPromoshare" UpdateMode="Conditional">
             <ContentTemplate>
                 <div class="invitefriends__container invitefriends__container--third invitefriends__container--third--checkout">
 
                     <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-4 invitefriends__promocode">
-                        <p class="invitefriends__promocode__text mb-5 text-center title">Convida os teus amigos e viaja por 3€</p>
-                        <p class="invitefriends__promocode__text mb-5 text-center">Partilha o teu código promocional com todos os teus amigos e viaja por apenas 3€!</p>
+                        <p class="invitefriends__promocode__text mb-5 text-center title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_MainTitle%>"/></p>
+                        <p class="invitefriends__promocode__text mb-5 text-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_Title%>"/></p>
 
                         <asp:PlaceHolder runat="server" ID="phCopyLink" Visible="true">
                             <div id="copy-link-1" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
                                 <div class="invitefriends__promocode__input mr-5">
-                                    <div class="invitefriends__promocode__label">promocode</div>
+                                    <div class="invitefriends__promocode__label"><%= pageData.MGMCode %></div>
                                 </div>
                                 <asp:LinkButton runat="server" ID="btnCopyLink" OnClick="btnCopyLink_Click" CssClass="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Copiar Link" />
                             </div>
@@ -190,13 +182,13 @@
                                     <div class="check">
 
                                     </div>
-                                    Copied to clipboard
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_CopiedPopover%>"/>
                                 </div>
                                 <!-- End of copied popover -->
 
                                 <div runat="server" id="PromocodeInput" class="invitefriends__promocode__input mr-5">
-                                    <div class="invitefriends__promocode__label">sgdsfgdfgdfg</div>
-                                    <div class="invitefriends__promocode__copy">Copy Link</div>
+                                    <div class="invitefriends__promocode__label"><%= pageData.MGMCode %></div>
+                                    <div class="invitefriends__promocode__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnCopyLink_Text%>"/></div>
                                 </div>
                                 <asp:LinkButton runat="server" ID="btnShare" OnClick="btnShare_Click" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Partilhar" />
 
@@ -205,28 +197,28 @@
                                     <div class="invitefriends__popover invitefriends__popover--register">
                                         <div class="invitefriends__popover__link">
                                             <img src="/img/face.png" srcset="/img/face@2x.png 2x, /img/face@3x.png 3x" class="face">
-                                            Partilhar no facebook
+                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_facebook%>"/>
                                         </div>
                     
                                         <div class="invitefriends__popover__separator"></div>
 
                                         <div class="invitefriends__popover__link">
                                             <img src="/img/twitter.png" srcset="/img/twitter@2x.png 2x, /img/twitter@3x.png 3x">
-                                            Partilhar no twitter
+                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_twitter%>"/>
                                         </div>
 
                                         <div class="invitefriends__popover__separator"></div>
 
                                         <div class="invitefriends__popover__link">
                                             <img src="/img/linkedin.png" srcset="/img/linkedin@2x.png 2x, /img/linkedin@3x.png 3x">
-                                            Partilhar no linkedin
+                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_linkedin%>"/>
                                         </div>
 
                                         <div class="invitefriends__popover__separator"></div>
 
                                         <div class="invitefriends__popover__link">
                                             <img src="/img/email.png" srcset="/img/email@2x.png 2x, /img/email@3x.png 3x">
-                                            Enviar por Email
+                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_email%>"/>
                                         </div>
                                     </div>
                                     <!-- End of Share Popover -->
@@ -234,13 +226,11 @@
                             </div>
                         </asp:PlaceHolder>
                         <p class="invitefriends__promocode__text mt-5 mb-3 text-center">
-                            Reserva o teu lugar num transfer de 7 lugares conduzido por um motorista profissional e<br />
-                            aproveita uma viagem sem paragens, com wifi a bordo e a preço de autocarro.
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_Invite_Description%>"/>
                         </p>
                     </div>
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
-
     </div>
 </asp:Content>
