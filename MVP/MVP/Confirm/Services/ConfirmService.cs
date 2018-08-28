@@ -37,7 +37,8 @@ namespace MVP.Services
                 StartAPLocation = "#",
                 EndRegionName = "End Region",
                 EndAPName = "End AP",
-                EndAPLocation = "#"
+                EndAPLocation = "#",
+                MGMCode = "#mypromocode"
             };
             return result;
         }
@@ -78,7 +79,8 @@ namespace MVP.Services
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
                         EndAPName = booking.Trip.EndAccessPoint.Name,
                         EndAPLocation = booking.Trip.EndAccessPoint.GoogleLocation,
-                        InviteURL = "#"
+                        InviteURL = "#",
+                        MGMCode = "#mypromocode"
                     };
                     return result;
                 }

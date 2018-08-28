@@ -354,27 +354,33 @@
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
-                background-image: url('/img/cascais.jpg');
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 930px 395px;
+                background-image: url('/img/cascaisLoop.png');
             }
 
             &--destinies-lisboa {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
-                background-image: url('/img/cascais.jpg');
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 930px 395px;
+                background-image: url('/img/lisboa.jpg');
             }
 
             &--destinies-porto {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
-                background-image: url('/img/cascais.jpg');
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 930px 395px;
+                background-image: url('/img/portoLoop.png');
 
                 &--desktop {
                     display: flex !important;
@@ -399,9 +405,11 @@
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
-                background-image: url('/img/cascais.jpg');
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 930px 395px;
+                background-image: url('/img/coimbraLoop.png');
 
                 &--desktop {
                     display: flex !important;
@@ -447,23 +455,23 @@
         }
 
         &--image1 {
-            background-image: url("http://via.placeholder.com/400x400");
+            background-color: #6f7b98;
         }
 
         &--image2 {
-            background-image: url("http://via.placeholder.com/400x400");
+            background-color: #838da7;
         }
 
         &--image3 {
-            background-image: url("http://via.placeholder.com/400x400");
+            background-color: #6f7b98;
         }
 
         &--image4 {
-            background-image: url("http://via.placeholder.com/400x400");
+            background-color: #838da7;
         }
 
         &--image5 {
-            background-image: url("http://via.placeholder.com/400x400");
+            background-color: #6f7b98;
         }
 
         &__text1 {
