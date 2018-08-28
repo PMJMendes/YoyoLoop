@@ -117,6 +117,369 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Account_ConfirmEmail_Error" xml:space="preserve">
+    <value>An error has occurred.</value>
+  </data>
+  <data name="Account_ConfirmEmail_MainTitle" xml:space="preserve">
+    <value>Thank you for confirming your email.</value>
+  </data>
+  <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
+    <value>You will be re-directed to your ticket within seconds</value>
+  </data>
+  <data name="Account_ResetPassword_btnReset_Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Account_ResetPassword_ErrorMessage" xml:space="preserve">
+    <value>An error has occurred.</value>
+  </data>
+  <data name="Account_ResetPassword_MainTitle" xml:space="preserve">
+    <value>Enter your new password</value>
+  </data>
+  <data name="Account_ResetPassword_SuccessMessage" xml:space="preserve">
+    <value>Your password was changed sucessfully.</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_placeholder" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
+  <data name="Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The confirm password field is required.</value>
+  </data>
+  <data name="Account_ResetPassword_tbEmail_placeholder" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Account_ResetPassword_tbEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+  </data>
+  <data name="Account_ResetPassword_tbPassword_placeholder" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="Account_ResetPassword_tbPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The password field is required.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Calendar_BookingPanel_Booking_ErrorMessage" xml:space="preserve">
+    <value>We are sorry but this trip is no longer available.</value>
+  </data>
+  <data name="Calendar_CalendarHeader_btnToday_Text" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Calendar_CalendarPlaceholder_Text" xml:space="preserve">
+    <value>Choose Origin and Destination</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup" xml:space="preserve">
+    <value>Occupation:</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_Low" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Calendar_CalendarTable_Footer_Ocup_Med" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Fri" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Mon" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Sat" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Sun" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Thu" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Tue" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="Calendar_CalendarTable_Header_Weekdays_Wed" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="Calendar_Controls_CalendarTable_DayInfoText_BLACK" xml:space="preserve">
+    <value>Sold out</value>
+    <comment>Careful about size, needs to fit inside the day square</comment>
+  </data>
+  <data name="Calendar_Controls_CalendarTable_DayInfoText_RED" xml:space="preserve">
+    <value>Few seats left</value>
+    <comment>Careful about size, needs to fit inside the day square</comment>
+  </data>
+  <data name="Calendar_Controls_Popover_Header_DestinationLabel" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Calendar_Controls_Popover_Header_OriginLabel" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Calendar_Header_APDropdown_Label" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Calendar_Header_APDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Choose stop</value>
+  </data>
+  <data name="Calendar_Header_cbReturnTrip_Label" xml:space="preserve">
+    <value>Return trip</value>
+  </data>
+  <data name="Calendar_Header_DestinationDropdown_Label" xml:space="preserve">
+    <value>To</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Calendar_Header_DestinationDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Choose destination</value>
+  </data>
+  <data name="Calendar_Header_OriginDropdown_Label" xml:space="preserve">
+    <value>From</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Calendar_Header_OriginDropdown_SelectionPrompt" xml:space="preserve">
+    <value>Choose origin</value>
+  </data>
+  <data name="Calendar_Header_SeatsDropdown_Label" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="Checkout_Billing_cbSaveDetails_Label" xml:space="preserve">
+    <value>Save billing details</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceAddress_Label" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceCity_Label" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceCompany_Label" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceName_Label" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceNIF_Label" xml:space="preserve">
+    <value>VAT number</value>
+  </data>
+  <data name="Checkout_Billing_tbInvoiceZIP_Label" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="Checkout_Billing_Title" xml:space="preserve">
+    <value>Billing details</value>
+  </data>
+  <data name="Checkout_BookingExpired_Message" xml:space="preserve">
+    <value>This booking has expired</value>
+  </data>
+  <data name="Checkout_BookingExpired_RedirectLink_Text" xml:space="preserve">
+    <value>Book again</value>
+  </data>
+  <data name="Checkout_btnPay_Text" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="Checkout_ddlCardMenu_Label" xml:space="preserve">
+    <value>Payment type</value>
+  </data>
+  <data name="Checkout_MainTitle" xml:space="preserve">
+    <value>Pay and confirm</value>
+  </data>
+  <data name="Checkout_Payform_cbSaveCard_Label" xml:space="preserve">
+    <value>Save credit card</value>
+  </data>
+  <data name="Checkout_Payform_tbCardHolderName_Label" xml:space="preserve">
+    <value>Card name</value>
+  </data>
+  <data name="Checkout_Payform_tbCardNumber_Label" xml:space="preserve">
+    <value>Card number</value>
+  </data>
+  <data name="Checkout_Policy_cbTerms_Error" xml:space="preserve">
+    <value>You must accept Terms and Conditions</value>
+  </data>
+  <data name="Checkout_Policy_cbTerms_Label1" xml:space="preserve">
+    <value>I accept</value>
+  </data>
+  <data name="Checkout_Policy_cbTerms_Label2" xml:space="preserve">
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="Checkout_Policy_SubTitle" xml:space="preserve">
+    <value>Cancelation policy</value>
+  </data>
+  <data name="Checkout_Promocode_tbPromo_Label" xml:space="preserve">
+    <value>Promocode</value>
+  </data>
+  <data name="Checkout_Promocode_tbPromo_placeholder" xml:space="preserve">
+    <value>Insert code</value>
+  </data>
+  <data name="Checkout_Service_ProcessPayment_BookingErrorMessage" xml:space="preserve">
+    <value>Booking no longer valid</value>
+  </data>
+  <data name="Checkout_SubTitle" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="Confirm_Invite_btnShare_Text" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="Confirm_Invite_Title" xml:space="preserve">
+    <value>Invite your friends and travel with 1€ only.</value>
+  </data>
+  <data name="Confirm_InvoiceSend" xml:space="preserve">
+    <value>We will send your invoice to</value>
+  </data>
+  <data name="Confirm_MainTitle" xml:space="preserve">
+    <value>Your trip is confirmed</value>
+  </data>
+  <data name="Confirm_MyTickets" xml:space="preserve">
+    <value>Your tickets</value>
+  </data>
+  <data name="Confirm_MyTickets_AddToCalendar" xml:space="preserve">
+    <value>Add to calendar</value>
+  </data>
+  <data name="Confirm_MyTickets_btnDownload_Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Confirm_MyTickets_btnEmail_Text" xml:space="preserve">
+    <value>Recieve by email</value>
+  </data>
+  <data name="Confirm_MyTickets_btnSMS_Text" xml:space="preserve">
+    <value>Recieve by SMS</value>
+  </data>
+  <data name="Confirm_MyTickets_Calendar_ShowMessage_Text" xml:space="preserve">
+    <value>Unfortunately the Calendar is not available</value>
+  </data>
+  <data name="Confirm_MyTickets_Email_ShowMessage_Text1" xml:space="preserve">
+    <value>We have sent and email to</value>
+  </data>
+  <data name="Confirm_MyTickets_Email_ShowMessage_Text2" xml:space="preserve">
+    <value>with your ticket.</value>
+  </data>
+  <data name="Confirm_MyTickets_SMS_ShowMessage_Text" xml:space="preserve">
+    <value>Unfortunately, the SMS service is not available</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_AccessTicket" xml:space="preserve">
+    <value>You can access your ticket at any time</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Destination" xml:space="preserve">
+    <value>To</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_FinalCost" xml:space="preserve">
+    <value>Final price</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
+    <value>Invite your friends and travel with 1€ only.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
+    <value>From</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_Seats" xml:space="preserve">
+    <value>Seats</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
+    <value>Thank you for choosing Yoyoloop!</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
+    <value>Ticket number</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_TripConfirmed" xml:space="preserve">
+    <value>Your trip is confirmed</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_YoyoloopTeam" xml:space="preserve">
+    <value>The Yoyoloop team.</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_HereLink" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject1" xml:space="preserve">
+    <value>Your trip from</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject2" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Subject3" xml:space="preserve">
+    <value>is confirmed</value>
+  </data>
+  <data name="Controls_Forgot_ResultMessage_Failure" xml:space="preserve">
+    <value>This user does not exist.</value>
+  </data>
+  <data name="Controls_Forgot_ResultMessage_Success" xml:space="preserve">
+    <value>Please check your email to reset your password.</value>
+  </data>
+  <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+  </data>
+  <data name="Controls_Login_btnLogin_Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Controls_Login_LoginMessageFailure_Text" xml:space="preserve">
+    <value>Invalid login attempt</value>
+  </data>
+  <data name="Controls_Login_LoginMessageSucess_Text" xml:space="preserve">
+    <value>Login sucessful</value>
+  </data>
+  <data name="Controls_Login_LoginOr" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="Controls_Login_MainTitle" xml:space="preserve">
+    <value>Yoyoloop Login</value>
+  </data>
+  <data name="Controls_Login_tbLoginEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Login_tbLoginPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Controls_Login_tbLoginPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The password field is required.</value>
+  </data>
+  <data name="Controls_Register_LoginLink" xml:space="preserve">
+    <value>Fazer login</value>
+  </data>
+  <data name="Controls_Register_MainTitle" xml:space="preserve">
+    <value>Yoyoloop login</value>
+  </data>
+  <data name="Controls_Register_RegisterOr" xml:space="preserve">
+    <value>or</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The email and confirmation email do not match.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The confirm email field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The confirm password field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterEmail_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email field is required.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_tbRegisterName_placeholder" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Controls_Register_tbRegisterName_Validator_ErrorMessage" xml:space="preserve">
+    <value>The name field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Controls_Register_tbRegisterPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The password field is required.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="Help_SubTitle" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
   <data name="SiteMaster_NavBar_Destinations" xml:space="preserve">
     <value>Destinations</value>
   </data>
@@ -128,5 +491,50 @@
   </data>
   <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
     <value>Register/Login</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="StaticPages_About_MainTitle" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>&lt;br&gt;</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_card_declined" xml:space="preserve">
+    <value>The card was declined.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_expired_card" xml:space="preserve">
+    <value>The card has expired.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_incorrect_cvc" xml:space="preserve">
+    <value>The card's security code is incorrect.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_incorrect_number" xml:space="preserve">
+    <value>The card number is incorrect.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_incorrect_zip" xml:space="preserve">
+    <value>The card's zip code failed validation.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_cvc" xml:space="preserve">
+    <value>The card's security code is invalid.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_date_format" xml:space="preserve">
+    <value>The card's expiration date is invalid.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_expiry_month" xml:space="preserve">
+    <value>The card's expiration month is invalid.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_expiry_year" xml:space="preserve">
+    <value>The card's expiration year is invalid.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_CardError_invalid_number" xml:space="preserve">
+    <value>The card number is not a valid credit card number.</value>
+  </data>
+  <data name="Stripe_ErrorHandling_PaymentMethodValidation_Generic" xml:space="preserve">
+    <value>There was an error in the validation of the payment method</value>
+  </data>
+  <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
+    <value>There was an error in the validation of the payment </value>
   </data>
 </root>

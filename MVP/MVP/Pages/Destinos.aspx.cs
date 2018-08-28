@@ -40,8 +40,8 @@ namespace MVP.Pages
                         case "Porto":
                             localData.Destino = "porto";
                             break;
-                        case "Cascais":
-                            localData.Destino = "cascais";
+                        case "Leiria":
+                            localData.Destino = "leiria";
                             break;
                         case "Coimbra":
                             localData.Destino = "coimbra";

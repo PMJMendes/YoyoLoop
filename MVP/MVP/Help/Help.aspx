@@ -38,10 +38,7 @@
                                             <h2 class="help__menu__sub-title">
                                                 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_ChangePersonalDetails%>"/></p>
-                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_AddChangePaymentDetails%>"/></p>
-                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_CurrentAccount%>"/></p>
-                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_MGMTrips%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_WhatCanIDo%>"/></p>
                                             <asp:LinkButton runat="server" ID="btnTopicDashboard" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
 
@@ -75,7 +72,7 @@
                                                 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo%>"/>
                                             </h2>
                                             <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_TwoPromocodes%>"/></p>
-                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndBalance%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndMGM%>"/></p>
                                             <asp:LinkButton runat="server" ID="btnTopicPromo" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div> 
 
@@ -98,15 +95,25 @@
                                             </h2>
                                             <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TaxInvoices%>"/></p>
                                             <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TotalSpending%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_CorporatePricing%>"/></p>
                                             <asp:LinkButton runat="server" ID="btnTopicCorporate" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Drive%>"/>
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Drive_Question_HowTo%>"/></p>
-                                            <asp:LinkButton runat="server" ID="btnTopicDrive" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_PartnerProgram%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_HowTo%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicPartners" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
+                                        </div>
+
+                                        <div class="col-md-4 pr-4">
+                                            <h2 class="help__menu__sub-title">
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers%>"/>
+                                            </h2>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers_Question_HowTo%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicCareers" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div> 
                                     </div>
                                 </div>
@@ -139,7 +146,8 @@
                                         <div class="left-menu__entry <%= localData.SelectedTopic == "Promo" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicPromo" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo%>"/></asp:LinkButton></div>
                                         <div class="left-menu__entry <%= localData.SelectedTopic == "Luggage" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicLuggage" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage%>"/></asp:LinkButton></div>
                                         <div class="left-menu__entry <%= localData.SelectedTopic == "Corporate" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicCorporate" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate%>"/></asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Drive" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicDrive" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Drive%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Partners" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicPartners" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Careers" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicCareers" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers%>"/></asp:LinkButton></div>
                                     </div>
 
                                     <div class="left-menu-mobile mb-5">
@@ -151,7 +159,8 @@
                                             <asp:ListItem Value="Promo" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo%>"/>
                                             <asp:ListItem Value="Luggage" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage%>"/>
                                             <asp:ListItem Value="Corporate" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate%>"/>
-                                            <asp:ListItem Value="Drive" Text="<%$ Resources:LocalizedText, Help_Topic_Drive%>"/>
+                                            <asp:ListItem Value="Partners" Text="<%$ Resources:LocalizedText, Help_Topic_Partners%>"/>
+                                            <asp:ListItem Value="Careers" Text="<%$ Resources:LocalizedText, Help_Topic_Careers%>"/>
                                         </asp:DropDownList>
 
                                         <img src="/img/arr.png" srcset="/img/arr@2x.png 2x, /img/arr@3x.png 3x" class="arr">
@@ -297,6 +306,76 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-10"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_GuaranteedSeat%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-10" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_GuaranteedSeat_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-11"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AssignedSeats%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-11" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AssignedSeats_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-12"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_ChangeDate%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-12" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_ChangeDate_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-13"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_FindAP%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-13" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_FindAP_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-14"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_DifferentAP%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-14" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_DifferentAP_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- End of Topic Trip -->
 
@@ -305,55 +384,13 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_ChangePersonalDetails%>"/></a>
-                                                </h4>
-                                            </div>
-
-                                            <div id="2-1" class="panel-collapse collapse">
-                                                <div class="panel-body mt-5 mb-5">
-                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_ChangePersonalDetails_Answer%>"/>
-                                                    <br />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_AddChangePaymentDetails%>"/></a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_WhatCanIDo%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="2-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_AddChangePaymentDetails_Answer%>"/>
-                                                    <br />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_CurrentAccount%>"/></a>
-                                                </h4>
-                                            </div>
-
-                                            <div id="2-3" class="panel-collapse collapse">
-                                                <div class="panel-body mt-5 mb-5">
-                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_CurrentAccount_Answer%>"/>
-                                                    <br />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_MGMTrips%>"/></a>
-                                                </h4>
-                                            </div>
-
-                                            <div id="2-4" class="panel-collapse collapse">
-                                                <div class="panel-body mt-5 mb-5">
-                                                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_MGMTrips_Answer%>"/>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_WhatCanIDo_Answer%>"/>
                                                     <br />
                                                 </div>
                                             </div>
@@ -419,6 +456,20 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_Share%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="3-5" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_Share_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- End of Topic Invite -->
 
@@ -480,6 +531,34 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Children%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-5" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Children_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-6"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Insurance%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-6" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Insurance_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- End of Topic Vehicle -->
 
@@ -502,13 +581,13 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndBalance%>"/></a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndMGM%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="5-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndBalance_Answer%>"/>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer%>"/>
                                                     <br />
                                                 </div>
                                             </div>
@@ -593,27 +672,74 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- End of Topic Corporate -->
-
-                                    <!-- Topic Drive -->
-                                    <div class="panel-group <%= localData.SelectedTopic == "Drive" ? "panel-group__show" : "" %>">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Drive_Question_HowTo%>"/></a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_CorporatePricing%>"/></a>
                                                 </h4>
                                             </div>
 
-                                            <div id="8-1" class="panel-collapse collapse">
+                                            <div id="7-3" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Drive_Question_HowTo_Answer%>"/>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_CorporatePricing_Answer%>"/>
                                                     <br />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End of Topic Drive -->
+                                    <!-- End of Topic Corporate -->
+
+                                    <!-- Topic Partners -->
+                                    <div class="panel-group <%= localData.SelectedTopic == "Partners" ? "panel-group__show" : "" %>">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_PartnerProgram%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="8-1" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_PartnerProgram_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_HowTo%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="8-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_HowTo_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Topic Partners -->
+
+                                    <!-- Topic Careers -->
+                                    <div class="panel-group <%= localData.SelectedTopic == "Careers" ? "panel-group__show" : "" %>">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#9-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers_Question_HowTo%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="9-1" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers_Question_HowTo_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Topic Careers -->
 
                                 </div>
                             </div>
