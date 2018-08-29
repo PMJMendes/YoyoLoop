@@ -9,7 +9,7 @@
                     <ContentTemplate>
 
                         <asp:PlaceHolder runat="server" ID="phHelpMain" Visible="true">
-                            <h1 class="help__main-title">Precisas de ajuda?</h1>
+                            <h1 class="help__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_MainTitle%>"/></h1>
 
                             <div class="help__separator mt-5 mb-5"></div>
 
@@ -17,7 +17,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h1 class="help__menu__main-title">Perguntas frequentes</h1>
+                                            <h1 class="help__menu__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_SubTitle%>"/></h1>
                                         </div>
                                     </div>
         
@@ -25,35 +25,32 @@
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Viagens e loops
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Loops disponíveis?</p>
-                                            <p class="help__menu__text mb-0">Como solicitar um novo loop?</p>
-                                            <p class="help__menu__text mb-0">Métodos de pagamentos?</p>
-                                            <p class="help__menu__text mb-0">Facturas</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicTrip" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AvailableLoops%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_SuggestLoop%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_PaymentMethods%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_Invoices%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicTrip" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                User Dashboard
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Como alterar dados pessoais?</p>
-                                            <p class="help__menu__text mb-0">Como adicionar/actualizar ou eliminar dados de pagamentos?</p>
-                                            <p class="help__menu__text mb-0">A minha conta corrente</p>
-                                            <p class="help__menu__text mb-0">As minhas viagens a 3 Euros</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicDashboard" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_WhatCanIDo%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicDashboard" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Invite
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Quantos amigos posso convidar?</p>
-                                            <p class="help__menu__text mb-0">Posso dar o meu cupão a amigos que já tenham utilizado a Yoyoloop?</p>
-                                            <p class="help__menu__text mb-0">O que os meus amigos ganham por viajar com o meu cupão?</p>
-                                            <p class="help__menu__text mb-0">O que é que eu ganho?</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicInvite" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_HowManyFriends%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_GiftToYoyoUsers%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_FriendsBenefits%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_MyBenefits%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicInvite" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
                                     </div>
                     
@@ -61,32 +58,32 @@
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Os Carros Yoyoloop
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Todos os carros yoyoloop tem wifi?</p>
-                                            <p class="help__menu__text mb-0">O Motorista é mesmo profissional?</p>
-                                            <p class="help__menu__text mb-0">Quantos lugares tem um carro da yoyoloop?</p>
-                                            <p class="help__menu__text mb-0">Os carros da Yoyoloop são eléctricos?</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicVehicle" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Wifi%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_ProfessionalDriver%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Seats%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Electric%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicVehicle" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Descontos e Promoções
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Posso usar dois códigos promocionais para a mesma viagem?</p>
-                                            <p class="help__menu__text mb-0">Tenho saldo na minha conta corrente e código promocionais disponíveis, como faço para usar um ou outro?</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicPromo" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_TwoPromocodes%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndMGM%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicPromo" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div> 
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Malas e Bagagens
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Posso levar malas?</p>
-                                            <p class="help__menu__text mb-0">Quais os Limites de tamanhos das bagagem?</p>
-                                            <p class="help__menu__text mb-0">O que não posso levar comigo?</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicLuggage" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_CanIBring%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_SizeLimit%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_NotAllowed%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicLuggage" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
                                     </div>
 
@@ -94,19 +91,29 @@
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Empresas
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Posso emitir facturas com contribuinte?</p>
-                                            <p class="help__menu__text mb-0">Posso saber quanto gastei no total?</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicCorporate" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TaxInvoices%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TotalSpending%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_CorporatePricing%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicCorporate" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div>
 
                                         <div class="col-md-4 pr-4">
                                             <h2 class="help__menu__sub-title">
-                                                Conduzir um yoyoloop
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners%>"/>
                                             </h2>
-                                            <p class="help__menu__text mb-0">Como posso conduzir um Yoyoloop?</p>
-                                            <asp:LinkButton runat="server" ID="btnTopicDrive" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="&rarr; Ver todos" />
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_PartnerProgram%>"/></p>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_HowTo%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicPartners" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
+                                        </div>
+
+                                        <div class="col-md-4 pr-4">
+                                            <h2 class="help__menu__sub-title">
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers%>"/>
+                                            </h2>
+                                            <p class="help__menu__text mb-0"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers_Question_HowTo%>"/></p>
+                                            <asp:LinkButton runat="server" ID="btnTopicCareers" OnClientClick="javascript:window.scrollTo(0, 0)" OnClick="MainTopicSelect" CssClass="help__menu__see-all" Text="<%$ Resources:LocalizedText, Help_SeeAllLink%>" />
                                         </div> 
                                     </div>
                                 </div>
@@ -114,16 +121,16 @@
                             <div class="help__separator mb-5"></div>
             
                             <div class="row justify-content-center mb-5 align-items-center mt-5">
-                                <div class="invitefriends__any-question mr-5">Não encontras a tua pergunta?</div>
-                                <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" >CONTACTA-NOS</a>
+                                <div class="invitefriends__any-question mr-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_CantFind%>"/></div>
+                                <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_CantFind_ContactUs%>"/></a>
                             </div>
                         </asp:PlaceHolder>
 
                         <asp:PlaceHolder runat="server" ID="phHelpList" Visible="false">
                             <h1 class="help__main-title">
-                                Precisas de ajuda?
+                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_MainTitle%>"/>
 
-                                <asp:LinkButton runat="server" ID="btnBack" OnClick="btnBack_Click" CssClass="help__main-title__btn" Text="Voltar" />
+                                <asp:LinkButton runat="server" ID="btnBack" OnClick="btnBack_Click" CssClass="help__main-title__btn" Text="<%$ Resources:LocalizedText, Help_Detailed_btnBack_Text%>" />
                             </h1>
 
                             <div class="help__separator mt-5 mb-5"></div>
@@ -132,27 +139,29 @@
                                 <div class="col-md-4">
 
                                     <div class="left-menu mb-5">
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Trip" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicTrip" OnClick="ListTopicSelect">Viagens e Loops</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Dashboard" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicDashboard" OnClick="ListTopicSelect">Dashboard</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Invite" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicInvite" OnClick="ListTopicSelect">Convites</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Vehicle" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicVehicle" OnClick="ListTopicSelect">Veículos Yoyoloop</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Promo" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicPromo" OnClick="ListTopicSelect">Descontos e Promoções</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Luggage" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicLuggage" OnClick="ListTopicSelect">Malas e Bagagens</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Corporate" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicCorporate" OnClick="ListTopicSelect">Empresas</asp:LinkButton></div>
-                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Drive" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicDrive" OnClick="ListTopicSelect">Conduzir um Yoyoloop</asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Trip" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicTrip" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Dashboard" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicDashboard" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Invite" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicInvite" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Vehicle" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicVehicle" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Promo" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicPromo" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Luggage" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicLuggage" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Corporate" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicCorporate" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Partners" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicPartners" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners%>"/></asp:LinkButton></div>
+                                        <div class="left-menu__entry <%= localData.SelectedTopic == "Careers" ? "left-menu__entry--selected" : "" %>"><asp:LinkButton runat="server" ID="btnMenuTopicCareers" OnClick="ListTopicSelect"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers%>"/></asp:LinkButton></div>
                                     </div>
 
                                     <div class="left-menu-mobile mb-5">
-                                        <select runat="server" id="ddlMobileMenu" onchange="javascript:__doPostBack('<%= upHelp.ClientID %>', '');" onserverchange="ddlMobileMenu_ServerChange" class="left-menu-mobile__select" tabindex="-1">
-                                            <option value="Trip">Viagens e Loops</option>
-                                            <option value="Dashboard">Dashboard</option>
-                                            <option value="Invite">Convites</option>
-                                            <option value="Vehicle">Veículos Yoyoloop</option>
-                                            <option value="Promo">Descontos e Promoções</option>
-                                            <option value="Luggage">Malas e Bagagens</option>
-                                            <option value="Corporate">Empresas</option>
-                                            <option value="Drive">Conduzir um Yoyoloop</option>
-                                        </select>
+                                        <asp:DropDownList runat="server" ID="ddlMobileMenu" OnSelectedIndexChanged="ddlMobileMenu_SelectedIndexChanged" AutoPostBack="true" CssClass="left-menu-mobile__select" tabindex="-1">
+                                            <asp:ListItem Value="Trip" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops%>"/>
+                                            <asp:ListItem Value="Dashboard" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard%>"/>
+                                            <asp:ListItem Value="Invite" Text="<%$ Resources:LocalizedText, Help_Topic_Invite%>"/>
+                                            <asp:ListItem Value="Vehicle" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars%>"/>
+                                            <asp:ListItem Value="Promo" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo%>"/>
+                                            <asp:ListItem Value="Luggage" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage%>"/>
+                                            <asp:ListItem Value="Corporate" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate%>"/>
+                                            <asp:ListItem Value="Partners" Text="<%$ Resources:LocalizedText, Help_Topic_Partners%>"/>
+                                            <asp:ListItem Value="Careers" Text="<%$ Resources:LocalizedText, Help_Topic_Careers%>"/>
+                                        </asp:DropDownList>
 
                                         <img src="/img/arr.png" srcset="/img/arr@2x.png 2x, /img/arr@3x.png 3x" class="arr">
                                     </div>
@@ -166,15 +175,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-1">Loops disponiveis?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AvailableLoops%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
-                                                    Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável.
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -182,14 +190,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-2">Como solicitar um novo loop?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_SuggestLoop%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -197,14 +205,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-3">Métodos de pagamentos?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_PaymentMethods%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-3" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -212,14 +220,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-4">Facturas</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_Invoices%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-4" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_Invoices_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -227,14 +235,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-5">Quanto custa um loop?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_HowMuch%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-5" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_HowMuch_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -242,14 +250,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-6">Cancelas um loop?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-6"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_Cancel%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-6" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_Cancel_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -257,14 +265,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-7">Nao consegui marcar a viagem online, e agora?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-7"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_CouldNotBook%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-7" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -272,15 +280,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-8">Posso comprar a viagem no ponto de partida?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-8"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_BuyAtDeparture%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-8" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
-                                                    Foi por isso que criámos um serviço de transfer a preço de autocarro, alternativo aos comboios e às boleias tradicionais, com a diferença de ser mais acessível, conveniente, fiável e sustentável.
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer%>"/>
+                                                    <br/>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,13 +295,84 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-9">Como faço download do meu bilhete?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-9"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_DownloadTicket%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="collapse1-9" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-10"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_GuaranteedSeat%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-10" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_GuaranteedSeat_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-11"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AssignedSeats%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-11" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_AssignedSeats_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-12"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_ChangeDate%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-12" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_ChangeDate_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-13"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_FindAP%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-13" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_FindAP_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#collapse1-14"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_DifferentAP%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="collapse1-14" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_TripsAndLoops_Question_DifferentAP_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -306,56 +384,14 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-1">Como alterar dados pessoais?</a>
-                                                </h4>
-                                            </div>
-
-                                            <div id="2-1" class="panel-collapse collapse">
-                                                <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-2">Como adicionar/actualizar ou eliminar dados de pagamentos?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_WhatCanIDo%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="2-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-3">A minha conta corrente</a>
-                                                </h4>
-                                            </div>
-
-                                            <div id="2-3" class="panel-collapse collapse">
-                                                <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#2-4">As minhas viagens a 3 Euros</a>
-                                                </h4>
-                                            </div>
-
-                                            <div id="2-4" class="panel-collapse collapse">
-                                                <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_UserDashboard_Question_WhatCanIDo_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -367,56 +403,70 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-1">Quantos amigos posso convidar?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_HowManyFriends%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="3-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_HowManyFriends_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-2">Posso dar o meu cupão a amigos que já tenham utilizado a Yoyoloop?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_GiftToYoyoUsers%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="3-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_GiftToYoyoUsers_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-3">O que os meus amigos ganham por viajar com o meu cupão?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_FriendsBenefits%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="3-3" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_FriendsBenefits_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-4">O que é que eu ganho?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_MyBenefits%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="3-4" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_MyBenefits_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#3-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_Share%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="3-5" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Invite_Question_Share_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -428,56 +478,84 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-1">Todos os carros yoyoloop tem wifi?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Wifi%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="4-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Wifi_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-2">O motorista é mesmo profissional?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_ProfessionalDriver%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="4-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-3">Quantos lugares tem um carro da yoyoloop?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Seats%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="4-3" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Seats_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-4">Os carros da Yoyoloop são eléctricos?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-4"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Electric%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="4-4" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Electric_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Children%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-5" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Children_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#4-6"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Insurance%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="4-6" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_YoyoloopCars_Question_Insurance_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -489,28 +567,28 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-1">Posso usar dois códigos promocionais para a mesma viagem?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_TwoPromocodes%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="5-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-2">Tenho saldo na minha conta corrente e código promocionais disponíveis, como faço para usar um ou outro?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#5-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndMGM%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="5-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -522,42 +600,42 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-1">Posso levar malas?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_CanIBring%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="6-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_CanIBring_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-2">Quais os limites de tamanhos das bagagem?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_SizeLimit%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="6-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_SizeLimit_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-3">O que não posso levar comigo?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#6-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_NotAllowed%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="6-3" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Luggage_Question_NotAllowed_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
@@ -569,60 +647,107 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-1">Posso emitir facturas com contribuinte?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TaxInvoices%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="7-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TaxInvoices_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-2">Posso saber quanto gastei no total?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TotalSpending%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="7-2" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_TotalSpending_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#7-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_CorporatePricing%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="7-3" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Corporate_Question_CorporatePricing_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- End of Topic Corporate -->
 
-                                    <!-- Topic Drive -->
-                                    <div class="panel-group <%= localData.SelectedTopic == "Drive" ? "panel-group__show" : "" %>">
+                                    <!-- Topic Partners -->
+                                    <div class="panel-group <%= localData.SelectedTopic == "Partners" ? "panel-group__show" : "" %>">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-1">Como posso conduzir um Yoyoloop?</a>
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_PartnerProgram%>"/></a>
                                                 </h4>
                                             </div>
 
                                             <div id="8-1" class="panel-collapse collapse">
                                                 <div class="panel-body mt-5 mb-5">
-                                                    A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.
-                                                    </br>
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_PartnerProgram_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#8-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_HowTo%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="8-2" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Partners_Question_HowTo_Answer%>"/>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End of Topic Drive -->
+                                    <!-- End of Topic Partners -->
+
+                                    <!-- Topic Careers -->
+                                    <div class="panel-group <%= localData.SelectedTopic == "Careers" ? "panel-group__show" : "" %>">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="panel-title__subtitle" data-toggle="collapse" href="#9-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers_Question_HowTo%>"/></a>
+                                                </h4>
+                                            </div>
+
+                                            <div id="9-1" class="panel-collapse collapse">
+                                                <div class="panel-body mt-5 mb-5">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_Topic_Careers_Question_HowTo_Answer%>"/>
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Topic Careers -->
 
                                 </div>
                             </div>
                             <div class="help__separator mb-5 mt-5"></div>
             
                             <div class="row justify-content-center mb-5 align-items-center mt-5">
-                                <div class="invitefriends__any-question mr-5">Não encontras a tua pergunta?</div>
-                                <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" >CONTACTA-NOS</a>
+                                <div class="invitefriends__any-question mr-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_CantFind%>"/></div>
+                                <a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Help_CantFind_ContactUs%>"/></a>
                             </div>
                         </asp:PlaceHolder>
 

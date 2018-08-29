@@ -23,6 +23,7 @@ namespace MVP.Services
     {
         private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
         private readonly StripeCardService stripeCardService = new StripeCardService();
+        private readonly CheckoutService checkoutService = new CheckoutService();
 
         public ProfileDTO GetInitialData(string userid)
         {
@@ -33,7 +34,7 @@ namespace MVP.Services
                 {
                     UserId = user.Id,
                     ContactName = user.ContactName,
-                    BirthDate = user.BirthDate == DateTime.MinValue ? string.Empty : user.BirthDate.ToString("dd/MM/yyyy"),
+                    BirthDate = user.BirthDate == DateTime.MinValue ? string.Empty : user.BirthDate.ToString("yyyy/MM/dd"),
                     Email = user.Email,
                     EmailConfirmed = user.EmailConfirmed,
                     //PhoneCountryCode = user.PhoneCountryCode,
@@ -68,7 +69,7 @@ namespace MVP.Services
                     state.StripeCardList.Add(new ListItem
                     {
                         Value = defaultcard.Id,
-                        Text = "Cartão " + defaultcard.Brand + " terminado em " + defaultcard.Last4
+                        Text = Resources.LocalizedText.General_StripeCard_Card + " " + defaultcard.Brand + " " + Resources.LocalizedText.General_StripeCard_Card_EndingIn + " " + defaultcard.Last4
                     });
                 }
 
@@ -77,7 +78,7 @@ namespace MVP.Services
                     state.StripeCardList.Add(new ListItem
                     {
                         Value = card.Id,
-                        Text = "Cartão " + card.Brand + " terminado em " + card.Last4
+                        Text = Resources.LocalizedText.General_StripeCard_Card + " " + card.Brand + " " + Resources.LocalizedText.General_StripeCard_Card_EndingIn + " " + card.Last4
                     });
                 }
             }
@@ -85,7 +86,7 @@ namespace MVP.Services
             state.StripeCardList.Add(new ListItem
             {
                 Value = "new",
-                Text = "Novo cartão de crédito"
+                Text = Resources.LocalizedText.General_StripeCard_Card_New
             });
 
             return state;
@@ -104,7 +105,7 @@ namespace MVP.Services
                 var customerOptions = new StripeCustomerCreateOptions()
                 {
                     SourceToken = stripeToken,
-                    Description = state.ContactName + "(" + state.Email + ")",
+                    Description = state.ContactName + " (" + state.Email + ")",
                     Email = state.Email
                 };
 
@@ -125,7 +126,11 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = stripeError.ErrorType;
+                    error = checkoutService.StripeErrorHandler(stripeError.Code);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
                     return false;
                 }
             }
@@ -143,7 +148,11 @@ namespace MVP.Services
                 catch (StripeException ex)
                 {
                     StripeError stripeError = ex.StripeError;
-                    error = stripeError.ErrorType;
+                    error = checkoutService.StripeErrorHandler(stripeError.Code);
+                    if (string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
                     return false;
                 }
             }
@@ -161,7 +170,11 @@ namespace MVP.Services
             catch (StripeException ex)
             {
                 StripeError stripeError = ex.StripeError;
-                error = stripeError.ErrorType;
+                error = checkoutService.StripeErrorHandler(stripeError.Code);
+                if (string.IsNullOrEmpty(error))
+                {
+                    error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                }
                 return false;
             }
 
@@ -176,7 +189,7 @@ namespace MVP.Services
             {
                 if(!DateTime.TryParseExact(expire, "MM/yyyy", null, System.Globalization.DateTimeStyles.None, out date))
                 {
-                    error = "A data introduzida é invalida";
+                    error = Resources.LocalizedText.Stripe_ErrorHandling_CardError_invalid_date_format;
                     return false;
                 }
             }
@@ -195,7 +208,11 @@ namespace MVP.Services
             catch (StripeException ex)
             {
                 StripeError stripeError = ex.StripeError;
-                error = stripeError.ErrorType;
+                error = checkoutService.StripeErrorHandler(stripeError.Code);
+                if (string.IsNullOrEmpty(error))
+                {
+                    error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                }
                 return false;
             }
 

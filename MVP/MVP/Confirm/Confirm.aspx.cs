@@ -17,8 +17,7 @@ namespace MVP.Confirm
         {
             if (User?.Identity.IsAuthenticated == false)
             {
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
-                //Response.Redirect("/");
+                Response.Redirect("/");
             }
             InitData();
         }
@@ -66,17 +65,14 @@ namespace MVP.Confirm
                         StartAPName = "Start AP",
                         EndRegionName = "End Region",
                         EndAPName = "End AP",
-                        InviteURL = "#"
+                        InviteURL = "#",
+                        MGMCode = "#mypromocode"
                     };
-
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid Booking.\")</SCRIPT>");
-                    //Response.Redirect("/Calendar/Calendar");
+                    Response.Redirect("/");
                 }
                 else if (pageData.UserId != User?.Identity.GetUserId())
                 {
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user.\")</SCRIPT>");
-                    //Something went really terribly wrong here - email systems?
-                    //Response.Redirect("/Calendar/Calendar");
+                    Response.Redirect("/");
                 }
                 var scheme = Request.Url.Scheme;
                 var authority = Request.Url.Authority;
@@ -94,20 +90,26 @@ namespace MVP.Confirm
             }
             else
             {
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
-                //Response.Redirect("/Calendar/Calendar");
+                Response.Redirect("/");
             }
         }
 
         protected void btnEmail_Click(object sender, EventArgs e)
         {
             service.SendTicket(pageData);
-            ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> com os detalhes do teu bilhete.");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Confirm_MyTickets_Email_ShowMessage_Text1 + " <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> " + Resources.LocalizedText.Confirm_MyTickets_Email_ShowMessage_Text2);
         }
 
         protected void btnSMS_Click(object sender, EventArgs e)
         {
             Page.ClientScript.GetPostBackEventReference(new PostBackOptions(this));
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Confirm_MyTickets_SMS_ShowMessage_Text);
+        }
+
+        protected void btnCalendar_Click(object sender, EventArgs e)
+        {
+            Page.ClientScript.GetPostBackEventReference(new PostBackOptions(this));
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Confirm_MyTickets_Calendar_ShowMessage_Text);
         }
 
         protected void btnConfirmEmail_Click(object sender, EventArgs e)
@@ -118,7 +120,18 @@ namespace MVP.Confirm
             string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, userid, Request);
             callbackUrl += "&bookid=" + pageData.BookingId;
             service.SendUnconfirmedTicket(pageData, callbackUrl);
-            ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> com o link para poderes confirmar o teu email.");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1 + " <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> " + Resources.LocalizedText.Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2);
+        }
+
+        protected void btnCopyLink_Click(object sender, EventArgs e)
+        {
+            phCopyLink.Visible = false;
+            phLinkCopied.Visible = true;
+        }
+
+        protected void btnShare_Click(object sender, EventArgs e)
+        {
+            phSharePopover.Visible = true;
         }
     }
 }

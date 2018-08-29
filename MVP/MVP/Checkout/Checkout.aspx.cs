@@ -36,8 +36,7 @@ namespace MVP.Checkout
         {
             if(User?.Identity.IsAuthenticated == false)
             {
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Page requires authenticated user\")</SCRIPT>"); // Needs pretty error message
-                //Response.Redirect("/");
+                Response.Redirect("/");
             }
 
             InitData();
@@ -75,7 +74,6 @@ namespace MVP.Checkout
                             }
                             else
                             {
-                                //PAYMENT ERROR - need better error handling here
                                 ApplicationHelpers.ShowMessage(this, error);
                             }
                         }
@@ -88,7 +86,6 @@ namespace MVP.Checkout
                             }
                             else
                             {
-                                //PAYMENT ERROR - need better error handling here
                                 ApplicationHelpers.ShowMessage(this, error);
                             }
                         }
@@ -96,8 +93,12 @@ namespace MVP.Checkout
                 }
                 else if (!string.IsNullOrEmpty(hfStripeError))
                 {
-                    //SUBMIT ERROR - need better error handling here
-                    ApplicationHelpers.ShowMessage(this, hfStripeError);
+                    string error = service.StripeErrorHandler(hfStripeError);
+                    if(string.IsNullOrEmpty(error))
+                    {
+                        error = Resources.LocalizedText.Stripe_ErrorHandling_PaymentMethodValidation_Generic;
+                    }
+                    ApplicationHelpers.ShowMessage(this, error);
                 }
             }
 
@@ -189,7 +190,7 @@ namespace MVP.Checkout
         {
             Stripe.StripeCard card = service.GetCard(pageData, cardid);
             tbCardHolderName.Text = card.Name;
-            tbCardNumber.Text = "Termina em " + card.Last4;
+            tbCardNumber.Text = Resources.LocalizedText.General_StripeCard_Card_CardNumber_EndsIn + " " + card.Last4;
             tbCardExpiry.Text = card.ExpirationMonth.ToString("00") + "/" + card.ExpirationYear.ToString("00");
         }
 
@@ -223,13 +224,11 @@ namespace MVP.Checkout
                         EndAPName = "Paragem de Destino"
                     };
 
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Couldn't find booking.\")</SCRIPT>");
-                    //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                    Response.Redirect("/");
                 }
                 else if (pageData.UserId != User?.Identity.GetUserId())
                 {
-                    HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Wrong user for this booking.\")</SCRIPT>");
-                    //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                    Response.Redirect("/");
                 }
                 else
                 {
@@ -242,29 +241,31 @@ namespace MVP.Checkout
                 switch (pageData.BookingStatus)
                 {
                     case (BookingStatus.CANCELLED):
-                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"This booking has expired.\")</SCRIPT>");
-                        //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                        phError.Visible = true;
+                        phCheckout.Visible = false;
+                        string url = "/Calendar/Calendar?";
+                        url += "ori=" + pageData.StartRegionName;
+                        url += "&dest=" + pageData.EndRegionName;
+                        url += "&sap=" + pageData.StartAPName;
+                        url += "&dap=" + pageData.EndAPName;
+                        lkErrorRedirect.Attributes.Add("href", url);
                         break;
                     case (BookingStatus.BOOKED):
-                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"This booking has already been payed.\")</SCRIPT>");
                         Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
                         break;
                     case (BookingStatus.COMPLETED):
-                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"This trip has already been completed.\")</SCRIPT>");
-                        //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                        Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
                         break;
                     case (BookingStatus.PENDING):
                         break;
                     default:
-                        HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Something went wrong.\")</SCRIPT>");
-                        //Response.Redirect("/Calendar/Calendar"); - GENERIC ERROR PAGE
+                        Response.Redirect("/");
                         break;
                 }
             }
             else
             {
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Invalid QueryString.\")</SCRIPT>");
-                //Response.Redirect("/Calendar/Calendar"); - ERROR PAGE WITH FOLLOWUP REDIRECT
+                Response.Redirect("/");
             }
         }
 
@@ -277,7 +278,7 @@ namespace MVP.Checkout
             {
                 phPromoCheck.Visible = false;
                 phPromoError.Visible = false;
-                tbPromo.Attributes.Add("placeholder", "Código promocional");
+                tbPromo.Attributes.Add("placeholder", Resources.LocalizedText.Checkout_Promocode_tbPromo_placeholder);
                 tbPromo.Enabled = true;
             }
             else
@@ -316,7 +317,6 @@ namespace MVP.Checkout
             }
             else
             {
-                //PAYMENT ERROR - need better error handling here
                 ApplicationHelpers.ShowMessage(this, error);
             }
         }

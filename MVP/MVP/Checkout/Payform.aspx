@@ -25,12 +25,12 @@
     <body>
         <div class="checkout">
 
-            <div class="checkout__label">Nome do titular</div>
+            <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Payform_tbCardHolderName_Label%>"/></div>
             <input class="checkout__input checkout__input--name" type="text" id="txtCardName" placeholder="" />
                 
             <div class="row checkout__card-info">
                 <div class="col-md-7">
-                    <div class="checkout__label">Número do cartão</div>
+                    <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Payform_tbCardNumber_Label%>"/></div>
                     <input class="checkout__input checkout__input--card-number" type="text" id="txtCardNumber" placeholder="0000 0000 0000 0000" />
                 </div>
                 <div class="col-md-3 d-flex align-items-end">

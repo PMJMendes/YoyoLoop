@@ -21,7 +21,7 @@ namespace MVP.Controls
             switch (result)
             {
                 case SignInStatus.Success:
-                    LoginMessage.Text = "Login sucessful";
+                    LoginMessage.Text = Resources.LocalizedText.Controls_Login_LoginMessageSucess_Text;
                     LoginMessage.Visible = true;
                     ScriptManager.RegisterStartupScript(upLogin, upLogin.GetType(), "loginPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '');},1);", true);
                     break;
@@ -36,7 +36,7 @@ namespace MVP.Controls
                     break;
                 case SignInStatus.Failure:
                 default:
-                    LoginMessage.Text = "Invalid login attempt";
+                    LoginMessage.Text = Resources.LocalizedText.Controls_Login_LoginMessageFailure_Text;
                     LoginMessage.Visible = true;
                     break;
             }

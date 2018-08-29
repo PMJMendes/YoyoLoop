@@ -28,7 +28,7 @@
     <div class="<%= string.IsNullOrEmpty(localData.Loop) ? "" : "hide" %>">
         <header class="head text-center d-flex pb-5 static-page__pic-five">
             <div class="container-fluid d-flex align-items-center">
-                <h1 class="static-page__main-title">A Revolucionar a mobilidade entre cidades, <br>um Loop de cada vez</h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_MainTitle%>"/></h1>
             </div>
         </header>
 
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop-main-description">Loops & Horários</div>
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_SubTitle%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -48,7 +48,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        A Yoyoloop tem loops de Lisboa para a linha de Cascais, Coimbra e Porto e, ainda, loops desde a linha de Cascais, Coimbra e Porto até Lisboa.
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_SubDescription%>"/>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
         <section class="yoyoloops">
             <div class="container-fluid">
     
-                <!-- CASCAIS -->
+                <!-- LEIRIA -->
                 <div class="row">
                     <div class="city col-sm-4 mx-auto text-left">
                         <div class="">
@@ -65,8 +65,8 @@
                                 <img src="/img/loopico_2@2x.png" alt="" class="img-responsive"/>
                                 Loop
                             </p>
-                            <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Cascais" tabindex="-1">Cascais</a></p>
-                            <p class="price">desde 5€</p>
+                            <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Leiria" tabindex="-1">Leiria</a></p>
+                            <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 5€</p>
                         </div>
                     </div>
                     <div class="city-details col-sm-8 cascais">
@@ -75,7 +75,7 @@
                                 <div class="directions">
                                     <div class="text-center">
                                         <p><img src="/img/stopred_2@3x.png" alt="" class="img-responsive stop"/></p>
-                                        <p class="city-name text-uppercase">Cascais</p>
+                                        <p class="city-name text-uppercase">Leiria</p>
                                     </div>
             
                                     <div class="">
@@ -92,14 +92,11 @@
     
                         <div class="access-points row">
                             <div class="col p-3">
-                                <p class="ap-left text-uppercase">- Cascais Shopping</p>
-                                <p class="ap-left text-uppercase">- E.Leclerc São Domingos de Rana  (Parque Superior)</p>
+                                <p class="ap-left text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria%>"/></p>
                             </div>
         
                             <div class="col p-3">
-                                <p class="ap-right text-uppercase">- Amoreiras (Torre 1)</p>
-                                <p class="ap-right text-uppercase">- Marquês de Pombal (Estacionamento)</p>
-                                <p class="ap-right text-uppercase">- Saldanha (Estacionamento do Arco do cego)</p>
+                                <p class="ap-right text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_APs_Lisboa%>"/></p>
                             </div>
                         </div>
     
@@ -107,12 +104,12 @@
                             <div class="departures-1 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase">Saidas de Cascais</p>
-                                        <p class="text-uppercase">Dias úteis</p>
-                                        <p class="text-uppercase timeline-left">7:30  -  8:00  -  9:30  -  10:30</p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Days%>"/></p>
+                                        <p class="text-uppercase timeline-left"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times%>"/></p>
                                     </div>
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Leiria" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -120,13 +117,13 @@
                             <div class="departures-2 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase">Saidas de Lisboa</p>
-                                        <p class="text-uppercase">Dias úteis</p>
-                                        <p class="text-uppercase timeline-right">7:15 - 8:15 – 8:45</p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Days%>"/></p>
+                                        <p class="text-uppercase timeline-right"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Times%>"/></p>
                                     </div>
 
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Linha%20de%20Cascais&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Leiria&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +140,7 @@
                             Loop
                         </p>
                         <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" tabindex="-1">Coimbra</a></p>
-                        <p class="price">desde 12€</p>
+                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 12€</p>
                     </div>
                     <div class="city-details col-sm-8 coimbra">
                         <div class="row">
@@ -168,12 +165,11 @@
     
                         <div class="access-points row">
                             <div class="col p-3">
-                                <p class="ap-left text-uppercase">- McDonald’s Av. Fernão de Magalhães</p>
+                                <p class="ap-left text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra%>"/></p>
                             </div>
     
                             <div class="col p-3">
-                                <p class="ap-right text-uppercase">- Saldanha (Estacionamento)</p>
-                                <p class="ap-right text-uppercase">- Gare do Oriente</p>
+                                <p class="ap-right text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa%>"/></p>
                             </div>
                         </div>
 
@@ -181,12 +177,12 @@
                             <div class="departures-1 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase">Saidas de Coimbra</p>
-                                        <p class="text-uppercase">Dias úteis</p>
-                                        <p class="text-uppercase timeline-left">7:30  -  8:00  -  9:30  -  10:30</p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days%>"/></p>
+                                        <p class="text-uppercase timeline-left"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times%>"/></p>
                                     </div>
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Coimbra" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Coimbra" class="btn-book text-uppercase d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_Book%>"/></a>
                                     </div>
                                 </div>
                             </div>
@@ -194,13 +190,13 @@
                             <div class="departures-2 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase">Saidas de Lisboa</p>
-                                        <p class="text-uppercase">Todos os dias</p>
-                                        <p class="text-uppercase timeline-right">7:15 - 8:15 – 8:45</p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days%>"/></p>
+                                        <p class="text-uppercase timeline-right"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times%>"/></p>
                                     </div>
 
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Coimbra&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Coimbra&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_Book%>"/></a>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +208,7 @@
                             Loop
                         </p>
                         <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" tabindex="-1">Coimbra</a></p>
-                        <p class="price">desde 12€</p>
+                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 12€</p>
                     </div>
                 </div>
     
@@ -224,7 +220,7 @@
                             Loop
                         </p>
                         <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Porto" tabindex="-1">Porto</a></p>
-                        <p class="price">desde 10€</p>
+                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 10€</p>
                     </div>
     
                     <div class="city-details col-sm-8 leiria">
@@ -250,12 +246,11 @@
     
                         <div class="access-points row">
                             <div class="col p-3">
-                                <p class="ap-left text-uppercase">- Largo da República</p>
+                                <p class="ap-left text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto%>"/></p>
                             </div>
         
                             <div class="col p-3">
-                                <p class="ap-right text-uppercase">- Saldanha (Estacionamento)</p>
-                                <p class="ap-right text-uppercase">- Gare do Oriente</p>
+                                <p class="ap-right text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa%>"/></p>
                             </div>
                         </div>
     
@@ -263,12 +258,12 @@
                             <div class="departures-1 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase">Saidas do Porto</p>
-                                        <p class="text-uppercase">Dias úteis</p>
-                                        <p class="text-uppercase timeline-left">7:30  -  8:00  -  9:30  -  10:30</p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days%>"/></p>
+                                        <p class="text-uppercase timeline-left"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times%>"/></p>
                                     </div>
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Porto" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Porto" class="btn-book text-uppercase d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_Book%>"/></a>
                                     </div>
                                 </div>
                             </div>
@@ -276,13 +271,13 @@
                             <div class="departures-2 half">
                                 <div class="row">
                                     <div class="col-md-6 text-left pb-3">
-                                        <p class="text-uppercase">Saidas de Lisboa</p>
-                                        <p class="text-uppercase">Todos os dias</p>
-                                        <p class="text-uppercase timeline-right">7:15 - 8:15 – 8:45</p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa%>"/></p>
+                                        <p class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days%>"/></p>
+                                        <p class="text-uppercase timeline-right"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times%>"/></p>
                                     </div>
 
                                     <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Porto&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center">Reservar</a>
+                                        <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Porto&Ori=Lisboa" class="btn-book text-uppercase d-flex align-items-center justify-content-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_Book%>"/></a>
                                     </div>
                                 </div>
                             </div>
@@ -295,39 +290,39 @@
         <div class="homepage__container homepage__container--forth">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__why-catch-ride">Porquê apanhar boleia de um transfer da Yoyoloop?</div>
+                    <div class="homepage__why-catch-ride"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Title%>"/></div>
                 </div>
                 <div class="row row-no-padding">
                     <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
                         <div class="homepage__why-card__image mb-4">
                             <img src="/img/acessivel.png" srcset="/img/acessivel@2x.png 2x, /img/acessivel@3x.png 3x">
                         </div>
-                        <div class="homepage__why-card__title mb-3">Acessível</div>
-                        <div class="homepage__why-card__content mb-3">Menos desgaste, mais na carteira</div>
+                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Accessible_Title%>"/></div>
+                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Accessible_Description%>"/></div>
                     </div>
 
                     <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
                         <div class="homepage__why-card__image mb-4">
                             <img src="/img/conveniente.png" srcset="/img/conveniente@2x.png 2x, /img/conveniente@3x.png 3x">
                         </div>
-                        <div class="homepage__why-card__title mb-3">Conveniente</div>
-                        <div class="homepage__why-card__content mb-3">Pick up e drop off convenientes</div>
+                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Conveninent_Title%>"/></div>
+                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Conveninent_Description%>"/></div>
                     </div>
 
                     <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
                         <div class="homepage__why-card__image mb-4">
                             <img src="/img/fiavel.png" srcset="/img/fiavel@2x.png 2x, /img/fiavel@3x.png 3x">
                         </div>
-                        <div class="homepage__why-card__title mb-3">Fiável</div>
-                        <div class="homepage__why-card__content mb-3">Lugar marcado, à hora marcada</div>
+                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Reliable_Title%>"/></div>
+                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Reliable_Description%>"/></div>
                     </div>
 
                     <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
                         <div class="homepage__why-card__image mb-4">
                             <img src="/img/sustentavel.png" srcset="/img/sustentavel@2x.png 2x, /img/sustentavel@3x.png 3x">
                         </div>
-                        <div class="homepage__why-card__title mb-3">Sustentável</div>
-                        <div class="homepage__why-card__content mb-3">Menos carros, mais cidade</div>
+                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Sustainable_Title%>"/></div>
+                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Sustainable_Description%>"/></div>
                     </div>
                 </div>
             </div>
@@ -335,13 +330,13 @@
     </div>
     <!-- END OF LOOPS -->
     
-    <!-- CASCAIS -->
-    <div class="<%= localData.Loop == "lisboa-cascais" ? "" : "hide" %>">
+    <!-- LEIRIA -->
+    <div class="<%= localData.Loop == "lisboa-leiria" ? "" : "hide" %>">
         <header class="head text-center d-flex pb-5 static-page__pic-one">
             <div class="container-fluid d-flex flex-column justify-content-center">
-                <h1 class="static-page__main-title">Deixa o carro em casa e vem de transfer para Cascais</h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
-                    <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" >voltar</a>
+                    <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/></a>
                 </div>
             </div>
         </header>
@@ -353,7 +348,7 @@
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description">Cansado do trânsito na A5 <br/>nas viagens entre Cascais e Lisboa?</div>
+                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_MainDescription%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -362,11 +357,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.
-                        <br/><br/>
-                        A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estacionamento gratuítos em Cascais e São Domingos de Rana e apanhar um transfer directo até às zonas de escritórios de Lisboa como as Amoreiras, Marquês de Pombal, Saldanha e Campo Grande — por apenas 50€ por semana.
-                        <br/><br/>
-                        Além de contar com partidas frequentes, a Yoyoloop ainda te oferece wifi a bordo para poderes aproveitar o teu tempo em vez de estar preso no pára-arranca da A5.
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_SubDescription%>"/>
                     </div>
                 </div>
             </div>
@@ -374,17 +365,16 @@
 
         <div class="homepage__container static-page__box-container p-0 mt-5 mb-5">
 
-            <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Linha%20de%20Cascais">
+            <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=Lisboa&Ori=Leiria">
                 <div class="row">
                     <div class="col-md-4 static-page__box-container__first d-flex align-items-left flex-column justify-content-center pl-5">
                         <div class="static-page__box-container__first__sub-title">
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                            Loops com destino a
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Title%>"/>
                         </div>
-                        <div class="static-page__box-container__first__main-title">Cascais</div>
+                        <div class="static-page__box-container__first__main-title">Leiria</div>
                         <div class="static-page__box-container__first__extra-title mt-2">
-                            desde <span style="font-weight: 800">50€</span> por semana por<br/>
-                            10 viagens ou <span style="font-weight: 800">8€</span> por viagem
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Title%>"/>
                         </div>
                     </div>
 
@@ -392,26 +382,24 @@
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                                <div class="static-page__box-container__schedules__label pt-3 pb-3">Paragens</div>
+                                <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Stops%>"/></div>
                                 <div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Cascais Shopping</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Hospital de Cascais</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Lagoas Park</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ S. Domingos de Rana</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Tagus Park</div>
+                                    <div class="static-page__box-container__schedules__text text-uppercase">
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_APs%>"/>
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/horarios.png" srcset="/img/horarios@2x.png 2x, /img/horarios@3x.png 3x">
-                                <div class="static-page__box-container__schedules__label pt-3 pb-3">Horários</div>
+                                <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Schedules%>"/></div>
                         
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">Dias úteis</div>
-                                <span class="static-page__box-container__schedules__time">7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30</span>
-                                <span class="static-page__box-container__schedules__time mb-3">18:00  -  18:30  -  19:00  -  19:30  -  20:00</span>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Days%>"/></div>
+                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Times1%>"/></span>
+                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard_Times2%>"/></span>
 
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">Tempo de viagem</div>
-                                <div class="static-page__box-container__schedules__text text-center pb-2">O transfer da Yoyoloop leva-te de Cascais até <br/>Lisboa em apenas 30 minutos</div>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_TravelTime%>"/></div>
+                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime%>"/></div>
                             </div>
                         </div>
                     </div>
@@ -422,11 +410,11 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - cascais</div>
+                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - leiria</div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop-main-description">Porquê apanhar um transfer entre Lisboa e Cascais em vez de outros transportes?</div>
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -435,15 +423,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        → Conta com partidas frequentes de segunda a sexta-feira
-                        <br/><br/>
-                        → Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio
-                        <br/><br/>
-                        → Desfruta de wifi a bordo para tornar a tua viagem mais útil
-                        <br/><br/>
-                        → Respeita o ambiente ao apanhar boleia de um veículo de sete lugares
-                        <br/><br/>
-                        → Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Description%>"/>
                     </div>
                 </div>
             </div>
@@ -452,9 +432,9 @@
         <div class="row">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column pr-0 mr-0">
                 <img src="/img/bus.png" srcset="/img/bus@2x.png 2x, /img/bus@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Autocarro</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Bus%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Não há qualquer autocarro directo entre Cascais e Lisboa
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Bus_Reasons%>"/>
                 </div>
             </div>
 
@@ -462,13 +442,9 @@
 
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mb-5 pl-0 ml-0 pr-0">
                 <img src="/img/comboio.png" srcset="/img/comboio@2x.png 2x, /img/comboio@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Comboio</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Train%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Os atrasos, avarias e greves são frequentes <br/>
-                    → A viagem até Lisboa conta com, pelo menos, dez paragens <br/>
-                    → A viagem é barulhenta e nem sempre tens lugar para te sentar <br/>
-                    → O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  <br/>
-                    ligação direta com a linha verde do metro de Lisboa <br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Train_Reasons%>"/>
                 </div>
             </div>
         </div>
@@ -478,12 +454,9 @@
         <div class="row mb-5">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pr-0 mr-0">
                 <img src="/img/boleia.png" srcset="/img/boleia@2x.png 2x, /img/boleia@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Boleias tradicionais</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Ride%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Demoras mais tempo se não fores pela auto-estrada <br/>
-                    → Podes ter várias paragens para deixar outros passageiros<br/>
-                    → Não são fiáveis: não há todos os dias e as horas de partida e o preço variam<br/>
-                    → Não sendo um motorista profissional, a habilidade do condutor não é fidedigna<br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons%>"/>
                 </div>
             </div>
 
@@ -491,24 +464,22 @@
 
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pl-0 ml-0 pr-0">
                 <img src="/img/carro.png" srcset="/img/carro@2x.png 2x, /img/carro@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Carro próprio</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Car%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho<br/>
-                    → Dificuldade de encontrar um lugar de estacionamento <br/>
-                    → Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil<br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_Why_Car_Reasons%>"/>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END OF CASCAIS -->
+    <!-- END OF LEIRIA -->
 
     <!-- COIMBRA -->
     <div class="<%= localData.Loop == "lisboa-coimbra" ? "" : "hide" %>">
         <header class="head text-center d-flex pb-5 static-page__pic-one">
             <div class="container-fluid d-flex flex-column justify-content-center">
-                <h1 class="static-page__main-title">Deixa o carro em casa e vem de transfer para Coimbra</h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
-                    <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" >voltar</a>
+                    <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/></a>
                 </div>
             </div>
         </header>
@@ -516,24 +487,20 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop">YOYOLOOP</div>
+                    <div class="homepage__yoyoloop">YOYOLOOP</div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description">Cansado do trânsito na A5 <br/>nas viagens entre Cascais e Lisboa?</div>
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_MainDescription%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
+                    <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
                 </div>
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.
-                        <br/><br/>
-                        A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estacionamento gratuítos em Cascais e São Domingos de Rana e apanhar um transfer directo até às zonas de escritórios de Lisboa como as Amoreiras, Marquês de Pombal, Saldanha e Campo Grande — por apenas 50€ por semana.
-                        <br/><br/>
-                        Além de contar com partidas frequentes, a Yoyoloop ainda te oferece wifi a bordo para poderes aproveitar o teu tempo em vez de estar preso no pára-arranca da A5.
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_SubDescription%>"/>
                     </div>
                 </div>
             </div>
@@ -546,12 +513,11 @@
                     <div class="col-md-4 static-page__box-container__first d-flex align-items-left flex-column justify-content-center pl-5">
                         <div class="static-page__box-container__first__sub-title">
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                            Loops com destino a
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Title%>"/>
                         </div>
                         <div class="static-page__box-container__first__main-title">Coimbra</div>
                         <div class="static-page__box-container__first__extra-title mt-2">
-                            desde <span style="font-weight: 800">50€</span> por semana por<br/>
-                            10 viagens ou <span style="font-weight: 800">8€</span> por viagem
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_LoopCard_Title%>"/>
                         </div>
                     </div>
 
@@ -559,26 +525,24 @@
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                                <div class="static-page__box-container__schedules__label pt-3 pb-3">Paragens</div>
+                                <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Stops%>"/></div>
                                 <div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Cascais Shopping</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Hospital de Cascais</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Lagoas Park</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ S. Domingos de Rana</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Tagus Park</div>
+                                    <div class="static-page__box-container__schedules__text text-uppercase">
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_LoopCard_APs%>"/>
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/horarios.png" srcset="/img/horarios@2x.png 2x, /img/horarios@3x.png 3x">
-                                <div class="static-page__box-container__schedules__label pt-3 pb-3">Horários</div>
+                                <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Schedules%>"/></div>
                         
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">Dias úteis</div>
-                                <span class="static-page__box-container__schedules__time">7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30</span>
-                                <span class="static-page__box-container__schedules__time mb-3">18:00  -  18:30  -  19:00  -  19:30  -  20:00</span>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_LoopCard_Days%>"/></div>
+                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_LoopCard_Times1%>"/></span>
+                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_LoopCard_Times2%>"/></span>
 
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">Tempo de viagem</div>
-                                <div class="static-page__box-container__schedules__text text-center pb-2">O transfer da Yoyoloop leva-te de Cascais até <br/>Lisboa em apenas 30 minutos</div>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_TravelTime%>"/></div>
+                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime%>"/></div>
                             </div>
                         </div>
                     </div>
@@ -589,11 +553,11 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - cascais</div>
+                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - coimbra</div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop-main-description">Porquê apanhar um transfer entre Lisboa e Cascais em vez de outros transportes?</div>
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_Why%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -602,15 +566,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        → Conta com partidas frequentes de segunda a sexta-feira
-                        <br/><br/>
-                        → Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio
-                        <br/><br/>
-                        → Desfruta de wifi a bordo para tornar a tua viagem mais útil
-                        <br/><br/>
-                        → Respeita o ambiente ao apanhar boleia de um veículo de sete lugares
-                        <br/><br/>
-                        → Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_Why_Description%>"/>
                     </div>
                 </div>
             </div>
@@ -619,9 +575,9 @@
         <div class="row">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column pr-0 mr-0">
                 <img src="/img/bus.png" srcset="/img/bus@2x.png 2x, /img/bus@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Autocarro</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Bus%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Não há qualquer autocarro directo entre Cascais e Lisboa
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons%>"/>
                 </div>
             </div>
 
@@ -629,13 +585,9 @@
 
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mb-5 pl-0 ml-0 pr-0">
                 <img src="/img/comboio.png" srcset="/img/comboio@2x.png 2x, /img/comboio@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Comboio</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Train%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Os atrasos, avarias e greves são frequentes <br/>
-                    → A viagem até Lisboa conta com, pelo menos, dez paragens <br/>
-                    → A viagem é barulhenta e nem sempre tens lugar para te sentar <br/>
-                    → O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  <br/>
-                    ligação direta com a linha verde do metro de Lisboa <br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons%>"/>
                 </div>
             </div>
         </div>
@@ -645,12 +597,9 @@
         <div class="row mb-5">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pr-0 mr-0">
                 <img src="/img/boleia.png" srcset="/img/boleia@2x.png 2x, /img/boleia@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Boleias tradicionais</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Ride%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Demoras mais tempo se não fores pela auto-estrada <br/>
-                    → Podes ter várias paragens para deixar outros passageiros<br/>
-                    → Não são fiáveis: não há todos os dias e as horas de partida e o preço variam<br/>
-                    → Não sendo um motorista profissional, a habilidade do condutor não é fidedigna<br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons%>"/>
                 </div>
             </div>
 
@@ -658,11 +607,9 @@
 
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pl-0 ml-0 pr-0">
                 <img src="/img/carro.png" srcset="/img/carro@2x.png 2x, /img/carro@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Carro próprio</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Car%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho<br/>
-                    → Dificuldade de encontrar um lugar de estacionamento <br/>
-                    → Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil<br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons%>"/>
                 </div>
             </div>
         </div>
@@ -673,9 +620,9 @@
     <div class="<%= localData.Loop == "lisboa-porto" ? "" : "hide" %>">
         <header class="head text-center d-flex pb-5 static-page__pic-one">
             <div class="container-fluid d-flex flex-column justify-content-center">
-                <h1 class="static-page__main-title">Deixa o carro em casa e vem de transfer para Porto</h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
-                    <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" >voltar</a>
+                    <a OnClick="javascript:$.blockUI()" href="/Pages/Loops" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/></a>
                 </div>
             </div>
         </header>
@@ -687,7 +634,7 @@
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description">Cansado do trânsito na A5 <br/>nas viagens entre Cascais e Lisboa?</div>
+                <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_MainDescription%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -696,11 +643,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        Quem mora em Cascais e trabalha em Lisboa está familiarizado com o caos vivido diariamente na A5. A reduzida rede de transportes na linha de Cascais deixa muito a desejar e obriga muitos a optarem por levar o seu próprio veículo — um custo que pode chegar aos 350€ mensais só em combustível, portagens e estacionamento.
-                        <br/><br/>
-                        A Yoyoloop oferece uma nova, mais barata e mais proveitosa forma de fazer commuting entre Cascais e Lisboa. Os nossos pontos de recolha permitem-te deixar o carro em parques de estacionamento gratuítos em Cascais e São Domingos de Rana e apanhar um transfer directo até às zonas de escritórios de Lisboa como as Amoreiras, Marquês de Pombal, Saldanha e Campo Grande — por apenas 50€ por semana.
-                        <br/><br/>
-                        Além de contar com partidas frequentes, a Yoyoloop ainda te oferece wifi a bordo para poderes aproveitar o teu tempo em vez de estar preso no pára-arranca da A5.
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_SubDescription%>"/>
                     </div>
                 </div>
             </div>
@@ -713,12 +656,11 @@
                     <div class="col-md-4 static-page__box-container__first d-flex align-items-left flex-column justify-content-center pl-5">
                         <div class="static-page__box-container__first__sub-title">
                             <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                            Loops com destino a
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Title%>"/>
                         </div>
                         <div class="static-page__box-container__first__main-title">Porto</div>
                         <div class="static-page__box-container__first__extra-title mt-2">
-                            desde <span style="font-weight: 800">50€</span> por semana por<br/>
-                            10 viagens ou <span style="font-weight: 800">8€</span> por viagem
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_LoopCard_Title%>"/>
                         </div>
                     </div>
 
@@ -726,26 +668,24 @@
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
-                                <div class="static-page__box-container__schedules__label pt-3 pb-3">Paragens</div>
+                                <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Stops%>"/></div>
                                 <div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Cascais Shopping</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Hospital de Cascais</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Lagoas Park</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ S. Domingos de Rana</div>
-                                    <div class="static-page__box-container__schedules__text text-uppercase">→ Tagus Park</div>
+                                    <div class="static-page__box-container__schedules__text text-uppercase">
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_LoopCard_APs%>"/>
+                                    </div>
                                 </div>
                             </div>
     
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/horarios.png" srcset="/img/horarios@2x.png 2x, /img/horarios@3x.png 3x">
-                                <div class="static-page__box-container__schedules__label pt-3 pb-3">Horários</div>
+                                <div class="static-page__box-container__schedules__label pt-3 pb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Schedules%>"/></div>
                         
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">Dias úteis</div>
-                                <span class="static-page__box-container__schedules__time">7:00  -  7:30  -  8:00  -  8:30  -  9:00  -  9:30</span>
-                                <span class="static-page__box-container__schedules__time mb-3">18:00  -  18:30  -  19:00  -  19:30  -  20:00</span>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_LoopCard_Days%>"/></div>
+                                <span class="static-page__box-container__schedules__time"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_LoopCard_Times1%>"/></span>
+                                <span class="static-page__box-container__schedules__time mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_LoopCard_Times2%>"/></span>
 
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">Tempo de viagem</div>
-                                <div class="static-page__box-container__schedules__text text-center pb-2">O transfer da Yoyoloop leva-te de Cascais até <br/>Lisboa em apenas 30 minutos</div>
+                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_TravelTime%>"/></div>
+                                <div class="static-page__box-container__schedules__text text-center pb-2"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_LoopCard__TravelTime%>"/></div>
                             </div>
                         </div>
                     </div>
@@ -756,11 +696,11 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - cascais</div>
+                    <div class="homepage__yoyoloop text-uppercase">loop lisboa - porto</div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop-main-description">Porquê apanhar um transfer entre Lisboa e Cascais em vez de outros transportes?</div>
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why%>"/></div>
                 </div>
 
                 <div class="row justify-content-center mb-5">
@@ -769,15 +709,7 @@
             
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description">
-                        → Conta com partidas frequentes de segunda a sexta-feira
-                        <br/><br/>
-                        → Usufrui de mais conforto pelo mesmo preço que o autocarro e comboio
-                        <br/><br/>
-                        → Desfruta de wifi a bordo para tornar a tua viagem mais útil
-                        <br/><br/>
-                        → Respeita o ambiente ao apanhar boleia de um veículo de sete lugares
-                        <br/><br/>
-                        → Aproveita uma ligação direta entre cinco pontos-chave do concelho de Cascais e as maiores estações de metro e/ou comboio de Lisboa
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Description%>"/>
                     </div>
                 </div>
             </div>
@@ -785,10 +717,10 @@
 
         <div class="row">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column pr-0 mr-0">
-                <img src="/img/bus.png" srcset="/img/bus@2x.png 2x, /img/bus@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Autocarro</div>
+                <img src="/img/pontos.png" srcset="/img/pontos@2x.png 2x, /img/pontos@3x.png 3x">
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Plane%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Não há qualquer autocarro directo entre Cascais e Lisboa
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Plane_Reasons%>"/>
                 </div>
             </div>
 
@@ -796,13 +728,9 @@
 
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mb-5 pl-0 ml-0 pr-0">
                 <img src="/img/comboio.png" srcset="/img/comboio@2x.png 2x, /img/comboio@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Comboio</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Train%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Os atrasos, avarias e greves são frequentes <br/>
-                    → A viagem até Lisboa conta com, pelo menos, dez paragens <br/>
-                    → A viagem é barulhenta e nem sempre tens lugar para te sentar <br/>
-                    → O único ponto de chegada é o Cais do Sodré que, por sua vez, só tem  <br/>
-                    ligação direta com a linha verde do metro de Lisboa <br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Train_Reasons%>"/>
                 </div>
             </div>
         </div>
@@ -812,12 +740,9 @@
         <div class="row mb-5">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pr-0 mr-0">
                 <img src="/img/boleia.png" srcset="/img/boleia@2x.png 2x, /img/boleia@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Boleias tradicionais</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Ride%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Demoras mais tempo se não fores pela auto-estrada <br/>
-                    → Podes ter várias paragens para deixar outros passageiros<br/>
-                    → Não são fiáveis: não há todos os dias e as horas de partida e o preço variam<br/>
-                    → Não sendo um motorista profissional, a habilidade do condutor não é fidedigna<br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Ride_Reasons%>"/>
                 </div>
             </div>
 
@@ -825,11 +750,9 @@
 
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pl-0 ml-0 pr-0">
                 <img src="/img/carro.png" srcset="/img/carro@2x.png 2x, /img/carro@3x.png 3x">
-                <div class="static-page__grid__title mt-3">Carro próprio</div>
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Car%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    → Gastas 3 a 4 vezes mais dinheiro se viajares sozinho<br/>
-                    → Dificuldade de encontrar um lugar de estacionamento <br/>
-                    → Chegas a gastar 2 horas por dia no trânsito, sem conseguires usar esse tempo de forma útil<br/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Car_Reasons%>"/>
                 </div>
             </div>
         </div>
@@ -842,8 +765,8 @@
             <div class="static-page__separator mt-5 mb-5"></div>
 
             <div class="row justify-content-center mb-5 align-items-center">
-                <div class="static-page__any-question mr-5">Tens alguma pergunta?</div>
-                <a OnClick="javascript:$.blockUI()" href="/Help/Help" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" >Lê as nossas Perguntas Frequentes</a>
+                <div class="static-page__any-question mr-5"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_FAQ_Questions%>"/></div>
+                <a OnClick="javascript:$.blockUI()" href="/Help/Help" class="btn btn-default static-page__question-btn static-page__question-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_FAQ_Questions_HelpLink%>"/></a>
             </div>
         </div>
     </div>  

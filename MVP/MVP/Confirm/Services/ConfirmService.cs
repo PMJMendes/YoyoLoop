@@ -13,6 +13,7 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Web.UI;
 using System.Web.Configuration;
+using MVP.Models.Helpers;
 
 namespace MVP.Services
 {
@@ -36,7 +37,8 @@ namespace MVP.Services
                 StartAPLocation = "#",
                 EndRegionName = "End Region",
                 EndAPName = "End AP",
-                EndAPLocation = "#"
+                EndAPLocation = "#",
+                MGMCode = "#mypromocode"
             };
             return result;
         }
@@ -77,7 +79,8 @@ namespace MVP.Services
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
                         EndAPName = booking.Trip.EndAccessPoint.Name,
                         EndAPLocation = booking.Trip.EndAccessPoint.GoogleLocation,
-                        InviteURL = "#"
+                        InviteURL = "#",
+                        MGMCode = "#mypromocode"
                     };
                     return result;
                 }
@@ -90,22 +93,22 @@ namespace MVP.Services
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = true;
-                msg.Subject = "A tua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
+                msg.Subject = Resources.LocalizedText.Confirm_Service_SendTicket_Email_Subject1 + " " + state.StartRegionName + " " + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Subject2 + " " + state.EndRegionName + " " + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Subject3;
 
-                string body = "A tua viagem está confirmada.<br />";
-                body += "Código do bilhete: " + state.TicketCode.ToUpper() + "<br />";
-                body += "<br />Data: " + state.StartTime.ToString("R");
-                body += "<br />Origem: " + state.StartRegionName + " (<a href='" + state.StartAPLocation + "'>" + state.StartAPName + "</a>)";
-                body += "<br />Destino: " + state.EndRegionName + " (<a href='" + state.EndAPLocation + "'>" + state.EndAPName + "</a>)";
-                body += "<br />Lugares: " + state.Seats.ToString();
-                body += "<br />Preço Final: " + state.Cost.ToString("C");
+                string body = Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_TripConfirmed + "<br />";
+                body += Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_TicketCode + ": " + state.TicketCode.ToUpper() + "<br />";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Date + ": " + state.StartTime.ToString("F");
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Origin + ": " + state.StartRegionName + " (<a href='" + state.StartAPLocation + "'>" + state.StartAPName + "</a>)";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Destination + ": " + state.EndRegionName + " (<a href='" + state.EndAPLocation + "'>" + state.EndAPName + "</a>)";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Seats + ": " + state.Seats.ToString();
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_FinalCost + ": " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
                 body += "<br />";
-                body += "<br />Podes aceder ao teu bilhete em qualquer altura <a href='" + state.TicketURL + "'>aqui</a>.";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_AccessTicket + " <a href='" + state.TicketURL + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
                 body += "<br />";
-                body += "<br />Convida amigos e viaja a 3€ <a href='" + state.InviteURL + "'>aqui</a>.";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Invite + " <a href='" + state.InviteURL + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
                 body += "<br />";
-                body += "<br />Obrigado pela tua preferência!";
-                body += "<br />A equipa Yoyoloop.";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_ThankYou;
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_YoyoloopTeam;
 
                 msg.Body = body;
 
@@ -122,18 +125,18 @@ namespace MVP.Services
             using (MailMessage msg = new MailMessage())
             {
                 msg.IsBodyHtml = true;
-                msg.Subject = "A tua viagem de " + state.StartRegionName + " para " + state.EndRegionName + " está confirmada";
+                msg.Subject = Resources.LocalizedText.Confirm_Service_SendTicket_Email_Subject1 + " " + state.StartRegionName + " " + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Subject2 + " " + state.EndRegionName + " " + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Subject3;
 
-                string body = "A tua viagem está confirmada.<br />";
-                body += "Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando <a href='" + callbackUrl + "'>aqui</a>.<br />";
+                string body = Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_TripConfirmed + "<br />";
+                body += Resources.LocalizedText.Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail + " <a href='" + callbackUrl + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.<br />";
                 body += "<br />";
-                body += "Porque razão tenho de confirmar o meu email?<br />";
+                body += Resources.LocalizedText.Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy + "<br />";
                 body += "<br />";
-                body += "<ul><li>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</li></ul>";
-                body += "<br />Convida amigos e viaja a 3€ <a href='" + state.InviteURL + "'>aqui</a>.";
+                body += "<ul><li>" + Resources.LocalizedText.Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer + "</li></ul>";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Invite + " <a href='" + state.InviteURL + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
                 body += "<br />";
-                body += "<br />Obrigado pela tua preferência!";
-                body += "<br />A equipa Yoyoloop.";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_ThankYou;
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_YoyoloopTeam;
 
                 msg.Body = body;
 

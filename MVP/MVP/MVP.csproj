@@ -233,21 +233,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
-    <Content Include="Account\Forgot.aspx" />
-    <Content Include="Account\Lockout.aspx" />
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Manage.aspx" />
-    <Content Include="Account\ManageLogins.aspx" />
-    <Content Include="Account\ManagePassword.aspx" />
-    <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\Register.aspx" />
-    <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
-    <Content Include="Account\ResetPasswordConfirmation.aspx" />
-    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
-    <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Calendar\Scripts\init-popover.js" />
     <Content Include="Checkout\Payform.aspx" />
@@ -278,7 +265,6 @@
     <Content Include="css\styles.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Account\Web.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -363,6 +349,7 @@
     <Content Include="img\cascais %281%29.jpg" />
     <Content Include="img\cascais.jpg" />
     <Content Include="img\Cascais.png" />
+    <Content Include="img\cascaisLoop.png" />
     <Content Include="img\check%402x.png" />
     <Content Include="img\check%403x.png" />
     <Content Include="img\check.png" />
@@ -377,6 +364,7 @@
     <Content Include="img\closebtn.png" />
     <Content Include="img\coimbra.jpg" />
     <Content Include="img\Coimbra.png" />
+    <Content Include="img\coimbraLoop.png" />
     <Content Include="img\comboio%402x.png" />
     <Content Include="img\comboio%403x.png" />
     <Content Include="img\comboio.png" />
@@ -389,6 +377,9 @@
     <Content Include="img\conveniente%402x.png" />
     <Content Include="img\conveniente%403x.png" />
     <Content Include="img\conveniente.png" />
+    <Content Include="img\curve%402x.png" />
+    <Content Include="img\curve%403x.png" />
+    <Content Include="img\curve.png" />
     <Content Include="img\destino.jpg" />
     <Content Include="img\diners-club%402x.png" />
     <Content Include="img\diners-club%403x.png" />
@@ -449,6 +440,10 @@
     <Content Include="img\instagram.png" />
     <Content Include="img\invitefriends%402x.png" />
     <Content Include="img\invitefriends%403x.png" />
+    <Content Include="img\Invitefriends-bg.png" />
+    <Content Include="img\invitefriends-selected%402x.png" />
+    <Content Include="img\invitefriends-selected%403x.png" />
+    <Content Include="img\invitefriends-selected.png" />
     <Content Include="img\invitefriends.png" />
     <Content Include="img\jcb%402x.png" />
     <Content Include="img\jcb%403x.png" />
@@ -458,6 +453,7 @@
     <Content Include="img\language.png" />
     <Content Include="img\leiria.jpg" />
     <Content Include="img\Leiria.png" />
+    <Content Include="img\leiriaLoop.png" />
     <Content Include="img\linkedin%402x.png" />
     <Content Include="img\linkedin%403x.png" />
     <Content Include="img\linkedin-btn%402x.png" />
@@ -705,7 +701,6 @@
     <Content Include="Site.Master" />
     <Content Include="Calendar\Calendar.aspx" />
     <Content Include="Ticket\Ticket.aspx" />
-    <Content Include="TripExplorer\Explore.aspx" />
     <Content Include="Update.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -738,82 +733,12 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AddPhoneNumber.aspx.cs">
-      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
-      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Confirm.aspx.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Forgot.aspx.cs">
-      <DependentUpon>Forgot.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Forgot.aspx.designer.cs">
-      <DependentUpon>Forgot.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Lockout.aspx.cs">
-      <DependentUpon>Lockout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Lockout.aspx.designer.cs">
-      <DependentUpon>Lockout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.designer.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\ManageLogins.aspx.cs">
-      <DependentUpon>ManageLogins.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ManageLogins.aspx.designer.cs">
-      <DependentUpon>ManageLogins.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\ManagePassword.aspx.cs">
-      <DependentUpon>ManagePassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ManagePassword.aspx.designer.cs">
-      <DependentUpon>ManagePassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
@@ -822,31 +747,15 @@
     <Compile Include="Account\ResetPassword.aspx.designer.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
-      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
-      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
-      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
-      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
-      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_GlobalResources\LocalizedText.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalizedText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedText.pt.designer.cs">
+      <DependentUpon>LocalizedText.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="App_GlobalResources\LocalizedText.en.designer.cs">
       <AutoGen>True</AutoGen>
@@ -1232,15 +1141,6 @@
       <DependentUpon>Ticket.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ticket\TicketDTO.cs" />
-    <Compile Include="TripExplorer\Explore.aspx.cs">
-      <DependentUpon>Explore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TripExplorer\Explore.aspx.designer.cs">
-      <DependentUpon>Explore.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TripExplorer\ExploreDTO.cs" />
-    <Compile Include="TripExplorer\Services\ExploreService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1335,6 +1235,10 @@
     <Content Include="App_GlobalResources\LocalizedText.en.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>LocalizedText.en.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\LocalizedText.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedText.pt.designer.cs</LastGenOutput>
     </Content>
     <EmbeddedResource Include="Migrations\201801131725141_InitialCreate.resx">
       <DependentUpon>201801131725141_InitialCreate.cs</DependentUpon>

@@ -24,7 +24,7 @@ namespace MVP.Controls
             }
             else
             {
-                RegisterErrorMessage.Text = result.Errors.FirstOrDefault();
+                RegisterErrorMessage.Text = Resources.LocalizedText.Controls_Register_RegisterMessage_Failure;
             }
         }
 

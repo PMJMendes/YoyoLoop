@@ -94,13 +94,22 @@ namespace MVP.Help {
         protected global::System.Web.UI.WebControls.LinkButton btnTopicCorporate;
         
         /// <summary>
-        /// btnTopicDrive control.
+        /// btnTopicPartners control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnTopicDrive;
+        protected global::System.Web.UI.WebControls.LinkButton btnTopicPartners;
+        
+        /// <summary>
+        /// btnTopicCareers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnTopicCareers;
         
         /// <summary>
         /// phHelpList control.
@@ -184,13 +193,22 @@ namespace MVP.Help {
         protected global::System.Web.UI.WebControls.LinkButton btnMenuTopicCorporate;
         
         /// <summary>
-        /// btnMenuTopicDrive control.
+        /// btnMenuTopicPartners control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnMenuTopicDrive;
+        protected global::System.Web.UI.WebControls.LinkButton btnMenuTopicPartners;
+        
+        /// <summary>
+        /// btnMenuTopicCareers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnMenuTopicCareers;
         
         /// <summary>
         /// ddlMobileMenu control.
@@ -199,6 +217,6 @@ namespace MVP.Help {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlMobileMenu;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMobileMenu;
     }
 }

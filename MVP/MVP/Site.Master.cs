@@ -84,22 +84,22 @@ namespace MVP
                 // Validate the Anti-XSRF token
                 if ((string)ViewState[AntiXsrfTokenKey] != _antiXsrfTokenValue || (string)ViewState[AntiXsrfUserNameKey] != (Context.User.Identity.Name ?? String.Empty))
                 {
-                    throw new InvalidOperationException("Validation of Anti-XSRF token failed.");
+                    throw new InvalidOperationException(Resources.LocalizedText.SiteMaster_Errors_AntiXSRF);
                 }
             }
 
-            CurrentLanguage = "Português";
+            CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
             HttpCookie langCookie = Request.Cookies["langCookie"];
             if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
             {
                 switch(langCookie.Value)
                 {
                     case "en-US":
-                        CurrentLanguage = "Inglês";
+                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
                         break;
                     case "pt-PT":
                     default:
-                        CurrentLanguage = "Português";
+                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
                         break;
                 }
             }
@@ -120,14 +120,14 @@ namespace MVP
         {
             Response.Cookies["langCookie"].Value = "pt-PT";
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
-            ScriptManager.RegisterStartupScript(upChangeLanguage, upChangeLanguage.GetType(), "changeLangPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('', '');},1);", true);
+            Response.Redirect(Request.Url.PathAndQuery);
         }
 
         protected void btnChangeLangEnglish_Click(object sender, EventArgs e)
         {
             Response.Cookies["langCookie"].Value = "en-US";
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
-            ScriptManager.RegisterStartupScript(upChangeLanguage, upChangeLanguage.GetType(), "changeLangPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('', '');},1);", true);
+            Response.Redirect(Request.Url.PathAndQuery);
         }
     }
 }

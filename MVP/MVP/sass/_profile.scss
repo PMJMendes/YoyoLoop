@@ -150,6 +150,10 @@ $desktop: "(min-width: 1440px)";
         line-height: 2;
         letter-spacing: 1px;
         color: #838da7;
+
+        @media #{$mobile} {
+            text-align: center;
+        }
     }
 
     &__btn {

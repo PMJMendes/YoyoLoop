@@ -54,14 +54,14 @@
                 <div class="container-fluid">
 
                     <asp:PlaceHolder runat="server" ID="phError" Visible="false">
-                        <h1 class="travel__main-title">Não foi possivel encontrar o seu bilhete.</h1>
+                        <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, DownloadTicket_ErrorMessage%>"/></h1>
                     </asp:PlaceHolder>
 
                     <asp:Placeholder runat="server" ID="phSucess" Visible="false">
                         <!-- START CARD -->
                         <div class="row ml-0 pl-0 travel__card">
                           <div class="col-md-8 pr-0 travel__card__first">
-                            <div class="travel__card__first__your-trip mb-3">A tua viagem</div>
+                            <div class="travel__card__first__your-trip mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_YourTrip%>"/></div>
                             <div class="row">
                               <div class="col-md-1 d-flex align-items-center flex-column travel__card__first__path">
                                   <div class="white-circle"></div>
@@ -70,14 +70,14 @@
                               </div>
                               <div class="col-md-4">
                                 <div class="travel__card__first__from">
-                                    <div class="travel__card__first__point">Origem</div>
+                                    <div class="travel__card__first__point"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Origin%>"/></div>
                                     <div class="travel__card__first__city"><%= pageData.StartRegionName.ToUpper() %></div>
                                     <div class="travel__card__first__area"><%= pageData.StartAPName %></div>
                                     <div class="travel__card__first__location"><%= "<br>" %></div>
                                 </div>
 
                                 <div class="travel__card__first__to mt-3">
-                                    <div class="travel__card__first__point">Destino</div>
+                                    <div class="travel__card__first__point"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Destination%>"/></div>
                                     <div class="travel__card__first__city"><%= pageData.EndRegionName.ToUpper() %></div>
                                     <div class="travel__card__first__area"><%= pageData.EndAPName %></div>
                                     <div class="travel__card__first__location"><%= "<br>" %></div>
@@ -90,7 +90,7 @@
                                         <%= pageData.StartTime.ToString("dd MMMM").ToUpper() %>, <%= pageData.StartTime.ToString("ddd").ToUpper() %>
                                     </div>
                                     <div class="travel__card__first__text">
-                                      IDA
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Going%>"/>
                                     </div>
                                   </div>
 
@@ -103,7 +103,7 @@
 
                                   <div class="travel__card__first__text">
                                     <img class="mr-2 cart" src="/img/cart-black.png" srcset="/img/cart-black@2x.png 2x, /img/cart-black@3x.png 3x">
-                                    <%= pageData.Cost.ToString("C") %>
+                                    <%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %>
                                   </div>
 
                                 <!-- HIDDEN FOR NOW -->
@@ -138,13 +138,13 @@
                           <div class="col-md-4 pl-0 travel__card__last text-right">
                             <img class="travel__card__separator" src="/img/path.png" srcset="/img/path@2x.png 2x, /img/path@3x.png 3x">
 
-                            <p class="travel__card__last__gray-text">BILHETE</p>
+                            <p class="travel__card__last__gray-text"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Ticket%>"/></p>
                             <p class="travel__card__last__ticket-number"><%= pageData.TicketCode.ToUpper() %></p>
                             <p class="travel__card__last__users">
-                              <img src="/img/users-black.png" srcset="/img/users-black@2x.png 2x, /img/users-black@3x.png 3x"> <%= pageData.Seats.ToString() %> <%= pageData.Seats == 1 ? "Lugar" : "Lugares" %>
+                              <img src="/img/users-black.png" srcset="/img/users-black@2x.png 2x, /img/users-black@3x.png 3x"> <%= pageData.Seats.ToString() %> <%= pageData.Seats == 1 ? " " + Resources.LocalizedText.General_Seat : " " + Resources.LocalizedText.General_Seats %>
                             </p>
-                            <p class="travel__card__last__gray-text">TOTAL</p>
-                            <p class="travel__card__last__price"><%= pageData.Cost.ToString("C") %></p>
+                            <p class="travel__card__last__gray-text"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Total%>"/></p>
+                            <p class="travel__card__last__price"><%= pageData.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %></p>
                           </div>
                         </div>
                         <!-- END CARD -->

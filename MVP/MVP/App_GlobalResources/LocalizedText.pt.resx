@@ -747,8 +747,7 @@ Para mais informações, contacte-nos por favor em empresas@Yoyoloop.com.</value
     <value>Como posso reservar as viagens a 1€ e os códigos promocionais?</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer" xml:space="preserve">
-    <value>Para usufruir das viagens a 1€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todas as viagens a 1€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem para qualquer destino a 1€.&lt;br&gt;
-&lt;br&gt;
+    <value>Para usufruir das viagens a 1€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todas as viagens a 1€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem para qualquer destino a 1€.
 Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a tua viagem. Cola aqui o código, clica em “Reservar” e já está!
 </value>
   </data>
@@ -894,14 +893,11 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>Qual é o preço por loop?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
-    <value>Os valores dos bilhetes para os Loops atuais são os seguintes:&lt;br&gt;
-&lt;br&gt;
-Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem&lt;br&gt;
-Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem&lt;br&gt;
-Lisboa - Leiria / Leiria- Lisboa: desde 16€ por viagem&lt;br&gt;
-&lt;br&gt;
-Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
-&lt;br&gt;
+    <value>Os valores dos bilhetes para os Loops atuais são os seguintes:
+Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem
+Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem
+Lisboa - Leiria / Leiria- Lisboa: desde 16€ por viagem
+Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.
 Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloop.com . </value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_Invoices" xml:space="preserve">
@@ -1668,6 +1664,7 @@ Com a Yoyoloop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra
   </data>
   <data name="StaticPages_Destinos_Coimbra_Stops_SubTitle" xml:space="preserve">
     <value>Paragens em Coimbra</value>
+    <comment>coimbra só tens duas paragens. coloquei vazio as paragens third, forth and fifth</comment>
   </data>
   <data name="StaticPages_Destinos_Coimbra_Stops_Title" xml:space="preserve">
     <value>LOOP COIMBRA</value>
@@ -1742,7 +1739,7 @@ Com a Yoyoloop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra
     <value>&lt;br&gt;</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
-    <value>Autocarros e carro particular</value>
+    <value>Autocarros e carro privado</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_Title" xml:space="preserve">
     <value>Largo da República</value>
@@ -1936,7 +1933,7 @@ Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao P
     <value>O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
-    <value />
+    <value>&lt;br&gt;</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
     <value>Autocarro STCP: 903, 907</value>
@@ -2183,9 +2180,6 @@ Ao contrário do que parece, a própria ponte aérea entre Lisboa e o Porto não
 &lt;br&gt;
 A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares. </value>
   </data>
-  <data name="StaticPages_Loops_LisboaPorto_Why" xml:space="preserve">
-    <value>Porquê apanhar um transfer entre Lisboa e Porto em vez de outros transportes?</value>
-  </data>
   <data name="StaticPages_Loops_LisboaPorto_Why_Bus_Reasons" xml:space="preserve">
     <value>→ A viagem é mais demorada&lt;br/&gt;
 → Há várias paragens pelo caminho&lt;br/&gt;
@@ -2338,9 +2332,6 @@ Eliminar permanentemente a sua conta.&lt;br&gt;</value>
     <value>4. Quem tem acesso aos dados pessoais do utilizador?&lt;br&gt;
 A Yoyoloop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei.</value>
   </data>
-  <data name="StaticPages_Privacy_Intro" xml:space="preserve">
-    <value>O www.Yoyoloop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto utilizador:</value>
-  </data>
   <data name="StaticPages_Privacy_MainTitle" xml:space="preserve">
     <value>Política de Privacidade</value>
   </data>
@@ -2385,9 +2376,6 @@ iv) Confirmação de registo de conta.&lt;br&gt;
 Os dados recolhidos não serão usados para qualquer outro fim.
 </value>
   </data>
-  <data name="StaticPages_Terms_MainDescription" xml:space="preserve">
-    <value>Condições gerais para utilizadores da goodlife! em ofertas disponíveis no site www.yoyoloop.com</value>
-  </data>
   <data name="StaticPages_Terms_MainTitle" xml:space="preserve">
     <value>Termos e Condições</value>
   </data>
@@ -2397,15 +2385,6 @@ Os dados recolhidos não serão usados para qualquer outro fim.
   <data name="StaticPages_Terms_One_One" xml:space="preserve">
     <value>1.1 Política de Privacidade&lt;br&gt;
 Antes de utilizar o nosso website ou serviços da Yoyoloop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade.</value>
-  </data>
-  <data name="StaticPages_Terms_One_Three" xml:space="preserve">
-    <value>1.3 Aceitação dos Termos de Utilização&lt;br&gt;
-Ao aceder a este website, o utilizador declara ter lido, compreendido e aceite os Termos de Utilização abaixo descritos, sem necessidade de qualquer outro consentimento posterior.</value>
-  </data>
-  <data name="StaticPages_Terms_One_Two" xml:space="preserve">
-    <value>1.2 Sobre os Termos e Condições&lt;br&gt;
-A Yoyoloop reserva o direito de adicionar, alterar ou eliminar qualquer um dos Termos de Utilização do seu website e serviços através da atualização do conteúdo desta página e da respectiva comunicação aos seus utilizadores.&lt;br&gt;
-Os Termos e Condições da Yoyoloop abrangem este website, assim como outros sites que mencionam a mesma política.</value>
   </data>
   <data name="StaticPages_Terms_Three" xml:space="preserve">
     <value>3. Reembolsos e reclamações </value>

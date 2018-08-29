@@ -34,8 +34,8 @@ namespace MVP.Pages
                 {
                     switch (query["Loop"])
                     {
-                        case "Lisboa-Cascais":
-                            localData.Loop = "lisboa-cascais";
+                        case "Lisboa-Leiria":
+                            localData.Loop = "lisboa-leiria";
                             break;
                         case "Lisboa-Coimbra":
                             localData.Loop = "lisboa-coimbra";

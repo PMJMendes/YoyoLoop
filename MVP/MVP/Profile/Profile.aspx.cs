@@ -57,7 +57,7 @@ namespace MVP.Profile
             string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, pageData.UserId, Request);
             var masterservice = new MasterService();
             masterservice.SendEmailConfirmation(pageData.Email, callbackUrl);
-            ApplicationHelpers.ShowMessage(this, "Enviámos um email para <span style='color: #ff5f6d;'>" + pageData.Email + "</span> com o link para poderes confirmar o teu email.");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1 + " <span style='color: #ff5f6d;'>" + pageData.Email + "</span> " + Resources.LocalizedText.Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2);
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace MVP.Profile
             pageData.BirthDate = txtBirthDate.Text;
             pageData.PhoneNumber = txtPhoneNumber.Text;
             service.UpdatePersonalDetails(pageData);
-            ApplicationHelpers.ShowMessage(this, "Os teus dados foram actualizados com sucesso.");
+            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage);
         }
 
         protected void btnEmailSave_Click(object sender, EventArgs e)
@@ -88,11 +88,15 @@ namespace MVP.Profile
                 string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
                 var masterservice = new MasterService();
                 masterservice.SendEmailConfirmation(newemail, callbackUrl);
-                ApplicationHelpers.ShowMessage(this, "O teu endereço de email foi alterado com sucesso.<br/><br/>Enviámos um email para <span style='color: #ff5f6d;'>" + newemail + "</span> com um link para poderes confirmar o novo email.");
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1 + " <span style='color: #ff5f6d;'>" + newemail + "</span> " + Resources.LocalizedText.Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2);
+                pageData = service.GetInitialData(User?.Identity.GetUserId());
+                Session["profile.data"] = pageData;
+                InitializeControls();
+                upProfileData.Update();
             }
             else
             {
-                ApplicationHelpers.ShowMessage(this, "A password que introduziste está incorreta.");
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure);
             }
         }
 
@@ -106,16 +110,16 @@ namespace MVP.Profile
             {
                 if(manager.ChangePassword(user.Id, currentpassword, newpassword).Succeeded)
                 {
-                    ApplicationHelpers.ShowMessage(this, "A tua password foi alterada com sucesso.");
+                    ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess);
                 }
                 else
                 {
-                    ApplicationHelpers.ShowMessage(this, "Ocorreu um erro ao alterar a tua password.<br/><br/>Tenta outra vez ou <a href='#' style='color: #ff5f6d;'>contacta-nos</a>.");
+                    ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1 + " <a href='#' style='color: #ff5f6d;'>" + Resources.LocalizedText.Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2 + "</a>");
                 }
             }
             else
             {
-                ApplicationHelpers.ShowMessage(this, "A password que introduziste está incorreta.");
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword);
             }
         }
     }

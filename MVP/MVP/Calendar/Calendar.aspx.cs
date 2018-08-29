@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using System.Collections.Generic;
 using System.Web;
 using Microsoft.AspNet.Identity;
+using MVP.Models.Helpers;
 
 namespace MVP.Calendar
 {
@@ -112,7 +113,7 @@ namespace MVP.Calendar
         {
             string s = e.Item.ToString();
             localData.Values.Seats = s;
-            DdlSeats.SelectedText = s + (s == "1" ? " lugar" : " lugares");
+            DdlSeats.SelectedText = s + (s == "1" ? " " + Resources.LocalizedText.General_Seat : " " + Resources.LocalizedText.General_Seats);
 
             CheckParams();
         }
@@ -398,9 +399,9 @@ namespace MVP.Calendar
             var booking = service.CreateBooking(pageData);
             if (booking == null)
             {
-                //NEED PRETTY ERROR HANDLING HERE
-                HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert(\"Trip no longer available.\")</SCRIPT>");
-                //Response.Redirect("/Calendar/Calendar");
+                UpdateBookingPanel("");
+                GetCalendarData();
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Calendar_BookingPanel_Booking_ErrorMessage);
             }
             else
             {
@@ -458,7 +459,7 @@ namespace MVP.Calendar
             }
             DdlSeats.DataSource = DdlSeats_GetData();
             DdlSeats.ListDataBind();
-            DdlSeats.SelectedText = "1 lugar";
+            DdlSeats.SelectedText = "1 " + Resources.LocalizedText.General_Seat;
             localData.Values.Seats = "1";
             CalDate.VisibleDate = localData.Values.CalVisibleDate;
             CalDate.SelectedDate = new DateTime();

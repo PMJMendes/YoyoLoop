@@ -68,6 +68,23 @@ $desktop: "(min-width: 1440px)";
         color: #8b9398;
     }
 
+    &__error {
+
+        &-btn {
+            height: 40px;
+            border-radius: 20px;
+            background-color: #ff5f6d;
+            font-size: 16px;
+            font-weight: 900;
+            color: #ffffff;
+            text-transform: uppercase;
+
+            &:hover {
+                color: white !important;
+            }
+        }
+    }
+
     &__accept-terms-condition {
         max-width: 650px;
 
