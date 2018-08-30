@@ -66,7 +66,7 @@
                                 Loop
                             </p>
                             <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Leiria" tabindex="-1">Leiria</a></p>
-                            <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 5€</p>
+                            <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Leiria%>"/>€</p>
                         </div>
                     </div>
                     <div class="city-details col-sm-8 cascais">
@@ -140,7 +140,7 @@
                             Loop
                         </p>
                         <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" tabindex="-1">Coimbra</a></p>
-                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 12€</p>
+                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Coimbra%>"/>€</p>
                     </div>
                     <div class="city-details col-sm-8 coimbra">
                         <div class="row">
@@ -220,7 +220,7 @@
                             Loop
                         </p>
                         <p class="name"><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Porto" tabindex="-1">Porto</a></p>
-                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> 10€</p>
+                        <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Porto%>"/>€</p>
                     </div>
     
                     <div class="city-details col-sm-8 leiria">
