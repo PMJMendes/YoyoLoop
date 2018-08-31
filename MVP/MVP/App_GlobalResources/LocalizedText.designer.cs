@@ -1672,6 +1672,96 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 7.
+        /// </summary>
+        internal static string General_LoopData_Capacity_Coimbra {
+            get {
+                return ResourceManager.GetString("General_LoopData_Capacity_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7.
+        /// </summary>
+        internal static string General_LoopData_Capacity_Leiria {
+            get {
+                return ResourceManager.GetString("General_LoopData_Capacity_Leiria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 7.
+        /// </summary>
+        internal static string General_LoopData_Capacity_Porto {
+            get {
+                return ResourceManager.GetString("General_LoopData_Capacity_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2H.
+        /// </summary>
+        internal static string General_LoopData_Duration_Coimbra {
+            get {
+                return ResourceManager.GetString("General_LoopData_Duration_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 H 30.
+        /// </summary>
+        internal static string General_LoopData_Duration_Leiria {
+            get {
+                return ResourceManager.GetString("General_LoopData_Duration_Leiria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 30 MIN.
+        /// </summary>
+        internal static string General_LoopData_Duration_Porto {
+            get {
+                return ResourceManager.GetString("General_LoopData_Duration_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12.
+        /// </summary>
+        internal static string General_LoopData_Price_Coimbra {
+            get {
+                return ResourceManager.GetString("General_LoopData_Price_Coimbra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10.
+        /// </summary>
+        internal static string General_LoopData_Price_Leiria {
+            get {
+                return ResourceManager.GetString("General_LoopData_Price_Leiria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12.
+        /// </summary>
+        internal static string General_LoopData_Price_Lisboa {
+            get {
+                return ResourceManager.GetString("General_LoopData_Price_Lisboa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5.
+        /// </summary>
+        internal static string General_LoopData_Price_Porto {
+            get {
+                return ResourceManager.GetString("General_LoopData_Price_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Promocode.
         /// </summary>
         internal static string General_Promocode {
