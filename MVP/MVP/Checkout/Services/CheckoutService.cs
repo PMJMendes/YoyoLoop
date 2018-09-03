@@ -259,7 +259,7 @@ namespace MVP.Services
                 var description = state.Seats.ToString() + " x " + 
                                   state.StartRegionName + "-" +
                                   state.EndRegionName;
-                GA_Purchase(state.UserId, state.Seats.ToString() , (int)state.Cost);
+                GA_Purchase(state.UserId, description, (int)state.Cost);
 
                 return true;
             }
