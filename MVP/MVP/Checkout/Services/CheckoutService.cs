@@ -18,6 +18,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 using System.Globalization;
 using MVP.Models.Helpers;
+using UniversalAnalyticsHttpWrapper;
+using UniversalAnalyticsHttpWrapper.Objects;
 
 namespace MVP.Services
 {
@@ -253,8 +255,29 @@ namespace MVP.Services
                 UpdateBooking(state, BookingStatus.BOOKED);
                 error = string.Empty;
                 SendInvoice(state);
+
+                var description = state.Seats.ToString() + " x " + 
+                                  state.StartRegionName + "-" +
+                                  state.EndRegionName;
+                GA_Purchase(state.UserId, state.Seats.ToString() , (int)state.Cost);
+
                 return true;
             }
+        }
+
+        private void GA_Purchase(string userid, string label, int value)
+        {
+            IEventTracker eventTracker = new EventTracker();
+            IUniversalAnalyticsEventFactory eventFactory = new UniversalAnalyticsEventFactory();
+            UserId userId = new UserId(userid);
+            var analyticsEvent = eventFactory.MakeUniversalAnalyticsEvent(
+                userId,
+                "Transaction",
+                "Purchase",
+                label,
+                value.ToString(),
+                nonInteractionEvent: false);
+            var trackingResult = eventTracker.TrackEvent(analyticsEvent);
         }
 
         public string StripeErrorHandler(string error)
