@@ -72,7 +72,7 @@
                       <div class="homepage__where-to-card__header__price__from"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Price_From%>"/></div>
                       <div class="homepage__where-to-card__header__price__symbol">€</div>
                     </div>
-                    <div class="homepage__where-to-card__header__price__amount">12</div>
+                    <div class="homepage__where-to-card__header__price__amount"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Lisboa%>"/></div>
                   </div>
                 </div>
                 
@@ -93,7 +93,7 @@
                       <div class="homepage__where-to-card__header__price__from"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Price_From%>"/></div>
                       <div class="homepage__where-to-card__header__price__symbol">€</div>
                     </div>
-                    <div class="homepage__where-to-card__header__price__amount">10</div>
+                    <div class="homepage__where-to-card__header__price__amount"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Leiria%>"/></div>
                   </div>
                 </div>
                 
@@ -114,7 +114,7 @@
                       <div class="homepage__where-to-card__header__price__from"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Price_From%>"/></div>
                       <div class="homepage__where-to-card__header__price__symbol">€</div>
                     </div>
-                    <div class="homepage__where-to-card__header__price__amount">12</div>
+                    <div class="homepage__where-to-card__header__price__amount"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Coimbra%>"/></div>
                   </div>
                 </div>
                 
@@ -135,7 +135,7 @@
                       <div class="homepage__where-to-card__header__price__from"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_WhereToCard_Price_From%>"/></div>
                       <div class="homepage__where-to-card__header__price__symbol">€</div>
                     </div>
-                    <div class="homepage__where-to-card__header__price__amount">5</div>
+                    <div class="homepage__where-to-card__header__price__amount"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Porto%>"/></div>
                   </div>
                 </div>
                 
@@ -206,13 +206,13 @@
                           <div class="col d-flex align-items-center justify-content-center flex-column">
                             <img src="/img/duracao.png" srcset="/img/duracao@2x.png 2x, /img/duracao@3x.png 3x">
                             <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Duration%>"/></span>
-                            <span class="homepage__popular-loops__features__sub-title">30 Min</span>
+                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Duration_Porto%>"/></span>
                           </div>
                           
                           <div class="col d-flex align-items-center justify-content-center flex-column">
                             <img src="/img/capacidade.png" srcset="/img/capacidade@2x.png 2x, /img/capacidade@3x.png 3x">
                             <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Capacity%>"/></span>
-                            <span class="homepage__popular-loops__features__sub-title">7 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Seats%>"/></span>
+                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Capacity_Porto%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Seats%>"/></span>
                           </div>
     
                           <div class="col d-flex align-items-center justify-content-center flex-column">
@@ -224,7 +224,7 @@
                           <div class="col d-flex align-items-center justify-content-center flex-column">
                             <img src="/img/preco.png" srcset="/img/preco@2x.png 2x, /img/preco@3x.png 3x">
                             <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price%>"/></span>
-                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price_From%>"/> 5€</span>
+                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Porto%>"/>€</span>
                           </div>
                       </div>
                     </div>
@@ -260,13 +260,13 @@
                           <div class="col d-flex align-items-center justify-content-center flex-column">
                             <img src="/img/duracao.png" srcset="/img/duracao@2x.png 2x, /img/duracao@3x.png 3x">
                             <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Duration%>"/></span>
-                            <span class="homepage__popular-loops__features__sub-title">1 H 30</span>
+                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Duration_Leiria%>"/></span>
                           </div>
                           
                           <div class="col d-flex align-items-center justify-content-center flex-column">
                             <img src="/img/capacidade.png" srcset="/img/capacidade@2x.png 2x, /img/capacidade@3x.png 3x">
                             <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Capacity%>"/></span>
-                            <span class="homepage__popular-loops__features__sub-title">7 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Seats%>"/></span>
+                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Capacity_Leiria%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Seats%>"/></span>
                           </div>
     
                           <div class="col d-flex align-items-center justify-content-center flex-column">
@@ -278,7 +278,7 @@
                           <div class="col d-flex align-items-center justify-content-center flex-column">
                             <img src="/img/preco.png" srcset="/img/preco@2x.png 2x, /img/preco@3x.png 3x">
                             <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price%>"/></span>
-                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price_From%>"/> 10€</span>
+                            <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Leiria%>"/>€</span>
                           </div>
                       </div>
                     </div>
@@ -314,13 +314,13 @@
                         <div class="col d-flex align-items-center justify-content-center flex-column">
                           <img src="/img/duracao.png" srcset="/img/duracao@2x.png 2x, /img/duracao@3x.png 3x">
                           <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Duration%>"/></span>
-                          <span class="homepage__popular-loops__features__sub-title">2H</span>
+                          <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Duration_Coimbra%>"/></span>
                         </div>
                         
                         <div class="col d-flex align-items-center justify-content-center flex-column">
                           <img src="/img/capacidade.png" srcset="/img/capacidade@2x.png 2x, /img/capacidade@3x.png 3x">
                           <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Capacity%>"/></span>
-                          <span class="homepage__popular-loops__features__sub-title">7 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Seats%>"/></span>
+                          <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Capacity_Coimbra%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Seats%>"/></span>
                         </div>
   
                         <div class="col d-flex align-items-center justify-content-center flex-column">
@@ -332,7 +332,7 @@
                         <div class="col d-flex align-items-center justify-content-center flex-column">
                           <img src="/img/preco.png" srcset="/img/preco@2x.png 2x, /img/preco@3x.png 3x">
                           <span class="homepage__popular-loops__features__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price%>"/></span>
-                          <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price_From%>"/> 12€</span>
+                          <span class="homepage__popular-loops__features__sub-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_PopularLoops_Features_Price_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Coimbra%>"/>€</span>
                         </div>
                     </div>
                   </div>

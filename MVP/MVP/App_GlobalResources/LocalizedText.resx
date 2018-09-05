@@ -2471,4 +2471,34 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
   </data>
+  <data name="General_LoopData_Capacity_Coimbra" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="General_LoopData_Capacity_Leiria" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="General_LoopData_Capacity_Porto" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="General_LoopData_Duration_Coimbra" xml:space="preserve">
+    <value>2H</value>
+  </data>
+  <data name="General_LoopData_Duration_Leiria" xml:space="preserve">
+    <value>1 H 30</value>
+  </data>
+  <data name="General_LoopData_Duration_Porto" xml:space="preserve">
+    <value>30 MIN</value>
+  </data>
+  <data name="General_LoopData_Price_Coimbra" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="General_LoopData_Price_Leiria" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="General_LoopData_Price_Porto" xml:space="preserve">
+    <value>5</value>
+  </data>
 </root>
