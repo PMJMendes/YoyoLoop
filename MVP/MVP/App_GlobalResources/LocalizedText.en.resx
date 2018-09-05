@@ -124,10 +124,11 @@
     <value>Thank you for confirming your email.</value>
   </data>
   <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
-    <value>You will be re-directed to your ticket within seconds</value>
+    <value>You will be re-directed to your ticket in a few seconds.</value>
   </data>
   <data name="Account_ResetPassword_btnReset_Text" xml:space="preserve">
     <value>Reset</value>
+    <comment>@Lorena: isto é o copy do botão para confirmar a alteração de password</comment>
   </data>
   <data name="Account_ResetPassword_ErrorMessage" xml:space="preserve">
     <value>An error has occurred.</value>
@@ -136,7 +137,7 @@
     <value>Enter your new password</value>
   </data>
   <data name="Account_ResetPassword_SuccessMessage" xml:space="preserve">
-    <value>Your password was changed sucessfully.</value>
+    <value>Your password was successfully changed.</value>
   </data>
   <data name="Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
     <value>The password and confirmation password do not match.</value>
@@ -148,7 +149,7 @@
     <value>The confirm password field is required.</value>
   </data>
   <data name="Account_ResetPassword_tbEmail_placeholder" xml:space="preserve">
-    <value>Email</value>
+    <value>Email address</value>
   </data>
   <data name="Account_ResetPassword_tbEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
@@ -161,13 +162,13 @@
     <comment>repetido</comment>
   </data>
   <data name="Calendar_BookingPanel_Booking_ErrorMessage" xml:space="preserve">
-    <value>We are sorry but this trip is no longer available.</value>
+    <value>Sorry, this trip is no longer available.</value>
   </data>
   <data name="Calendar_CalendarHeader_btnToday_Text" xml:space="preserve">
     <value>Today</value>
   </data>
   <data name="Calendar_CalendarPlaceholder_Text" xml:space="preserve">
-    <value>Choose Origin and Destination</value>
+    <value>Choose your trip's origin and destination</value>
   </data>
   <data name="Calendar_CalendarTable_Footer_Ocup" xml:space="preserve">
     <value>Occupation:</value>
@@ -207,7 +208,7 @@
     <comment>Careful about size, needs to fit inside the day square</comment>
   </data>
   <data name="Calendar_Controls_CalendarTable_DayInfoText_RED" xml:space="preserve">
-    <value>Few seats left</value>
+    <value>Almost full</value>
     <comment>Careful about size, needs to fit inside the day square</comment>
   </data>
   <data name="Calendar_Controls_Popover_Header_DestinationLabel" xml:space="preserve">
@@ -267,22 +268,22 @@
     <value>Billing details</value>
   </data>
   <data name="Checkout_BookingExpired_Message" xml:space="preserve">
-    <value>This booking has expired</value>
+    <value>This booking expired</value>
   </data>
   <data name="Checkout_BookingExpired_RedirectLink_Text" xml:space="preserve">
-    <value>Book again</value>
+    <value>Rebook</value>
   </data>
   <data name="Checkout_btnPay_Text" xml:space="preserve">
     <value>Pay</value>
   </data>
   <data name="Checkout_ddlCardMenu_Label" xml:space="preserve">
-    <value>Payment type</value>
+    <value>Payment method</value>
   </data>
   <data name="Checkout_MainTitle" xml:space="preserve">
     <value>Pay and confirm</value>
   </data>
   <data name="Checkout_Payform_cbSaveCard_Label" xml:space="preserve">
-    <value>Save credit card</value>
+    <value>Save card details</value>
   </data>
   <data name="Checkout_Payform_tbCardHolderName_Label" xml:space="preserve">
     <value>Card name</value>
@@ -291,25 +292,28 @@
     <value>Card number</value>
   </data>
   <data name="Checkout_Policy_cbTerms_Error" xml:space="preserve">
-    <value>You must accept Terms and Conditions</value>
+    <value>You must accept the Terms and Conditions</value>
   </data>
   <data name="Checkout_Policy_cbTerms_Label1" xml:space="preserve">
-    <value>I accept</value>
+    <value>I accept the</value>
   </data>
   <data name="Checkout_Policy_cbTerms_Label2" xml:space="preserve">
     <value>Terms and Conditions</value>
   </data>
   <data name="Checkout_Policy_SubTitle" xml:space="preserve">
-    <value>Cancelation policy</value>
+    <value>Cancellation policy</value>
+  </data>
+  <data name="Checkout_Policy_Text" xml:space="preserve">
+    <value>You can cancel your trip up to 48 hours before the hour of departure. The value you paid will be transformed into credit to spend on future trips.</value>
   </data>
   <data name="Checkout_Promocode_tbPromo_Label" xml:space="preserve">
-    <value>Promocode</value>
+    <value>Promo code</value>
   </data>
   <data name="Checkout_Promocode_tbPromo_placeholder" xml:space="preserve">
     <value>Insert code</value>
   </data>
   <data name="Checkout_Service_ProcessPayment_BookingErrorMessage" xml:space="preserve">
-    <value>Booking no longer valid</value>
+    <value>Invalid booking</value>
   </data>
   <data name="Checkout_SubTitle" xml:space="preserve">
     <value>Payment</value>
@@ -317,8 +321,12 @@
   <data name="Confirm_Invite_btnShare_Text" xml:space="preserve">
     <value>Share</value>
   </data>
+  <data name="Confirm_Invite_Description" xml:space="preserve">
+    <value>Book your seat on an eight-seat transfer driven by a professional driver &lt;br&gt; and enjoy a stop-free trip with wifi on board at the price of a train ticket.</value>
+  </data>
   <data name="Confirm_Invite_Title" xml:space="preserve">
-    <value>Invite your friends and travel with 1€ only.</value>
+    <value>Invite your friends and travel for just €1.</value>
+    <comment>Mantemos "amigos"? @ lorena, sim acho que devemos manter amigos. "colegas" em vez de amigos parece-me demasiado impessoal</comment>
   </data>
   <data name="Confirm_InvoiceSend" xml:space="preserve">
     <value>We will send your invoice to</value>
@@ -336,22 +344,24 @@
     <value>Download</value>
   </data>
   <data name="Confirm_MyTickets_btnEmail_Text" xml:space="preserve">
-    <value>Recieve by email</value>
+    <value>Receive by email</value>
   </data>
   <data name="Confirm_MyTickets_btnSMS_Text" xml:space="preserve">
-    <value>Recieve by SMS</value>
+    <value>Receive by SMS</value>
   </data>
   <data name="Confirm_MyTickets_Calendar_ShowMessage_Text" xml:space="preserve">
     <value>Unfortunately the Calendar is not available</value>
+    <comment>Podes explicar este erro? É quando a integração não funciona?</comment>
   </data>
   <data name="Confirm_MyTickets_Email_ShowMessage_Text1" xml:space="preserve">
-    <value>We have sent and email to</value>
+    <value>We've sent an email to</value>
   </data>
   <data name="Confirm_MyTickets_Email_ShowMessage_Text2" xml:space="preserve">
     <value>with your ticket.</value>
   </data>
   <data name="Confirm_MyTickets_SMS_ShowMessage_Text" xml:space="preserve">
-    <value>Unfortunately, the SMS service is not available</value>
+    <value>Sorry, we're not able to send your ticket by SMS at the moment.</value>
+    <comment>Mudei ligeiramente a forma como estava escrita</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_AccessTicket" xml:space="preserve">
     <value>You can access your ticket at any time</value>
@@ -367,7 +377,7 @@
     <value>Final price</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
-    <value>Invite your friends and travel with 1€ only.</value>
+    <value>Invite your friends and travel for just €1.</value>
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
@@ -379,17 +389,17 @@
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
-    <value>Thank you for choosing Yoyoloop!</value>
+    <value>Thank you for choosing YoyoLoop!</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
     <value>Ticket number</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_TripConfirmed" xml:space="preserve">
-    <value>Your trip is confirmed</value>
+    <value>Your trip is confirmed.</value>
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_YoyoloopTeam" xml:space="preserve">
-    <value>The Yoyoloop team.</value>
+    <value>The YoyoLoop Team.</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_HereLink" xml:space="preserve">
     <value>here</value>
@@ -403,29 +413,132 @@
   <data name="Confirm_Service_SendTicket_Email_Subject3" xml:space="preserve">
     <value>is confirmed</value>
   </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer" xml:space="preserve">
+    <value>As a safety measure, YoyoLoop only considers an account fully created after an email address is confirmed.</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail" xml:space="preserve">
+    <value>To access your ticket, you will need to confirm your email. Simply click on</value>
+  </data>
+  <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmWhy" xml:space="preserve">
+    <value>Why do I have to confirm my email?</value>
+  </data>
+  <data name="Confirm_SubTitle" xml:space="preserve">
+    <value>Find your ticket at</value>
+    <comment>Preciso de contexto para o "em"</comment>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_btnResendLink_Text" xml:space="preserve">
+    <value>Resend link</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Problems" xml:space="preserve">
+    <value>Please contact us</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Problems_ContactLink" xml:space="preserve">
+    <value>if you run into any trouble</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1" xml:space="preserve">
+    <value>We've sent an email to</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2" xml:space="preserve">
+    <value>with the link so you can confirm your email address.</value>
+  </data>
+  <data name="Confirm_UnconfirmedEmail_Text" xml:space="preserve">
+    <value>Please confirm your email address to access your ticket.&lt;br&gt;We've sent an access link to your ticket to</value>
+  </data>
+  <data name="Controls_BookingPanel_btnBook_Text" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="Controls_BookingPanel_btnBook_Unavailable_Text" xml:space="preserve">
+    <value>Trip unavailable</value>
+  </data>
+  <data name="Controls_BookingPanel_Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Controls_BookingPanel_FinalPrice" xml:space="preserve">
+    <value>Final price</value>
+  </data>
+  <data name="Controls_BookingPanel_Going" xml:space="preserve">
+    <value>One way</value>
+  </data>
+  <data name="Controls_BookingPanel_Goings" xml:space="preserve">
+    <value>One way</value>
+  </data>
+  <data name="Controls_BookingPanel_Origin" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Controls_BookingPanel_PriceSummary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="Controls_BookingPanel_Price_PerSeat" xml:space="preserve">
+    <value>per seat</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_DontHaveLink" xml:space="preserve">
+    <value>I don't have a promo code</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_HaveLink" xml:space="preserve">
+    <value>I have a promo code</value>
+  </data>
+  <data name="Controls_BookingPanel_Promocode_tbPromo_placeholder" xml:space="preserve">
+    <value>Insert code</value>
+  </data>
+  <data name="Controls_Forgot_btnForgot_Text" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Controls_Forgot_MainTitle" xml:space="preserve">
+    <value>YoyoLoop login</value>
+  </data>
+  <data name="Controls_Forgot_NoAccount" xml:space="preserve">
+    <value>Still don't have an account?</value>
+  </data>
+  <data name="Controls_Forgot_RegisterLink" xml:space="preserve">
+    <value>Register</value>
+  </data>
   <data name="Controls_Forgot_ResultMessage_Failure" xml:space="preserve">
     <value>This user does not exist.</value>
   </data>
   <data name="Controls_Forgot_ResultMessage_Success" xml:space="preserve">
     <value>Please check your email to reset your password.</value>
   </data>
+  <data name="Controls_Forgot_SubTitle_1" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+  <data name="Controls_Forgot_SubTitle_2" xml:space="preserve">
+    <value>Insert your email</value>
+  </data>
+  <data name="Controls_Forgot_tbForgotEmail_placeholder" xml:space="preserve">
+    <value>Email address</value>
+  </data>
   <data name="Controls_Forgot_tbForgotEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
   </data>
   <data name="Controls_Login_btnLogin_Text" xml:space="preserve">
-    <value>Login</value>
+    <value>Log in</value>
+  </data>
+  <data name="Controls_Login_cbRememberMe" xml:space="preserve">
+    <value>Remember my &lt;br&gt;password</value>
+  </data>
+  <data name="Controls_Login_ForgotPassword" xml:space="preserve">
+    <value>I forgot my password</value>
   </data>
   <data name="Controls_Login_LoginMessageFailure_Text" xml:space="preserve">
     <value>Invalid login attempt</value>
   </data>
   <data name="Controls_Login_LoginMessageSucess_Text" xml:space="preserve">
-    <value>Login sucessful</value>
+    <value>You've logged in successfully</value>
   </data>
   <data name="Controls_Login_LoginOr" xml:space="preserve">
     <value>or</value>
   </data>
   <data name="Controls_Login_MainTitle" xml:space="preserve">
-    <value>Yoyoloop Login</value>
+    <value>YoyoLoop Login</value>
+  </data>
+  <data name="Controls_Login_NoAccount" xml:space="preserve">
+    <value>Still don't have an account?</value>
+  </data>
+  <data name="Controls_Login_RegisterLink" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Controls_Login_tbLoginEmail_placeholder" xml:space="preserve">
+    <value>Email address</value>
   </data>
   <data name="Controls_Login_tbLoginEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
@@ -437,11 +550,33 @@
   <data name="Controls_Login_tbLoginPassword_Validator_ErrorMessage" xml:space="preserve">
     <value>The password field is required.</value>
   </data>
+  <data name="Controls_Login_WithEmail" xml:space="preserve">
+    <value>Register with your email</value>
+  </data>
+  <data name="Controls_Login_WithFacebook" xml:space="preserve">
+    <value>with Facebook</value>
+  </data>
+  <data name="Controls_Login_WithGoogle" xml:space="preserve">
+    <value>with Google</value>
+  </data>
+  <data name="Controls_Register_btnRegisterContinue_Text" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Controls_Register_cbRegisterCampaigns" xml:space="preserve">
+    <value>I want to receive&lt;br&gt;promotional campaigns from YoyoLoop</value>
+  </data>
+  <data name="Controls_Register_HaveAccount" xml:space="preserve">
+    <value>Already have an account?</value>
+  </data>
   <data name="Controls_Register_LoginLink" xml:space="preserve">
-    <value>Fazer login</value>
+    <value>Log in</value>
   </data>
   <data name="Controls_Register_MainTitle" xml:space="preserve">
-    <value>Yoyoloop login</value>
+    <value>YoyoLoop login</value>
+  </data>
+  <data name="Controls_Register_RegisterMessage_Failure" xml:space="preserve">
+    <value>An error occurred</value>
+    <comment>O identity devolve erros especificos, mas só estão traduzidos em pt-BR - traduzir é um endeavour</comment>
   </data>
   <data name="Controls_Register_RegisterOr" xml:space="preserve">
     <value>or</value>
@@ -450,14 +585,23 @@
   <data name="Controls_Register_tbRegisterConfirmEmail_CompareValidator_ErrorMessage" xml:space="preserve">
     <value>The email and confirmation email do not match.</value>
   </data>
+  <data name="Controls_Register_tbRegisterConfirmEmail_placeholder" xml:space="preserve">
+    <value>Repeat email address</value>
+  </data>
   <data name="Controls_Register_tbRegisterConfirmEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The confirm email field is required.</value>
   </data>
   <data name="Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
     <value>The password and confirmation password do not match.</value>
   </data>
+  <data name="Controls_Register_tbRegisterConfirmPassword_placeholder" xml:space="preserve">
+    <value>Repeat password</value>
+  </data>
   <data name="Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
     <value>The confirm password field is required.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterEmail_placeholder" xml:space="preserve">
+    <value>Email address</value>
   </data>
   <data name="Controls_Register_tbRegisterEmail_Validator_ErrorMessage" xml:space="preserve">
     <value>The email field is required.</value>
@@ -477,8 +621,744 @@
     <value>The password field is required.</value>
     <comment>repetido</comment>
   </data>
+  <data name="Controls_Register_WithEmail" xml:space="preserve">
+    <value>Before receiving your ticket&lt;br&gt;we need to know a few details.</value>
+  </data>
+  <data name="Controls_Register_WithFacebook" xml:space="preserve">
+    <value>with Facebook</value>
+  </data>
+  <data name="Controls_Register_WithGoogle" xml:space="preserve">
+    <value>with Google</value>
+  </data>
+  <data name="Controls_Ticket_BookAgain" xml:space="preserve">
+    <value>Rebook</value>
+  </data>
+  <data name="Controls_Ticket_btnBooking_Text" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="Controls_Ticket_btnViewBooking_Text" xml:space="preserve">
+    <value>See booking</value>
+  </data>
+  <data name="Controls_Ticket_Canceled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Controls_Ticket_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Controls_Ticket_Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Controls_Ticket_Details" xml:space="preserve">
+    <value>see details</value>
+  </data>
+  <data name="Controls_Ticket_Going" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Controls_Ticket_Origin" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Controls_Ticket_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="Controls_Ticket_Return" xml:space="preserve">
+    <value>RETURN</value>
+  </data>
+  <data name="Controls_Ticket_Ticket" xml:space="preserve">
+    <value>TICKET</value>
+  </data>
+  <data name="Controls_Ticket_Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Controls_Ticket_YourTrip" xml:space="preserve">
+    <value>Your trip</value>
+  </data>
+  <data name="DownloadTicket_ErrorMessage" xml:space="preserve">
+    <value>We couldn't find your ticket.</value>
+  </data>
+  <data name="General_LoopData_Capacity_Coimbra" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="General_LoopData_Capacity_Leiria" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="General_LoopData_Capacity_Porto" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="General_LoopData_Duration_Coimbra" xml:space="preserve">
+    <value>2 H</value>
+  </data>
+  <data name="General_LoopData_Duration_Leiria" xml:space="preserve">
+    <value>1 H 30</value>
+  </data>
+  <data name="General_LoopData_Duration_Porto" xml:space="preserve">
+    <value>2 H 30</value>
+  </data>
+  <data name="General_LoopData_Price_Coimbra" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="General_LoopData_Price_Leiria" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="General_LoopData_Price_Porto" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="General_Promocode" xml:space="preserve">
+    <value>Promocode</value>
+  </data>
+  <data name="General_Seat" xml:space="preserve">
+    <value>seat</value>
+  </data>
+  <data name="General_Seats" xml:space="preserve">
+    <value>seats</value>
+  </data>
+  <data name="General_StripeCard_Card" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="General_StripeCard_Card_CardNumber_EndsIn" xml:space="preserve">
+    <value>Expires in</value>
+  </data>
+  <data name="General_StripeCard_Card_EndingIn" xml:space="preserve">
+    <value>expired in</value>
+  </data>
+  <data name="General_StripeCard_Card_New" xml:space="preserve">
+    <value>New credit card</value>
+  </data>
+  <data name="Help_CantFind" xml:space="preserve">
+    <value>Can't find your question?</value>
+  </data>
+  <data name="Help_CantFind_ContactUs" xml:space="preserve">
+    <value>CONTACT US</value>
+  </data>
+  <data name="Help_Detailed_btnBack_Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Help_MainTitle" xml:space="preserve">
+    <value>Need help?</value>
+  </data>
+  <data name="Help_SeeAllLink" xml:space="preserve">
+    <value>&amp;rarr; See all</value>
+    <comment>Algum erro?</comment>
+  </data>
   <data name="Help_SubTitle" xml:space="preserve">
     <value>Frequently Asked Questions</value>
+  </data>
+  <data name="Help_Topic_Careers" xml:space="preserve">
+    <value>Careers at YoyoLoop</value>
+  </data>
+  <data name="Help_Topic_Careers_Question_HowTo" xml:space="preserve">
+    <value>How can I drive a YoyoLoop?</value>
+  </data>
+  <data name="Help_Topic_Careers_Question_HowTo_Answer" xml:space="preserve">
+    <value>Our team is growing! If you want to join our team, please send your CV to careers@YoyoLoop.com</value>
+  </data>
+  <data name="Help_Topic_Corporate" xml:space="preserve">
+    <value>Corporate</value>
+    <comment>Ou "Corporate"?</comment>
+  </data>
+  <data name="Help_Topic_Corporate_Question_CorporatePricing" xml:space="preserve">
+    <value>Do you have special prices for companies?</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TaxInvoices" xml:space="preserve">
+    <value>Do you issue invoices?</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TotalSpending" xml:space="preserve">
+    <value>Can I know how much I spent in total?</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo" xml:space="preserve">
+    <value>Discounts and sales</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM" xml:space="preserve">
+    <value>How can I book €1 trips and how can I apply a promo code?</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes" xml:space="preserve">
+    <value>Can I use two promo codes for the same trip?</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer" xml:space="preserve">
+    <value>No. Each promo code can only be used for one trip.</value>
+  </data>
+  <data name="Help_Topic_Invite" xml:space="preserve">
+    <value>Invite friends</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_FriendsBenefits" xml:space="preserve">
+    <value>What do my friends earn for booking with my promode?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
+    <value>Can I share my promo codes with friends who have already used YoyoLoop?</value>
+    <comment>Esta pergunta/resposta é um pouco confusa. Fará mais sentido dizer "Não. Os seus códigos promocionais apenas podem ser aplicados na primeira viagem de um utilizador."</comment>
+  </data>
+  <data name="Help_Topic_Invite_Question_GiftToYoyoUsers_Answer" xml:space="preserve">
+    <value>No. Each friend you share your promo code with can only use it once.</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_HowManyFriends" xml:space="preserve">
+    <value>How many friends can I invite?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_MyBenefits" xml:space="preserve">
+    <value>What do I earn?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
+    <value>Where can I share my promo code?</value>
+  </data>
+  <data name="Help_Topic_Luggage" xml:space="preserve">
+    <value>Bags and Luggage</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_CanIBring" xml:space="preserve">
+    <value>Can I bring luggage with me?</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_CanIBring_Answer" xml:space="preserve">
+    <value>Yes, as long as they are within YoyoLoop's baggage limits.</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_NotAllowed" xml:space="preserve">
+    <value>What can't I bring with me?</value>
+  </data>
+  <data name="Help_Topic_Luggage_Question_SizeLimit" xml:space="preserve">
+    <value>What is your baggage policy?</value>
+  </data>
+  <data name="Help_Topic_Partners" xml:space="preserve">
+    <value>YoyoLoop Partners</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_HowTo" xml:space="preserve">
+    <value>How can I become a YoyoLoop partner?</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_PartnerProgram" xml:space="preserve">
+    <value>YoyoLoop's partner programme</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops" xml:space="preserve">
+    <value>Trips and Loops</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AssignedSeats" xml:space="preserve">
+    <value>Are there designated seats?</value>
+  </data>
+  <data name="Help_Topic_UserDashboard" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="Help_Topic_UserDashboard_Question_WhatCanIDo" xml:space="preserve">
+    <value>What can I do with my YoyoLoop profile?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars" xml:space="preserve">
+    <value>YoyoLoop vehicles</value>
+  </data>
+  <data name="HomePage_MainTitle" xml:space="preserve">
+    <value>Get rid of your car and enjoy your travel time while working or relaxing.</value>
+    <comment>@lorena - esta frase é super importante - sugestºoes welcome. Alterei para dar mais destaque ao substituição do carro e menos destaque a boleias. "Deixe o carro em casa e viaje num transfer de luxo ao preço do comboio"??</comment>
+  </data>
+  <data name="HomePage_PopularLoops_CantFind" xml:space="preserve">
+    <value>Can't find your city?</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Capacity" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Free" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Price_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="HomePage_PopularLoops_Features_Seats" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="HomePage_PopularLoops_ReserveLink" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="HomePage_PopularLoops_SeeAll_Link" xml:space="preserve">
+    <value>See all</value>
+  </data>
+  <data name="HomePage_PopularLoops_SuggestLink" xml:space="preserve">
+    <value>Suggest a loop</value>
+  </data>
+  <data name="HomePage_PopularLoops_Title" xml:space="preserve">
+    <value>Popular Loops</value>
+  </data>
+  <data name="HomePage_SubTitle" xml:space="preserve">
+    <value>Book your seat on a luxury van driven by a professional driver and enjoy a non-stop trip, with free wifi and at the same price as the train.</value>
+    <comment>@Lorena - também é super importante- vale a penapensares sobre isto e enviares-me sugestões para discutirmos</comment>
+  </data>
+  <data name="HomePage_SuggestLink" xml:space="preserve">
+    <value>Can't find your city?</value>
+  </data>
+  <data name="HomePage_SuggestLoop_btnSuggestSend" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="HomePage_SuggestLoop_MainTitle" xml:space="preserve">
+    <value>Can't find your city?</value>
+  </data>
+  <data name="HomePage_SuggestLoop_SuggestSend_Message" xml:space="preserve">
+    <value>Your suggestion was sent</value>
+  </data>
+  <data name="HomePage_SuggestLoop_tbSuggestBody_placeholder" xml:space="preserve">
+    <value>Your suggestion</value>
+  </data>
+  <data name="HomePage_SuggestLoop_tbSuggestEmail_placeholder" xml:space="preserve">
+    <value>Your email address</value>
+  </data>
+  <data name="HomePage_SuggestLoop_Text" xml:space="preserve">
+    <value>Want YoyoLoop to give you a ride to your city?&lt;br&gt;Suggest a loop and keep a lookout for news!</value>
+  </data>
+  <data name="HomePage_WhereToCard_Location_And" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="HomePage_WhereToCard_Location_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="HomePage_WhereToCard_Price_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="HomePage_WhereToCard_ReserveLink" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="HomePage_WhereToCard_When_Everyday" xml:space="preserve">
+    <value>Every day</value>
+  </data>
+  <data name="HomePage_WhereToGo" xml:space="preserve">
+    <value>Where do you want to go?</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_Content" xml:space="preserve">
+    <value>You can save up to 75% by taking a Loop from YoyoLoop instead of taking you own car, and you get a much more enjoyable trip.</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_SubTitle" xml:space="preserve">
+    <value>Arrive fresh,&lt;br&gt;while saving</value>
+  </data>
+  <data name="HomePage_Why_Card_Accessible_Title" xml:space="preserve">
+    <value>Accessible</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_Content" xml:space="preserve">
+    <value>YoyoLoop has frequent departures and near door-to-door service, with 10 access points in Lisbon and in Porto, connecting directly the city centers, main office areas and shopping malls. </value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_SubTitle" xml:space="preserve">
+    <value>Convenient &lt;br&gt; pick up and drop off</value>
+  </data>
+  <data name="HomePage_Why_Card_Convenient_Title" xml:space="preserve">
+    <value>Convenient</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_Content" xml:space="preserve">
+    <value>A professional driver will prick you up at pre-set place and departure time. All you have to do is to choose you departure point, book your trip and use your reserved seat.</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_SubTitle" xml:space="preserve">
+    <value>Garanteed place,&lt;br&gt;scheduled departure</value>
+  </data>
+  <data name="HomePage_Why_Card_Reliable_Title" xml:space="preserve">
+    <value>Reliable</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_Content" xml:space="preserve">
+    <value>All our trips are done with 8 seat luxury vans. We take cars of the motorways and thus reduce the carbon footprint of these inter-city Loops.</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_SubTitle" xml:space="preserve">
+    <value>Fewer cars,&lt;br&gt;better cities</value>
+  </data>
+  <data name="HomePage_Why_Card_Sustainable_Title" xml:space="preserve">
+    <value>Sustainable</value>
+  </data>
+  <data name="HomePage_Why_Title" xml:space="preserve">
+    <value>Why should you travel with YoyoLoop?</value>
+  </data>
+  <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
+    <value>The only inter-city mobility option that is a real alternative to individual car, train and plane.</value>
+  </data>
+  <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
+    <value>Train stations and airports are a terrible experience and taking your own car is expensive and tiring. With a YoyoLoop luxury van, you can go to Lisbon, Oporto, Coimbra or Leiria and enjoy a non-stop trip while working or relaxing.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
+    <value>For security reasons, YoyoLoop only creates the client account after email confirmation.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmEmail" xml:space="preserve">
+    <value>Please confirm your email address by clicking</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_ConfirmWhy" xml:space="preserve">
+    <value>Why do I have to confirm my email?</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_HereLink" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_Thankyou" xml:space="preserve">
+    <value>Thank you for your preference!</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_Title" xml:space="preserve">
+    <value>Welcome to YoyoLoop!</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Body_YoyoloopTeam" xml:space="preserve">
+    <value>The YoyoLoop Team.</value>
+  </data>
+  <data name="MasterService_SendEmailConfirmation_Subject" xml:space="preserve">
+    <value>Welcome to YoyoLoop!</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_HereLink" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_YoyoloopTeam" xml:space="preserve">
+    <value>YoyoLoop team</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
+    <value>Recover your password</value>
+  </data>
+  <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
+    <value>Book now</value>
+  </data>
+  <data name="MyTrips_Empty_MainTitle" xml:space="preserve">
+    <value>No book trips yet.</value>
+  </data>
+  <data name="MyTrips_Empty_SubTitle" xml:space="preserve">
+    <value>Book your first trip with YoyoLoop!</value>
+  </data>
+  <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
+    <value>Share your own promocode with your friends and travel for only 1€!</value>
+  </data>
+  <data name="MyTrips_Invite_How" xml:space="preserve">
+    <value>How to travel for 1€ for any destination</value>
+  </data>
+  <data name="MyTrips_Invite_OfferTrips_Description" xml:space="preserve">
+    <value>Your friends travel to any destination for only 1€.</value>
+  </data>
+  <data name="MyTrips_Invite_OfferTrips_Title" xml:space="preserve">
+    <value>Offer trips as gifts</value>
+  </data>
+  <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
+    <value>You can recommend YoyoLoop to your friends by sharing your promocode</value>
+  </data>
+  <data name="MyTrips_Invite_Recommend_Title" xml:space="preserve">
+    <value>Recommend YoyoLoop</value>
+  </data>
+  <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
+    <value>Travel for 1€!</value>
+  </data>
+  <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
+    <value>Get a trip for 1€ to any destination for each friend that uses YoyoLoop for the first time</value>
+  </data>
+  <data name="MyTrips_MainTitle" xml:space="preserve">
+    <value>My trips</value>
+  </data>
+  <data name="MyTrips_PastTrips_MainTitle" xml:space="preserve">
+    <value>Previous trips</value>
+  </data>
+  <data name="Profile_Billing_BillingDetails_Save_SucessMessage" xml:space="preserve">
+    <value>Your details were successfully updated</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_btnBillingSave_Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingAddress_Label" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage" xml:space="preserve">
+    <value>The field address is mandatory</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCity_Label" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage" xml:space="preserve">
+    <value>The field City is mandatory</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCompany_Label" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingName_Label" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage" xml:space="preserve">
+    <value>The field name is mandatory</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_Label" xml:space="preserve">
+    <value>VAT number</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage" xml:space="preserve">
+    <value>Please insert a valid number</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage" xml:space="preserve">
+    <value>The field VAT number is mandatory</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingZIP_Label" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_tbBillingZIP_Validator_ErrorMessage" xml:space="preserve">
+    <value>Mandatory</value>
+  </data>
+  <data name="Profile_Billing_BillingForm_Title" xml:space="preserve">
+    <value>Invoicing details</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnAddCard_Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnRemoveCard_Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label" xml:space="preserve">
+    <value>Main card</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_ddlCardMenu_Label" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label" xml:space="preserve">
+    <value>Name on card</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_tbCardNumber_Label" xml:space="preserve">
+    <value>Card number</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethodsForm_Title" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_AddCard_SucessMessage" xml:space="preserve">
+    <value>Your card was successfully added</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_RemoveCard_SucessMessage" xml:space="preserve">
+    <value>Your card was successfully removed</value>
+  </data>
+  <data name="Profile_Billing_PaymentMethods_UpdateCard_SucessMessage" xml:space="preserve">
+    <value>Your card was successfully updated</value>
+  </data>
+  <data name="Profile_Invite_MainTitle" xml:space="preserve">
+    <value>Invite your friends and travel for only 1€</value>
+  </data>
+  <data name="Profile_Invite_MGMTrips1" xml:space="preserve">
+    <value>You still have</value>
+  </data>
+  <data name="Profile_Invite_MGMTrips2" xml:space="preserve">
+    <value>1€ trips to enjoy</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_btnCopyLink_Text" xml:space="preserve">
+    <value>Copy link</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_btnShare_Text" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_CopiedPopover" xml:space="preserve">
+    <value>Copied to clipboard</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_email" xml:space="preserve">
+    <value>Send my by email</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_facebook" xml:space="preserve">
+    <value>Share on Facebook</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_linkedin" xml:space="preserve">
+    <value>Share on Linkedin</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMenu_twitter" xml:space="preserve">
+    <value>Share on Twitter</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
+    <value>Share your promocode with yor friends and travel for only 1€!</value>
+  </data>
+  <data name="Profile_Invite_Saved" xml:space="preserve">
+    <value>You have saved</value>
+  </data>
+  <data name="Profile_Invite_Why_Offer_Description" xml:space="preserve">
+    <value>Your friends can travel for any destination for only 1€!</value>
+  </data>
+  <data name="Profile_Invite_Why_Offer_Title" xml:space="preserve">
+    <value>Give trips</value>
+  </data>
+  <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
+    <value>Recommend YoyoLoop to your friends by sharing your promocode</value>
+  </data>
+  <data name="Profile_Invite_Why_Recommend_Title" xml:space="preserve">
+    <value>Recommend YoyoLoop</value>
+  </data>
+  <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
+    <value>Get a trip for 1€ to any destination for each friend that uses YoyoLoop for the first time</value>
+  </data>
+  <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
+    <value>Travel for 1€!</value>
+  </data>
+  <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
+    <value>Train stations and airports are a terrible experience and taking your own car is expensive and tiring. With a YoyoLoop luxury van, you can go to Lisbon, Oporto, Coimbra or Leiria and enjoy a non-stop trip while working or relaxing.</value>
+  </data>
+  <data name="Profile_Invite_YoyoloopWhy_Title" xml:space="preserve">
+    <value>Why travel with YoyoLoop?</value>
+  </data>
+  <data name="Profile_MainTitle" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="Profile_Menu_BillingDetails" xml:space="preserve">
+    <value>Invoicing details</value>
+  </data>
+  <data name="Profile_Menu_Invite" xml:space="preserve">
+    <value>Invite friends</value>
+  </data>
+  <data name="Profile_Menu_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Profile_Menu_PersonalDetails" xml:space="preserve">
+    <value>My details</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text" xml:space="preserve">
+    <value>Change email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure" xml:space="preserve">
+    <value>The password that you have inserted is not correct</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1" xml:space="preserve">
+    <value>Your email was successfully changed.&lt;br/&gt;&lt;br/&gt;We sent and email to</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2" xml:space="preserve">
+    <value>with a confirmation link for the new email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Insert your password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label" xml:space="preserve">
+    <value>New email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage" xml:space="preserve">
+    <value>The email address is mandatory</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label" xml:space="preserve">
+    <value>Repeat your email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Inserted email do not match</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage" xml:space="preserve">
+    <value>Repeat the email is mandatory</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangeEmail_Title" xml:space="preserve">
+    <value>Change email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1" xml:space="preserve">
+    <value>There was an error with your password.&lt;br/&gt;&lt;br/&gt;Try again or</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2" xml:space="preserve">
+    <value>contact us</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess" xml:space="preserve">
+    <value>Your password was successfully changed.</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword" xml:space="preserve">
+    <value>The password that you have inserted is not correct</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>The passwords inserted do not match</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label" xml:space="preserve">
+    <value>Repeat your password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>It is mandatory to repeat your password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>Insert your current password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Label" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage" xml:space="preserve">
+    <value>The new password is mandatory</value>
+  </data>
+  <data name="Profile_PersonalDetails_ChangePassword_Title" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text" xml:space="preserve">
+    <value>re-send link</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1" xml:space="preserve">
+    <value>We have sent an email to</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2" xml:space="preserve">
+    <value>with the link so you can confirm your email address.</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage" xml:space="preserve">
+    <value>Your details were successfully updated</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Insert a valid date</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label" xml:space="preserve">
+    <value>Birth date</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder" xml:space="preserve">
+    <value>AAAA / MM / DD</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Label" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed" xml:space="preserve">
+    <value>Not confirmed</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Label" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage" xml:space="preserve">
+    <value>The fild Name is not valid</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage" xml:space="preserve">
+    <value>Insert a valid number</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed" xml:space="preserve">
+    <value>Not confirmed</value>
+  </data>
+  <data name="Profile_PersonalDetails_Title" xml:space="preserve">
+    <value>Personal details</value>
+  </data>
+  <data name="SiteMaster_Errors_AntiXSRF" xml:space="preserve">
+    <value>And error has occurred</value>
+    <comment>??? em que contexto acontece este erro?</comment>
+  </data>
+  <data name="SiteMaster_Footer_Destinos" xml:space="preserve">
+    <value>Destinations</value>
+  </data>
+  <data name="SiteMaster_Footer_Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SiteMaster_Footer_Language_Portuguese" xml:space="preserve">
+    <value>Portuguese</value>
+  </data>
+  <data name="SiteMaster_Footer_Loops" xml:space="preserve">
+    <value>Loops &amp; Schedules</value>
+  </data>
+  <data name="SiteMaster_Footer_Privacy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="SiteMaster_Footer_Terms" xml:space="preserve">
+    <value>Terms and conditions</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_About" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_Contact" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="SiteMaster_Footer_Yoyoloop_HowTo" xml:space="preserve">
+    <value>How it works</value>
   </data>
   <data name="SiteMaster_NavBar_Destinations" xml:space="preserve">
     <value>Destinations</value>
@@ -492,14 +1372,113 @@
   <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
     <value>Register/Login</value>
   </data>
+  <data name="SiteMaster_ProfileMenu_Billing" xml:space="preserve">
+    <value>Invoicing details</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Invite" xml:space="preserve">
+    <value>Invite friends</value>
+  </data>
   <data name="SiteMaster_ProfileMenu_Logout" xml:space="preserve">
     <value>Logout</value>
+  </data>
+  <data name="SiteMaster_ProfileMenu_Profile" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="StaticPages_About_MainDescription" xml:space="preserve">
+    <value>Disruptin inter-city mobility, one Loop at a time.</value>
   </data>
   <data name="StaticPages_About_MainTitle" xml:space="preserve">
     <value>About us</value>
   </data>
+  <data name="StaticPages_About_Shuttles_SubTitle" xml:space="preserve">
+    <value>Our shuttles are all luxury 8 seat vans from Mercedes Benz (V-class Avantgarde, with leather seats). We have free wifi and a modern luxury interior and a professional driver that you enjoy the full length of your tip.</value>
+  </data>
+  <data name="StaticPages_About_Shuttles_Title" xml:space="preserve">
+    <value>Our luxury vans</value>
+  </data>
+  <data name="StaticPages_About_SubDescription" xml:space="preserve">
+    <value>Yoyoloop has the ambition of revolutionizing intercity mobility. We believe they should amount to more than traffic jams, rush hour and parking lots.&lt;br&gt;&lt;br&gt;It is precisely why we created a luxury mobility service as an alternative to trains and traditional car rides, with the difference of being more accessible, convenient, reliable and sustainable. Our luxury vans have wifi on board and are driven by professional drivers to ensure a more useful and comfortable journey. For the good of our cities.</value>
+  </data>
+  <data name="StaticPages_About_Why_Accessible_Content" xml:space="preserve">
+    <value>You can save up to 75% by taking a Loop from YoyoLoop instead of taking you own car, and you get a much more enjoyable trip.</value>
+  </data>
+  <data name="StaticPages_About_Why_Accessible_SubTitle" xml:space="preserve">
+    <value>Arrive fresh,&lt;br&gt;while saving</value>
+  </data>
+  <data name="StaticPages_About_Why_Accessible_Title" xml:space="preserve">
+    <value>Accessible</value>
+  </data>
+  <data name="StaticPages_About_Why_Convenient_Content" xml:space="preserve">
+    <value>YoyoLoop has frequent departures and near door-to-door service, with 10 access points in Lisbon and in Porto, connecting directly the city centers, main office areas and shopping malls. </value>
+  </data>
+  <data name="StaticPages_About_Why_Convenient_SubTitle" xml:space="preserve">
+    <value>Convenient &lt;br&gt; pick up and drop off</value>
+  </data>
+  <data name="StaticPages_About_Why_Convenient_Title" xml:space="preserve">
+    <value>Convenient</value>
+  </data>
+  <data name="StaticPages_About_Why_Reliable_Content" xml:space="preserve">
+    <value>A professional driver will prick you up at pre-set place and departure time. All you have to do is to choose you departure point, book your trip and use your reserved seat.</value>
+  </data>
+  <data name="StaticPages_About_Why_Reliable_SubTitle" xml:space="preserve">
+    <value>Garanteed place,&lt;br&gt;scheduled departure</value>
+  </data>
+  <data name="StaticPages_About_Why_Reliable_Title" xml:space="preserve">
+    <value>Reliable</value>
+  </data>
+  <data name="StaticPages_About_Why_Sustainable_Content" xml:space="preserve">
+    <value>All our trips are done with 8 seat luxury vans. We take cars of the motorways and thus reduce the carbon footprint of these inter-city Loops.</value>
+  </data>
+  <data name="StaticPages_About_Why_Sustainable_SubTitle" xml:space="preserve">
+    <value>Less cars,&lt;br&gt; better cities</value>
+  </data>
+  <data name="StaticPages_About_Why_Sustainable_Title" xml:space="preserve">
+    <value>Sustainable</value>
+  </data>
+  <data name="StaticPages_Contact_Bookings" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_btnSend_text" xml:space="preserve">
+    <value>Send my by email</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_Send_ShowMessage" xml:space="preserve">
+    <value>Your message was sent</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbBody_Label" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbEmail_Label" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbName_Label" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_tbSubject_Label" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="StaticPages_Contact_ContactForm_Title" xml:space="preserve">
+    <value>Send us a message</value>
+  </data>
+  <data name="StaticPages_Contact_Title" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
   <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
     <value>&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_MainTitle" xml:space="preserve">
+    <value>Disrupting inter-city mobility, &lt;br&gt;one Loop at a time</value>
+  </data>
+  <data name="StaticPages_Loops_SubDescription" xml:space="preserve">
+    <value>YoyoLoop has Loops available between Lisbon and Oporto, Coimbra and Leiria.</value>
+  </data>
+  <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
+    <value>Loops &amp; Schedules</value>
+  </data>
+  <data name="StaticPages_Privacy_MainTitle" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="StaticPages_Terms_MainTitle" xml:space="preserve">
+    <value>Terms and conditions</value>
   </data>
   <data name="Stripe_ErrorHandling_CardError_card_declined" xml:space="preserve">
     <value>The card was declined.</value>
