@@ -151,7 +151,7 @@ namespace MVP.Services
                 var threshold = model.UpdateService.First().WarningThreshold;
                 if (elapsed > threshold)
                 {
-                    SendWarning("Host: " + host + "\r\nUpdate task hasn't run in over " + threshold.ToString("mm") + " minutes.\r\nLastRun: " + lastrun.ToString("F", ApplicationHelpers.DefaultCulture()));
+                    SendWarning("Host: " + host + "<br>Update task hasn't run in over " + threshold.ToString("mm") + " minutes.<br>LastRun: " + lastrun.ToString("F", ApplicationHelpers.DefaultCulture()));
                     model.UpdateService.First().Warning = true;
                     model.SaveChanges();
                 }
