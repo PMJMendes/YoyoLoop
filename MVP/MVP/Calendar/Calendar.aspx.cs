@@ -484,12 +484,13 @@ namespace MVP.Calendar
                     localData.Values.EndRegion = endregion;
                     DdlEndRegion.SelectedText = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault()?.Name;
 
-                    DdlEndAP.DataSource = DdlEndAP_GetData();
+                    var endap_data = DdlEndAP_GetData();
+                    DdlEndAP.DataSource = endap_data;
                     DdlEndAP.ListDataBind();
 
                     if (!string.IsNullOrEmpty(query["Dap"]))
                     {
-                        var dap = DdlEndAP.DataSource.Where(ap => ap.Text == query["Dap"]).FirstOrDefault()?.Value;
+                        var dap = endap_data.Where(ap => ap.Text == query["Dap"]).FirstOrDefault()?.Value;
                         if(!string.IsNullOrEmpty(dap))
                         {
                             endap = dap;
@@ -497,7 +498,7 @@ namespace MVP.Calendar
                     }
 
                     localData.Values.EndAP = endap;
-                    DdlEndAP.SelectedText = DdlEndAP.DataSource.Where(ap => ap.Value == endap).FirstOrDefault().Text;
+                    DdlEndAP.SelectedText = endap_data.Where(ap => ap.Value == endap).FirstOrDefault().Text;
 
                     DdlStartRegion.DataSource = DdlStartRegion_GetData();
                     DdlStartRegion.ListDataBind();
@@ -525,12 +526,13 @@ namespace MVP.Calendar
                         localData.Values.StartRegion = startregion;
                         DdlStartRegion.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).Select(er => er.StartRegion).FirstOrDefault()?.Name;
 
-                        DdlStartAP.DataSource = DdlStartAP_GetData();
+                        var startap_data = DdlStartAP_GetData();
+                        DdlStartAP.DataSource = startap_data;
                         DdlStartAP.ListDataBind();
 
                         if (!string.IsNullOrEmpty(query["Sap"]))
                         {
-                            var sap = DdlStartAP.DataSource.Where(ap => ap.Text == query["Sap"]).FirstOrDefault()?.Value;
+                            var sap = startap_data.Where(ap => ap.Text == query["Sap"]).FirstOrDefault()?.Value;
                             if (!string.IsNullOrEmpty(sap))
                             {
                                 startap = sap;
@@ -538,7 +540,7 @@ namespace MVP.Calendar
                         }
 
                         localData.Values.StartAP = startap;
-                        DdlStartAP.SelectedText = DdlStartAP.DataSource.Where(ap => ap.Value == startap).FirstOrDefault().Text;
+                        DdlStartAP.SelectedText = startap_data.Where(ap => ap.Value == startap).FirstOrDefault().Text;
                     }
                 }
 
