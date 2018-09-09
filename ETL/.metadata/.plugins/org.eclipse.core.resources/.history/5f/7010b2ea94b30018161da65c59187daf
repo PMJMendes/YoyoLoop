@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_HW7rIbOJEei8z7zJyqB1eQ" id="_HW7rILOJEei8z7zJyqB1eQ" label="AccessPoints" creationDate="2018-09-08T19:03:32.050+0100" modificationDate="2018-09-08T19:25:15.673+0100" version="0.1" statusCode="" item="_HW7rI7OJEei8z7zJyqB1eQ" displayName="AccessPoints">
+    <author href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_HW7rIrOJEei8z7zJyqB1eQ" path="" locked="true" lockDate="2018-09-08T19:04:37.632+0100">
+    <locker href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:ItemState>
+  <TalendProperties:ProcessItem xmi:id="_HW7rI7OJEei8z7zJyqB1eQ" property="_HW7rIbOJEei8z7zJyqB1eQ" state="_HW7rIrOJEei8z7zJyqB1eQ">
+    <process href="AccessPoints_0.1.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>
