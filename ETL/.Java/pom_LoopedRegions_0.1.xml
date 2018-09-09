@@ -24,10 +24,10 @@
     <talend.product.version>6.3.0.20161026_1219</talend.product.version>
     <talend.job.finalName>loopedregions_0_1</talend.job.finalName>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8</talend.job.jvmargs>
-    <talend.project.branch>trunk</talend.project.branch>
+    <talend.project.branch></talend.project.branch>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-09-08 192735602</talend.job.date>
+    <talend.job.date>2018-09-09 190753808</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.loopedregions_0_1</talend.job.package>
     <talend.job.name>LoopedRegions</talend.job.name>

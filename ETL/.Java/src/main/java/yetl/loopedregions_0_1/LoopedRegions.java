@@ -240,6 +240,24 @@ private class TalendException extends Exception {
 					tPostgresqlConnection_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tPostgresqlInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tPostgresqlInput_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tPostgresqlOutput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tPostgresqlInput_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFileInputExcel_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -258,15 +276,6 @@ private class TalendException extends Exception {
 					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tReplicate_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostgresqlOutput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -276,34 +285,7 @@ private class TalendException extends Exception {
 					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tLogRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tReplicate_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostgresqlOutput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tLogRow_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -330,7 +312,7 @@ private class TalendException extends Exception {
 					tPostgresqlInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tAdvancedHash_row2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tAdvancedHash_row4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -339,7 +321,27 @@ private class TalendException extends Exception {
 					tPostgresqlInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tAggregateRow_1_AGGOUT_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+							tAggregateRow_1_AGGIN_error(exception, errorComponent, globalMap);
+						
+						}
+					
+			public void tAggregateRow_1_AGGIN_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tPostgresqlConnection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tPostgresqlInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -506,7 +508,7 @@ end_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
 									runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
 								} 
 							
-							tFileInputExcel_1Process(globalMap); 
+							tPostgresqlInput_2Process(globalMap); 
 						
 
 
@@ -560,7 +562,7 @@ end_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
 	
 
 
-public static class row4Struct implements routines.system.IPersistableRow<row4Struct> {
+public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
     final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
     static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
 	protected static final int DEFAULT_HASHCODE = 1;
@@ -573,18 +575,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 
 
 	
-			    public String Nome;
-
-				public String getNome () {
-					return this.Nome;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
 			    public Object LoopedRegionId;
 
 				public Object getLoopedRegionId () {
@@ -612,7 +602,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		final row4Struct other = (row4Struct) obj;
+		final row1Struct other = (row1Struct) obj;
 		
 						if (this.LoopedRegionId == null) {
 							if (other.LoopedRegionId != null)
@@ -626,452 +616,13 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		return true;
     }
 
-	public void copyDataTo(row4Struct other) {
+	public void copyDataTo(row1Struct other) {
 
-		other.Nome = this.Nome;
-	            other.Activo = this.Activo;
-	            other.LoopedRegionId = this.LoopedRegionId;
+		other.LoopedRegionId = this.LoopedRegionId;
 	            
 	}
 
-	public void copyKeysDataTo(row4Struct other) {
-
-		other.LoopedRegionId = this.LoopedRegionId;
-	            	
-	}
-
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_LoopedRegions.length) {
-				if(length < 1024 && commonByteArray_YETL_LoopedRegions.length == 0) {
-   					commonByteArray_YETL_LoopedRegions = new byte[1024];
-				} else {
-   					commonByteArray_YETL_LoopedRegions = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_LoopedRegions, 0, length);
-			strReturn = new String(commonByteArray_YETL_LoopedRegions, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_LoopedRegions) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.Nome = readString(dis);
-					
-			        this.Activo = dis.readBoolean();
-					
-						this.LoopedRegionId = (Object) dis.readObject();
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.Nome,dos);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-					// Object
-				
-       			    	dos.writeObject(this.LoopedRegionId);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("Nome="+Nome);
-		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row4Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.LoopedRegionId, other.LoopedRegionId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class row6Struct implements routines.system.IPersistableRow<row6Struct> {
-    final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
-    static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public String Nome;
-
-				public String getNome () {
-					return this.Nome;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-			    public Object LoopedRegionId;
-
-				public Object getLoopedRegionId () {
-					return this.LoopedRegionId;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.LoopedRegionId == null) ? 0 : this.LoopedRegionId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row6Struct other = (row6Struct) obj;
-		
-						if (this.LoopedRegionId == null) {
-							if (other.LoopedRegionId != null)
-								return false;
-						
-						} else if (!this.LoopedRegionId.equals(other.LoopedRegionId))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row6Struct other) {
-
-		other.Nome = this.Nome;
-	            other.Activo = this.Activo;
-	            other.LoopedRegionId = this.LoopedRegionId;
-	            
-	}
-
-	public void copyKeysDataTo(row6Struct other) {
-
-		other.LoopedRegionId = this.LoopedRegionId;
-	            	
-	}
-
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_LoopedRegions.length) {
-				if(length < 1024 && commonByteArray_YETL_LoopedRegions.length == 0) {
-   					commonByteArray_YETL_LoopedRegions = new byte[1024];
-				} else {
-   					commonByteArray_YETL_LoopedRegions = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_LoopedRegions, 0, length);
-			strReturn = new String(commonByteArray_YETL_LoopedRegions, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_LoopedRegions) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.Nome = readString(dis);
-					
-			        this.Activo = dis.readBoolean();
-					
-						this.LoopedRegionId = (Object) dis.readObject();
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.Nome,dos);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-					// Object
-				
-       			    	dos.writeObject(this.LoopedRegionId);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("Nome="+Nome);
-		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row6Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.LoopedRegionId, other.LoopedRegionId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class row3Struct implements routines.system.IPersistableRow<row3Struct> {
-    final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
-    static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public Object LoopedRegionId;
-
-				public Object getLoopedRegionId () {
-					return this.LoopedRegionId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.LoopedRegionId == null) ? 0 : this.LoopedRegionId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row3Struct other = (row3Struct) obj;
-		
-						if (this.LoopedRegionId == null) {
-							if (other.LoopedRegionId != null)
-								return false;
-						
-						} else if (!this.LoopedRegionId.equals(other.LoopedRegionId))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row3Struct other) {
-
-		other.LoopedRegionId = this.LoopedRegionId;
-	            other.Activo = this.Activo;
-	            
-	}
-
-	public void copyKeysDataTo(row3Struct other) {
+	public void copyKeysDataTo(row1Struct other) {
 
 		other.LoopedRegionId = this.LoopedRegionId;
 	            	
@@ -1089,8 +640,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
         		int length = 0;
 		
 						this.LoopedRegionId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1116,10 +665,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					// Object
 				
        			    	dos.writeObject(this.LoopedRegionId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1135,7 +680,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("LoopedRegionId="+String.valueOf(LoopedRegionId));
-		sb.append(",Activo="+String.valueOf(Activo));
 	    sb.append("]");
 
 	    return sb.toString();
@@ -1144,7 +688,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
     /**
      * Compare keys
      */
-    public int compareTo(row3Struct other) {
+    public int compareTo(row1Struct other) {
 
 		int returnValue = -1;
 		
@@ -1181,184 +725,451 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
 
 }
+public void tPostgresqlInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tPostgresqlInput_2_SUBPROCESS_STATE", 0);
 
-public static class row5Struct implements routines.system.IPersistableRow<row5Struct> {
-    final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
-    static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
 
-    public String loopKey;
+	try {
+
+			String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume
+				globalResumeTicket = true;
+
+
+
+		row1Struct row1 = new row1Struct();
+
 
 
 
 	
-			    public Object LoopedRegionId;
+	/**
+	 * [tPostgresqlOutput_3 begin ] start
+	 */
 
-				public Object getLoopedRegionId () {
-					return this.LoopedRegionId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
 	
-						result = prime * result + ((this.LoopedRegionId == null) ? 0 : this.LoopedRegionId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row5Struct other = (row5Struct) obj;
+	
 		
-						if (this.LoopedRegionId == null) {
-							if (other.LoopedRegionId != null)
-								return false;
-						
-						} else if (!this.LoopedRegionId.equals(other.LoopedRegionId))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row5Struct other) {
-
-		other.LoopedRegionId = this.LoopedRegionId;
-	            other.Activo = this.Activo;
-	            
-	}
-
-	public void copyKeysDataTo(row5Struct other) {
-
-		other.LoopedRegionId = this.LoopedRegionId;
-	            	
-	}
-
-
-
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_LoopedRegions) {
-
-        	try {
-
-        		int length = 0;
+		ok_Hash.put("tPostgresqlOutput_3", false);
+		start_Hash.put("tPostgresqlOutput_3", System.currentTimeMillis());
 		
-						this.LoopedRegionId = (Object) dis.readObject();
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
 					
-			        this.Activo = dis.readBoolean();
+						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
 					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
+				}
+			} 
 
 		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
+		int tos_count_tPostgresqlOutput_3 = 0;
 		
+    	class BytesLimit65535_tPostgresqlOutput_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlOutput_3().limitLog4jByte();
 
+
+
+
+
+String dbschema_tPostgresqlOutput_3 = null;
+	dbschema_tPostgresqlOutput_3 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
+	
+
+String tableName_tPostgresqlOutput_3 = null;
+if(dbschema_tPostgresqlOutput_3 == null || dbschema_tPostgresqlOutput_3.trim().length() == 0) {
+	tableName_tPostgresqlOutput_3 = "LoopedRegions";
+} else {
+	tableName_tPostgresqlOutput_3 = dbschema_tPostgresqlOutput_3 + "\".\"" + "LoopedRegions";
+}
+
+        int updateKeyCount_tPostgresqlOutput_3 = 1;
+        if(updateKeyCount_tPostgresqlOutput_3 < 1) {
+            throw new RuntimeException("For update, Schema must have a key");
         }
+int nb_line_tPostgresqlOutput_3 = 0;
+int nb_line_update_tPostgresqlOutput_3 = 0;
+int nb_line_inserted_tPostgresqlOutput_3 = 0;
+int nb_line_deleted_tPostgresqlOutput_3 = 0;
+int nb_line_rejected_tPostgresqlOutput_3 = 0;
 
+int deletedCount_tPostgresqlOutput_3=0;
+int updatedCount_tPostgresqlOutput_3=0;
+int insertedCount_tPostgresqlOutput_3=0;
+int rejectedCount_tPostgresqlOutput_3=0;
+
+boolean whetherReject_tPostgresqlOutput_3 = false;
+
+java.sql.Connection conn_tPostgresqlOutput_3 = null;
+String dbUser_tPostgresqlOutput_3 = null;
+
+	conn_tPostgresqlOutput_3 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+	
+	
+	
+	
+
+
+
+int count_tPostgresqlOutput_3=0;
+	    String update_tPostgresqlOutput_3 = "UPDATE \"" + tableName_tPostgresqlOutput_3 + "\" SET \"" + "Active" + "\" = " + "false" + " WHERE \"LoopedRegionId\" = ?";
+	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_3 = conn_tPostgresqlOutput_3.prepareStatement(update_tPostgresqlOutput_3);
+	    
+
+ 
+
+
+
+/**
+ * [tPostgresqlOutput_3 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tPostgresqlInput_2 begin ] start
+	 */
+
+	
+
+	
 		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
+		ok_Hash.put("tPostgresqlInput_2", false);
+		start_Hash.put("tPostgresqlInput_2", System.currentTimeMillis());
 		
-					// Object
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+		int tos_count_tPostgresqlInput_2 = 0;
+		
+    	class BytesLimit65535_tPostgresqlInput_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlInput_2().limitLog4jByte();
+	
+    
+	
+		    int nb_line_tPostgresqlInput_2 = 0;
+		    java.sql.Connection conn_tPostgresqlInput_2 = null;
+		        conn_tPostgresqlInput_2 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
 				
-       			    	dos.writeObject(this.LoopedRegionId);
+		    
+			java.sql.Statement stmt_tPostgresqlInput_2 = conn_tPostgresqlInput_2.createStatement();
+
+		    String dbquery_tPostgresqlInput_2 = "select \"public\".\"LoopedRegions\".\"LoopedRegionId\" \nfrom \"public\".\"LoopedRegions\"";
+			
+
+                       globalMap.put("tPostgresqlInput_2_QUERY",dbquery_tPostgresqlInput_2);
+
+		    java.sql.ResultSet rs_tPostgresqlInput_2 = null;
+		try{
+		    rs_tPostgresqlInput_2 = stmt_tPostgresqlInput_2.executeQuery(dbquery_tPostgresqlInput_2);
+		    java.sql.ResultSetMetaData rsmd_tPostgresqlInput_2 = rs_tPostgresqlInput_2.getMetaData();
+		    int colQtyInRs_tPostgresqlInput_2 = rsmd_tPostgresqlInput_2.getColumnCount();
+
+		    String tmpContent_tPostgresqlInput_2 = null;
+		    
+		    
+		    while (rs_tPostgresqlInput_2.next()) {
+		        nb_line_tPostgresqlInput_2++;
+		        
+							if(colQtyInRs_tPostgresqlInput_2 < 1) {
+								row1.LoopedRegionId = null;
+							} else {
+		                          
+            if(rs_tPostgresqlInput_2.getObject(1) != null) {
+                row1.LoopedRegionId = rs_tPostgresqlInput_2.getObject(1);
+            } else {
+                    throw new RuntimeException("Null value in non-Nullable column");
+            }
+		                    }
 					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
 
 
-    }
+ 
 
 
-    public String toString() {
 
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("LoopedRegionId="+String.valueOf(LoopedRegionId));
-		sb.append(",Activo="+String.valueOf(Activo));
-	    sb.append("]");
+/**
+ * [tPostgresqlInput_2 begin ] stop
+ */
+	
+	/**
+	 * [tPostgresqlInput_2 main ] start
+	 */
 
-	    return sb.toString();
-    }
+	
 
-    /**
-     * Compare keys
-     */
-    public int compareTo(row5Struct other) {
+	
+	
+	currentComponent="tPostgresqlInput_2";
 
-		int returnValue = -1;
+	
+
+ 
+
+
+	tos_count_tPostgresqlInput_2++;
+
+/**
+ * [tPostgresqlInput_2 main ] stop
+ */
+
+	
+	/**
+	 * [tPostgresqlOutput_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+
+			//row1
+			//row1
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+				} 
+			
+
 		
-						returnValue = checkNullsAndCompare(this.LoopedRegionId, other.LoopedRegionId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
 
 
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
 
-        return returnValue;
-    }
+        whetherReject_tPostgresqlOutput_3 = false;
+                    if(row1.LoopedRegionId == null) {
+pstmt_tPostgresqlOutput_3.setNull(1 + count_tPostgresqlOutput_3, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_3.setObject(1 + count_tPostgresqlOutput_3, row1.LoopedRegionId);
+}
 
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
 
+            try {
+                nb_line_tPostgresqlOutput_3++;
+				
+                updatedCount_tPostgresqlOutput_3 = updatedCount_tPostgresqlOutput_3 + pstmt_tPostgresqlOutput_3.executeUpdate();
+				
+            } catch(java.lang.Exception e) {
+				
+                whetherReject_tPostgresqlOutput_3 = true;
+                        System.err.print(e.getMessage());
+            }
+
+ 
+
+
+	tos_count_tPostgresqlOutput_3++;
+
+/**
+ * [tPostgresqlOutput_3 main ] stop
+ */
+
+
+
+	
+	/**
+	 * [tPostgresqlInput_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+
+	}
+}finally{
+	stmt_tPostgresqlInput_2.close();
 
 }
+globalMap.put("tPostgresqlInput_2_NB_LINE",nb_line_tPostgresqlInput_2);
+ 
+
+ok_Hash.put("tPostgresqlInput_2", true);
+end_Hash.put("tPostgresqlInput_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tPostgresqlInput_2 end ] stop
+ */
+
+	
+	/**
+	 * [tPostgresqlOutput_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+
+
+
+        if(pstmt_tPostgresqlOutput_3 != null) {
+            pstmt_tPostgresqlOutput_3.close();
+        }
+
+
+	nb_line_deleted_tPostgresqlOutput_3=nb_line_deleted_tPostgresqlOutput_3+ deletedCount_tPostgresqlOutput_3;
+	nb_line_update_tPostgresqlOutput_3=nb_line_update_tPostgresqlOutput_3 + updatedCount_tPostgresqlOutput_3;
+	nb_line_inserted_tPostgresqlOutput_3=nb_line_inserted_tPostgresqlOutput_3 + insertedCount_tPostgresqlOutput_3;
+	nb_line_rejected_tPostgresqlOutput_3=nb_line_rejected_tPostgresqlOutput_3 + rejectedCount_tPostgresqlOutput_3;
+	
+        globalMap.put("tPostgresqlOutput_3_NB_LINE",nb_line_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_UPDATED",nb_line_update_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_INSERTED",nb_line_inserted_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_DELETED",nb_line_deleted_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_REJECTED", nb_line_rejected_tPostgresqlOutput_3);
+    
+	
+
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tPostgresqlOutput_3", true);
+end_Hash.put("tPostgresqlOutput_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tPostgresqlOutput_3 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+				    			if(resumeEntryMethodName == null || globalResumeTicket){
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tPostgresqlInput_2:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+								}	    				    			
+					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+								} 
+							
+							tFileInputExcel_1Process(globalMap); 
+						
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tPostgresqlInput_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tPostgresqlInput_2 finally ] stop
+ */
+
+	
+	/**
+	 * [tPostgresqlOutput_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+
+
+
+	
+
+ 
+
+
+
+/**
+ * [tPostgresqlOutput_3 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tPostgresqlInput_2_SUBPROCESS_STATE", 1);
+	}
+	
+
 
 public static class updatesStruct implements routines.system.IPersistableRow<updatesStruct> {
     final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
@@ -1760,21 +1571,15 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 
 }
 
-public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
+public static class row3Struct implements routines.system.IPersistableRow<row3Struct> {
     final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
     static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
 
 	
-			    public String Nome;
+			    public String Regiao;
 
-				public String getNome () {
-					return this.Nome;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
+				public String getRegiao () {
+					return this.Regiao;
 				}
 				
 
@@ -1818,9 +1623,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
         		int length = 0;
 		
-					this.Nome = readString(dis);
-					
-			        this.Activo = dis.readBoolean();
+					this.Regiao = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1842,11 +1645,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		
 					// String
 				
-						writeString(this.Nome,dos);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
+						writeString(this.Regiao,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1861,8 +1660,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("Nome="+Nome);
-		sb.append(",Activo="+String.valueOf(Activo));
+		sb.append("Regiao="+Regiao);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -1871,7 +1669,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
     /**
      * Compare keys
      */
-    public int compareTo(row1Struct other) {
+    public int compareTo(row3Struct other) {
 
 		int returnValue = -1;
 		
@@ -1903,7 +1701,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
 }
 
-public static class after_tFileInputExcel_1Struct implements routines.system.IPersistableRow<after_tFileInputExcel_1Struct> {
+public static class OnRowsEndStructtAggregateRow_1 implements routines.system.IPersistableRow<OnRowsEndStructtAggregateRow_1> {
     final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
     static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
 	protected static final int DEFAULT_HASHCODE = 1;
@@ -1916,16 +1714,10 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 
 
 	
-			    public String Nome;
+			    public String Regiao;
 
-				public String getNome () {
-					return this.Nome;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
+				public String getRegiao () {
+					return this.Regiao;
 				}
 				
 
@@ -1936,7 +1728,7 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 			final int prime = PRIME;
 			int result = DEFAULT_HASHCODE;
 	
-						result = prime * result + ((this.Nome == null) ? 0 : this.Nome.hashCode());
+						result = prime * result + ((this.Regiao == null) ? 0 : this.Regiao.hashCode());
 					
     		this.hashCode = result;
     		this.hashCodeDirty = false;
@@ -1949,13 +1741,13 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		final after_tFileInputExcel_1Struct other = (after_tFileInputExcel_1Struct) obj;
+		final OnRowsEndStructtAggregateRow_1 other = (OnRowsEndStructtAggregateRow_1) obj;
 		
-						if (this.Nome == null) {
-							if (other.Nome != null)
+						if (this.Regiao == null) {
+							if (other.Regiao != null)
 								return false;
 						
-						} else if (!this.Nome.equals(other.Nome))
+						} else if (!this.Regiao.equals(other.Regiao))
 						
 							return false;
 					
@@ -1963,16 +1755,15 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 		return true;
     }
 
-	public void copyDataTo(after_tFileInputExcel_1Struct other) {
+	public void copyDataTo(OnRowsEndStructtAggregateRow_1 other) {
 
-		other.Nome = this.Nome;
-	            other.Activo = this.Activo;
+		other.Regiao = this.Regiao;
 	            
 	}
 
-	public void copyKeysDataTo(after_tFileInputExcel_1Struct other) {
+	public void copyKeysDataTo(OnRowsEndStructtAggregateRow_1 other) {
 
-		other.Nome = this.Nome;
+		other.Regiao = this.Regiao;
 	            	
 	}
 
@@ -2017,9 +1808,7 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 
         		int length = 0;
 		
-					this.Nome = readString(dis);
-					
-			        this.Activo = dis.readBoolean();
+					this.Regiao = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2041,11 +1830,7 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 		
 					// String
 				
-						writeString(this.Nome,dos);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
+						writeString(this.Regiao,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2060,8 +1845,389 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("Nome="+Nome);
-		sb.append(",Activo="+String.valueOf(Activo));
+		sb.append("Regiao="+Regiao);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(OnRowsEndStructtAggregateRow_1 other) {
+
+		int returnValue = -1;
+		
+						returnValue = checkNullsAndCompare(this.Regiao, other.Regiao);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
+    final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
+    static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
+	protected static final int DEFAULT_HASHCODE = 1;
+    protected static final int PRIME = 31;
+    protected int hashCode = DEFAULT_HASHCODE;
+    public boolean hashCodeDirty = true;
+
+    public String loopKey;
+
+
+
+	
+			    public String Regiao;
+
+				public String getRegiao () {
+					return this.Regiao;
+				}
+				
+
+
+	@Override
+	public int hashCode() {
+		if (this.hashCodeDirty) {
+			final int prime = PRIME;
+			int result = DEFAULT_HASHCODE;
+	
+						result = prime * result + ((this.Regiao == null) ? 0 : this.Regiao.hashCode());
+					
+    		this.hashCode = result;
+    		this.hashCodeDirty = false;
+		}
+		return this.hashCode;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		final row2Struct other = (row2Struct) obj;
+		
+						if (this.Regiao == null) {
+							if (other.Regiao != null)
+								return false;
+						
+						} else if (!this.Regiao.equals(other.Regiao))
+						
+							return false;
+					
+
+		return true;
+    }
+
+	public void copyDataTo(row2Struct other) {
+
+		other.Regiao = this.Regiao;
+	            
+	}
+
+	public void copyKeysDataTo(row2Struct other) {
+
+		other.Regiao = this.Regiao;
+	            	
+	}
+
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_YETL_LoopedRegions.length) {
+				if(length < 1024 && commonByteArray_YETL_LoopedRegions.length == 0) {
+   					commonByteArray_YETL_LoopedRegions = new byte[1024];
+				} else {
+   					commonByteArray_YETL_LoopedRegions = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_YETL_LoopedRegions, 0, length);
+			strReturn = new String(commonByteArray_YETL_LoopedRegions, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_YETL_LoopedRegions) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.Regiao = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.Regiao,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("Regiao="+Regiao);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row2Struct other) {
+
+		int returnValue = -1;
+		
+						returnValue = checkNullsAndCompare(this.Regiao, other.Regiao);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class after_tFileInputExcel_1Struct implements routines.system.IPersistableRow<after_tFileInputExcel_1Struct> {
+    final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
+    static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
+	protected static final int DEFAULT_HASHCODE = 1;
+    protected static final int PRIME = 31;
+    protected int hashCode = DEFAULT_HASHCODE;
+    public boolean hashCodeDirty = true;
+
+    public String loopKey;
+
+
+
+	
+			    public String Regiao;
+
+				public String getRegiao () {
+					return this.Regiao;
+				}
+				
+
+
+	@Override
+	public int hashCode() {
+		if (this.hashCodeDirty) {
+			final int prime = PRIME;
+			int result = DEFAULT_HASHCODE;
+	
+						result = prime * result + ((this.Regiao == null) ? 0 : this.Regiao.hashCode());
+					
+    		this.hashCode = result;
+    		this.hashCodeDirty = false;
+		}
+		return this.hashCode;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		final after_tFileInputExcel_1Struct other = (after_tFileInputExcel_1Struct) obj;
+		
+						if (this.Regiao == null) {
+							if (other.Regiao != null)
+								return false;
+						
+						} else if (!this.Regiao.equals(other.Regiao))
+						
+							return false;
+					
+
+		return true;
+    }
+
+	public void copyDataTo(after_tFileInputExcel_1Struct other) {
+
+		other.Regiao = this.Regiao;
+	            
+	}
+
+	public void copyKeysDataTo(after_tFileInputExcel_1Struct other) {
+
+		other.Regiao = this.Regiao;
+	            	
+	}
+
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_YETL_LoopedRegions.length) {
+				if(length < 1024 && commonByteArray_YETL_LoopedRegions.length == 0) {
+   					commonByteArray_YETL_LoopedRegions = new byte[1024];
+				} else {
+   					commonByteArray_YETL_LoopedRegions = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_YETL_LoopedRegions, 0, length);
+			strReturn = new String(commonByteArray_YETL_LoopedRegions, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_YETL_LoopedRegions) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.Regiao = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.Regiao,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("Regiao="+Regiao);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -2074,7 +2240,7 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 
 		int returnValue = -1;
 		
-						returnValue = checkNullsAndCompare(this.Nome, other.Nome);
+						returnValue = checkNullsAndCompare(this.Regiao, other.Regiao);
 						if(returnValue != 0) {
 							return returnValue;
 						}
@@ -2111,6 +2277,7 @@ public void tFileInputExcel_1Process(final java.util.Map<String, Object> globalM
 	globalMap.put("tFileInputExcel_1_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
+		String currentVirtualComponent = null;
 	
 		String iterateId = "";
 	
@@ -2128,493 +2295,110 @@ public void tFileInputExcel_1Process(final java.util.Map<String, Object> globalM
 
 		tPostgresqlInput_1Process(globalMap);
 
-		row1Struct row1 = new row1Struct();
-updatesStruct updates = new updatesStruct();
+		row2Struct row2 = new row2Struct();
 row3Struct row3 = new row3Struct();
-row5Struct row5 = new row5Struct();
+updatesStruct updates = new updatesStruct();
 createsStruct creates = new createsStruct();
-row4Struct row4 = new row4Struct();
-row6Struct row6 = new row6Struct();
-
-
-
-
-
-
-	
-	/**
-	 * [tPostgresqlOutput_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tPostgresqlOutput_1", false);
-		start_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tPostgresqlOutput_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row3" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tPostgresqlOutput_1 = 0;
-		
-    	class BytesLimit65535_tPostgresqlOutput_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tPostgresqlOutput_1().limitLog4jByte();
-
-
-
-
-
-String dbschema_tPostgresqlOutput_1 = null;
-	dbschema_tPostgresqlOutput_1 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
-	
-
-String tableName_tPostgresqlOutput_1 = null;
-if(dbschema_tPostgresqlOutput_1 == null || dbschema_tPostgresqlOutput_1.trim().length() == 0) {
-	tableName_tPostgresqlOutput_1 = "LoopedRegions";
-} else {
-	tableName_tPostgresqlOutput_1 = dbschema_tPostgresqlOutput_1 + "\".\"" + "LoopedRegions";
-}
-
-        int updateKeyCount_tPostgresqlOutput_1 = 1;
-        if(updateKeyCount_tPostgresqlOutput_1 < 1) {
-            throw new RuntimeException("For update, Schema must have a key");
-        }
-int nb_line_tPostgresqlOutput_1 = 0;
-int nb_line_update_tPostgresqlOutput_1 = 0;
-int nb_line_inserted_tPostgresqlOutput_1 = 0;
-int nb_line_deleted_tPostgresqlOutput_1 = 0;
-int nb_line_rejected_tPostgresqlOutput_1 = 0;
-
-int deletedCount_tPostgresqlOutput_1=0;
-int updatedCount_tPostgresqlOutput_1=0;
-int insertedCount_tPostgresqlOutput_1=0;
-int rejectedCount_tPostgresqlOutput_1=0;
-
-boolean whetherReject_tPostgresqlOutput_1 = false;
-
-java.sql.Connection conn_tPostgresqlOutput_1 = null;
-String dbUser_tPostgresqlOutput_1 = null;
-
-	conn_tPostgresqlOutput_1 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
-	
-	
-	
-	
-
-
-
-int count_tPostgresqlOutput_1=0;
-	    String update_tPostgresqlOutput_1 = "UPDATE \"" + tableName_tPostgresqlOutput_1 + "\" SET \"Active\" = ? WHERE \"LoopedRegionId\" = ?";
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_1 = conn_tPostgresqlOutput_1.prepareStatement(update_tPostgresqlOutput_1);
-	    
-
- 
-
-
-
-/**
- * [tPostgresqlOutput_1 begin ] stop
- */
 
 
 
 
 	
 	/**
-	 * [tLogRow_1 begin ] start
+	 * [tAggregateRow_1_AGGOUT begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tLogRow_1", false);
-		start_Hash.put("tLogRow_1", System.currentTimeMillis());
+		ok_Hash.put("tAggregateRow_1_AGGOUT", false);
+		start_Hash.put("tAggregateRow_1_AGGOUT", System.currentTimeMillis());
 		
 	
-	currentComponent="tLogRow_1";
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGOUT";
 
 	
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
 					
 				}
 			} 
 
 		
-		int tos_count_tLogRow_1 = 0;
+		int tos_count_tAggregateRow_1_AGGOUT = 0;
 		
-    	class BytesLimit65535_tLogRow_1{
+    	class BytesLimit65535_tAggregateRow_1_AGGOUT{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tLogRow_1().limitLog4jByte();
+        new BytesLimit65535_tAggregateRow_1_AGGOUT().limitLog4jByte();
 
-	///////////////////////
-	
-		final String OUTPUT_FIELD_SEPARATOR_tLogRow_1 = "|";
-		java.io.PrintStream consoleOut_tLogRow_1 = null;	
+// ------------ Seems it is not used
 
- 		StringBuilder strBuffer_tLogRow_1 = null;
-		int nb_line_tLogRow_1 = 0;
-///////////////////////    			
+java.util.Map hashAggreg_tAggregateRow_1 = new java.util.HashMap(); 
 
+// ------------
+	class AggOperationStruct_tAggregateRow_1 { // G_OutBegin_AggR_100
 
+		private static final int DEFAULT_HASHCODE = 1;
+	    private static final int PRIME = 31;
+	    private int hashCode = DEFAULT_HASHCODE;
+	    public boolean hashCodeDirty = true;
 
- 
-
-
-
-/**
- * [tLogRow_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tReplicate_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tReplicate_1", false);
-		start_Hash.put("tReplicate_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tReplicate_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("updates" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tReplicate_1 = 0;
-		
-    	class BytesLimit65535_tReplicate_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tReplicate_1().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tReplicate_1 begin ] stop
- */
-
-
-
-
-
-	
-	/**
-	 * [tPostgresqlOutput_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tPostgresqlOutput_2", false);
-		start_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tPostgresqlOutput_2 = 0;
-		
-    	class BytesLimit65535_tPostgresqlOutput_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tPostgresqlOutput_2().limitLog4jByte();
-
-
-
-
-
-String dbschema_tPostgresqlOutput_2 = null;
-	dbschema_tPostgresqlOutput_2 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
-	
-
-String tableName_tPostgresqlOutput_2 = null;
-if(dbschema_tPostgresqlOutput_2 == null || dbschema_tPostgresqlOutput_2.trim().length() == 0) {
-	tableName_tPostgresqlOutput_2 = "LoopedRegions";
-} else {
-	tableName_tPostgresqlOutput_2 = dbschema_tPostgresqlOutput_2 + "\".\"" + "LoopedRegions";
-}
-
-int nb_line_tPostgresqlOutput_2 = 0;
-int nb_line_update_tPostgresqlOutput_2 = 0;
-int nb_line_inserted_tPostgresqlOutput_2 = 0;
-int nb_line_deleted_tPostgresqlOutput_2 = 0;
-int nb_line_rejected_tPostgresqlOutput_2 = 0;
-
-int deletedCount_tPostgresqlOutput_2=0;
-int updatedCount_tPostgresqlOutput_2=0;
-int insertedCount_tPostgresqlOutput_2=0;
-int rejectedCount_tPostgresqlOutput_2=0;
-
-boolean whetherReject_tPostgresqlOutput_2 = false;
-
-java.sql.Connection conn_tPostgresqlOutput_2 = null;
-String dbUser_tPostgresqlOutput_2 = null;
-
-	conn_tPostgresqlOutput_2 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
-	
-	
-	
-	
-
-
-
-int count_tPostgresqlOutput_2=0;
-	    String insert_tPostgresqlOutput_2 = "INSERT INTO \"" + tableName_tPostgresqlOutput_2 + "\" (\"Name\",\"Active\",\"LoopedRegionId\") VALUES (?,?,?)";
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(insert_tPostgresqlOutput_2);
-	    
-
- 
-
-
-
-/**
- * [tPostgresqlOutput_2 begin ] stop
- */
-
-
-
-
-	
-	/**
-	 * [tLogRow_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tLogRow_2", false);
-		start_Hash.put("tLogRow_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tLogRow_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row6" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tLogRow_2 = 0;
-		
-    	class BytesLimit65535_tLogRow_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tLogRow_2().limitLog4jByte();
-
-	///////////////////////
-	
-		final String OUTPUT_FIELD_SEPARATOR_tLogRow_2 = "|";
-		java.io.PrintStream consoleOut_tLogRow_2 = null;	
-
- 		StringBuilder strBuffer_tLogRow_2 = null;
-		int nb_line_tLogRow_2 = 0;
-///////////////////////    			
-
-
-
- 
-
-
-
-/**
- * [tLogRow_2 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tReplicate_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tReplicate_2", false);
-		start_Hash.put("tReplicate_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tReplicate_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("creates" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tReplicate_2 = 0;
-		
-    	class BytesLimit65535_tReplicate_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tReplicate_2().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tReplicate_2 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tMap_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tMap_1", false);
-		start_Hash.put("tMap_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tMap_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tMap_1 = 0;
-		
-    	class BytesLimit65535_tMap_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tMap_1().limitLog4jByte();
-
-
-
-
-// ###############################
-// # Lookup's keys initialization
-	
-		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct> tHash_Lookup_row2 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct>) 
-				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct>) 
-					globalMap.get( "tHash_Lookup_row2" ))
-					;					
-					
-	
-
-row2Struct row2HashKey = new row2Struct();
-row2Struct row2Default = new row2Struct();
-// ###############################        
-
-// ###############################
-// # Vars initialization
-class  Var__tMap_1__Struct  {
-}
-Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
-// ###############################
-
-// ###############################
-// # Outputs initialization
-updatesStruct updates_tmp = new updatesStruct();
-createsStruct creates_tmp = new createsStruct();
-// ###############################
-
+    				String Regiao;
         
+	    @Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+		
+							result = prime * result + ((this.Regiao == null) ? 0 : this.Regiao.hashCode());
+							
+	    		this.hashCode = result;
+	    		this.hashCodeDirty = false;		
+			}
+			return this.hashCode;
+		}
+		
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj) return true;
+			if (obj == null) return false;
+			if (getClass() != obj.getClass()) return false;
+			final AggOperationStruct_tAggregateRow_1 other = (AggOperationStruct_tAggregateRow_1) obj;
+			
+							if (this.Regiao == null) {
+								if (other.Regiao != null) 
+									return false;
+							} else if (!this.Regiao.equals(other.Regiao)) 
+								return false;
+						
+			
+			return true;
+		}
+  
         
+	} // G_OutBegin_AggR_100
 
-
-
-        
-
-
-
-
-
-
-
-
+	AggOperationStruct_tAggregateRow_1 operation_result_tAggregateRow_1 = null;
+	AggOperationStruct_tAggregateRow_1 operation_finder_tAggregateRow_1 = new AggOperationStruct_tAggregateRow_1();
+	java.util.Map<AggOperationStruct_tAggregateRow_1,AggOperationStruct_tAggregateRow_1> hash_tAggregateRow_1 = new java.util.HashMap<AggOperationStruct_tAggregateRow_1,AggOperationStruct_tAggregateRow_1>();
+	
 
  
 
 
 
 /**
- * [tMap_1 begin ] stop
+ * [tAggregateRow_1_AGGOUT begin ] stop
  */
 
 
@@ -2702,7 +2486,7 @@ createsStruct creates_tmp = new createsStruct();
 		try {
 
 		java.util.List<org.apache.poi.xssf.usermodel.XSSFSheet> sheetList_tFileInputExcel_1 = new java.util.ArrayList<org.apache.poi.xssf.usermodel.XSSFSheet>();
-        sheetList_tFileInputExcel_1.addAll(regexUtil_tFileInputExcel_1.getSheets(workbook_tFileInputExcel_1, "Regioes", false));
+        sheetList_tFileInputExcel_1.addAll(regexUtil_tFileInputExcel_1.getSheets(workbook_tFileInputExcel_1, "Paragens", false));
     	if(sheetList_tFileInputExcel_1.size() <= 0){
             throw new RuntimeException("Special sheets not exist!");
         }
@@ -2727,7 +2511,7 @@ createsStruct creates_tmp = new createsStruct();
         }
         end_line_tFileInputExcel_1 -= footer_input_tFileInputExcel_1;
         int limit_tFileInputExcel_1 = -1;
-        int start_column_tFileInputExcel_1 = 1-1;
+        int start_column_tFileInputExcel_1 = 2-1;
         int end_column_tFileInputExcel_1 = -1;
         Integer lastColumn_tFileInputExcel_1 = 2;
         if(lastColumn_tFileInputExcel_1!=null){
@@ -2761,8 +2545,8 @@ createsStruct creates_tmp = new createsStruct();
             if (rowCount_tFileInputExcel_1 <= i_tFileInputExcel_1) {
                 row_tFileInputExcel_1 = sheet_tFileInputExcel_1.getRow(i_tFileInputExcel_1 - rowCount_tFileInputExcel_1);
             }
-		    row1 = null;
-					int tempRowLength_tFileInputExcel_1 = 2;
+		    row2 = null;
+					int tempRowLength_tFileInputExcel_1 = 1;
 				
 				int columnIndex_tFileInputExcel_1 = 0;
 			
@@ -2832,7 +2616,7 @@ createsStruct creates_tmp = new createsStruct();
 				}
 			}
 			boolean whetherReject_tFileInputExcel_1 = false;
-			row1 = new row1Struct();
+			row2 = new row2Struct();
 			int curColNum_tFileInputExcel_1 = -1;
 			String curColName_tFileInputExcel_1 = "";
 			try{
@@ -2840,26 +2624,15 @@ createsStruct creates_tmp = new createsStruct();
 						
 			if( temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1].length() > 0) {
 				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
-				curColName_tFileInputExcel_1 = "Nome";
+				curColName_tFileInputExcel_1 = "Regiao";
 
-				row1.Nome = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+				row2.Regiao = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 			}else{
-				row1.Nome = null;
-				emptyColumnCount_tFileInputExcel_1++;
-			}
-							columnIndex_tFileInputExcel_1 = 1;
-						
-			if( temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1].length() > 0) {
-				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
-				curColName_tFileInputExcel_1 = "Activo";
-
-				row1.Activo = ParserUtils.parseTo_boolean(temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1]);
-			}else{
-				row1.Activo = false;
+				row2.Regiao = null;
 				emptyColumnCount_tFileInputExcel_1++;
 			}
 
-        if(emptyColumnCount_tFileInputExcel_1 >= 2){
+        if(emptyColumnCount_tFileInputExcel_1 >= 1){
         	break; //if meet the empty row, there will break the iterate.
         }
 				nb_line_tFileInputExcel_1++;
@@ -2867,7 +2640,7 @@ createsStruct creates_tmp = new createsStruct();
 			}catch(java.lang.Exception e){
 			whetherReject_tFileInputExcel_1 = true;
 					 System.err.println(e.getMessage());
-					 row1 = null;
+					 row2 = null;
 			}
 
 
@@ -2903,638 +2676,74 @@ createsStruct creates_tmp = new createsStruct();
 /**
  * [tFileInputExcel_1 main ] stop
  */
-// Start of branch "row1"
-if(row1 != null) { 
+// Start of branch "row2"
+if(row2 != null) { 
 
 
 
 	
 	/**
-	 * [tMap_1 main ] start
+	 * [tAggregateRow_1_AGGOUT main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMap_1";
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGOUT";
 
 	
 
-			//row1
-			//row1
+			//row2
+			//row2
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row2"+iterateId,1, 1);
 				} 
 			
 
 		
+	
+operation_finder_tAggregateRow_1.Regiao = row2.Regiao;
+			
 
-		
-		
-		boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
-		
-        // ###############################
-        // # Input tables (lookups)
-		  boolean rejectedInnerJoin_tMap_1 = false;
-		  boolean mainRowRejected_tMap_1 = false;
-            				    								  
-		
+	operation_finder_tAggregateRow_1.hashCodeDirty = true;
+	
+	operation_result_tAggregateRow_1 = hash_tAggregateRow_1.get(operation_finder_tAggregateRow_1);
 
-				///////////////////////////////////////////////
-				// Starting Lookup Table "row2" 
-				///////////////////////////////////////////////
+	
 
+	if(operation_result_tAggregateRow_1 == null) { // G_OutMain_AggR_001
 
+		operation_result_tAggregateRow_1 = new AggOperationStruct_tAggregateRow_1();
+
+		operation_result_tAggregateRow_1.Regiao = operation_finder_tAggregateRow_1.Regiao;
 				
-				
-                            
- 					    boolean forceLooprow2 = false;
-       		  	    	
-       		  	    	
- 							row2Struct row2ObjectFromLookup = null;
-                          
-		           		  	if(!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+		
+		
 
-								
-								hasCasePrimitiveKeyWithNull_tMap_1 = false;
-								
-                        		    		row2HashKey.Name = row1.Nome ;
-                        		    		
-
-								
-		                        	row2HashKey.hashCodeDirty = true;
-                        		
-	  					
-	  							
-			  					
-			  					
-	  					
-		  							tHash_Lookup_row2.lookup( row2HashKey );
-
-	  							
-
-	  							
-
- 								
-								  
-								  if(!tHash_Lookup_row2.hasNext()) { // G_TM_M_090
-
-  								
-		  				
-	  								
-			  							rejectedInnerJoin_tMap_1 = true;
-	  								
-						
-									
-  									  		
- 								
-								  
-								  } // G_TM_M_090
-
-  								
+		hash_tAggregateRow_1.put(operation_result_tAggregateRow_1, operation_result_tAggregateRow_1);
+	
+	} // G_OutMain_AggR_001
 
 
-
-							} // G_TM_M_020
-			           		  	  
-							
-				           		if(tHash_Lookup_row2 != null && tHash_Lookup_row2.getCount(row2HashKey) > 1) { // G 071
-			  							
-			  						
-									 		
-									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row2' and it contains more one result from keys :  row2.Name = '" + row2HashKey.Name + "'");
-								} // G 071
-							
-
-							row2Struct row2 = null;
-                    		  	 
-							   
-                    		  	 
-	       		  	    	row2Struct fromLookup_row2 = null;
-							row2 = row2Default;
-										 
-							
-								 
-							
-							
-								if (tHash_Lookup_row2 !=null && tHash_Lookup_row2.hasNext()) { // G 099
-								
-							
-								
-								fromLookup_row2 = tHash_Lookup_row2.next();
-
-							
-							
-								} // G 099
-							
-							
-
-							if(fromLookup_row2 != null) {
-								row2 = fromLookup_row2;
-							}
-							
-							
-							
-			  							
-								
-	                    		  	
-		                    
-	            	
-	            	
-	            // ###############################
-        { // start of Var scope
-        
-	        // ###############################
-        	// # Vars tables
-        
-Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
-        // ###############################
-        // # Output tables
-
-updates = null;
-creates = null;
-
-if(!rejectedInnerJoin_tMap_1 ) {
-
-// # Output table : 'updates'
-updates_tmp.LoopedRegionId = row2.LoopedRegionId ;
-updates_tmp.Activo = row1.Activo;
-updates = updates_tmp;
-} // closing inner join bracket (1)
-// ###### START REJECTS ##### 
-
-// # Output reject table : 'creates'
-// # Filter conditions 
-if( rejectedInnerJoin_tMap_1 ) {
-creates_tmp.Nome = row1.Nome ;
-creates_tmp.Activo = row1.Activo;
-creates_tmp.LoopedRegionId = java.util.UUID.randomUUID();
-creates = creates_tmp;
-} // closing filter/reject
-// ###############################
-
-} // end of Var scope
-
-rejectedInnerJoin_tMap_1 = false;
-
-
-
-
-
-
-
-
+	
 
 
  
 
 
-	tos_count_tMap_1++;
+	tos_count_tAggregateRow_1_AGGOUT++;
 
 /**
- * [tMap_1 main ] stop
- */
-// Start of branch "updates"
-if(updates != null) { 
-
-
-
-	
-	/**
-	 * [tReplicate_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_1";
-
-	
-
-			//updates
-			//updates
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("updates"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-	row3 = new row3Struct();
-						
-	row3.LoopedRegionId = updates.LoopedRegionId;								
-	row3.Activo = updates.Activo;			
-	row5 = new row5Struct();
-						
-	row5.LoopedRegionId = updates.LoopedRegionId;								
-	row5.Activo = updates.Activo;			
-
-
- 
-
-
-	tos_count_tReplicate_1++;
-
-/**
- * [tReplicate_1 main ] stop
+ * [tAggregateRow_1_AGGOUT main ] stop
  */
 
-	
-	/**
-	 * [tPostgresqlOutput_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_1";
-
-	
-
-			//row3
-			//row3
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row3"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-
-        whetherReject_tPostgresqlOutput_1 = false;
-                    pstmt_tPostgresqlOutput_1.setBoolean(1, row3.Activo);
-
-                    if(row3.LoopedRegionId == null) {
-pstmt_tPostgresqlOutput_1.setNull(2 + count_tPostgresqlOutput_1, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(2 + count_tPostgresqlOutput_1, row3.LoopedRegionId);
-}
-
-
-            try {
-                nb_line_tPostgresqlOutput_1++;
-				
-                updatedCount_tPostgresqlOutput_1 = updatedCount_tPostgresqlOutput_1 + pstmt_tPostgresqlOutput_1.executeUpdate();
-				
-            } catch(java.lang.Exception e) {
-				
-                whetherReject_tPostgresqlOutput_1 = true;
-                        System.err.print(e.getMessage());
-            }
-
- 
-
-
-	tos_count_tPostgresqlOutput_1++;
-
-/**
- * [tPostgresqlOutput_1 main ] stop
- */
-
-
-
-
-	
-	/**
-	 * [tLogRow_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
-			//row5
-			//row5
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row5"+iterateId,1, 1);
-				} 
-			
-
-		
-///////////////////////		
-						
-
-
-
-				strBuffer_tLogRow_1 = new StringBuilder();
-				strBuffer_tLogRow_1.append("[tLogRow_1] ");
-
-
-
-
-   				
-	    		if(row5.LoopedRegionId != null) { //              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row5.LoopedRegionId)							
-				);
-
-
-							
-	    		} //  			
-
-    			strBuffer_tLogRow_1.append("|");
-    			
-
-
-              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row5.Activo)							
-				);
-
-
-							  			
- 
-
-                    if (globalMap.get("tLogRow_CONSOLE")!=null)
-                    {
-                    	consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-                    }
-                    else
-                    {
-                    	consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_1);
-                    }
-                    consoleOut_tLogRow_1.println(strBuffer_tLogRow_1.toString());
-                    consoleOut_tLogRow_1.flush();
-                    nb_line_tLogRow_1++;
-//////
-
-//////                    
-                    
-///////////////////////    			
-
- 
-
-
-	tos_count_tLogRow_1++;
-
-/**
- * [tLogRow_1 main ] stop
- */
-
-
-
-
-} // End of branch "updates"
-
-
-
-
-// Start of branch "creates"
-if(creates != null) { 
-
-
-
-	
-	/**
-	 * [tReplicate_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_2";
-
-	
-
-			//creates
-			//creates
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("creates"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-	row4 = new row4Struct();
-						
-	row4.Nome = creates.Nome;								
-	row4.Activo = creates.Activo;								
-	row4.LoopedRegionId = creates.LoopedRegionId;			
-	row6 = new row6Struct();
-						
-	row6.Nome = creates.Nome;								
-	row6.Activo = creates.Activo;								
-	row6.LoopedRegionId = creates.LoopedRegionId;			
-
-
- 
-
-
-	tos_count_tReplicate_2++;
-
-/**
- * [tReplicate_2 main ] stop
- */
-
-	
-	/**
-	 * [tPostgresqlOutput_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-
-			//row4
-			//row4
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row4"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-
-        whetherReject_tPostgresqlOutput_2 = false;
-                    if(row4.Nome == null) {
-pstmt_tPostgresqlOutput_2.setNull(1, java.sql.Types.VARCHAR);
-} else {pstmt_tPostgresqlOutput_2.setString(1, row4.Nome);
-}
-
-                    pstmt_tPostgresqlOutput_2.setBoolean(2, row4.Activo);
-
-                    if(row4.LoopedRegionId == null) {
-pstmt_tPostgresqlOutput_2.setNull(3, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_2.setObject(3, row4.LoopedRegionId);
-}
-
-			
-            try {
-                nb_line_tPostgresqlOutput_2++;
-				
-                insertedCount_tPostgresqlOutput_2 = insertedCount_tPostgresqlOutput_2 + pstmt_tPostgresqlOutput_2.executeUpdate();
-				
-            } catch(java.lang.Exception e) {
-				
-                whetherReject_tPostgresqlOutput_2 = true;
-                        System.err.print(e.getMessage());
-            }
-
- 
-
-
-	tos_count_tPostgresqlOutput_2++;
-
-/**
- * [tPostgresqlOutput_2 main ] stop
- */
-
-
-
-
-	
-	/**
-	 * [tLogRow_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_2";
-
-	
-
-			//row6
-			//row6
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row6"+iterateId,1, 1);
-				} 
-			
-
-		
-///////////////////////		
-						
-
-
-
-				strBuffer_tLogRow_2 = new StringBuilder();
-				strBuffer_tLogRow_2.append("[tLogRow_2] ");
-
-
-
-
-   				
-	    		if(row6.Nome != null) { //              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row6.Nome)							
-				);
-
-
-							
-	    		} //  			
-
-    			strBuffer_tLogRow_2.append("|");
-    			
-
-
-              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row6.Activo)							
-				);
-
-
-							  			
-
-    			strBuffer_tLogRow_2.append("|");
-    			
-
-
-   				
-	    		if(row6.LoopedRegionId != null) { //              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row6.LoopedRegionId)							
-				);
-
-
-							
-	    		} //  			
- 
-
-                    if (globalMap.get("tLogRow_CONSOLE")!=null)
-                    {
-                    	consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-                    }
-                    else
-                    {
-                    	consoleOut_tLogRow_2 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_2);
-                    }
-                    consoleOut_tLogRow_2.println(strBuffer_tLogRow_2.toString());
-                    consoleOut_tLogRow_2.flush();
-                    nb_line_tLogRow_2++;
-//////
-
-//////                    
-                    
-///////////////////////    			
-
- 
-
-
-	tos_count_tLogRow_2++;
-
-/**
- * [tLogRow_2 main ] stop
- */
-
-
-
-
-} // End of branch "creates"
-
-
-
-
-
-} // End of branch "row1"
+} // End of branch "row2"
 
 
 
@@ -3582,6 +2791,743 @@ end_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tAggregateRow_1_AGGOUT end ] start
+	 */
+
+	
+
+	
+	
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGOUT";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row2"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tAggregateRow_1_AGGOUT", true);
+end_Hash.put("tAggregateRow_1_AGGOUT", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tAggregateRow_1_AGGOUT end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tPostgresqlOutput_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tPostgresqlOutput_1", false);
+		start_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tPostgresqlOutput_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("updates" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tPostgresqlOutput_1 = 0;
+		
+    	class BytesLimit65535_tPostgresqlOutput_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlOutput_1().limitLog4jByte();
+
+
+
+
+
+String dbschema_tPostgresqlOutput_1 = null;
+	dbschema_tPostgresqlOutput_1 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
+	
+
+String tableName_tPostgresqlOutput_1 = null;
+if(dbschema_tPostgresqlOutput_1 == null || dbschema_tPostgresqlOutput_1.trim().length() == 0) {
+	tableName_tPostgresqlOutput_1 = "LoopedRegions";
+} else {
+	tableName_tPostgresqlOutput_1 = dbschema_tPostgresqlOutput_1 + "\".\"" + "LoopedRegions";
+}
+
+        int updateKeyCount_tPostgresqlOutput_1 = 1;
+        if(updateKeyCount_tPostgresqlOutput_1 < 1) {
+            throw new RuntimeException("For update, Schema must have a key");
+        }
+int nb_line_tPostgresqlOutput_1 = 0;
+int nb_line_update_tPostgresqlOutput_1 = 0;
+int nb_line_inserted_tPostgresqlOutput_1 = 0;
+int nb_line_deleted_tPostgresqlOutput_1 = 0;
+int nb_line_rejected_tPostgresqlOutput_1 = 0;
+
+int deletedCount_tPostgresqlOutput_1=0;
+int updatedCount_tPostgresqlOutput_1=0;
+int insertedCount_tPostgresqlOutput_1=0;
+int rejectedCount_tPostgresqlOutput_1=0;
+
+boolean whetherReject_tPostgresqlOutput_1 = false;
+
+java.sql.Connection conn_tPostgresqlOutput_1 = null;
+String dbUser_tPostgresqlOutput_1 = null;
+
+	conn_tPostgresqlOutput_1 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+	
+	
+	
+	
+
+
+
+int count_tPostgresqlOutput_1=0;
+	    String update_tPostgresqlOutput_1 = "UPDATE \"" + tableName_tPostgresqlOutput_1 + "\" SET \"Active\" = ? WHERE \"LoopedRegionId\" = ?";
+	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_1 = conn_tPostgresqlOutput_1.prepareStatement(update_tPostgresqlOutput_1);
+	    
+
+ 
+
+
+
+/**
+ * [tPostgresqlOutput_1 begin ] stop
+ */
+
+
+
+
+	
+	/**
+	 * [tPostgresqlOutput_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tPostgresqlOutput_2", false);
+		start_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tPostgresqlOutput_2";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("creates" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tPostgresqlOutput_2 = 0;
+		
+    	class BytesLimit65535_tPostgresqlOutput_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlOutput_2().limitLog4jByte();
+
+
+
+
+
+String dbschema_tPostgresqlOutput_2 = null;
+	dbschema_tPostgresqlOutput_2 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
+	
+
+String tableName_tPostgresqlOutput_2 = null;
+if(dbschema_tPostgresqlOutput_2 == null || dbschema_tPostgresqlOutput_2.trim().length() == 0) {
+	tableName_tPostgresqlOutput_2 = "LoopedRegions";
+} else {
+	tableName_tPostgresqlOutput_2 = dbschema_tPostgresqlOutput_2 + "\".\"" + "LoopedRegions";
+}
+
+int nb_line_tPostgresqlOutput_2 = 0;
+int nb_line_update_tPostgresqlOutput_2 = 0;
+int nb_line_inserted_tPostgresqlOutput_2 = 0;
+int nb_line_deleted_tPostgresqlOutput_2 = 0;
+int nb_line_rejected_tPostgresqlOutput_2 = 0;
+
+int deletedCount_tPostgresqlOutput_2=0;
+int updatedCount_tPostgresqlOutput_2=0;
+int insertedCount_tPostgresqlOutput_2=0;
+int rejectedCount_tPostgresqlOutput_2=0;
+
+boolean whetherReject_tPostgresqlOutput_2 = false;
+
+java.sql.Connection conn_tPostgresqlOutput_2 = null;
+String dbUser_tPostgresqlOutput_2 = null;
+
+	conn_tPostgresqlOutput_2 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+	
+	
+	
+	
+
+
+
+int count_tPostgresqlOutput_2=0;
+	    String insert_tPostgresqlOutput_2 = "INSERT INTO \"" + tableName_tPostgresqlOutput_2 + "\" (\"Name\",\"Active\",\"LoopedRegionId\") VALUES (?,?,?)";
+	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(insert_tPostgresqlOutput_2);
+	    
+
+ 
+
+
+
+/**
+ * [tPostgresqlOutput_2 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMap_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tMap_1", false);
+		start_Hash.put("tMap_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tMap_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row3" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tMap_1 = 0;
+		
+    	class BytesLimit65535_tMap_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tMap_1().limitLog4jByte();
+
+
+
+
+// ###############################
+// # Lookup's keys initialization
+	
+		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct> tHash_Lookup_row4 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct>) 
+				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct>) 
+					globalMap.get( "tHash_Lookup_row4" ))
+					;					
+					
+	
+
+row4Struct row4HashKey = new row4Struct();
+row4Struct row4Default = new row4Struct();
+// ###############################        
+
+// ###############################
+// # Vars initialization
+class  Var__tMap_1__Struct  {
+}
+Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
+// ###############################
+
+// ###############################
+// # Outputs initialization
+updatesStruct updates_tmp = new updatesStruct();
+createsStruct creates_tmp = new createsStruct();
+// ###############################
+
+        
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+/**
+ * [tMap_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tAggregateRow_1_AGGIN begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tAggregateRow_1_AGGIN", false);
+		start_Hash.put("tAggregateRow_1_AGGIN", System.currentTimeMillis());
+		
+	
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGIN";
+
+	
+		int tos_count_tAggregateRow_1_AGGIN = 0;
+		
+    	class BytesLimit65535_tAggregateRow_1_AGGIN{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tAggregateRow_1_AGGIN().limitLog4jByte();
+
+java.util.Collection<AggOperationStruct_tAggregateRow_1> values_tAggregateRow_1 = hash_tAggregateRow_1.values();
+
+globalMap.put("tAggregateRow_1_NB_LINE", values_tAggregateRow_1.size());
+
+for(AggOperationStruct_tAggregateRow_1 aggregated_row_tAggregateRow_1 : values_tAggregateRow_1) { // G_AggR_600
+
+
+
+ 
+
+
+
+/**
+ * [tAggregateRow_1_AGGIN begin ] stop
+ */
+	
+	/**
+	 * [tAggregateRow_1_AGGIN main ] start
+	 */
+
+	
+
+	
+	
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGIN";
+
+	
+
+            				    row3.Regiao = aggregated_row_tAggregateRow_1.Regiao;
+            				    
+
+ 
+
+
+	tos_count_tAggregateRow_1_AGGIN++;
+
+/**
+ * [tAggregateRow_1_AGGIN main ] stop
+ */
+
+	
+	/**
+	 * [tMap_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+			//row3
+			//row3
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row3"+iterateId,1, 1);
+				} 
+			
+
+		
+
+		
+		
+		boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
+		
+        // ###############################
+        // # Input tables (lookups)
+		  boolean rejectedInnerJoin_tMap_1 = false;
+		  boolean mainRowRejected_tMap_1 = false;
+            				    								  
+		
+
+				///////////////////////////////////////////////
+				// Starting Lookup Table "row4" 
+				///////////////////////////////////////////////
+
+
+				
+				
+                            
+ 					    boolean forceLooprow4 = false;
+       		  	    	
+       		  	    	
+ 							row4Struct row4ObjectFromLookup = null;
+                          
+		           		  	if(!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+								
+								hasCasePrimitiveKeyWithNull_tMap_1 = false;
+								
+                        		    		row4HashKey.Name = row3.Regiao ;
+                        		    		
+
+								
+		                        	row4HashKey.hashCodeDirty = true;
+                        		
+	  					
+	  							
+			  					
+			  					
+	  					
+		  							tHash_Lookup_row4.lookup( row4HashKey );
+
+	  							
+
+	  							
+
+ 								
+								  
+								  if(!tHash_Lookup_row4.hasNext()) { // G_TM_M_090
+
+  								
+		  				
+	  								
+			  							rejectedInnerJoin_tMap_1 = true;
+	  								
+						
+									
+  									  		
+ 								
+								  
+								  } // G_TM_M_090
+
+  								
+
+
+
+							} // G_TM_M_020
+			           		  	  
+							
+				           		if(tHash_Lookup_row4 != null && tHash_Lookup_row4.getCount(row4HashKey) > 1) { // G 071
+			  							
+			  						
+									 		
+									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row4' and it contains more one result from keys :  row4.Name = '" + row4HashKey.Name + "'");
+								} // G 071
+							
+
+							row4Struct row4 = null;
+                    		  	 
+							   
+                    		  	 
+	       		  	    	row4Struct fromLookup_row4 = null;
+							row4 = row4Default;
+										 
+							
+								 
+							
+							
+								if (tHash_Lookup_row4 !=null && tHash_Lookup_row4.hasNext()) { // G 099
+								
+							
+								
+								fromLookup_row4 = tHash_Lookup_row4.next();
+
+							
+							
+								} // G 099
+							
+							
+
+							if(fromLookup_row4 != null) {
+								row4 = fromLookup_row4;
+							}
+							
+							
+							
+			  							
+								
+	                    		  	
+		                    
+	            	
+	            	
+	            // ###############################
+        { // start of Var scope
+        
+	        // ###############################
+        	// # Vars tables
+        
+Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
+        // ###############################
+        // # Output tables
+
+updates = null;
+creates = null;
+
+if(!rejectedInnerJoin_tMap_1 ) {
+
+// # Output table : 'updates'
+updates_tmp.LoopedRegionId = row4.LoopedRegionId ;
+updates_tmp.Activo = true;
+updates = updates_tmp;
+} // closing inner join bracket (1)
+// ###### START REJECTS ##### 
+
+// # Output reject table : 'creates'
+// # Filter conditions 
+if( rejectedInnerJoin_tMap_1 ) {
+creates_tmp.Nome = row3.Regiao ;
+creates_tmp.Activo = true;
+creates_tmp.LoopedRegionId = java.util.UUID.randomUUID();
+creates = creates_tmp;
+} // closing filter/reject
+// ###############################
+
+} // end of Var scope
+
+rejectedInnerJoin_tMap_1 = false;
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	tos_count_tMap_1++;
+
+/**
+ * [tMap_1 main ] stop
+ */
+// Start of branch "updates"
+if(updates != null) { 
+
+
+
+	
+	/**
+	 * [tPostgresqlOutput_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_1";
+
+	
+
+			//updates
+			//updates
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("updates"+iterateId,1, 1);
+				} 
+			
+
+		
+
+
+
+        whetherReject_tPostgresqlOutput_1 = false;
+                    pstmt_tPostgresqlOutput_1.setBoolean(1, updates.Activo);
+
+                    if(updates.LoopedRegionId == null) {
+pstmt_tPostgresqlOutput_1.setNull(2 + count_tPostgresqlOutput_1, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(2 + count_tPostgresqlOutput_1, updates.LoopedRegionId);
+}
+
+
+            try {
+                nb_line_tPostgresqlOutput_1++;
+				
+                updatedCount_tPostgresqlOutput_1 = updatedCount_tPostgresqlOutput_1 + pstmt_tPostgresqlOutput_1.executeUpdate();
+				
+            } catch(java.lang.Exception e) {
+				
+                whetherReject_tPostgresqlOutput_1 = true;
+                        System.err.print(e.getMessage());
+            }
+
+ 
+
+
+	tos_count_tPostgresqlOutput_1++;
+
+/**
+ * [tPostgresqlOutput_1 main ] stop
+ */
+
+} // End of branch "updates"
+
+
+
+
+// Start of branch "creates"
+if(creates != null) { 
+
+
+
+	
+	/**
+	 * [tPostgresqlOutput_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_2";
+
+	
+
+			//creates
+			//creates
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("creates"+iterateId,1, 1);
+				} 
+			
+
+		
+
+
+
+        whetherReject_tPostgresqlOutput_2 = false;
+                    if(creates.Nome == null) {
+pstmt_tPostgresqlOutput_2.setNull(1, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_2.setString(1, creates.Nome);
+}
+
+                    pstmt_tPostgresqlOutput_2.setBoolean(2, creates.Activo);
+
+                    if(creates.LoopedRegionId == null) {
+pstmt_tPostgresqlOutput_2.setNull(3, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_2.setObject(3, creates.LoopedRegionId);
+}
+
+			
+            try {
+                nb_line_tPostgresqlOutput_2++;
+				
+                insertedCount_tPostgresqlOutput_2 = insertedCount_tPostgresqlOutput_2 + pstmt_tPostgresqlOutput_2.executeUpdate();
+				
+            } catch(java.lang.Exception e) {
+				
+                whetherReject_tPostgresqlOutput_2 = true;
+                        System.err.print(e.getMessage());
+            }
+
+ 
+
+
+	tos_count_tPostgresqlOutput_2++;
+
+/**
+ * [tPostgresqlOutput_2 main ] stop
+ */
+
+} // End of branch "creates"
+
+
+
+
+
+
+
+	
+	/**
+	 * [tAggregateRow_1_AGGIN end ] start
+	 */
+
+	
+
+	
+	
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGIN";
+
+	
+
+} // G_AggR_600
+
+ 
+
+ok_Hash.put("tAggregateRow_1_AGGIN", true);
+end_Hash.put("tAggregateRow_1_AGGIN", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tAggregateRow_1_AGGIN end ] stop
+ */
+
+	
+	/**
 	 * [tMap_1 end ] start
 	 */
 
@@ -3596,10 +3542,10 @@ end_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
 
 // ###############################
 // # Lookup hashes releasing
-					if(tHash_Lookup_row2 != null) {
-						tHash_Lookup_row2.endGet();
+					if(tHash_Lookup_row4 != null) {
+						tHash_Lookup_row4.endGet();
 					}
-					globalMap.remove( "tHash_Lookup_row2" );
+					globalMap.remove( "tHash_Lookup_row4" );
 
 					
 					
@@ -3612,7 +3558,7 @@ end_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row3"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -3626,37 +3572,6 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 /**
  * [tMap_1 end ] stop
- */
-
-	
-	/**
-	 * [tReplicate_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_1";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("updates"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tReplicate_1", true);
-end_Hash.put("tReplicate_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tReplicate_1 end ] stop
  */
 
 	
@@ -3695,7 +3610,7 @@ end_Hash.put("tReplicate_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row3"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("updates"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -3713,81 +3628,6 @@ end_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
 
 
 
-
-	
-	/**
-	 * [tLogRow_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
-
-//////
-//////
-globalMap.put("tLogRow_1_NB_LINE",nb_line_tLogRow_1);
-
-///////////////////////    			
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row5"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tLogRow_1", true);
-end_Hash.put("tLogRow_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tLogRow_1 end ] stop
- */
-
-
-
-
-
-
-
-	
-	/**
-	 * [tReplicate_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_2";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("creates"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tReplicate_2", true);
-end_Hash.put("tReplicate_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tReplicate_2 end ] stop
- */
 
 	
 	/**
@@ -3825,7 +3665,7 @@ end_Hash.put("tReplicate_2", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("creates"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -3844,44 +3684,6 @@ end_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
 
 
 
-	
-	/**
-	 * [tLogRow_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_2";
-
-	
-
-
-//////
-//////
-globalMap.put("tLogRow_2_NB_LINE",nb_line_tLogRow_2);
-
-///////////////////////    			
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row6"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tLogRow_2", true);
-end_Hash.put("tLogRow_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tLogRow_2 end ] stop
- */
-
 
 
 
@@ -3898,7 +3700,7 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 								}	    				    			
 					    	
 								if(execStat){    	
-									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+									runStat.updateStatOnConnection("OnSubjobOk3", 0, "ok");
 								} 
 							
 							tPostgresqlCommit_1Process(globalMap); 
@@ -3911,6 +3713,8 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 				
 				TalendException te = new TalendException(e, currentComponent, globalMap);
 				
+					te.setVirtualComponentName(currentVirtualComponent);
+				
 				throw te;
 			}catch(java.lang.Error error){	
 				
@@ -3920,8 +3724,11 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 			}finally{
 				
 					     			//free memory for "tMap_1"
-					     			globalMap.remove("tHash_Lookup_row2"); 
+					     			globalMap.remove("tHash_Lookup_row4"); 
 				     			
+							//free memory for "tAggregateRow_1_AGGIN"
+							globalMap.remove("tAggregateRow_1");
+						
 				try{
 					
 	
@@ -3947,6 +3754,52 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 
 	
 	/**
+	 * [tAggregateRow_1_AGGOUT finally ] start
+	 */
+
+	
+
+	
+	
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGOUT";
+
+	
+
+ 
+
+
+
+/**
+ * [tAggregateRow_1_AGGOUT finally ] stop
+ */
+
+	
+	/**
+	 * [tAggregateRow_1_AGGIN finally ] start
+	 */
+
+	
+
+	
+	
+		currentVirtualComponent = "tAggregateRow_1";
+	
+	currentComponent="tAggregateRow_1_AGGIN";
+
+	
+
+ 
+
+
+
+/**
+ * [tAggregateRow_1_AGGIN finally ] stop
+ */
+
+	
+	/**
 	 * [tMap_1 finally ] start
 	 */
 
@@ -3964,27 +3817,6 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 
 /**
  * [tMap_1 finally ] stop
- */
-
-	
-	/**
-	 * [tReplicate_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_1";
-
-	
-
- 
-
-
-
-/**
- * [tReplicate_1 finally ] stop
  */
 
 	
@@ -4017,54 +3849,6 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 
 	
 	/**
-	 * [tLogRow_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogRow_1 finally ] stop
- */
-
-
-
-
-
-
-
-	
-	/**
-	 * [tReplicate_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_2";
-
-	
-
- 
-
-
-
-/**
- * [tReplicate_2 finally ] stop
- */
-
-	
-	/**
 	 * [tPostgresqlOutput_2 finally ] start
 	 */
 
@@ -4090,27 +3874,6 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 
 
 
-
-	
-	/**
-	 * [tLogRow_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_2";
-
-	
-
- 
-
-
-
-/**
- * [tLogRow_2 finally ] stop
- */
 
 
 
@@ -4306,7 +4069,7 @@ end_Hash.put("tPostgresqlCommit_1", System.currentTimeMillis());
 	
 
 
-public static class row2Struct implements routines.system.IPersistableComparableLookupRow<row2Struct> {
+public static class row4Struct implements routines.system.IPersistableComparableLookupRow<row4Struct> {
     final static byte[] commonByteArrayLock_YETL_LoopedRegions = new byte[0];
     static byte[] commonByteArray_YETL_LoopedRegions = new byte[0];
 	protected static final int DEFAULT_HASHCODE = 1;
@@ -4319,12 +4082,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
 
 
 	
-			    public boolean Active;
-
-				public boolean getActive () {
-					return this.Active;
-				}
-				
 			    public Object LoopedRegionId;
 
 				public Object getLoopedRegionId () {
@@ -4358,7 +4115,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		final row2Struct other = (row2Struct) obj;
+		final row4Struct other = (row4Struct) obj;
 		
 						if (this.Name == null) {
 							if (other.Name != null)
@@ -4372,15 +4129,14 @@ public static class row2Struct implements routines.system.IPersistableComparable
 		return true;
     }
 
-	public void copyDataTo(row2Struct other) {
+	public void copyDataTo(row4Struct other) {
 
-		other.Active = this.Active;
-	            other.LoopedRegionId = this.LoopedRegionId;
+		other.LoopedRegionId = this.LoopedRegionId;
 	            other.Name = this.Name;
 	            
 	}
 
-	public void copyKeysDataTo(row2Struct other) {
+	public void copyKeysDataTo(row4Struct other) {
 
 		other.Name = this.Name;
 	            	
@@ -4468,8 +4224,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
 
 			int length = 0;
 		
-			            this.Active = dis.readBoolean();
-					
        			    	this.LoopedRegionId = (Object) ois.readObject();
 					
         	} catch (IOException e) {
@@ -4493,8 +4247,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
         try {
 
 		
-		            	dos.writeBoolean(this.Active);
-					
        			    	oos.writeObject(this.LoopedRegionId);
 					
         	} catch (IOException e) {
@@ -4509,8 +4261,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("Active="+String.valueOf(Active));
-		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
+		sb.append("LoopedRegionId="+String.valueOf(LoopedRegionId));
 		sb.append(",Name="+Name);
 	    sb.append("]");
 
@@ -4520,7 +4271,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
     /**
      * Compare keys
      */
-    public int compareTo(row2Struct other) {
+    public int compareTo(row4Struct other) {
 
 		int returnValue = -1;
 		
@@ -4577,58 +4328,58 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
 
 
 
-		row2Struct row2 = new row2Struct();
+		row4Struct row4 = new row4Struct();
 
 
 
 
 	
 	/**
-	 * [tAdvancedHash_row2 begin ] start
+	 * [tAdvancedHash_row4 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tAdvancedHash_row2", false);
-		start_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
+		ok_Hash.put("tAdvancedHash_row4", false);
+		start_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
 		
 	
-	currentComponent="tAdvancedHash_row2";
+	currentComponent="tAdvancedHash_row4";
 
 	
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
 					
 				}
 			} 
 
 		
-		int tos_count_tAdvancedHash_row2 = 0;
+		int tos_count_tAdvancedHash_row4 = 0;
 		
-    	class BytesLimit65535_tAdvancedHash_row2{
+    	class BytesLimit65535_tAdvancedHash_row4{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tAdvancedHash_row2().limitLog4jByte();
+        new BytesLimit65535_tAdvancedHash_row4().limitLog4jByte();
 
-			   		// connection name:row2
-			   		// source node:tPostgresqlInput_1 - inputs:(after_tFileInputExcel_1) outputs:(row2,row2) | target node:tAdvancedHash_row2 - inputs:(row2) outputs:()
-			   		// linked node: tMap_1 - inputs:(row1,row2) outputs:(updates,creates)
+			   		// connection name:row4
+			   		// source node:tPostgresqlInput_1 - inputs:(after_tFileInputExcel_1) outputs:(row4,row4) | target node:tAdvancedHash_row4 - inputs:(row4) outputs:()
+			   		// linked node: tMap_1 - inputs:(row3,row4) outputs:(updates,creates)
 			   
-			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row2 = 
+			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row4 = 
 			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
 			   			
 			   
-	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct> tHash_Lookup_row2 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
-	   						<row2Struct>getLookup(matchingModeEnum_row2);
+	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct> tHash_Lookup_row4 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
+	   						<row4Struct>getLookup(matchingModeEnum_row4);
 	   						   
-		   	   	   globalMap.put("tHash_Lookup_row2", tHash_Lookup_row2);
+		   	   	   globalMap.put("tHash_Lookup_row4", tHash_Lookup_row4);
 		   	   	   
 				
            
@@ -4638,7 +4389,7 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
 
 
 /**
- * [tAdvancedHash_row2 begin ] stop
+ * [tAdvancedHash_row4 begin ] stop
  */
 
 
@@ -4678,7 +4429,7 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
 		    
 			java.sql.Statement stmt_tPostgresqlInput_1 = conn_tPostgresqlInput_1.createStatement();
 
-		    String dbquery_tPostgresqlInput_1 = "select \"public\".\"LoopedRegions\".\"Active\",\"public\".\"LoopedRegions\".\"LoopedRegionId\",\n \"public\".\"LoopedRegions\".\"Name\" \nfrom \"public\".\"LoopedRegions\"";
+		    String dbquery_tPostgresqlInput_1 = "select \"public\".\"LoopedRegions\".\"LoopedRegionId\",\n \"public\".\"LoopedRegions\".\"Name\" \nfrom \"public\".\"LoopedRegions\"";
 			
 
                        globalMap.put("tPostgresqlInput_1_QUERY",dbquery_tPostgresqlInput_1);
@@ -4696,30 +4447,20 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
 		        nb_line_tPostgresqlInput_1++;
 		        
 							if(colQtyInRs_tPostgresqlInput_1 < 1) {
-								row2.Active = false;
+								row4.LoopedRegionId = null;
 							} else {
-	                         		
+		                          
             if(rs_tPostgresqlInput_1.getObject(1) != null) {
-                row2.Active = rs_tPostgresqlInput_1.getBoolean(1);
+                row4.LoopedRegionId = rs_tPostgresqlInput_1.getObject(1);
             } else {
                     throw new RuntimeException("Null value in non-Nullable column");
             }
 		                    }
 							if(colQtyInRs_tPostgresqlInput_1 < 2) {
-								row2.LoopedRegionId = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_1.getObject(2) != null) {
-                row2.LoopedRegionId = rs_tPostgresqlInput_1.getObject(2);
-            } else {
-                    throw new RuntimeException("Null value in non-Nullable column");
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 3) {
-								row2.Name = null;
+								row4.Name = null;
 							} else {
 	                         		
-        	row2.Name = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 3, false);
+        	row4.Name = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 2, false);
 		                    }
 					
 
@@ -4755,24 +4496,24 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
 
 	
 	/**
-	 * [tAdvancedHash_row2 main ] start
+	 * [tAdvancedHash_row4 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row2";
+	currentComponent="tAdvancedHash_row4";
 
 	
 
-			//row2
-			//row2
+			//row4
+			//row4
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row2"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row4"+iterateId,1, 1);
 				} 
 			
 
@@ -4782,16 +4523,14 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
 			   
 			   
 
-					row2Struct row2_HashRow = new row2Struct();
+					row4Struct row4_HashRow = new row4Struct();
 		   	   	   
 				
-				row2_HashRow.Active = row2.Active;
+				row4_HashRow.LoopedRegionId = row4.LoopedRegionId;
 				
-				row2_HashRow.LoopedRegionId = row2.LoopedRegionId;
+				row4_HashRow.Name = row4.Name;
 				
-				row2_HashRow.Name = row2.Name;
-				
-			tHash_Lookup_row2.put(row2_HashRow);
+			tHash_Lookup_row4.put(row4_HashRow);
 			
             
 
@@ -4801,10 +4540,10 @@ public void tPostgresqlInput_1Process(final java.util.Map<String, Object> global
  
 
 
-	tos_count_tAdvancedHash_row2++;
+	tos_count_tAdvancedHash_row4++;
 
 /**
- * [tAdvancedHash_row2 main ] stop
+ * [tAdvancedHash_row4 main ] stop
  */
 
 
@@ -4842,35 +4581,35 @@ end_Hash.put("tPostgresqlInput_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tAdvancedHash_row2 end ] start
+	 * [tAdvancedHash_row4 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row2";
+	currentComponent="tAdvancedHash_row4";
 
 	
 
-tHash_Lookup_row2.endPut();
+tHash_Lookup_row4.endPut();
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row2"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
 			 	}
 			}
 		
  
 
-ok_Hash.put("tAdvancedHash_row2", true);
-end_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
+ok_Hash.put("tAdvancedHash_row4", true);
+end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
 
 
 
 
 /**
- * [tAdvancedHash_row2 end ] stop
+ * [tAdvancedHash_row4 end ] stop
  */
 
 
@@ -4919,14 +4658,14 @@ end_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
 
 	
 	/**
-	 * [tAdvancedHash_row2 finally ] start
+	 * [tAdvancedHash_row4 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row2";
+	currentComponent="tAdvancedHash_row4";
 
 	
 
@@ -4935,7 +4674,7 @@ end_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
 
 
 /**
- * [tAdvancedHash_row2 finally ] stop
+ * [tAdvancedHash_row4 finally ] stop
  */
 
 
@@ -5310,6 +5049,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     123934 characters generated by Talend Open Studio for Data Integration 
- *     on the 8 de Setembro de 2018 19:27:35 BST
+ *     121846 characters generated by Talend Open Studio for Data Integration 
+ *     on the 9 de Setembro de 2018 19:07:53 BST
  ************************************************************************************************/

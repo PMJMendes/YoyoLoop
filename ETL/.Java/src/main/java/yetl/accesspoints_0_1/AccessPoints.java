@@ -240,6 +240,24 @@ private class TalendException extends Exception {
 					tPostgresqlConnection_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tPostgresqlInput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tPostgresqlInput_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tPostgresqlOutput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tPostgresqlInput_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFileInputExcel_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -267,15 +285,6 @@ private class TalendException extends Exception {
 					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tReplicate_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostgresqlOutput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -285,34 +294,7 @@ private class TalendException extends Exception {
 					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tLogRow_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tReplicate_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostgresqlOutput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tLogRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -348,7 +330,7 @@ private class TalendException extends Exception {
 					tPostgresqlInput_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tAdvancedHash_row2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tAdvancedHash_row3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -357,7 +339,7 @@ private class TalendException extends Exception {
 					tPostgresqlInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tAdvancedHash_row3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tAdvancedHash_row4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -367,6 +349,11 @@ private class TalendException extends Exception {
 			}
 			
 			public void tPostgresqlConnection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tPostgresqlInput_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -538,7 +525,7 @@ end_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
 									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
 								} 
 							
-							tFileInputExcel_1Process(globalMap); 
+							tPostgresqlInput_3Process(globalMap); 
 						
 
 
@@ -592,7 +579,7 @@ end_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
 	
 
 
-public static class row4Struct implements routines.system.IPersistableRow<row4Struct> {
+public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
     final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
     static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
 	protected static final int DEFAULT_HASHCODE = 1;
@@ -611,36 +598,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 					return this.AccessPointId;
 				}
 				
-			    public String Nome;
-
-				public String getNome () {
-					return this.Nome;
-				}
-				
-			    public Object LoopedRegionId;
-
-				public Object getLoopedRegionId () {
-					return this.LoopedRegionId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLink;
-
-				public String getGoogleLink () {
-					return this.GoogleLink;
-				}
-				
 
 
 	@Override
@@ -650,8 +607,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 			int result = DEFAULT_HASHCODE;
 	
 						result = prime * result + ((this.AccessPointId == null) ? 0 : this.AccessPointId.hashCode());
-					
-						result = prime * result + ((this.Nome == null) ? 0 : this.Nome.hashCode());
 					
     		this.hashCode = result;
     		this.hashCodeDirty = false;
@@ -664,7 +619,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		final row4Struct other = (row4Struct) obj;
+		final row1Struct other = (row1Struct) obj;
 		
 						if (this.AccessPointId == null) {
 							if (other.AccessPointId != null)
@@ -674,68 +629,24 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 						
 							return false;
 					
-						if (this.Nome == null) {
-							if (other.Nome != null)
-								return false;
-						
-						} else if (!this.Nome.equals(other.Nome))
-						
-							return false;
-					
 
 		return true;
     }
 
-	public void copyDataTo(row4Struct other) {
+	public void copyDataTo(row1Struct other) {
 
 		other.AccessPointId = this.AccessPointId;
-	            other.Nome = this.Nome;
-	            other.LoopedRegionId = this.LoopedRegionId;
-	            other.Activo = this.Activo;
-	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
 	            
 	}
 
-	public void copyKeysDataTo(row4Struct other) {
+	public void copyKeysDataTo(row1Struct other) {
 
 		other.AccessPointId = this.AccessPointId;
-	            	other.Nome = this.Nome;
 	            	
 	}
 
 
 
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_AccessPoints.length) {
-				if(length < 1024 && commonByteArray_YETL_AccessPoints.length == 0) {
-   					commonByteArray_YETL_AccessPoints = new byte[1024];
-				} else {
-   					commonByteArray_YETL_AccessPoints = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_AccessPoints, 0, length);
-			strReturn = new String(commonByteArray_YETL_AccessPoints, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
 
     public void readData(ObjectInputStream dis) {
 
@@ -746,16 +657,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
         		int length = 0;
 		
 						this.AccessPointId = (Object) dis.readObject();
-					
-					this.Nome = readString(dis);
-					
-						this.LoopedRegionId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
-					
-			        this.Default = dis.readBoolean();
-					
-					this.GoogleLink = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -782,26 +683,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 				
        			    	dos.writeObject(this.AccessPointId);
 					
-					// String
-				
-						writeString(this.Nome,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.LoopedRegionId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Default);
-					
-					// String
-				
-						writeString(this.GoogleLink,dos);
-					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -816,11 +697,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("AccessPointId="+String.valueOf(AccessPointId));
-		sb.append(",Nome="+Nome);
-		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
-		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -829,530 +705,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
     /**
      * Compare keys
      */
-    public int compareTo(row4Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.AccessPointId, other.AccessPointId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-						returnValue = checkNullsAndCompare(this.Nome, other.Nome);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class row6Struct implements routines.system.IPersistableRow<row6Struct> {
-    final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
-    static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public Object AccessPointId;
-
-				public Object getAccessPointId () {
-					return this.AccessPointId;
-				}
-				
-			    public String Nome;
-
-				public String getNome () {
-					return this.Nome;
-				}
-				
-			    public Object LoopedRegionId;
-
-				public Object getLoopedRegionId () {
-					return this.LoopedRegionId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLink;
-
-				public String getGoogleLink () {
-					return this.GoogleLink;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.AccessPointId == null) ? 0 : this.AccessPointId.hashCode());
-					
-						result = prime * result + ((this.Nome == null) ? 0 : this.Nome.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row6Struct other = (row6Struct) obj;
-		
-						if (this.AccessPointId == null) {
-							if (other.AccessPointId != null)
-								return false;
-						
-						} else if (!this.AccessPointId.equals(other.AccessPointId))
-						
-							return false;
-					
-						if (this.Nome == null) {
-							if (other.Nome != null)
-								return false;
-						
-						} else if (!this.Nome.equals(other.Nome))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row6Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            other.Nome = this.Nome;
-	            other.LoopedRegionId = this.LoopedRegionId;
-	            other.Activo = this.Activo;
-	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
-	            
-	}
-
-	public void copyKeysDataTo(row6Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            	other.Nome = this.Nome;
-	            	
-	}
-
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_AccessPoints.length) {
-				if(length < 1024 && commonByteArray_YETL_AccessPoints.length == 0) {
-   					commonByteArray_YETL_AccessPoints = new byte[1024];
-				} else {
-   					commonByteArray_YETL_AccessPoints = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_AccessPoints, 0, length);
-			strReturn = new String(commonByteArray_YETL_AccessPoints, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_AccessPoints) {
-
-        	try {
-
-        		int length = 0;
-		
-						this.AccessPointId = (Object) dis.readObject();
-					
-					this.Nome = readString(dis);
-					
-						this.LoopedRegionId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
-					
-			        this.Default = dis.readBoolean();
-					
-					this.GoogleLink = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// Object
-				
-       			    	dos.writeObject(this.AccessPointId);
-					
-					// String
-				
-						writeString(this.Nome,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.LoopedRegionId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Default);
-					
-					// String
-				
-						writeString(this.GoogleLink,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("AccessPointId="+String.valueOf(AccessPointId));
-		sb.append(",Nome="+Nome);
-		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
-		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row6Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.AccessPointId, other.AccessPointId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-						returnValue = checkNullsAndCompare(this.Nome, other.Nome);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class row5Struct implements routines.system.IPersistableRow<row5Struct> {
-    final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
-    static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public Object AccessPointId;
-
-				public Object getAccessPointId () {
-					return this.AccessPointId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLink;
-
-				public String getGoogleLink () {
-					return this.GoogleLink;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.AccessPointId == null) ? 0 : this.AccessPointId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row5Struct other = (row5Struct) obj;
-		
-						if (this.AccessPointId == null) {
-							if (other.AccessPointId != null)
-								return false;
-						
-						} else if (!this.AccessPointId.equals(other.AccessPointId))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row5Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            other.Activo = this.Activo;
-	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
-	            
-	}
-
-	public void copyKeysDataTo(row5Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            	
-	}
-
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_AccessPoints.length) {
-				if(length < 1024 && commonByteArray_YETL_AccessPoints.length == 0) {
-   					commonByteArray_YETL_AccessPoints = new byte[1024];
-				} else {
-   					commonByteArray_YETL_AccessPoints = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_AccessPoints, 0, length);
-			strReturn = new String(commonByteArray_YETL_AccessPoints, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_AccessPoints) {
-
-        	try {
-
-        		int length = 0;
-		
-						this.AccessPointId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
-					
-			        this.Default = dis.readBoolean();
-					
-					this.GoogleLink = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// Object
-				
-       			    	dos.writeObject(this.AccessPointId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Default);
-					
-					// String
-				
-						writeString(this.GoogleLink,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("AccessPointId="+String.valueOf(AccessPointId));
-		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row5Struct other) {
+    public int compareTo(row1Struct other) {
 
 		int returnValue = -1;
 		
@@ -1389,242 +742,498 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 
 
 }
+public void tPostgresqlInput_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tPostgresqlInput_3_SUBPROCESS_STATE", 0);
 
-public static class row7Struct implements routines.system.IPersistableRow<row7Struct> {
-    final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
-    static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
 
-    public String loopKey;
+	try {
+
+			String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume
+				globalResumeTicket = true;
+
+
+
+		row1Struct row1 = new row1Struct();
+
 
 
 
 	
-			    public Object AccessPointId;
+	/**
+	 * [tPostgresqlOutput_3 begin ] start
+	 */
 
-				public Object getAccessPointId () {
-					return this.AccessPointId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLink;
-
-				public String getGoogleLink () {
-					return this.GoogleLink;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
 	
-						result = prime * result + ((this.AccessPointId == null) ? 0 : this.AccessPointId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row7Struct other = (row7Struct) obj;
+	
 		
-						if (this.AccessPointId == null) {
-							if (other.AccessPointId != null)
-								return false;
-						
-						} else if (!this.AccessPointId.equals(other.AccessPointId))
-						
-							return false;
+		ok_Hash.put("tPostgresqlOutput_3", false);
+		start_Hash.put("tPostgresqlOutput_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
 					
+						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
+					
+				}
+			} 
 
-		return true;
-    }
-
-	public void copyDataTo(row7Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            other.Activo = this.Activo;
-	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
-	            
-	}
-
-	public void copyKeysDataTo(row7Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            	
-	}
-
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_AccessPoints.length) {
-				if(length < 1024 && commonByteArray_YETL_AccessPoints.length == 0) {
-   					commonByteArray_YETL_AccessPoints = new byte[1024];
-				} else {
-   					commonByteArray_YETL_AccessPoints = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_AccessPoints, 0, length);
-			strReturn = new String(commonByteArray_YETL_AccessPoints, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
+		
+		int tos_count_tPostgresqlOutput_3 = 0;
+		
+    	class BytesLimit65535_tPostgresqlOutput_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
     	}
-    }
+    	
+        new BytesLimit65535_tPostgresqlOutput_3().limitLog4jByte();
 
-    public void readData(ObjectInputStream dis) {
 
-		synchronized(commonByteArrayLock_YETL_AccessPoints) {
 
-        	try {
 
-        		int length = 0;
-		
-						this.AccessPointId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
-					
-			        this.Default = dis.readBoolean();
-					
-					this.GoogleLink = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
 
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
+String dbschema_tPostgresqlOutput_3 = null;
+	dbschema_tPostgresqlOutput_3 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
+	
 
+String tableName_tPostgresqlOutput_3 = null;
+if(dbschema_tPostgresqlOutput_3 == null || dbschema_tPostgresqlOutput_3.trim().length() == 0) {
+	tableName_tPostgresqlOutput_3 = "AccessPoints";
+} else {
+	tableName_tPostgresqlOutput_3 = dbschema_tPostgresqlOutput_3 + "\".\"" + "AccessPoints";
+}
+
+        int updateKeyCount_tPostgresqlOutput_3 = 1;
+        if(updateKeyCount_tPostgresqlOutput_3 < 1) {
+            throw new RuntimeException("For update, Schema must have a key");
         }
+int nb_line_tPostgresqlOutput_3 = 0;
+int nb_line_update_tPostgresqlOutput_3 = 0;
+int nb_line_inserted_tPostgresqlOutput_3 = 0;
+int nb_line_deleted_tPostgresqlOutput_3 = 0;
+int nb_line_rejected_tPostgresqlOutput_3 = 0;
+
+int deletedCount_tPostgresqlOutput_3=0;
+int updatedCount_tPostgresqlOutput_3=0;
+int insertedCount_tPostgresqlOutput_3=0;
+int rejectedCount_tPostgresqlOutput_3=0;
+
+boolean whetherReject_tPostgresqlOutput_3 = false;
+
+java.sql.Connection conn_tPostgresqlOutput_3 = null;
+String dbUser_tPostgresqlOutput_3 = null;
+
+	conn_tPostgresqlOutput_3 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+	
+	
+	
+	
+
+
+   int batchSize_tPostgresqlOutput_3 = 10000;
+   int batchSizeCounter_tPostgresqlOutput_3=0;
+
+int count_tPostgresqlOutput_3=0;
+	    String update_tPostgresqlOutput_3 = "UPDATE \"" + tableName_tPostgresqlOutput_3 + "\" SET \"" + "Active" + "\" = " + "False" + " WHERE \"AccessPointId\" = ?";
+	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_3 = conn_tPostgresqlOutput_3.prepareStatement(update_tPostgresqlOutput_3);
+	    
+
+ 
+
+
+
+/**
+ * [tPostgresqlOutput_3 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tPostgresqlInput_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tPostgresqlInput_3", false);
+		start_Hash.put("tPostgresqlInput_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tPostgresqlInput_3";
+
+	
+		int tos_count_tPostgresqlInput_3 = 0;
+		
+    	class BytesLimit65535_tPostgresqlInput_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlInput_3().limitLog4jByte();
+	
+    
+	
+		    int nb_line_tPostgresqlInput_3 = 0;
+		    java.sql.Connection conn_tPostgresqlInput_3 = null;
+		        conn_tPostgresqlInput_3 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+				
+		    
+			java.sql.Statement stmt_tPostgresqlInput_3 = conn_tPostgresqlInput_3.createStatement();
+
+		    String dbquery_tPostgresqlInput_3 = "select \"public\".\"AccessPoints\".\"AccessPointId\" \nfrom \"public\".\"AccessPoints\"";
+			
+
+                       globalMap.put("tPostgresqlInput_3_QUERY",dbquery_tPostgresqlInput_3);
+
+		    java.sql.ResultSet rs_tPostgresqlInput_3 = null;
+		try{
+		    rs_tPostgresqlInput_3 = stmt_tPostgresqlInput_3.executeQuery(dbquery_tPostgresqlInput_3);
+		    java.sql.ResultSetMetaData rsmd_tPostgresqlInput_3 = rs_tPostgresqlInput_3.getMetaData();
+		    int colQtyInRs_tPostgresqlInput_3 = rsmd_tPostgresqlInput_3.getColumnCount();
+
+		    String tmpContent_tPostgresqlInput_3 = null;
+		    
+		    
+		    while (rs_tPostgresqlInput_3.next()) {
+		        nb_line_tPostgresqlInput_3++;
+		        
+							if(colQtyInRs_tPostgresqlInput_3 < 1) {
+								row1.AccessPointId = null;
+							} else {
+		                          
+            if(rs_tPostgresqlInput_3.getObject(1) != null) {
+                row1.AccessPointId = rs_tPostgresqlInput_3.getObject(1);
+            } else {
+                    throw new RuntimeException("Null value in non-Nullable column");
+            }
+		                    }
+					
+
+
+ 
+
+
+
+/**
+ * [tPostgresqlInput_3 begin ] stop
+ */
+	
+	/**
+	 * [tPostgresqlInput_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_3";
+
+	
+
+ 
+
+
+	tos_count_tPostgresqlInput_3++;
+
+/**
+ * [tPostgresqlInput_3 main ] stop
+ */
+
+	
+	/**
+	 * [tPostgresqlOutput_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+
+			//row1
+			//row1
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+				} 
+			
 
 		
 
-      }
 
 
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// Object
-				
-       			    	dos.writeObject(this.AccessPointId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Default);
-					
-					// String
-				
-						writeString(this.GoogleLink,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
+        whetherReject_tPostgresqlOutput_3 = false;
+                    if(row1.AccessPointId == null) {
+pstmt_tPostgresqlOutput_3.setNull(1 + count_tPostgresqlOutput_3, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_3.setObject(1 + count_tPostgresqlOutput_3, row1.AccessPointId);
+}
 
 
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("AccessPointId="+String.valueOf(AccessPointId));
-		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row7Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.AccessPointId, other.AccessPointId);
-						if(returnValue != 0) {
-							return returnValue;
+    		pstmt_tPostgresqlOutput_3.addBatch();
+    		nb_line_tPostgresqlOutput_3++;
+    		  
+    		  batchSizeCounter_tPostgresqlOutput_3++;
+    		  
+    			if ((batchSize_tPostgresqlOutput_3 > 0) && (batchSize_tPostgresqlOutput_3 <= batchSizeCounter_tPostgresqlOutput_3)) {
+                try {
+						int countSum_tPostgresqlOutput_3 = 0;
+						    
+						for(int countEach_tPostgresqlOutput_3: pstmt_tPostgresqlOutput_3.executeBatch()) {
+							countSum_tPostgresqlOutput_3 += (countEach_tPostgresqlOutput_3 < 0 ? 0 : countEach_tPostgresqlOutput_3);
 						}
-
+				    	
+				    		updatedCount_tPostgresqlOutput_3 += countSum_tPostgresqlOutput_3;
+				    	
+            	    	batchSizeCounter_tPostgresqlOutput_3 = 0;
+                }catch (java.sql.BatchUpdateException e){
+                	
+                	int countSum_tPostgresqlOutput_3 = 0;
+					for(int countEach_tPostgresqlOutput_3: e.getUpdateCounts()) {
+						countSum_tPostgresqlOutput_3 += (countEach_tPostgresqlOutput_3 < 0 ? 0 : countEach_tPostgresqlOutput_3);
+					}
 					
-	    return returnValue;
-    }
+			    		updatedCount_tPostgresqlOutput_3 += countSum_tPostgresqlOutput_3;
+			    	
+                	System.err.println(e.getMessage());
+                	
+                }
+    			}
+    		
+
+ 
 
 
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
+	tos_count_tPostgresqlOutput_3++;
 
-        return returnValue;
-    }
+/**
+ * [tPostgresqlOutput_3 main ] stop
+ */
 
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
 
+
+	
+	/**
+	 * [tPostgresqlInput_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_3";
+
+	
+
+	}
+}finally{
+	stmt_tPostgresqlInput_3.close();
 
 }
+globalMap.put("tPostgresqlInput_3_NB_LINE",nb_line_tPostgresqlInput_3);
+ 
+
+ok_Hash.put("tPostgresqlInput_3", true);
+end_Hash.put("tPostgresqlInput_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tPostgresqlInput_3 end ] stop
+ */
+
+	
+	/**
+	 * [tPostgresqlOutput_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+
+
+
+	    try {
+				int countSum_tPostgresqlOutput_3 = 0;
+				if (pstmt_tPostgresqlOutput_3 != null && batchSizeCounter_tPostgresqlOutput_3 > 0) {
+						
+					for(int countEach_tPostgresqlOutput_3: pstmt_tPostgresqlOutput_3.executeBatch()) {
+						countSum_tPostgresqlOutput_3 += (countEach_tPostgresqlOutput_3 < 0 ? 0 : countEach_tPostgresqlOutput_3);
+					}
+						
+				}
+		    	
+		    		updatedCount_tPostgresqlOutput_3 += countSum_tPostgresqlOutput_3;
+		    	
+	    }catch (java.sql.BatchUpdateException e){
+	    	
+	    	int countSum_tPostgresqlOutput_3 = 0;
+			for(int countEach_tPostgresqlOutput_3: e.getUpdateCounts()) {
+				countSum_tPostgresqlOutput_3 += (countEach_tPostgresqlOutput_3 < 0 ? 0 : countEach_tPostgresqlOutput_3);
+			}
+			
+	    		updatedCount_tPostgresqlOutput_3 += countSum_tPostgresqlOutput_3;
+	    	
+	    	System.err.println(e.getMessage());
+	    	
+		}
+	    
+        if(pstmt_tPostgresqlOutput_3 != null) {
+            pstmt_tPostgresqlOutput_3.close();
+        }
+
+
+	nb_line_deleted_tPostgresqlOutput_3=nb_line_deleted_tPostgresqlOutput_3+ deletedCount_tPostgresqlOutput_3;
+	nb_line_update_tPostgresqlOutput_3=nb_line_update_tPostgresqlOutput_3 + updatedCount_tPostgresqlOutput_3;
+	nb_line_inserted_tPostgresqlOutput_3=nb_line_inserted_tPostgresqlOutput_3 + insertedCount_tPostgresqlOutput_3;
+	nb_line_rejected_tPostgresqlOutput_3=nb_line_rejected_tPostgresqlOutput_3 + rejectedCount_tPostgresqlOutput_3;
+	
+        globalMap.put("tPostgresqlOutput_3_NB_LINE",nb_line_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_UPDATED",nb_line_update_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_INSERTED",nb_line_inserted_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_DELETED",nb_line_deleted_tPostgresqlOutput_3);
+        globalMap.put("tPostgresqlOutput_3_NB_LINE_REJECTED", nb_line_rejected_tPostgresqlOutput_3);
+    
+	
+
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tPostgresqlOutput_3", true);
+end_Hash.put("tPostgresqlOutput_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tPostgresqlOutput_3 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+				    			if(resumeEntryMethodName == null || globalResumeTicket){
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tPostgresqlInput_3:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+								}	    				    			
+					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
+								} 
+							
+							tFileInputExcel_1Process(globalMap); 
+						
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tPostgresqlInput_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tPostgresqlInput_3 finally ] stop
+ */
+
+	
+	/**
+	 * [tPostgresqlOutput_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlOutput_3";
+
+	
+
+
+
+	
+
+ 
+
+
+
+/**
+ * [tPostgresqlOutput_3 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tPostgresqlInput_3_SUBPROCESS_STATE", 1);
+	}
+	
+
 
 public static class updatesStruct implements routines.system.IPersistableRow<updatesStruct> {
     final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
@@ -1639,6 +1248,18 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
 
 
 	
+			    public boolean Default;
+
+				public boolean getDefault () {
+					return this.Default;
+				}
+				
+			    public String GoogleLocation;
+
+				public String getGoogleLocation () {
+					return this.GoogleLocation;
+				}
+				
 			    public Object AccessPointId;
 
 				public Object getAccessPointId () {
@@ -1649,18 +1270,6 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
 
 				public boolean getActivo () {
 					return this.Activo;
-				}
-				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLink;
-
-				public String getGoogleLink () {
-					return this.GoogleLink;
 				}
 				
 
@@ -1700,10 +1309,10 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
 
 	public void copyDataTo(updatesStruct other) {
 
-		other.AccessPointId = this.AccessPointId;
+		other.Default = this.Default;
+	            other.GoogleLocation = this.GoogleLocation;
+	            other.AccessPointId = this.AccessPointId;
 	            other.Activo = this.Activo;
-	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
 	            
 	}
 
@@ -1754,13 +1363,13 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
 
         		int length = 0;
 		
+			        this.Default = dis.readBoolean();
+					
+					this.GoogleLocation = readString(dis);
+					
 						this.AccessPointId = (Object) dis.readObject();
 					
 			        this.Activo = dis.readBoolean();
-					
-			        this.Default = dis.readBoolean();
-					
-					this.GoogleLink = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1783,6 +1392,14 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
         try {
 
 		
+					// boolean
+				
+		            	dos.writeBoolean(this.Default);
+					
+					// String
+				
+						writeString(this.GoogleLocation,dos);
+					
 					// Object
 				
        			    	dos.writeObject(this.AccessPointId);
@@ -1790,14 +1407,6 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
 					// boolean
 				
 		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Default);
-					
-					// String
-				
-						writeString(this.GoogleLink,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1812,10 +1421,10 @@ public static class updatesStruct implements routines.system.IPersistableRow<upd
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("AccessPointId="+String.valueOf(AccessPointId));
+		sb.append("Default="+String.valueOf(Default));
+		sb.append(",GoogleLocation="+GoogleLocation);
+		sb.append(",AccessPointId="+String.valueOf(AccessPointId));
 		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -1887,6 +1496,18 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 					return this.Nome;
 				}
 				
+			    public boolean Default;
+
+				public boolean getDefault () {
+					return this.Default;
+				}
+				
+			    public String GoogleLocation;
+
+				public String getGoogleLocation () {
+					return this.GoogleLocation;
+				}
+				
 			    public Object LoopedRegionId;
 
 				public Object getLoopedRegionId () {
@@ -1899,18 +1520,6 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 					return this.Activo;
 				}
 				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLink;
-
-				public String getGoogleLink () {
-					return this.GoogleLink;
-				}
-				
 
 
 	@Override
@@ -1920,8 +1529,6 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 			int result = DEFAULT_HASHCODE;
 	
 						result = prime * result + ((this.AccessPointId == null) ? 0 : this.AccessPointId.hashCode());
-					
-						result = prime * result + ((this.Nome == null) ? 0 : this.Nome.hashCode());
 					
     		this.hashCode = result;
     		this.hashCodeDirty = false;
@@ -1944,14 +1551,6 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 						
 							return false;
 					
-						if (this.Nome == null) {
-							if (other.Nome != null)
-								return false;
-						
-						} else if (!this.Nome.equals(other.Nome))
-						
-							return false;
-					
 
 		return true;
     }
@@ -1960,17 +1559,16 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 
 		other.AccessPointId = this.AccessPointId;
 	            other.Nome = this.Nome;
+	            other.Default = this.Default;
+	            other.GoogleLocation = this.GoogleLocation;
 	            other.LoopedRegionId = this.LoopedRegionId;
 	            other.Activo = this.Activo;
-	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
 	            
 	}
 
 	public void copyKeysDataTo(createsStruct other) {
 
 		other.AccessPointId = this.AccessPointId;
-	            	other.Nome = this.Nome;
 	            	
 	}
 
@@ -2019,13 +1617,13 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 					
 					this.Nome = readString(dis);
 					
+			        this.Default = dis.readBoolean();
+					
+					this.GoogleLocation = readString(dis);
+					
 						this.LoopedRegionId = (Object) dis.readObject();
 					
 			        this.Activo = dis.readBoolean();
-					
-			        this.Default = dis.readBoolean();
-					
-					this.GoogleLink = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2056,6 +1654,14 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 				
 						writeString(this.Nome,dos);
 					
+					// boolean
+				
+		            	dos.writeBoolean(this.Default);
+					
+					// String
+				
+						writeString(this.GoogleLocation,dos);
+					
 					// Object
 				
        			    	dos.writeObject(this.LoopedRegionId);
@@ -2063,14 +1669,6 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 					// boolean
 				
 		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Default);
-					
-					// String
-				
-						writeString(this.GoogleLink,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2087,10 +1685,10 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 		sb.append("[");
 		sb.append("AccessPointId="+String.valueOf(AccessPointId));
 		sb.append(",Nome="+Nome);
+		sb.append(",Default="+String.valueOf(Default));
+		sb.append(",GoogleLocation="+GoogleLocation);
 		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
 		sb.append(",Activo="+String.valueOf(Activo));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -2104,12 +1702,6 @@ public static class createsStruct implements routines.system.IPersistableRow<cre
 		int returnValue = -1;
 		
 						returnValue = checkNullsAndCompare(this.AccessPointId, other.AccessPointId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-						returnValue = checkNullsAndCompare(this.Nome, other.Nome);
 						if(returnValue != 0) {
 							return returnValue;
 						}
@@ -2154,28 +1746,22 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					return this.Nome;
 				}
 				
-			    public Object LoopedRegionId;
-
-				public Object getLoopedRegionId () {
-					return this.LoopedRegionId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
 			    public boolean Default;
 
 				public boolean getDefault () {
 					return this.Default;
 				}
 				
-			    public String GoogleLink;
+			    public String GoogleLocation;
 
-				public String getGoogleLink () {
-					return this.GoogleLink;
+				public String getGoogleLocation () {
+					return this.GoogleLocation;
+				}
+				
+			    public Object LoopedRegionId;
+
+				public Object getLoopedRegionId () {
+					return this.LoopedRegionId;
 				}
 				
 
@@ -2221,13 +1807,11 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 		
 					this.Nome = readString(dis);
 					
-						this.LoopedRegionId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
-					
 			        this.Default = dis.readBoolean();
 					
-					this.GoogleLink = readString(dis);
+					this.GoogleLocation = readString(dis);
+					
+						this.LoopedRegionId = (Object) dis.readObject();
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2254,21 +1838,17 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 				
 						writeString(this.Nome,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.LoopedRegionId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
 					// boolean
 				
 		            	dos.writeBoolean(this.Default);
 					
 					// String
 				
-						writeString(this.GoogleLink,dos);
+						writeString(this.GoogleLocation,dos);
+					
+					// Object
+				
+       			    	dos.writeObject(this.LoopedRegionId);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2284,10 +1864,9 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("Nome="+Nome);
-		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
-		sb.append(",Activo="+String.valueOf(Activo));
 		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
+		sb.append(",GoogleLocation="+GoogleLocation);
+		sb.append(",LoopedRegionId="+String.valueOf(LoopedRegionId));
 	    sb.append("]");
 
 	    return sb.toString();
@@ -2328,7 +1907,7 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 
 }
 
-public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
+public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
     final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
     static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
 
@@ -2345,22 +1924,16 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 					return this.Regiao;
 				}
 				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
 			    public boolean Default;
 
 				public boolean getDefault () {
 					return this.Default;
 				}
 				
-			    public String GoogleLink;
+			    public String GoogleLocation;
 
-				public String getGoogleLink () {
-					return this.GoogleLink;
+				public String getGoogleLocation () {
+					return this.GoogleLocation;
 				}
 				
 
@@ -2408,11 +1981,9 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 					
 					this.Regiao = readString(dis);
 					
-			        this.Activo = dis.readBoolean();
-					
 			        this.Default = dis.readBoolean();
 					
-					this.GoogleLink = readString(dis);
+					this.GoogleLocation = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2442,15 +2013,11 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 					
 					// boolean
 				
-		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
 		            	dos.writeBoolean(this.Default);
 					
 					// String
 				
-						writeString(this.GoogleLink,dos);
+						writeString(this.GoogleLocation,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2467,9 +2034,8 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		sb.append("[");
 		sb.append("Nome="+Nome);
 		sb.append(",Regiao="+Regiao);
-		sb.append(",Activo="+String.valueOf(Activo));
 		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
+		sb.append(",GoogleLocation="+GoogleLocation);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -2478,7 +2044,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
     /**
      * Compare keys
      */
-    public int compareTo(row1Struct other) {
+    public int compareTo(row2Struct other) {
 
 		int returnValue = -1;
 		
@@ -2535,22 +2101,16 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 					return this.Regiao;
 				}
 				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
 			    public boolean Default;
 
 				public boolean getDefault () {
 					return this.Default;
 				}
 				
-			    public String GoogleLink;
+			    public String GoogleLocation;
 
-				public String getGoogleLink () {
-					return this.GoogleLink;
+				public String getGoogleLocation () {
+					return this.GoogleLocation;
 				}
 				
 
@@ -2592,9 +2152,8 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 
 		other.Nome = this.Nome;
 	            other.Regiao = this.Regiao;
-	            other.Activo = this.Activo;
 	            other.Default = this.Default;
-	            other.GoogleLink = this.GoogleLink;
+	            other.GoogleLocation = this.GoogleLocation;
 	            
 	}
 
@@ -2649,11 +2208,9 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 					
 					this.Regiao = readString(dis);
 					
-			        this.Activo = dis.readBoolean();
-					
 			        this.Default = dis.readBoolean();
 					
-					this.GoogleLink = readString(dis);
+					this.GoogleLocation = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2683,15 +2240,11 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 					
 					// boolean
 				
-		            	dos.writeBoolean(this.Activo);
-					
-					// boolean
-				
 		            	dos.writeBoolean(this.Default);
 					
 					// String
 				
-						writeString(this.GoogleLink,dos);
+						writeString(this.GoogleLocation,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -2708,9 +2261,8 @@ public static class after_tFileInputExcel_1Struct implements routines.system.IPe
 		sb.append("[");
 		sb.append("Nome="+Nome);
 		sb.append(",Regiao="+Regiao);
-		sb.append(",Activo="+String.valueOf(Activo));
 		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLink="+GoogleLink);
+		sb.append(",GoogleLocation="+GoogleLocation);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -2778,15 +2330,10 @@ public void tFileInputExcel_1Process(final java.util.Map<String, Object> globalM
 		tPostgresqlInput_1Process(globalMap);
 		tPostgresqlInput_2Process(globalMap);
 
-		row1Struct row1 = new row1Struct();
+		row2Struct row2 = new row2Struct();
 out1Struct out1 = new out1Struct();
 updatesStruct updates = new updatesStruct();
-row5Struct row5 = new row5Struct();
-row7Struct row7 = new row7Struct();
 createsStruct creates = new createsStruct();
-row4Struct row4 = new row4Struct();
-row6Struct row6 = new row6Struct();
-
 
 
 
@@ -2812,7 +2359,7 @@ row6Struct row6 = new row6Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("updates" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -2872,7 +2419,7 @@ String dbUser_tPostgresqlOutput_2 = null;
 
 
 int count_tPostgresqlOutput_2=0;
-	    String update_tPostgresqlOutput_2 = "UPDATE \"" + tableName_tPostgresqlOutput_2 + "\" SET \"Active\" = ?,\"Default\" = ?,\"GoogleLocation\" = ? WHERE \"AccessPointId\" = ?";
+	    String update_tPostgresqlOutput_2 = "UPDATE \"" + tableName_tPostgresqlOutput_2 + "\" SET \"Default\" = ?,\"GoogleLocation\" = ?,\"Active\" = ? WHERE \"AccessPointId\" = ?";
 	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(update_tPostgresqlOutput_2);
 	    
 
@@ -2883,109 +2430,6 @@ int count_tPostgresqlOutput_2=0;
 /**
  * [tPostgresqlOutput_2 begin ] stop
  */
-
-
-
-
-	
-	/**
-	 * [tLogRow_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tLogRow_2", false);
-		start_Hash.put("tLogRow_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tLogRow_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tLogRow_2 = 0;
-		
-    	class BytesLimit65535_tLogRow_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tLogRow_2().limitLog4jByte();
-
-	///////////////////////
-	
-		final String OUTPUT_FIELD_SEPARATOR_tLogRow_2 = "|";
-		java.io.PrintStream consoleOut_tLogRow_2 = null;	
-
- 		StringBuilder strBuffer_tLogRow_2 = null;
-		int nb_line_tLogRow_2 = 0;
-///////////////////////    			
-
-
-
- 
-
-
-
-/**
- * [tLogRow_2 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tReplicate_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tReplicate_2", false);
-		start_Hash.put("tReplicate_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tReplicate_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("updates" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tReplicate_2 = 0;
-		
-    	class BytesLimit65535_tReplicate_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tReplicate_2().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tReplicate_2 begin ] stop
- */
-
 
 
 
@@ -3009,7 +2453,7 @@ int count_tPostgresqlOutput_2=0;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("creates" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -3065,7 +2509,7 @@ String dbUser_tPostgresqlOutput_1 = null;
 
 
 int count_tPostgresqlOutput_1=0;
-	    String insert_tPostgresqlOutput_1 = "INSERT INTO \"" + tableName_tPostgresqlOutput_1 + "\" (\"AccessPointId\",\"Name\",\"Region_LoopedRegionId\",\"Active\",\"Default\",\"GoogleLocation\") VALUES (?,?,?,?,?,?)";
+	    String insert_tPostgresqlOutput_1 = "INSERT INTO \"" + tableName_tPostgresqlOutput_1 + "\" (\"AccessPointId\",\"Name\",\"Default\",\"GoogleLocation\",\"Region_LoopedRegionId\",\"Active\") VALUES (?,?,?,?,?,?)";
 	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_1 = conn_tPostgresqlOutput_1.prepareStatement(insert_tPostgresqlOutput_1);
 	    
 
@@ -3075,108 +2519,6 @@ int count_tPostgresqlOutput_1=0;
 
 /**
  * [tPostgresqlOutput_1 begin ] stop
- */
-
-
-
-
-	
-	/**
-	 * [tLogRow_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tLogRow_1", false);
-		start_Hash.put("tLogRow_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tLogRow_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row6" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tLogRow_1 = 0;
-		
-    	class BytesLimit65535_tLogRow_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tLogRow_1().limitLog4jByte();
-
-	///////////////////////
-	
-		final String OUTPUT_FIELD_SEPARATOR_tLogRow_1 = "|";
-		java.io.PrintStream consoleOut_tLogRow_1 = null;	
-
- 		StringBuilder strBuffer_tLogRow_1 = null;
-		int nb_line_tLogRow_1 = 0;
-///////////////////////    			
-
-
-
- 
-
-
-
-/**
- * [tLogRow_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tReplicate_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tReplicate_1", false);
-		start_Hash.put("tReplicate_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tReplicate_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("creates" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tReplicate_1 = 0;
-		
-    	class BytesLimit65535_tReplicate_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tReplicate_1().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tReplicate_1 begin ] stop
  */
 
 
@@ -3222,15 +2564,15 @@ int count_tPostgresqlOutput_1=0;
 // ###############################
 // # Lookup's keys initialization
 	
-		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row3Struct> tHash_Lookup_row3 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row3Struct>) 
-				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row3Struct>) 
-					globalMap.get( "tHash_Lookup_row3" ))
+		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct> tHash_Lookup_row4 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct>) 
+				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct>) 
+					globalMap.get( "tHash_Lookup_row4" ))
 					;					
 					
 	
 
-row3Struct row3HashKey = new row3Struct();
-row3Struct row3Default = new row3Struct();
+row4Struct row4HashKey = new row4Struct();
+row4Struct row4Default = new row4Struct();
 // ###############################        
 
 // ###############################
@@ -3290,7 +2632,7 @@ createsStruct creates_tmp = new createsStruct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -3312,15 +2654,15 @@ createsStruct creates_tmp = new createsStruct();
 // ###############################
 // # Lookup's keys initialization
 	
-		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct> tHash_Lookup_row2 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct>) 
-				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct>) 
-					globalMap.get( "tHash_Lookup_row2" ))
+		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row3Struct> tHash_Lookup_row3 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row3Struct>) 
+				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row3Struct>) 
+					globalMap.get( "tHash_Lookup_row3" ))
 					;					
 					
 	
 
-row2Struct row2HashKey = new row2Struct();
-row2Struct row2Default = new row2Struct();
+row3Struct row3HashKey = new row3Struct();
+row3Struct row3Default = new row3Struct();
 // ###############################        
 
 // ###############################
@@ -3470,7 +2812,7 @@ out1Struct out1_tmp = new out1Struct();
         int limit_tFileInputExcel_1 = -1;
         int start_column_tFileInputExcel_1 = 1-1;
         int end_column_tFileInputExcel_1 = -1;
-        Integer lastColumn_tFileInputExcel_1 = 5;
+        Integer lastColumn_tFileInputExcel_1 = 4;
         if(lastColumn_tFileInputExcel_1!=null){
         	end_column_tFileInputExcel_1 = lastColumn_tFileInputExcel_1.intValue();
         }
@@ -3502,8 +2844,8 @@ out1Struct out1_tmp = new out1Struct();
             if (rowCount_tFileInputExcel_1 <= i_tFileInputExcel_1) {
                 row_tFileInputExcel_1 = sheet_tFileInputExcel_1.getRow(i_tFileInputExcel_1 - rowCount_tFileInputExcel_1);
             }
-		    row1 = null;
-					int tempRowLength_tFileInputExcel_1 = 5;
+		    row2 = null;
+					int tempRowLength_tFileInputExcel_1 = 4;
 				
 				int columnIndex_tFileInputExcel_1 = 0;
 			
@@ -3573,7 +2915,7 @@ out1Struct out1_tmp = new out1Struct();
 				}
 			}
 			boolean whetherReject_tFileInputExcel_1 = false;
-			row1 = new row1Struct();
+			row2 = new row2Struct();
 			int curColNum_tFileInputExcel_1 = -1;
 			String curColName_tFileInputExcel_1 = "";
 			try{
@@ -3583,9 +2925,9 @@ out1Struct out1_tmp = new out1Struct();
 				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
 				curColName_tFileInputExcel_1 = "Nome";
 
-				row1.Nome = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+				row2.Nome = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 			}else{
-				row1.Nome = null;
+				row2.Nome = null;
 				emptyColumnCount_tFileInputExcel_1++;
 			}
 							columnIndex_tFileInputExcel_1 = 1;
@@ -3594,46 +2936,35 @@ out1Struct out1_tmp = new out1Struct();
 				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
 				curColName_tFileInputExcel_1 = "Regiao";
 
-				row1.Regiao = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
+				row2.Regiao = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 			}else{
-				row1.Regiao = null;
+				row2.Regiao = null;
 				emptyColumnCount_tFileInputExcel_1++;
 			}
 							columnIndex_tFileInputExcel_1 = 2;
 						
 			if( temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1].length() > 0) {
 				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
-				curColName_tFileInputExcel_1 = "Activo";
+				curColName_tFileInputExcel_1 = "Default";
 
-				row1.Activo = ParserUtils.parseTo_boolean(temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1]);
+				row2.Default = ParserUtils.parseTo_boolean(temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1]);
 			}else{
-				row1.Activo = false;
+				row2.Default = false;
 				emptyColumnCount_tFileInputExcel_1++;
 			}
 							columnIndex_tFileInputExcel_1 = 3;
 						
 			if( temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1].length() > 0) {
 				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
-				curColName_tFileInputExcel_1 = "Default";
+				curColName_tFileInputExcel_1 = "GoogleLocation";
 
-				row1.Default = ParserUtils.parseTo_boolean(temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1]);
+				row2.GoogleLocation = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
 			}else{
-				row1.Default = false;
-				emptyColumnCount_tFileInputExcel_1++;
-			}
-							columnIndex_tFileInputExcel_1 = 4;
-						
-			if( temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1].length() > 0) {
-				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
-				curColName_tFileInputExcel_1 = "GoogleLink";
-
-				row1.GoogleLink = temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1];
-			}else{
-				row1.GoogleLink = null;
+				row2.GoogleLocation = null;
 				emptyColumnCount_tFileInputExcel_1++;
 			}
 
-        if(emptyColumnCount_tFileInputExcel_1 >= 5){
+        if(emptyColumnCount_tFileInputExcel_1 >= 4){
         	break; //if meet the empty row, there will break the iterate.
         }
 				nb_line_tFileInputExcel_1++;
@@ -3641,7 +2972,7 @@ out1Struct out1_tmp = new out1Struct();
 			}catch(java.lang.Exception e){
 			whetherReject_tFileInputExcel_1 = true;
 					 System.err.println(e.getMessage());
-					 row1 = null;
+					 row2 = null;
 			}
 
 
@@ -3677,8 +3008,8 @@ out1Struct out1_tmp = new out1Struct();
 /**
  * [tFileInputExcel_1 main ] stop
  */
-// Start of branch "row1"
-if(row1 != null) { 
+// Start of branch "row2"
+if(row2 != null) { 
 
 
 
@@ -3695,13 +3026,13 @@ if(row1 != null) {
 
 	
 
-			//row1
-			//row1
+			//row2
+			//row2
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row2"+iterateId,1, 1);
 				} 
 			
 
@@ -3719,35 +3050,35 @@ if(row1 != null) {
 		
 
 				///////////////////////////////////////////////
-				// Starting Lookup Table "row2" 
+				// Starting Lookup Table "row3" 
 				///////////////////////////////////////////////
 
 
 				
 				
                             
- 					    boolean forceLooprow2 = false;
+ 					    boolean forceLooprow3 = false;
        		  	    	
        		  	    	
- 							row2Struct row2ObjectFromLookup = null;
+ 							row3Struct row3ObjectFromLookup = null;
                           
 		           		  	if(!rejectedInnerJoin_tMap_1) { // G_TM_M_020
 
 								
 								hasCasePrimitiveKeyWithNull_tMap_1 = false;
 								
-                        		    		row2HashKey.Name = row1.Regiao ;
+                        		    		row3HashKey.Name = row2.Regiao ;
                         		    		
 
 								
-		                        	row2HashKey.hashCodeDirty = true;
+		                        	row3HashKey.hashCodeDirty = true;
                         		
 	  					
 	  							
 			  					
 			  					
 	  					
-		  							tHash_Lookup_row2.lookup( row2HashKey );
+		  							tHash_Lookup_row3.lookup( row3HashKey );
 
 	  							
 
@@ -3755,7 +3086,7 @@ if(row1 != null) {
 
  								
 								  
-								  if(!tHash_Lookup_row2.hasNext()) { // G_TM_M_090
+								  if(!tHash_Lookup_row3.hasNext()) { // G_TM_M_090
 
   								
 		  				
@@ -3776,30 +3107,30 @@ if(row1 != null) {
 							} // G_TM_M_020
 			           		  	  
 							
-				           		if(tHash_Lookup_row2 != null && tHash_Lookup_row2.getCount(row2HashKey) > 1) { // G 071
+				           		if(tHash_Lookup_row3 != null && tHash_Lookup_row3.getCount(row3HashKey) > 1) { // G 071
 			  							
 			  						
 									 		
-									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row2' and it contains more one result from keys :  row2.Name = '" + row2HashKey.Name + "'");
+									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row3' and it contains more one result from keys :  row3.Name = '" + row3HashKey.Name + "'");
 								} // G 071
 							
 
-							row2Struct row2 = null;
+							row3Struct row3 = null;
                     		  	 
 							   
                     		  	 
-	       		  	    	row2Struct fromLookup_row2 = null;
-							row2 = row2Default;
+	       		  	    	row3Struct fromLookup_row3 = null;
+							row3 = row3Default;
 										 
 							
 								 
 							
 							
-								if (tHash_Lookup_row2 !=null && tHash_Lookup_row2.hasNext()) { // G 099
+								if (tHash_Lookup_row3 !=null && tHash_Lookup_row3.hasNext()) { // G 099
 								
 							
 								
-								fromLookup_row2 = tHash_Lookup_row2.next();
+								fromLookup_row3 = tHash_Lookup_row3.next();
 
 							
 							
@@ -3807,8 +3138,8 @@ if(row1 != null) {
 							
 							
 
-							if(fromLookup_row2 != null) {
-								row2 = fromLookup_row2;
+							if(fromLookup_row3 != null) {
+								row3 = fromLookup_row3;
 							}
 							
 							
@@ -3834,11 +3165,10 @@ out1 = null;
 if(!rejectedInnerJoin_tMap_1 ) {
 
 // # Output table : 'out1'
-out1_tmp.Nome = row1.Nome ;
-out1_tmp.LoopedRegionId = row2.LoopedRegionId ;
-out1_tmp.Activo = row1.Activo ;
-out1_tmp.Default = row1.Default ;
-out1_tmp.GoogleLink = row1.GoogleLink ;
+out1_tmp.Nome = row2.Nome ;
+out1_tmp.Default = row2.Default ;
+out1_tmp.GoogleLocation = row2.GoogleLocation ;
+out1_tmp.LoopedRegionId = row3.LoopedRegionId ;
 out1 = out1_tmp;
 }  // closing inner join bracket (2)
 // ###############################
@@ -3906,37 +3236,37 @@ if(out1 != null) {
 		
 
 				///////////////////////////////////////////////
-				// Starting Lookup Table "row3" 
+				// Starting Lookup Table "row4" 
 				///////////////////////////////////////////////
 
 
 				
 				
                             
- 					    boolean forceLooprow3 = false;
+ 					    boolean forceLooprow4 = false;
        		  	    	
        		  	    	
- 							row3Struct row3ObjectFromLookup = null;
+ 							row4Struct row4ObjectFromLookup = null;
                           
 		           		  	if(!rejectedInnerJoin_tMap_2) { // G_TM_M_020
 
 								
 								hasCasePrimitiveKeyWithNull_tMap_2 = false;
 								
-                        		    		row3HashKey.Name = out1.Nome ;
+                        		    		row4HashKey.Region_LoopedRegionId = out1.LoopedRegionId ;
                         		    		
-                        		    		row3HashKey.Region_LoopedRegionId = out1.LoopedRegionId ;
+                        		    		row4HashKey.Name = out1.Nome ;
                         		    		
 
 								
-		                        	row3HashKey.hashCodeDirty = true;
+		                        	row4HashKey.hashCodeDirty = true;
                         		
 	  					
 	  							
 			  					
 			  					
 	  					
-		  							tHash_Lookup_row3.lookup( row3HashKey );
+		  							tHash_Lookup_row4.lookup( row4HashKey );
 
 	  							
 
@@ -3944,7 +3274,7 @@ if(out1 != null) {
 
  								
 								  
-								  if(!tHash_Lookup_row3.hasNext()) { // G_TM_M_090
+								  if(!tHash_Lookup_row4.hasNext()) { // G_TM_M_090
 
   								
 		  				
@@ -3965,30 +3295,30 @@ if(out1 != null) {
 							} // G_TM_M_020
 			           		  	  
 							
-				           		if(tHash_Lookup_row3 != null && tHash_Lookup_row3.getCount(row3HashKey) > 1) { // G 071
+				           		if(tHash_Lookup_row4 != null && tHash_Lookup_row4.getCount(row4HashKey) > 1) { // G 071
 			  							
 			  						
 									 		
-									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row3' and it contains more one result from keys :  row3.Name = '" + row3HashKey.Name + "', row3.Region_LoopedRegionId = '" + row3HashKey.Region_LoopedRegionId + "'");
+									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row4' and it contains more one result from keys :  row4.Region_LoopedRegionId = '" + row4HashKey.Region_LoopedRegionId + "', row4.Name = '" + row4HashKey.Name + "'");
 								} // G 071
 							
 
-							row3Struct row3 = null;
+							row4Struct row4 = null;
                     		  	 
 							   
                     		  	 
-	       		  	    	row3Struct fromLookup_row3 = null;
-							row3 = row3Default;
+	       		  	    	row4Struct fromLookup_row4 = null;
+							row4 = row4Default;
 										 
 							
 								 
 							
 							
-								if (tHash_Lookup_row3 !=null && tHash_Lookup_row3.hasNext()) { // G 099
+								if (tHash_Lookup_row4 !=null && tHash_Lookup_row4.hasNext()) { // G 099
 								
 							
 								
-								fromLookup_row3 = tHash_Lookup_row3.next();
+								fromLookup_row4 = tHash_Lookup_row4.next();
 
 							
 							
@@ -3996,8 +3326,8 @@ if(out1 != null) {
 							
 							
 
-							if(fromLookup_row3 != null) {
-								row3 = fromLookup_row3;
+							if(fromLookup_row4 != null) {
+								row4 = fromLookup_row4;
 							}
 							
 							
@@ -4024,10 +3354,10 @@ creates = null;
 if(!rejectedInnerJoin_tMap_2 ) {
 
 // # Output table : 'updates'
-updates_tmp.AccessPointId = row3.AccessPointId ;
-updates_tmp.Activo = out1.Activo ;
 updates_tmp.Default = out1.Default ;
-updates_tmp.GoogleLink = out1.GoogleLink ;
+updates_tmp.GoogleLocation = out1.GoogleLocation;
+updates_tmp.AccessPointId = row4.AccessPointId ;
+updates_tmp.Activo = true;
 updates = updates_tmp;
 } // closing inner join bracket (1)
 // ###### START REJECTS ##### 
@@ -4037,10 +3367,10 @@ updates = updates_tmp;
 if( rejectedInnerJoin_tMap_2 ) {
 creates_tmp.AccessPointId = java.util.UUID.randomUUID() ;
 creates_tmp.Nome = out1.Nome ;
-creates_tmp.LoopedRegionId = out1.LoopedRegionId ;
-creates_tmp.Activo = out1.Activo ;
 creates_tmp.Default = out1.Default ;
-creates_tmp.GoogleLink = out1.GoogleLink ;
+creates_tmp.GoogleLocation = out1.GoogleLocation;
+creates_tmp.LoopedRegionId = out1.LoopedRegionId ;
+creates_tmp.Activo = true;
 creates = creates_tmp;
 } // closing filter/reject
 // ###############################
@@ -4073,14 +3403,14 @@ if(updates != null) {
 
 	
 	/**
-	 * [tReplicate_2 main ] start
+	 * [tPostgresqlOutput_2 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tReplicate_2";
+	currentComponent="tPostgresqlOutput_2";
 
 	
 
@@ -4097,69 +3427,20 @@ if(updates != null) {
 		
 
 
-	row5 = new row5Struct();
-						
-	row5.AccessPointId = updates.AccessPointId;								
-	row5.Activo = updates.Activo;								
-	row5.Default = updates.Default;								
-	row5.GoogleLink = updates.GoogleLink;			
-	row7 = new row7Struct();
-						
-	row7.AccessPointId = updates.AccessPointId;								
-	row7.Activo = updates.Activo;								
-	row7.Default = updates.Default;								
-	row7.GoogleLink = updates.GoogleLink;			
-
-
- 
-
-
-	tos_count_tReplicate_2++;
-
-/**
- * [tReplicate_2 main ] stop
- */
-
-	
-	/**
-	 * [tPostgresqlOutput_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-
-			//row5
-			//row5
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row5"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
 
         whetherReject_tPostgresqlOutput_2 = false;
-                    pstmt_tPostgresqlOutput_2.setBoolean(1, row5.Activo);
+                    pstmt_tPostgresqlOutput_2.setBoolean(1, updates.Default);
 
-                    pstmt_tPostgresqlOutput_2.setBoolean(2, row5.Default);
-
-                    if(row5.GoogleLink == null) {
-pstmt_tPostgresqlOutput_2.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmt_tPostgresqlOutput_2.setString(3, row5.GoogleLink);
+                    if(updates.GoogleLocation == null) {
+pstmt_tPostgresqlOutput_2.setNull(2, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_2.setString(2, updates.GoogleLocation);
 }
 
-                    if(row5.AccessPointId == null) {
+                    pstmt_tPostgresqlOutput_2.setBoolean(3, updates.Activo);
+
+                    if(updates.AccessPointId == null) {
 pstmt_tPostgresqlOutput_2.setNull(4 + count_tPostgresqlOutput_2, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_2.setObject(4 + count_tPostgresqlOutput_2, row5.AccessPointId);
+} else {pstmt_tPostgresqlOutput_2.setObject(4 + count_tPostgresqlOutput_2, updates.AccessPointId);
 }
 
 
@@ -4183,131 +3464,6 @@ pstmt_tPostgresqlOutput_2.setNull(4 + count_tPostgresqlOutput_2, java.sql.Types.
  * [tPostgresqlOutput_2 main ] stop
  */
 
-
-
-
-	
-	/**
-	 * [tLogRow_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_2";
-
-	
-
-			//row7
-			//row7
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row7"+iterateId,1, 1);
-				} 
-			
-
-		
-///////////////////////		
-						
-
-
-
-				strBuffer_tLogRow_2 = new StringBuilder();
-				strBuffer_tLogRow_2.append("[tLogRow_2] ");
-
-
-
-
-   				
-	    		if(row7.AccessPointId != null) { //              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row7.AccessPointId)							
-				);
-
-
-							
-	    		} //  			
-
-    			strBuffer_tLogRow_2.append("|");
-    			
-
-
-              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row7.Activo)							
-				);
-
-
-							  			
-
-    			strBuffer_tLogRow_2.append("|");
-    			
-
-
-              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row7.Default)							
-				);
-
-
-							  			
-
-    			strBuffer_tLogRow_2.append("|");
-    			
-
-
-   				
-	    		if(row7.GoogleLink != null) { //              
-                    							
-       
-				strBuffer_tLogRow_2.append(
-				                String.valueOf(row7.GoogleLink)							
-				);
-
-
-							
-	    		} //  			
- 
-
-                    if (globalMap.get("tLogRow_CONSOLE")!=null)
-                    {
-                    	consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-                    }
-                    else
-                    {
-                    	consoleOut_tLogRow_2 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_2);
-                    }
-                    consoleOut_tLogRow_2.println(strBuffer_tLogRow_2.toString());
-                    consoleOut_tLogRow_2.flush();
-                    nb_line_tLogRow_2++;
-//////
-
-//////                    
-                    
-///////////////////////    			
-
- 
-
-
-	tos_count_tLogRow_2++;
-
-/**
- * [tLogRow_2 main ] stop
- */
-
-
-
-
 } // End of branch "updates"
 
 
@@ -4320,14 +3476,14 @@ if(creates != null) {
 
 	
 	/**
-	 * [tReplicate_1 main ] start
+	 * [tPostgresqlOutput_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tReplicate_1";
+	currentComponent="tPostgresqlOutput_1";
 
 	
 
@@ -4344,84 +3500,31 @@ if(creates != null) {
 		
 
 
-	row4 = new row4Struct();
-						
-	row4.AccessPointId = creates.AccessPointId;								
-	row4.Nome = creates.Nome;								
-	row4.LoopedRegionId = creates.LoopedRegionId;								
-	row4.Activo = creates.Activo;								
-	row4.Default = creates.Default;								
-	row4.GoogleLink = creates.GoogleLink;			
-	row6 = new row6Struct();
-						
-	row6.AccessPointId = creates.AccessPointId;								
-	row6.Nome = creates.Nome;								
-	row6.LoopedRegionId = creates.LoopedRegionId;								
-	row6.Activo = creates.Activo;								
-	row6.Default = creates.Default;								
-	row6.GoogleLink = creates.GoogleLink;			
-
-
- 
-
-
-	tos_count_tReplicate_1++;
-
-/**
- * [tReplicate_1 main ] stop
- */
-
-	
-	/**
-	 * [tPostgresqlOutput_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_1";
-
-	
-
-			//row4
-			//row4
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row4"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
 
         whetherReject_tPostgresqlOutput_1 = false;
-                    if(row4.AccessPointId == null) {
+                    if(creates.AccessPointId == null) {
 pstmt_tPostgresqlOutput_1.setNull(1, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(1, row4.AccessPointId);
+} else {pstmt_tPostgresqlOutput_1.setObject(1, creates.AccessPointId);
 }
 
-                    if(row4.Nome == null) {
+                    if(creates.Nome == null) {
 pstmt_tPostgresqlOutput_1.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmt_tPostgresqlOutput_1.setString(2, row4.Nome);
+} else {pstmt_tPostgresqlOutput_1.setString(2, creates.Nome);
 }
 
-                    if(row4.LoopedRegionId == null) {
-pstmt_tPostgresqlOutput_1.setNull(3, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(3, row4.LoopedRegionId);
+                    pstmt_tPostgresqlOutput_1.setBoolean(3, creates.Default);
+
+                    if(creates.GoogleLocation == null) {
+pstmt_tPostgresqlOutput_1.setNull(4, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_1.setString(4, creates.GoogleLocation);
 }
 
-                    pstmt_tPostgresqlOutput_1.setBoolean(4, row4.Activo);
-
-                    pstmt_tPostgresqlOutput_1.setBoolean(5, row4.Default);
-
-                    if(row4.GoogleLink == null) {
-pstmt_tPostgresqlOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmt_tPostgresqlOutput_1.setString(6, row4.GoogleLink);
+                    if(creates.LoopedRegionId == null) {
+pstmt_tPostgresqlOutput_1.setNull(5, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(5, creates.LoopedRegionId);
 }
+
+                    pstmt_tPostgresqlOutput_1.setBoolean(6, creates.Activo);
 
 			
             try {
@@ -4444,163 +3547,6 @@ pstmt_tPostgresqlOutput_1.setNull(6, java.sql.Types.VARCHAR);
  * [tPostgresqlOutput_1 main ] stop
  */
 
-
-
-
-	
-	/**
-	 * [tLogRow_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
-			//row6
-			//row6
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row6"+iterateId,1, 1);
-				} 
-			
-
-		
-///////////////////////		
-						
-
-
-
-				strBuffer_tLogRow_1 = new StringBuilder();
-				strBuffer_tLogRow_1.append("[tLogRow_1] ");
-
-
-
-
-   				
-	    		if(row6.AccessPointId != null) { //              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row6.AccessPointId)							
-				);
-
-
-							
-	    		} //  			
-
-    			strBuffer_tLogRow_1.append("|");
-    			
-
-
-   				
-	    		if(row6.Nome != null) { //              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row6.Nome)							
-				);
-
-
-							
-	    		} //  			
-
-    			strBuffer_tLogRow_1.append("|");
-    			
-
-
-   				
-	    		if(row6.LoopedRegionId != null) { //              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row6.LoopedRegionId)							
-				);
-
-
-							
-	    		} //  			
-
-    			strBuffer_tLogRow_1.append("|");
-    			
-
-
-              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row6.Activo)							
-				);
-
-
-							  			
-
-    			strBuffer_tLogRow_1.append("|");
-    			
-
-
-              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row6.Default)							
-				);
-
-
-							  			
-
-    			strBuffer_tLogRow_1.append("|");
-    			
-
-
-   				
-	    		if(row6.GoogleLink != null) { //              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row6.GoogleLink)							
-				);
-
-
-							
-	    		} //  			
- 
-
-                    if (globalMap.get("tLogRow_CONSOLE")!=null)
-                    {
-                    	consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-                    }
-                    else
-                    {
-                    	consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_1);
-                    }
-                    consoleOut_tLogRow_1.println(strBuffer_tLogRow_1.toString());
-                    consoleOut_tLogRow_1.flush();
-                    nb_line_tLogRow_1++;
-//////
-
-//////                    
-                    
-///////////////////////    			
-
- 
-
-
-	tos_count_tLogRow_1++;
-
-/**
- * [tLogRow_1 main ] stop
- */
-
-
-
-
 } // End of branch "creates"
 
 
@@ -4613,7 +3559,7 @@ pstmt_tPostgresqlOutput_1.setNull(6, java.sql.Types.VARCHAR);
 
 
 
-} // End of branch "row1"
+} // End of branch "row2"
 
 
 
@@ -4675,10 +3621,10 @@ end_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
 
 // ###############################
 // # Lookup hashes releasing
-					if(tHash_Lookup_row2 != null) {
-						tHash_Lookup_row2.endGet();
+					if(tHash_Lookup_row3 != null) {
+						tHash_Lookup_row3.endGet();
 					}
-					globalMap.remove( "tHash_Lookup_row2" );
+					globalMap.remove( "tHash_Lookup_row3" );
 
 					
 					
@@ -4691,7 +3637,7 @@ end_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row2"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -4723,10 +3669,10 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 // ###############################
 // # Lookup hashes releasing
-					if(tHash_Lookup_row3 != null) {
-						tHash_Lookup_row3.endGet();
+					if(tHash_Lookup_row4 != null) {
+						tHash_Lookup_row4.endGet();
 					}
-					globalMap.remove( "tHash_Lookup_row3" );
+					globalMap.remove( "tHash_Lookup_row4" );
 
 					
 					
@@ -4753,37 +3699,6 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 
 /**
  * [tMap_2 end ] stop
- */
-
-	
-	/**
-	 * [tReplicate_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_2";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("updates"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tReplicate_2", true);
-end_Hash.put("tReplicate_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tReplicate_2 end ] stop
  */
 
 	
@@ -4822,7 +3737,7 @@ end_Hash.put("tReplicate_2", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row5"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("updates"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -4840,81 +3755,6 @@ end_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
 
 
 
-
-	
-	/**
-	 * [tLogRow_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_2";
-
-	
-
-
-//////
-//////
-globalMap.put("tLogRow_2_NB_LINE",nb_line_tLogRow_2);
-
-///////////////////////    			
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tLogRow_2", true);
-end_Hash.put("tLogRow_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tLogRow_2 end ] stop
- */
-
-
-
-
-
-
-
-	
-	/**
-	 * [tReplicate_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_1";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("creates"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tReplicate_1", true);
-end_Hash.put("tReplicate_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tReplicate_1 end ] stop
- */
 
 	
 	/**
@@ -4952,7 +3792,7 @@ end_Hash.put("tReplicate_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("creates"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -4971,50 +3811,6 @@ end_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
 
 
 
-	
-	/**
-	 * [tLogRow_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
-
-//////
-//////
-globalMap.put("tLogRow_1_NB_LINE",nb_line_tLogRow_1);
-
-///////////////////////    			
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row6"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tLogRow_1", true);
-end_Hash.put("tLogRow_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tLogRow_1 end ] stop
- */
-
-
-
-
-
-
-
 
 
 
@@ -5028,7 +3824,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 								}	    				    			
 					    	
 								if(execStat){    	
-									runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
+									runStat.updateStatOnConnection("OnSubjobOk3", 0, "ok");
 								} 
 							
 							tPostgresqlCommit_1Process(globalMap); 
@@ -5050,10 +3846,10 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 			}finally{
 				
 					     			//free memory for "tMap_2"
-					     			globalMap.remove("tHash_Lookup_row3"); 
+					     			globalMap.remove("tHash_Lookup_row4"); 
 				     			
 					     			//free memory for "tMap_1"
-					     			globalMap.remove("tHash_Lookup_row2"); 
+					     			globalMap.remove("tHash_Lookup_row3"); 
 				     			
 				try{
 					
@@ -5122,27 +3918,6 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tReplicate_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_2";
-
-	
-
- 
-
-
-
-/**
- * [tReplicate_2 finally ] stop
- */
-
-	
-	/**
 	 * [tPostgresqlOutput_2 finally ] start
 	 */
 
@@ -5171,54 +3946,6 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tLogRow_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_2";
-
-	
-
- 
-
-
-
-/**
- * [tLogRow_2 finally ] stop
- */
-
-
-
-
-
-
-
-	
-	/**
-	 * [tReplicate_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tReplicate_1";
-
-	
-
- 
-
-
-
-/**
- * [tReplicate_1 finally ] stop
- */
-
-	
-	/**
 	 * [tPostgresqlOutput_1 finally ] start
 	 */
 
@@ -5241,33 +3968,6 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 /**
  * [tPostgresqlOutput_1 finally ] stop
  */
-
-
-
-
-	
-	/**
-	 * [tLogRow_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogRow_1 finally ] stop
- */
-
-
-
 
 
 
@@ -5463,7 +4163,7 @@ end_Hash.put("tPostgresqlCommit_1", System.currentTimeMillis());
 	
 
 
-public static class row2Struct implements routines.system.IPersistableComparableLookupRow<row2Struct> {
+public static class row3Struct implements routines.system.IPersistableComparableLookupRow<row3Struct> {
     final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
     static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
 	protected static final int DEFAULT_HASHCODE = 1;
@@ -5509,7 +4209,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		final row2Struct other = (row2Struct) obj;
+		final row3Struct other = (row3Struct) obj;
 		
 						if (this.Name == null) {
 							if (other.Name != null)
@@ -5523,14 +4223,14 @@ public static class row2Struct implements routines.system.IPersistableComparable
 		return true;
     }
 
-	public void copyDataTo(row2Struct other) {
+	public void copyDataTo(row3Struct other) {
 
 		other.LoopedRegionId = this.LoopedRegionId;
 	            other.Name = this.Name;
 	            
 	}
 
-	public void copyKeysDataTo(row2Struct other) {
+	public void copyKeysDataTo(row3Struct other) {
 
 		other.Name = this.Name;
 	            	
@@ -5665,7 +4365,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
     /**
      * Compare keys
      */
-    public int compareTo(row2Struct other) {
+    public int compareTo(row3Struct other) {
 
 		int returnValue = -1;
 		
@@ -5704,724 +4404,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
 }
 public void tPostgresqlInput_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
 	globalMap.put("tPostgresqlInput_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-
-			String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume
-				globalResumeTicket = true;
-
-
-
-		row2Struct row2 = new row2Struct();
-
-
-
-
-	
-	/**
-	 * [tAdvancedHash_row2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tAdvancedHash_row2", false);
-		start_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
-		
-	
-	currentComponent="tAdvancedHash_row2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tAdvancedHash_row2 = 0;
-		
-    	class BytesLimit65535_tAdvancedHash_row2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tAdvancedHash_row2().limitLog4jByte();
-
-			   		// connection name:row2
-			   		// source node:tPostgresqlInput_1 - inputs:(after_tFileInputExcel_1) outputs:(row2,row2) | target node:tAdvancedHash_row2 - inputs:(row2) outputs:()
-			   		// linked node: tMap_1 - inputs:(row1,row2) outputs:(out1)
-			   
-			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row2 = 
-			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
-			   			
-			   
-	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct> tHash_Lookup_row2 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
-	   						<row2Struct>getLookup(matchingModeEnum_row2);
-	   						   
-		   	   	   globalMap.put("tHash_Lookup_row2", tHash_Lookup_row2);
-		   	   	   
-				
-           
-
- 
-
-
-
-/**
- * [tAdvancedHash_row2 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tPostgresqlInput_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tPostgresqlInput_1", false);
-		start_Hash.put("tPostgresqlInput_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tPostgresqlInput_1";
-
-	
-		int tos_count_tPostgresqlInput_1 = 0;
-		
-    	class BytesLimit65535_tPostgresqlInput_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tPostgresqlInput_1().limitLog4jByte();
-	
-    
-	
-		    int nb_line_tPostgresqlInput_1 = 0;
-		    java.sql.Connection conn_tPostgresqlInput_1 = null;
-		        conn_tPostgresqlInput_1 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
-				
-		    
-			java.sql.Statement stmt_tPostgresqlInput_1 = conn_tPostgresqlInput_1.createStatement();
-
-		    String dbquery_tPostgresqlInput_1 = "select \"public\".\"LoopedRegions\".\"LoopedRegionId\",\n \"public\".\"LoopedRegions\".\"Name\" \nfrom \"public\".\"LoopedRegions\" where \"public\".\"LoopedRegions\".\"Active\" = true\n;";
-			
-
-                       globalMap.put("tPostgresqlInput_1_QUERY",dbquery_tPostgresqlInput_1);
-
-		    java.sql.ResultSet rs_tPostgresqlInput_1 = null;
-		try{
-		    rs_tPostgresqlInput_1 = stmt_tPostgresqlInput_1.executeQuery(dbquery_tPostgresqlInput_1);
-		    java.sql.ResultSetMetaData rsmd_tPostgresqlInput_1 = rs_tPostgresqlInput_1.getMetaData();
-		    int colQtyInRs_tPostgresqlInput_1 = rsmd_tPostgresqlInput_1.getColumnCount();
-
-		    String tmpContent_tPostgresqlInput_1 = null;
-		    
-		    
-		    while (rs_tPostgresqlInput_1.next()) {
-		        nb_line_tPostgresqlInput_1++;
-		        
-							if(colQtyInRs_tPostgresqlInput_1 < 1) {
-								row2.LoopedRegionId = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_1.getObject(1) != null) {
-                row2.LoopedRegionId = rs_tPostgresqlInput_1.getObject(1);
-            } else {
-                    throw new RuntimeException("Null value in non-Nullable column");
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 2) {
-								row2.Name = null;
-							} else {
-	                         		
-        	row2.Name = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 2, false);
-		                    }
-					
-
-
- 
-
-
-
-/**
- * [tPostgresqlInput_1 begin ] stop
- */
-	
-	/**
-	 * [tPostgresqlInput_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlInput_1";
-
-	
-
- 
-
-
-	tos_count_tPostgresqlInput_1++;
-
-/**
- * [tPostgresqlInput_1 main ] stop
- */
-
-	
-	/**
-	 * [tAdvancedHash_row2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row2";
-
-	
-
-			//row2
-			//row2
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row2"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-			   
-			   
-
-					row2Struct row2_HashRow = new row2Struct();
-		   	   	   
-				
-				row2_HashRow.LoopedRegionId = row2.LoopedRegionId;
-				
-				row2_HashRow.Name = row2.Name;
-				
-			tHash_Lookup_row2.put(row2_HashRow);
-			
-            
-
-
-
-
- 
-
-
-	tos_count_tAdvancedHash_row2++;
-
-/**
- * [tAdvancedHash_row2 main ] stop
- */
-
-
-
-	
-	/**
-	 * [tPostgresqlInput_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlInput_1";
-
-	
-
-	}
-}finally{
-	stmt_tPostgresqlInput_1.close();
-
-}
-globalMap.put("tPostgresqlInput_1_NB_LINE",nb_line_tPostgresqlInput_1);
- 
-
-ok_Hash.put("tPostgresqlInput_1", true);
-end_Hash.put("tPostgresqlInput_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tPostgresqlInput_1 end ] stop
- */
-
-	
-	/**
-	 * [tAdvancedHash_row2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row2";
-
-	
-
-tHash_Lookup_row2.endPut();
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row2"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tAdvancedHash_row2", true);
-end_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tAdvancedHash_row2 end ] stop
- */
-
-
-
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tPostgresqlInput_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlInput_1";
-
-	
-
- 
-
-
-
-/**
- * [tPostgresqlInput_1 finally ] stop
- */
-
-	
-	/**
-	 * [tAdvancedHash_row2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row2";
-
-	
-
- 
-
-
-
-/**
- * [tAdvancedHash_row2 finally ] stop
- */
-
-
-
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tPostgresqlInput_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-
-public static class row3Struct implements routines.system.IPersistableComparableLookupRow<row3Struct> {
-    final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
-    static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public Object AccessPointId;
-
-				public Object getAccessPointId () {
-					return this.AccessPointId;
-				}
-				
-			    public boolean Active;
-
-				public boolean getActive () {
-					return this.Active;
-				}
-				
-			    public boolean Default;
-
-				public boolean getDefault () {
-					return this.Default;
-				}
-				
-			    public String GoogleLocation;
-
-				public String getGoogleLocation () {
-					return this.GoogleLocation;
-				}
-				
-			    public String Name;
-
-				public String getName () {
-					return this.Name;
-				}
-				
-			    public Object Region_LoopedRegionId;
-
-				public Object getRegion_LoopedRegionId () {
-					return this.Region_LoopedRegionId;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.Name == null) ? 0 : this.Name.hashCode());
-					
-						result = prime * result + ((this.Region_LoopedRegionId == null) ? 0 : this.Region_LoopedRegionId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row3Struct other = (row3Struct) obj;
-		
-						if (this.Name == null) {
-							if (other.Name != null)
-								return false;
-						
-						} else if (!this.Name.equals(other.Name))
-						
-							return false;
-					
-						if (this.Region_LoopedRegionId == null) {
-							if (other.Region_LoopedRegionId != null)
-								return false;
-						
-						} else if (!this.Region_LoopedRegionId.equals(other.Region_LoopedRegionId))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row3Struct other) {
-
-		other.AccessPointId = this.AccessPointId;
-	            other.Active = this.Active;
-	            other.Default = this.Default;
-	            other.GoogleLocation = this.GoogleLocation;
-	            other.Name = this.Name;
-	            other.Region_LoopedRegionId = this.Region_LoopedRegionId;
-	            
-	}
-
-	public void copyKeysDataTo(row3Struct other) {
-
-		other.Name = this.Name;
-	            	other.Region_LoopedRegionId = this.Region_LoopedRegionId;
-	            	
-	}
-
-
-
-
-	private String readString(DataInputStream dis, ObjectInputStream ois) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			byte[] byteArray = new byte[length];
-			dis.read(byteArray);
-			strReturn = new String(byteArray, utf8Charset);
-		}
-		return strReturn;
-	}
-
-	private void writeString(String str, DataOutputStream dos, ObjectOutputStream oos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-	}
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_YETL_AccessPoints.length) {
-				if(length < 1024 && commonByteArray_YETL_AccessPoints.length == 0) {
-   					commonByteArray_YETL_AccessPoints = new byte[1024];
-				} else {
-   					commonByteArray_YETL_AccessPoints = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_YETL_AccessPoints, 0, length);
-			strReturn = new String(commonByteArray_YETL_AccessPoints, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readKeysData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_AccessPoints) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.Name = readString(dis);
-					
-						this.Region_LoopedRegionId = (Object) dis.readObject();
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeKeysData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.Name,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.Region_LoopedRegionId);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-
-    /**
-     * Fill Values data by reading ObjectInputStream.
-     */
-    public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
-        try {
-
-			int length = 0;
-		
-       			    	this.AccessPointId = (Object) ois.readObject();
-					
-			            this.Active = dis.readBoolean();
-					
-			            this.Default = dis.readBoolean();
-					
-						this.GoogleLocation = readString(dis,ois);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-    }
-
-    /**
-     * Return a byte array which represents Values data.
-     */
-    public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
-        try {
-
-		
-       			    	oos.writeObject(this.AccessPointId);
-					
-		            	dos.writeBoolean(this.Active);
-					
-		            	dos.writeBoolean(this.Default);
-					
-						writeString(this.GoogleLocation, dos, oos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        	}
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("AccessPointId="+String.valueOf(AccessPointId));
-		sb.append(",Active="+String.valueOf(Active));
-		sb.append(",Default="+String.valueOf(Default));
-		sb.append(",GoogleLocation="+GoogleLocation);
-		sb.append(",Name="+Name);
-		sb.append(",Region_LoopedRegionId="+String.valueOf(Region_LoopedRegionId));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row3Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.Name, other.Name);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-						returnValue = checkNullsAndCompare(this.Region_LoopedRegionId, other.Region_LoopedRegionId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-public void tPostgresqlInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tPostgresqlInput_2_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -6481,8 +4463,8 @@ public void tPostgresqlInput_2Process(final java.util.Map<String, Object> global
         new BytesLimit65535_tAdvancedHash_row3().limitLog4jByte();
 
 			   		// connection name:row3
-			   		// source node:tPostgresqlInput_2 - inputs:(after_tFileInputExcel_1) outputs:(row3,row3) | target node:tAdvancedHash_row3 - inputs:(row3) outputs:()
-			   		// linked node: tMap_2 - inputs:(out1,row3) outputs:(updates,creates)
+			   		// source node:tPostgresqlInput_1 - inputs:(after_tFileInputExcel_1) outputs:(row3,row3) | target node:tAdvancedHash_row3 - inputs:(row3) outputs:()
+			   		// linked node: tMap_1 - inputs:(row2,row3) outputs:(out1)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row3 = 
 			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -6508,107 +4490,71 @@ public void tPostgresqlInput_2Process(final java.util.Map<String, Object> global
 
 	
 	/**
-	 * [tPostgresqlInput_2 begin ] start
+	 * [tPostgresqlInput_1 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tPostgresqlInput_2", false);
-		start_Hash.put("tPostgresqlInput_2", System.currentTimeMillis());
+		ok_Hash.put("tPostgresqlInput_1", false);
+		start_Hash.put("tPostgresqlInput_1", System.currentTimeMillis());
 		
 	
-	currentComponent="tPostgresqlInput_2";
+	currentComponent="tPostgresqlInput_1";
 
 	
-		int tos_count_tPostgresqlInput_2 = 0;
+		int tos_count_tPostgresqlInput_1 = 0;
 		
-    	class BytesLimit65535_tPostgresqlInput_2{
+    	class BytesLimit65535_tPostgresqlInput_1{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tPostgresqlInput_2().limitLog4jByte();
+        new BytesLimit65535_tPostgresqlInput_1().limitLog4jByte();
 	
     
 	
-		    int nb_line_tPostgresqlInput_2 = 0;
-		    java.sql.Connection conn_tPostgresqlInput_2 = null;
-		        conn_tPostgresqlInput_2 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+		    int nb_line_tPostgresqlInput_1 = 0;
+		    java.sql.Connection conn_tPostgresqlInput_1 = null;
+		        conn_tPostgresqlInput_1 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
 				
 		    
-			java.sql.Statement stmt_tPostgresqlInput_2 = conn_tPostgresqlInput_2.createStatement();
+			java.sql.Statement stmt_tPostgresqlInput_1 = conn_tPostgresqlInput_1.createStatement();
 
-		    String dbquery_tPostgresqlInput_2 = "select \"public\".\"AccessPoints\".\"AccessPointId\",\"public\".\"AccessPoints\".\"Active\",\n \"public\".\"AccessPoints\".\"Default\",\"public\".\"AccessPoints\".\"GoogleLocation\",\n \"public\".\"AccessPoints\".\"Name\",\"public\".\"AccessPoints\".\"Region_LoopedRegionId\" \nfrom \"public\".\"AccessPoints\"";
+		    String dbquery_tPostgresqlInput_1 = "select \"public\".\"LoopedRegions\".\"LoopedRegionId\",\n \"public\".\"LoopedRegions\".\"Name\" \nfrom \"public\".\"LoopedRegions\" where \"public\".\"LoopedRegions\".\"Active\" = true\n;";
 			
 
-                       globalMap.put("tPostgresqlInput_2_QUERY",dbquery_tPostgresqlInput_2);
+                       globalMap.put("tPostgresqlInput_1_QUERY",dbquery_tPostgresqlInput_1);
 
-		    java.sql.ResultSet rs_tPostgresqlInput_2 = null;
+		    java.sql.ResultSet rs_tPostgresqlInput_1 = null;
 		try{
-		    rs_tPostgresqlInput_2 = stmt_tPostgresqlInput_2.executeQuery(dbquery_tPostgresqlInput_2);
-		    java.sql.ResultSetMetaData rsmd_tPostgresqlInput_2 = rs_tPostgresqlInput_2.getMetaData();
-		    int colQtyInRs_tPostgresqlInput_2 = rsmd_tPostgresqlInput_2.getColumnCount();
+		    rs_tPostgresqlInput_1 = stmt_tPostgresqlInput_1.executeQuery(dbquery_tPostgresqlInput_1);
+		    java.sql.ResultSetMetaData rsmd_tPostgresqlInput_1 = rs_tPostgresqlInput_1.getMetaData();
+		    int colQtyInRs_tPostgresqlInput_1 = rsmd_tPostgresqlInput_1.getColumnCount();
 
-		    String tmpContent_tPostgresqlInput_2 = null;
+		    String tmpContent_tPostgresqlInput_1 = null;
 		    
 		    
-		    while (rs_tPostgresqlInput_2.next()) {
-		        nb_line_tPostgresqlInput_2++;
+		    while (rs_tPostgresqlInput_1.next()) {
+		        nb_line_tPostgresqlInput_1++;
 		        
-							if(colQtyInRs_tPostgresqlInput_2 < 1) {
-								row3.AccessPointId = null;
+							if(colQtyInRs_tPostgresqlInput_1 < 1) {
+								row3.LoopedRegionId = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_2.getObject(1) != null) {
-                row3.AccessPointId = rs_tPostgresqlInput_2.getObject(1);
+            if(rs_tPostgresqlInput_1.getObject(1) != null) {
+                row3.LoopedRegionId = rs_tPostgresqlInput_1.getObject(1);
             } else {
                     throw new RuntimeException("Null value in non-Nullable column");
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 2) {
-								row3.Active = false;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_2.getObject(2) != null) {
-                row3.Active = rs_tPostgresqlInput_2.getBoolean(2);
-            } else {
-                    throw new RuntimeException("Null value in non-Nullable column");
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 3) {
-								row3.Default = false;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_2.getObject(3) != null) {
-                row3.Default = rs_tPostgresqlInput_2.getBoolean(3);
-            } else {
-                    throw new RuntimeException("Null value in non-Nullable column");
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 4) {
-								row3.GoogleLocation = null;
-							} else {
-	                         		
-        	row3.GoogleLocation = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 4, false);
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 5) {
+							if(colQtyInRs_tPostgresqlInput_1 < 2) {
 								row3.Name = null;
 							} else {
 	                         		
-        	row3.Name = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 5, false);
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 6) {
-								row3.Region_LoopedRegionId = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(6) != null) {
-                row3.Region_LoopedRegionId = rs_tPostgresqlInput_2.getObject(6);
-            } else {
-                    throw new RuntimeException("Null value in non-Nullable column");
-            }
+        	row3.Name = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 2, false);
 		                    }
 					
 
@@ -6618,28 +4564,28 @@ public void tPostgresqlInput_2Process(final java.util.Map<String, Object> global
 
 
 /**
- * [tPostgresqlInput_2 begin ] stop
+ * [tPostgresqlInput_1 begin ] stop
  */
 	
 	/**
-	 * [tPostgresqlInput_2 main ] start
+	 * [tPostgresqlInput_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tPostgresqlInput_2";
+	currentComponent="tPostgresqlInput_1";
 
 	
 
  
 
 
-	tos_count_tPostgresqlInput_2++;
+	tos_count_tPostgresqlInput_1++;
 
 /**
- * [tPostgresqlInput_2 main ] stop
+ * [tPostgresqlInput_1 main ] stop
  */
 
 	
@@ -6674,17 +4620,9 @@ public void tPostgresqlInput_2Process(final java.util.Map<String, Object> global
 					row3Struct row3_HashRow = new row3Struct();
 		   	   	   
 				
-				row3_HashRow.AccessPointId = row3.AccessPointId;
-				
-				row3_HashRow.Active = row3.Active;
-				
-				row3_HashRow.Default = row3.Default;
-				
-				row3_HashRow.GoogleLocation = row3.GoogleLocation;
+				row3_HashRow.LoopedRegionId = row3.LoopedRegionId;
 				
 				row3_HashRow.Name = row3.Name;
-				
-				row3_HashRow.Region_LoopedRegionId = row3.Region_LoopedRegionId;
 				
 			tHash_Lookup_row3.put(row3_HashRow);
 			
@@ -6706,33 +4644,33 @@ public void tPostgresqlInput_2Process(final java.util.Map<String, Object> global
 
 	
 	/**
-	 * [tPostgresqlInput_2 end ] start
+	 * [tPostgresqlInput_1 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tPostgresqlInput_2";
+	currentComponent="tPostgresqlInput_1";
 
 	
 
 	}
 }finally{
-	stmt_tPostgresqlInput_2.close();
+	stmt_tPostgresqlInput_1.close();
 
 }
-globalMap.put("tPostgresqlInput_2_NB_LINE",nb_line_tPostgresqlInput_2);
+globalMap.put("tPostgresqlInput_1_NB_LINE",nb_line_tPostgresqlInput_1);
  
 
-ok_Hash.put("tPostgresqlInput_2", true);
-end_Hash.put("tPostgresqlInput_2", System.currentTimeMillis());
+ok_Hash.put("tPostgresqlInput_1", true);
+end_Hash.put("tPostgresqlInput_1", System.currentTimeMillis());
 
 
 
 
 /**
- * [tPostgresqlInput_2 end ] stop
+ * [tPostgresqlInput_1 end ] stop
  */
 
 	
@@ -6793,14 +4731,14 @@ end_Hash.put("tAdvancedHash_row3", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tPostgresqlInput_2 finally ] start
+	 * [tPostgresqlInput_1 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tPostgresqlInput_2";
+	currentComponent="tPostgresqlInput_1";
 
 	
 
@@ -6809,7 +4747,7 @@ end_Hash.put("tAdvancedHash_row3", System.currentTimeMillis());
 
 
 /**
- * [tPostgresqlInput_2 finally ] stop
+ * [tPostgresqlInput_1 finally ] stop
  */
 
 	
@@ -6831,6 +4769,676 @@ end_Hash.put("tAdvancedHash_row3", System.currentTimeMillis());
 
 /**
  * [tAdvancedHash_row3 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tPostgresqlInput_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+
+public static class row4Struct implements routines.system.IPersistableComparableLookupRow<row4Struct> {
+    final static byte[] commonByteArrayLock_YETL_AccessPoints = new byte[0];
+    static byte[] commonByteArray_YETL_AccessPoints = new byte[0];
+	protected static final int DEFAULT_HASHCODE = 1;
+    protected static final int PRIME = 31;
+    protected int hashCode = DEFAULT_HASHCODE;
+    public boolean hashCodeDirty = true;
+
+    public String loopKey;
+
+
+
+	
+			    public Object AccessPointId;
+
+				public Object getAccessPointId () {
+					return this.AccessPointId;
+				}
+				
+			    public Object Region_LoopedRegionId;
+
+				public Object getRegion_LoopedRegionId () {
+					return this.Region_LoopedRegionId;
+				}
+				
+			    public String Name;
+
+				public String getName () {
+					return this.Name;
+				}
+				
+
+
+	@Override
+	public int hashCode() {
+		if (this.hashCodeDirty) {
+			final int prime = PRIME;
+			int result = DEFAULT_HASHCODE;
+	
+						result = prime * result + ((this.Region_LoopedRegionId == null) ? 0 : this.Region_LoopedRegionId.hashCode());
+					
+						result = prime * result + ((this.Name == null) ? 0 : this.Name.hashCode());
+					
+    		this.hashCode = result;
+    		this.hashCodeDirty = false;
+		}
+		return this.hashCode;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		final row4Struct other = (row4Struct) obj;
+		
+						if (this.Region_LoopedRegionId == null) {
+							if (other.Region_LoopedRegionId != null)
+								return false;
+						
+						} else if (!this.Region_LoopedRegionId.equals(other.Region_LoopedRegionId))
+						
+							return false;
+					
+						if (this.Name == null) {
+							if (other.Name != null)
+								return false;
+						
+						} else if (!this.Name.equals(other.Name))
+						
+							return false;
+					
+
+		return true;
+    }
+
+	public void copyDataTo(row4Struct other) {
+
+		other.AccessPointId = this.AccessPointId;
+	            other.Region_LoopedRegionId = this.Region_LoopedRegionId;
+	            other.Name = this.Name;
+	            
+	}
+
+	public void copyKeysDataTo(row4Struct other) {
+
+		other.Region_LoopedRegionId = this.Region_LoopedRegionId;
+	            	other.Name = this.Name;
+	            	
+	}
+
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_YETL_AccessPoints.length) {
+				if(length < 1024 && commonByteArray_YETL_AccessPoints.length == 0) {
+   					commonByteArray_YETL_AccessPoints = new byte[1024];
+				} else {
+   					commonByteArray_YETL_AccessPoints = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_YETL_AccessPoints, 0, length);
+			strReturn = new String(commonByteArray_YETL_AccessPoints, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readKeysData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_YETL_AccessPoints) {
+
+        	try {
+
+        		int length = 0;
+		
+						this.Region_LoopedRegionId = (Object) dis.readObject();
+					
+					this.Name = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+			} catch(ClassNotFoundException eCNFE) {
+				 throw new RuntimeException(eCNFE);
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeKeysData(ObjectOutputStream dos) {
+        try {
+
+		
+					// Object
+				
+       			    	dos.writeObject(this.Region_LoopedRegionId);
+					
+					// String
+				
+						writeString(this.Name,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+
+    /**
+     * Fill Values data by reading ObjectInputStream.
+     */
+    public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+        try {
+
+			int length = 0;
+		
+       			    	this.AccessPointId = (Object) ois.readObject();
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+			} catch(ClassNotFoundException eCNFE) {
+				 throw new RuntimeException(eCNFE);
+		
+
+        }
+
+		
+
+    }
+
+    /**
+     * Return a byte array which represents Values data.
+     */
+    public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+        try {
+
+		
+       			    	oos.writeObject(this.AccessPointId);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        	}
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("AccessPointId="+String.valueOf(AccessPointId));
+		sb.append(",Region_LoopedRegionId="+String.valueOf(Region_LoopedRegionId));
+		sb.append(",Name="+Name);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row4Struct other) {
+
+		int returnValue = -1;
+		
+						returnValue = checkNullsAndCompare(this.Region_LoopedRegionId, other.Region_LoopedRegionId);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
+						returnValue = checkNullsAndCompare(this.Name, other.Name);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tPostgresqlInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tPostgresqlInput_2_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+
+			String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume
+				globalResumeTicket = true;
+
+
+
+		row4Struct row4 = new row4Struct();
+
+
+
+
+	
+	/**
+	 * [tAdvancedHash_row4 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tAdvancedHash_row4", false);
+		start_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
+		
+	
+	currentComponent="tAdvancedHash_row4";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tAdvancedHash_row4 = 0;
+		
+    	class BytesLimit65535_tAdvancedHash_row4{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tAdvancedHash_row4().limitLog4jByte();
+
+			   		// connection name:row4
+			   		// source node:tPostgresqlInput_2 - inputs:(after_tFileInputExcel_1) outputs:(row4,row4) | target node:tAdvancedHash_row4 - inputs:(row4) outputs:()
+			   		// linked node: tMap_2 - inputs:(out1,row4) outputs:(updates,creates)
+			   
+			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row4 = 
+			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+			   			
+			   
+	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row4Struct> tHash_Lookup_row4 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
+	   						<row4Struct>getLookup(matchingModeEnum_row4);
+	   						   
+		   	   	   globalMap.put("tHash_Lookup_row4", tHash_Lookup_row4);
+		   	   	   
+				
+           
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row4 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tPostgresqlInput_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tPostgresqlInput_2", false);
+		start_Hash.put("tPostgresqlInput_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+		int tos_count_tPostgresqlInput_2 = 0;
+		
+    	class BytesLimit65535_tPostgresqlInput_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlInput_2().limitLog4jByte();
+	
+    
+	
+		    int nb_line_tPostgresqlInput_2 = 0;
+		    java.sql.Connection conn_tPostgresqlInput_2 = null;
+		        conn_tPostgresqlInput_2 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
+				
+		    
+			java.sql.Statement stmt_tPostgresqlInput_2 = conn_tPostgresqlInput_2.createStatement();
+
+		    String dbquery_tPostgresqlInput_2 = "select \"public\".\"AccessPoints\".\"AccessPointId\",\n\"public\".\"AccessPoints\".\"Region_LoopedRegionId\" ,\n\"public\".\"AccessPoints\".\"Name\"\nfrom \"public\".\"AccessPoints\"";
+			
+
+                       globalMap.put("tPostgresqlInput_2_QUERY",dbquery_tPostgresqlInput_2);
+
+		    java.sql.ResultSet rs_tPostgresqlInput_2 = null;
+		try{
+		    rs_tPostgresqlInput_2 = stmt_tPostgresqlInput_2.executeQuery(dbquery_tPostgresqlInput_2);
+		    java.sql.ResultSetMetaData rsmd_tPostgresqlInput_2 = rs_tPostgresqlInput_2.getMetaData();
+		    int colQtyInRs_tPostgresqlInput_2 = rsmd_tPostgresqlInput_2.getColumnCount();
+
+		    String tmpContent_tPostgresqlInput_2 = null;
+		    
+		    
+		    while (rs_tPostgresqlInput_2.next()) {
+		        nb_line_tPostgresqlInput_2++;
+		        
+							if(colQtyInRs_tPostgresqlInput_2 < 1) {
+								row4.AccessPointId = null;
+							} else {
+		                          
+            if(rs_tPostgresqlInput_2.getObject(1) != null) {
+                row4.AccessPointId = rs_tPostgresqlInput_2.getObject(1);
+            } else {
+                    throw new RuntimeException("Null value in non-Nullable column");
+            }
+		                    }
+							if(colQtyInRs_tPostgresqlInput_2 < 2) {
+								row4.Region_LoopedRegionId = null;
+							} else {
+		                          
+            if(rs_tPostgresqlInput_2.getObject(2) != null) {
+                row4.Region_LoopedRegionId = rs_tPostgresqlInput_2.getObject(2);
+            } else {
+                    throw new RuntimeException("Null value in non-Nullable column");
+            }
+		                    }
+							if(colQtyInRs_tPostgresqlInput_2 < 3) {
+								row4.Name = null;
+							} else {
+	                         		
+        	row4.Name = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 3, false);
+		                    }
+					
+
+
+ 
+
+
+
+/**
+ * [tPostgresqlInput_2 begin ] stop
+ */
+	
+	/**
+	 * [tPostgresqlInput_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+
+ 
+
+
+	tos_count_tPostgresqlInput_2++;
+
+/**
+ * [tPostgresqlInput_2 main ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row4 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row4";
+
+	
+
+			//row4
+			//row4
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row4"+iterateId,1, 1);
+				} 
+			
+
+		
+
+
+			   
+			   
+
+					row4Struct row4_HashRow = new row4Struct();
+		   	   	   
+				
+				row4_HashRow.AccessPointId = row4.AccessPointId;
+				
+				row4_HashRow.Region_LoopedRegionId = row4.Region_LoopedRegionId;
+				
+				row4_HashRow.Name = row4.Name;
+				
+			tHash_Lookup_row4.put(row4_HashRow);
+			
+            
+
+
+
+
+ 
+
+
+	tos_count_tAdvancedHash_row4++;
+
+/**
+ * [tAdvancedHash_row4 main ] stop
+ */
+
+
+
+	
+	/**
+	 * [tPostgresqlInput_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+
+	}
+}finally{
+	stmt_tPostgresqlInput_2.close();
+
+}
+globalMap.put("tPostgresqlInput_2_NB_LINE",nb_line_tPostgresqlInput_2);
+ 
+
+ok_Hash.put("tPostgresqlInput_2", true);
+end_Hash.put("tPostgresqlInput_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tPostgresqlInput_2 end ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row4 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row4";
+
+	
+
+tHash_Lookup_row4.endPut();
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tAdvancedHash_row4", true);
+end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tAdvancedHash_row4 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tPostgresqlInput_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tPostgresqlInput_2 finally ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row4 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row4";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row4 finally ] stop
  */
 
 
@@ -7205,6 +5813,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     167960 characters generated by Talend Open Studio for Data Integration 
- *     on the 8 de Setembro de 2018 19:27:35 BST
+ *     140825 characters generated by Talend Open Studio for Data Integration 
+ *     on the 9 de Setembro de 2018 19:07:54 BST
  ************************************************************************************************/
