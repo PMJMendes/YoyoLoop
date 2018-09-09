@@ -1012,6 +1012,10 @@
     <Compile Include="Migrations\201808062341194_Booking-StripeChargeId.Designer.cs">
       <DependentUpon>201808062341194_Booking-StripeChargeId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809091815464_ApplicationUser-MemberGetMember.cs" />
+    <Compile Include="Migrations\201809091815464_ApplicationUser-MemberGetMember.Designer.cs">
+      <DependentUpon>201809091815464_ApplicationUser-MemberGetMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1332,6 +1336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808062341194_Booking-StripeChargeId.resx">
       <DependentUpon>201808062341194_Booking-StripeChargeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091815464_ApplicationUser-MemberGetMember.resx">
+      <DependentUpon>201809091815464_ApplicationUser-MemberGetMember.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
