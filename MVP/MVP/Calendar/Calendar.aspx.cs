@@ -470,6 +470,8 @@ namespace MVP.Calendar
         {
             var query = Request.QueryString;
 
+            // THIS CODE IS IN SERIOUS NEED OF REFACTORING
+
             if (!string.IsNullOrEmpty(query["Dest"]))
             {
                 Guid? dest = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
@@ -482,12 +484,20 @@ namespace MVP.Calendar
                     localData.Values.EndRegion = endregion;
                     DdlEndRegion.SelectedText = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault()?.Name;
 
-                    localData.Values.EndAP = endap;
                     DdlEndAP.DataSource = DdlEndAP_GetData();
                     DdlEndAP.ListDataBind();
-                    DdlEndAP.SelectedText = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
-                                                           .Where(ap => ap.Default)
-                                                           .Select(ap => ap.Name).FirstOrDefault();
+
+                    if (!string.IsNullOrEmpty(query["Dap"]))
+                    {
+                        var dap = DdlEndAP.DataSource.Where(ap => ap.Text == query["Dap"]).FirstOrDefault()?.Value;
+                        if(!string.IsNullOrEmpty(dap))
+                        {
+                            endap = dap;
+                        }
+                    }
+
+                    localData.Values.EndAP = endap;
+                    DdlEndAP.SelectedText = DdlEndAP.DataSource.Where(ap => ap.Value == endap).FirstOrDefault().Text;
 
                     DdlStartRegion.DataSource = DdlStartRegion_GetData();
                     DdlStartRegion.ListDataBind();
@@ -515,15 +525,24 @@ namespace MVP.Calendar
                         localData.Values.StartRegion = startregion;
                         DdlStartRegion.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).Select(er => er.StartRegion).FirstOrDefault()?.Name;
 
-                        localData.Values.StartAP = startap;
                         DdlStartAP.DataSource = DdlStartAP_GetData();
                         DdlStartAP.ListDataBind();
-                        DdlStartAP.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).FirstOrDefault()?.StartRegion?.AccessPoints?
-                                                               .Where(ap => ap.Default)
-                                                               .Select(ap => ap.Name).FirstOrDefault();
-                        CheckParams();
+
+                        if (!string.IsNullOrEmpty(query["Sap"]))
+                        {
+                            var sap = DdlStartAP.DataSource.Where(ap => ap.Text == query["Sap"]).FirstOrDefault()?.Value;
+                            if (!string.IsNullOrEmpty(sap))
+                            {
+                                startap = sap;
+                            }
+                        }
+
+                        localData.Values.StartAP = startap;
+                        DdlStartAP.SelectedText = DdlStartAP.DataSource.Where(ap => ap.Value == startap).FirstOrDefault().Text;
                     }
                 }
+
+                CheckParams();
             }
         }
 

@@ -103,7 +103,7 @@
         <p class="travel__card-past__last__price"><%= TicketBooking.Cost.ToString("C", ApplicationHelpers.DefaultCulture()) %></p>
         <div class="row text-center">
             <div class="col-12">
-                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=<%= TicketBooking.Trip.Departure.Route.EndRegion.Name %>&Ori=<%= TicketBooking.Trip.Departure.Route.StartRegion.Name %>&sap=<%= TicketBooking.Trip.StartAccessPoint.Name %>&dap=<%= TicketBooking.Trip.EndAccessPoint.Name %>" class="travel__card--book-again btn btn-primary text-uppercase">
+                <a OnClick="javascript:$.blockUI()" href="/Calendar/Calendar?Dest=<%= TicketBooking.Trip.Departure.Route.EndRegion.Name %>&Ori=<%= TicketBooking.Trip.Departure.Route.StartRegion.Name %>&Sap=<%= TicketBooking.Trip.StartAccessPoint.Name %>&Dap=<%= TicketBooking.Trip.EndAccessPoint.Name %>" class="travel__card--book-again btn btn-primary text-uppercase">
                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_BookAgain%>"/>
                 </a>
             </div>
