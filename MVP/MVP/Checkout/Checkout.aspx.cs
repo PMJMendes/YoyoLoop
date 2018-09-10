@@ -201,6 +201,10 @@ namespace MVP.Checkout
             
             if (Guid.TryParse(query["Id"], out id))
             {
+                if (!string.IsNullOrEmpty(query["Code"]))
+                {
+                    pageData.Code = query["Code"];
+                }
                 pageData = service.GetBooking(id, pageData);
                 if(pageData == null)
                 {
@@ -232,7 +236,7 @@ namespace MVP.Checkout
                 }
                 else
                 {
-                    if(pageData.PromoValid)
+                    if(pageData.PromoValid || pageData.MGM)
                     {
                         pnPromocode.Visible = false;
                     }
@@ -274,7 +278,7 @@ namespace MVP.Checkout
             pageData.Promocode = tbPromo.Text.ToUpper();
             pageData = service.CheckPromo(pageData);
             UpdateCheckoutPanel();
-            if (pageData.Promocode == string.Empty)
+            if (pageData.Promocode == string.Empty && pageData.Code == string.Empty)
             {
                 phPromoCheck.Visible = false;
                 phPromoError.Visible = false;

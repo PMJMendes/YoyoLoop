@@ -38,19 +38,23 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid);
                 var result = new CheckoutDTO
                 {
                     UserEmail = user.Email,
                     UserContactName = user.ContactName,
                     StripeCustomerId = user.StripeCustomerId,
+                    UserReferredById = user.ReferredBy?.Id,
+                    UserMGMCode = user.MGMCode,
 
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
                     BillingAdress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
-                    BillingCity = user.BillingCity
+                    BillingCity = user.BillingCity,
+
+                    Code = string.Empty
                 };
                 return result;
             }
@@ -81,16 +85,12 @@ namespace MVP.Services
                     state.FareType = booking.FareType;
                     state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
-                    state.Promocode = booking.Promocode;
+                    state.Promocode = booking.Promocode?.Code ?? string.Empty;
                     state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
                     if (booking.MGM)
                     {
                         state.UserMGM = CheckUserMGM(state.UserId);
-                        state.MGM = CheckMGMCode(state.UserId, state.Promocode);
-                        if(state.MGM)
-                        {
-                            state.PromoValid = true;
-                        }
+                        state.MGM = CheckMGMCode(state.UserId, state.Code);
                     }
                     state.MGMPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
                     state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (booking.Seats - 1)) : state.Price * booking.Seats;
@@ -233,11 +233,11 @@ namespace MVP.Services
             return result;
         }
 
-        public bool CheckMGMCode(string userid, string promocode)
+        public bool CheckMGMCode(string userid, string code)
         {
             using (var model = new EntityModel())
             {
-                if (model.Users.Any(u => u.MGMCode == promocode) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
+                if (model.Users.Any(u => u.MGMCode == code) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
                 {
                     return true;
                 }
@@ -257,6 +257,7 @@ namespace MVP.Services
                 if (string.IsNullOrEmpty(state.Promocode))
                 {
                     state.MGM = false;
+                    state.Code = string.Empty;
                     state.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
                     state.PromoValid = false;
                 }
@@ -266,6 +267,7 @@ namespace MVP.Services
 
                     if(!state.MGM)
                     {
+                        state.Code = string.Empty;
                         if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
                         {
                             state.FareType = Fare.FareType.PROMOTIONAL;
@@ -277,6 +279,12 @@ namespace MVP.Services
                             state.PromoValid = false;
                         }
                     }
+                    else
+                    {
+                        state.Code = state.Promocode;
+                        state.Promocode = string.Empty;
+                    }
+
                 }
                 state.Price = model.Booking.Include(b => b.Trip.Departure.Route.Fares).FirstOrDefault(b => b.BookingId == state.BookingId).Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == state.FareType).Price;
                 state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (state.Seats - 1)) : state.Price * state.Seats;
@@ -333,10 +341,22 @@ namespace MVP.Services
 
                 // Charge sucessful
                 UpdateBooking(state, BookingStatus.BOOKED);
-                if(state.MGM)
+
+                if (state.MGM)
                 {
-                    CreateReferral(state.UserId, state.Promocode);
+                    state = CreateReferral(state);
                 }
+
+                if (string.IsNullOrEmpty(state.UserReferredById))
+                {
+                    state = AddSelfReferral(state);
+                }
+
+                if (string.IsNullOrEmpty(state.UserMGMCode))
+                {
+                    state.UserMGMCode = GenerateMGMCode(state.UserId, state.UserEmail);
+                }
+
                 error = string.Empty;
                 SendInvoice(state);
 
@@ -349,14 +369,69 @@ namespace MVP.Services
             }
         }
 
-        private void CreateReferral(string userid, string promocode)
+        private CheckoutDTO CreateReferral(CheckoutDTO state)
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid);
-                var referredby = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.MGMCode == promocode);
+                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == state.UserId);
+                var referredby = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.MGMCode == state.Code);
+                state.UserReferredById = referredby.Id;
                 user.ReferredBy = referredby;
                 model.SaveChanges();
+                return state;
+            }
+        }
+
+        public CheckoutDTO AddSelfReferral(CheckoutDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                user.ReferredBy = user;
+                state.UserReferredById = state.UserId;
+                model.SaveChanges();
+            }
+            return state;
+        }
+
+        public string GenerateMGMCode(string userid, string useremail)
+        {
+            string strippedid = userid.Replace("-", string.Empty);
+            string strippedemail = useremail.Substring(0, useremail.IndexOf("@") - 1).Replace(".", string.Empty);
+            string result = strippedemail.Substring(0, Math.Min(strippedemail.Length, 6));
+            result += strippedid.Substring(strippedid.Length - (10 - result.Length));
+            result = result.ToUpper();
+
+            while (!ValidateMGMCode(result))
+            {
+                var strippedguid = Guid.NewGuid().ToString().Replace("-", string.Empty);
+                result = strippedemail.Substring(0, Math.Min(strippedemail.Length, 6));
+                result += strippedguid.Substring(strippedid.Length - (10 - result.Length));
+                result = result.ToUpper();
+            }
+
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                user.MGMCode = result;
+                model.SaveChanges();
+            }
+            return result;
+        }
+
+        private bool ValidateMGMCode(string code)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.MGMCode == code);
+                if (user == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 
@@ -507,7 +582,8 @@ namespace MVP.Services
                     booking.Status = status;
                     booking.TicketCode = GenerateTicket(6);
                     booking.FareType = state.FareType;
-                    booking.Promocode = state.Promocode.ToUpper();
+                    booking.Promocode = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode.ToUpper());
+                    booking.MGM = state.MGM || state.UserMGM;
                     booking.Cost = state.Cost;
                     booking.StripeChargeId = state.StripeChargeID;
 
@@ -635,7 +711,19 @@ namespace MVP.Services
                 body += "<br>";
                 body += "<br>DETALHES DO PAGAMENTO:";
                 body += "<br>Tarifa: " + state.FareType.ToString();
-                body += "<br>Promocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
+                if(!string.IsNullOrEmpty(state.Promocode))
+                {
+                    body += "<br>Promocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
+                }
+                if (state.UserMGM)
+                {
+                    body += "<br>MemberGetMember: Sim";
+                }
+                if(state.MGM)
+                {
+                    body += "<br>MemberGetMember Referral: Sim";
+                    body += "<br>MemberGetMember ReferralCode: " + state.Code;
+                }
                 body += "<br>Stripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
                 body += "<br>Valor pago: " + state.Cost.ToString() + "€";
                 body += "<br>";

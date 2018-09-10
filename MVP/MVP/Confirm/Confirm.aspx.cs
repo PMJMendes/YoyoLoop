@@ -56,8 +56,6 @@ namespace MVP.Confirm
                         UserId = "",
                         UserEmail = "email@email.com",
                         UserEmailConfirmed = false,
-                        UserReferredById = string.Empty,
-                        UserMGMCode = string.Empty,
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
@@ -88,16 +86,6 @@ namespace MVP.Confirm
                     string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, userid, Request);
                     callbackUrl += "&bookid=" + pageData.BookingId;
                     service.SendUnconfirmedTicket(pageData, callbackUrl);
-                }
-
-                if(string.IsNullOrEmpty(pageData.UserReferredById))
-                {
-                    pageData.UserReferredById = service.AddSelfReferral(pageData.UserId);
-                }
-
-                if(string.IsNullOrEmpty(pageData.UserMGMCode))
-                {
-                    pageData.UserMGMCode = service.GenerateMGMCode(pageData.UserId, pageData.UserEmail);
                 }
             }
             else

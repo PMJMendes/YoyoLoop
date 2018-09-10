@@ -375,7 +375,7 @@ namespace MVP.Services
                     CreationTime = DateTime.Now,
                     Seats = state.Selection.Seats,
                     FareType = state.Selection.FareType,
-                    Promocode = state.Selection.Promocode.ToUpper(),
+                    Promocode = model.Promocode.FirstOrDefault(p => p.Code == state.Selection.Promocode),
                     MGM = state.UserMGM || state.Selection.MGM
                 };
 

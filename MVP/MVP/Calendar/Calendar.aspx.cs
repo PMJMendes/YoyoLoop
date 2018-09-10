@@ -59,6 +59,10 @@ namespace MVP.Calendar
                 pageData.UserId = User.Identity.GetUserId();
                 var inviteService = new InviteService();
                 pageData.UserMGM = inviteService.GetUserMGM(pageData.UserId) > 0 ? true : false;
+                if(BookingPanel.Visible)
+                {
+                    UpdateBookingPanel("promo");
+                }
 
                 if(localData.AnonymousBookingHandler)
                 {
@@ -414,7 +418,7 @@ namespace MVP.Calendar
             }
             else
             {
-                Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
+                Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()) + (string.IsNullOrEmpty(pageData.Selection.Promocode) ? string.Empty : "&Code=" + pageData.Selection.Promocode));
             }
         }
 

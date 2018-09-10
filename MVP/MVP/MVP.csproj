@@ -1020,10 +1020,6 @@
     <Compile Include="Migrations\201809100229339_Booking-MGM.Designer.cs">
       <DependentUpon>201809100229339_Booking-MGM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809100548466_Booking-Promocode-To-String.cs" />
-    <Compile Include="Migrations\201809100548466_Booking-Promocode-To-String.Designer.cs">
-      <DependentUpon>201809100548466_Booking-Promocode-To-String.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1350,9 +1346,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809100229339_Booking-MGM.resx">
       <DependentUpon>201809100229339_Booking-MGM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809100548466_Booking-Promocode-To-String.resx">
-      <DependentUpon>201809100548466_Booking-Promocode-To-String.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
