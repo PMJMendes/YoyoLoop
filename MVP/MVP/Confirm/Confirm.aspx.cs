@@ -78,7 +78,7 @@ namespace MVP.Confirm
                 pageData.TicketURL = scheme + "://" + authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
                 pageData.InviteURL = scheme + "://" + authority + "/Profile/Invite";
 
-                if(!pageData.UserEmailConfirmed)
+                if (!pageData.UserEmailConfirmed)
                 {
                     var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                     var userid = User.Identity.GetUserId();
@@ -123,15 +123,27 @@ namespace MVP.Confirm
             ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text1 + " <span style='color: #ff5f6d;'>" + pageData.UserEmail + "</span> " + Resources.LocalizedText.Confirm_UnconfirmedEmail_ResendLink_ShowMessage_Text2);
         }
 
+        //THIS WHOLE MESS BELOW NEEDS TO BE REPLACED BY BOOTSTRAP POPOVERS
         protected void btnCopyLink_Click(object sender, EventArgs e)
         {
             phCopyLink.Visible = false;
-            phLinkCopied.Visible = true;
+            phLinkCopied.Visible = true; //this needs to be replaced by popover activation calls
+        }
+
+        protected void btnInlineCopyLink_Click(object sender, EventArgs e)
+        {
+            phLinkCopied.Visible = true; //this needs to be replaced by popover activation calls
         }
 
         protected void btnShare_Click(object sender, EventArgs e)
         {
-            phSharePopover.Visible = true;
+
+            phSharePopover.Visible = true; //this needs to be replaced by popover activation calls
+        }
+
+        protected void btnShareTarget_Click(object sender, EventArgs e)
+        {
+            phSharePopover.Visible = false; //this needs to be replaced by popover activation calls
         }
     }
 }

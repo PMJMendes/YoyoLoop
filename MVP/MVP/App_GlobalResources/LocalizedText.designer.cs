@@ -3607,6 +3607,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Usa o código.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMessage1 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to em.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMessage2 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e viaja a 1€..
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMessage3 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMessage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!.
         /// </summary>
         internal static string Profile_Invite_Promoshare_Title {

@@ -48,15 +48,27 @@ namespace MVP.Profile
             }
         }
 
+        //THIS WHOLE MESS BELOW NEEDS TO BE REPLACED BY BOOTSTRAP POPOVERS
         protected void btnCopyLink_Click(object sender, EventArgs e)
         {
             phCopyLink.Visible = false;
-            phLinkCopied.Visible = true;
+            phLinkCopied.Visible = true; //this needs to be replaced by popover activation calls
+        }
+
+        protected void btnInlineCopyLink_Click(object sender, EventArgs e)
+        {
+            phLinkCopied.Visible = true; //this needs to be replaced by popover activation calls
         }
 
         protected void btnShare_Click(object sender, EventArgs e)
         {
-            phSharePopover.Visible = true;
+
+            phSharePopover.Visible = true; //this needs to be replaced by popover activation calls
+        }
+
+        protected void btnShareTarget_Click(object sender, EventArgs e)
+        {
+            phSharePopover.Visible = false; //this needs to be replaced by popover activation calls
         }
     }
 }

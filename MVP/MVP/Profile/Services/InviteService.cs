@@ -19,7 +19,7 @@ namespace MVP.Profile.Services
                     UserId = user.Id,
                     AmountSaved = "0",
                     MGMTrips = "0",
-                    MGMCode = "#mypromocode"
+                    UserMGMCode = "mypromocode"
                 };
                 return result;
             }

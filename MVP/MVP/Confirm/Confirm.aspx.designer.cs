@@ -94,6 +94,15 @@ namespace MVP.Confirm {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl PromocodeInput;
         
         /// <summary>
+        /// btnInlineCopyLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnInlineCopyLink;
+        
+        /// <summary>
         /// btnShare control.
         /// </summary>
         /// <remarks>
@@ -110,5 +119,41 @@ namespace MVP.Confirm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phSharePopover;
+        
+        /// <summary>
+        /// btnShareFacebook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnShareFacebook;
+        
+        /// <summary>
+        /// btnShareTwitter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnShareTwitter;
+        
+        /// <summary>
+        /// btnShareLinkedin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnShareLinkedin;
+        
+        /// <summary>
+        /// btnShareEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnShareEmail;
     }
 }

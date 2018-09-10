@@ -2514,4 +2514,13 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   <data name="General_MGMPromo" xml:space="preserve">
     <value>MemberGetMember</value>
   </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage1" xml:space="preserve">
+    <value>Usa o código</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage2" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
+    <value>e viaja a 1€.</value>
+  </data>
 </root>

@@ -10,6 +10,6 @@ namespace MVP.Profile
         public string UserId { get; set; }
         public string AmountSaved { get; set; }
         public string MGMTrips { get; set; }
-        public string MGMCode { get; set; }
+        public string UserMGMCode { get; set; }
     }
 }
