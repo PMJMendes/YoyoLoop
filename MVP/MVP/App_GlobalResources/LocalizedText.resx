@@ -2511,4 +2511,7 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
   </data>
+  <data name="General_MGMPromo" xml:space="preserve">
+    <value>MemberGetMember</value>
+  </data>
 </root>

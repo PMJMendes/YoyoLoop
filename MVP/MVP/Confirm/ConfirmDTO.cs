@@ -26,8 +26,9 @@ namespace MVP.Confirm
         public string UserEmail { get; set; }
         public bool UserEmailConfirmed { get; set; }
         public string UserContactName { get; set; }
+        public string UserReferredById { get; set; }
+        public string UserMGMCode { get; set; }
 
         public string InviteURL { get; set; }
-        public string MGMCode { get; set; }
     }
 }

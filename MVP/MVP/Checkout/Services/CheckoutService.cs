@@ -20,6 +20,7 @@ using System.Globalization;
 using MVP.Models.Helpers;
 using UniversalAnalyticsHttpWrapper;
 using UniversalAnalyticsHttpWrapper.Objects;
+using MVP.Profile.Services;
 
 namespace MVP.Services
 {
@@ -66,7 +67,6 @@ namespace MVP.Services
                                            .Include(sr => sr.Trip.StartAccessPoint.Region)
                                            .Include(er => er.Trip.EndAccessPoint.Region)
                                            .Include(f => f.Trip.Departure.Route.Fares)
-                                           .Include(p => p.Promocode)
                                            .FirstOrDefault();
                 if(booking == null)
                 {
@@ -81,9 +81,19 @@ namespace MVP.Services
                     state.FareType = booking.FareType;
                     state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
-                    state.Promocode = booking.Promocode?.Code ?? string.Empty;
+                    state.Promocode = booking.Promocode;
                     state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
-                    state.Cost = booking.Cost;
+                    if (booking.MGM)
+                    {
+                        state.UserMGM = CheckUserMGM(state.UserId);
+                        state.MGM = CheckMGMCode(state.UserId, state.Promocode);
+                        if(state.MGM)
+                        {
+                            state.PromoValid = true;
+                        }
+                    }
+                    state.MGMPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
+                    state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (booking.Seats - 1)) : state.Price * booking.Seats;
                     state.StartTime = booking.Trip.StartTime;
                     state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
@@ -92,6 +102,20 @@ namespace MVP.Services
                 }
             }
             return state;
+        }
+
+        private bool CheckUserMGM(string userid)
+        {
+            var inviteService = new InviteService();
+
+            if(inviteService.GetUserMGM(userid) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public BookingPanelDTO GetCheckoutPanelData(CheckoutDTO state)
@@ -106,6 +130,9 @@ namespace MVP.Services
                 Price = state.Price,
                 Promocode = state.Promocode,
                 PromoValid = state.PromoValid,
+                MGM = state.MGM,
+                UserMGM = state.UserMGM,
+                MGMPrice = state.MGMPrice,
                 StartTime = state.StartTime,
                 StartRegionName = state.StartRegionName,
                 StartAPName = state.StartAPName,
@@ -124,14 +151,39 @@ namespace MVP.Services
         {
             var result = new List<BookingPanelDTO.PriceItem>();
 
-            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            if (paneldata.MGM || paneldata.UserMGM)
             {
                 result.Add(new BookingPanelDTO.PriceItem
                 {
-                    Description = Resources.LocalizedText.General_Promocode,
-                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultCulture()),
+                    Description = Resources.LocalizedText.General_MGMPromo,
+                    Value = (paneldata.MGMPrice - paneldata.StandardPrice).ToString("C", ApplicationHelpers.DefaultCulture()),
                     Type = BookingPanelDTO.PriceItemType.DISCOUNT
                 });
+            }
+
+            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            {
+                if (paneldata.MGM || paneldata.UserMGM)
+                {
+                    if(paneldata.Seats > 1)
+                    {
+                        result.Add(new BookingPanelDTO.PriceItem
+                        {
+                            Description = Resources.LocalizedText.General_Promocode,
+                            Value = ((paneldata.Price - paneldata.StandardPrice) * (paneldata.Seats - 1)).ToString("C", ApplicationHelpers.DefaultCulture()),
+                            Type = BookingPanelDTO.PriceItemType.DISCOUNT
+                        });
+                    }
+                }
+                else
+                {
+                    result.Add(new BookingPanelDTO.PriceItem
+                    {
+                        Description = Resources.LocalizedText.General_Promocode,
+                        Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultCulture()),
+                        Type = BookingPanelDTO.PriceItemType.DISCOUNT
+                    });
+                }
             }
 
             return result;
@@ -181,27 +233,55 @@ namespace MVP.Services
             return result;
         }
 
-
-        public CheckoutDTO CheckPromo(CheckoutDTO state)
+        public bool CheckMGMCode(string userid, string promocode)
         {
-            CheckoutDTO result = state;
             using (var model = new EntityModel())
             {
-                bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
+                if (model.Users.Any(u => u.MGMCode == promocode) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
                 {
-                    result.FareType = Fare.FareType.PROMOTIONAL;
-                    result.PromoValid = true;
+                    return true;
                 }
                 else
                 {
-                    result.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
-                    result.PromoValid = false;
+                    return false;
                 }
-                result.Price = model.Booking.Include(b => b.Trip.Departure.Route.Fares).FirstOrDefault(b => b.BookingId == state.BookingId).Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == result.FareType).Price;
-                result.Cost = result.Seats * result.Price;
             }
-            return result;
+        }
+
+        public CheckoutDTO CheckPromo(CheckoutDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+
+                if (string.IsNullOrEmpty(state.Promocode))
+                {
+                    state.MGM = false;
+                    state.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                    state.PromoValid = false;
+                }
+                else
+                {
+                    state.MGM = CheckMGMCode(state.UserId, state.Promocode);
+
+                    if(!state.MGM)
+                    {
+                        if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
+                        {
+                            state.FareType = Fare.FareType.PROMOTIONAL;
+                            state.PromoValid = true;
+                        }
+                        else
+                        {
+                            state.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                            state.PromoValid = false;
+                        }
+                    }
+                }
+                state.Price = model.Booking.Include(b => b.Trip.Departure.Route.Fares).FirstOrDefault(b => b.BookingId == state.BookingId).Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == state.FareType).Price;
+                state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (state.Seats - 1)) : state.Price * state.Seats;
+            }
+            return state;
         }
 
         public bool ProcessPayment(CheckoutDTO state, string source, out string error)
@@ -253,6 +333,10 @@ namespace MVP.Services
 
                 // Charge sucessful
                 UpdateBooking(state, BookingStatus.BOOKED);
+                if(state.MGM)
+                {
+                    CreateReferral(state.UserId, state.Promocode);
+                }
                 error = string.Empty;
                 SendInvoice(state);
 
@@ -262,6 +346,17 @@ namespace MVP.Services
                 GA_Purchase(state.UserId, description, (int)state.Cost);
 
                 return true;
+            }
+        }
+
+        private void CreateReferral(string userid, string promocode)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                var referredby = model.Users.FirstOrDefault(u => u.MGMCode == promocode);
+                user.ReferredBy = referredby;
+                model.SaveChanges();
             }
         }
 
@@ -405,14 +500,14 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var booking = model.Booking.Include(t => t.Trip).Include(p => p.Promocode).SingleOrDefault(b => b.BookingId == state.BookingId);
+                var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == state.BookingId);
 
                 if (booking != null)
                 {
                     booking.Status = status;
                     booking.TicketCode = GenerateTicket(6);
                     booking.FareType = state.FareType;
-                    booking.Promocode = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode.ToUpper());
+                    booking.Promocode = state.Promocode.ToUpper();
                     booking.Cost = state.Cost;
                     booking.StripeChargeId = state.StripeChargeID;
 

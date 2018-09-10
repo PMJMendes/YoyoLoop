@@ -168,7 +168,7 @@
                         <asp:PlaceHolder runat="server" ID="phCopyLink" Visible="true">
                             <div id="copy-link-1" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
                                 <div class="invitefriends__promocode__input mr-5">
-                                    <div class="invitefriends__promocode__label"><%= pageData.MGMCode %></div>
+                                    <div class="invitefriends__promocode__label"><%= pageData.UserMGMCode %></div>
                                 </div>
                                 <asp:LinkButton runat="server" ID="btnCopyLink" OnClick="btnCopyLink_Click" CssClass="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Copiar Link" />
                             </div>
@@ -187,7 +187,7 @@
                                 <!-- End of copied popover -->
 
                                 <div runat="server" id="PromocodeInput" class="invitefriends__promocode__input mr-5">
-                                    <div class="invitefriends__promocode__label"><%= pageData.MGMCode %></div>
+                                    <div class="invitefriends__promocode__label"><%= pageData.UserMGMCode %></div>
                                     <div class="invitefriends__promocode__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnCopyLink_Text%>"/></div>
                                 </div>
                                 <asp:LinkButton runat="server" ID="btnShare" OnClick="btnShare_Click" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Partilhar" />

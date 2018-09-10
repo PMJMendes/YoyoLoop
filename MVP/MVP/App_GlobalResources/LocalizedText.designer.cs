@@ -1762,6 +1762,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MemberGetMember.
+        /// </summary>
+        internal static string General_MGMPromo {
+            get {
+                return ResourceManager.GetString("General_MGMPromo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Promocode.
         /// </summary>
         internal static string General_Promocode {
@@ -2431,7 +2440,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
         ///&lt;br&gt;
-        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a YoyoLoop. Para saber mais, envia por favor um email para empresas@YoyoLoop.com . .
+        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a YoyoLoop. Para saber mais, envia por favor um email para empresas@YoyoLoo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_HowMuch_Answer {
             get {
@@ -4597,7 +4606,7 @@ namespace Resources {
         ///   Looks up a localized string similar to 
         ///Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de aut [rest of string was truncated]&quot;;.
+        ///Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_MainDescription {
             get {
@@ -5040,7 +5049,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Além de ser a zona de residência do Jardim Zoológico de Lisboa, Sete Rios é conhecido por ser outra das mais importantes estações ferroviárias e rodoviárias da cidade. É especialmente importante para quem vem da linha de Sintra e da Margem Sul, assim como para quem chega de autocarro vindo de todos os cantos do país, especialmente da zona sul e região oeste.&lt;br&gt;
         ///&lt;br&gt;
-        ///Sete Rios é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria,  [rest of string was truncated]&quot;;.
+        ///Sete Rios é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description {
             get {
@@ -5078,7 +5087,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to As Torres das Amoreiras são um dos edifícios mais icónicos da cidade de Lisboa. Apesar de ser uma zona residencial de excelência e um das principais pólos de escritórios da capital, a zona das Amoreiras não está devidamente servida pela rede de transportes da cidade, especialmente pelo Metropolitano de Lisboa. É um incómodo para os residentes lisboetas, mas é ainda mais doloroso para quem vem dos arredores da capital.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Torre 3 das Amoreiras é um dos pontos de partida da YoyoLoop na cidade de Lisbo [rest of string was truncated]&quot;;.
+        ///A Torre 3 das Amoreiras é um dos pontos de partida da YoyoLoop na cidade de Lis [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description {
             get {
@@ -5154,7 +5163,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to O Campo Grande é, desde há muitos anos, uma zona de transportes importante. É aqui que chegam a maior parte dos autocarros suburbanos provenientes da região Oeste. A crescente presença de grandes empresas na zona, assim como a Universidade Lusófona de Lisboa e várias faculdades da Universidade de Lisboa nas proximidades, reforçou ainda mais a importância de ligar devidamente o Campo Grande.&lt;br&gt;
         ///&lt;br&gt;
-        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que  [rest of string was truncated]&quot;;.
+        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui qu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description {
             get {
@@ -5192,7 +5201,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to A Gare do Oriente é uma das mais importantes estações ferroviárias e rodoviárias da cidade de Lisboa. A sua ligação privilegiada ao Aeroporto de Lisboa pela Avenida de Berlim também contribui para a importância desta zona icónica. Todos os dias, a Gare do Oriente recebe centenas de milhares de pessoas provenientes de vários pontos dos arredores da capital.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Gare do Oriente é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Le [rest of string was truncated]&quot;;.
+        ///A Gare do Oriente é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto,  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description {
             get {
@@ -5250,7 +5259,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///As alternativas deixam a desejar. Os autocarros e os comboios são demorados, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem mai [rest of string was truncated]&quot;;.
+        ///Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_SubDescription {
             get {
@@ -5342,7 +5351,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to A rede de transportes públicos do Porto deixa a desejar. Os autocarros e os comboios são demorados e o Metro do Porto serve apenas os subúrbios e uma faixa do centro da cidade. Para quem vem de outras cidades, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais ráp [rest of string was truncated]&quot;;.
+        ///Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais r [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_Description {
             get {
@@ -5852,7 +5861,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
         ///&lt;br&gt;
-        ///A YoyoLoop oferece-t [rest of string was truncated]&quot;;.
+        ///A YoyoLoop ofere [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_SubDescription {
             get {
@@ -6141,7 +6150,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Quando chega a hora de voltar a casa no final de um dia de trabalho ou ao fim de uma semana de aulas na faculdade, há vários transportes de Lisboa para o Porto, mas não são os mais viáveis, nem os mais confortáveis.&lt;br&gt;
         ///&lt;br&gt;
-        ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está n [rest of string was truncated]&quot;;.
+        ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_SubDescription {
             get {
@@ -6512,7 +6521,7 @@ namespace Resources {
         ///   Looks up a localized string similar to 5. Onde são guardados os dados do Utilizador?&lt;br&gt;
         ///&lt;br&gt;
         ///A equipa da YoyoLoop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
-        ///Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Caso  [rest of string was truncated]&quot;;.
+        ///Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Ca [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Five {
             get {
@@ -6564,7 +6573,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da YoyoLoop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
         ///Os dados recolhidos ou fornecidos pelo utilizador não serão processados para quaisquer outros fins que não os aqui especificados. &lt;br&gt;
-        ///A YoyoLoop reserva-se  [rest of string was truncated]&quot;;.
+        ///A YoyoLoop reserva [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_One {
             get {
@@ -6586,7 +6595,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to 6. A YoyoLoop utiliza cookies no seu Website?&lt;br&gt;
         ///&lt;br&gt;
-        ///O website da YoyoLoop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à Yo [rest of string was truncated]&quot;;.
+        ///O website da YoyoLoop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Six {
             get {

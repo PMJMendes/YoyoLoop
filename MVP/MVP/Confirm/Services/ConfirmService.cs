@@ -27,6 +27,8 @@ namespace MVP.Services
                 UserId = "",
                 UserEmail = "email@email.com",
                 UserEmailConfirmed = false,
+                UserReferredById = string.Empty,
+                UserMGMCode = string.Empty,
                 Seats = 0,
                 Cost = 0,
                 TicketCode = "#MYTICKETYO",
@@ -37,8 +39,7 @@ namespace MVP.Services
                 StartAPLocation = "#",
                 EndRegionName = "End Region",
                 EndAPName = "End AP",
-                EndAPLocation = "#",
-                MGMCode = "#mypromocode"
+                EndAPLocation = "#"
             };
             return result;
         }
@@ -68,6 +69,8 @@ namespace MVP.Services
                         UserEmail = user.Email,
                         UserEmailConfirmed = user.EmailConfirmed,
                         UserContactName = user.ContactName,
+                        UserReferredById = user.ReferredBy?.Id,
+                        UserMGMCode = user.MGMCode,
                         Seats = booking.Seats,
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
@@ -79,10 +82,61 @@ namespace MVP.Services
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
                         EndAPName = booking.Trip.EndAccessPoint.Name,
                         EndAPLocation = booking.Trip.EndAccessPoint.GoogleLocation,
-                        InviteURL = "#",
-                        MGMCode = "#mypromocode"
+                        InviteURL = "#"
                     };
                     return result;
+                }
+            }
+        }
+
+        public string AddSelfReferral(string userid)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                user.ReferredBy = user;
+                model.SaveChanges();
+            }
+            return userid;
+        }
+
+        public string GenerateMGMCode(string userid, string useremail)
+        {
+            string strippedid = userid.Replace("-", string.Empty);
+            string strippedemail = useremail.Substring(0, useremail.IndexOf("@") - 1).Replace(".", string.Empty);
+            string result = strippedemail.Substring(0, Math.Min(strippedemail.Length, 6));
+            result += strippedid.Substring(strippedid.Length - (10 - result.Length));
+            result = result.ToUpper();
+
+            while (!ValidateMGMCode(result))
+            {
+                var strippedguid = Guid.NewGuid().ToString().Replace("-", string.Empty);
+                result = strippedemail.Substring(0, Math.Min(strippedemail.Length, 6));
+                result += strippedguid.Substring(strippedid.Length - (10 - result.Length));
+                result = result.ToUpper();
+            }
+
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                user.MGMCode = result;
+                model.SaveChanges();
+            }
+            return result;
+        }
+
+        private bool ValidateMGMCode(string code)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.MGMCode == code);
+                if(user == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
         }

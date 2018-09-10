@@ -56,6 +56,8 @@ namespace MVP.Confirm
                         UserId = "",
                         UserEmail = "email@email.com",
                         UserEmailConfirmed = false,
+                        UserReferredById = string.Empty,
+                        UserMGMCode = string.Empty,
                         Seats = 0,
                         Cost = 0,
                         TicketCode = "#MYTICKETYO",
@@ -65,8 +67,7 @@ namespace MVP.Confirm
                         StartAPName = "Start AP",
                         EndRegionName = "End Region",
                         EndAPName = "End AP",
-                        InviteURL = "#",
-                        MGMCode = "#mypromocode"
+                        InviteURL = "#"
                     };
                     Response.Redirect("/");
                 }
@@ -78,6 +79,7 @@ namespace MVP.Confirm
                 var authority = Request.Url.Authority;
                 pageData.TicketURL = scheme + "://" + authority + "/Ticket/Ticket?Id=" + pageData.BookingId.ToString();
                 pageData.InviteURL = scheme + "://" + authority + "/Profile/Invite";
+
                 if(!pageData.UserEmailConfirmed)
                 {
                     var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -86,6 +88,16 @@ namespace MVP.Confirm
                     string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, userid, Request);
                     callbackUrl += "&bookid=" + pageData.BookingId;
                     service.SendUnconfirmedTicket(pageData, callbackUrl);
+                }
+
+                if(string.IsNullOrEmpty(pageData.UserReferredById))
+                {
+                    pageData.UserReferredById = service.AddSelfReferral(pageData.UserId);
+                }
+
+                if(string.IsNullOrEmpty(pageData.UserMGMCode))
+                {
+                    pageData.UserMGMCode = service.GenerateMGMCode(pageData.UserId, pageData.UserEmail);
                 }
             }
             else

@@ -9,6 +9,7 @@ using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using MVP.Controls;
+using MVP.Profile.Services;
 
 namespace MVP.Services
 {
@@ -17,9 +18,20 @@ namespace MVP.Services
         private readonly CheckoutService CheckoutService = new CheckoutService();
         public static object Booking_Lock = new object();
 
-        public CalendarDTO GetInitialData()
+        public CalendarDTO GetInitialData(string userid)
         {
             var result = new CalendarDTO();
+
+            result.UserId = userid;
+            if(!string.IsNullOrEmpty(userid))
+            {
+                var inviteService = new InviteService();
+                result.UserMGM = inviteService.GetUserMGM(userid) > 0 ? true : false;
+            }
+            else
+            {
+                result.UserMGM = false;
+            }
 
             using (var model = new EntityModel())
             {
@@ -210,22 +222,52 @@ namespace MVP.Services
             }
         }
 
-        public Fare.FareType CheckPromo(CalendarDTO state)
+        public CalendarDTO CheckPromo(CalendarDTO state)
         {
-            Fare.FareType result;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Selection.Promocode))
+
+                if(string.IsNullOrEmpty(state.Selection.Promocode))
                 {
-                    result = Fare.FareType.PROMOTIONAL;
+                    state.Selection.MGM = false;
+                    state.Selection.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
                 }
                 else
                 {
-                    result = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                    if (model.Users.Any(u => u.MGMCode == state.Selection.Promocode))
+                    {
+                        if(string.IsNullOrEmpty(state.UserId))
+                        {
+                            state.Selection.MGM = true;
+                        }
+                        else
+                        {
+                            if(model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == state.UserId).ReferredBy == null)
+                            {
+                                state.Selection.MGM = true;
+                            }
+                            else
+                            {
+                                state.Selection.MGM = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        state.Selection.MGM = false;
+                        if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Selection.Promocode))
+                        {
+                            state.Selection.FareType = Fare.FareType.PROMOTIONAL;
+                        }
+                        else
+                        {
+                            state.Selection.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                        }
+                    }
                 }
             }
-            return result;
+            return state;
         }
 
         public BookingPanelDTO GetBookingPanelData(CalendarDTO state, string trigger)
@@ -262,6 +304,9 @@ namespace MVP.Services
                     Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
                     Promocode = state.Selection.Promocode,
                     PromoValid = state.Selection.FareType == Fare.FareType.PROMOTIONAL ? true : false,
+                    MGM = state.Selection.MGM,
+                    UserMGM = state.UserMGM,
+                    MGMPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price,
                     StartTime = starttime,
                     StartRegionName = state.Selection.Route.StartRegion.Name,
                     StartAPName = state.Selection.SAP.Name,
@@ -269,8 +314,9 @@ namespace MVP.Services
                     EndAPName = state.Selection.DAP.Name
                 };
 
+
                 result.StandardCost = result.StandardPrice * result.Seats;
-                result.Cost = result.Price * result.Seats;
+                result.Cost = result.MGM || result.UserMGM ? result.MGMPrice + (result.Price * (result.Seats - 1)) : result.Price * result.Seats;
                 result.PriceSummary = CheckoutService.GetPriceSummary(result);
 
                 if(trigger == "new")
@@ -329,9 +375,13 @@ namespace MVP.Services
                     CreationTime = DateTime.Now,
                     Seats = state.Selection.Seats,
                     FareType = state.Selection.FareType,
-                    Promocode = model.Promocode.FirstOrDefault(p => p.Code == state.Selection.Promocode),
-                    Cost = state.Selection.Seats * model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price
+                    Promocode = state.Selection.Promocode.ToUpper(),
+                    MGM = state.UserMGM || state.Selection.MGM
                 };
+
+                var price = model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price;
+                var mgmprice = model.Route.Include(f => f.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
+                booking.Cost = state.Selection.MGM || state.UserMGM ? mgmprice + (price * (booking.Seats - 1)) : price * booking.Seats;
 
                 lock (Booking_Lock)
                 {

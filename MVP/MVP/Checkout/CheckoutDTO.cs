@@ -28,6 +28,9 @@ namespace MVP.Checkout
         public decimal Price { get; set; }
         public string Promocode { get; set; }
         public bool PromoValid { get; set; }
+        public bool MGM { get; set; }
+        public bool UserMGM { get; set; }
+        public decimal MGMPrice { get; set; }
 
         public decimal Cost { get; set; }
         public string TicketCode { get; set; }

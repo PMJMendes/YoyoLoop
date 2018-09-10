@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using MVP.Models.Helpers;
+using MVP.Profile.Services;
 
 namespace MVP.Calendar
 {
@@ -53,9 +54,16 @@ namespace MVP.Calendar
 
         protected void UserSignIn(object sender, EventArgs e)
         {
-            if (User?.Identity.IsAuthenticated == true && localData.AnonymousBookingHandler)
+            if (User?.Identity.IsAuthenticated == true)
             {
-                CreateBooking();
+                pageData.UserId = User.Identity.GetUserId();
+                var inviteService = new InviteService();
+                pageData.UserMGM = inviteService.GetUserMGM(pageData.UserId) > 0 ? true : false;
+
+                if(localData.AnonymousBookingHandler)
+                {
+                    CreateBooking();
+                }
             }
         }
 
@@ -280,7 +288,8 @@ namespace MVP.Calendar
 
             if (pageData == null)
             {
-                pageData = service.GetInitialData();
+                string userid = string.Empty;
+                pageData = service.GetInitialData(User?.Identity.IsAuthenticated == true ? User.Identity.GetUserId() : string.Empty);
                 Session["calendar.data"] = pageData;
             }
 
@@ -358,7 +367,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Promocode != localData.Values.Promocode) // New promocode
                 {
                     pageData.Selection.Promocode = localData.Values.Promocode;
-                    pageData.Selection.FareType = service.CheckPromo(pageData);
+                    pageData = service.CheckPromo(pageData);
                     bookupdate = "promo";
                 }
             }
