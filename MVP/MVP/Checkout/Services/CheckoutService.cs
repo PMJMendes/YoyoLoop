@@ -353,8 +353,8 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.FirstOrDefault(u => u.Id == userid);
-                var referredby = model.Users.FirstOrDefault(u => u.MGMCode == promocode);
+                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid);
+                var referredby = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.MGMCode == promocode);
                 user.ReferredBy = referredby;
                 model.SaveChanges();
             }

@@ -61,7 +61,7 @@ namespace MVP.Services
                 }
                 else
                 {
-                    var user = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId);
+                    var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == booking.UserId);
                     var result = new ConfirmDTO
                     {
                         BookingId = booking.BookingId,

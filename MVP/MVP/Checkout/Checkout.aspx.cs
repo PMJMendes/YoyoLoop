@@ -283,7 +283,7 @@ namespace MVP.Checkout
             }
             else
             {
-                if (!pageData.PromoValid)
+                if (!pageData.PromoValid && !pageData.MGM)
                 {
                     phPromoCheck.Visible = false;
                     phPromoError.Visible = true;
