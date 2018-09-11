@@ -37,6 +37,7 @@ namespace MVP.Calendar
         }
 
         private readonly CalendarService service = new CalendarService();
+        private readonly InviteService inviteService = new InviteService();
 
         CalendarDTO pageData;
         public PageState localData;
@@ -57,7 +58,6 @@ namespace MVP.Calendar
             if (User?.Identity.IsAuthenticated == true)
             {
                 pageData.UserId = User.Identity.GetUserId();
-                var inviteService = new InviteService();
                 pageData.UserMGM = inviteService.GetUserMGM(pageData.UserId) > 0 ? true : false;
                 if(BookingPanel.Visible)
                 {

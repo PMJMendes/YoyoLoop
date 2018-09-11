@@ -30,6 +30,7 @@ namespace MVP.Services
         private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
         private readonly StripeCardService stripeCardService = new StripeCardService();
         private readonly StripeChargeService stripeChargeService = new StripeChargeService(stripePrivateKey);
+        private readonly InviteService inviteService = new InviteService();
         
         public static object Checkout_Lock = new object();
 
@@ -106,8 +107,6 @@ namespace MVP.Services
 
         private bool CheckUserMGM(string userid)
         {
-            var inviteService = new InviteService();
-
             if(inviteService.GetUserMGM(userid) > 0)
             {
                 return true;

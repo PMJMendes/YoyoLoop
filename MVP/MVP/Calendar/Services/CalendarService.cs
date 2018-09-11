@@ -15,7 +15,8 @@ namespace MVP.Services
 {
     public class CalendarService
     {
-        private readonly CheckoutService CheckoutService = new CheckoutService();
+        private readonly CheckoutService checkoutService = new CheckoutService();
+        private readonly InviteService inviteService = new InviteService();
         public static object Booking_Lock = new object();
 
         public CalendarDTO GetInitialData(string userid)
@@ -25,7 +26,6 @@ namespace MVP.Services
             result.UserId = userid;
             if(!string.IsNullOrEmpty(userid))
             {
-                var inviteService = new InviteService();
                 result.UserMGM = inviteService.GetUserMGM(userid) > 0 ? true : false;
             }
             else
@@ -317,7 +317,7 @@ namespace MVP.Services
 
                 result.StandardCost = result.StandardPrice * result.Seats;
                 result.Cost = result.MGM || result.UserMGM ? result.MGMPrice + (result.Price * (result.Seats - 1)) : result.Price * result.Seats;
-                result.PriceSummary = CheckoutService.GetPriceSummary(result);
+                result.PriceSummary = checkoutService.GetPriceSummary(result);
 
                 if(trigger == "new")
                 {

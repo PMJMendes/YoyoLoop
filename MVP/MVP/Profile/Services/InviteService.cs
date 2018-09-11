@@ -33,7 +33,7 @@ namespace MVP.Profile.Services
 
                 if(mgmbookings.Any())
                 {
-                    var normalcost = mgmbookings.Sum(b => b.Trip.Departure.Route.Fares.Where(f => f.Type == Fare.FareType.STANDARD).FirstOrDefault().Price);
+                    var normalcost = mgmbookings.Sum(b => b.Trip.Departure.Route.Fares.Where(f => f.Type == b.FareType).FirstOrDefault().Price);
                     var mgmcost = mgmbookings.Sum(b => b.Trip.Departure.Route.Fares.Where(f => f.Type == Fare.FareType.MEMBERGETMEMBER).FirstOrDefault().Price);
 
                     return (int)(normalcost - mgmcost);
