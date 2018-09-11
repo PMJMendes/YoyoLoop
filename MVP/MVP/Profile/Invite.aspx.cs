@@ -45,6 +45,16 @@ namespace MVP.Profile
             {
                 pageData = service.GetInitialData(User?.Identity.GetUserId());
                 Session["invite.data"] = pageData;
+                if(string.IsNullOrEmpty(pageData.UserMGMCode))
+                {
+                    phPromoShareEligible.Visible = false;
+                    phPromoShareNotEligible.Visible = true;
+                }
+                else
+                {
+                    phPromoShareEligible.Visible = true;
+                    phPromoShareNotEligible.Visible = false;
+                }
             }
         }
 

@@ -2523,4 +2523,7 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
     <value>e viaja a 1€.</value>
   </data>
+  <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
+    <value>Para receberes o teu código promocional só tens que marcar a tua primeira viagem!</value>
+  </data>
 </root>

@@ -22,6 +22,15 @@ namespace MVP.Profile {
         protected global::System.Web.UI.UpdatePanel upPromoshare;
         
         /// <summary>
+        /// phPromoShareEligible control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phPromoShareEligible;
+        
+        /// <summary>
         /// phCopyLink control.
         /// </summary>
         /// <remarks>
@@ -119,5 +128,14 @@ namespace MVP.Profile {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnShareEmail;
+        
+        /// <summary>
+        /// phPromoShareNotEligible control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phPromoShareNotEligible;
     }
 }

@@ -17,14 +17,33 @@ namespace MVP.Profile.Services
                 var result = new InviteDTO
                 {
                     UserId = user.Id,
-                    AmountSaved = "0",
-                    MGMTrips = "0",
-                    UserMGMCode = "mypromocode"
+                    AmountSaved = GetAmountSaved(userid),
+                    MGMTrips = GetUserMGM(userid),
+                    UserMGMCode = user.MGMCode
                 };
                 return result;
             }
         }
 
+        private int GetAmountSaved (string userid)
+        {
+            using (var model = new EntityModel())
+            {
+                var mgmbookings = model.Booking.Where(b => b.UserId == userid && b.MGM && (b.Status == BookingStatus.BOOKED || b.Status == BookingStatus.COMPLETED));
+
+                if(mgmbookings.Any())
+                {
+                    var normalcost = mgmbookings.Sum(b => b.Trip.Departure.Route.Fares.Where(f => f.Type == Fare.FareType.STANDARD).FirstOrDefault().Price);
+                    var mgmcost = mgmbookings.Sum(b => b.Trip.Departure.Route.Fares.Where(f => f.Type == Fare.FareType.MEMBERGETMEMBER).FirstOrDefault().Price);
+
+                    return (int)(normalcost - mgmcost);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
         public int GetUserMGM(string userid)
         {
             using (var model = new EntityModel())

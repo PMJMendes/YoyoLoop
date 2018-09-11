@@ -3571,6 +3571,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Para receberes o teu código promocional só tens que marcar a tua primeira viagem!.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_NotEligible {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_NotEligible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar por Email.
         /// </summary>
         internal static string Profile_Invite_Promoshare_ShareMenu_email {
