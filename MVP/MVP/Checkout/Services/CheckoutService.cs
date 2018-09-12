@@ -18,8 +18,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 using System.Globalization;
 using MVP.Models.Helpers;
-using UniversalAnalyticsHttpWrapper;
-using UniversalAnalyticsHttpWrapper.Objects;
 using MVP.Profile.Services;
 
 namespace MVP.Services

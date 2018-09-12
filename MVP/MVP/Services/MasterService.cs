@@ -11,8 +11,6 @@ using Microsoft.Owin;
 using MVP.Models;
 using MVP.Models.Entities;
 using MVP.Models.Helpers;
-using UniversalAnalyticsHttpWrapper;
-using UniversalAnalyticsHttpWrapper.Objects;
 
 namespace MVP.Services
 {
