@@ -11,8 +11,6 @@ using Microsoft.Owin;
 using MVP.Models;
 using MVP.Models.Entities;
 using MVP.Models.Helpers;
-using UniversalAnalyticsHttpWrapper;
-using UniversalAnalyticsHttpWrapper.Objects;
 
 namespace MVP.Services
 {
@@ -24,10 +22,6 @@ namespace MVP.Services
             var signinManager = context.GetUserManager<ApplicationSignInManager>();
 
             var result = signinManager.PasswordSignIn(email, password, rememberme, shouldLockout: false);
-            if (result == SignInStatus.Success)
-            {
-                GA_Login(manager.FindByName(email).Id, email);
-            }
             return result;
         }
 
@@ -38,10 +32,9 @@ namespace MVP.Services
             var user = manager.FindById(userid);
 
             signinManager.SignIn(user, false, false);
-            GA_Login(userid, user.Email);
         }
 
-        public IdentityResult CreateUser (IOwinContext context, Func<string, string, string> genCallbackUrl, string email, string password, string contactname)
+        public IdentityResult CreateUser (IOwinContext context, Func<string, string, string> genCallbackUrl, string email, string password, string contactname, out string userid)
         {
             var manager = context.GetUserManager<ApplicationUserManager>();
             var signInManager = context.Get<ApplicationSignInManager>();
@@ -52,42 +45,11 @@ namespace MVP.Services
                 string code = manager.GenerateEmailConfirmationToken(user.Id);
                 string callbackUrl = genCallbackUrl(code, user.Id);
                 SendEmailConfirmation(user.Email, callbackUrl);
-                GA_Signup(user.Id, user.Email);
 
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                GA_Login(user.Id, user.Email);
             }
+            userid = user?.Id;
             return result;
-        }
-
-        private void GA_Login (string userid, string email)
-        {
-            IEventTracker eventTracker = new EventTracker();
-            IUniversalAnalyticsEventFactory eventFactory = new UniversalAnalyticsEventFactory();
-            UserId userId = new UserId(userid);
-            var analyticsEvent = eventFactory.MakeUniversalAnalyticsEvent(
-                userId,
-                "User Manager",
-                "Login",
-                email,
-                "0",
-                nonInteractionEvent: false);
-            var trackingResult = eventTracker.TrackEvent(analyticsEvent);
-        }
-
-        private void GA_Signup(string userid, string email)
-        {
-            IEventTracker eventTracker = new EventTracker();
-            IUniversalAnalyticsEventFactory eventFactory = new UniversalAnalyticsEventFactory();
-            UserId userId = new UserId(userid);
-            var analyticsEvent = eventFactory.MakeUniversalAnalyticsEvent(
-                userId,
-                "User Manager",
-                "Signup",
-                email,
-                "0",
-                nonInteractionEvent: false);
-            var trackingResult = eventTracker.TrackEvent(analyticsEvent);
         }
 
         public void SendEmailConfirmation(string email, string callbackUrl)

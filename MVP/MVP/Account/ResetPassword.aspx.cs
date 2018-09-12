@@ -42,7 +42,7 @@ namespace MVP.Account
 
                     var service = new Services.MasterService();
                     service.ForceLogIn(Context.GetOwinContext(), user.Id);
-
+                    (this.Master as SiteMaster).GA_Login(user.Id);
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Default.aspx';}, 5000);", true);
                     return;
                 }

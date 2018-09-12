@@ -18,8 +18,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 using System.Globalization;
 using MVP.Models.Helpers;
-using UniversalAnalyticsHttpWrapper;
-using UniversalAnalyticsHttpWrapper.Objects;
 using MVP.Profile.Services;
 
 namespace MVP.Services
@@ -359,11 +357,6 @@ namespace MVP.Services
                 error = string.Empty;
                 SendInvoice(state);
 
-                var description = state.Seats.ToString() + " x " + 
-                                  state.StartRegionName + "-" +
-                                  state.EndRegionName;
-                GA_Purchase(state.UserId, description, (int)state.Cost);
-
                 return true;
             }
         }
@@ -432,21 +425,6 @@ namespace MVP.Services
                     return false;
                 }
             }
-        }
-
-        private void GA_Purchase(string userid, string label, int value)
-        {
-            IEventTracker eventTracker = new EventTracker();
-            IUniversalAnalyticsEventFactory eventFactory = new UniversalAnalyticsEventFactory();
-            UserId userId = new UserId(userid);
-            var analyticsEvent = eventFactory.MakeUniversalAnalyticsEvent(
-                userId,
-                "Transaction",
-                "Purchase",
-                label,
-                value.ToString(),
-                nonInteractionEvent: false);
-            var trackingResult = eventTracker.TrackEvent(analyticsEvent);
         }
 
         public string StripeErrorHandler(string error)

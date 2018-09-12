@@ -26,6 +26,7 @@ namespace MVP
             // Load scripts
             ScriptManager mgr = ScriptManager.GetCurrent(this.Page);
 
+            mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/google-tag-manager.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.blockUI.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/jquery.sticky.js") });
             mgr.Scripts.Add(new ScriptReference { Path = Context.VersionedContent("~/Scripts/Custom/blockUI-extension.js") });
@@ -114,6 +115,7 @@ namespace MVP
 
         protected void UserSignIn(object sender, EventArgs e)
         {
+            GA_Login(Context.User.Identity.GetUserId());
             PassSignIn?.Invoke(this, e);
         }
 
@@ -129,6 +131,11 @@ namespace MVP
             Response.Cookies["langCookie"].Value = "en-US";
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
             Response.Redirect(Request.Url.PathAndQuery);
+        }
+
+        public void GA_Login(string userid)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-LoginKey", "GTM_Login('" + userid + "');", true);
         }
     }
 }

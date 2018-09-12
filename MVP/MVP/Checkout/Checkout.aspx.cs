@@ -70,7 +70,9 @@ namespace MVP.Checkout
                             string error;
                             if (service.ProcessPayment(pageData, hfStripeToken, out error))
                             {
-                                Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                                GA_Purchase();
+                                //redirects changed to client side so GTM can fire
+                                RedirectToConfirm();
                             }
                             else
                             {
@@ -82,7 +84,9 @@ namespace MVP.Checkout
                             string error;
                             if (service.AddCard(pageData, hfStripeToken, out error))
                             {
-                                Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                                GA_Purchase();
+                                //redirects changed to client side so GTM can fire
+                                RedirectToConfirm();
                             }
                             else
                             {
@@ -317,7 +321,9 @@ namespace MVP.Checkout
             string error;
             if (service.ProcessPayment(pageData, ddlCardMenu.SelectedValue, out error))
             {
-                Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                GA_Purchase();
+                //redirects changed to client side so GTM can fire
+                RedirectToConfirm();
             }
             else
             {
@@ -329,6 +335,24 @@ namespace MVP.Checkout
         {
             tbPromo.Text = string.Empty;
             tbPromo_TextChanged(tbPromo, new EventArgs());
+        }
+
+        protected void GA_Purchase()
+        {
+            string id = pageData.BookingId.ToString();
+            string fare = pageData.FareType.ToString();
+            string mgm = (pageData.MGM || pageData.UserMGM).ToString();
+            string cost = pageData.Cost.ToString();
+            string tax = (pageData.Cost * (decimal)0.06).ToString();
+            string route = pageData.StartRegionName + "-" + pageData.EndRegionName;
+            string date = pageData.StartTime.ToString("F", ApplicationHelpers.DefaultCulture());
+            string seats = pageData.Seats.ToString();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-TransactionKey", "GTM_Transaction('" + id + "','" + fare + "','" + mgm + "','" + cost + "','" + tax + "','" + route + "','" + date + "','" + seats + "');", true);
+        }
+
+        protected void RedirectToConfirm()
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "window.location.assign('/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "')", true);
         }
     }
 }
