@@ -50,17 +50,13 @@ namespace MVP.Profile.Services
             {
                 var user = model.Users.FirstOrDefault(u => u.Id == userid);
 
-                int referrals = model.Users.Where(u => u.ReferredBy.Id == user.Id).Count();
-                if (user.ReferredBy == user)
+                int referrals = model.Users.Where(u => (u.Id != user.Id) && (u.ReferredBy.Id == user.Id)).Count();
+                if (user.ReferredBy != user && user.ReferredBy != null)
                 {
-                    referrals--;
+                    referrals++;
                 }
 
                 int uses = model.Booking.Where(b => b.UserId == user.Id && b.MGM && (b.Status == BookingStatus.BOOKED || b.Status == BookingStatus.COMPLETED)).Count();
-                if (user.ReferredBy != user && user.ReferredBy != null)
-                {
-                    uses--;
-                }
 
                 int mgms = referrals - uses;
                 if (mgms > 0)
