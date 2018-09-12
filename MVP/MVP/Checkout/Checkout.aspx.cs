@@ -72,8 +72,7 @@ namespace MVP.Checkout
                             {
                                 GA_Purchase();
                                 //redirects changed to client side so GTM can fire
-                                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "window.location.assign('/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "')", true);
-                                //Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                                RedirectToConfirm();
                             }
                             else
                             {
@@ -87,8 +86,7 @@ namespace MVP.Checkout
                             {
                                 GA_Purchase();
                                 //redirects changed to client side so GTM can fire
-                                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "window.location.assign('/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "')", true);
-                                //Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                                RedirectToConfirm();
                             }
                             else
                             {
@@ -325,8 +323,7 @@ namespace MVP.Checkout
             {
                 GA_Purchase();
                 //redirects changed to client side so GTM can fire
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "window.location.assign('/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "')", true);
-                //Response.Redirect("/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+                RedirectToConfirm();
             }
             else
             {
@@ -351,6 +348,11 @@ namespace MVP.Checkout
             string date = pageData.StartTime.ToString("F", ApplicationHelpers.DefaultCulture());
             string seats = pageData.Seats.ToString();
             ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-TransactionKey", "GTM_Transaction('" + id + "','" + fare + "','" + mgm + "','" + cost + "','" + tax + "','" + route + "','" + date + "','" + seats + "');", true);
+        }
+
+        protected void RedirectToConfirm()
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "window.location.assign('/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "')", true);
         }
     }
 }
