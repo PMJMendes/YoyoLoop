@@ -208,7 +208,7 @@ namespace MVP.Checkout
                 pageData = service.GetBooking(id, pageData);
                 if(pageData == null)
                 {
-                    // temp blank values to stop page from crashing - eventually not needed when redirect is uncommented
+                    // temp blank values to stop page from crashing during debugging
                     pageData = new CheckoutDTO
                     {
                         BookingId = Guid.Empty,

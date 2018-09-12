@@ -236,7 +236,7 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                if (model.Users.Any(u => u.MGMCode == code) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
+                if (model.Users.Any(u => u.MGMCode == code && u.Id != userid) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
                 {
                     return true;
                 }
@@ -373,7 +373,7 @@ namespace MVP.Services
             using (var model = new EntityModel())
             {
                 var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == state.UserId);
-                var referredby = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.MGMCode == state.Code);
+                var referredby = model.Users.FirstOrDefault(u => u.MGMCode == state.Code);
                 state.UserReferredById = referredby.Id;
                 user.ReferredBy = referredby;
                 model.SaveChanges();
