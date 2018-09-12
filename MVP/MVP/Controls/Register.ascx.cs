@@ -15,11 +15,13 @@ namespace MVP.Controls
 
         protected void CreateUser_Click(object sender, EventArgs e)
         {
+            string userid;
             IdentityResult result = service.CreateUser(Context.GetOwinContext(),
                     (code, id) => IdentityHelper.GetUserConfirmationRedirectUrl(code, id, Request),
-                    TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text);
+                    TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text, out userid);
             if (result.Succeeded)
             {
+                GA_Signup(userid, TbRegisterEmail.Text, TbRegisterName.Text);
                 ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '');},1);", true);
             }
             else
@@ -36,6 +38,11 @@ namespace MVP.Controls
         void IPostBackEventHandler.RaisePostBackEvent(string e)
         {
             OnSignIn(e);
+        }
+
+        protected void GA_Signup(string id, string email, string name)
+        {
+            ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
         }
     }
 }
