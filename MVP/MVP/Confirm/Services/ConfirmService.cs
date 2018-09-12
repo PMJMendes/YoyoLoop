@@ -37,8 +37,7 @@ namespace MVP.Services
                 StartAPLocation = "#",
                 EndRegionName = "End Region",
                 EndAPName = "End AP",
-                EndAPLocation = "#",
-                MGMCode = "#mypromocode"
+                EndAPLocation = "#"
             };
             return result;
         }
@@ -60,7 +59,7 @@ namespace MVP.Services
                 }
                 else
                 {
-                    var user = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(booking.UserId);
+                    var user = model.Users.FirstOrDefault(u => u.Id == booking.UserId);
                     var result = new ConfirmDTO
                     {
                         BookingId = booking.BookingId,
@@ -68,6 +67,7 @@ namespace MVP.Services
                         UserEmail = user.Email,
                         UserEmailConfirmed = user.EmailConfirmed,
                         UserContactName = user.ContactName,
+                        UserMGMCode = user.MGMCode,
                         Seats = booking.Seats,
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
@@ -79,8 +79,7 @@ namespace MVP.Services
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
                         EndAPName = booking.Trip.EndAccessPoint.Name,
                         EndAPLocation = booking.Trip.EndAccessPoint.GoogleLocation,
-                        InviteURL = "#",
-                        MGMCode = "#mypromocode"
+                        InviteURL = "#"
                     };
                     return result;
                 }

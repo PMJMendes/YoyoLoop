@@ -616,6 +616,7 @@
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Custom\blockUI-extension.js" />
+    <Content Include="Scripts\Custom\clipboard-copy.js" />
     <Content Include="Scripts\Custom\navbar-scroll.js" />
     <Content Include="Scripts\Custom\profile-menu-popover.js" />
     <Content Include="Scripts\Custom\show-message.js" />
@@ -1012,6 +1013,14 @@
     <Compile Include="Migrations\201808062341194_Booking-StripeChargeId.Designer.cs">
       <DependentUpon>201808062341194_Booking-StripeChargeId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809091815464_ApplicationUser-MemberGetMember.cs" />
+    <Compile Include="Migrations\201809091815464_ApplicationUser-MemberGetMember.Designer.cs">
+      <DependentUpon>201809091815464_ApplicationUser-MemberGetMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809100229339_Booking-MGM.cs" />
+    <Compile Include="Migrations\201809100229339_Booking-MGM.Designer.cs">
+      <DependentUpon>201809100229339_Booking-MGM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1332,6 +1341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808062341194_Booking-StripeChargeId.resx">
       <DependentUpon>201808062341194_Booking-StripeChargeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091815464_ApplicationUser-MemberGetMember.resx">
+      <DependentUpon>201809091815464_ApplicationUser-MemberGetMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809100229339_Booking-MGM.resx">
+      <DependentUpon>201809100229339_Booking-MGM.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -21,6 +21,9 @@ namespace MVP.Controls
         public List<PriceItem> PriceSummary { get; set; }
         public string Promocode { get; set; }
         public bool PromoValid { get; set; }
+        public bool MGM { get; set; }
+        public bool UserMGM { get; set; }
+        public decimal MGMPrice { get; set; }
 
         public DateTime StartTime { get; set; }
         public string StartRegionName { get; set; }

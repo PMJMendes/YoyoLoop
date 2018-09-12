@@ -118,7 +118,7 @@
                                         <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Promocode_tbPromo_Label%>"/></div>
                                         <asp:Placeholder runat="server" ID="phPromoError" Visible="false">
                                             <span class="input-group-text text-center checkout__promocode checkout__promocode--promocode-error">
-                                                <%= pageData.Promocode %>
+                                                <%= string.IsNullOrEmpty(pageData.Promocode) ? (string.IsNullOrEmpty(pageData.Code) ? string.Empty : pageData.Code) : pageData.Promocode %>
                                             </span>
                                             <span class="input-group-text checkout__promocode checkout__promocode--promocode-clean">
                                                 <asp:ImageButton runat="server" ID="ibPromoError" OnClick="ClearPromo_Click" src="/img/closebtn.png"
@@ -129,7 +129,7 @@
                                         </asp:Placeholder>
                                         <asp:Placeholder runat="server" ID="phPromoCheck" Visible="false">
                                             <span class="input-group-text text-center checkout__promocode checkout__promocode--promocode-approved">
-                                                <%= pageData.Promocode %>
+                                                <%= string.IsNullOrEmpty(pageData.Promocode) ? (string.IsNullOrEmpty(pageData.Code) ? string.Empty : pageData.Code) : pageData.Promocode %>
                                             </span>
                                             <span class="input-group-text checkout__promocode checkout__promocode--promocode-clean">
                                                 <asp:ImageButton runat="server" ID="ibPromoCheck" OnClick="ClearPromo_Click" src="/img/closebtn.png"

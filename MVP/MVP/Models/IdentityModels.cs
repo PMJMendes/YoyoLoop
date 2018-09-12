@@ -27,6 +27,9 @@ namespace MVP.Models
         public string BillingZIP { get; set; }
         public string BillingCity { get; set; }
 
+        public ApplicationUser ReferredBy { get; set; }
+        public string MGMCode { get; set; }
+
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

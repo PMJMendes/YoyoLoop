@@ -115,7 +115,7 @@ namespace MVP.Controls
                 }
                 else
                 {
-                    if (!PanelData.PromoValid)
+                    if (!PanelData.PromoValid && !PanelData.MGM)
                     {
                         phPromoCheck.Visible = false;
                         phPromoError.Visible = true;

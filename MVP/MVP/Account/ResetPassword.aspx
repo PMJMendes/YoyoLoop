@@ -26,7 +26,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    <asp:TextBox runat="server" id="ConfirmPassword" TextMode="Password" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="<%$ Resources:LocalizedText, Account_ResetPassword_tbConfirmPassword_placeholder%>" />
+                                    <asp:TextBox runat="server" id="ConfirmPassword" TextMode="Password" OnPaste="return false" CssClass="form-control login__input" aria-describedby="emailHelp" placeholder="<%$ Resources:LocalizedText, Account_ResetPassword_tbConfirmPassword_placeholder%>" />
                                     <asp:RequiredFieldValidator runat="server" ValidationGroup="Reset" ControlToValidate="ConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Account_ResetPassword_tbConfirmPassword_Validator_ErrorMessage%>" />
                                     <asp:CompareValidator runat="server" ValidationGroup="Reset" ControlToCompare="Password" ControlToValidate="ConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Account_ResetPassword_tbConfirmPassword_CompareValidator_ErrorMessage%>" />
                                 </div>

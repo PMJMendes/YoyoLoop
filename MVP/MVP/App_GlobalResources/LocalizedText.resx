@@ -2511,4 +2511,19 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
   </data>
+  <data name="General_MGMPromo" xml:space="preserve">
+    <value>MemberGetMember</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage1" xml:space="preserve">
+    <value>Usa o código</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage2" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
+    <value>e viaja a 1€.</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
+    <value>Para receberes o teu código promocional só tens que marcar a tua primeira viagem!</value>
+  </data>
 </root>

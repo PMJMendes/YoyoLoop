@@ -68,7 +68,7 @@
                                 <asp:TextBox runat="server" ID="txtChangeEmail" TextMode="Email" AutoPostBack="false" class="profile__input profile__input--email" Tabindex="1" />
                                 <div class="profile__input--validator"><asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="txtChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage%>" /></div>
                                 <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label%>"/></div>
-                                <asp:TextBox runat="server" ID="txtConfirmChangeEmail" TextMode="Email" AutoPostBack="false" class="profile__input profile__input--email" Tabindex="1" />
+                                <asp:TextBox runat="server" ID="txtConfirmChangeEmail" TextMode="Email" OnPaste="return false" AutoPostBack="false" class="profile__input profile__input--email" Tabindex="1" />
                                 <div class="profile__input--validator">
                                     <asp:RequiredFieldValidator runat="server" ValidationGroup="ChangeEmail" ControlToValidate="txtConfirmChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage%>" />
                                     <asp:CompareValidator runat="server" ValidationGroup="ChangeEmail" ControlToCompare="txtChangeEmail" ControlToValidate="txtConfirmChangeEmail" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage%>" />
@@ -91,7 +91,7 @@
                             </div>
                             <div class="row ml-0">
                                 <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label%>"/></div>
-                                <asp:TextBox runat="server" id="tbChangePasswordConfirmPassword" TextMode="Password" AutoPostBack="false" CssClass="profile__input profile__input--password" placeholder="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder%>" Tabindex="2" />
+                                <asp:TextBox runat="server" id="tbChangePasswordConfirmPassword" TextMode="Password" OnPaste="return false" AutoPostBack="false" CssClass="profile__input profile__input--password" placeholder="<%$ Resources:LocalizedText, Profile_PersonalDetails_ChangePassword_tbCurrentPassword_placeholder%>" Tabindex="2" />
                             </div>
                         </div>
                         <div class="profile__input--validator">

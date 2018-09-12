@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using MVP.Models.Helpers;
+using MVP.Profile.Services;
 
 namespace MVP.Calendar
 {
@@ -36,6 +37,7 @@ namespace MVP.Calendar
         }
 
         private readonly CalendarService service = new CalendarService();
+        private readonly InviteService inviteService = new InviteService();
 
         CalendarDTO pageData;
         public PageState localData;
@@ -53,9 +55,19 @@ namespace MVP.Calendar
 
         protected void UserSignIn(object sender, EventArgs e)
         {
-            if (User?.Identity.IsAuthenticated == true && localData.AnonymousBookingHandler)
+            if (User?.Identity.IsAuthenticated == true)
             {
-                CreateBooking();
+                pageData.UserId = User.Identity.GetUserId();
+                pageData.UserMGM = inviteService.GetUserMGM(pageData.UserId) > 0 ? true : false;
+                if(BookingPanel.Visible)
+                {
+                    UpdateBookingPanel("promo");
+                }
+
+                if(localData.AnonymousBookingHandler)
+                {
+                    CreateBooking();
+                }
             }
         }
 
@@ -280,7 +292,8 @@ namespace MVP.Calendar
 
             if (pageData == null)
             {
-                pageData = service.GetInitialData();
+                string userid = string.Empty;
+                pageData = service.GetInitialData(User?.Identity.IsAuthenticated == true ? User.Identity.GetUserId() : string.Empty);
                 Session["calendar.data"] = pageData;
             }
 
@@ -358,7 +371,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Promocode != localData.Values.Promocode) // New promocode
                 {
                     pageData.Selection.Promocode = localData.Values.Promocode;
-                    pageData.Selection.FareType = service.CheckPromo(pageData);
+                    pageData = service.CheckPromo(pageData);
                     bookupdate = "promo";
                 }
             }
@@ -405,7 +418,7 @@ namespace MVP.Calendar
             }
             else
             {
-                Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()));
+                Response.Redirect("/Checkout/Checkout?Id=" + Guid.Parse(booking.BookingId.ToString()) + (string.IsNullOrEmpty(pageData.Selection.Promocode) ? string.Empty : "&Code=" + pageData.Selection.Promocode));
             }
         }
 
@@ -470,6 +483,8 @@ namespace MVP.Calendar
         {
             var query = Request.QueryString;
 
+            // THIS CODE IS IN SERIOUS NEED OF REFACTORING
+
             if (!string.IsNullOrEmpty(query["Dest"]))
             {
                 Guid? dest = pageData.Routes.Where(r => r.EndRegion.Name == query["Dest"]).Select(er => er.EndRegion).FirstOrDefault()?.LoopedRegionId;
@@ -482,12 +497,21 @@ namespace MVP.Calendar
                     localData.Values.EndRegion = endregion;
                     DdlEndRegion.SelectedText = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).Select(er => er.EndRegion).FirstOrDefault()?.Name;
 
-                    localData.Values.EndAP = endap;
-                    DdlEndAP.DataSource = DdlEndAP_GetData();
+                    var endap_data = DdlEndAP_GetData();
+                    DdlEndAP.DataSource = endap_data;
                     DdlEndAP.ListDataBind();
-                    DdlEndAP.SelectedText = pageData.Routes.Where(r => r.EndRegion.LoopedRegionId == dest).FirstOrDefault()?.EndRegion?.AccessPoints?
-                                                           .Where(ap => ap.Default)
-                                                           .Select(ap => ap.Name).FirstOrDefault();
+
+                    if (!string.IsNullOrEmpty(query["Dap"]))
+                    {
+                        var dap = endap_data.Where(ap => ap.Text == query["Dap"]).FirstOrDefault()?.Value;
+                        if(!string.IsNullOrEmpty(dap))
+                        {
+                            endap = dap;
+                        }
+                    }
+
+                    localData.Values.EndAP = endap;
+                    DdlEndAP.SelectedText = endap_data.Where(ap => ap.Value == endap).FirstOrDefault().Text;
 
                     DdlStartRegion.DataSource = DdlStartRegion_GetData();
                     DdlStartRegion.ListDataBind();
@@ -515,15 +539,25 @@ namespace MVP.Calendar
                         localData.Values.StartRegion = startregion;
                         DdlStartRegion.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).Select(er => er.StartRegion).FirstOrDefault()?.Name;
 
-                        localData.Values.StartAP = startap;
-                        DdlStartAP.DataSource = DdlStartAP_GetData();
+                        var startap_data = DdlStartAP_GetData();
+                        DdlStartAP.DataSource = startap_data;
                         DdlStartAP.ListDataBind();
-                        DdlStartAP.SelectedText = pageData.Routes.Where(r => r.StartRegion.LoopedRegionId == origin).FirstOrDefault()?.StartRegion?.AccessPoints?
-                                                               .Where(ap => ap.Default)
-                                                               .Select(ap => ap.Name).FirstOrDefault();
-                        CheckParams();
+
+                        if (!string.IsNullOrEmpty(query["Sap"]))
+                        {
+                            var sap = startap_data.Where(ap => ap.Text == query["Sap"]).FirstOrDefault()?.Value;
+                            if (!string.IsNullOrEmpty(sap))
+                            {
+                                startap = sap;
+                            }
+                        }
+
+                        localData.Values.StartAP = startap;
+                        DdlStartAP.SelectedText = startap_data.Where(ap => ap.Value == startap).FirstOrDefault().Text;
                     }
                 }
+
+                CheckParams();
             }
         }
 

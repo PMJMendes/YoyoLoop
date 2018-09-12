@@ -17,6 +17,7 @@ namespace MVP.Models.Entities
         public int Seats { get; set; }
         public Fare.FareType FareType { get; set; }
         public Promocode Promocode { get; set; }
+        public bool MGM { get; set; }
         public Decimal Cost { get; set; }
 
         public string StripeChargeId { get; set; }
