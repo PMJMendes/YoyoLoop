@@ -93,8 +93,78 @@ public class AccessPoints implements TalendJob {
 
 		public void synchronizeContext(){
 			
+			if(Database != null){
+				
+					this.setProperty("Database", Database.toString());
+				
+			}
+			
+			if(ExcelPath != null){
+				
+					this.setProperty("ExcelPath", ExcelPath.toString());
+				
+			}
+			
+			if(Login != null){
+				
+					this.setProperty("Login", Login.toString());
+				
+			}
+			
+			if(Password != null){
+				
+					this.setProperty("Password", Password.toString());
+				
+			}
+			
+			if(Port != null){
+				
+					this.setProperty("Port", Port.toString());
+				
+			}
+			
+			if(Schema != null){
+				
+					this.setProperty("Schema", Schema.toString());
+				
+			}
+			
+			if(Server != null){
+				
+					this.setProperty("Server", Server.toString());
+				
+			}
+			
 		}
 
+public String Database;
+public String getDatabase(){
+	return this.Database;
+}
+public String ExcelPath;
+public String getExcelPath(){
+	return this.ExcelPath;
+}
+public String Login;
+public String getLogin(){
+	return this.Login;
+}
+public java.lang.String Password;
+public java.lang.String getPassword(){
+	return this.Password;
+}
+public String Port;
+public String getPort(){
+	return this.Port;
+}
+public String Schema;
+public String getSchema(){
+	return this.Schema;
+}
+public String Server;
+public String getServer(){
+	return this.Server;
+}
 	}
 	private ContextProperties context = new ContextProperties();
 	public ContextProperties getContext() {
@@ -435,13 +505,13 @@ public void tPostgresqlConnection_1Process(final java.util.Map<String, Object> g
 
 
 	
-		String url_tPostgresqlConnection_1 = "jdbc:postgresql://"+"localhost"+":"+"5432"+"/"+"yolo-mvp"; 
+		String url_tPostgresqlConnection_1 = "jdbc:postgresql://"+context.Server+":"+context.Port+"/"+context.Database; 
 
-	String dbUser_tPostgresqlConnection_1 = "postgres";
+	String dbUser_tPostgresqlConnection_1 = context.Login;
 	
 	
-		 
-	final String decryptedPassword_tPostgresqlConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("610243e4ca33e325f4f7aba1746784ea");
+		
+	final String decryptedPassword_tPostgresqlConnection_1 = context.Password; 
 		String dbPwd_tPostgresqlConnection_1 = decryptedPassword_tPostgresqlConnection_1;
 	
 
@@ -458,7 +528,7 @@ public void tPostgresqlConnection_1Process(final java.util.Map<String, Object> g
 			conn_tPostgresqlConnection_1.setAutoCommit(false);
 	}
 
-	globalMap.put("schema_" + "tPostgresqlConnection_1","public");
+	globalMap.put("schema_" + "tPostgresqlConnection_1",context.Schema);
 
 	globalMap.put("conn_" + "tPostgresqlConnection_1",conn_tPostgresqlConnection_1);
 
@@ -2771,7 +2841,7 @@ out1Struct out1_tmp = new out1Struct();
 			}
 		RegexUtil_tFileInputExcel_1 regexUtil_tFileInputExcel_1 = new RegexUtil_tFileInputExcel_1();
 
-		Object source_tFileInputExcel_1 = "C:/Local/LocalDev/Yoyo Loop/ETL/yetl.xlsx";
+		Object source_tFileInputExcel_1 = context.ExcelPath;
 		org.apache.poi.xssf.usermodel.XSSFWorkbook workbook_tFileInputExcel_1 = null;
 
 		if(source_tFileInputExcel_1 instanceof String){
@@ -5583,6 +5653,26 @@ end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
             if(!context_param.isEmpty()) {
                 context.putAll(context_param);
             }
+                context.Database=(String) context.getProperty("Database");
+                context.ExcelPath=(String) context.getProperty("ExcelPath");
+                context.Login=(String) context.getProperty("Login");
+            		String pwd_Password_value = context.getProperty("Password");
+            		context.Password = null;
+            		if(pwd_Password_value!=null) {
+            			if(context_param.containsKey("Password")) {//no need to decrypt if it come from program argument or parent job runtime
+            				context.Password = pwd_Password_value;
+            			} else if (!pwd_Password_value.isEmpty()) {
+            				try {
+            					context.Password = routines.system.PasswordEncryptUtil.decryptPassword(pwd_Password_value);
+            					context.put("Password",context.Password);
+            				} catch (java.lang.RuntimeException e) {
+            					//do nothing
+            				}
+            			}
+            		}
+                context.Port=(String) context.getProperty("Port");
+                context.Schema=(String) context.getProperty("Schema");
+                context.Server=(String) context.getProperty("Server");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -5590,7 +5680,21 @@ end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
 
 
         // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {
+        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("Database")) {
+                context.Database = (String) parentContextMap.get("Database");
+            }if (parentContextMap.containsKey("ExcelPath")) {
+                context.ExcelPath = (String) parentContextMap.get("ExcelPath");
+            }if (parentContextMap.containsKey("Login")) {
+                context.Login = (String) parentContextMap.get("Login");
+            }if (parentContextMap.containsKey("Password")) {
+                context.Password = (java.lang.String) parentContextMap.get("Password");
+            }if (parentContextMap.containsKey("Port")) {
+                context.Port = (String) parentContextMap.get("Port");
+            }if (parentContextMap.containsKey("Schema")) {
+                context.Schema = (String) parentContextMap.get("Schema");
+            }if (parentContextMap.containsKey("Server")) {
+                context.Server = (String) parentContextMap.get("Server");
+            }
         }
 
         //Resume: init the resumeUtil
@@ -5599,6 +5703,7 @@ end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
         resumeUtil.initCommonInfo(pid, rootPid, fatherPid, projectName, jobName, contextStr, jobVersion);
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
+			parametersToEncrypt.add("Password");
         //Resume: jobStart
         resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","","","",resumeUtil.convertToJsonText(context,parametersToEncrypt));
 
@@ -5813,6 +5918,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     140825 characters generated by Talend Open Studio for Data Integration 
- *     on the 13 de Setembro de 2018 0:13:00 BST
+ *     144221 characters generated by Talend Open Studio for Data Integration 
+ *     on the 13 de Setembro de 2018 23:31:39 BST
  ************************************************************************************************/

@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_HM-pcLN_Eei8z7zJyqB1eQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_HM-pcbN_Eei8z7zJyqB1eQ" bindingContexts="_HM-pd7N_Eei8z7zJyqB1eQ">
   <tags>activeSchemeId:org.talend.core.scheme</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_HM-pcbN_Eei8z7zJyqB1eQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_JO4207N_Eei8z7zJyqB1eQ" label="%trimmedwindow.label.eclipseSDK" x="747" y="208" width="1000" height="750">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_HM-pcbN_Eei8z7zJyqB1eQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_JO4207N_Eei8z7zJyqB1eQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1000" height="750">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
@@ -27,10 +27,11 @@
           <tags>persp.actionSet:org.talend.repository.localprovider.actionSet</tags>
           <tags>persp.actionSet:org.talend.repository.demoprojcet.actionSet</tags>
           <tags>persp.actionSet:org.talend.repository.CreateactionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_JSHxAbN_Eei8z7zJyqB1eQ" selectedElement="_JSHxCLN_Eei8z7zJyqB1eQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_JSHxAbN_Eei8z7zJyqB1eQ" selectedElement="_JSHxArN_Eei8z7zJyqB1eQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_JSHxArN_Eei8z7zJyqB1eQ" containerData="2057" selectedElement="_JSHxA7N_Eei8z7zJyqB1eQ">
               <children xsi:type="basic:PartStack" xmi:id="_JSHxA7N_Eei8z7zJyqB1eQ" elementId="navigatorLayout" containerData="6000" selectedElement="_JSHxBLN_Eei8z7zJyqB1eQ">
                 <tags>newtablook</tags>
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_JSHxBLN_Eei8z7zJyqB1eQ" elementId="org.talend.repository.cnf.view" ref="_JR-ARLN_Eei8z7zJyqB1eQ"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_JSHxBbN_Eei8z7zJyqB1eQ" elementId="outlineCodeLayout" containerData="4000" selectedElement="_JSHxBrN_Eei8z7zJyqB1eQ">
@@ -44,7 +45,6 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_JSHxCrN_Eei8z7zJyqB1eQ" elementId="org.eclipse.ui.editorss" containerData="5689" ref="_JR-AALN_Eei8z7zJyqB1eQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_JSHxC7N_Eei8z7zJyqB1eQ" elementId="bottomLayout" containerData="4311" selectedElement="_JSHxD7N_Eei8z7zJyqB1eQ">
                   <tags>newtablook</tags>
-                  <tags>active</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_JSHxDLN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" ref="_JR-ASLN_Eei8z7zJyqB1eQ"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_JSHxDbN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.ContextsView" ref="_JR-ASbN_Eei8z7zJyqB1eQ"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_JSHxDrN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.properties.ComponentSettingsView" ref="_JR-ASrN_Eei8z7zJyqB1eQ"/>
@@ -95,6 +95,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_JTdNwLN_Eei8z7zJyqB1eQ" elementId="org.talend.repository.cnf.view">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -131,7 +133,7 @@
       </menus>
       <toolbar xmi:id="_JXxGAbN_Eei8z7zJyqB1eQ" elementId="org.eclipse.gef.ui.palette_view"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_JR-ASLN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Job(A_Batch 0.1)" iconURI="platform:/plugin/org.talend.common.ui.runtime/icons1/process_icon.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_JR-ASLN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Contexts(Dev 0.1)" iconURI="platform:/plugin/org.talend.common.ui.runtime/icons1/process_icon.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
@@ -149,7 +151,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_Edv7sbOCEei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.ContextsView"/>
+      <toolbar xmi:id="_Edv7sbOCEei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.ContextsView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_JR-ASrN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.properties.ComponentSettingsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Component" iconURI="platform:/plugin/org.talend.designer.core/icons/palette_view.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
@@ -165,8 +167,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_EeC2oLOCEei8z7zJyqB1eQ" elementId="org.talend.designer.runprocess.ui.views.processview">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>

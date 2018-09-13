@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_2jIpwLeZEei9tc41O36oNw" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_2jIpwbeZEei9tc41O36oNw" comment="" name="Port" prompt="Port?" promptNeeded="true" type="id_String" value="5432"/>
+  <contextParameter xmi:id="_2jIpwreZEei9tc41O36oNw" comment="" name="Database" prompt="Database?" promptNeeded="true" type="id_String" value="yolo-mvp"/>
+  <contextParameter xmi:id="_2jIpw7eZEei9tc41O36oNw" comment="" name="Schema" prompt="Schema?" promptNeeded="true" type="id_String" value="public"/>
+  <contextParameter xmi:id="_2jIpxLeZEei9tc41O36oNw" comment="" name="Login" prompt="Login?" promptNeeded="true" type="id_String" value="postgres"/>
+  <contextParameter xmi:id="_2jIpxbeZEei9tc41O36oNw" comment="" name="Server" prompt="Server?" promptNeeded="true" type="id_String" value="localhost"/>
+  <contextParameter xmi:id="_2jIpxreZEei9tc41O36oNw" comment="" name="Password" prompt="Password?" promptNeeded="true" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+</talendfile:ContextType>

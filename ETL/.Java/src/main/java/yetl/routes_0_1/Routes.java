@@ -93,8 +93,78 @@ public class Routes implements TalendJob {
 
 		public void synchronizeContext(){
 			
+			if(Database != null){
+				
+					this.setProperty("Database", Database.toString());
+				
+			}
+			
+			if(ExcelPath != null){
+				
+					this.setProperty("ExcelPath", ExcelPath.toString());
+				
+			}
+			
+			if(Login != null){
+				
+					this.setProperty("Login", Login.toString());
+				
+			}
+			
+			if(Password != null){
+				
+					this.setProperty("Password", Password.toString());
+				
+			}
+			
+			if(Port != null){
+				
+					this.setProperty("Port", Port.toString());
+				
+			}
+			
+			if(Schema != null){
+				
+					this.setProperty("Schema", Schema.toString());
+				
+			}
+			
+			if(Server != null){
+				
+					this.setProperty("Server", Server.toString());
+				
+			}
+			
 		}
 
+public String Database;
+public String getDatabase(){
+	return this.Database;
+}
+public String ExcelPath;
+public String getExcelPath(){
+	return this.ExcelPath;
+}
+public String Login;
+public String getLogin(){
+	return this.Login;
+}
+public java.lang.String Password;
+public java.lang.String getPassword(){
+	return this.Password;
+}
+public String Port;
+public String getPort(){
+	return this.Port;
+}
+public String Schema;
+public String getSchema(){
+	return this.Schema;
+}
+public String Server;
+public String getServer(){
+	return this.Server;
+}
 	}
 	private ContextProperties context = new ContextProperties();
 	public ContextProperties getContext() {
@@ -348,15 +418,6 @@ private class TalendException extends Exception {
 					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tPostgresqlConnection_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tPostgresqlConnection_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostgresqlInput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -373,6 +434,15 @@ private class TalendException extends Exception {
 				status = "failure";
 				
 					tPostgresqlInput_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tPostgresqlConnection_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tPostgresqlConnection_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tAdvancedHash_row6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -427,12 +497,12 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tPostgresqlConnection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tPostgresqlInput_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tPostgresqlInput_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tPostgresqlConnection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2878,7 +2948,7 @@ out1Struct out1_tmp = new out1Struct();
 			}
 		RegexUtil_tFileInputExcel_1 regexUtil_tFileInputExcel_1 = new RegexUtil_tFileInputExcel_1();
 
-		Object source_tFileInputExcel_1 = "C:/Local/LocalDev/Yoyo Loop/ETL/yetl.xlsx";
+		Object source_tFileInputExcel_1 = context.ExcelPath;
 		org.apache.poi.xssf.usermodel.XSSFWorkbook workbook_tFileInputExcel_1 = null;
 
 		if(source_tFileInputExcel_1 instanceof String){
@@ -4182,7 +4252,7 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 			}
 		RegexUtil_tFileInputExcel_2 regexUtil_tFileInputExcel_2 = new RegexUtil_tFileInputExcel_2();
 
-		Object source_tFileInputExcel_2 = "C:/Local/LocalDev/Yoyo Loop/ETL/yetl.xlsx";
+		Object source_tFileInputExcel_2 = context.ExcelPath;
 		org.apache.poi.xssf.usermodel.XSSFWorkbook workbook_tFileInputExcel_2 = null;
 
 		if(source_tFileInputExcel_2 instanceof String){
@@ -7753,200 +7823,6 @@ end_Hash.put("tAdvancedHash_row9", System.currentTimeMillis());
 	}
 	
 
-public void tPostgresqlConnection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tPostgresqlConnection_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-
-			String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
-			if( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tPostgresqlConnection_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tPostgresqlConnection_1", false);
-		start_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tPostgresqlConnection_1";
-
-	
-		int tos_count_tPostgresqlConnection_1 = 0;
-		
-    	class BytesLimit65535_tPostgresqlConnection_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tPostgresqlConnection_1().limitLog4jByte();
-
-
-	
-		String url_tPostgresqlConnection_1 = "jdbc:postgresql://"+"localhost"+":"+"5432"+"/"+"yolo-mvp"; 
-
-	String dbUser_tPostgresqlConnection_1 = "postgres";
-	
-	
-		 
-	final String decryptedPassword_tPostgresqlConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("610243e4ca33e325f4f7aba1746784ea");
-		String dbPwd_tPostgresqlConnection_1 = decryptedPassword_tPostgresqlConnection_1;
-	
-
-	java.sql.Connection conn_tPostgresqlConnection_1 = null;
-	
-					String driverClass_tPostgresqlConnection_1 = "org.postgresql.Driver";
-			java.lang.Class.forName(driverClass_tPostgresqlConnection_1);
-		
-		conn_tPostgresqlConnection_1 = java.sql.DriverManager.getConnection(url_tPostgresqlConnection_1,dbUser_tPostgresqlConnection_1,dbPwd_tPostgresqlConnection_1);
-
-		globalMap.put("conn_tPostgresqlConnection_1", conn_tPostgresqlConnection_1);
-	if (null != conn_tPostgresqlConnection_1) {
-		
-			conn_tPostgresqlConnection_1.setAutoCommit(false);
-	}
-
-	globalMap.put("schema_" + "tPostgresqlConnection_1","public");
-
-	globalMap.put("conn_" + "tPostgresqlConnection_1",conn_tPostgresqlConnection_1);
-
- 
-
-
-
-/**
- * [tPostgresqlConnection_1 begin ] stop
- */
-	
-	/**
-	 * [tPostgresqlConnection_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlConnection_1";
-
-	
-
- 
-
-
-	tos_count_tPostgresqlConnection_1++;
-
-/**
- * [tPostgresqlConnection_1 main ] stop
- */
-	
-	/**
-	 * [tPostgresqlConnection_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlConnection_1";
-
-	
-
- 
-
-ok_Hash.put("tPostgresqlConnection_1", true);
-end_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tPostgresqlConnection_1 end ] stop
- */
-				}//end the resume
-
-				
-				    			if(resumeEntryMethodName == null || globalResumeTicket){
-				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tPostgresqlConnection_1:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
-								}	    				    			
-					    	
-								if(execStat){    	
-									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
-								} 
-							
-							tPostgresqlInput_3Process(globalMap); 
-						
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tPostgresqlConnection_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlConnection_1";
-
-	
-
- 
-
-
-
-/**
- * [tPostgresqlConnection_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tPostgresqlConnection_1_SUBPROCESS_STATE", 1);
-	}
-	
-
 
 public static class row8Struct implements routines.system.IPersistableRow<row8Struct> {
     final static byte[] commonByteArrayLock_YETL_Routes = new byte[0];
@@ -8555,6 +8431,200 @@ end_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
 		globalMap.put("tPostgresqlInput_3_SUBPROCESS_STATE", 1);
 	}
 	
+
+public void tPostgresqlConnection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tPostgresqlConnection_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+
+			String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+			boolean resumeIt = currentMethodName.equals(resumeEntryMethodName);
+			if( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tPostgresqlConnection_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tPostgresqlConnection_1", false);
+		start_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tPostgresqlConnection_1";
+
+	
+		int tos_count_tPostgresqlConnection_1 = 0;
+		
+    	class BytesLimit65535_tPostgresqlConnection_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tPostgresqlConnection_1().limitLog4jByte();
+
+
+	
+		String url_tPostgresqlConnection_1 = "jdbc:postgresql://"+context.Server+":"+context.Port+"/"+context.Database; 
+
+	String dbUser_tPostgresqlConnection_1 = context.Login;
+	
+	
+		
+	final String decryptedPassword_tPostgresqlConnection_1 = context.Password; 
+		String dbPwd_tPostgresqlConnection_1 = decryptedPassword_tPostgresqlConnection_1;
+	
+
+	java.sql.Connection conn_tPostgresqlConnection_1 = null;
+	
+					String driverClass_tPostgresqlConnection_1 = "org.postgresql.Driver";
+			java.lang.Class.forName(driverClass_tPostgresqlConnection_1);
+		
+		conn_tPostgresqlConnection_1 = java.sql.DriverManager.getConnection(url_tPostgresqlConnection_1,dbUser_tPostgresqlConnection_1,dbPwd_tPostgresqlConnection_1);
+
+		globalMap.put("conn_tPostgresqlConnection_1", conn_tPostgresqlConnection_1);
+	if (null != conn_tPostgresqlConnection_1) {
+		
+			conn_tPostgresqlConnection_1.setAutoCommit(false);
+	}
+
+	globalMap.put("schema_" + "tPostgresqlConnection_1",context.Schema);
+
+	globalMap.put("conn_" + "tPostgresqlConnection_1",conn_tPostgresqlConnection_1);
+
+ 
+
+
+
+/**
+ * [tPostgresqlConnection_1 begin ] stop
+ */
+	
+	/**
+	 * [tPostgresqlConnection_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlConnection_1";
+
+	
+
+ 
+
+
+	tos_count_tPostgresqlConnection_1++;
+
+/**
+ * [tPostgresqlConnection_1 main ] stop
+ */
+	
+	/**
+	 * [tPostgresqlConnection_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlConnection_1";
+
+	
+
+ 
+
+ok_Hash.put("tPostgresqlConnection_1", true);
+end_Hash.put("tPostgresqlConnection_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tPostgresqlConnection_1 end ] stop
+ */
+				}//end the resume
+
+				
+				    			if(resumeEntryMethodName == null || globalResumeTicket){
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tPostgresqlConnection_1:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+								}	    				    			
+					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+								} 
+							
+							tPostgresqlInput_3Process(globalMap); 
+						
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tPostgresqlConnection_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPostgresqlConnection_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tPostgresqlConnection_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tPostgresqlConnection_1_SUBPROCESS_STATE", 1);
+	}
+	
     public String resuming_logs_dir_path = null;
     public String resuming_checkpoint_path = null;
     public String parent_part_launcher = null;
@@ -8683,6 +8753,26 @@ end_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
             if(!context_param.isEmpty()) {
                 context.putAll(context_param);
             }
+                context.Database=(String) context.getProperty("Database");
+                context.ExcelPath=(String) context.getProperty("ExcelPath");
+                context.Login=(String) context.getProperty("Login");
+            		String pwd_Password_value = context.getProperty("Password");
+            		context.Password = null;
+            		if(pwd_Password_value!=null) {
+            			if(context_param.containsKey("Password")) {//no need to decrypt if it come from program argument or parent job runtime
+            				context.Password = pwd_Password_value;
+            			} else if (!pwd_Password_value.isEmpty()) {
+            				try {
+            					context.Password = routines.system.PasswordEncryptUtil.decryptPassword(pwd_Password_value);
+            					context.put("Password",context.Password);
+            				} catch (java.lang.RuntimeException e) {
+            					//do nothing
+            				}
+            			}
+            		}
+                context.Port=(String) context.getProperty("Port");
+                context.Schema=(String) context.getProperty("Schema");
+                context.Server=(String) context.getProperty("Server");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -8690,7 +8780,21 @@ end_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
 
 
         // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {
+        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("Database")) {
+                context.Database = (String) parentContextMap.get("Database");
+            }if (parentContextMap.containsKey("ExcelPath")) {
+                context.ExcelPath = (String) parentContextMap.get("ExcelPath");
+            }if (parentContextMap.containsKey("Login")) {
+                context.Login = (String) parentContextMap.get("Login");
+            }if (parentContextMap.containsKey("Password")) {
+                context.Password = (java.lang.String) parentContextMap.get("Password");
+            }if (parentContextMap.containsKey("Port")) {
+                context.Port = (String) parentContextMap.get("Port");
+            }if (parentContextMap.containsKey("Schema")) {
+                context.Schema = (String) parentContextMap.get("Schema");
+            }if (parentContextMap.containsKey("Server")) {
+                context.Server = (String) parentContextMap.get("Server");
+            }
         }
 
         //Resume: init the resumeUtil
@@ -8699,6 +8803,7 @@ end_Hash.put("tPostgresqlOutput_1", System.currentTimeMillis());
         resumeUtil.initCommonInfo(pid, rootPid, fatherPid, projectName, jobName, contextStr, jobVersion);
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
+			parametersToEncrypt.add("Password");
         //Resume: jobStart
         resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","","","",resumeUtil.convertToJsonText(context,parametersToEncrypt));
 
@@ -8913,6 +9018,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     208182 characters generated by Talend Open Studio for Data Integration 
- *     on the 13 de Setembro de 2018 0:13:00 BST
+ *     211552 characters generated by Talend Open Studio for Data Integration 
+ *     on the 13 de Setembro de 2018 23:31:40 BST
  ************************************************************************************************/

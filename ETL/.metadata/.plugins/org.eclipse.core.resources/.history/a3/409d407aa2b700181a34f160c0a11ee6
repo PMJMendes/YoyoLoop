@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_2jIpwLeZEei9tc41O36oNw" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_2jIpwbeZEei9tc41O36oNw" comment="" name="Dev_Port" prompt="Dev_Port?" promptNeeded="false" type="id_String" value="5432"/>
+  <contextParameter xmi:id="_2jIpwreZEei9tc41O36oNw" comment="" name="Dev_Database" prompt="Dev_Database?" promptNeeded="false" type="id_String" value="yolo-mvp"/>
+  <contextParameter xmi:id="_2jIpw7eZEei9tc41O36oNw" comment="" name="Dev_Schema" prompt="Dev_Schema?" promptNeeded="false" type="id_String" value="public"/>
+  <contextParameter xmi:id="_2jIpxLeZEei9tc41O36oNw" comment="" name="Dev_Login" prompt="Dev_Login?" promptNeeded="false" type="id_String" value="postgres"/>
+  <contextParameter xmi:id="_2jIpxbeZEei9tc41O36oNw" comment="" name="Dev_Server" prompt="Dev_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+  <contextParameter xmi:id="_2jIpxreZEei9tc41O36oNw" comment="" name="Dev_Password" prompt="Dev_Password?" promptNeeded="false" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+</talendfile:ContextType>
