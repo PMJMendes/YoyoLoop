@@ -1,4 +1,4 @@
-Palette.RecentlyUsed.ComponentsList=tRunJob\:1536516406618,tPostgresqlOutput\:1536516265249,tLogRow\:1536516085283,tReplicate\:1536516075444,tUnite\:1536516059891,tMap\:1536513590931,tSortRow\:1536512660959,tFilterRow\:1536511776729,tFileInputExcel\:1536510880726,tPostgresqlInput\:1536505082571,tAggregateRow\:1536504160019,tUniqRow\:1536503822558,tPostgresqlCommit\:1536429366019,tPostgresqlConnection\:1536427133480
+Palette.RecentlyUsed.ComponentsList=tRunJob\:1536793915037,tPostgresqlOutput\:1536793649556,tLogRow\:1536793543147,tMap\:1536792660884,tReplicate\:1536789497538,tPostgresqlInput\:1536788900447,tJavaRow\:1536755617978,tMemorizeRows\:1536754450631,tUnite\:1536516059891,tSortRow\:1536512660959,tFilterRow\:1536511776729,tFileInputExcel\:1536510880726,tAggregateRow\:1536504160019,tUniqRow\:1536503822558,tPostgresqlCommit\:1536429366019,tPostgresqlConnection\:1536427133480
 TalendEditorPaletteFactory.Size=125
 TalendEditorPaletteFactory.StateAS400=1
 TalendEditorPaletteFactory.StateAccess=1
@@ -12,6 +12,7 @@ TalendEditorPaletteFactory.StateCentricCRM=1
 TalendEditorPaletteFactory.StateCharts=1
 TalendEditorPaletteFactory.StateCombined\ SQL=1
 TalendEditorPaletteFactory.StateConnections=1
+TalendEditorPaletteFactory.StateCustom\ Code=0
 TalendEditorPaletteFactory.StateDB\ Generic=1
 TalendEditorPaletteFactory.StateDB\ JDBC=1
 TalendEditorPaletteFactory.StateDB\ SCD=1

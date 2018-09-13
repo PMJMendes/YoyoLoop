@@ -12,7 +12,7 @@
   <name>YETL A_Batch (Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
-    <talend.job.bat.classpath>.;../lib/routines.jar;../lib/log4j-1.2.16.jar;../lib/commons-collections-3.2.2.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/log4j-1.2.15.jar;../lib/dom4j-1.6.1.jar;../lib/poi-ooxml-schemas-3.11-20141221.jar;../lib/postgresql-9.4-1201.jdbc41.jar;../lib/advancedPersistentLookupLib-1.0.jar;../lib/jboss-serialization.jar;../lib/xmlbeans-2.6.0.jar;../lib/poi-ooxml-3.11-20141221_modified_talend.jar;../lib/trove.jar;../lib/poi-3.11-20141221_modified_talend.jar;../lib/poi-scratchpad-3.11-20141221.jar;a_batch_0_1.jar;loopedregions_0_1.jar;routes_0_1.jar;accesspoints_0_1.jar;</talend.job.bat.classpath>
+    <talend.job.bat.classpath>.;../lib/routines.jar;../lib/log4j-1.2.16.jar;../lib/commons-collections-3.2.2.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/log4j-1.2.15.jar;../lib/dom4j-1.6.1.jar;../lib/poi-ooxml-schemas-3.11-20141221.jar;../lib/postgresql-9.4-1201.jdbc41.jar;../lib/advancedPersistentLookupLib-1.0.jar;../lib/jboss-serialization.jar;../lib/xmlbeans-2.6.0.jar;../lib/poi-ooxml-3.11-20141221_modified_talend.jar;../lib/trove.jar;../lib/poi-3.11-20141221_modified_talend.jar;../lib/poi-scratchpad-3.11-20141221.jar;a_batch_0_1.jar;loopedregions_0_1.jar;routes_0_1.jar;fares_0_1.jar;accesspoints_0_1.jar;</talend.job.bat.classpath>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <talend.job.version>${project.version}</talend.job.version>
     <talend.job.sh.addition/>
@@ -25,13 +25,13 @@
     <talend.project.branch/>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-09-09 190754308</talend.job.date>
+    <talend.job.date>2018-09-13 001301220</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.a_batch_0_1</talend.job.package>
     <talend.job.class>${talend.job.package}.${talend.job.name}</talend.job.class>
     <talend.job.name>A_Batch</talend.job.name>
     <talend.job.bat.addition/>
-    <talend.job.sh.classpath>.:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/geronimo-stax-api_1.0_spec-1.0.1.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/poi-ooxml-schemas-3.11-20141221.jar:$ROOT_PATH/../lib/postgresql-9.4-1201.jdbc41.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.0.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/xmlbeans-2.6.0.jar:$ROOT_PATH/../lib/poi-ooxml-3.11-20141221_modified_talend.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/../lib/poi-3.11-20141221_modified_talend.jar:$ROOT_PATH/../lib/poi-scratchpad-3.11-20141221.jar:$ROOT_PATH/a_batch_0_1.jar:$ROOT_PATH/loopedregions_0_1.jar:$ROOT_PATH/routes_0_1.jar:$ROOT_PATH/accesspoints_0_1.jar:</talend.job.sh.classpath>
+    <talend.job.sh.classpath>.:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/geronimo-stax-api_1.0_spec-1.0.1.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/poi-ooxml-schemas-3.11-20141221.jar:$ROOT_PATH/../lib/postgresql-9.4-1201.jdbc41.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.0.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/xmlbeans-2.6.0.jar:$ROOT_PATH/../lib/poi-ooxml-3.11-20141221_modified_talend.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/../lib/poi-3.11-20141221_modified_talend.jar:$ROOT_PATH/../lib/poi-scratchpad-3.11-20141221.jar:$ROOT_PATH/a_batch_0_1.jar:$ROOT_PATH/loopedregions_0_1.jar:$ROOT_PATH/routes_0_1.jar:$ROOT_PATH/fares_0_1.jar:$ROOT_PATH/accesspoints_0_1.jar:</talend.job.sh.classpath>
     <talend.job.id>_Vns6sLOMEei8z7zJyqB1eQ</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.framework/>

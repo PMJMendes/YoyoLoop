@@ -1,2 +1,2 @@
-TOS_Jobs_Records={"YETL"\:{"projects"\:{"PROCESS"\:{"details"\:{"components"\:{"tAggregateRow"\:1,"tFileInputExcel"\:4,"tFilterRow"\:2,"tMap"\:6,"tPostgresqlCommit"\:3,"tPostgresqlConnection"\:3,"tPostgresqlInput"\:9,"tPostgresqlOutput"\:9,"tRunJob"\:3,"tUnite"\:1},"nb.components"\:41,"nb.contextVars"\:0},"nb"\:4}},"type"\:"local"}}
+TOS_Jobs_Records={"YETL"\:{"projects"\:{"PROCESS"\:{"details"\:{"components"\:{"tAggregateRow"\:2,"tFileInputExcel"\:5,"tFilterRow"\:3,"tJavaRow"\:1,"tMap"\:11,"tPostgresqlCommit"\:4,"tPostgresqlConnection"\:4,"tPostgresqlInput"\:17,"tPostgresqlOutput"\:14,"tReplicate"\:1,"tRunJob"\:4,"tUnite"\:1},"nb.components"\:67,"nb.contextVars"\:0},"nb"\:5}},"type"\:"local"}}
 eclipse.preferences.version=1

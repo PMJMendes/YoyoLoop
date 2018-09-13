@@ -285,15 +285,6 @@ private class TalendException extends Exception {
 					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tPostgresqlOutput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileInputExcel_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostgresqlOutput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -452,184 +443,6 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 
 
-
-public static class updatesStruct implements routines.system.IPersistableRow<updatesStruct> {
-    final static byte[] commonByteArrayLock_YETL_Routes = new byte[0];
-    static byte[] commonByteArray_YETL_Routes = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public Object RouteId;
-
-				public Object getRouteId () {
-					return this.RouteId;
-				}
-				
-			    public boolean Activo;
-
-				public boolean getActivo () {
-					return this.Activo;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.RouteId == null) ? 0 : this.RouteId.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final updatesStruct other = (updatesStruct) obj;
-		
-						if (this.RouteId == null) {
-							if (other.RouteId != null)
-								return false;
-						
-						} else if (!this.RouteId.equals(other.RouteId))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(updatesStruct other) {
-
-		other.RouteId = this.RouteId;
-	            other.Activo = this.Activo;
-	            
-	}
-
-	public void copyKeysDataTo(updatesStruct other) {
-
-		other.RouteId = this.RouteId;
-	            	
-	}
-
-
-
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_YETL_Routes) {
-
-        	try {
-
-        		int length = 0;
-		
-						this.RouteId = (Object) dis.readObject();
-					
-			        this.Activo = dis.readBoolean();
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-			} catch(ClassNotFoundException eCNFE) {
-				 throw new RuntimeException(eCNFE);
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// Object
-				
-       			    	dos.writeObject(this.RouteId);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Activo);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("RouteId="+String.valueOf(RouteId));
-		sb.append(",Activo="+String.valueOf(Activo));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(updatesStruct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.RouteId, other.RouteId);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
 
 public static class createsStruct implements routines.system.IPersistableRow<createsStruct> {
     final static byte[] commonByteArrayLock_YETL_Routes = new byte[0];
@@ -2490,106 +2303,9 @@ row4Struct row4 = new row4Struct();
 
 			row5Struct row5 = new row5Struct();
 out2Struct out2 = new out2Struct();
-updatesStruct updates = new updatesStruct();
 createsStruct creates = new createsStruct();
 
 
-
-
-
-
-	
-	/**
-	 * [tPostgresqlOutput_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tPostgresqlOutput_2", false);
-		start_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("updates" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tPostgresqlOutput_2 = 0;
-		
-    	class BytesLimit65535_tPostgresqlOutput_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tPostgresqlOutput_2().limitLog4jByte();
-
-
-
-
-
-String dbschema_tPostgresqlOutput_2 = null;
-	dbschema_tPostgresqlOutput_2 = (String)globalMap.get("schema_" + "tPostgresqlConnection_1");
-	
-
-String tableName_tPostgresqlOutput_2 = null;
-if(dbschema_tPostgresqlOutput_2 == null || dbschema_tPostgresqlOutput_2.trim().length() == 0) {
-	tableName_tPostgresqlOutput_2 = "Routes";
-} else {
-	tableName_tPostgresqlOutput_2 = dbschema_tPostgresqlOutput_2 + "\".\"" + "Routes";
-}
-
-        int updateKeyCount_tPostgresqlOutput_2 = 1;
-        if(updateKeyCount_tPostgresqlOutput_2 < 1) {
-            throw new RuntimeException("For update, Schema must have a key");
-        }
-int nb_line_tPostgresqlOutput_2 = 0;
-int nb_line_update_tPostgresqlOutput_2 = 0;
-int nb_line_inserted_tPostgresqlOutput_2 = 0;
-int nb_line_deleted_tPostgresqlOutput_2 = 0;
-int nb_line_rejected_tPostgresqlOutput_2 = 0;
-
-int deletedCount_tPostgresqlOutput_2=0;
-int updatedCount_tPostgresqlOutput_2=0;
-int insertedCount_tPostgresqlOutput_2=0;
-int rejectedCount_tPostgresqlOutput_2=0;
-
-boolean whetherReject_tPostgresqlOutput_2 = false;
-
-java.sql.Connection conn_tPostgresqlOutput_2 = null;
-String dbUser_tPostgresqlOutput_2 = null;
-
-	conn_tPostgresqlOutput_2 = (java.sql.Connection)globalMap.get("conn_tPostgresqlConnection_1");
-	
-	
-	
-	
-
-
-   int batchSize_tPostgresqlOutput_2 = 10000;
-   int batchSizeCounter_tPostgresqlOutput_2=0;
-
-int count_tPostgresqlOutput_2=0;
-	    String update_tPostgresqlOutput_2 = "UPDATE \"" + tableName_tPostgresqlOutput_2 + "\" SET \"Active\" = ? WHERE \"RouteId\" = ?";
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(update_tPostgresqlOutput_2);
-	    
-
- 
-
-
-
-/**
- * [tPostgresqlOutput_2 begin ] stop
- */
 
 
 
@@ -2746,7 +2462,6 @@ Var__tMap_3__Struct Var__tMap_3 = new Var__tMap_3__Struct();
 
 // ###############################
 // # Outputs initialization
-updatesStruct updates_tmp = new updatesStruct();
 createsStruct creates_tmp = new createsStruct();
 // ###############################
 
@@ -2893,7 +2608,7 @@ out2Struct out2_tmp = new out2Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("out1" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -2902,7 +2617,7 @@ out2Struct out2_tmp = new out2Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("out1" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -3544,6 +3259,14 @@ if(out1 != null) {
 
 	
 
+			//row4
+			//out1
+
+
+			
+
+		
+
 			//out1
 			//out1
 
@@ -3552,14 +3275,6 @@ if(out1 != null) {
 				if(execStat){
 					runStat.updateStatOnConnection("out1"+iterateId,1, 1);
 				} 
-			
-
-		
-
-			//row4
-			//out1
-
-
 			
 
 		
@@ -4023,15 +3738,9 @@ Var__tMap_3__Struct Var = Var__tMap_3;// ###############################
         // ###############################
         // # Output tables
 
-updates = null;
 creates = null;
 
 if(!rejectedInnerJoin_tMap_3 ) {
-
-// # Output table : 'updates'
-updates_tmp.RouteId = row9.RouteId ;
-updates_tmp.Activo = true;
-updates = updates_tmp;
 } // closing inner join bracket (1)
 // ###### START REJECTS ##### 
 
@@ -4068,92 +3777,6 @@ rejectedInnerJoin_tMap_3 = false;
 /**
  * [tMap_3 main ] stop
  */
-// Start of branch "updates"
-if(updates != null) { 
-
-
-
-	
-	/**
-	 * [tPostgresqlOutput_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-
-			//updates
-			//updates
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("updates"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-
-        whetherReject_tPostgresqlOutput_2 = false;
-                    pstmt_tPostgresqlOutput_2.setBoolean(1, updates.Activo);
-
-                    if(updates.RouteId == null) {
-pstmt_tPostgresqlOutput_2.setNull(2 + count_tPostgresqlOutput_2, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_2.setObject(2 + count_tPostgresqlOutput_2, updates.RouteId);
-}
-
-
-    		pstmt_tPostgresqlOutput_2.addBatch();
-    		nb_line_tPostgresqlOutput_2++;
-    		  
-    		  batchSizeCounter_tPostgresqlOutput_2++;
-    		  
-    			if ((batchSize_tPostgresqlOutput_2 > 0) && (batchSize_tPostgresqlOutput_2 <= batchSizeCounter_tPostgresqlOutput_2)) {
-                try {
-						int countSum_tPostgresqlOutput_2 = 0;
-						    
-						for(int countEach_tPostgresqlOutput_2: pstmt_tPostgresqlOutput_2.executeBatch()) {
-							countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
-						}
-				    	
-				    		updatedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
-				    	
-            	    	batchSizeCounter_tPostgresqlOutput_2 = 0;
-                }catch (java.sql.BatchUpdateException e){
-                	
-                	int countSum_tPostgresqlOutput_2 = 0;
-					for(int countEach_tPostgresqlOutput_2: e.getUpdateCounts()) {
-						countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
-					}
-					
-			    		updatedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
-			    	
-                	System.err.println(e.getMessage());
-                	
-                }
-    			}
-    		
-
- 
-
-
-	tos_count_tPostgresqlOutput_2++;
-
-/**
- * [tPostgresqlOutput_2 main ] stop
- */
-
-} // End of branch "updates"
-
-
-
-
 // Start of branch "creates"
 if(creates != null) { 
 
@@ -4860,14 +4483,6 @@ if(row4 != null) {
 
 	
 
-			//out1
-			//row4
-
-
-			
-
-		
-
 			//row4
 			//row4
 
@@ -4876,6 +4491,14 @@ if(row4 != null) {
 				if(execStat){
 					runStat.updateStatOnConnection("row4"+iterateId,1, 1);
 				} 
+			
+
+		
+
+			//out1
+			//row4
+
+
 			
 
 		
@@ -5339,15 +4962,9 @@ Var__tMap_3__Struct Var = Var__tMap_3;// ###############################
         // ###############################
         // # Output tables
 
-updates = null;
 creates = null;
 
 if(!rejectedInnerJoin_tMap_3 ) {
-
-// # Output table : 'updates'
-updates_tmp.RouteId = row9.RouteId ;
-updates_tmp.Activo = true;
-updates = updates_tmp;
 } // closing inner join bracket (1)
 // ###### START REJECTS ##### 
 
@@ -5384,92 +5001,6 @@ rejectedInnerJoin_tMap_3 = false;
 /**
  * [tMap_3 main ] stop
  */
-// Start of branch "updates"
-if(updates != null) { 
-
-
-
-	
-	/**
-	 * [tPostgresqlOutput_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-
-			//updates
-			//updates
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("updates"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-
-        whetherReject_tPostgresqlOutput_2 = false;
-                    pstmt_tPostgresqlOutput_2.setBoolean(1, updates.Activo);
-
-                    if(updates.RouteId == null) {
-pstmt_tPostgresqlOutput_2.setNull(2 + count_tPostgresqlOutput_2, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_2.setObject(2 + count_tPostgresqlOutput_2, updates.RouteId);
-}
-
-
-    		pstmt_tPostgresqlOutput_2.addBatch();
-    		nb_line_tPostgresqlOutput_2++;
-    		  
-    		  batchSizeCounter_tPostgresqlOutput_2++;
-    		  
-    			if ((batchSize_tPostgresqlOutput_2 > 0) && (batchSize_tPostgresqlOutput_2 <= batchSizeCounter_tPostgresqlOutput_2)) {
-                try {
-						int countSum_tPostgresqlOutput_2 = 0;
-						    
-						for(int countEach_tPostgresqlOutput_2: pstmt_tPostgresqlOutput_2.executeBatch()) {
-							countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
-						}
-				    	
-				    		updatedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
-				    	
-            	    	batchSizeCounter_tPostgresqlOutput_2 = 0;
-                }catch (java.sql.BatchUpdateException e){
-                	
-                	int countSum_tPostgresqlOutput_2 = 0;
-					for(int countEach_tPostgresqlOutput_2: e.getUpdateCounts()) {
-						countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
-					}
-					
-			    		updatedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
-			    	
-                	System.err.println(e.getMessage());
-                	
-                }
-    			}
-    		
-
- 
-
-
-	tos_count_tPostgresqlOutput_2++;
-
-/**
- * [tPostgresqlOutput_2 main ] stop
- */
-
-} // End of branch "updates"
-
-
-
-
 // Start of branch "creates"
 if(creates != null) { 
 
@@ -5686,13 +5217,13 @@ end_Hash.put("tFilterRow_2", System.currentTimeMillis());
 globalMap.put("tUnite_1_NB_LINE", nb_line_tUnite_1);
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("out1"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
 			 	}
 			}
 		
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("out1"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -5811,86 +5342,6 @@ end_Hash.put("tMap_3", System.currentTimeMillis());
 /**
  * [tMap_3 end ] stop
  */
-
-	
-	/**
-	 * [tPostgresqlOutput_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-
-
-
-	    try {
-				int countSum_tPostgresqlOutput_2 = 0;
-				if (pstmt_tPostgresqlOutput_2 != null && batchSizeCounter_tPostgresqlOutput_2 > 0) {
-						
-					for(int countEach_tPostgresqlOutput_2: pstmt_tPostgresqlOutput_2.executeBatch()) {
-						countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
-					}
-						
-				}
-		    	
-		    		updatedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
-		    	
-	    }catch (java.sql.BatchUpdateException e){
-	    	
-	    	int countSum_tPostgresqlOutput_2 = 0;
-			for(int countEach_tPostgresqlOutput_2: e.getUpdateCounts()) {
-				countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
-			}
-			
-	    		updatedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
-	    	
-	    	System.err.println(e.getMessage());
-	    	
-		}
-	    
-        if(pstmt_tPostgresqlOutput_2 != null) {
-            pstmt_tPostgresqlOutput_2.close();
-        }
-
-
-	nb_line_deleted_tPostgresqlOutput_2=nb_line_deleted_tPostgresqlOutput_2+ deletedCount_tPostgresqlOutput_2;
-	nb_line_update_tPostgresqlOutput_2=nb_line_update_tPostgresqlOutput_2 + updatedCount_tPostgresqlOutput_2;
-	nb_line_inserted_tPostgresqlOutput_2=nb_line_inserted_tPostgresqlOutput_2 + insertedCount_tPostgresqlOutput_2;
-	nb_line_rejected_tPostgresqlOutput_2=nb_line_rejected_tPostgresqlOutput_2 + rejectedCount_tPostgresqlOutput_2;
-	
-        globalMap.put("tPostgresqlOutput_2_NB_LINE",nb_line_tPostgresqlOutput_2);
-        globalMap.put("tPostgresqlOutput_2_NB_LINE_UPDATED",nb_line_update_tPostgresqlOutput_2);
-        globalMap.put("tPostgresqlOutput_2_NB_LINE_INSERTED",nb_line_inserted_tPostgresqlOutput_2);
-        globalMap.put("tPostgresqlOutput_2_NB_LINE_DELETED",nb_line_deleted_tPostgresqlOutput_2);
-        globalMap.put("tPostgresqlOutput_2_NB_LINE_REJECTED", nb_line_rejected_tPostgresqlOutput_2);
-    
-	
-
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("updates"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tPostgresqlOutput_2", true);
-end_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tPostgresqlOutput_2 end ] stop
- */
-
-
-
 
 	
 	/**
@@ -6191,34 +5642,6 @@ end_Hash.put("tPostgresqlOutput_3", System.currentTimeMillis());
 /**
  * [tMap_3 finally ] stop
  */
-
-	
-	/**
-	 * [tPostgresqlOutput_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPostgresqlOutput_2";
-
-	
-
-
-
-	
-
- 
-
-
-
-/**
- * [tPostgresqlOutput_2 finally ] stop
- */
-
-
-
 
 	
 	/**
@@ -7992,7 +7415,7 @@ public void tPostgresqlInput_4Process(final java.util.Map<String, Object> global
 
 			   		// connection name:row9
 			   		// source node:tPostgresqlInput_4 - inputs:(after_tFileInputExcel_1) outputs:(row9,row9) | target node:tAdvancedHash_row9 - inputs:(row9) outputs:()
-			   		// linked node: tMap_3 - inputs:(out2,row9) outputs:(updates,creates)
+			   		// linked node: tMap_3 - inputs:(out2,row9) outputs:(creates)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row9 = 
 			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -9490,6 +8913,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     222058 characters generated by Talend Open Studio for Data Integration 
- *     on the 9 de Setembro de 2018 19:07:54 BST
+ *     208182 characters generated by Talend Open Studio for Data Integration 
+ *     on the 13 de Setembro de 2018 0:13:00 BST
  ************************************************************************************************/

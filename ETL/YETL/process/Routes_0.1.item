@@ -212,7 +212,7 @@
       <column comment="" key="false" length="-1" name="Ignore" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out1">
         <mapperTableEntries name="Origem" expression="row3.Destino " type="id_String" nullable="true"/>
@@ -252,7 +252,7 @@
       <column comment="" defaultValue="" key="true" length="2147483647" name="EndRegion_LoopedRegionId" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="out2">
         <mapperTableEntries name="StartRegion_LoopedRegionId" expression="row6.LoopedRegionId " type="id_Object"/>
@@ -363,10 +363,6 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="updates">
-      <column comment="" defaultValue="" key="true" length="2147483647" name="RouteId" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Activo" nullable="false" originalDbColumnName="Active" pattern="" precision="-1" sourceType="BOOL" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-    </metadata>
     <metadata connector="FLOW" name="creates">
       <column comment="" key="true" length="-1" name="RouteId" nullable="false" pattern="" precision="-1" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2147483647" name="StartRegion_LoopedRegionId" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" originalLength="-1" usefulColumn="true"/>
@@ -377,10 +373,6 @@
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="updates">
-        <mapperTableEntries name="RouteId" expression="row9.RouteId " type="id_Object"/>
-        <mapperTableEntries name="Activo" expression="true" type="id_Boolean"/>
-      </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="creates" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="RouteId" expression="java.util.UUID.randomUUID() " type="id_Object"/>
         <mapperTableEntries name="StartRegion_LoopedRegionId" expression="out2.StartRegion_LoopedRegionId " type="id_Object"/>
@@ -532,63 +524,6 @@
     </metadata>
   </node>
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Routes&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
-    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
-    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="RouteId"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Activo"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlOutput_2">
-      <column comment="" defaultValue="" key="true" length="2147483647" name="RouteId" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Activo" nullable="false" originalDbColumnName="Active" pattern="" precision="-1" sourceType="BOOL" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" defaultValue="" key="true" length="2147483647" name="RouteId" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Activo" nullable="false" originalDbColumnName="Active" pattern="" precision="-1" sourceType="BOOL" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_3" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
@@ -816,11 +751,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="updates" lineStyle="0" metaname="updates" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tPostgresqlOutput_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="updates" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="creates" lineStyle="0" metaname="creates" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tPostgresqlOutput_3">
+  <connection connectorName="FLOW" label="creates" lineStyle="0" metaname="creates" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tPostgresqlOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="creates" show="false"/>
   </connection>
