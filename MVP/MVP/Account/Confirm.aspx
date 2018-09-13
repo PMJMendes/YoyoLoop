@@ -17,6 +17,9 @@
                     <asp:PlaceHolder runat="server" ID="errorPanel" ViewStateMode="Disabled" Visible="false">
                             <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Account_ConfirmEmail_Error%>"/></h1>
                     </asp:PlaceHolder>
+                    <asp:PlaceHolder runat="server" ID="waitPanel" ViewStateMode="Disabled" Visible="false">
+                            <h1 class="travel__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Account_ConfirmEmail_Login%>"/></h1>
+                    </asp:PlaceHolder>
                 </div>
             </div>
         </div>
