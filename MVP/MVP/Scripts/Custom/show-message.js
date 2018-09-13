@@ -2,4 +2,4 @@
     $('#messageModal').modal({
         backdrop: 'static'
     });
-};
+}

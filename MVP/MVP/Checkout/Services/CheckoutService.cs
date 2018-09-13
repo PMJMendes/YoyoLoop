@@ -18,8 +18,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 using System.Globalization;
 using MVP.Models.Helpers;
-using UniversalAnalyticsHttpWrapper;
-using UniversalAnalyticsHttpWrapper.Objects;
+using MVP.Profile.Services;
 
 namespace MVP.Services
 {
@@ -29,6 +28,7 @@ namespace MVP.Services
         private readonly StripeCustomerService stripeCustomerService = new StripeCustomerService();
         private readonly StripeCardService stripeCardService = new StripeCardService();
         private readonly StripeChargeService stripeChargeService = new StripeChargeService(stripePrivateKey);
+        private readonly InviteService inviteService = new InviteService();
         
         public static object Checkout_Lock = new object();
 
@@ -37,19 +37,23 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid);
                 var result = new CheckoutDTO
                 {
                     UserEmail = user.Email,
                     UserContactName = user.ContactName,
                     StripeCustomerId = user.StripeCustomerId,
+                    UserReferredById = user.ReferredBy?.Id,
+                    UserMGMCode = user.MGMCode,
 
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
                     BillingAdress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
-                    BillingCity = user.BillingCity
+                    BillingCity = user.BillingCity,
+
+                    Code = string.Empty
                 };
                 return result;
             }
@@ -66,7 +70,6 @@ namespace MVP.Services
                                            .Include(sr => sr.Trip.StartAccessPoint.Region)
                                            .Include(er => er.Trip.EndAccessPoint.Region)
                                            .Include(f => f.Trip.Departure.Route.Fares)
-                                           .Include(p => p.Promocode)
                                            .FirstOrDefault();
                 if(booking == null)
                 {
@@ -83,7 +86,13 @@ namespace MVP.Services
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
                     state.Promocode = booking.Promocode?.Code ?? string.Empty;
                     state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
-                    state.Cost = booking.Cost;
+                    if (booking.MGM)
+                    {
+                        state.UserMGM = CheckUserMGM(state.UserId);
+                        state.MGM = CheckMGMCode(state.UserId, state.Code);
+                    }
+                    state.MGMPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
+                    state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (booking.Seats - 1)) : state.Price * booking.Seats;
                     state.StartTime = booking.Trip.StartTime;
                     state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
@@ -92,6 +101,18 @@ namespace MVP.Services
                 }
             }
             return state;
+        }
+
+        private bool CheckUserMGM(string userid)
+        {
+            if(inviteService.GetUserMGM(userid) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public BookingPanelDTO GetCheckoutPanelData(CheckoutDTO state)
@@ -106,6 +127,9 @@ namespace MVP.Services
                 Price = state.Price,
                 Promocode = state.Promocode,
                 PromoValid = state.PromoValid,
+                MGM = state.MGM,
+                UserMGM = state.UserMGM,
+                MGMPrice = state.MGMPrice,
                 StartTime = state.StartTime,
                 StartRegionName = state.StartRegionName,
                 StartAPName = state.StartAPName,
@@ -124,14 +148,39 @@ namespace MVP.Services
         {
             var result = new List<BookingPanelDTO.PriceItem>();
 
-            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            if (paneldata.MGM || paneldata.UserMGM)
             {
                 result.Add(new BookingPanelDTO.PriceItem
                 {
-                    Description = Resources.LocalizedText.General_Promocode,
-                    Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultCulture()),
+                    Description = Resources.LocalizedText.General_MGMPromo,
+                    Value = (paneldata.MGMPrice - paneldata.StandardPrice).ToString("C", ApplicationHelpers.DefaultCulture()),
                     Type = BookingPanelDTO.PriceItemType.DISCOUNT
                 });
+            }
+
+            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            {
+                if (paneldata.MGM || paneldata.UserMGM)
+                {
+                    if(paneldata.Seats > 1)
+                    {
+                        result.Add(new BookingPanelDTO.PriceItem
+                        {
+                            Description = Resources.LocalizedText.General_Promocode,
+                            Value = ((paneldata.Price - paneldata.StandardPrice) * (paneldata.Seats - 1)).ToString("C", ApplicationHelpers.DefaultCulture()),
+                            Type = BookingPanelDTO.PriceItemType.DISCOUNT
+                        });
+                    }
+                }
+                else
+                {
+                    result.Add(new BookingPanelDTO.PriceItem
+                    {
+                        Description = Resources.LocalizedText.General_Promocode,
+                        Value = ((paneldata.Price - paneldata.StandardPrice) * paneldata.Seats).ToString("C", ApplicationHelpers.DefaultCulture()),
+                        Type = BookingPanelDTO.PriceItemType.DISCOUNT
+                    });
+                }
             }
 
             return result;
@@ -181,27 +230,63 @@ namespace MVP.Services
             return result;
         }
 
-
-        public CheckoutDTO CheckPromo(CheckoutDTO state)
+        public bool CheckMGMCode(string userid, string code)
         {
-            CheckoutDTO result = state;
             using (var model = new EntityModel())
             {
-                bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
-                if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
+                if (model.Users.Any(u => u.MGMCode == code && u.Id != userid) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
                 {
-                    result.FareType = Fare.FareType.PROMOTIONAL;
-                    result.PromoValid = true;
+                    return true;
                 }
                 else
                 {
-                    result.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
-                    result.PromoValid = false;
+                    return false;
                 }
-                result.Price = model.Booking.Include(b => b.Trip.Departure.Route.Fares).FirstOrDefault(b => b.BookingId == state.BookingId).Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == result.FareType).Price;
-                result.Cost = result.Seats * result.Price;
             }
-            return result;
+        }
+
+        public CheckoutDTO CheckPromo(CheckoutDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
+
+                if (string.IsNullOrEmpty(state.Promocode))
+                {
+                    state.MGM = false;
+                    state.Code = string.Empty;
+                    state.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                    state.PromoValid = false;
+                }
+                else
+                {
+                    state.MGM = CheckMGMCode(state.UserId, state.Promocode);
+
+                    if(!state.MGM)
+                    {
+                        state.Code = string.Empty;
+                        if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
+                        {
+                            state.FareType = Fare.FareType.PROMOTIONAL;
+                            state.PromoValid = true;
+                        }
+                        else
+                        {
+                            state.FareType = lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD;
+                            state.PromoValid = false;
+                        }
+                    }
+                    else
+                    {
+                        state.Code = state.Promocode;
+                        state.Promocode = string.Empty;
+                    }
+
+                }
+                state.Price = model.Booking.Include(b => b.Trip.Departure.Route.Fares).FirstOrDefault(b => b.BookingId == state.BookingId).Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == state.FareType).Price;
+                state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (state.Seats - 1)) : state.Price * state.Seats;
+            }
+            return state;
         }
 
         public bool ProcessPayment(CheckoutDTO state, string source, out string error)
@@ -253,31 +338,93 @@ namespace MVP.Services
 
                 // Charge sucessful
                 UpdateBooking(state, BookingStatus.BOOKED);
+
+                if (state.MGM)
+                {
+                    state = CreateReferral(state);
+                }
+
+                if (string.IsNullOrEmpty(state.UserReferredById))
+                {
+                    state = AddSelfReferral(state);
+                }
+
+                if (string.IsNullOrEmpty(state.UserMGMCode))
+                {
+                    state.UserMGMCode = GenerateMGMCode(state.UserId, state.UserEmail);
+                }
+
                 error = string.Empty;
                 SendInvoice(state);
-
-                var description = state.Seats.ToString() + " x " + 
-                                  state.StartRegionName + "-" +
-                                  state.EndRegionName;
-                GA_Purchase(state.UserId, description, (int)state.Cost);
 
                 return true;
             }
         }
 
-        private void GA_Purchase(string userid, string label, int value)
+        private CheckoutDTO CreateReferral(CheckoutDTO state)
         {
-            IEventTracker eventTracker = new EventTracker();
-            IUniversalAnalyticsEventFactory eventFactory = new UniversalAnalyticsEventFactory();
-            UserId userId = new UserId(userid);
-            var analyticsEvent = eventFactory.MakeUniversalAnalyticsEvent(
-                userId,
-                "Transaction",
-                "Purchase",
-                label,
-                value.ToString(),
-                nonInteractionEvent: false);
-            var trackingResult = eventTracker.TrackEvent(analyticsEvent);
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == state.UserId);
+                var referredby = model.Users.FirstOrDefault(u => u.MGMCode == state.Code);
+                state.UserReferredById = referredby.Id;
+                user.ReferredBy = referredby;
+                model.SaveChanges();
+                return state;
+            }
+        }
+
+        public CheckoutDTO AddSelfReferral(CheckoutDTO state)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
+                user.ReferredBy = user;
+                state.UserReferredById = state.UserId;
+                model.SaveChanges();
+            }
+            return state;
+        }
+
+        public string GenerateMGMCode(string userid, string useremail)
+        {
+            string strippedid = userid.Replace("-", string.Empty);
+            string strippedemail = useremail.Substring(0, useremail.IndexOf("@") - 1).Replace(".", string.Empty);
+            string result = strippedemail.Substring(0, Math.Min(strippedemail.Length, 6));
+            result += strippedid.Substring(strippedid.Length - (10 - result.Length));
+            result = result.ToUpper();
+
+            while (!ValidateMGMCode(result))
+            {
+                var strippedguid = Guid.NewGuid().ToString().Replace("-", string.Empty);
+                result = strippedemail.Substring(0, Math.Min(strippedemail.Length, 6));
+                result += strippedguid.Substring(strippedid.Length - (10 - result.Length));
+                result = result.ToUpper();
+            }
+
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                user.MGMCode = result;
+                model.SaveChanges();
+            }
+            return result;
+        }
+
+        private bool ValidateMGMCode(string code)
+        {
+            using (var model = new EntityModel())
+            {
+                var user = model.Users.FirstOrDefault(u => u.MGMCode == code);
+                if (user == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         public string StripeErrorHandler(string error)
@@ -405,7 +552,7 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var booking = model.Booking.Include(t => t.Trip).Include(p => p.Promocode).SingleOrDefault(b => b.BookingId == state.BookingId);
+                var booking = model.Booking.Include(t => t.Trip).SingleOrDefault(b => b.BookingId == state.BookingId);
 
                 if (booking != null)
                 {
@@ -413,6 +560,7 @@ namespace MVP.Services
                     booking.TicketCode = GenerateTicket(6);
                     booking.FareType = state.FareType;
                     booking.Promocode = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode.ToUpper());
+                    booking.MGM = state.MGM || state.UserMGM;
                     booking.Cost = state.Cost;
                     booking.StripeChargeId = state.StripeChargeID;
 
@@ -540,7 +688,19 @@ namespace MVP.Services
                 body += "<br>";
                 body += "<br>DETALHES DO PAGAMENTO:";
                 body += "<br>Tarifa: " + state.FareType.ToString();
-                body += "<br>Promocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
+                if(!string.IsNullOrEmpty(state.Promocode))
+                {
+                    body += "<br>Promocode: " + state.Promocode.ToUpper() + " (" + (state.PromoValid ? "válido" : "inválido") + ")";
+                }
+                if (state.UserMGM)
+                {
+                    body += "<br>MemberGetMember: Sim";
+                }
+                if(state.MGM)
+                {
+                    body += "<br>MemberGetMember Referral: Sim";
+                    body += "<br>MemberGetMember ReferralCode: " + state.Code;
+                }
                 body += "<br>Stripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
                 body += "<br>Valor pago: " + state.Cost.ToString() + "€";
                 body += "<br>";
