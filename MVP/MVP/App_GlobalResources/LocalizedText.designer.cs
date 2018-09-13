@@ -835,7 +835,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Obrigado por escolheres a Yoyoloop!.
+        ///   Looks up a localized string similar to Obrigado por escolheres a YoyoLoop!.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_ThankYou {
             get {
@@ -862,7 +862,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        ///   Looks up a localized string similar to A equipa YoyoLoop..
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_YoyoloopTeam {
             get {
@@ -907,7 +907,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email..
+        ///   Looks up a localized string similar to Por boa prática de segurança, a YoyoLoop só considera a conta de cliente criada após este confirmar o seu endereço de email..
         /// </summary>
         internal static string Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer {
             get {
@@ -1114,7 +1114,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yoyoloop login.
+        ///   Looks up a localized string similar to YoyoLoop login.
         /// </summary>
         internal static string Controls_Forgot_MainTitle {
             get {
@@ -1249,7 +1249,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sessão Yoyoloop.
+        ///   Looks up a localized string similar to Sessão YoyoLoop.
         /// </summary>
         internal static string Controls_Login_MainTitle {
             get {
@@ -1348,7 +1348,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quero receber campanhas&lt;br&gt;promocionais da Yoyoloop.
+        ///   Looks up a localized string similar to Quero receber campanhas&lt;br&gt;promocionais da YoyoLoop.
         /// </summary>
         internal static string Controls_Register_cbRegisterCampaigns {
             get {
@@ -1375,7 +1375,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yoyoloop login.
+        ///   Looks up a localized string similar to YoyoLoop login.
         /// </summary>
         internal static string Controls_Register_MainTitle {
             get {
@@ -1672,7 +1672,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string General_LoopData_Capacity_Coimbra {
             get {
@@ -1681,7 +1681,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string General_LoopData_Capacity_Leiria {
             get {
@@ -1690,7 +1690,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string General_LoopData_Capacity_Porto {
             get {
@@ -1699,7 +1699,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2H.
+        ///   Looks up a localized string similar to 2 H.
         /// </summary>
         internal static string General_LoopData_Duration_Coimbra {
             get {
@@ -1717,7 +1717,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 30 MIN.
+        ///   Looks up a localized string similar to 2 H 30.
         /// </summary>
         internal static string General_LoopData_Duration_Porto {
             get {
@@ -1726,7 +1726,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 12.
+        ///   Looks up a localized string similar to 26.
         /// </summary>
         internal static string General_LoopData_Price_Coimbra {
             get {
@@ -1735,7 +1735,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 10.
+        ///   Looks up a localized string similar to 16.
         /// </summary>
         internal static string General_LoopData_Price_Leiria {
             get {
@@ -1744,7 +1744,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 12.
+        ///   Looks up a localized string similar to 36.
         /// </summary>
         internal static string General_LoopData_Price_Lisboa {
             get {
@@ -1753,11 +1753,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5.
+        ///   Looks up a localized string similar to 36.
         /// </summary>
         internal static string General_LoopData_Price_Porto {
             get {
                 return ResourceManager.GetString("General_LoopData_Price_Porto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MemberGetMember.
+        /// </summary>
+        internal static string General_MGMPromo {
+            get {
+                return ResourceManager.GetString("General_MGMPromo", resourceCulture);
             }
         }
         
@@ -1879,7 +1888,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Carreiras na Yoyoloop.
+        ///   Looks up a localized string similar to Carreiras na YoyoLoop.
         /// </summary>
         internal static string Help_Topic_Careers {
             get {
@@ -1888,7 +1897,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como posso conduzir um Yoyoloop?.
+        ///   Looks up a localized string similar to Como posso conduzir um YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_Careers_Question_HowTo {
             get {
@@ -1897,7 +1906,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A nossa equipa está a crescer! Se tens interesse em juntar-te à nossa equipa, por favor envia o teu CV para careers@Yoyoloop.com..
+        ///   Looks up a localized string similar to A nossa equipa está a crescer! Se tens interesse em juntar-te à nossa equipa, por favor envia o teu CV para careers@YoyoLoop.com..
         /// </summary>
         internal static string Help_Topic_Careers_Question_HowTo_Answer {
             get {
@@ -1924,8 +1933,8 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop oferece preços especiais para empresas, que incluem descontos especiais e programas de lançamento do serviço para os colaboradores da empresa.
-        ///Para mais informações, contacte-nos por favor em empresas@Yoyoloop.com..
+        ///   Looks up a localized string similar to A YoyoLoop oferece preços especiais para empresas, que incluem descontos especiais e programas de lançamento do serviço para os colaboradores da empresa.
+        ///Para mais informações, contacte-nos por favor em empresas@YoyoLoop.com..
         /// </summary>
         internal static string Help_Topic_Corporate_Question_CorporatePricing_Answer {
             get {
@@ -1961,7 +1970,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop envia aos clientes empresariais um email com um resumo mensal de todas as viagens efetuadas ao longo de um mês e os respetivos custos..
+        ///   Looks up a localized string similar to A YoyoLoop envia aos clientes empresariais um email com um resumo mensal de todas as viagens efetuadas ao longo de um mês e os respetivos custos..
         /// </summary>
         internal static string Help_Topic_Corporate_Question_TotalSpending_Answer {
             get {
@@ -2036,7 +2045,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da Yoyoloop..
+        ///   Looks up a localized string similar to Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da YoyoLoop..
         /// </summary>
         internal static string Help_Topic_Invite_Question_FriendsBenefits_Answer {
             get {
@@ -2045,7 +2054,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Posso partilhar o meu código promocional com amigos que já tenham usado a Yoyoloop?.
+        ///   Looks up a localized string similar to Posso partilhar o meu código promocional com amigos que já tenham usado a YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_Invite_Question_GiftToYoyoUsers {
             get {
@@ -2090,7 +2099,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!.
+        ///   Looks up a localized string similar to Por cada amigo que viajar com a YoyoLoop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!.
         /// </summary>
         internal static string Help_Topic_Invite_Question_MyBenefits_Answer {
             get {
@@ -2135,7 +2144,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sim, desde que estejam dentro dos limites de bagagem da Yoyoloop..
+        ///   Looks up a localized string similar to Sim, desde que estejam dentro dos limites de bagagem da YoyoLoop..
         /// </summary>
         internal static string Help_Topic_Luggage_Question_CanIBring_Answer {
             get {
@@ -2153,7 +2162,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nos veículos da Yoyoloop não é possível levar instrumentos afiados, armas, animais de estimação, nem materiais inflamáveis ou com odores intensos. Em caso de dúvida, envia um email para reservas@Yoyoloop.com para saber se podes ou não transportar o teu objeto..
+        ///   Looks up a localized string similar to Nos veículos da YoyoLoop não é possível levar instrumentos afiados, armas, animais de estimação, nem materiais inflamáveis ou com odores intensos. Em caso de dúvida, envia um email para reservas@YoyoLoop.com para saber se podes ou não transportar o teu objeto..
         /// </summary>
         internal static string Help_Topic_Luggage_Question_NotAllowed_Answer {
             get {
@@ -2180,7 +2189,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Parceiros Yoyoloop.
+        ///   Looks up a localized string similar to Parceiros YoyoLoop.
         /// </summary>
         internal static string Help_Topic_Partners {
             get {
@@ -2189,7 +2198,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como se tornar parceiro da Yoyoloop?.
+        ///   Looks up a localized string similar to Como se tornar parceiro da YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_Partners_Question_HowTo {
             get {
@@ -2198,7 +2207,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Por favor contacte a nossa equipa de parcerias pelo email: parceiros@Yoyoloop.com..
+        ///   Looks up a localized string similar to Por favor contacte a nossa equipa de parcerias pelo email: parceiros@YoyoLoop.com..
         /// </summary>
         internal static string Help_Topic_Partners_Question_HowTo_Answer {
             get {
@@ -2207,7 +2216,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programa de parceiros Yoyoloop.
+        ///   Looks up a localized string similar to Programa de parceiros YoyoLoop.
         /// </summary>
         internal static string Help_Topic_Partners_Question_PartnerProgram {
             get {
@@ -2261,7 +2270,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem loops de Lisboa para o Porto, Coimbra e Leiria e, ainda, loops desde o Porto, Coimbra e Leiria até Lisboa..
+        ///   Looks up a localized string similar to A YoyoLoop tem loops de Lisboa para o Porto, Coimbra e Leiria e, ainda, loops desde o Porto, Coimbra e Leiria até Lisboa..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer {
             get {
@@ -2279,7 +2288,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to É possível comprar uma viagem através da versão mobile do site da Yoyoloop onde quer que estejas. Caso ainda haja lugares vagos, basta comprares a tua viagem e mostrar o bilhete quando o teu motorista chegar..
+        ///   Looks up a localized string similar to É possível comprar uma viagem através da versão mobile do site da YoyoLoop onde quer que estejas. Caso ainda haja lugares vagos, basta comprares a tua viagem e mostrar o bilhete quando o teu motorista chegar..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer {
             get {
@@ -2288,7 +2297,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Qual a política de cancelamento da Yoyoloop?.
+        ///   Looks up a localized string similar to Qual a política de cancelamento da YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_Cancel {
             get {
@@ -2315,7 +2324,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sim, podes alterar a data e hora da tua viagem até 48 horas antes da partida. É possível fazer a alteração por telefone — +351 926 475 250 — ou por email — reservas@Yoyoloop.com..
+        ///   Looks up a localized string similar to Sim, podes alterar a data e hora da tua viagem até 48 horas antes da partida. É possível fazer a alteração por telefone — +351 926 475 250 — ou por email — reservas@YoyoLoop.com..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_ChangeDate_Answer {
             get {
@@ -2333,7 +2342,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Podes fazer uma reserva por email — reservas@Yoyoloop.com — ou por telefone, através do +351 926 475 250. Em alternativa, podes simplesmente aparecer no local de partida da viagem 15 minutos antes da hora de partida e comprar o teu bilhete diretamente ao motorista da Yoyoloop..
+        ///   Looks up a localized string similar to Podes fazer uma reserva por email — reservas@YoyoLoop.com — ou por telefone, através do +351 926 475 250. Em alternativa, podes simplesmente aparecer no local de partida da viagem 15 minutos antes da hora de partida e comprar o teu bilhete diretamente ao motorista da YoyoLoop..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer {
             get {
@@ -2351,7 +2360,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop é um serviço com pontos de partida e de chegada predefinidos, pelo que não é possível irmos buscar-te a um ponto diferente. No entanto, estamos sempre disponíveis para criar novos pontos de partida e/ou chegada no futuro. Se tiveres alguma sugestão, envia-nos um email para reservas@Yoyoloop.com..
+        ///   Looks up a localized string similar to A YoyoLoop é um serviço com pontos de partida e de chegada predefinidos, pelo que não é possível irmos buscar-te a um ponto diferente. No entanto, estamos sempre disponíveis para criar novos pontos de partida e/ou chegada no futuro. Se tiveres alguma sugestão, envia-nos um email para reservas@YoyoLoop.com..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_DifferentAP_Answer {
             get {
@@ -2431,7 +2440,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
         ///&lt;br&gt;
-        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloo [rest of string was truncated]&quot;;.
+        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a YoyoLoop. Para saber mais, envia por favor um email para empresas@YoyoLoo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_HowMuch_Answer {
             get {
@@ -2467,7 +2476,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop aceita Multibanco e cartões de crédito das redes Visa, Mastercard, American Express, entre outras..
+        ///   Looks up a localized string similar to A YoyoLoop aceita Multibanco e cartões de crédito das redes Visa, Mastercard, American Express, entre outras..
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer {
             get {
@@ -2503,7 +2512,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O que posso fazer com o meu perfil na Yoyoloop?.
+        ///   Looks up a localized string similar to O que posso fazer com o meu perfil na YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_UserDashboard_Question_WhatCanIDo {
             get {
@@ -2517,7 +2526,7 @@ namespace Resources {
         ///Adicionar, atualizar ou eliminar dados de pagamento;&lt;br&gt;
         ///Verificar a tua conta corrente e o crédito atual;&lt;br&gt;
         ///Ver viagens futuras e viagens anteriores;&lt;br&gt;
-        ///Convidar amigos para a Yoyoloop;&lt;br&gt;
+        ///Convidar amigos para a YoyoLoop;&lt;br&gt;
         ///Ver quantas viagens a €1 tens disponível para usufruir..
         /// </summary>
         internal static string Help_Topic_UserDashboard_Question_WhatCanIDo_Answer {
@@ -2527,7 +2536,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Veículos Yoyoloop.
+        ///   Looks up a localized string similar to Veículos YoyoLoop.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars {
             get {
@@ -2536,7 +2545,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os veículos da Yoyoloop têm capacidade para transportar crianças?.
+        ///   Looks up a localized string similar to Os veículos da YoyoLoop têm capacidade para transportar crianças?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Children {
             get {
@@ -2554,7 +2563,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os veículos da Yoyoloop são elétricos?.
+        ///   Looks up a localized string similar to Os veículos da YoyoLoop são elétricos?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Electric {
             get {
@@ -2572,7 +2581,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tenho cobertura de seguro quando viajo com a Yoyoloop?.
+        ///   Looks up a localized string similar to Tenho cobertura de seguro quando viajo com a YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Insurance {
             get {
@@ -2581,7 +2590,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sim. A Yoyoloop é uma agência de viagens registada no Registo Nacional de Agências de Viagens e Turismo (RNAVTnº 7744), logo os clientes da Yoyoloop beneficiam da proteção do Fundo de Garantia de Viagens e Turismo. Adicionalmente, a Yoyoloop tem um seguro de responsabilidade civil no valor de €250.000. Lê mais sobre este assunto na página do Turismo de Portugal..
+        ///   Looks up a localized string similar to Sim. A YoyoLoop é uma agência de viagens registada no Registo Nacional de Agências de Viagens e Turismo (RNAVTnº 7744), logo os clientes da YoyoLoop beneficiam da proteção do Fundo de Garantia de Viagens e Turismo. Adicionalmente, a YoyoLoop tem um seguro de responsabilidade civil no valor de €250.000. Lê mais sobre este assunto na página do Turismo de Portugal..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Insurance_Answer {
             get {
@@ -2599,7 +2608,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop apenas trabalha com motoristas profissionais. Todos eles passaram no nosso processo de seleção e são membros permanentes da nossa equipa..
+        ///   Looks up a localized string similar to A YoyoLoop apenas trabalha com motoristas profissionais. Todos eles passaram no nosso processo de seleção e são membros permanentes da nossa equipa..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer {
             get {
@@ -2608,7 +2617,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quantos lugares tem um veículo da Yoyoloop?.
+        ///   Looks up a localized string similar to Quantos lugares tem um veículo da YoyoLoop?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Seats {
             get {
@@ -2626,7 +2635,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os veículos da Yoyoloop têm todos wifi?.
+        ///   Looks up a localized string similar to Os veículos da YoyoLoop têm todos wifi?.
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Wifi {
             get {
@@ -2635,7 +2644,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sim, todos os veículos da Yoyoloop contam com wifi a bordo para assegurar uma viagem mais proveitosa..
+        ///   Looks up a localized string similar to Sim, todos os veículos da YoyoLoop contam com wifi a bordo para assegurar uma viagem mais proveitosa..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Wifi_Answer {
             get {
@@ -2644,7 +2653,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apanha boleia de um transfer premium a preço de comboio.
+        ///   Looks up a localized string similar to Deixa o carro em casa e viaja num transfer de luxo onde podes trabalhar ou relaxar..
         /// </summary>
         internal static string HomePage_MainTitle {
             get {
@@ -2752,7 +2761,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio..
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer de luxo, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio..
         /// </summary>
         internal static string HomePage_SubTitle {
             get {
@@ -2815,7 +2824,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Queres que a Yoyoloop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!.
+        ///   Looks up a localized string similar to Queres que a YoyoLoop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!.
         /// </summary>
         internal static string HomePage_SuggestLoop_Text {
             get {
@@ -2905,7 +2914,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
+        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a YoyoLoop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
         /// </summary>
         internal static string HomePage_Why_Card_Convenient_Content {
             get {
@@ -2959,7 +2968,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono..
+        ///   Looks up a localized string similar to Todas as nossas viagens são feitas em veículos de oito lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono..
         /// </summary>
         internal static string HomePage_Why_Card_Sustainable_Content {
             get {
@@ -2986,7 +2995,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da YoyoLoop?.
         /// </summary>
         internal static string HomePage_Why_Title {
             get {
@@ -3004,7 +3013,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio..
+        ///   Looks up a localized string similar to O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da YoyoLoop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio..
         /// </summary>
         internal static string HomePage_Yoyoloop_SubDescription {
             get {
@@ -3013,7 +3022,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email..
+        ///   Looks up a localized string similar to Por boa prática de segurança, a YoyoLoop só considera a conta de cliente criada após este confirmar o seu endereço de email..
         /// </summary>
         internal static string MasterService_SendEmailConfirmation_Body_ConfirmAnswer {
             get {
@@ -3058,7 +3067,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bem-vindo à Yoyoloop!.
+        ///   Looks up a localized string similar to Bem-vindo à YoyoLoop!.
         /// </summary>
         internal static string MasterService_SendEmailConfirmation_Body_Title {
             get {
@@ -3067,7 +3076,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        ///   Looks up a localized string similar to A equipa YoyoLoop..
         /// </summary>
         internal static string MasterService_SendEmailConfirmation_Body_YoyoloopTeam {
             get {
@@ -3076,7 +3085,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bem-vindo à Yoyoloop!.
+        ///   Looks up a localized string similar to Bem-vindo à YoyoLoop!.
         /// </summary>
         internal static string MasterService_SendEmailConfirmation_Subject {
             get {
@@ -3094,7 +3103,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe..
+        ///   Looks up a localized string similar to Por boa prática de segurança, a YoyoLoop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe..
         /// </summary>
         internal static string MasterService_SendResetPassword_Body_ResetAnswer {
             get {
@@ -3139,7 +3148,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A equipa Yoyoloop..
+        ///   Looks up a localized string similar to A equipa YoyoLoop..
         /// </summary>
         internal static string MasterService_SendResetPassword_Body_YoyoloopTeam {
             get {
@@ -3175,7 +3184,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reserva a tua primeira viagem com a Yoyoloop!.
+        ///   Looks up a localized string similar to Reserva a tua primeira viagem com a YoyoLoop!.
         /// </summary>
         internal static string MyTrips_Empty_SubTitle {
             get {
@@ -3220,7 +3229,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional.
+        ///   Looks up a localized string similar to Recomenda a YoyoLoop aos teus amigos ao partilhar o teu código promocional.
         /// </summary>
         internal static string MyTrips_Invite_Recommend_Description {
             get {
@@ -3229,7 +3238,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recomenda a Yoyoloop.
+        ///   Looks up a localized string similar to Recomenda a YoyoLoop.
         /// </summary>
         internal static string MyTrips_Invite_Recommend_Title {
             get {
@@ -3247,7 +3256,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a YoyoLoop pela primeira vez.
         /// </summary>
         internal static string MyTrips_Invite_Travel_Title_Description {
             get {
@@ -3562,6 +3571,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Para receberes o teu código promocional só tens que marcar a tua primeira viagem!.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_NotEligible {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_NotEligible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enviar por Email.
         /// </summary>
         internal static string Profile_Invite_Promoshare_ShareMenu_email {
@@ -3594,6 +3612,33 @@ namespace Resources {
         internal static string Profile_Invite_Promoshare_ShareMenu_twitter {
             get {
                 return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMenu_twitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usa o código.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMessage1 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to em.
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMessage2 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e viaja a 1€..
+        /// </summary>
+        internal static string Profile_Invite_Promoshare_ShareMessage3 {
+            get {
+                return ResourceManager.GetString("Profile_Invite_Promoshare_ShareMessage3", resourceCulture);
             }
         }
         
@@ -3634,7 +3679,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional.
+        ///   Looks up a localized string similar to Recomenda a YoyoLoop aos teus amigos ao partilhar o teu código promocional.
         /// </summary>
         internal static string Profile_Invite_Why_Recommend_Description {
             get {
@@ -3643,7 +3688,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recomenda a Yoyoloop.
+        ///   Looks up a localized string similar to Recomenda a YoyoLoop.
         /// </summary>
         internal static string Profile_Invite_Why_Recommend_Title {
             get {
@@ -3652,7 +3697,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a YoyoLoop pela primeira vez.
         /// </summary>
         internal static string Profile_Invite_Why_Travel_Description {
             get {
@@ -3670,7 +3715,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio..
+        ///   Looks up a localized string similar to O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da YoyoLoop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio..
         /// </summary>
         internal static string Profile_Invite_YoyoloopWhy_Description {
             get {
@@ -3679,7 +3724,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da YoyoLoop?.
         /// </summary>
         internal static string Profile_Invite_YoyoloopWhy_Title {
             get {
@@ -4142,7 +4187,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Validation of Anti-XSRF token failed..
+        ///   Looks up a localized string similar to Ocorreu um erro.
         /// </summary>
         internal static string SiteMaster_Errors_AntiXSRF {
             get {
@@ -4349,7 +4394,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;
+        ///   Looks up a localized string similar to A YoyoLoop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;
         ///&lt;br&gt;
         ///Foi por isso que criámos um serviço de transfer ao preço do comboio, alternativo ao automóvel particular, aos comboios e ao avião, com a diferença de ser mais acessível, conveniente, fiável e sustentável..
         /// </summary>
@@ -4387,7 +4432,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
+        ///   Looks up a localized string similar to Além de contar com partidas frequentes, a YoyoLoop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo..
         /// </summary>
         internal static string StaticPages_About_Why_Convenient_Content {
             get {
@@ -4549,7 +4594,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa e vice-versa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A YoyoLoop dá-te boleia para Coimbra a partir de Lisboa e vice-versa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_LoopCard_Description {
             get {
@@ -4585,7 +4630,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Lisboa até Coimbra em apenas 90 minutos.
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te de Lisboa até Coimbra em apenas 90 minutos.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime {
             get {
@@ -4597,7 +4642,7 @@ namespace Resources {
         ///   Looks up a localized string similar to 
         ///Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a Yoyoloop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de  [rest of string was truncated]&quot;;.
+        ///Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_MainDescription {
             get {
@@ -4615,7 +4660,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se apanhares um transfer para Coimbra a partir de Lisboa, podes escolher partir de várias paragens diferentes, tais como Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande ou Gare do Oriente. As chegadas a Coimbra serão na Av. Fernão de Magalhães ou na Portagem. Saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!.
+        ///   Looks up a localized string similar to Se apanhares um transfer para Coimbra a partir de Lisboa, podes escolher partir de várias paragens diferentes, tais como Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande ou Gare do Oriente. As chegadas a Coimbra serão na Av. Fernão de Magalhães ou na Portagem. Saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a YoyoLoop!.
         /// </summary>
         internal static string StaticPages_Destinos_Coimbra_Stops_Description {
             get {
@@ -4813,7 +4858,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como chegar até ao teu transfer da Yoyoloop.
+        ///   Looks up a localized string similar to Como chegar até ao teu transfer da YoyoLoop.
         /// </summary>
         internal static string StaticPages_Destinos_Details_Stops_StopCard_HowToGet {
             get {
@@ -4831,7 +4876,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Leiria a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A YoyoLoop dá-te boleia para Leiria a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Leiria_LoopCard_Description {
             get {
@@ -4867,7 +4912,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos.
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos.
         /// </summary>
         internal static string StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime {
             get {
@@ -4876,7 +4921,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Leiria, a alternativa ao carro particular e aos autocarros.
+        ///   Looks up a localized string similar to Apanha um transfer da YoyoLoop para Leiria, a alternativa ao carro particular e aos autocarros.
         /// </summary>
         internal static string StaticPages_Destinos_Leiria_MainDescription {
             get {
@@ -4966,7 +5011,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para Lisboa a partir do Porto, Coimbra e Leiria. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A YoyoLoop dá-te boleia para Lisboa a partir do Porto, Coimbra e Leiria. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Description {
             get {
@@ -5002,7 +5047,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até Lisboa em duas horas e meia..
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te do Porto até Lisboa em duas horas e meia..
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime {
             get {
@@ -5011,7 +5056,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Apanha um transfer da Yoyoloop para Lisboa, a alternativa ao carro e ao comboio.
+        ///   Looks up a localized string similar to Apanha um transfer da YoyoLoop para Lisboa, a alternativa ao carro e ao comboio.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_MainDescription {
             get {
@@ -5029,7 +5074,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Se apanhares um transfer para Lisboa, podes escolher parar nas principais zonas de escritórios da capital e ainda ficar a poucos passos de uma estação de metro. Quando voltares para a tua cidade de origem, aproveita para tomar uma bica enquanto esperas pela tua boleia. Lembra-te, com a Yoyoloop, tens lugar marcado à hora marcada!.
+        ///   Looks up a localized string similar to Se apanhares um transfer para Lisboa, podes escolher parar nas principais zonas de escritórios da capital e ainda ficar a poucos passos de uma estação de metro. Quando voltares para a tua cidade de origem, aproveita para tomar uma bica enquanto esperas pela tua boleia. Lembra-te, com a YoyoLoop, tens lugar marcado à hora marcada!.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_Description {
             get {
@@ -5040,7 +5085,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Além de ser a zona de residência do Jardim Zoológico de Lisboa, Sete Rios é conhecido por ser outra das mais importantes estações ferroviárias e rodoviárias da cidade. É especialmente importante para quem vem da linha de Sintra e da Margem Sul, assim como para quem chega de autocarro vindo de todos os cantos do país, especialmente da zona sul e região oeste.&lt;br&gt;
         ///&lt;br&gt;
-        ///Sete Rios é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria [rest of string was truncated]&quot;;.
+        ///Sete Rios é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description {
             get {
@@ -5078,7 +5123,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to As Torres das Amoreiras são um dos edifícios mais icónicos da cidade de Lisboa. Apesar de ser uma zona residencial de excelência e um das principais pólos de escritórios da capital, a zona das Amoreiras não está devidamente servida pela rede de transportes da cidade, especialmente pelo Metropolitano de Lisboa. É um incómodo para os residentes lisboetas, mas é ainda mais doloroso para quem vem dos arredores da capital.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Torre 3 das Amoreiras é um dos pontos de partida da Yoyoloop na cidade de Lis [rest of string was truncated]&quot;;.
+        ///A Torre 3 das Amoreiras é um dos pontos de partida da YoyoLoop na cidade de Lis [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description {
             get {
@@ -5116,7 +5161,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to O Marquês de Pombal dispensa apresentações. É uma zona de escritórios por excelência, mas também de alguma actividade turística. É um ponto de entrada importante da cidade de Lisboa, sobretudo para quem vem da zona de Cascais, e é servido de vários transportes públicos, incluindo duas linhas de metro.&lt;br&gt;
         ///&lt;br&gt;
-        ///O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra..
+        ///O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra..
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description {
             get {
@@ -5154,7 +5199,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to O Campo Grande é, desde há muitos anos, uma zona de transportes importante. É aqui que chegam a maior parte dos autocarros suburbanos provenientes da região Oeste. A crescente presença de grandes empresas na zona, assim como a Universidade Lusófona de Lisboa e várias faculdades da Universidade de Lisboa nas proximidades, reforçou ainda mais a importância de ligar devidamente o Campo Grande.&lt;br&gt;
         ///&lt;br&gt;
-        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui qu [rest of string was truncated]&quot;;.
+        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui qu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description {
             get {
@@ -5192,7 +5237,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to A Gare do Oriente é uma das mais importantes estações ferroviárias e rodoviárias da cidade de Lisboa. A sua ligação privilegiada ao Aeroporto de Lisboa pela Avenida de Berlim também contribui para a importância desta zona icónica. Todos os dias, a Gare do Oriente recebe centenas de milhares de pessoas provenientes de vários pontos dos arredores da capital.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Gare do Oriente é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto,  [rest of string was truncated]&quot;;.
+        ///A Gare do Oriente é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto,  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description {
             get {
@@ -5250,7 +5295,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///As alternativas deixam a desejar. Os autocarros e os comboios são demorados, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem [rest of string was truncated]&quot;;.
+        ///Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_SubDescription {
             get {
@@ -5277,7 +5322,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop dá-te boleia para o Porto a partir de Lisboa e de Coimbra. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
+        ///   Looks up a localized string similar to A YoyoLoop dá-te boleia para o Porto a partir de Lisboa e de Coimbra. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Description {
             get {
@@ -5313,7 +5358,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas duas horas e meia..
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te do Porto até &lt;br/&gt;Lisboa em apenas duas horas e meia..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime {
             get {
@@ -5342,7 +5387,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to A rede de transportes públicos do Porto deixa a desejar. Os autocarros e os comboios são demorados e o Metro do Porto serve apenas os subúrbios e uma faixa do centro da cidade. Para quem vem de outras cidades, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais r [rest of string was truncated]&quot;;.
+        ///Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais r [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_Description {
             get {
@@ -5351,7 +5396,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Avenida da Boavista concentra várias zonas de escitórios da zona do Porto. Pela sua dimensão, a Yoyoloop optou por disponbilibizar duas paragens na Av. da Boavista. Uma paragem na zona ascente, junto an Hotel Crown Plaza e perto dos Hoteis Porto palácio e Sheraton Porto e uma segunda paragem na zona Poente, no Edifício Oceanos, perto do colégio de Nossa Sra. do Rosário..
+        ///   Looks up a localized string similar to A Avenida da Boavista concentra várias zonas de escitórios da zona do Porto. Pela sua dimensão, a YoyoLoop optou por disponbilibizar duas paragens na Av. da Boavista. Uma paragem na zona ascente, junto an Hotel Crown Plaza e perto dos Hoteis Porto palácio e Sheraton Porto e uma segunda paragem na zona Poente, no Edifício Oceanos, perto do colégio de Nossa Sra. do Rosário..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description {
             get {
@@ -5387,7 +5432,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Casa da Música é uma das principais salas de concerto do Porto e um dos ícones da cidade. Está localizada na Avenida da Boavista, uma das principais avenidas do Porto, e está bem servida de cinco linhas de metro. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to A Casa da Música é uma das principais salas de concerto do Porto e um dos ícones da cidade. Está localizada na Avenida da Boavista, uma das principais avenidas do Porto, e está bem servida de cinco linhas de metro. É um dos três pontos de chegada da YoyoLoop para quem vem de Lisboa..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_First_Description {
             get {
@@ -5459,7 +5504,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da YoyoLoop para quem vem de Lisboa..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_Description {
             get {
@@ -5468,7 +5513,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to &lt;br&gt;.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details {
             get {
@@ -5495,7 +5540,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Com mais de 260 lojas, o Norte Shopping, localizado na Senhora da Hora, é o maior centro comercial de região Norte. Além disso, tem um centro de escritórios muito importante, servindo de sede a algumas das maiores empresas nacionais. É de muito fácil acesso, já que fica muito perto de uma estação de metro servida de cinco linhas. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa..
+        ///   Looks up a localized string similar to Com mais de 260 lojas, o Norte Shopping, localizado na Senhora da Hora, é o maior centro comercial de região Norte. Além disso, tem um centro de escritórios muito importante, servindo de sede a algumas das maiores empresas nacionais. É de muito fácil acesso, já que fica muito perto de uma estação de metro servida de cinco linhas. É um dos três pontos de chegada da YoyoLoop para quem vem de Lisboa..
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_StopCard_Third_Description {
             get {
@@ -5641,7 +5686,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da Yoyoloop?.
+        ///   Looks up a localized string similar to Porquê apanhar boleia de um transfer da YoyoLoop?.
         /// </summary>
         internal static string StaticPages_Destinos_Why_Title {
             get {
@@ -5677,7 +5722,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem viagens de Lisboa para o Porto, Coimbra e Leiria e retorno. Adicionalmente a Yoyoloop tem viagens do Porto para Coimbra e retorno..
+        ///   Looks up a localized string similar to A YoyoLoop tem viagens de Lisboa para o Porto, Coimbra e Leiria e retorno. Adicionalmente a YoyoLoop tem viagens do Porto para Coimbra e retorno..
         /// </summary>
         internal static string StaticPages_HowTo_MainSubDescription {
             get {
@@ -5686,7 +5731,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to como apanhar boleia da Yoyoloop?.
+        ///   Looks up a localized string similar to como apanhar boleia da YoyoLoop?.
         /// </summary>
         internal static string StaticPages_HowTo_MainTitle {
             get {
@@ -5695,7 +5740,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
+        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a YoyoLoop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
         /// </summary>
         internal static string StaticPages_HowTo_StepFour {
             get {
@@ -5821,7 +5866,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas uma hora e trinta minutos.
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas uma hora e trinta minutos.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime {
             get {
@@ -5852,7 +5897,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Yoyoloop ofere [rest of string was truncated]&quot;;.
+        ///A YoyoLoop ofere [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_SubDescription {
             get {
@@ -5977,7 +6022,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos..
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos..
         /// </summary>
         internal static string StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime {
             get {
@@ -6112,7 +6157,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O transfer da Yoyoloop leva-te de Lisboa até ao Porto em duas horas e meia..
+        ///   Looks up a localized string similar to O transfer da YoyoLoop leva-te de Lisboa até ao Porto em duas horas e meia..
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard__TravelTime {
             get {
@@ -6480,7 +6525,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop tem loops entre Lisboa e o Porto, Coimbra e Leiria e, ainda, loops desde o Porto e Coimbra..
+        ///   Looks up a localized string similar to A YoyoLoop tem loops entre Lisboa e o Porto, Coimbra e Leiria e, ainda, loops desde o Porto e Coimbra..
         /// </summary>
         internal static string StaticPages_Loops_SubDescription {
             get {
@@ -6511,7 +6556,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to 5. Onde são guardados os dados do Utilizador?&lt;br&gt;
         ///&lt;br&gt;
-        ///A equipa da Yoyoloop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
+        ///A equipa da YoyoLoop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
         ///Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Ca [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Five {
@@ -6522,7 +6567,7 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 4. Quem tem acesso aos dados pessoais do utilizador?&lt;br&gt;
-        ///A Yoyoloop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei..
+        ///A YoyoLoop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei..
         /// </summary>
         internal static string StaticPages_Privacy_Four {
             get {
@@ -6531,7 +6576,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O www.Yoyoloop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto u [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to O www.YoyoLoop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto u [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Intro {
             get {
@@ -6551,7 +6596,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to 9. Links para outros sites&lt;br&gt;
         ///&lt;br&gt;
-        ///Dentro no website da yoyoloop, poderão encontrar-se links para websites terceiros e se o Utilizador seguir um desses Links, deverá notar que cada um desses websites tem a sua própria política de privacidade e a que a yoyoloop não aceita qualquer responsabilidade ou obrigação referente a essas políticas..
+        ///Dentro no website da YoyoLoop, poderão encontrar-se links para websites terceiros e se o Utilizador seguir um desses Links, deverá notar que cada um desses websites tem a sua própria política de privacidade e a que a YoyoLoop não aceita qualquer responsabilidade ou obrigação referente a essas políticas..
         /// </summary>
         internal static string StaticPages_Privacy_Nine {
             get {
@@ -6562,9 +6607,9 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to 1.  Âmbito desta Política de Privacidade&lt;br&gt;
         ///&lt;br&gt;
-        ///A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da Yoyoloop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
+        ///A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da YoyoLoop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
         ///Os dados recolhidos ou fornecidos pelo utilizador não serão processados para quaisquer outros fins que não os aqui especificados. &lt;br&gt;
-        ///A Yoyoloop reserva [rest of string was truncated]&quot;;.
+        ///A YoyoLoop reserva [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_One {
             get {
@@ -6584,9 +6629,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 6. A Yoyoloop utiliza cookies no seu Website?&lt;br&gt;
+        ///   Looks up a localized string similar to 6. A YoyoLoop utiliza cookies no seu Website?&lt;br&gt;
         ///&lt;br&gt;
-        ///O website da Yoyoloop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à  [rest of string was truncated]&quot;;.
+        ///O website da YoyoLoop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Six {
             get {
@@ -6595,7 +6640,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop! reconhece a importância de proteger os seus dados pessoais, qualquer que seja a sua natureza. Por esse motivo desenvolvemos um conjunto de medidas de segurança que visam a protecção dos seus dados..
+        ///   Looks up a localized string similar to A YoyoLoop! reconhece a importância de proteger os seus dados pessoais, qualquer que seja a sua natureza. Por esse motivo desenvolvemos um conjunto de medidas de segurança que visam a protecção dos seus dados..
         /// </summary>
         internal static string StaticPages_Privacy_SubTitle {
             get {
@@ -6604,9 +6649,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3. A Yoyoloop utiliza os dados pessoais recolhidos para fins de Marketing e Publicidade?&lt;br&gt;
+        ///   Looks up a localized string similar to 3. A YoyoLoop utiliza os dados pessoais recolhidos para fins de Marketing e Publicidade?&lt;br&gt;
         /// &lt;br&gt;
-        ///A Yoyoloop não utilizará os seus dados pessoais para lhe enviar qualquer correio ou mensagem não solicitada cujo não tenha recebido o seu consentimento explícito. A Yoyoloop não vende nem negocia os seus dados com terceiros..
+        ///A YoyoLoop não utilizará os seus dados pessoais para lhe enviar qualquer correio ou mensagem não solicitada cujo não tenha recebido o seu consentimento explícito. A YoyoLoop não vende nem negocia os seus dados com terceiros..
         /// </summary>
         internal static string StaticPages_Privacy_Three {
             get {
@@ -6632,7 +6677,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Condições gerais para utilizadores da goodlife! em ofertas disponíveis no site www.yoyoloop.com.
+        ///   Looks up a localized string similar to Condições gerais para utilizadores da goodlife! em ofertas disponíveis no site www.YoyoLoop.com.
         /// </summary>
         internal static string StaticPages_Terms_MainDescription {
             get {
@@ -6660,7 +6705,7 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 1.1 Política de Privacidade&lt;br&gt;
-        ///Antes de utilizar o nosso website ou serviços da Yoyoloop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade..
+        ///Antes de utilizar o nosso website ou serviços da YoyoLoop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade..
         /// </summary>
         internal static string StaticPages_Terms_One_One {
             get {
@@ -6680,8 +6725,8 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 1.2 Sobre os Termos e Condições&lt;br&gt;
-        ///A Yoyoloop reserva o direito de adicionar, alterar ou eliminar qualquer um dos Termos de Utilização do seu website e serviços através da atualização do conteúdo desta página e da respectiva comunicação aos seus utilizadores.&lt;br&gt;
-        ///Os Termos e Condições da Yoyoloop abrangem este website, assim como outros sites que mencionam a mesma política..
+        ///A YoyoLoop reserva o direito de adicionar, alterar ou eliminar qualquer um dos Termos de Utilização do seu website e serviços através da atualização do conteúdo desta página e da respectiva comunicação aos seus utilizadores.&lt;br&gt;
+        ///Os Termos e Condições da YoyoLoop abrangem este website, assim como outros sites que mencionam a mesma política..
         /// </summary>
         internal static string StaticPages_Terms_One_Two {
             get {
@@ -6717,7 +6762,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2. Utilizar o Website e Serviços da Yoyoloop.
+        ///   Looks up a localized string similar to 2. Utilizar o Website e Serviços da YoyoLoop.
         /// </summary>
         internal static string StaticPages_Terms_Two {
             get {
@@ -6745,7 +6790,7 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 2.1 Direitos de Autor&lt;br&gt;
-        ///Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conteúdo digital representadas no website,não podem ser copiados, distribuídos, modificados ou colocados noutros websites, sem autorização prévia por escrito de um membro da equipa da Yoyoloop..
+        ///Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conteúdo digital representadas no website,não podem ser copiados, distribuídos, modificados ou colocados noutros websites, sem autorização prévia por escrito de um membro da equipa da YoyoLoop..
         /// </summary>
         internal static string StaticPages_Terms_Two_One {
             get {
@@ -6754,7 +6799,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2.3 Reservas no website da Yoyoloop&lt;br&gt;.
+        ///   Looks up a localized string similar to 2.3 Reservas no website da YoyoLoop&lt;br&gt;.
         /// </summary>
         internal static string StaticPages_Terms_Two_Three {
             get {

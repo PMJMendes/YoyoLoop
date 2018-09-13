@@ -9,6 +9,8 @@ namespace MVP.Calendar
         public List<Route> Routes { get; set; }
         public Selection Selection { get; set; }
         public List<DaySlot> DaySlots { get; set; }
+        public string UserId { get; set; }
+        public bool UserMGM { get; set; }
     }
 
     public class Selection
@@ -19,6 +21,7 @@ namespace MVP.Calendar
         public AccessPoint DAP { get; set;}
         public TimeSpan Time { get; set; }
         public string Promocode { get; set; }
+        public bool MGM { get; set; }
         public Fare.FareType FareType { get; set; }
         public int Seats { get; set; }
         public Guid DepartureId { get; set; }

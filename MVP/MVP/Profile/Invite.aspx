@@ -25,10 +25,10 @@
         <div class="invitefriends__container invitefriends__container--second">
 
             <div class="container-fluid d-flex flex-column justify-content-center pt-5 pb-5">
-                <div class="row justify-content-center mt-5 mb-5">
+                <div class="row justify-content-center mt-5 mb-5 <%= string.IsNullOrEmpty(pageData.UserMGMCode) ? "hide" : "" %>">
                     <div class="invitefriends__why-catch-ride text-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Saved%>"/> <%= pageData.AmountSaved %>€! <br/>
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_MGMTrips1%>"/> <%= pageData.MGMTrips %> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_MGMTrips2%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Saved%>"/> <%= pageData.AmountSaved.ToString() %>€! <br/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_MGMTrips1%>"/> <%= pageData.MGMTrips.ToString() %> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_MGMTrips2%>"/>
                     </div>
                 </div>
                 <div class="row row-no-padding">
@@ -67,70 +67,93 @@
             <ContentTemplate>
                 <div class="invitefriends__container invitefriends__container--third">
 
-                    <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-4 invitefriends__promocode">
-                        <p class="invitefriends__promocode__text mb-5 text-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_Title%>"/></p>
+                    <textarea class="clipboard hide"><%= pageData.UserMGMCode %></textarea>
+                    <script type="text/javascript">
+                        var FacebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + '<%= Request.Url.Authority %>';
+                        var TwitterShareUrl = 'https://twitter.com/home?status=' + '<%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage1%> ' + '<%= pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage2%> ' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage3%>';
+                        var LinkedInShareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + '<%= Request.Url.Authority %>';
+                        var EmailShareUrl = ('mailto:?&subject=&body=' + '<%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage1%> ' + '<%= pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage2%> ' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage3%>').replace(' ', '%20');
+                    </script>
 
-                        <asp:PlaceHolder runat="server" ID="phCopyLink" Visible="true">
-                            <div id="copy-link-1" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
-                                <div class="invitefriends__promocode__input mr-5">
-                                    <div class="invitefriends__promocode__label"><%= pageData.MGMCode %></div>
-                                </div>
-                                <asp:LinkButton runat="server" ID="btnCopyLink" OnClick="btnCopyLink_Click" CssClass="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnCopyLink_Text%>" />
-                            </div>
-                        </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="phPromoShareEligible" runat="server" Visible="true">
+                        <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-4 invitefriends__promocode">
+                            <p class="invitefriends__promocode__text mb-5 text-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_Title%>"/></p>
 
-                        <asp:PlaceHolder runat="server" ID="phLinkCopied" Visible="false">
-                            <div id="copy-link-2" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
-
-                                <!-- Copied popover -->
-                                <div class="invitefriends__popover invitefriends__popover--copied">
-                                    <div class="check">
-
+                            <asp:PlaceHolder runat="server" ID="phCopyLink" Visible="true">
+                                <div id="copy-link-1" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
+                                    <div class="invitefriends__promocode__input mr-5">
+                                        <div class="invitefriends__promocode__label"><%= pageData.UserMGMCode %></div>
                                     </div>
-                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_CopiedPopover%>"/>
+                                    <asp:LinkButton runat="server" ID="btnCopyLink" OnClientClick="javascript:clipboardCopy('.clipboard')" OnClick="btnCopyLink_Click" CssClass="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnCopyLink_Text%>" />
                                 </div>
-                                <!-- End of copied popover -->
+                            </asp:PlaceHolder>
 
-                                <div runat="server" id="PromocodeInput" class="invitefriends__promocode__input mr-5">
-                                    <div class="invitefriends__promocode__label"><%= pageData.MGMCode %></div>
-                                    <div class="invitefriends__promocode__copy"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnCopyLink_Text%>"/></div>
-                                </div>
-                                <asp:LinkButton runat="server" ID="btnShare" OnClick="btnShare_Click" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnShare_Text%>" />
+                            <asp:PlaceHolder runat="server" ID="phLinkCopied" Visible="false">
+                                <div id="copy-link-2" class="d-flex align-items-center justify-content-center invitefriends__copy-link row">
 
-                                <asp:PlaceHolder runat="server" ID="phSharePopover" Visible="false">
-                                    <!-- Share Popover -->
-                                    <div class="invitefriends__popover invitefriends__popover--register">
-                                        <div class="invitefriends__popover__link">
-                                            <img src="/img/face.png" srcset="/img/face@2x.png 2x, /img/face@3x.png 3x" class="face">
-                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_facebook%>"/>
+                                    <!-- Copied popover -->
+                                    <div class="invitefriends__popover invitefriends__popover--copied">
+                                        <div class="check">
+
                                         </div>
+                                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_CopiedPopover%>"/>
+                                    </div>
+                                    <!-- End of copied popover -->
+
+                                    <div runat="server" id="PromocodeInput" class="invitefriends__promocode__input mr-5">
+                                        <div class="invitefriends__promocode__label"><%= pageData.UserMGMCode %></div>
+                                        <div class="invitefriends__promocode__copy"><asp:LinkButton ID="btnInlineCopyLink" runat="server" OnClientClick="javascript:clipboardCopy('.clipboard')" OnClick="btnInlineCopyLink_Click" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_btnCopyLink_Text%>"/></div>
+                                    </div>
+                                    <asp:LinkButton runat="server" ID="btnShare" OnClick="btnShare_Click" class="invitefriends__promocode__reserve d-flex align-items-center justify-content-center" Text="Partilhar" />
+
+                                    <asp:PlaceHolder runat="server" ID="phSharePopover" Visible="false">
+                                        <!-- Share Popover -->
+                                        <div class="invitefriends__popover invitefriends__popover--register">
+                                            <div class="invitefriends__popover__link">
+                                                <img src="/img/face.png" srcset="/img/face@2x.png 2x, /img/face@3x.png 3x" class="face">
+                                                <asp:LinkButton runat="server" ID="btnShareFacebook" OnClick="btnShareTarget_Click" OnClientClick="window.open(FacebookShareUrl, '', 'width=100, height=100, left=24, top=24, scrollbars, resizable');">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_facebook%>"/>
+                                                </asp:LinkButton>
+                                            </div>
                     
-                                        <div class="invitefriends__popover__separator"></div>
+                                            <div class="invitefriends__popover__separator"></div>
 
-                                        <div class="invitefriends__popover__link">
-                                            <img src="/img/twitter.png" srcset="/img/twitter@2x.png 2x, /img/twitter@3x.png 3x">
-                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_twitter%>"/>
+                                            <div class="invitefriends__popover__link">
+                                                <img src="/img/twitter.png" srcset="/img/twitter@2x.png 2x, /img/twitter@3x.png 3x">
+                                                <asp:LinkButton runat="server" ID="btnShareTwitter" OnClick="btnShareTarget_Click" OnClientClick="window.open(TwitterShareUrl, '', 'width=500, height=250, left=24, top=24, scrollbars, resizable');">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_twitter%>"/>
+                                                </asp:LinkButton>
+                                            </div>
+
+                                            <div class="invitefriends__popover__separator"></div>
+
+                                            <div class="invitefriends__popover__link">
+                                                <img src="/img/linkedin.png" srcset="/img/linkedin@2x.png 2x, /img/linkedin@3x.png 3x">
+                                                <asp:LinkButton runat="server" ID="btnShareLinkedin" OnClick="btnShareTarget_Click" OnClientClick="window.open(LinkedInShareUrl, '', 'width=600, height=400, left=24, top=24, scrollbars, resizable');">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_linkedin%>"/>
+                                                </asp:LinkButton>
+                                            </div>
+
+                                            <div class="invitefriends__popover__separator"></div>
+
+                                            <div class="invitefriends__popover__link">
+                                                <img src="/img/email.png" srcset="/img/email@2x.png 2x, /img/email@3x.png 3x">
+                                                <asp:LinkButton runat="server" ID="btnShareEmail" OnClientClick="location.href=EmailShareUrl" OnClick="btnShareTarget_Click">
+                                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_email%>"/>
+                                                </asp:LinkButton>
+                                            </div>
                                         </div>
-
-                                        <div class="invitefriends__popover__separator"></div>
-
-                                        <div class="invitefriends__popover__link">
-                                            <img src="/img/linkedin.png" srcset="/img/linkedin@2x.png 2x, /img/linkedin@3x.png 3x">
-                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_linkedin%>"/>
-                                        </div>
-
-                                        <div class="invitefriends__popover__separator"></div>
-
-                                        <div class="invitefriends__popover__link">
-                                            <img src="/img/email.png" srcset="/img/email@2x.png 2x, /img/email@3x.png 3x">
-                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_ShareMenu_email%>"/>
-                                        </div>
-                                    </div>
-                                    <!-- End of Share Popover -->
-                                </asp:PlaceHolder>
-                            </div>
-                        </asp:PlaceHolder>
-                    </div>
+                                        <!-- End of Share Popover -->
+                                    </asp:PlaceHolder>
+                                </div>
+                            </asp:PlaceHolder>
+                        </div>
+                    </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="phPromoShareNotEligible" runat="server" Visible="false">
+                        <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-4 invitefriends__promocode">
+                            <p class="invitefriends__promocode__text mb-5 text-center"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Invite_Promoshare_NotEligible%>"/></p>
+                        </div>
+                    </asp:PlaceHolder>
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>

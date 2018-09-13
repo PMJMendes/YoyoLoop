@@ -19,6 +19,9 @@ namespace MVP.BackOffice
         protected void Page_Load(object sender, EventArgs e)
         {
             InitData();
+
+            // TEMP REDIRECT TO MAKE PAGE NON-BROWSABLE
+            Response.Redirect("/");
         }
 
         private void InitData()
