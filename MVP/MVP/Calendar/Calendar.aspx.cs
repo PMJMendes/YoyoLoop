@@ -430,13 +430,13 @@ namespace MVP.Calendar
         private IEnumerable<AccessPoint> GetPossibleSAPs()
         {
             return GetPossibleRoutes().Where(r => r.StartRegion.LoopedRegionId.ToString() == localData.Values.StartRegion)
-                                      .Select(r => r.StartRegion).Distinct().FirstOrDefault()?.AccessPoints;
+                                      .Select(r => r.StartRegion).Distinct().FirstOrDefault()?.AccessPoints.Where(ap => ap.Active);
         }
 
         private IEnumerable<AccessPoint> GetPossibleDAPs()
         {
             return GetPossibleRoutes().Where(r => r.EndRegion.LoopedRegionId.ToString() == localData.Values.EndRegion)
-                                      .Select(r => r.EndRegion).Distinct().FirstOrDefault()?.AccessPoints;
+                                      .Select(r => r.EndRegion).Distinct().FirstOrDefault()?.AccessPoints.Where(ap => ap.Active);
         }
 
         private PageState GetInitialData()
