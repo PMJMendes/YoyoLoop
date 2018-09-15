@@ -6,6 +6,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.Facebook;
 using Owin;
 using MVP.Models;
 
@@ -55,9 +56,11 @@ namespace MVP
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(new FacebookAuthenticationOptions
+            {
+                AppId = "1089837954527233",
+                AppSecret = "0858d03f7214b56ae08cc3530f4988f6"
+            });
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
