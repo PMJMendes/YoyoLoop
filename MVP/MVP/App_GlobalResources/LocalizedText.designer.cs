@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Faça login para poder confirmar o seu email.
+        /// </summary>
+        internal static string Account_ConfirmEmail_Login {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Obrigado por confirmares o teu email..
         /// </summary>
         internal static string Account_ConfirmEmail_MainTitle {
