@@ -59,7 +59,12 @@ namespace MVP
             app.UseFacebookAuthentication(new FacebookAuthenticationOptions
             {
                 AppId = "1089837954527233",
-                AppSecret = "0858d03f7214b56ae08cc3530f4988f6"
+                AppSecret = "0858d03f7214b56ae08cc3530f4988f6",
+                Scope =
+                {
+                    "public_profile",
+                    "email"
+                }
             });
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()

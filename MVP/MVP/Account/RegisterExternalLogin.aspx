@@ -27,6 +27,10 @@
                                     Display="Dynamic" CssClass="text-danger" ErrorMessage="Email is required" />
                                 <asp:ModelErrorMessage runat="server" ModelStateKey="email" CssClass="text-error" />
                             </div>
+                            <asp:Label runat="server" AssociatedControlID="name" CssClass="col-md-2 control-label">Name</asp:Label>
+                            <div class="col-md-10">
+                                <asp:TextBox runat="server" ID="name" CssClass="form-control" />
+                            </div>
                         </div>
                          <div class="form-group">
                             <div class="col-md-offset-2 col-md-10">

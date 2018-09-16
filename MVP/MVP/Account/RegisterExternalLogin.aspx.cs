@@ -48,37 +48,49 @@ namespace MVP.Account
                     RedirectOnFail();
                     return;
                 }
-                var user = manager.Find(loginInfo.Login);
-                if (user != null)
-                {
-                    signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                }
-                else if (User.Identity.IsAuthenticated)
-                {
-                    // Apply Xsrf check when linking
-                    var verifiedloginInfo = Context.GetOwinContext().Authentication.GetExternalLoginInfo(IdentityHelper.XsrfKey, User.Identity.GetUserId());
-                    if (verifiedloginInfo == null)
+                //var user = manager.Find(loginInfo.Login);
+                //if (user != null)
+                //{
+                //    signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                //    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                //}
+                //else if (User.Identity.IsAuthenticated)
+                //{
+                //    // Apply Xsrf check when linking
+                //    var verifiedloginInfo = Context.GetOwinContext().Authentication.GetExternalLoginInfo(IdentityHelper.XsrfKey, User.Identity.GetUserId());
+                //    if (verifiedloginInfo == null)
+                //    {
+                //        Response.Write("<script language=javascript>alert('Null verified login info');</script>");
+                //        RedirectOnFail();
+                //        return;
+                //    }
+                //    var result = manager.AddLogin(User.Identity.GetUserId(), verifiedloginInfo.Login);
+                //    if (result.Succeeded)
+                //    {
+                //        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                //    }
+                //    else
+                //    {
+                //        AddErrors(result);
+                //        return;
+                //    }
+                //}
+                //else
+                //{
+                    switch(ProviderName)
                     {
-                        Response.Write("<script language=javascript>alert('Null verified login info');</script>");
-                        RedirectOnFail();
-                        return;
+                        case ("Facebook"):
+                            name.Text = loginInfo.ExternalIdentity.Claims.First(c => c.Type == "urn:facebook:name").Value.ToString();
+                            break;
+                        case ("Google"):
+                            name.Text = loginInfo.ExternalIdentity.Claims.First(c => c.Type == "urn:facebook:name").Value.ToString();
+                            break;
+                        default:
+                            name.Text = string.Empty;
+                            break;
                     }
-                    var result = manager.AddLogin(User.Identity.GetUserId(), verifiedloginInfo.Login);
-                    if (result.Succeeded)
-                    {
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                    }
-                    else
-                    {
-                        AddErrors(result);
-                        return;
-                    }
-                }
-                else
-                {
                     email.Text = loginInfo.Email;
-                }
+                //}
             }
         }
 
