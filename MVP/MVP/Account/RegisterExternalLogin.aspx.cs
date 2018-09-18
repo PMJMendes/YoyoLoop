@@ -3,12 +3,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVP.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MVP.Account
 {

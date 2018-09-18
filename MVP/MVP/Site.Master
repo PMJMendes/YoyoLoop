@@ -95,8 +95,8 @@
             </div>
         </div>
 
-        <yoyo:Login ID="login" runat="server" OnSignIn="UserSignIn" />
-        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Login ID="login" runat="server" OnSignIn="UserSignIn" OnExternalLogin="ExternalLogin" />
+        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" OnExternalLogin="ExternalLogin" />
         <yoyo:Forgot ID="forgot" runat="server"/>
         <yoyo:Message ID="message" runat="server"/>
 

@@ -7,16 +7,16 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVP.Services;
-
+using static MVP.SiteMaster;
 
 namespace MVP.Controls
 {
     public partial class Login : UserControl, IPostBackEventHandler
     {
         private readonly MasterService service = new MasterService();
-        public string ReturnUrl { get; set; }
-
+        
         public event EventHandler<EventArgs> SignIn;
+        public event EventHandler<ExternalLoginEventArgs> ExternalLogin;
 
         protected void LogIn_Click(object sender, EventArgs e)
         {
@@ -53,26 +53,30 @@ namespace MVP.Controls
             SignIn?.Invoke(this, new EventArgs ());
         }
 
+        protected virtual void OnExternalLogin(ExternalLoginEventArgs args)
+        {
+            ExternalLogin?.Invoke(this, args);
+        }
+
         void IPostBackEventHandler.RaisePostBackEvent(string e)
         {
-
             OnSignIn(e);
         }
 
         protected void btnLoginFacebook_ServerClick(object sender, EventArgs e)
         {
-            string provider = "Facebook";
-            // Request a redirect to the external login provider
-            string redirectUrl = ResolveUrl(String.Format(CultureInfo.InvariantCulture, "~/Account/RegisterExternalLogin?{0}={1}&returnUrl={2}", IdentityHelper.ProviderNameKey, provider, ReturnUrl));
-            var properties = new AuthenticationProperties() { RedirectUri = redirectUrl };
-            // Add xsrf verification when linking accounts
-            if (Context.User.Identity.IsAuthenticated)
+            OnExternalLogin(new ExternalLoginEventArgs
             {
-                properties.Dictionary[IdentityHelper.XsrfKey] = Context.User.Identity.GetUserId();
-            }
-            Context.GetOwinContext().Authentication.Challenge(properties, provider);
-            Response.StatusCode = 401;
-            Response.End();
+                Provider = "Facebook"
+            });
+        }
+
+        protected void btnLoginGoogle_ServerClick(object sender, EventArgs e)
+        {
+            OnExternalLogin(new ExternalLoginEventArgs
+            {
+                Provider = "Google"
+            });
         }
     }
 }

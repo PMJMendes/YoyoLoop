@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
@@ -7,6 +8,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 using MVP.Models.Extensions;
 using MVP.Services;
 
@@ -15,6 +17,11 @@ namespace MVP
     public partial class SiteMaster : MasterPage
     {
         public event EventHandler<EventArgs> PassSignIn;
+
+        public class ExternalLoginEventArgs : EventArgs
+        {
+            public string Provider;
+        }
 
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -117,6 +124,28 @@ namespace MVP
         {
             GA_Login(Context.User.Identity.GetUserId());
             PassSignIn?.Invoke(this, e);
+        }
+
+        protected void ExternalLogin(object sender, ExternalLoginEventArgs e)
+        {
+            string provider = e.Provider;
+            if (string.IsNullOrEmpty(provider))
+            {
+                return;
+            }
+            string returnUrl = Request.Url.PathAndQuery;
+            string redirectUrl = ResolveUrl(String.Format(CultureInfo.InvariantCulture, "~/Account/RegisterExternalLogin?{0}={1}&returnUrl={2}", IdentityHelper.ProviderNameKey, provider, returnUrl));
+            var properties = new AuthenticationProperties()
+            {
+                RedirectUri = redirectUrl
+            };
+            if (Context.User.Identity.IsAuthenticated)
+            {
+                properties.Dictionary[IdentityHelper.XsrfKey] = Context.User.Identity.GetUserId();
+            }
+            Context.GetOwinContext().Authentication.Challenge(properties, provider);
+            Response.StatusCode = 401;
+            Response.End();
         }
 
         protected void btnChangeLangPortuguese_Click(object sender, EventArgs e)
