@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using MVP.Models.Extensions;
+using MVP.Models.Helpers;
 using MVP.Services;
 
 namespace MVP
@@ -111,6 +112,16 @@ namespace MVP
                         CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
                         break;
                 }
+            }
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string error = (string)Session["master.error"];
+            if(!string.IsNullOrEmpty(error))
+            {
+                ApplicationHelpers.ShowMessage(Page, error);
+                Session["master.error"] = null;
             }
         }
 
