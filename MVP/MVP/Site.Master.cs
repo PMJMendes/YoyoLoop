@@ -131,7 +131,7 @@ namespace MVP
             Response.Redirect("/");
         }
 
-        protected void UserSignIn(object sender, EventArgs e)
+        public void UserSignIn(object sender, EventArgs e)
         {
             GA_Login(Context.User.Identity.GetUserId());
             PassSignIn?.Invoke(this, e);
@@ -177,5 +177,11 @@ namespace MVP
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-LoginKey", "GTM_Login('" + userid + "');", true);
         }
+
+        public void GA_Signup(string id, string email, string name)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
+        }
+
     }
 }
