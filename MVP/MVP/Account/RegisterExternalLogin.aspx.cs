@@ -24,7 +24,8 @@ namespace MVP.Account
         }
         private void RedirectOnFail(string error, string url)
         {
-            error += "<br><br>Tenta outra vez e se o erro persistir, contacta-nos.";
+            error += "<br><br>";
+            error += Resources.LocalizedText.Account_RegisterExternalLogin_Error_SecondLine;
             Session["master.error"] = error;
             if(string.IsNullOrEmpty(url))
             {
@@ -39,68 +40,65 @@ namespace MVP.Account
             string returnUrl = Request.QueryString["ReturnUrl"];
             if (String.IsNullOrEmpty(ProviderName))
             {
-                string error = "Não foi possível contactar o serviço de autenticação externo.";
+                string error = Resources.LocalizedText.Account_RegisterExternalLogin_NullProvider;
                 RedirectOnFail(error, returnUrl);
                 return;
             }
-            if (!IsPostBack)
+            var owinContext = Context.GetOwinContext();
+            var loginInfo = owinContext.Authentication.GetExternalLoginInfo();
+            if (loginInfo == null)
             {
-                var owinContext = Context.GetOwinContext();
-                var loginInfo = owinContext.Authentication.GetExternalLoginInfo();
-                if (loginInfo == null)
+                string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
+                RedirectOnFail(error, returnUrl);
+                return;
+            }
+            var manager = owinContext.GetUserManager<ApplicationUserManager>();
+            var signInManager = owinContext.Get<ApplicationSignInManager>();
+            var user = manager.Find(loginInfo.Login);
+            if (user != null)
+            {
+                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                (this.Master as SiteMaster).UserSignIn(this, new EventArgs());
+                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+            }
+            else if (User.Identity.IsAuthenticated)
+            {
+                // Apply Xsrf check when linking
+                var verifiedloginInfo = owinContext.Authentication.GetExternalLoginInfo(IdentityHelper.XsrfKey, User.Identity.GetUserId());
+                if (verifiedloginInfo == null)
                 {
-                    string error = "Ocorreu um erro ao autenticar com o" + " " + ProviderName + ".";
+                    string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
                     RedirectOnFail(error, returnUrl);
                     return;
                 }
-                var manager = owinContext.GetUserManager<ApplicationUserManager>();
-                var signInManager = owinContext.Get<ApplicationSignInManager>();
-                var user = manager.Find(loginInfo.Login);
-                if (user != null)
+                var result = manager.AddLogin(User.Identity.GetUserId(), verifiedloginInfo.Login);
+                if (result.Succeeded)
                 {
-                    signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                    (this.Master as SiteMaster).UserSignIn(this, new EventArgs());
                     IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                }
-                else if (User.Identity.IsAuthenticated)
-                {
-                    // Apply Xsrf check when linking
-                    var verifiedloginInfo = owinContext.Authentication.GetExternalLoginInfo(IdentityHelper.XsrfKey, User.Identity.GetUserId());
-                    if (verifiedloginInfo == null)
-                    {
-                        string error = "Ocorreu um erro ao autenticar com o" + " " + ProviderName + ".";
-                        RedirectOnFail(error, returnUrl);
-                        return;
-                    }
-                    var result = manager.AddLogin(User.Identity.GetUserId(), verifiedloginInfo.Login);
-                    if (result.Succeeded)
-                    {
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
-                    }
-                    else
-                    {
-                        string error = "Ocorreu um erro ao autenticar com o" + " " + ProviderName + ".";
-                        RedirectOnFail(error, returnUrl);
-                        return;
-                    }
                 }
                 else
                 {
-                    string name = loginInfo.ExternalIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value.ToString();
-                    string email = loginInfo.Email;
-                    if(string.IsNullOrEmpty(email))
-                    {
-                        string error = "Ocorreu um erro ao autenticar com o" + " " + ProviderName + ".";
-                        RedirectOnFail(error, returnUrl);
-                        return;
-                    }
-                    CreateAndLoginUser(owinContext, email, name, returnUrl);
+                    string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
+                    RedirectOnFail(error, returnUrl);
+                    return;
                 }
+            }
+            else
+            {
+                string name = loginInfo.ExternalIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value.ToString();
+                string email = loginInfo.Email;
+                if(string.IsNullOrEmpty(email))
+                {
+                    string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
+                    RedirectOnFail(error, returnUrl);
+                    return;
+                }
+                CreateAndLoginUser(owinContext, email, name, returnUrl);
             }
         }
 
         // This should be in services along with some stuff up above. The whole service flow / page decoupling needs to be refactored.
-        // At this point in time, its just easier to do error handling from the controller.
+        // At this point in time, its just easier to do the error handling from the controller.
         private void CreateAndLoginUser(IOwinContext context, string email, string name, string returnUrl)
         {
             var manager = context.GetUserManager<ApplicationUserManager>();
@@ -112,7 +110,7 @@ namespace MVP.Account
                 var loginInfo = context.Authentication.GetExternalLoginInfo();
                 if (loginInfo == null)
                 {
-                    string error = "Ocorreu um erro ao autenticar com o" + " " + ProviderName + ".";
+                    string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
                     RedirectOnFail(error, returnUrl);
                     return;
                 }
@@ -126,7 +124,7 @@ namespace MVP.Account
                 }
                 else
                 {
-                    string error = "Ocorreu um erro ao autenticar com o" + " " + ProviderName + ".";
+                    string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
                     RedirectOnFail(error, returnUrl);
                     return;
                 }
