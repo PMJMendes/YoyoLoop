@@ -5,6 +5,7 @@ using MVP.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -77,18 +78,7 @@ namespace MVP.Account
                 //}
                 //else
                 //{
-                    switch(ProviderName)
-                    {
-                        case ("Facebook"):
-                            name.Text = loginInfo.ExternalIdentity.Claims.First(c => c.Type == "urn:facebook:name").Value.ToString();
-                            break;
-                        case ("Google"):
-                            name.Text = loginInfo.ExternalIdentity.Claims.First(c => c.Type == "urn:facebook:name").Value.ToString();
-                            break;
-                        default:
-                            name.Text = string.Empty;
-                            break;
-                    }
+                    name.Text = loginInfo.ExternalIdentity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value.ToString();
                     email.Text = loginInfo.Email;
                 //}
             }

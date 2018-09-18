@@ -56,7 +56,7 @@ namespace MVP
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(new FacebookAuthenticationOptions
+            app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
             {
                 AppId = "1089837954527233",
                 AppSecret = "0858d03f7214b56ae08cc3530f4988f6",
@@ -67,11 +67,16 @@ namespace MVP
                 }
             });
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "779489035834-19k77619vuuafbt2bc2sd0j5u4a6icqu.apps.googleusercontent.com",
+                ClientSecret = "TtKJZ7mJV2vcS2W_nQE8-i8b",
+                Scope =
+                {
+                    "profile",
+                    "email"
+                }
+            });
         }
     }
 }
