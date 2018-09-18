@@ -1,16 +1,22 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
 using MVP.Services;
+using static MVP.SiteMaster;
 
 namespace MVP.Controls
 {
     public partial class Login : UserControl, IPostBackEventHandler
     {
         private readonly MasterService service = new MasterService();
-
+        
         public event EventHandler<EventArgs> SignIn;
+        public event EventHandler<ExternalLoginEventArgs> ExternalLogin;
 
         protected void LogIn_Click(object sender, EventArgs e)
         {
@@ -47,10 +53,30 @@ namespace MVP.Controls
             SignIn?.Invoke(this, new EventArgs ());
         }
 
+        protected virtual void OnExternalLogin(ExternalLoginEventArgs args)
+        {
+            ExternalLogin?.Invoke(this, args);
+        }
+
         void IPostBackEventHandler.RaisePostBackEvent(string e)
         {
-
             OnSignIn(e);
+        }
+
+        protected void btnLoginFacebook_ServerClick(object sender, EventArgs e)
+        {
+            OnExternalLogin(new ExternalLoginEventArgs
+            {
+                Provider = "Facebook"
+            });
+        }
+
+        protected void btnLoginGoogle_ServerClick(object sender, EventArgs e)
+        {
+            OnExternalLogin(new ExternalLoginEventArgs
+            {
+                Provider = "Google"
+            });
         }
     }
 }

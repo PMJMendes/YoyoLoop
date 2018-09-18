@@ -97,6 +97,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tenta outra vez e se o erro persistir, contacta-nos..
+        /// </summary>
+        internal static string Account_RegisterExternalLogin_Error_SecondLine {
+            get {
+                return ResourceManager.GetString("Account_RegisterExternalLogin_Error_SecondLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não foi possível contactar o serviço de autenticação externo..
+        /// </summary>
+        internal static string Account_RegisterExternalLogin_NullProvider {
+            get {
+                return ResourceManager.GetString("Account_RegisterExternalLogin_NullProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao autenticar com o.
+        /// </summary>
+        internal static string Account_RegisterExternalLogin_ProviderError {
+            get {
+                return ResourceManager.GetString("Account_RegisterExternalLogin_ProviderError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Re-iniciado.
         /// </summary>
         internal static string Account_ResetPassword_btnReset_Text {

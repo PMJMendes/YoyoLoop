@@ -340,14 +340,16 @@ namespace MVP.Checkout
         protected void GA_Purchase()
         {
             string id = pageData.BookingId.ToString();
+            string promocode = pageData.Promocode;
             string fare = pageData.FareType.ToString();
             string mgm = (pageData.MGM || pageData.UserMGM).ToString();
             string cost = pageData.Cost.ToString();
             string tax = (pageData.Cost * (decimal)0.06).ToString();
             string route = pageData.StartRegionName + "-" + pageData.EndRegionName;
+            string type = "IDA";
             string date = pageData.StartTime.ToString("F", ApplicationHelpers.DefaultCulture());
             string seats = pageData.Seats.ToString();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-TransactionKey", "GTM_Transaction('" + id + "','" + fare + "','" + mgm + "','" + cost + "','" + tax + "','" + route + "','" + date + "','" + seats + "');", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-TransactionKey", "GTM_Transaction('" + id + "','" + promocode + "','" + fare + "','" + mgm + "','" + cost + "','" + tax + "','" + route + "','" + type + "','" + date + "','" + seats + "');", true);
         }
 
         protected void RedirectToConfirm()
