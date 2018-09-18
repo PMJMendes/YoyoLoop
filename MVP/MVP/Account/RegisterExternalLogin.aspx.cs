@@ -129,6 +129,12 @@ namespace MVP.Account
                     return;
                 }
             }
+            else
+            {
+                string error = Resources.LocalizedText.Account_RegisterExternalLogin_ProviderError + " " + ProviderName + ".";
+                RedirectOnFail(error, returnUrl);
+                return;
+            }
         }
     }
 }
