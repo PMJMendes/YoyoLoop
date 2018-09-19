@@ -995,7 +995,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Os veículos da Yoyoloop são elétricos?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Electric_Answer" xml:space="preserve">
-    <value>Ainda não. Os nossos transfers atuais são veículos de oito lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades.</value>
+    <value>Ainda não. Os nossos transfers atuais são veículos de cinco lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Insurance" xml:space="preserve">
     <value>Tenho cobertura de seguro quando viajo com a Yoyoloop?</value>
@@ -1013,7 +1013,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Quantos lugares tem um veículo da Yoyoloop?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Seats_Answer" xml:space="preserve">
-    <value>De momento, os nossos transfers são Mercedes V-class com 8 lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos.</value>
+    <value>De momento, os nossos transfers são Mercedes V-class com cinco lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Wifi" xml:space="preserve">
     <value>Os veículos da Yoyoloop têm todos wifi?</value>
@@ -1058,7 +1058,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Loops Populares</value>
   </data>
   <data name="HomePage_SubTitle" xml:space="preserve">
-    <value>Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio.</value>
+    <value>Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo.</value>
   </data>
   <data name="HomePage_SuggestLink" xml:space="preserve">
     <value>Não encontras a tua cidade?</value>
@@ -1599,7 +1599,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Sobre nós</value>
   </data>
   <data name="StaticPages_About_Shuttles_SubTitle" xml:space="preserve">
-    <value>Cada um dos nossos shuttles são veículos de luxo de 8 lugares (Mercedes V-class Avantgarde, com estofos em pele). Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem</value>
+    <value>Cada um dos nossos shuttles são veículos de luxo de cinco lugares (Mercedes V-class Avantgarde, com estofos em pele). Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem</value>
   </data>
   <data name="StaticPages_About_Shuttles_Title" xml:space="preserve">
     <value>Os nossos shuttles</value>
@@ -2199,7 +2199,7 @@ A Yoyoloop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de 
     <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção. @lorena - OK</comment>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Description" xml:space="preserve">
-    <value>→ Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de oito lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa.</value>
+    <value>→ Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de cinco lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa.</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons" xml:space="preserve">
     <value>→ Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;</value>
