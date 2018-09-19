@@ -1052,7 +1052,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Popular Loops</value>
   </data>
   <data name="HomePage_SubTitle" xml:space="preserve">
-    <value>Book your seat on an five-seat premium transfer driven by a professional driver, &lt;br&gt; and enjoy a non-stop trip where you can work comfortably, with wifi on board.</value>
+    <value>Book your seat on an five-seat premium transfer driven by a professional driver, and enjoy a non-stop trip where you can work comfortably, with wifi on board.</value>
   </data>
   <data name="HomePage_SuggestLink" xml:space="preserve">
     <value>Can't find your city?</value>
@@ -1133,7 +1133,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Why you should ride on a Yoyoloop transfer</value>
   </data>
   <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
-    <value>Yoyoloop serviçe is a different "air bridge" between Lisboa and Porto,&lt;br&gt; based on five-seat premium transfers that go on the motorway. </value>
+    <value>A different "air bridge" between Lisboa and Porto, based on five-seat premium transfers that go on the motorway. </value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
     <value>Going by train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
@@ -1915,7 +1915,7 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Popular destinations</value>
   </data>
   <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
-    <value>Yoyoloop serviçe is a different "air bridge" between Lisboa and Porto,&lt;br&gt; based on five-seat premium transfers that go on the motorway. </value>
+    <value>A different "air bridge", based on five-seat premium transfers that go on the motorway. </value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
     <value>Yoyoloop gives you a ride from Lisbon and Coimbra to Porto. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
