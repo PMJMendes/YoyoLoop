@@ -120,15 +120,26 @@
   <data name="Account_ConfirmEmail_Error" xml:space="preserve">
     <value>Ocorreu um erro</value>
   </data>
+  <data name="Account_ConfirmEmail_Login" xml:space="preserve">
+    <value>Faça login para poder confirmar o seu email</value>
+  </data>
   <data name="Account_ConfirmEmail_MainTitle" xml:space="preserve">
     <value>Obrigado por confirmares o teu email.</value>
   </data>
   <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
     <value>Vais ser redirecionado para o teu bilhete dentro de segundos.</value>
   </data>
+  <data name="Account_RegisterExternalLogin_Error_SecondLine" xml:space="preserve">
+    <value>Tenta outra vez e se o erro persistir, contacta-nos.</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_NullProvider" xml:space="preserve">
+    <value>Não foi possível contactar o serviço de autenticação externo.</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_ProviderError" xml:space="preserve">
+    <value>Ocorreu um erro ao autenticar com o</value>
+  </data>
   <data name="Account_ResetPassword_btnReset_Text" xml:space="preserve">
     <value>Re-iniciado</value>
-    <comment>@Lorena: isto é o copy do botão para confirmar a alteração de password</comment>
   </data>
   <data name="Account_ResetPassword_ErrorMessage" xml:space="preserve">
     <value>Ocorreu um erro</value>
@@ -326,7 +337,6 @@
   </data>
   <data name="Confirm_Invite_Title" xml:space="preserve">
     <value>Convida amigos e viaja por apenas 1€</value>
-    <comment>Mantemos "amigos"? @ lorena, sim acho que devemos manter amigos. "colegas" em vez de amigos parece-me demasiado impessoal</comment>
   </data>
   <data name="Confirm_InvoiceSend" xml:space="preserve">
     <value>Vamos enviar a tua fatura para</value>
@@ -350,8 +360,7 @@
     <value>Receber por SMS</value>
   </data>
   <data name="Confirm_MyTickets_Calendar_ShowMessage_Text" xml:space="preserve">
-    <value>Infelizmente o serviço de Calendário não se encontra disponível</value>
-    <comment>Podes explicar este erro? É quando a integração não funciona?</comment>
+    <value>Infelizmente o envio para o calendário não se encontra disponível</value>
   </data>
   <data name="Confirm_MyTickets_Email_ShowMessage_Text1" xml:space="preserve">
     <value>Enviámos um email para</value>
@@ -361,7 +370,6 @@
   </data>
   <data name="Confirm_MyTickets_SMS_ShowMessage_Text" xml:space="preserve">
     <value>Infelizmente o serviço de SMS não se encontra disponível</value>
-    <comment>Mudei ligeiramente a forma como estava escrita</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_AccessTicket" xml:space="preserve">
     <value>Podes aceder ao teu bilhete em qualquer altura</value>
@@ -389,7 +397,7 @@
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
-    <value>Obrigado por escolheres a YoyoLoop!</value>
+    <value>Obrigado por escolheres a Yoyoloop!</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
     <value>Código do bilhete</value>
@@ -399,7 +407,7 @@
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_YoyoloopTeam" xml:space="preserve">
-    <value>A equipa YoyoLoop.</value>
+    <value>A equipa Yoyoloop.</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_HereLink" xml:space="preserve">
     <value>aqui</value>
@@ -414,7 +422,7 @@
     <value>está confirmada</value>
   </data>
   <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer" xml:space="preserve">
-    <value>Por boa prática de segurança, a YoyoLoop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
+    <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
   </data>
   <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail" xml:space="preserve">
     <value>Para teres acesso ao teu bilhete, precisamos que confirmes o teu email, clicando</value>
@@ -424,7 +432,6 @@
   </data>
   <data name="Confirm_SubTitle" xml:space="preserve">
     <value>Encontra o teu bilhete em</value>
-    <comment>Preciso de contexto para o "em"</comment>
   </data>
   <data name="Confirm_UnconfirmedEmail_btnResendLink_Text" xml:space="preserve">
     <value>Re-enviar Link</value>
@@ -484,7 +491,7 @@
     <value>Enviar</value>
   </data>
   <data name="Controls_Forgot_MainTitle" xml:space="preserve">
-    <value>YoyoLoop login</value>
+    <value>Yoyoloop login</value>
   </data>
   <data name="Controls_Forgot_NoAccount" xml:space="preserve">
     <value>Ainda não tens conta?</value>
@@ -529,7 +536,7 @@
     <value>ou</value>
   </data>
   <data name="Controls_Login_MainTitle" xml:space="preserve">
-    <value>Sessão YoyoLoop</value>
+    <value>Sessão Yoyoloop</value>
   </data>
   <data name="Controls_Login_NoAccount" xml:space="preserve">
     <value>Ainda não tens conta?</value>
@@ -563,7 +570,7 @@
     <value>Continuar</value>
   </data>
   <data name="Controls_Register_cbRegisterCampaigns" xml:space="preserve">
-    <value>Quero receber campanhas&lt;br&gt;promocionais da YoyoLoop</value>
+    <value>Quero receber campanhas&lt;br&gt;promocionais da Yoyoloop</value>
   </data>
   <data name="Controls_Register_HaveAccount" xml:space="preserve">
     <value>Já tens conta?</value>
@@ -572,7 +579,7 @@
     <value>Fazer login</value>
   </data>
   <data name="Controls_Register_MainTitle" xml:space="preserve">
-    <value>YoyoLoop login</value>
+    <value>Yoyoloop login</value>
   </data>
   <data name="Controls_Register_RegisterMessage_Failure" xml:space="preserve">
     <value>Ocorreu um erro</value>
@@ -676,16 +683,16 @@
     <value>Não foi possivel encontrar o teu bilhete.</value>
   </data>
   <data name="General_LoopData_Capacity_Coimbra" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="General_LoopData_Capacity_Leiria" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="General_LoopData_Capacity_Porto" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="General_LoopData_Duration_Coimbra" xml:space="preserve">
-    <value>2 H</value>
+    <value>2H</value>
   </data>
   <data name="General_LoopData_Duration_Leiria" xml:space="preserve">
     <value>1 H 30</value>
@@ -704,6 +711,9 @@
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
     <value>36</value>
+  </data>
+  <data name="General_MGMPromo" xml:space="preserve">
+    <value>MemberGetMember</value>
   </data>
   <data name="General_Promocode" xml:space="preserve">
     <value>Promocode</value>
@@ -740,30 +750,28 @@
   </data>
   <data name="Help_SeeAllLink" xml:space="preserve">
     <value>&amp;rarr; Ver todos</value>
-    <comment>Algum erro?</comment>
   </data>
   <data name="Help_SubTitle" xml:space="preserve">
     <value>Perguntas frequentes</value>
   </data>
   <data name="Help_Topic_Careers" xml:space="preserve">
-    <value>Carreiras na YoyoLoop</value>
+    <value>Carreiras na Yoyoloop</value>
   </data>
   <data name="Help_Topic_Careers_Question_HowTo" xml:space="preserve">
-    <value>Como posso conduzir um YoyoLoop?</value>
+    <value>Como posso conduzir um Yoyoloop?</value>
   </data>
   <data name="Help_Topic_Careers_Question_HowTo_Answer" xml:space="preserve">
-    <value>A nossa equipa está a crescer! Se tens interesse em juntar-te à nossa equipa, por favor envia o teu CV para careers@YoyoLoop.com.</value>
+    <value>A nossa equipa está a crescer! Se tens interesse em juntar-te à nossa equipa, por favor envia o teu CV para careers@Yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_Corporate" xml:space="preserve">
     <value>Empresas</value>
-    <comment>Ou "Corporate"?</comment>
   </data>
   <data name="Help_Topic_Corporate_Question_CorporatePricing" xml:space="preserve">
     <value>Têm preços especiais para empresas?</value>
   </data>
   <data name="Help_Topic_Corporate_Question_CorporatePricing_Answer" xml:space="preserve">
-    <value>A YoyoLoop oferece preços especiais para empresas, que incluem descontos especiais e programas de lançamento do serviço para os colaboradores da empresa.
-Para mais informações, contacte-nos por favor em empresas@YoyoLoop.com.</value>
+    <value>A Yoyoloop oferece preços especiais para empresas, que incluem descontos especiais e programas de lançamento do serviço para os colaboradores da empresa.
+Para mais informações, contacte-nos por favor em empresas@Yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_Corporate_Question_TaxInvoices" xml:space="preserve">
     <value>Posso emitir faturas com contribuinte?</value>
@@ -775,7 +783,7 @@ Para mais informações, contacte-nos por favor em empresas@YoyoLoop.com.</value
     <value>Posso saber quanto gastei no total?</value>
   </data>
   <data name="Help_Topic_Corporate_Question_TotalSpending_Answer" xml:space="preserve">
-    <value>A YoyoLoop envia aos clientes empresariais um email com um resumo mensal de todas as viagens efetuadas ao longo de um mês e os respetivos custos.</value>
+    <value>A Yoyoloop envia aos clientes empresariais um email com um resumo mensal de todas as viagens efetuadas ao longo de um mês e os respetivos custos.</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo" xml:space="preserve">
     <value>Descontos e promoções</value>
@@ -802,11 +810,10 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>O que ganham os meus amigos por viajar com o meu código promocional?</value>
   </data>
   <data name="Help_Topic_Invite_Question_FriendsBenefits_Answer" xml:space="preserve">
-    <value>Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da YoyoLoop.</value>
+    <value>Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da Yoyoloop.</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
-    <value>Posso partilhar o meu código promocional com amigos que já tenham usado a YoyoLoop?</value>
-    <comment>Esta pergunta/resposta é um pouco confusa. Fará mais sentido dizer "Não. Os seus códigos promocionais apenas podem ser aplicados na primeira viagem de um utilizador."</comment>
+    <value>Posso partilhar o meu código promocional com amigos que já tenham usado a Yoyoloop?</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers_Answer" xml:space="preserve">
     <value>Não. Cada amigo com quem partilhares o teu código promocional só poderá usá-lo uma vez.</value>
@@ -821,7 +828,7 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>O que é que eu ganho?</value>
   </data>
   <data name="Help_Topic_Invite_Question_MyBenefits_Answer" xml:space="preserve">
-    <value>Por cada amigo que viajar com a YoyoLoop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!</value>
+    <value>Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!</value>
   </data>
   <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
     <value>Onde posso partilhar o meu código promocional?</value>
@@ -836,13 +843,13 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>Posso levar malas/bagagem?</value>
   </data>
   <data name="Help_Topic_Luggage_Question_CanIBring_Answer" xml:space="preserve">
-    <value>Sim, desde que estejam dentro dos limites de bagagem da YoyoLoop.</value>
+    <value>Sim, desde que estejam dentro dos limites de bagagem da Yoyoloop.</value>
   </data>
   <data name="Help_Topic_Luggage_Question_NotAllowed" xml:space="preserve">
     <value>O que não posso levar comigo?</value>
   </data>
   <data name="Help_Topic_Luggage_Question_NotAllowed_Answer" xml:space="preserve">
-    <value>Nos veículos da YoyoLoop não é possível levar instrumentos afiados, armas, animais de estimação, nem materiais inflamáveis ou com odores intensos. Em caso de dúvida, envia um email para reservas@YoyoLoop.com para saber se podes ou não transportar o teu objeto.</value>
+    <value>Nos veículos da Yoyoloop não é possível levar instrumentos afiados, armas, animais de estimação, nem materiais inflamáveis ou com odores intensos. Em caso de dúvida, envia um email para reservas@Yoyoloop.com para saber se podes ou não transportar o teu objeto.</value>
   </data>
   <data name="Help_Topic_Luggage_Question_SizeLimit" xml:space="preserve">
     <value>Qual é o limite de tamanho das malas/bagagem?</value>
@@ -851,16 +858,16 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>Podes transportar uma bagagem de mão (56cm x 45cm x 25cm) semelhantes às malas de cabine que são permitidas nas viagens de avião.</value>
   </data>
   <data name="Help_Topic_Partners" xml:space="preserve">
-    <value>Parceiros YoyoLoop</value>
+    <value>Parceiros Yoyoloop</value>
   </data>
   <data name="Help_Topic_Partners_Question_HowTo" xml:space="preserve">
-    <value>Como se tornar parceiro da YoyoLoop?</value>
+    <value>Como se tornar parceiro da Yoyoloop?</value>
   </data>
   <data name="Help_Topic_Partners_Question_HowTo_Answer" xml:space="preserve">
-    <value>Por favor contacte a nossa equipa de parcerias pelo email: parceiros@YoyoLoop.com.</value>
+    <value>Por favor contacte a nossa equipa de parcerias pelo email: parceiros@Yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_Partners_Question_PartnerProgram" xml:space="preserve">
-    <value>Programa de parceiros YoyoLoop</value>
+    <value>Programa de parceiros Yoyoloop</value>
   </data>
   <data name="Help_Topic_Partners_Question_PartnerProgram_Answer" xml:space="preserve">
     <value>O nosso programa de parceiros está em desenvolvimento. Se a sua empresa trrabalha na área do Turismo e possui frota própria, temos interesse em falar consigo.</value>
@@ -878,16 +885,16 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>Quais são os loops disponíveis?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer" xml:space="preserve">
-    <value>A YoyoLoop tem loops de Lisboa para o Porto, Coimbra e Leiria e, ainda, loops desde o Porto, Coimbra e Leiria até Lisboa.</value>
+    <value>A Yoyoloop tem loops de Lisboa para o Porto, Coimbra e Leiria e, ainda, loops desde o Porto, Coimbra e Leiria até Lisboa.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_BuyAtDeparture" xml:space="preserve">
     <value>Posso comprar a viagem no ponto de partida?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer" xml:space="preserve">
-    <value>É possível comprar uma viagem através da versão mobile do site da YoyoLoop onde quer que estejas. Caso ainda haja lugares vagos, basta comprares a tua viagem e mostrar o bilhete quando o teu motorista chegar.</value>
+    <value>É possível comprar uma viagem através da versão mobile do site da Yoyoloop onde quer que estejas. Caso ainda haja lugares vagos, basta comprares a tua viagem e mostrar o bilhete quando o teu motorista chegar.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_Cancel" xml:space="preserve">
-    <value>Qual a política de cancelamento da YoyoLoop?</value>
+    <value>Qual a política de cancelamento da Yoyoloop?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_Cancel_Answer" xml:space="preserve">
     <value>Sim, é possível cancelar uma viagem até 48 horas antes da hora de partida. O valor que pagaste será transformado em crédito e podes encontrá-lo na tua conta para utilizar em futuras viagens.</value>
@@ -896,19 +903,19 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>Como posso alterar a data da minha viagem?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_ChangeDate_Answer" xml:space="preserve">
-    <value>Sim, podes alterar a data e hora da tua viagem até 48 horas antes da partida. É possível fazer a alteração por telefone — +351 926 475 250 — ou por email — reservas@YoyoLoop.com.</value>
+    <value>Sim, podes alterar a data e hora da tua viagem até 48 horas antes da partida. É possível fazer a alteração por telefone — +351 926 475 250 — ou por email — reservas@Yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_CouldNotBook" xml:space="preserve">
     <value>Não consegui marcar a viagem online. E agora?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer" xml:space="preserve">
-    <value>Podes fazer uma reserva por email — reservas@YoyoLoop.com — ou por telefone, através do +351 926 475 250. Em alternativa, podes simplesmente aparecer no local de partida da viagem 15 minutos antes da hora de partida e comprar o teu bilhete diretamente ao motorista da YoyoLoop.</value>
+    <value>Podes fazer uma reserva por email — reservas@Yoyoloop.com — ou por telefone, através do +351 926 475 250. Em alternativa, podes simplesmente aparecer no local de partida da viagem 15 minutos antes da hora de partida e comprar o teu bilhete diretamente ao motorista da Yoyoloop.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_DifferentAP" xml:space="preserve">
     <value>Posso pedir que me venham buscar a um ponto diferente?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_DifferentAP_Answer" xml:space="preserve">
-    <value>A YoyoLoop é um serviço com pontos de partida e de chegada predefinidos, pelo que não é possível irmos buscar-te a um ponto diferente. No entanto, estamos sempre disponíveis para criar novos pontos de partida e/ou chegada no futuro. Se tiveres alguma sugestão, envia-nos um email para reservas@YoyoLoop.com.</value>
+    <value>A Yoyoloop é um serviço com pontos de partida e de chegada predefinidos, pelo que não é possível irmos buscar-te a um ponto diferente. No entanto, estamos sempre disponíveis para criar novos pontos de partida e/ou chegada no futuro. Se tiveres alguma sugestão, envia-nos um email para reservas@Yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_DownloadTicket" xml:space="preserve">
     <value>Como faço download do meu bilhete?</value>
@@ -940,7 +947,7 @@ Lisboa - Leiria / Leiria- Lisboa: desde 16€ por viagem&lt;br&gt;
 &lt;br&gt;
 Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
 &lt;br&gt;
-Existem preços especiais para clientes empresariais que estabeleçam parcerias com a YoyoLoop. Para saber mais, envia por favor um email para empresas@YoyoLoop.com . </value>
+Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloop.com . </value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_Invoices" xml:space="preserve">
     <value>Emitem fatura com número de contribuinte?</value>
@@ -952,7 +959,7 @@ Existem preços especiais para clientes empresariais que estabeleçam parcerias 
     <value>Quais os métodos de pagamento que aceitam?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer" xml:space="preserve">
-    <value>A YoyoLoop aceita Multibanco e cartões de crédito das redes Visa, Mastercard, American Express, entre outras.</value>
+    <value>A Yoyoloop aceita Multibanco e cartões de crédito das redes Visa, Mastercard, American Express, entre outras.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_SuggestLoop" xml:space="preserve">
     <value>Como posso sugerir um novo loop?</value>
@@ -964,7 +971,7 @@ Existem preços especiais para clientes empresariais que estabeleçam parcerias 
     <value>O meu perfil</value>
   </data>
   <data name="Help_Topic_UserDashboard_Question_WhatCanIDo" xml:space="preserve">
-    <value>O que posso fazer com o meu perfil na YoyoLoop?</value>
+    <value>O que posso fazer com o meu perfil na Yoyoloop?</value>
   </data>
   <data name="Help_Topic_UserDashboard_Question_WhatCanIDo_Answer" xml:space="preserve">
     <value>No teu perfil,  é possível:&lt;br&gt;
@@ -972,51 +979,50 @@ Alterar os teus dados pessoais;&lt;br&gt;
 Adicionar, atualizar ou eliminar dados de pagamento;&lt;br&gt;
 Verificar a tua conta corrente e o crédito atual;&lt;br&gt;
 Ver viagens futuras e viagens anteriores;&lt;br&gt;
-Convidar amigos para a YoyoLoop;&lt;br&gt;
+Convidar amigos para a Yoyoloop;&lt;br&gt;
 Ver quantas viagens a €1 tens disponível para usufruir.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars" xml:space="preserve">
-    <value>Veículos YoyoLoop</value>
+    <value>Veículos Yoyoloop</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Children" xml:space="preserve">
-    <value>Os veículos da YoyoLoop têm capacidade para transportar crianças?</value>
+    <value>Os veículos da Yoyoloop têm capacidade para transportar crianças?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Children_Answer" xml:space="preserve">
     <value>Infelizmente, não temos condições para transportar crianças com idade inferior a 12 anos, uma vez que os veículos não dispõem de cadeiras de criança. Além do mais, as crianças entre os 12 e os 18 anos deverão viajar acompanhadas por um adulto.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Electric" xml:space="preserve">
-    <value>Os veículos da YoyoLoop são elétricos?</value>
+    <value>Os veículos da Yoyoloop são elétricos?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Electric_Answer" xml:space="preserve">
     <value>Ainda não. Os nossos transfers atuais são veículos de oito lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Insurance" xml:space="preserve">
-    <value>Tenho cobertura de seguro quando viajo com a YoyoLoop?</value>
+    <value>Tenho cobertura de seguro quando viajo com a Yoyoloop?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Insurance_Answer" xml:space="preserve">
-    <value>Sim. A YoyoLoop é uma agência de viagens registada no Registo Nacional de Agências de Viagens e Turismo (RNAVTnº 7744), logo os clientes da YoyoLoop beneficiam da proteção do Fundo de Garantia de Viagens e Turismo. Adicionalmente, a YoyoLoop tem um seguro de responsabilidade civil no valor de €250.000. Lê mais sobre este assunto na página do Turismo de Portugal.</value>
+    <value>Sim. A Yoyoloop é uma agência de viagens registada no Registo Nacional de Agências de Viagens e Turismo (RNAVTnº 7744), logo os clientes da Yoyoloop beneficiam da proteção do Fundo de Garantia de Viagens e Turismo. Adicionalmente, a Yoyoloop tem um seguro de responsabilidade civil no valor de €250.000. Lê mais sobre este assunto na página do Turismo de Portugal.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_ProfessionalDriver" xml:space="preserve">
     <value>O motorista é mesmo profissional?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer" xml:space="preserve">
-    <value>A YoyoLoop apenas trabalha com motoristas profissionais. Todos eles passaram no nosso processo de seleção e são membros permanentes da nossa equipa.</value>
+    <value>A Yoyoloop apenas trabalha com motoristas profissionais. Todos eles passaram no nosso processo de seleção e são membros permanentes da nossa equipa.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Seats" xml:space="preserve">
-    <value>Quantos lugares tem um veículo da YoyoLoop?</value>
+    <value>Quantos lugares tem um veículo da Yoyoloop?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Seats_Answer" xml:space="preserve">
     <value>De momento, os nossos transfers são Mercedes V-class com 8 lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Wifi" xml:space="preserve">
-    <value>Os veículos da YoyoLoop têm todos wifi?</value>
+    <value>Os veículos da Yoyoloop têm todos wifi?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Wifi_Answer" xml:space="preserve">
-    <value>Sim, todos os veículos da YoyoLoop contam com wifi a bordo para assegurar uma viagem mais proveitosa.</value>
+    <value>Sim, todos os veículos da Yoyoloop contam com wifi a bordo para assegurar uma viagem mais proveitosa.</value>
   </data>
   <data name="HomePage_MainTitle" xml:space="preserve">
-    <value>Deixa o carro em casa e viaja num transfer de luxo onde podes trabalhar ou relaxar.</value>
-    <comment>@lorena - esta frase é super importante - sugestºoes welcome. Alterei para dar mais destaque ao substituição do carro e menos destaque a boleias. "Deixe o carro em casa e viaje num transfer de luxo ao preço do comboio"??</comment>
+    <value>Deixa o carro em casa e viaja num transfer de luxo ao preço do comboio.</value>
   </data>
   <data name="HomePage_PopularLoops_CantFind" xml:space="preserve">
     <value>Não encontras a tua cidade?</value>
@@ -1052,8 +1058,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Loops Populares</value>
   </data>
   <data name="HomePage_SubTitle" xml:space="preserve">
-    <value>Reserva o teu lugar num transfer de luxo, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio.</value>
-    <comment>@Lorena - também é super importante- vale a penapensares sobre isto e enviares-me sugestões para discutirmos</comment>
+    <value>Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio.</value>
   </data>
   <data name="HomePage_SuggestLink" xml:space="preserve">
     <value>Não encontras a tua cidade?</value>
@@ -1074,7 +1079,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>O teu endereço de email</value>
   </data>
   <data name="HomePage_SuggestLoop_Text" xml:space="preserve">
-    <value>Queres que a YoyoLoop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!</value>
+    <value>Queres que a Yoyoloop te dê boleia até à tua cidade?&lt;br&gt;Sugere um loop e fica atento às novidades!</value>
   </data>
   <data name="HomePage_WhereToCard_Location_And" xml:space="preserve">
     <value>e</value>
@@ -1104,7 +1109,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Acessível</value>
   </data>
   <data name="HomePage_Why_Card_Convenient_Content" xml:space="preserve">
-    <value>Além de contar com partidas frequentes, a YoyoLoop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
+    <value>Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
   </data>
   <data name="HomePage_Why_Card_Convenient_SubTitle" xml:space="preserve">
     <value>Pick up e drop off&lt;br&gt;convenientes</value>
@@ -1122,7 +1127,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Fiável</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_Content" xml:space="preserve">
-    <value>Todas as nossas viagens são feitas em veículos de oito lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono.</value>
+    <value>Todas as nossas viagens são feitas em veículos de sete lugares. Não só tiramos mais carros da estrada, como também ajudamos a reduzir a pegada de carbono.</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_SubTitle" xml:space="preserve">
     <value>Menos carros,&lt;br&gt;mais cidade</value>
@@ -1131,16 +1136,16 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Sustentável</value>
   </data>
   <data name="HomePage_Why_Title" xml:space="preserve">
-    <value>Porquê apanhar boleia de um transfer da YoyoLoop?</value>
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
   </data>
   <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
-    <value>O único transporte ponto a ponto alternativo ao comboios, avião e carro particular.</value>
+    <value>Reserva o teu lugar num transfer de luxo, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio.</value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
-    <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da YoyoLoop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
+    <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
-    <value>Por boa prática de segurança, a YoyoLoop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
+    <value>Por boa prática de segurança, a Yoyoloop só considera a conta de cliente criada após este confirmar o seu endereço de email.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmEmail" xml:space="preserve">
     <value>Por favor confirma o teu endereço de email, clicando</value>
@@ -1155,20 +1160,20 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Obrigado pela tua preferência!</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_Title" xml:space="preserve">
-    <value>Bem-vindo à YoyoLoop!</value>
+    <value>Bem-vindo à Yoyoloop!</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_YoyoloopTeam" xml:space="preserve">
-    <value>A equipa YoyoLoop.</value>
+    <value>A equipa Yoyoloop.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Subject" xml:space="preserve">
-    <value>Bem-vindo à YoyoLoop!</value>
+    <value>Bem-vindo à Yoyoloop!</value>
     <comment>repetido</comment>
   </data>
   <data name="MasterService_SendResetPassword_Body_HereLink" xml:space="preserve">
     <value>aqui</value>
   </data>
   <data name="MasterService_SendResetPassword_Body_ResetAnswer" xml:space="preserve">
-    <value>Por boa prática de segurança, a YoyoLoop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe.</value>
+    <value>Por boa prática de segurança, a Yoyoloop não envia palavras passe por email. Foi gerado um link para que possas definir uma nova palavra passe.</value>
     <comment>repetido</comment>
   </data>
   <data name="MasterService_SendResetPassword_Body_ResetPassword" xml:space="preserve">
@@ -1185,7 +1190,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Foi solicitada a recuperação de palavra-passe na tua conta da</value>
   </data>
   <data name="MasterService_SendResetPassword_Body_YoyoloopTeam" xml:space="preserve">
-    <value>A equipa YoyoLoop.</value>
+    <value>A equipa Yoyoloop.</value>
   </data>
   <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
     <value>Solicitada a recuperação de palavra-passe</value>
@@ -1197,7 +1202,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Ainda não tem viagens.</value>
   </data>
   <data name="MyTrips_Empty_SubTitle" xml:space="preserve">
-    <value>Reserva a tua primeira viagem com a YoyoLoop!</value>
+    <value>Reserva a tua primeira viagem com a Yoyoloop!</value>
   </data>
   <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
     <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!</value>
@@ -1212,16 +1217,16 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Oferece viagens</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
-    <value>Recomenda a YoyoLoop aos teus amigos ao partilhar o teu código promocional</value>
+    <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Title" xml:space="preserve">
-    <value>Recomenda a YoyoLoop</value>
+    <value>Recomenda a Yoyoloop</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
     <value>Viaja por 1€!</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
-    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a YoyoLoop pela primeira vez</value>
+    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
   </data>
   <data name="MyTrips_MainTitle" xml:space="preserve">
     <value>As Minhas Viagens</value>
@@ -1325,6 +1330,9 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
   <data name="Profile_Invite_Promoshare_CopiedPopover" xml:space="preserve">
     <value>Copied to clipboard</value>
   </data>
+  <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
+    <value>Para receberes o teu código promocional só tens que marcar a tua primeira viagem!</value>
+  </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_email" xml:space="preserve">
     <value>Enviar por Email</value>
   </data>
@@ -1336,6 +1344,15 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_twitter" xml:space="preserve">
     <value>Partilhar no twitter</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage1" xml:space="preserve">
+    <value>Usa o código</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage2" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
+    <value>e viaja a 1€.</value>
   </data>
   <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
     <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!</value>
@@ -1350,22 +1367,22 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Oferece viagens</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
-    <value>Recomenda a YoyoLoop aos teus amigos ao partilhar o teu código promocional</value>
+    <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Title" xml:space="preserve">
-    <value>Recomenda a YoyoLoop</value>
+    <value>Recomenda a Yoyoloop</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
-    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a YoyoLoop pela primeira vez</value>
+    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
     <value>Viaja por 1€!</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
-    <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da YoyoLoop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
+    <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Title" xml:space="preserve">
-    <value>Porquê apanhar boleia de um transfer da YoyoLoop?</value>
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
   </data>
   <data name="Profile_MainTitle" xml:space="preserve">
     <value>O Meu perfil</value>
@@ -1518,7 +1535,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Dados pessoais</value>
   </data>
   <data name="SiteMaster_Errors_AntiXSRF" xml:space="preserve">
-    <value>Ocorreu um erro</value>
+    <value>Validation of Anti-XSRF token failed.</value>
     <comment>??? em que contexto acontece este erro?</comment>
   </data>
   <data name="SiteMaster_Footer_Destinos" xml:space="preserve">
@@ -1558,7 +1575,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Loops &amp; horarios</value>
   </data>
   <data name="SiteMaster_NavBar_MyTrips" xml:space="preserve">
-    <value>As minhas viagens</value>
+    <value>hb</value>
   </data>
   <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
     <value>Registar/Entrar</value>
@@ -1588,7 +1605,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Os nossos shuttles</value>
   </data>
   <data name="StaticPages_About_SubDescription" xml:space="preserve">
-    <value>A YoyoLoop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;
+    <value>A Yoyoloop tem a ambição de revolucionar a mobilidade entre cidades. Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento.&lt;br&gt;
 &lt;br&gt;
 Foi por isso que criámos um serviço de transfer ao preço do comboio, alternativo ao automóvel particular, aos comboios e ao avião, com a diferença de ser mais acessível, conveniente, fiável e sustentável.</value>
   </data>
@@ -1602,7 +1619,7 @@ Foi por isso que criámos um serviço de transfer ao preço do comboio, alternat
     <value>Acessível</value>
   </data>
   <data name="StaticPages_About_Why_Convenient_Content" xml:space="preserve">
-    <value>Além de contar com partidas frequentes, a YoyoLoop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
+    <value>Além de contar com partidas frequentes, a Yoyoloop vai pôr-te e buscar-te a pontos estratégicos da cidade, como estações de metro, supermercados, largos dos centros urbanos e as principais zonas de escritórios de Lisboa — e ainda te oferece wifi a bordo.</value>
   </data>
   <data name="StaticPages_About_Why_Convenient_SubTitle" xml:space="preserve">
     <value>Pick up e drop off&lt;br&gt;convenientes</value>
@@ -1656,7 +1673,7 @@ Foi por isso que criámos um serviço de transfer ao preço do comboio, alternat
     <value>Contactos</value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_LoopCard_Description" xml:space="preserve">
-    <value>A YoyoLoop dá-te boleia para Coimbra a partir de Lisboa e vice-versa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+    <value>A Yoyoloop dá-te boleia para Coimbra a partir de Lisboa e vice-versa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days" xml:space="preserve">
     <value>Dias úteis</value>
@@ -1668,19 +1685,16 @@ Foi por isso que criámos um serviço de transfer ao preço do comboio, alternat
     <value>Saídas de Coimbra: 11:00 - 16:00</value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te de Lisboa até Coimbra em apenas 90 minutos</value>
+    <value>O transfer da Yoyoloop leva-te de Lisboa até Coimbra em apenas 90 minutos</value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_MainDescription" xml:space="preserve">
-    <value>
-Apesar de não ser uma cidade com muito trânsito, a cidade universitária de Coimbra conta com mais de 100 mil habitantes. A cidade do Mondego está bem servida de transportes para quem vem da capital, embora os autocarros e comboios sejam demorados. As boleias tradicionais também não são certas e, se vieres com o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
-&lt;br&gt;
-Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra a preço de autocarro. Aproveita uma viagem mais rápida e confortável até à Avenida Fernão de Magalhães.</value>
+    <value>Com a Yoyoloop, podes apanhar um transfer premium de Lisboa até Coimbra a preço de comboio. </value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_MainTitle" xml:space="preserve">
     <value>Deixa o carro em casa e vem de transfer para Coimbra</value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_Stops_Description" xml:space="preserve">
-    <value>Se apanhares um transfer para Coimbra a partir de Lisboa, podes escolher partir de várias paragens diferentes, tais como Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande ou Gare do Oriente. As chegadas a Coimbra serão na Av. Fernão de Magalhães ou na Portagem. Saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a YoyoLoop!</value>
+    <value>Se apanhares um transfer para Coimbra a partir de Lisboa, podes escolher partir de várias paragens diferentes, tais como Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande ou Gare do Oriente. As chegadas a Coimbra serão na Av. Fernão de Magalhães ou na Portagem. Saído do trabalho ou da faculdade, lembra-te que tens lugar marcado à hora marcada com a Yoyoloop!</value>
   </data>
   <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description" xml:space="preserve">
     <value>A Avenida Fernão de Magalhães é central na baixa de Coimbra, com acessos fáceis de carro ou de transfortes públicos de qualquer ponto da cidade. </value>
@@ -1746,13 +1760,13 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra
     <value>Tempo de viagem</value>
   </data>
   <data name="StaticPages_Destinos_Details_Stops_StopCard_HowToGet" xml:space="preserve">
-    <value>Como chegar até ao teu transfer da YoyoLoop</value>
+    <value>Como chegar até ao teu transfer da Yoyoloop</value>
   </data>
   <data name="StaticPages_Destinos_Details_Title" xml:space="preserve">
     <value>DESTINO POPULAR</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_LoopCard_Description" xml:space="preserve">
-    <value>A YoyoLoop dá-te boleia para Leiria a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+    <value>A Yoyoloop dá-te boleia para Leiria a partir de Lisboa. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Days" xml:space="preserve">
     <value>Dias úteis</value>
@@ -1764,10 +1778,10 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra
     <value>Saídas de Leiria: 15:00</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos</value>
+    <value>O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_MainDescription" xml:space="preserve">
-    <value>Apanha um transfer da YoyoLoop para Leiria, a alternativa ao carro particular e aos autocarros</value>
+    <value>Apanha um transfer da Yoyoloop para Leiria, a alternativa ao carro particular e aos autocarros</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_MainTitle" xml:space="preserve">
     <value>Deixa o carro em casa apanha um transfer premium para Leiria.</value>
@@ -1797,7 +1811,7 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra
     <value>Leiria é uma das cidades Portuguesas mais importantes, leiderando uma região Oeste e albergando um vibrante tecido empresarial e um polo universitário importante. Apesar de estar perto de Lisboa, as ligações de transportes públicos a Leiria deixam bastante a desejar, sobretudo no que diz respeio às ligações de comboio.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Description" xml:space="preserve">
-    <value>A YoyoLoop dá-te boleia para Lisboa a partir do Porto, Coimbra e Leiria. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+    <value>A Yoyoloop dá-te boleia para Lisboa a partir do Porto, Coimbra e Leiria. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days" xml:space="preserve">
     <value>Dias úteis</value>
@@ -1809,21 +1823,21 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares de Lisboa até Coimbra
     <value>Saídas de Coimbra 11:00 - 16:00</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te do Porto até Lisboa em duas horas e meia.</value>
+    <value>O transfer da Yoyoloop leva-te do Porto até Lisboa em duas horas e meia.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_MainDescription" xml:space="preserve">
-    <value>Apanha um transfer da YoyoLoop para Lisboa, a alternativa ao carro e ao comboio</value>
+    <value>Apanha um transfer da Yoyoloop para Lisboa, a alternativa ao carro e ao comboio</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_MainTitle" xml:space="preserve">
     <value>Deixa o carro em casa e vem de transfer para Lisboa</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_Description" xml:space="preserve">
-    <value>Se apanhares um transfer para Lisboa, podes escolher parar nas principais zonas de escritórios da capital e ainda ficar a poucos passos de uma estação de metro. Quando voltares para a tua cidade de origem, aproveita para tomar uma bica enquanto esperas pela tua boleia. Lembra-te, com a YoyoLoop, tens lugar marcado à hora marcada!</value>
+    <value>Se apanhares um transfer para Lisboa, podes escolher parar nas principais zonas de escritórios da capital e ainda ficar a poucos passos de uma estação de metro. Quando voltares para a tua cidade de origem, aproveita para tomar uma bica enquanto esperas pela tua boleia. Lembra-te, com a Yoyoloop, tens lugar marcado à hora marcada!</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description" xml:space="preserve">
     <value>Além de ser a zona de residência do Jardim Zoológico de Lisboa, Sete Rios é conhecido por ser outra das mais importantes estações ferroviárias e rodoviárias da cidade. É especialmente importante para quem vem da linha de Sintra e da Margem Sul, assim como para quem chega de autocarro vindo de todos os cantos do país, especialmente da zona sul e região oeste.&lt;br&gt;
 &lt;br&gt;
-Sete Rios é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Cascais.</value>
+Sete Rios é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Cascais.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details" xml:space="preserve">
     <value>Linha Amarela e Linha Vermelha</value>
@@ -1837,7 +1851,7 @@ Sete Rios é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui 
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description" xml:space="preserve">
     <value>As Torres das Amoreiras são um dos edifícios mais icónicos da cidade de Lisboa. Apesar de ser uma zona residencial de excelência e um das principais pólos de escritórios da capital, a zona das Amoreiras não está devidamente servida pela rede de transportes da cidade, especialmente pelo Metropolitano de Lisboa. É um incómodo para os residentes lisboetas, mas é ainda mais doloroso para quem vem dos arredores da capital.&lt;br&gt;
 &lt;br&gt;
-A Torre 3 das Amoreiras é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Leiria.
+A Torre 3 das Amoreiras é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Leiria.
 </value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
@@ -1852,7 +1866,7 @@ A Torre 3 das Amoreiras é um dos pontos de partida da YoyoLoop na cidade de Lis
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description" xml:space="preserve">
     <value>O Marquês de Pombal dispensa apresentações. É uma zona de escritórios por excelência, mas também de alguma actividade turística. É um ponto de entrada importante da cidade de Lisboa, sobretudo para quem vem da zona de Cascais, e é servido de vários transportes públicos, incluindo duas linhas de metro.&lt;br&gt;
 &lt;br&gt;
-O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra.</value>
+O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details" xml:space="preserve">
     <value>Linha Azul e Linha Amarela</value>
@@ -1866,7 +1880,7 @@ O parque de estacionamento do Marquês de Pombal é um dos pontos de partida da 
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description" xml:space="preserve">
     <value>O Campo Grande é, desde há muitos anos, uma zona de transportes importante. É aqui que chegam a maior parte dos autocarros suburbanos provenientes da região Oeste. A crescente presença de grandes empresas na zona, assim como a Universidade Lusófona de Lisboa e várias faculdades da Universidade de Lisboa nas proximidades, reforçou ainda mais a importância de ligar devidamente o Campo Grande.&lt;br&gt;
 &lt;br&gt;
-O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Cascais.</value>
+O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria, Coimbra ou Cascais.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
     <value>Linha Verde, Linha Amarela</value>
@@ -1880,7 +1894,7 @@ O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da YoyoLoop na 
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description" xml:space="preserve">
     <value>A Gare do Oriente é uma das mais importantes estações ferroviárias e rodoviárias da cidade de Lisboa. A sua ligação privilegiada ao Aeroporto de Lisboa pela Avenida de Berlim também contribui para a importância desta zona icónica. Todos os dias, a Gare do Oriente recebe centenas de milhares de pessoas provenientes de vários pontos dos arredores da capital.&lt;br&gt;
 &lt;br&gt;
-A Gare do Oriente é um dos pontos de partida da YoyoLoop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra.</value>
+A Gare do Oriente é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria ou Coimbra.</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details" xml:space="preserve">
     <value>Linha Vermelha</value>
@@ -1902,7 +1916,7 @@ A Gare do Oriente é um dos pontos de partida da YoyoLoop na cidade de Lisboa e 
 &lt;br&gt;
 As alternativas deixam a desejar. Os autocarros e os comboios são demorados, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
 &lt;br&gt;
-Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem mais rápida e confortável até pontos estratégicos da cidade, do Saldanha à Gare do Oriente.</value>
+Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem mais rápida e confortável até pontos estratégicos da cidade, do Saldanha à Gare do Oriente.</value>
   </data>
   <data name="StaticPages_Destinos_MainDescription" xml:space="preserve">
     <value>Destinos populares</value>
@@ -1911,7 +1925,7 @@ Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coi
     <value>A Revolucionar a mobilidade entre cidades, &lt;br&gt; Loop de cada vez</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
-    <value>A YoyoLoop dá-te boleia para o Porto a partir de Lisboa e de Coimbra. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
+    <value>A Yoyoloop dá-te boleia para o Porto a partir de Lisboa e de Coimbra. Escolhe o dia e as horas em que queres viajar, marca a tua viagem e espera que o nosso motorista profissional te apanhe na tua paragem de escolha.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Days" xml:space="preserve">
     <value>Dias úteis</value>
@@ -1923,7 +1937,7 @@ Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coi
     <value>Saídas de Coimbra: 15:00</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te do Porto até &lt;br/&gt;Lisboa em apenas duas horas e meia.</value>
+    <value>O transfer da Yoyoloop leva-te do Porto até &lt;br/&gt;Lisboa em apenas duas horas e meia.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_MainDescription" xml:space="preserve">
     <value>Esquece o comboio e o avião e vem de transfer premium para o Porto</value>
@@ -1934,10 +1948,10 @@ Com a YoyoLoop, podes apanhar um transfer premium até Lisboa desde o Porto, Coi
   <data name="StaticPages_Destinos_Porto_Stops_Description" xml:space="preserve">
     <value>A rede de transportes públicos do Porto deixa a desejar. Os autocarros e os comboios são demorados e o Metro do Porto serve apenas os subúrbios e uma faixa do centro da cidade. Para quem vem de outras cidades, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
 &lt;br&gt;
-Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais rápida e confortável até à Avenida da Boavista, Casa da Música, Trindade, NorteShopping ou GaiaShopping.</value>
+Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais rápida e confortável até à Avenida da Boavista, Casa da Música, Trindade, NorteShopping ou GaiaShopping.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description" xml:space="preserve">
-    <value>A Avenida da Boavista concentra várias zonas de escitórios da zona do Porto. Pela sua dimensão, a YoyoLoop optou por disponbilibizar duas paragens na Av. da Boavista. Uma paragem na zona ascente, junto an Hotel Crown Plaza e perto dos Hoteis Porto palácio e Sheraton Porto e uma segunda paragem na zona Poente, no Edifício Oceanos, perto do colégio de Nossa Sra. do Rosário.</value>
+    <value>A Avenida da Boavista concentra várias zonas de escitórios da zona do Porto. Pela sua dimensão, a Yoyoloop optou por disponbilibizar duas paragens na Av. da Boavista. Uma paragem na zona ascente, junto an Hotel Crown Plaza e perto dos Hoteis Porto palácio e Sheraton Porto e uma segunda paragem na zona Poente, no Edifício Oceanos, perto do colégio de Nossa Sra. do Rosário.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details" xml:space="preserve">
     <value>503 e 504</value>
@@ -1949,7 +1963,7 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao P
     <value>Avenida de Boavista</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_Description" xml:space="preserve">
-    <value>A Casa da Música é uma das principais salas de concerto do Porto e um dos ícones da cidade. Está localizada na Avenida da Boavista, uma das principais avenidas do Porto, e está bem servida de cinco linhas de metro. É um dos três pontos de chegada da YoyoLoop para quem vem de Lisboa.</value>
+    <value>A Casa da Música é uma das principais salas de concerto do Porto e um dos ícones da cidade. Está localizada na Avenida da Boavista, uma das principais avenidas do Porto, e está bem servida de cinco linhas de metro. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
     <value>Autocarro STCP: 203, 208, 507, 704, 803</value>
@@ -1973,10 +1987,10 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao P
     <value>Trindade</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_Description" xml:space="preserve">
-    <value>O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da YoyoLoop para quem vem de Lisboa.</value>
+    <value>O GaiaShopping é localizado em Vila Nova de Gaia e é um dos principais estabelecimentos comerciais do distrito, com quase 150 lojas, salas de cinema e um hipermercado Continente. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
-    <value>&lt;br&gt;</value>
+    <value />
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
     <value>Autocarro STCP: 903, 907</value>
@@ -1985,7 +1999,7 @@ Com a YoyoLoop, podes apanhar um transfer de sete lugares desde Lisboa até ao P
     <value>GaiaShopping</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_Description" xml:space="preserve">
-    <value>Com mais de 260 lojas, o Norte Shopping, localizado na Senhora da Hora, é o maior centro comercial de região Norte. Além disso, tem um centro de escritórios muito importante, servindo de sede a algumas das maiores empresas nacionais. É de muito fácil acesso, já que fica muito perto de uma estação de metro servida de cinco linhas. É um dos três pontos de chegada da YoyoLoop para quem vem de Lisboa.</value>
+    <value>Com mais de 260 lojas, o Norte Shopping, localizado na Senhora da Hora, é o maior centro comercial de região Norte. Além disso, tem um centro de escritórios muito importante, servindo de sede a algumas das maiores empresas nacionais. É de muito fácil acesso, já que fica muito perto de uma estação de metro servida de cinco linhas. É um dos três pontos de chegada da Yoyoloop para quem vem de Lisboa.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details" xml:space="preserve">
     <value>Autocarro STCP: 205, 504, 506, 507, 601&lt;br&gt;
@@ -2035,7 +2049,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
     <value>Sustentável</value>
   </data>
   <data name="StaticPages_Destinos_Why_Title" xml:space="preserve">
-    <value>Porquê apanhar boleia de um transfer da YoyoLoop?</value>
+    <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
   </data>
   <data name="StaticPages_FAQ_Questions" xml:space="preserve">
     <value>Tens alguma pergunta?</value>
@@ -2047,13 +2061,13 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
     <value>Reserva o teu lugar online e aproveita a tua viagem sem paragens, com wifi a bordo e ao preço do comboio</value>
   </data>
   <data name="StaticPages_HowTo_MainSubDescription" xml:space="preserve">
-    <value>A YoyoLoop tem viagens de Lisboa para o Porto, Coimbra e Leiria e retorno. Adicionalmente a YoyoLoop tem viagens do Porto para Coimbra e retorno.</value>
+    <value>A Yoyoloop tem viagens de Lisboa para o Porto, Coimbra e Leiria e retorno. Adicionalmente a Yoyoloop tem viagens do Porto para Coimbra e retorno.</value>
   </data>
   <data name="StaticPages_HowTo_MainTitle" xml:space="preserve">
-    <value>como apanhar boleia da YoyoLoop?</value>
+    <value>como apanhar boleia da Yoyoloop?</value>
   </data>
   <data name="StaticPages_HowTo_StepFour" xml:space="preserve">
-    <value>4 - Lembra-te de partilhar a YoyoLoop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!</value>
+    <value>4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!</value>
   </data>
   <data name="StaticPages_HowTo_StepOne" xml:space="preserve">
     <value>1 - Escolhe onde queres ir e o teu ponto de partida e chegada preferidos.</value>
@@ -2075,6 +2089,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
   </data>
   <data name="StaticPages_Loops_Details_Why_Ride" xml:space="preserve">
     <value>Boleias tradicionais</value>
+    <comment>@Ricardo - Vamos retirar, certo? @ certo</comment>
   </data>
   <data name="StaticPages_Loops_Details_Why_Train" xml:space="preserve">
     <value>Comboio</value>
@@ -2095,7 +2110,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
     <value>desde 26€ por viagem de ida</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas uma hora e trinta minutos</value>
+    <value>O transfer da Yoyoloop leva-te de Coimbra até &lt;br/&gt;Lisboa em apenas uma hora e trinta minutos</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_MainDescription" xml:space="preserve">
     <value>Cansado de conduzir nas viegens entre Lisboa e Coimbra?</value>
@@ -2108,7 +2123,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
 &lt;br&gt;
 Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
 &lt;br&gt;
-A YoyoLoop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares.</value>
+A Yoyoloop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares.</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_Why" xml:space="preserve">
     <value>Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?</value>
@@ -2125,6 +2140,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de 
     <value>→ Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br /&gt;
 → Viagem com paragens no caso de dares boleia a outras pessoas&lt;br /&gt;
 → Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br /&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção.</comment>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_Why_Description" xml:space="preserve">
     <value>Porquê apanhar um transfer entre Lisboa e Coimbra em vez de outros transportes?</value>
@@ -2161,7 +2177,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de 
     <value>Desde 16€ por viagem de ida</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos.</value>
+    <value>O transfer da Yoyoloop leva-te de Leiria até &lt;br/&gt;Lisboa em apenas uma hora e quinze minutos.</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_MainDescription" xml:space="preserve">
     <value>Cansado de conduzir entre Leiria e Lisboa?</value>
@@ -2180,12 +2196,14 @@ A YoyoLoop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de 
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Car_Reasons" xml:space="preserve">
     <value>→ Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;→ Dificuldade de encontrar um lugar de estacionamento &lt;br/&gt;→ Não é possível utilizar o tempo para trabalhar ou relaxar se estás a conduzir o teu carro.&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção. @lorena - OK</comment>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Description" xml:space="preserve">
     <value>→ Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de oito lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa.</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons" xml:space="preserve">
     <value>→ Demoras mais tempo se não fores pela auto-estrada &lt;br/&gt;→ Podes ter várias paragens para deixar outros passageiros&lt;br/&gt;→ Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;→ Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção. @lorena - ok</comment>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Train_Reasons" xml:space="preserve">
     <value>→ Os atrasos, avarias e greves são frequentes &lt;br/&gt;→ A linha do Oeste tem se vindo a degradar de forma significativa&lt;br/&gt;→ A viagem é barulhenta e as carruagens não são confortáveis &lt;br/&gt;→ O único ponto de chegada é a Gare do Oriente, sendo necessário apanhar outro transporte para chegares ao teu destino final em Lisboa.</value>
@@ -2206,7 +2224,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de 
     <value>desde 36€ por viagem</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
-    <value>O transfer da YoyoLoop leva-te de Lisboa até ao Porto em duas horas e meia.</value>
+    <value>O transfer da Yoyoloop leva-te de Lisboa até ao Porto em duas horas e meia.</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_MainDescription" xml:space="preserve">
     <value>Sem check-in, sem filas de segurança, diretamente para o centro da cidade.</value>
@@ -2221,7 +2239,7 @@ Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as 
 &lt;br&gt;
 Ao contrário do que parece, a própria ponte aérea entre Lisboa e o Porto não é a alternativa mais rápida e mais barata pela necessidade de chegar com antecedência ao aeroporto, passar pela fila (às vezes, interminável) da segurança e apanhar um táxi ou outro transporte até ao centro da cidade.&lt;br&gt;
 &lt;br&gt;
-A YoyoLoop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares. </value>
+A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de autocarro — ou 75% mais barato do que se levares o teu próprio carro — com a diferença de teres uma viagem muito mais rápida e confortável num veículo de sete lugares. </value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_Why" xml:space="preserve">
     <value>Porquê apanhar um transfer entre Lisboa e Porto em vez de outros transportes?</value>
@@ -2239,6 +2257,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>→ Gastas 3 a 4 vezes mais dinheiro se viajares sozinho&lt;br/&gt;
 → Viagem com paragens no caso de dares boleia a outras pessoas&lt;br/&gt;
 → Não sendo um motorista profissional, a habilidade do condutor não é fidedigna&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção.</comment>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_Why_Description" xml:space="preserve">
     <value>→ Conta com partidas de 30 em 30 minutos, ao início e ao final do dia&lt;br/&gt;
@@ -2246,6 +2265,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
 → Beneficia de locais de partida e chegada em pontos centrais da tua cidade&lt;br/&gt;
 → Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;
 → Respeita o ambiente ao apanhar boleia de um veículo de sete lugares&lt;br/&gt;</value>
+    <comment>@Ricardo - Originalmente, o primeiro ponto diz "partidas de 30 em 30 minutos". Uma vez que o horário foi alterado, foi alterar esta frase</comment>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_Why_Plane_Reasons" xml:space="preserve">
     <value>→ Não tens internet no avião&lt;br/&gt;
@@ -2259,6 +2279,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>→ Podes demorar muito tempo se não fores pela auto-estrada&lt;br/&gt;
 → Se o carro for cheio, pode ser uma viagem desconfortável, podes não ter espaço para a tua bagagem e podes ter várias paragens para deixar os outros passageiros&lt;br/&gt;
 → Não são fiáveis: não há todos os dias e as horas de partida e o preço variam&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção.</comment>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_Why_Train_Reasons" xml:space="preserve">
     <value>→ A viagem é mais demorada&lt;br/&gt;
@@ -2350,7 +2371,7 @@ A YoyoLoop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>A Revolucionar a mobilidade entre cidades, &lt;br&gt;um Loop de cada vez</value>
   </data>
   <data name="StaticPages_Loops_SubDescription" xml:space="preserve">
-    <value>A YoyoLoop tem loops entre Lisboa e o Porto, Coimbra e Leiria e, ainda, loops desde o Porto e Coimbra.</value>
+    <value>A Yoyoloop tem loops entre Lisboa e o Porto, Coimbra e Leiria e, ainda, loops desde o Porto e Coimbra.</value>
   </data>
   <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
     <value>Loops &amp; Horários</value>
@@ -2363,10 +2384,10 @@ Sem prejuízo de outros prazos previstos na legislação em vigor, nomeadamente 
   <data name="StaticPages_Privacy_Five" xml:space="preserve">
     <value>5. Onde são guardados os dados do Utilizador?&lt;br&gt;
 &lt;br&gt;
-A equipa da YoyoLoop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
+A equipa da Yoyoloop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
 Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Caso deseje ser removido da nossa base de dados, poderá exercer esse direito, contactando-nos através dos diversos meios disponíveis no site.&lt;br&gt;
-A YoyoLoop não guarda diretamente os dados de pagamento dos utilizadores - recorrendo para tal a um parceiro especialista - Stripe. Os termos e condições do nosso parceiro podem ser consultados em LINK DO STRIPE&lt;br&gt;
-Por forma a garantir que os dados guardados do Utilizador estão actualizados e em conformidade, o Utilizador pode através do website da YoyoLoop:&lt;br&gt;
+A Yoyoloop não guarda diretamente os dados de pagamento dos utilizadores - recorrendo para tal a um parceiro especialista - Stripe. Os termos e condições do nosso parceiro podem ser consultados em LINK DO STRIPE&lt;br&gt;
+Por forma a garantir que os dados guardados do Utilizador estão actualizados e em conformidade, o Utilizador pode através do website da Yoyoloop:&lt;br&gt;
 &lt;br&gt;
 Actualizar o seu nome.&lt;br&gt;
 Actualizar a sua morada.&lt;br&gt;
@@ -2376,10 +2397,10 @@ Eliminar permanentemente a sua conta.&lt;br&gt;</value>
   </data>
   <data name="StaticPages_Privacy_Four" xml:space="preserve">
     <value>4. Quem tem acesso aos dados pessoais do utilizador?&lt;br&gt;
-A YoyoLoop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei.</value>
+A Yoyoloop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e Utilizadores, sem o seu consentimento, exceto quando tal for exigido por lei.</value>
   </data>
   <data name="StaticPages_Privacy_Intro" xml:space="preserve">
-    <value>O www.YoyoLoop.com é um serviço da empresa Circunland S.A., doravante designada por goodlife! entidade com sede na Estrada de Outurela, 118, Parque Holanda - Edifício Holanda - 2790-114 Carnaxide. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto utilizador:</value>
+    <value>O www.Yoyoloop.com é um serviço da empresa Yoyoloop Portugal, Unipessoal, Lda, doravante designada por Yoyoloop entidade com sede na Avenida da Rpública, n 50, 2 Piso, 1050-196 Lisboa. A presente política de privacidade esclarece os utilizadores do site sobre as nossas práticas de protecção da respectiva privacidade e dados pessoais e reitera as autorizações que nos foram conferidas, no que respeita a recolha, utilização e processamento de dados pessoais, no momento de registo no site enquanto utilizador:</value>
   </data>
   <data name="StaticPages_Privacy_MainTitle" xml:space="preserve">
     <value>Política de Privacidade</value>
@@ -2387,14 +2408,14 @@ A YoyoLoop não divulga a terceiros quaisquer dados pessoais dos seus Clientes e
   <data name="StaticPages_Privacy_Nine" xml:space="preserve">
     <value>9. Links para outros sites&lt;br&gt;
 &lt;br&gt;
-Dentro no website da YoyoLoop, poderão encontrar-se links para websites terceiros e se o Utilizador seguir um desses Links, deverá notar que cada um desses websites tem a sua própria política de privacidade e a que a YoyoLoop não aceita qualquer responsabilidade ou obrigação referente a essas políticas.</value>
+Dentro no website da yoyoloop, poderão encontrar-se links para websites terceiros e se o Utilizador seguir um desses Links, deverá notar que cada um desses websites tem a sua própria política de privacidade e a que a yoyoloop não aceita qualquer responsabilidade ou obrigação referente a essas políticas.</value>
   </data>
   <data name="StaticPages_Privacy_One" xml:space="preserve">
     <value>1.  Âmbito desta Política de Privacidade&lt;br&gt;
 &lt;br&gt;
-A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da YoyoLoop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
+A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da Yoyoloop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
 Os dados recolhidos ou fornecidos pelo utilizador não serão processados para quaisquer outros fins que não os aqui especificados. &lt;br&gt;
-A YoyoLoop reserva-se no direito de atualizar ou modificar a sua Política de Privacidade a qualquer momento, nomeadamente, de forma a adaptá-la a alterações legislativas.</value>
+A Yoyoloop reserva-se no direito de atualizar ou modificar a sua Política de Privacidade a qualquer momento, nomeadamente, de forma a adaptá-la a alterações legislativas.</value>
   </data>
   <data name="StaticPages_Privacy_Seven" xml:space="preserve">
     <value>7. Direitos do utilizador ao abrigo do regulamento geral de proteção de dados.&lt;br&gt;
@@ -2402,17 +2423,17 @@ A YoyoLoop reserva-se no direito de atualizar ou modificar a sua Política de Pr
 O Utilizador tem o direito de acesso, à retificação, ao esquecimento, à portabilidade dos dados, a limitar ou opor-se ao tratamento dos seus dados pessoais, a apresentar reclamação e a recorrer a ação judicial.</value>
   </data>
   <data name="StaticPages_Privacy_Six" xml:space="preserve">
-    <value>6. A YoyoLoop utiliza cookies no seu Website?&lt;br&gt;
+    <value>6. A Yoyoloop utiliza cookies no seu Website?&lt;br&gt;
 &lt;br&gt;
-O website da YoyoLoop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à YoyoLoop proporcionar a melhor experiência de utilização.</value>
+O website da Yoyoloop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à Yoyoloop proporcionar a melhor experiência de utilização.</value>
   </data>
   <data name="StaticPages_Privacy_SubTitle" xml:space="preserve">
-    <value>A YoyoLoop! reconhece a importância de proteger os seus dados pessoais, qualquer que seja a sua natureza. Por esse motivo desenvolvemos um conjunto de medidas de segurança que visam a protecção dos seus dados.</value>
+    <value>A Yoyoloop! reconhece a importância de proteger os seus dados pessoais, qualquer que seja a sua natureza. Por esse motivo desenvolvemos um conjunto de medidas de segurança que visam a protecção dos seus dados.</value>
   </data>
   <data name="StaticPages_Privacy_Three" xml:space="preserve">
-    <value>3. A YoyoLoop utiliza os dados pessoais recolhidos para fins de Marketing e Publicidade?&lt;br&gt;
+    <value>3. A Yoyoloop utiliza os dados pessoais recolhidos para fins de Marketing e Publicidade?&lt;br&gt;
  &lt;br&gt;
-A YoyoLoop não utilizará os seus dados pessoais para lhe enviar qualquer correio ou mensagem não solicitada cujo não tenha recebido o seu consentimento explícito. A YoyoLoop não vende nem negocia os seus dados com terceiros.</value>
+A Yoyoloop não utilizará os seus dados pessoais para lhe enviar qualquer correio ou mensagem não solicitada cujo não tenha recebido o seu consentimento explícito. A Yoyoloop não vende nem negocia os seus dados com terceiros.</value>
   </data>
   <data name="StaticPages_Privacy_Two" xml:space="preserve">
     <value>2. Para que efeitos são guardados dados pessoais do Utilizador ?&lt;br&gt;
@@ -2426,7 +2447,7 @@ Os dados recolhidos não serão usados para qualquer outro fim.
 </value>
   </data>
   <data name="StaticPages_Terms_MainDescription" xml:space="preserve">
-    <value>Condições gerais para utilizadores da goodlife! em ofertas disponíveis no site www.YoyoLoop.com</value>
+    <value>Condições gerais para utilizadores da Yoyoloop em ofertas disponíveis no site www.yoyoloop.com</value>
   </data>
   <data name="StaticPages_Terms_MainTitle" xml:space="preserve">
     <value>Termos e Condições</value>
@@ -2436,7 +2457,7 @@ Os dados recolhidos não serão usados para qualquer outro fim.
   </data>
   <data name="StaticPages_Terms_One_One" xml:space="preserve">
     <value>1.1 Política de Privacidade&lt;br&gt;
-Antes de utilizar o nosso website ou serviços da YoyoLoop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade.</value>
+Antes de utilizar o nosso website ou serviços da Yoyoloop, sugere-se que todos os Utilizadores leiam e aceitem a nossa política de privacidade.</value>
   </data>
   <data name="StaticPages_Terms_One_Three" xml:space="preserve">
     <value>1.3 Aceitação dos Termos de Utilização&lt;br&gt;
@@ -2444,36 +2465,47 @@ Ao aceder a este website, o utilizador declara ter lido, compreendido e aceite o
   </data>
   <data name="StaticPages_Terms_One_Two" xml:space="preserve">
     <value>1.2 Sobre os Termos e Condições&lt;br&gt;
-A YoyoLoop reserva o direito de adicionar, alterar ou eliminar qualquer um dos Termos de Utilização do seu website e serviços através da atualização do conteúdo desta página e da respectiva comunicação aos seus utilizadores.&lt;br&gt;
-Os Termos e Condições da YoyoLoop abrangem este website, assim como outros sites que mencionam a mesma política.</value>
+A Yoyoloop reserva o direito de adicionar, alterar ou eliminar qualquer um dos Termos de Utilização do seu website e serviços através da atualização do conteúdo desta página e da respectiva comunicação aos seus utilizadores.&lt;br&gt;
+Os Termos e Condições da Yoyoloop abrangem este website, assim como outros sites que mencionam a mesma política.</value>
   </data>
   <data name="StaticPages_Terms_Three" xml:space="preserve">
-    <value>3. Reembolsos e reclamações </value>
+    <value>3. Reembolsos e reclamações &lt;br&gt;</value>
   </data>
   <data name="StaticPages_Terms_Three_One" xml:space="preserve">
-    <value>3.1 Reembolsos</value>
+    <value>3.1 Reembolsos
+É possível o cliente ter acesso a um re-embolso da sua viagem, desde que o cancelamento seja comunicado à Yoyoloop com uma antecedência mínima de 48 horas antes da data e hora de início da viagem. Para solicitar um re-embolso, envie porfavor um email para clientes@yoyoloop.com. No caso do pedido de re-embolso ser efectuad com menos de 48 horas de antecedência, o pagamento da viagem já será reembolsado.</value>
   </data>
   <data name="StaticPages_Terms_Three_Two" xml:space="preserve">
-    <value>3.2 Reclamações</value>
+    <value>3.2 Reclamações
+A Yoyoloop dispõe de livro de reclamações. No caso de pretender efectuar uma reclamação, envie por favor um email para clientes@yoyoloop.com</value>
   </data>
   <data name="StaticPages_Terms_Two" xml:space="preserve">
-    <value>2. Utilizar o Website e Serviços da YoyoLoop</value>
+    <value>2. Utilizar o Website e Serviços da Yoyoloop</value>
   </data>
   <data name="StaticPages_Terms_Two_Five" xml:space="preserve">
-    <value>2.5 Condições gerais de utilização&lt;br&gt;</value>
+    <value>2.5 Condições gerais de utilização&lt;br&gt;
+Através deste site, a Yoyoloop , pretende informá-lo sobre os serviços que disponibiliza. Os direitos de propriedade intelectual sobre todos os conteúdos deste site, exceto os que sejam fornecidos por entidades externas devidamente identificadas, são pertença da Yoyoloop, incluindo as informações, as ferramentas, o desenho gráfico das páginas na Internet, com todos os seus componentes, e todas as figuras, gráficos ou textos. &lt;br&gt;A Yoyoloop não assume qualquer responsabilidade pelos prejuízos decorrentes de eventuais situações de impossibilidade, atraso, suspensão ou interrupção no acesso ao www.yoyoloop.com em virtude de falhas técnicas ou outros motivos. A Yoyoloop não garante que o acesso ao site não sofra interrupções ou perturbações resultantes de problemas técnicos. &lt;br&gt;
+Não é permitida a reprodução total ou parcial de qualquer informação ou conteúdo do www.yoyoloop.com, nem o seu aluguer ou venda, sem autorização prévia da Yoyoloop ou das entidades externas fornecedoras de informação devidamente identificadas.
+&lt;br&gt;A Yoyoloop reserva-se o direito de completar, modificar ou suprimir as informações contidas nas páginas do site.
+&lt;br&gt;A Yoyoloop não pode garantir a total imunidade do seu site a ataques de hackers e vírus ou outros softwares de intrusão.
+&lt;br&gt;Algumas páginas deste site utilizam cookies e javascript. Saiba mais sobre a utilização de cookies clicando aqui. A inibição da utilização destes componentes pode constituir obstáculo à navegação e ao correto processo de simulação e compra.
+&lt;br&gt;O acesso ou a utilização do www.yoyoloop.com implica a aceitação pelo utilizador das condições anteriormente referidas.</value>
   </data>
   <data name="StaticPages_Terms_Two_Four" xml:space="preserve">
-    <value>2.4 Preços e disponibilidades&lt;br&gt;</value>
+    <value>2.4 Preços e disponibilidades&lt;br&gt;
+As disponibilidades que constam no site da Yoyoloop são calculados em cada momento de acordo acom a procura e oferta disponíveis. depois de uma viagem confirmada, a Yoyoloop reserva-se o direito de cancelar a mesma num prazo mínimo de 2 horas antes da hora de partida, por razões operacionais. No caso da viagem ser cancelada por responsabilidade e iniciativa da Yoyoloop, os clientes com bilhetes comprados para a viagem em causa serão reembolsados do svalores anteriormente pagos. &lt;br&gt; A Yoyoloop reserva-se o direito de aumentar, reduzir ou manters os preços para determinada viagem em qualquer altura e sem aviso prévio, de forma a garantir o correcto funcionamento do serviço.</value>
   </data>
   <data name="StaticPages_Terms_Two_One" xml:space="preserve">
     <value>2.1 Direitos de Autor&lt;br&gt;
-Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conteúdo digital representadas no website,não podem ser copiados, distribuídos, modificados ou colocados noutros websites, sem autorização prévia por escrito de um membro da equipa da YoyoLoop.</value>
+Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conteúdo digital representadas no website,não podem ser copiados, distribuídos, modificados ou colocados noutros websites, sem autorização prévia por escrito de um membro da equipa da Yoyoloop.</value>
   </data>
   <data name="StaticPages_Terms_Two_Three" xml:space="preserve">
-    <value>2.3 Reservas no website da YoyoLoop&lt;br&gt;</value>
+    <value>2.3 Reservas no website da Yoyoloop&lt;br&gt;
+As reservas efectuadas no siteda Yoyoloop estão confirmadas quando a mensagem "A sua reserva está confirmada" surge no ecran. O cliente tem a possibilidade de imprimir o bilhete, ou receber um link para download do bilhete no seu email. As reservas serão válidas apenas para utilizadores que confirmaram o seu email através de link enviado por essa via.</value>
   </data>
   <data name="StaticPages_Terms_Two_Two" xml:space="preserve">
-    <value>2.2. Deveres do Utilizador e Cliente&lt;br&gt;</value>
+    <value>2.2. Deveres do Utilizador e Cliente&lt;br&gt;
+O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o anteriormente referido, o acesso a determinados conteúdos e/ou a participação em promoções da Yoyoloop poderá estar sujeita a outras limitações de idade, consoante seja indicado em cada caso. O Utilizador não poderá (i) autorizar a utilização da sua conta por terceiros, (ii) permitir o acesso à ao site através da sua conta a menores de 18 anos, (iii) permitir que pessoas menores de 18 anos efetuem reservas, a menos que os menores estejam acompanhados do Utilizador titular da conta. Em geral, o Utilizador poderá aceder ao site de forma livre e gratuita. O Utilizador reconhece e aceita que o acesso e utilização do site é feito de forma livre e consciente, sob a sua exclusiva responsabilidade. A Yoyoloop não será em caso algum responsável pela utilização que possa ser feita do site pelo Utilizador e/ou por terceiros, nem tão-pouco pelos danos e prejuízos decorrentes da mesma. O Utilizador compromete-se a fazer uma utilização adequada e lícita do site, em conformidade com a legislação aplicável, com as presentes Condições Gerais de Utilização, com a ordem pública e os bons costumes. O Utilizador deverá abster-se de (i) fazer uma utilização não autorizada ou fraudulenta do site; (ii) aceder ou tentar aceder a recursos restritos do site; (iii) utilizar o site com finalidades ou efeitos ilícitos, ilegais, contrários ao estabelecido nas presentes Condições Gerais de Utilização, à boa-fé e à ordem pública, de modo a lesar direitos e interesses de terceiros, ou que por qualquer forma possa causar danos, inutilizar ou sobrecarregar ou impedir a normal utilização ou aproveitamento do site; (iv) causar danos no site ou nos sistemas dos seus prestadores de serviços ou de terceiros; (v) introduzir ou difundir vírus informáticos ou quaisquer outros sistemas físicos ou lógicos susceptíveis de causar danos nos sistemas da Yoyoloop, dos seus fornecedores, outros Utilizadores ou de terceiros, (iv) tentar aceder, utilizar e/ou manipular os dados da Yoyoloop, terceiros Prestadores de Serviços e outros Utilizadores; (vii) reproduzir ou copiar, distribuir, permitir o acesso do público através de qualquer meio de comunicação pública, transformar ou modificar os Conteúdos, salvo mediante autorização do titular dos direitos correspondentes ou se tal for legalmente permitido; (viii) obter ou tentar obter os Conteúdos, empregando para tanto meios ou procedimentos diferentes dos que, consoante o caso, tenham sido colocados à disposição para o efeito. O Utilizador apenas poderá aceder ao site através dos meios autorizados. A Cabify não será responsável caso o Utilizador não disponha de um dispositivo compatível com as versões de browser suportadas pela Yoyoloop.</value>
   </data>
   <data name="Stripe_ErrorHandling_CardError_card_declined" xml:space="preserve">
     <value>O cartão foi declinado.</value>
@@ -2510,32 +2542,5 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
-  </data>
-  <data name="General_MGMPromo" xml:space="preserve">
-    <value>MemberGetMember</value>
-  </data>
-  <data name="Profile_Invite_Promoshare_ShareMessage1" xml:space="preserve">
-    <value>Usa o código</value>
-  </data>
-  <data name="Profile_Invite_Promoshare_ShareMessage2" xml:space="preserve">
-    <value>em</value>
-  </data>
-  <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
-    <value>e viaja a 1€.</value>
-  </data>
-  <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
-    <value>Para receberes o teu código promocional só tens que marcar a tua primeira viagem!</value>
-  </data>
-  <data name="Account_ConfirmEmail_Login" xml:space="preserve">
-    <value>Faça login para poder confirmar o seu email</value>
-  </data>
-  <data name="Account_RegisterExternalLogin_Error_SecondLine" xml:space="preserve">
-    <value>Tenta outra vez e se o erro persistir, contacta-nos.</value>
-  </data>
-  <data name="Account_RegisterExternalLogin_NullProvider" xml:space="preserve">
-    <value>Não foi possível contactar o serviço de autenticação externo.</value>
-  </data>
-  <data name="Account_RegisterExternalLogin_ProviderError" xml:space="preserve">
-    <value>Ocorreu um erro ao autenticar com o</value>
   </data>
 </root>
