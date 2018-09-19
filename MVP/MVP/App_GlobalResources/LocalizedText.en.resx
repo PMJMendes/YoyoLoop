@@ -120,15 +120,26 @@
   <data name="Account_ConfirmEmail_Error" xml:space="preserve">
     <value>An error has occurred.</value>
   </data>
+  <data name="Account_ConfirmEmail_Login" xml:space="preserve">
+    <value>Log in to confirm your email address</value>
+  </data>
   <data name="Account_ConfirmEmail_MainTitle" xml:space="preserve">
     <value>Thank you for confirming your email.</value>
   </data>
   <data name="Account_ConfirmEmail_TicketRedirect" xml:space="preserve">
     <value>You will be re-directed to your ticket in a few seconds.</value>
   </data>
+  <data name="Account_RegisterExternalLogin_Error_SecondLine" xml:space="preserve">
+    <value>Please try again. If the error persists, get in touch with us.</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_NullProvider" xml:space="preserve">
+    <value>The external authentication service could not be contacted.</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_ProviderError" xml:space="preserve">
+    <value>There was an error when logging in with</value>
+  </data>
   <data name="Account_ResetPassword_btnReset_Text" xml:space="preserve">
-    <value>Reset</value>
-    <comment>@Lorena: isto é o copy do botão para confirmar a alteração de password</comment>
+    <value>Confirm password</value>
   </data>
   <data name="Account_ResetPassword_ErrorMessage" xml:space="preserve">
     <value>An error has occurred.</value>
@@ -168,7 +179,7 @@
     <value>Today</value>
   </data>
   <data name="Calendar_CalendarPlaceholder_Text" xml:space="preserve">
-    <value>Choose your trip's origin and destination</value>
+    <value>Choose where you're coming from and where you're going to</value>
   </data>
   <data name="Calendar_CalendarTable_Footer_Ocup" xml:space="preserve">
     <value>Occupation:</value>
@@ -224,7 +235,7 @@
     <value>Choose stop</value>
   </data>
   <data name="Calendar_Header_cbReturnTrip_Label" xml:space="preserve">
-    <value>Return trip</value>
+    <value>Round trip</value>
   </data>
   <data name="Calendar_Header_DestinationDropdown_Label" xml:space="preserve">
     <value>To</value>
@@ -322,11 +333,10 @@
     <value>Share</value>
   </data>
   <data name="Confirm_Invite_Description" xml:space="preserve">
-    <value>Book your seat on an eight-seat transfer driven by a professional driver &lt;br&gt; and enjoy a stop-free trip with wifi on board at the price of a train ticket.</value>
+    <value>Book your seat on an eight-seat premium transfer driven by a professional driver, &lt;br&gt; and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
   </data>
   <data name="Confirm_Invite_Title" xml:space="preserve">
-    <value>Invite your friends and travel for just €1.</value>
-    <comment>Mantemos "amigos"? @ lorena, sim acho que devemos manter amigos. "colegas" em vez de amigos parece-me demasiado impessoal</comment>
+    <value>Invite your friends and travel for just €1</value>
   </data>
   <data name="Confirm_InvoiceSend" xml:space="preserve">
     <value>We will send your invoice to</value>
@@ -350,8 +360,7 @@
     <value>Receive by SMS</value>
   </data>
   <data name="Confirm_MyTickets_Calendar_ShowMessage_Text" xml:space="preserve">
-    <value>Unfortunately the Calendar is not available</value>
-    <comment>Podes explicar este erro? É quando a integração não funciona?</comment>
+    <value>Unfortunately the calendar is not available</value>
   </data>
   <data name="Confirm_MyTickets_Email_ShowMessage_Text1" xml:space="preserve">
     <value>We've sent an email to</value>
@@ -361,7 +370,6 @@
   </data>
   <data name="Confirm_MyTickets_SMS_ShowMessage_Text" xml:space="preserve">
     <value>Sorry, we're not able to send your ticket by SMS at the moment.</value>
-    <comment>Mudei ligeiramente a forma como estava escrita</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_AccessTicket" xml:space="preserve">
     <value>You can access your ticket at any time</value>
@@ -377,7 +385,7 @@
     <value>Final price</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
-    <value>Invite your friends and travel for just €1.</value>
+    <value>Invite your friends and travel for just €1</value>
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
@@ -389,7 +397,7 @@
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
-    <value>Thank you for choosing YoyoLoop!</value>
+    <value>Thank you for choosing Yoyoloop!</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
     <value>Ticket number</value>
@@ -399,7 +407,7 @@
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_YoyoloopTeam" xml:space="preserve">
-    <value>The YoyoLoop Team.</value>
+    <value>The Yoyoloop Team.</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_HereLink" xml:space="preserve">
     <value>here</value>
@@ -414,7 +422,7 @@
     <value>is confirmed</value>
   </data>
   <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmAnswer" xml:space="preserve">
-    <value>As a safety measure, YoyoLoop only considers an account fully created after an email address is confirmed.</value>
+    <value>As a safety measure, Yoyoloop only considers an account fully created after an email address is confirmed.</value>
   </data>
   <data name="Confirm_Service_SendUnconfirmedTicket_Email_Body_ConfirmEmail" xml:space="preserve">
     <value>To access your ticket, you will need to confirm your email. Simply click on</value>
@@ -423,8 +431,7 @@
     <value>Why do I have to confirm my email?</value>
   </data>
   <data name="Confirm_SubTitle" xml:space="preserve">
-    <value>Find your ticket at</value>
-    <comment>Preciso de contexto para o "em"</comment>
+    <value>Find your ticket on:</value>
   </data>
   <data name="Confirm_UnconfirmedEmail_btnResendLink_Text" xml:space="preserve">
     <value>Resend link</value>
@@ -451,19 +458,19 @@
     <value>Trip unavailable</value>
   </data>
   <data name="Controls_BookingPanel_Destination" xml:space="preserve">
-    <value>Destination</value>
+    <value>To</value>
   </data>
   <data name="Controls_BookingPanel_FinalPrice" xml:space="preserve">
     <value>Final price</value>
   </data>
   <data name="Controls_BookingPanel_Going" xml:space="preserve">
-    <value>One way</value>
+    <value>One-way</value>
   </data>
   <data name="Controls_BookingPanel_Goings" xml:space="preserve">
-    <value>One way</value>
+    <value>One-way</value>
   </data>
   <data name="Controls_BookingPanel_Origin" xml:space="preserve">
-    <value>Origin</value>
+    <value>From</value>
   </data>
   <data name="Controls_BookingPanel_PriceSummary" xml:space="preserve">
     <value>Summary</value>
@@ -484,7 +491,7 @@
     <value>Send</value>
   </data>
   <data name="Controls_Forgot_MainTitle" xml:space="preserve">
-    <value>YoyoLoop login</value>
+    <value>Log in to Yoyoloop</value>
   </data>
   <data name="Controls_Forgot_NoAccount" xml:space="preserve">
     <value>Still don't have an account?</value>
@@ -499,7 +506,7 @@
     <value>Please check your email to reset your password.</value>
   </data>
   <data name="Controls_Forgot_SubTitle_1" xml:space="preserve">
-    <value>Forgot password?</value>
+    <value>Forgot your password?</value>
   </data>
   <data name="Controls_Forgot_SubTitle_2" xml:space="preserve">
     <value>Insert your email</value>
@@ -529,7 +536,7 @@
     <value>or</value>
   </data>
   <data name="Controls_Login_MainTitle" xml:space="preserve">
-    <value>YoyoLoop Login</value>
+    <value>Log in to Yoyoloop</value>
   </data>
   <data name="Controls_Login_NoAccount" xml:space="preserve">
     <value>Still don't have an account?</value>
@@ -563,7 +570,7 @@
     <value>Continue</value>
   </data>
   <data name="Controls_Register_cbRegisterCampaigns" xml:space="preserve">
-    <value>I want to receive&lt;br&gt;promotional campaigns from YoyoLoop</value>
+    <value>I want to receive&lt;br&gt;promotional campaigns from Yoyoloop</value>
   </data>
   <data name="Controls_Register_HaveAccount" xml:space="preserve">
     <value>Already have an account?</value>
@@ -572,7 +579,7 @@
     <value>Log in</value>
   </data>
   <data name="Controls_Register_MainTitle" xml:space="preserve">
-    <value>YoyoLoop login</value>
+    <value>Log in to Yoyoloop</value>
   </data>
   <data name="Controls_Register_RegisterMessage_Failure" xml:space="preserve">
     <value>An error occurred</value>
@@ -622,7 +629,7 @@
     <comment>repetido</comment>
   </data>
   <data name="Controls_Register_WithEmail" xml:space="preserve">
-    <value>Before receiving your ticket&lt;br&gt;we need to know a few details.</value>
+    <value>Before receiving your ticket&lt;br&gt;we need to know a few details</value>
   </data>
   <data name="Controls_Register_WithFacebook" xml:space="preserve">
     <value>with Facebook</value>
@@ -646,16 +653,16 @@
     <value>Completed</value>
   </data>
   <data name="Controls_Ticket_Destination" xml:space="preserve">
-    <value>Destination</value>
+    <value>To</value>
   </data>
   <data name="Controls_Ticket_Details" xml:space="preserve">
     <value>see details</value>
   </data>
   <data name="Controls_Ticket_Going" xml:space="preserve">
-    <value>Destination</value>
+    <value>TO</value>
   </data>
   <data name="Controls_Ticket_Origin" xml:space="preserve">
-    <value>Origin</value>
+    <value>From</value>
   </data>
   <data name="Controls_Ticket_Pending" xml:space="preserve">
     <value>Pending</value>
@@ -685,7 +692,7 @@
     <value>5</value>
   </data>
   <data name="General_LoopData_Duration_Coimbra" xml:space="preserve">
-    <value>2 H</value>
+    <value>2H</value>
   </data>
   <data name="General_LoopData_Duration_Leiria" xml:space="preserve">
     <value>1 H 30</value>
@@ -705,8 +712,11 @@
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
     <value>36</value>
   </data>
+  <data name="General_MGMPromo" xml:space="preserve">
+    <value>ReferFriend</value>
+  </data>
   <data name="General_Promocode" xml:space="preserve">
-    <value>Promocode</value>
+    <value>Promo code</value>
   </data>
   <data name="General_Seat" xml:space="preserve">
     <value>seat</value>
@@ -740,38 +750,49 @@
   </data>
   <data name="Help_SeeAllLink" xml:space="preserve">
     <value>&amp;rarr; See all</value>
-    <comment>Algum erro?</comment>
   </data>
   <data name="Help_SubTitle" xml:space="preserve">
     <value>Frequently Asked Questions</value>
   </data>
   <data name="Help_Topic_Careers" xml:space="preserve">
-    <value>Careers at YoyoLoop</value>
+    <value>Careers at Yoyoloop</value>
   </data>
   <data name="Help_Topic_Careers_Question_HowTo" xml:space="preserve">
-    <value>How can I drive a YoyoLoop?</value>
+    <value>How can I drive a Yoyoloop vehicle?</value>
   </data>
   <data name="Help_Topic_Careers_Question_HowTo_Answer" xml:space="preserve">
-    <value>Our team is growing! If you want to join our team, please send your CV to careers@YoyoLoop.com</value>
+    <value>Our team is growing! If you want to join our team, please send your CV to careers@yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_Corporate" xml:space="preserve">
     <value>Corporate</value>
-    <comment>Ou "Corporate"?</comment>
   </data>
   <data name="Help_Topic_Corporate_Question_CorporatePricing" xml:space="preserve">
     <value>Do you have special prices for companies?</value>
   </data>
+  <data name="Help_Topic_Corporate_Question_CorporatePricing_Answer" xml:space="preserve">
+    <value>Yes. We offer special prices and discounts for companies, as well as service launch programmes for company employees. For more information, please send an email to empresas@yoyoloop.com.</value>
+  </data>
   <data name="Help_Topic_Corporate_Question_TaxInvoices" xml:space="preserve">
     <value>Do you issue invoices?</value>
   </data>
+  <data name="Help_Topic_Corporate_Question_TaxInvoices_Answer" xml:space="preserve">
+    <value>Yes. As soon as you select your trip, you only need to select the "Company" box and insert the VAT number on the Billing Details section.</value>
+  </data>
   <data name="Help_Topic_Corporate_Question_TotalSpending" xml:space="preserve">
     <value>Can I know how much I spent in total?</value>
+  </data>
+  <data name="Help_Topic_Corporate_Question_TotalSpending_Answer" xml:space="preserve">
+    <value>Yoyoloop sends its corporate clients a monthly email with a summary of all of the trips and the total spend.</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo" xml:space="preserve">
     <value>Discounts and sales</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM" xml:space="preserve">
     <value>How can I book €1 trips and how can I apply a promo code?</value>
+  </data>
+  <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer" xml:space="preserve">
+    <value>To book the €1 trips you won for inviting your friends, you only need to access your account and click on "Invite friends". This is where you can see all the €1 trips you still have available. You only need to click on "Book" to book a €1 for any destination.
+To use a friend's promo code, you simply need to click on "I have a promo code" on the box on the right side of your screen when you're selecting your trip. Paste your code, click on "Book" and you're done!</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes" xml:space="preserve">
     <value>Can I use two promo codes for the same trip?</value>
@@ -785,21 +806,32 @@
   <data name="Help_Topic_Invite_Question_FriendsBenefits" xml:space="preserve">
     <value>What do my friends earn for booking with my promode?</value>
   </data>
+  <data name="Help_Topic_Invite_Question_FriendsBenefits_Answer" xml:space="preserve">
+    <value>Every time you share your promo code with your friends, you receive a €1 trip for any Yoyoloop destination, as will your friends.</value>
+  </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
-    <value>Can I share my promo codes with friends who have already used YoyoLoop?</value>
-    <comment>Esta pergunta/resposta é um pouco confusa. Fará mais sentido dizer "Não. Os seus códigos promocionais apenas podem ser aplicados na primeira viagem de um utilizador."</comment>
+    <value>Can I share my promo codes with friends who have already used Yoyoloop?</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers_Answer" xml:space="preserve">
-    <value>No. Each friend you share your promo code with can only use it once.</value>
+    <value>No. Promo codes can only be applied on a new user's first trip with Yoyoloop.</value>
   </data>
   <data name="Help_Topic_Invite_Question_HowManyFriends" xml:space="preserve">
     <value>How many friends can I invite?</value>
   </data>
+  <data name="Help_Topic_Invite_Question_HowManyFriends_Answer" xml:space="preserve">
+    <value>You can invite as many as you like! The more friends you invite, the more €1 trips you win as soon as they travel for the first time.</value>
+  </data>
   <data name="Help_Topic_Invite_Question_MyBenefits" xml:space="preserve">
     <value>What do I earn?</value>
   </data>
+  <data name="Help_Topic_Invite_Question_MyBenefits_Answer" xml:space="preserve">
+    <value>For each friend who travels with Yoyoloop for the first time with your promo code, you can travel to any destination for just €1!</value>
+  </data>
   <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
     <value>Where can I share my promo code?</value>
+  </data>
+  <data name="Help_Topic_Invite_Question_Share_Answer" xml:space="preserve">
+    <value>You can share your promo code on Facebook, WhatsApp, Twitter, LinkedIn or by email. You can also easily copy your code and share it with your friends in any way you like.</value>
   </data>
   <data name="Help_Topic_Luggage" xml:space="preserve">
     <value>Bags and Luggage</value>
@@ -808,22 +840,34 @@
     <value>Can I bring luggage with me?</value>
   </data>
   <data name="Help_Topic_Luggage_Question_CanIBring_Answer" xml:space="preserve">
-    <value>Yes, as long as they are within YoyoLoop's baggage limits.</value>
+    <value>Yes, as long as they are within Yoyoloop's baggage limits.</value>
   </data>
   <data name="Help_Topic_Luggage_Question_NotAllowed" xml:space="preserve">
     <value>What can't I bring with me?</value>
   </data>
+  <data name="Help_Topic_Luggage_Question_NotAllowed_Answer" xml:space="preserve">
+    <value>Yoyoloop vehicles cannot carry sharp tools, weapons, pets, inflamable materials, or materials with strong scents. If you don't know whether or not you'll be able to take a certain object with you, please send an email to reservas@yoyoloop.com.</value>
+  </data>
   <data name="Help_Topic_Luggage_Question_SizeLimit" xml:space="preserve">
     <value>What is your baggage policy?</value>
   </data>
+  <data name="Help_Topic_Luggage_Question_SizeLimit_Answer" xml:space="preserve">
+    <value>You can transport hand luggage (56cm x 45cm x 25cm) similar to the carry-on bags that are allowed in airplanes.</value>
+  </data>
   <data name="Help_Topic_Partners" xml:space="preserve">
-    <value>YoyoLoop Partners</value>
+    <value>Yoyoloop Partners</value>
   </data>
   <data name="Help_Topic_Partners_Question_HowTo" xml:space="preserve">
-    <value>How can I become a YoyoLoop partner?</value>
+    <value>How can I become a Yoyoloop partner?</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_HowTo_Answer" xml:space="preserve">
+    <value>To become a Yoyoloop partner, please send an email to our partnerships team: parceiros@yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_Partners_Question_PartnerProgram" xml:space="preserve">
-    <value>YoyoLoop's partner programme</value>
+    <value>Yoyoloop's partner programme</value>
+  </data>
+  <data name="Help_Topic_Partners_Question_PartnerProgram_Answer" xml:space="preserve">
+    <value>Our partner programme is in development. If your company operates in the tourism industry and has its own fleet, we want to talk to you. Please send an email to parceiros@yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops" xml:space="preserve">
     <value>Trips and Loops</value>
@@ -831,18 +875,148 @@
   <data name="Help_Topic_TripsAndLoops_Question_AssignedSeats" xml:space="preserve">
     <value>Are there designated seats?</value>
   </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AssignedSeats_Answer" xml:space="preserve">
+    <value>Your seat is guaranteed, but at the moment it's not possible to book a specific seat in one of our vehicles.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AvailableLoops" xml:space="preserve">
+    <value>What loops do you have?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_AvailableLoops_Answer" xml:space="preserve">
+    <value>Yoyoloop has loops from Lisbon to Porto, Coimbra and Leiria, and from Porto to Coimbra, Leiria and Lisbon.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_BuyAtDeparture" xml:space="preserve">
+    <value>Can I book a trip at the departure spot?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_BuyAtDeparture_Answer" xml:space="preserve">
+    <value>You can book a trip wherever you are in the mobile version of our website. If there are free spots, you only need to book your trip and show your ticket as soon as your driver arrives.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Cancel" xml:space="preserve">
+    <value>What is Yoyoloop's cancellation policy?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Cancel_Answer" xml:space="preserve">
+    <value>You can cancel a trip up to 48 hours before the departure time. The amount you paid will be transformed into credit. You'll be able to find it on your account to use in future trips.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_ChangeDate" xml:space="preserve">
+    <value>How can I change the date of my trip?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_ChangeDate_Answer" xml:space="preserve">
+    <value>You can change the day and time of your trip up to 48 hours before the departure time. You can make this change by phone — +351 926 475 250 — or by email — reservas@yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_CouldNotBook" xml:space="preserve">
+    <value>I wasn't able to book a trip online. Now what?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_CouldNotBook_Answer" xml:space="preserve">
+    <value>You can book a trip by email — reservas@yoyoloop.com — or by calling +351 926 475 250. Alternatively, you can simply show up at the loop's departure spot and purchase your ticket from the Yoyoloop driver.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DifferentAP" xml:space="preserve">
+    <value>Can I ask you to pick me up in a different location?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DifferentAP_Answer" xml:space="preserve">
+    <value>Yoyoloop is a service with predefined departure and arrival spots, so it is not possible to pick up passengers in different locations. However, we are always available to create new departure and/or arrival spots in the future. If you have any suggestions, send us an email to reservas@yoyoloop.com.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DownloadTicket" xml:space="preserve">
+    <value>How do I download my ticket?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_DownloadTicket_Answer" xml:space="preserve">
+    <value>You can receive your ticket by email, SMS or you can download it as a PDF. After purchasing your ticket, select your favourite option and present your ticket when your driver arrives. Avoid printing your ticket; show it on your smartphone instead!</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_FindAP" xml:space="preserve">
+    <value>Where can I find the departure and arrival spot of my trip?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_FindAP_Answer" xml:space="preserve">
+    <value>You can find the departure and arrival spot of your trip on your ticket below "From" and "To", respectively.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_GuaranteedSeat" xml:space="preserve">
+    <value>Is my seat guaranteed?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_GuaranteedSeat_Answer" xml:space="preserve">
+    <value>As soon as you purchase your ticket, your seat is guaranteed. When your driver arrives at the departure spot you selected, you only need to show your ticket and enjoy the ride.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_HowMuch" xml:space="preserve">
+    <value>What's the price per loop?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
+    <value>Ticket prices for our current loops are:
+Lisbon - Porto / Porto - Lisbon: from €36 per trip
+Lisbon - Coimbra / Coimbra - Lisbon: from €26 per trip
+Lisbon - Leiria / Leiria - Lisbon: from €16 per trip
+Ocasionally, some or all loops can be on sale.
+Corporate clients that establish partnerships with Yoyoloop can enjoy special prices. Please send an email to empresas@yoyoloop.com to know more.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Invoices" xml:space="preserve">
+    <value>Do you issue invoices with VAT number?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_Invoices_Answer" xml:space="preserve">
+    <value>Yes. As soon as you select your trip, you only need to insert your VAT number on the Billing Details section.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_PaymentMethods" xml:space="preserve">
+    <value>What payment methods do you accept?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_PaymentMethods_Answer" xml:space="preserve">
+    <value>Yoyoloops accepts Multibanco and Visa, Mastercard, American Express credit cards, among others.</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_SuggestLoop" xml:space="preserve">
+    <value>How can I suggest a new loop?</value>
+  </data>
+  <data name="Help_Topic_TripsAndLoops_Question_SuggestLoop_Answer" xml:space="preserve">
+    <value>To suggest a new loop, go to our homepage and click on "Can't find your city?". Leave us your email address and suggestion and, depending on the demand, we'll consider creating a loop to your city. Keep a lookout!</value>
+  </data>
   <data name="Help_Topic_UserDashboard" xml:space="preserve">
-    <value>My profile</value>
+    <value>My account</value>
   </data>
   <data name="Help_Topic_UserDashboard_Question_WhatCanIDo" xml:space="preserve">
-    <value>What can I do with my YoyoLoop profile?</value>
+    <value>What can I do with my Yoyoloop account?</value>
+  </data>
+  <data name="Help_Topic_UserDashboard_Question_WhatCanIDo_Answer" xml:space="preserve">
+    <value>On your Yoyoloop account, you can:&lt;br&gt;
+Edit your personal details;&lt;br&gt;
+Add, update or delete payment details;&lt;br&gt;
+Check your current account and current credit;&lt;br&gt;
+See future and past trips;&lt;br&gt;
+Invite friends to use Yoyoloop;&lt;br&gt;
+Check how many €1 trips you have yet to enjoy.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars" xml:space="preserve">
-    <value>YoyoLoop vehicles</value>
+    <value>Yoyoloop vehicles</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Children" xml:space="preserve">
+    <value>Do Yoyoloop vehicles accept children?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Children_Answer" xml:space="preserve">
+    <value>Unfortunately, we are not able to transport children under the age of 12, since our vehicles do not have child seats. Furthermore, children between the ages of 12 and 18 must travel with an adult.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Electric" xml:space="preserve">
+    <value>Are Yoyoloop vehicles electric?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Electric_Answer" xml:space="preserve">
+    <value>Not yet. Our current transfers are Mercedes V-Class eight-seater vehicles. In the near future, they will be replaced by electric vehicles, in order to offer an even more sustainable alternative for intercity mobility.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Insurance" xml:space="preserve">
+    <value>Am I insured when travelling with Yoyoloop?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Insurance_Answer" xml:space="preserve">
+    <value>Yes. Yoyoloop is a travel agency registered in the National Register of Travel and Tourism Agencies (RNAVTn º 7744), so Yoyoloop passengers benefit from the protection of the Travel and Tourism Guarantee Fund. Additionally, Yoyoloop has civil liability insurance of €250.000. Read more about this subject on the Turismo de Portugal website.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_ProfessionalDriver" xml:space="preserve">
+    <value>Are your drivers actually professional?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_ProfessionalDriver_Answer" xml:space="preserve">
+    <value>Yoyoloop only works with professional drivers. All of them have passed our selection process and are permanent members of our team.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Seats" xml:space="preserve">
+    <value>How many seats does a Yoyoloop vehicle have?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Seats_Answer" xml:space="preserve">
+    <value>Currently, our transfers are Mercedes V-Class eight-seaters. In the near future, they will be replaced by electric vehicles.</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Wifi" xml:space="preserve">
+    <value>Do all Yoyoloop vehicles have wifi?</value>
+  </data>
+  <data name="Help_Topic_YoyoloopCars_Question_Wifi_Answer" xml:space="preserve">
+    <value>Yes, every Yoyoloop vehicle has wifi on board to assure your travel time is usefully spent.</value>
   </data>
   <data name="HomePage_MainTitle" xml:space="preserve">
-    <value>Get rid of your car and enjoy your travel time while working or relaxing.</value>
-    <comment>@lorena - esta frase é super importante - sugestºoes welcome. Alterei para dar mais destaque ao substituição do carro e menos destaque a boleias. "Deixe o carro em casa e viaje num transfer de luxo ao preço do comboio"??</comment>
+    <value>Leave your car at home and travel on a premium transfer for the price of a train tricket.</value>
   </data>
   <data name="HomePage_PopularLoops_CantFind" xml:space="preserve">
     <value>Can't find your city?</value>
@@ -878,8 +1052,7 @@
     <value>Popular Loops</value>
   </data>
   <data name="HomePage_SubTitle" xml:space="preserve">
-    <value>Book your seat on a luxury van driven by a professional driver and enjoy a non-stop trip, with free wifi and at the same price as the train.</value>
-    <comment>@Lorena - também é super importante- vale a penapensares sobre isto e enviares-me sugestões para discutirmos</comment>
+    <value>Book your seat on an eight-seat premium transfer driven by a professional driver and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
   </data>
   <data name="HomePage_SuggestLink" xml:space="preserve">
     <value>Can't find your city?</value>
@@ -900,7 +1073,7 @@
     <value>Your email address</value>
   </data>
   <data name="HomePage_SuggestLoop_Text" xml:space="preserve">
-    <value>Want YoyoLoop to give you a ride to your city?&lt;br&gt;Suggest a loop and keep a lookout for news!</value>
+    <value>Want Yoyoloop to give you a ride to your city?&lt;br&gt;Suggest a loop and keep a lookout for news!</value>
   </data>
   <data name="HomePage_WhereToCard_Location_And" xml:space="preserve">
     <value>and</value>
@@ -921,58 +1094,58 @@
     <value>Where do you want to go?</value>
   </data>
   <data name="HomePage_Why_Card_Accessible_Content" xml:space="preserve">
-    <value>You can save up to 75% by taking a Loop from YoyoLoop instead of taking you own car, and you get a much more enjoyable trip.</value>
+    <value>For one loop, you pay 75% less than if you took your own car, and exactly the same as you would pay for going by train — and you enjoy a much more comfortable and less tiring trip.</value>
   </data>
   <data name="HomePage_Why_Card_Accessible_SubTitle" xml:space="preserve">
-    <value>Arrive fresh,&lt;br&gt;while saving</value>
+    <value>Less strain for you, &lt;br&gt;save on your wallet</value>
   </data>
   <data name="HomePage_Why_Card_Accessible_Title" xml:space="preserve">
-    <value>Accessible</value>
+    <value>Affordable</value>
   </data>
   <data name="HomePage_Why_Card_Convenient_Content" xml:space="preserve">
-    <value>YoyoLoop has frequent departures and near door-to-door service, with 10 access points in Lisbon and in Porto, connecting directly the city centers, main office areas and shopping malls. </value>
+    <value>In addition to having frequent departures, Yoyoloop will pick you up and drop you off in strategic points in the city, such as metro stations, supermarkets, urban centres and the main office areas in Lisbon — and we top it off with free wifi on board.</value>
   </data>
   <data name="HomePage_Why_Card_Convenient_SubTitle" xml:space="preserve">
-    <value>Convenient &lt;br&gt; pick up and drop off</value>
+    <value>Convenient&lt;br&gt;pick-ups and drop-offs</value>
   </data>
   <data name="HomePage_Why_Card_Convenient_Title" xml:space="preserve">
     <value>Convenient</value>
   </data>
   <data name="HomePage_Why_Card_Reliable_Content" xml:space="preserve">
-    <value>A professional driver will prick you up at pre-set place and departure time. All you have to do is to choose you departure point, book your trip and use your reserved seat.</value>
+    <value>A professional driver will pick you up at a specific location and at a fixed departure time. Just choose your starting point, book your trip and sit back in your seat.</value>
   </data>
   <data name="HomePage_Why_Card_Reliable_SubTitle" xml:space="preserve">
-    <value>Garanteed place,&lt;br&gt;scheduled departure</value>
+    <value>Your very own seat,&lt;br&gt; ready on the dot</value>
   </data>
   <data name="HomePage_Why_Card_Reliable_Title" xml:space="preserve">
     <value>Reliable</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_Content" xml:space="preserve">
-    <value>All our trips are done with 8 seat luxury vans. We take cars of the motorways and thus reduce the carbon footprint of these inter-city Loops.</value>
+    <value>Our fleet is made up of eight-seater vehicles. Not only do we take more cars off the road, we also help reduce carbon footprint.</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_SubTitle" xml:space="preserve">
-    <value>Fewer cars,&lt;br&gt;better cities</value>
+    <value>Less cars,&lt;br&gt; better cities</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_Title" xml:space="preserve">
     <value>Sustainable</value>
   </data>
   <data name="HomePage_Why_Title" xml:space="preserve">
-    <value>Why should you travel with YoyoLoop?</value>
+    <value>Why you should ride on a Yoyoloop transfer</value>
   </data>
   <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
-    <value>The only inter-city mobility option that is a real alternative to individual car, train and plane.</value>
+    <value>Book your seat on an eight-seat premium transfer driven by a professional driver and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
-    <value>Train stations and airports are a terrible experience and taking your own car is expensive and tiring. With a YoyoLoop luxury van, you can go to Lisbon, Oporto, Coimbra or Leiria and enjoy a non-stop trip while working or relaxing.</value>
+    <value>Going by train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
-    <value>For security reasons, YoyoLoop only creates the client account after email confirmation.</value>
+    <value>For data privacy reasons, Yoyoloop only considers an account as created after an email address is confirmed.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmEmail" xml:space="preserve">
     <value>Please confirm your email address by clicking</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmWhy" xml:space="preserve">
-    <value>Why do I have to confirm my email?</value>
+    <value>Why do I need to confirm my email?</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_HereLink" xml:space="preserve">
     <value>here</value>
@@ -981,98 +1154,115 @@
     <value>Thank you for your preference!</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_Title" xml:space="preserve">
-    <value>Welcome to YoyoLoop!</value>
+    <value>Welcome to Yoyoloop!</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_YoyoloopTeam" xml:space="preserve">
-    <value>The YoyoLoop Team.</value>
+    <value>The Yoyoloop Team</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Subject" xml:space="preserve">
-    <value>Welcome to YoyoLoop!</value>
+    <value>Welcome to Yoyoloop!</value>
     <comment>repetido</comment>
   </data>
   <data name="MasterService_SendResetPassword_Body_HereLink" xml:space="preserve">
     <value>here</value>
   </data>
+  <data name="MasterService_SendResetPassword_Body_ResetAnswer" xml:space="preserve">
+    <value>As a safety measure, Yoyoloop doesn't send passwords via email. We have generated a link so you can define a new password.</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetPassword" xml:space="preserve">
+    <value>To change your password, please click</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_ResetWhy" xml:space="preserve">
+    <value>Why do I need to change my password?</value>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_Thankyou" xml:space="preserve">
+    <value>Thank you for your preference!</value>
+    <comment>repetido</comment>
+  </data>
+  <data name="MasterService_SendResetPassword_Body_Title" xml:space="preserve">
+    <value>You asked to recover your password on</value>
+  </data>
   <data name="MasterService_SendResetPassword_Body_YoyoloopTeam" xml:space="preserve">
-    <value>YoyoLoop team</value>
+    <value>The Yoyoloop Team</value>
   </data>
   <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
-    <value>Recover your password</value>
+    <value>Recover your password on Yoyoloop</value>
   </data>
   <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
-    <value>Book now</value>
+    <value>Book Now</value>
   </data>
   <data name="MyTrips_Empty_MainTitle" xml:space="preserve">
-    <value>No book trips yet.</value>
+    <value>You still don't have any trips.</value>
   </data>
   <data name="MyTrips_Empty_SubTitle" xml:space="preserve">
-    <value>Book your first trip with YoyoLoop!</value>
+    <value>Book your first trip with Yoyoloop!</value>
   </data>
   <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
-    <value>Share your own promocode with your friends and travel for only 1€!</value>
+    <value>Share your promo code with all your friends and travel for just €1!</value>
   </data>
   <data name="MyTrips_Invite_How" xml:space="preserve">
-    <value>How to travel for 1€ for any destination</value>
+    <value>How to travel for €1 for any destination</value>
   </data>
   <data name="MyTrips_Invite_OfferTrips_Description" xml:space="preserve">
-    <value>Your friends travel to any destination for only 1€.</value>
+    <value>Your friends travel to any destination for just €1.</value>
   </data>
   <data name="MyTrips_Invite_OfferTrips_Title" xml:space="preserve">
-    <value>Offer trips as gifts</value>
+    <value>Give €1 trips</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
-    <value>You can recommend YoyoLoop to your friends by sharing your promocode</value>
+    <value>Refer Yoyoloop to your friends by sharing your promo code</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Title" xml:space="preserve">
-    <value>Recommend YoyoLoop</value>
+    <value>Refer Yoyoloop</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
-    <value>Travel for 1€!</value>
+    <value>Travel for €1!</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
-    <value>Get a trip for 1€ to any destination for each friend that uses YoyoLoop for the first time</value>
+    <value>Win a €1 trip to any destination for each friend of yours who uses Yoyoloop for the first time</value>
   </data>
   <data name="MyTrips_MainTitle" xml:space="preserve">
-    <value>My trips</value>
+    <value>My Trips</value>
   </data>
   <data name="MyTrips_PastTrips_MainTitle" xml:space="preserve">
-    <value>Previous trips</value>
+    <value>Past trips</value>
   </data>
   <data name="Profile_Billing_BillingDetails_Save_SucessMessage" xml:space="preserve">
     <value>Your details were successfully updated</value>
   </data>
   <data name="Profile_Billing_BillingForm_btnBillingSave_Text" xml:space="preserve">
-    <value>Update</value>
+    <value>Update details</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingAddress_Label" xml:space="preserve">
     <value>Address</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingAddress_Validator_ErrorMessage" xml:space="preserve">
-    <value>The field address is mandatory</value>
+    <value>The address field is required</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingCity_Label" xml:space="preserve">
     <value>City</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingCity_Validator_ErrorMessage" xml:space="preserve">
-    <value>The field City is mandatory</value>
+    <value>The city field is required</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingCompany_Label" xml:space="preserve">
-    <value>Company name</value>
+    <value>Company Name</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingName_Label" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingName_Validator_ErrorMessage" xml:space="preserve">
-    <value>The field name is mandatory</value>
+    <value>The name field is required</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingNIF_Label" xml:space="preserve">
-    <value>VAT number</value>
+    <value>VAT Number</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage" xml:space="preserve">
-    <value>Please insert a valid number</value>
+    <value>Enter a valid number</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage" xml:space="preserve">
-    <value>The field VAT number is mandatory</value>
+    <value>The VAT field is required</value>
   </data>
   <data name="Profile_Billing_BillingForm_tbBillingZIP_Label" xml:space="preserve">
     <value>Postal code</value>
@@ -1081,7 +1271,7 @@
     <value>Mandatory</value>
   </data>
   <data name="Profile_Billing_BillingForm_Title" xml:space="preserve">
-    <value>Invoicing details</value>
+    <value>Billing details</value>
   </data>
   <data name="Profile_Billing_PaymentMethodsForm_btnAddCard_Text" xml:space="preserve">
     <value>Add</value>
@@ -1090,7 +1280,7 @@
     <value>Remove</value>
   </data>
   <data name="Profile_Billing_PaymentMethodsForm_btnUpdateCard_Text" xml:space="preserve">
-    <value>Change</value>
+    <value>Edit</value>
   </data>
   <data name="Profile_Billing_PaymentMethodsForm_cbDefaultCard_Label" xml:space="preserve">
     <value>Main card</value>
@@ -1099,7 +1289,7 @@
     <value>Payment method</value>
   </data>
   <data name="Profile_Billing_PaymentMethodsForm_tbCardHolderName_Label" xml:space="preserve">
-    <value>Name on card</value>
+    <value>Card name</value>
   </data>
   <data name="Profile_Billing_PaymentMethodsForm_tbCardNumber_Label" xml:space="preserve">
     <value>Card number</value>
@@ -1108,22 +1298,22 @@
     <value>Payment</value>
   </data>
   <data name="Profile_Billing_PaymentMethods_AddCard_SucessMessage" xml:space="preserve">
-    <value>Your card was successfully added</value>
+    <value>Your card was added successfully </value>
   </data>
   <data name="Profile_Billing_PaymentMethods_RemoveCard_SucessMessage" xml:space="preserve">
-    <value>Your card was successfully removed</value>
+    <value>Your card was removed successfully </value>
   </data>
   <data name="Profile_Billing_PaymentMethods_UpdateCard_SucessMessage" xml:space="preserve">
-    <value>Your card was successfully updated</value>
+    <value>Your card was updated successfully </value>
   </data>
   <data name="Profile_Invite_MainTitle" xml:space="preserve">
-    <value>Invite your friends and travel for only 1€</value>
+    <value>Invite your friends and travel for just €1</value>
   </data>
   <data name="Profile_Invite_MGMTrips1" xml:space="preserve">
     <value>You still have</value>
   </data>
   <data name="Profile_Invite_MGMTrips2" xml:space="preserve">
-    <value>1€ trips to enjoy</value>
+    <value>€1 trips to enjoy</value>
   </data>
   <data name="Profile_Invite_Promoshare_btnCopyLink_Text" xml:space="preserve">
     <value>Copy link</value>
@@ -1134,74 +1324,86 @@
   <data name="Profile_Invite_Promoshare_CopiedPopover" xml:space="preserve">
     <value>Copied to clipboard</value>
   </data>
+  <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
+    <value>Book your first trip to get your own promo code!</value>
+  </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_email" xml:space="preserve">
-    <value>Send my by email</value>
+    <value>Send by email</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_facebook" xml:space="preserve">
     <value>Share on Facebook</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_linkedin" xml:space="preserve">
-    <value>Share on Linkedin</value>
+    <value>Share on LinkedIn</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_twitter" xml:space="preserve">
     <value>Share on Twitter</value>
   </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage1" xml:space="preserve">
+    <value>Use the code</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage2" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
+    <value>and travel for just €1.</value>
+  </data>
   <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
-    <value>Share your promocode with yor friends and travel for only 1€!</value>
+    <value>Share your promo code with all your friends and travel for just €1!</value>
   </data>
   <data name="Profile_Invite_Saved" xml:space="preserve">
-    <value>You have saved</value>
+    <value>You've already saved</value>
   </data>
   <data name="Profile_Invite_Why_Offer_Description" xml:space="preserve">
-    <value>Your friends can travel for any destination for only 1€!</value>
+    <value>Your friends can travel to any destination for just €1</value>
   </data>
   <data name="Profile_Invite_Why_Offer_Title" xml:space="preserve">
-    <value>Give trips</value>
+    <value>Give €1 trips</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
-    <value>Recommend YoyoLoop to your friends by sharing your promocode</value>
+    <value>Share your promo code with your friends to refer Yoyoloop</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Title" xml:space="preserve">
-    <value>Recommend YoyoLoop</value>
+    <value>Refer Yoyoloop</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
-    <value>Get a trip for 1€ to any destination for each friend that uses YoyoLoop for the first time</value>
+    <value>Win a trip for €1 to any destination for each friend who uses Yoyoloop for the first time</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
-    <value>Travel for 1€!</value>
+    <value>Travel for €1!</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
-    <value>Train stations and airports are a terrible experience and taking your own car is expensive and tiring. With a YoyoLoop luxury van, you can go to Lisbon, Oporto, Coimbra or Leiria and enjoy a non-stop trip while working or relaxing.</value>
+    <value>Going by train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Title" xml:space="preserve">
-    <value>Why travel with YoyoLoop?</value>
+    <value>Why you should ride on a Yoyoloop transfer</value>
   </data>
   <data name="Profile_MainTitle" xml:space="preserve">
-    <value>My profile</value>
+    <value>My account</value>
   </data>
   <data name="Profile_Menu_BillingDetails" xml:space="preserve">
-    <value>Invoicing details</value>
+    <value>Billing details</value>
   </data>
   <data name="Profile_Menu_Invite" xml:space="preserve">
     <value>Invite friends</value>
   </data>
   <data name="Profile_Menu_Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>Log out</value>
   </data>
   <data name="Profile_Menu_PersonalDetails" xml:space="preserve">
-    <value>My details</value>
+    <value>Personal details</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_btnEmailSave_Text" xml:space="preserve">
-    <value>Change email</value>
+    <value>Edit email</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Failure" xml:space="preserve">
-    <value>The password that you have inserted is not correct</value>
+    <value>The password you entered is incorrect</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess1" xml:space="preserve">
-    <value>Your email was successfully changed.&lt;br/&gt;&lt;br/&gt;We sent and email to</value>
+    <value>Your email address was changed successfully.&lt;br/&gt;&lt;br/&gt;We've sent an email to</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_EmailSave_ShowMessage_Sucess2" xml:space="preserve">
-    <value>with a confirmation link for the new email</value>
+    <value>with a link so you can confirm your new email address.</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Label" xml:space="preserve">
     <value>Current password</value>
@@ -1210,49 +1412,49 @@
     <value>Password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmailPassword_Validator_ErrorMessage" xml:space="preserve">
-    <value>Insert your password</value>
+    <value>Enter your password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label" xml:space="preserve">
-    <value>New email</value>
+    <value>New email address</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbChangeEmail_Label_Validator_ErrorMessage" xml:space="preserve">
-    <value>The email address is mandatory</value>
+    <value>Please enter your new email address</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmChangeEmail_Label" xml:space="preserve">
-    <value>Repeat your email</value>
+    <value>Repeat email address</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_CompareValidator_ErrorMessage" xml:space="preserve">
-    <value>Inserted email do not match</value>
+    <value>The email addresses don't match</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_tbConfirmEmail_Label_Validator_ErrorMessage" xml:space="preserve">
-    <value>Repeat the email is mandatory</value>
+    <value>Please repeat your email address</value>
   </data>
   <data name="Profile_PersonalDetails_ChangeEmail_Title" xml:space="preserve">
-    <value>Change email</value>
+    <value>Change email address</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_btnPasswordSave_Text" xml:space="preserve">
     <value>Change password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure1" xml:space="preserve">
-    <value>There was an error with your password.&lt;br/&gt;&lt;br/&gt;Try again or</value>
+    <value>An error occurred while changing your password.&lt;br/&gt;&lt;br/&gt;Please try again or</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Failure2" xml:space="preserve">
     <value>contact us</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_Sucess" xml:space="preserve">
-    <value>Your password was successfully changed.</value>
+    <value>Your password was changed successfully</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_PasswordSave_ShowMessage_WrongPassword" xml:space="preserve">
-    <value>The password that you have inserted is not correct</value>
+    <value>The password you entered is incorrect</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_CompareValidator_ErrorMessage" xml:space="preserve">
-    <value>The passwords inserted do not match</value>
+    <value>The passwords don't match</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Label" xml:space="preserve">
-    <value>Repeat your password</value>
+    <value>Repeat new password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbConfirmPassword_Validator_ErrorMessage" xml:space="preserve">
-    <value>It is mandatory to repeat your password</value>
+    <value>Please repeat your password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Label" xml:space="preserve">
     <value>Current password</value>
@@ -1261,46 +1463,46 @@
     <value>Password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbCurrentPassword_Validator_ErrorMessage" xml:space="preserve">
-    <value>Insert your current password</value>
+    <value>Enter your current password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Label" xml:space="preserve">
     <value>New password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_tbNewPassword_Validator_ErrorMessage" xml:space="preserve">
-    <value>The new password is mandatory</value>
+    <value>Please enter a new password</value>
   </data>
   <data name="Profile_PersonalDetails_ChangePassword_Title" xml:space="preserve">
     <value>Change password</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_btnConfirmEmail_Text" xml:space="preserve">
-    <value>re-send link</value>
+    <value>Resend link</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_btnProfileSave_Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage1" xml:space="preserve">
-    <value>We have sent an email to</value>
+    <value>We've sent an email to</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_ConfirmEmail_ShowMessage2" xml:space="preserve">
-    <value>with the link so you can confirm your email address.</value>
+    <value>with a link to confirm your email address</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_ProfileSave_ShowMessage" xml:space="preserve">
-    <value>Your details were successfully updated</value>
+    <value>Your details were updated successfully</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_CompareValidator_ErrorMessage" xml:space="preserve">
-    <value>Insert a valid date</value>
+    <value>Enter a valid date</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_Label" xml:space="preserve">
     <value>Birth date</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbBirthDate_placeholder" xml:space="preserve">
-    <value>AAAA / MM / DD</value>
+    <value>YYYY / MM / DD</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Confirmed" xml:space="preserve">
     <value>Confirmed</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_Label" xml:space="preserve">
-    <value>Email</value>
+    <value>Email address</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbEmail_NotConfirmed" xml:space="preserve">
     <value>Not confirmed</value>
@@ -1309,16 +1511,16 @@
     <value>Name</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbName_Validator_ErrorMessage" xml:space="preserve">
-    <value>The fild Name is not valid</value>
+    <value>The name field is required</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage" xml:space="preserve">
-    <value>Insert a valid number</value>
+    <value>Enter a valid number</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Confirmed" xml:space="preserve">
     <value>Confirmed</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label" xml:space="preserve">
-    <value>Mobile</value>
+    <value>Mobile phone</value>
   </data>
   <data name="Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_NotConfirmed" xml:space="preserve">
     <value>Not confirmed</value>
@@ -1327,7 +1529,7 @@
     <value>Personal details</value>
   </data>
   <data name="SiteMaster_Errors_AntiXSRF" xml:space="preserve">
-    <value>And error has occurred</value>
+    <value>Ocorreu um erro. Por favor volte a tentar.</value>
     <comment>??? em que contexto acontece este erro?</comment>
   </data>
   <data name="SiteMaster_Footer_Destinos" xml:space="preserve">
@@ -1340,19 +1542,19 @@
     <value>Portuguese</value>
   </data>
   <data name="SiteMaster_Footer_Loops" xml:space="preserve">
-    <value>Loops &amp; Schedules</value>
+    <value>Loops</value>
   </data>
   <data name="SiteMaster_Footer_Privacy" xml:space="preserve">
     <value>Privacy Policy</value>
   </data>
   <data name="SiteMaster_Footer_Terms" xml:space="preserve">
-    <value>Terms and conditions</value>
+    <value>Terms and Conditions</value>
   </data>
   <data name="SiteMaster_Footer_Yoyoloop_About" xml:space="preserve">
     <value>About us</value>
   </data>
   <data name="SiteMaster_Footer_Yoyoloop_Contact" xml:space="preserve">
-    <value>Contacts</value>
+    <value>Contact us</value>
   </data>
   <data name="SiteMaster_Footer_Yoyoloop_Help" xml:space="preserve">
     <value>Help</value>
@@ -1367,67 +1569,69 @@
     <value>Loops &amp; Schedules</value>
   </data>
   <data name="SiteMaster_NavBar_MyTrips" xml:space="preserve">
-    <value>My trips</value>
+    <value>My Trips</value>
   </data>
   <data name="SiteMaster_NavBar_RegisterLogin" xml:space="preserve">
-    <value>Register/Login</value>
+    <value>Register/Log in</value>
   </data>
   <data name="SiteMaster_ProfileMenu_Billing" xml:space="preserve">
-    <value>Invoicing details</value>
+    <value>Billing details</value>
   </data>
   <data name="SiteMaster_ProfileMenu_Invite" xml:space="preserve">
     <value>Invite friends</value>
   </data>
   <data name="SiteMaster_ProfileMenu_Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>Log out</value>
   </data>
   <data name="SiteMaster_ProfileMenu_Profile" xml:space="preserve">
-    <value>My profile</value>
+    <value>My account</value>
   </data>
   <data name="StaticPages_About_MainDescription" xml:space="preserve">
-    <value>Disruptin inter-city mobility, one Loop at a time.</value>
+    <value>Disrupting intercity mobility, one Loop at a time.</value>
   </data>
   <data name="StaticPages_About_MainTitle" xml:space="preserve">
     <value>About us</value>
   </data>
   <data name="StaticPages_About_Shuttles_SubTitle" xml:space="preserve">
-    <value>Our shuttles are all luxury 8 seat vans from Mercedes Benz (V-class Avantgarde, with leather seats). We have free wifi and a modern luxury interior and a professional driver that you enjoy the full length of your tip.</value>
+    <value>Each one of our vehicles are 8-seater premium transfers: Mercedes V-Class Avantgarde with leather seats. All of them have wifi on board, and are driven by a professional driver who takes you to your destination without any stops to ensure a more comfortable journey. Our cities thank us for it.</value>
   </data>
   <data name="StaticPages_About_Shuttles_Title" xml:space="preserve">
-    <value>Our luxury vans</value>
+    <value>Our premium transfers</value>
   </data>
   <data name="StaticPages_About_SubDescription" xml:space="preserve">
-    <value>Yoyoloop has the ambition of revolutionizing intercity mobility. We believe they should amount to more than traffic jams, rush hour and parking lots.&lt;br&gt;&lt;br&gt;It is precisely why we created a luxury mobility service as an alternative to trains and traditional car rides, with the difference of being more accessible, convenient, reliable and sustainable. Our luxury vans have wifi on board and are driven by professional drivers to ensure a more useful and comfortable journey. For the good of our cities.</value>
+    <value>Yoyoloop has the ambition of revolutionising intercity mobility. We believe cities should amount to more than traffic jams, rush hour and parking lots.&lt;br&gt;
+&lt;br&gt;
+It is precisely why we created a premium transfer service for the price of a train ticket, alternative to cars, trains and airplanes, with the difference of being more affordable, convenient, reliable and sustainable.</value>
   </data>
   <data name="StaticPages_About_Why_Accessible_Content" xml:space="preserve">
-    <value>You can save up to 75% by taking a Loop from YoyoLoop instead of taking you own car, and you get a much more enjoyable trip.</value>
+    <value>For one loop, you get to pay 75% less than if you took your own car, and exactly the same as you would pay for going by train or other means of transport — and you get to enjoy a much more comfortable and less tiring trip.</value>
   </data>
   <data name="StaticPages_About_Why_Accessible_SubTitle" xml:space="preserve">
-    <value>Arrive fresh,&lt;br&gt;while saving</value>
+    <value>Less strain for you, &lt;br&gt;save on your wallet</value>
   </data>
   <data name="StaticPages_About_Why_Accessible_Title" xml:space="preserve">
-    <value>Accessible</value>
+    <value>Affordable</value>
   </data>
   <data name="StaticPages_About_Why_Convenient_Content" xml:space="preserve">
-    <value>YoyoLoop has frequent departures and near door-to-door service, with 10 access points in Lisbon and in Porto, connecting directly the city centers, main office areas and shopping malls. </value>
+    <value>In addition to having frequent departures, Yoyoloop will pick you up and drop you off in strategic points in the city, such as metro stations, supermarkets, urban centres and the main office areas in Lisbon — and we top it off with free wifi on board.</value>
   </data>
   <data name="StaticPages_About_Why_Convenient_SubTitle" xml:space="preserve">
-    <value>Convenient &lt;br&gt; pick up and drop off</value>
+    <value>Convenient&lt;br&gt;pick-ups and drop-offs</value>
   </data>
   <data name="StaticPages_About_Why_Convenient_Title" xml:space="preserve">
     <value>Convenient</value>
   </data>
   <data name="StaticPages_About_Why_Reliable_Content" xml:space="preserve">
-    <value>A professional driver will prick you up at pre-set place and departure time. All you have to do is to choose you departure point, book your trip and use your reserved seat.</value>
+    <value>A professional driver will pick you up at a specific location and at a fixed departure time. Just choose your starting point, book your trip and sit back in your seat.</value>
   </data>
   <data name="StaticPages_About_Why_Reliable_SubTitle" xml:space="preserve">
-    <value>Garanteed place,&lt;br&gt;scheduled departure</value>
+    <value>Your very own seat,&lt;br&gt; ready on the dot</value>
   </data>
   <data name="StaticPages_About_Why_Reliable_Title" xml:space="preserve">
     <value>Reliable</value>
   </data>
   <data name="StaticPages_About_Why_Sustainable_Content" xml:space="preserve">
-    <value>All our trips are done with 8 seat luxury vans. We take cars of the motorways and thus reduce the carbon footprint of these inter-city Loops.</value>
+    <value>Our fleet is made up of eight-seater vehicles. Not only do we take more cars off the road, we also help reduce carbon footprint.</value>
   </data>
   <data name="StaticPages_About_Why_Sustainable_SubTitle" xml:space="preserve">
     <value>Less cars,&lt;br&gt; better cities</value>
@@ -1436,10 +1640,10 @@
     <value>Sustainable</value>
   </data>
   <data name="StaticPages_Contact_Bookings" xml:space="preserve">
-    <value>Reservations</value>
+    <value>Bookings</value>
   </data>
   <data name="StaticPages_Contact_ContactForm_btnSend_text" xml:space="preserve">
-    <value>Send my by email</value>
+    <value>Send</value>
   </data>
   <data name="StaticPages_Contact_ContactForm_Send_ShowMessage" xml:space="preserve">
     <value>Your message was sent</value>
@@ -1448,37 +1652,874 @@
     <value>Message</value>
   </data>
   <data name="StaticPages_Contact_ContactForm_tbEmail_Label" xml:space="preserve">
-    <value>Email</value>
+    <value>Email address</value>
   </data>
   <data name="StaticPages_Contact_ContactForm_tbName_Label" xml:space="preserve">
-    <value>Name</value>
+    <value>Full name</value>
   </data>
   <data name="StaticPages_Contact_ContactForm_tbSubject_Label" xml:space="preserve">
     <value>Subject</value>
   </data>
   <data name="StaticPages_Contact_ContactForm_Title" xml:space="preserve">
-    <value>Send us a message</value>
+    <value>Leave us a message</value>
   </data>
   <data name="StaticPages_Contact_Title" xml:space="preserve">
-    <value>Contacts</value>
+    <value>Contact us</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Description" xml:space="preserve">
+    <value>Yoyoloop gives you a ride from Lisbon to Coimbra and back. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>From Lisbon: 8pm - 2pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>From Coimbra: 11am - 4pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Lisbon to Coimbra in only 90 minutes</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_MainDescription" xml:space="preserve">
+    <value>With Yoyoloop, you can take a premium transfer frtom Lisbon to Coimbra at the same price as the train.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_MainTitle" xml:space="preserve">
+    <value>Leave your car at home and take a premium transfer to Coimbra</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_Description" xml:space="preserve">
+    <value>If you take a premium transfer from Lisbon to Coimbra, you can choose from several different departure stops, such as Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande or Gare do Oriente. Arrivals to Coimbra will be in Av. Fernão de Magalhães, Portagem or Parque Industrial do Taveiro. Afer you're done with work or a one-off meeting, remember that Yoyoloop has a seat waiting for you, ready to go on the dot!</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>Avenida Fernão de Magalhães is in downtown Coimbra, with easy access by car or public transport from anywhere in the city.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>2, 13, 20, 36</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Av. Fernão de Magalhães</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Description" xml:space="preserve">
+    <value>Portagem is the main meeting point in Coimbra, with direct access to commerce and services in the downtown area of the city.</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
+    <value>10, 13, 18, 20, 43</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_StopCard_Second_Title" xml:space="preserve">
+    <value>Portagem</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_SubTitle" xml:space="preserve">
+    <value>Stops in Coimbra</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_Stops_Title" xml:space="preserve">
+    <value>COIMBRA LOOP</value>
+  </data>
+  <data name="StaticPages_Destinos_Coimbra_SubDescription" xml:space="preserve">
+    <value>Although the city doesn't have a lot of traffic, the university city of Coimbra has more than 100 thousand inhabitants. The home of the Mondego River is well served by public transportation coming from the capital, although trains often suffer delays. If you come with your own car, you pay more than double for fuel, tolls and parking.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Coimbra_Description" xml:space="preserve">
+    <value>Coimbra is an important university city with more than 100 thousand inhabitants, and it generates a constant movement of students and professionals from Lisbon and Porto.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Leiria_Description" xml:space="preserve">
+    <value>Leiria is the central point of the western region, and it has a strong business environment. The city is well served by highways but, unfortunately, train and bus connections leave much to be desired.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Lisboa_Description" xml:space="preserve">
+    <value>The Greater Lisbon area has more than 2 million inhabitants.&lt;br&gt;370 thousand cars drive into the capital every day, generating constant traffic jams.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Porto_Description" xml:space="preserve">
+    <value>The Greater Porto area has more than 1.787.000 inhabitants. 260 thousand cards drive into the country's second largest city every day, generating constant traffic jams.</value>
+  </data>
+  <data name="StaticPages_Destinos_DestinationCard_Title" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_btnBack_text" xml:space="preserve">
+    <value>back</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_Schedules" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_Stops" xml:space="preserve">
+    <value>Stops</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_Title" xml:space="preserve">
+    <value>Loops to</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_LoopCard_TravelTime" xml:space="preserve">
+    <value>Travel time</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_Stops_StopCard_HowToGet" xml:space="preserve">
+    <value>How to get to your Yoyoloop transfer</value>
+  </data>
+  <data name="StaticPages_Destinos_Details_Title" xml:space="preserve">
+    <value>POPULAR DESTINATION</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Description" xml:space="preserve">
+    <value>Yoyoloop gives you a ride from Lisbon to Leiria. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>From Lisbon: 12pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>From Leiria: 3pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Leiria to &lt;br/&gt;Lisbon in only 1 hour and 15 minutes</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_MainDescription" xml:space="preserve">
+    <value>Take a premium transfer to Leiria, the perfect alternative to the bus and to your car</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_MainTitle" xml:space="preserve">
+    <value>Leave your car at home and take a premium transfer to Leiria</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_Description" xml:space="preserve">
+    <value>If you take a premium transfer from Lisbon to Leiria, you can choose from several different departure stops, such as Amoreiras, Marquês de Pombal, Sete Rios, Campo Grande or Gare do Oriente. Arrivals to Leiria will be in Largo da República, right in the centre of the city.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>Largo da Reública is in the centre of Leiria. This is where you can find City Hall, the Court of Justice and other public services, and commerce. Additionally, it's very close to the Polytechnic Institute of Leiria.</value>
   </data>
   <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
     <value>&lt;br&gt;</value>
   </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Buses and car</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Largo da República</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_SubTitle" xml:space="preserve">
+    <value>Stops in Leiria</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Stops_Title" xml:space="preserve">
+    <value>LEIRIA LOOP</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_SubDescription" xml:space="preserve">
+    <value>Leiria is one of the most important Portuguese cities, leading the western region, housing a vibrant business environment and an important academic community. Despite being close to Lisbon, public transport links to Leiria leave a lot to be desired, especially its train connection.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Description" xml:space="preserve">
+    <value>Yoyoloop gives you a ride from Porto, Coimbra and Leiria to Lisbon. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>From Porto: 7:30am - 8:30am - 6pm - 7pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>From Coimbra: 11am - 4pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Porto to Lisbon in just 2 hours and 30 minutes.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_MainDescription" xml:space="preserve">
+    <value>Get a premium transfer from Porto to Lisbon. No check-in, no security delays, directly from city-center to city-center.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_MainTitle" xml:space="preserve">
+    <value>Leave your car at home and take a premium transfer to Lisbon</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_Description" xml:space="preserve">
+    <value>If you take a premium transfer to Lisbon, you can choose to stop in the capital's main office areas and still be within walking distance of a metro station. While you wait to return to your hometown, take the chance to have a cup of coffee!</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description" xml:space="preserve">
+    <value>In addition to being home to the Lisbon Zoo, Sete Rios is known for being another of the most important railway and bus stations in the city. It is especially important for those who come from Sintra and South of the Tejo River, as well as for those arriving by bus from all corners of the country, especially from the southern and western regions.&lt;br&gt;
+&lt;br&gt;
+Sete Rios is one of Yoyoloop's departure spots in Lisbon. From here, you can take one of our premium transfers to Porto, Leiria or Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Details" xml:space="preserve">
+    <value>Yellow Line and Red Line</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_HowToGet_Title" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Title" xml:space="preserve">
+    <value>Sete Rios</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>The Amoreiras Towers are one of the most iconic buildings in Lisbon. Despite being a residential area and one of the capital's main office centres, the Amoreiras area is not adequately linked by the city's transport network, especially by the Lisbon Metro. It's a nuisance for Lisbon locals, but it is even more painful for those who come from the outskirts of the capital.&lt;br&gt;
+&lt;br&gt;
+Amoreiras Tower 3 is one of Yoyoloop's departure spots in Lisbon. From here, you can take one of our premium transfers to Porto, Leiria or Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>758, 784</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Amoreiras</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Description" xml:space="preserve">
+    <value>Marquês de Pombal needs no introduction. It's one of the city's main office areas, although it also attracts a lot of tourists. It's an important entry point to the city, especially for those who come from Cascais, and it is served by several public transports, including two metro lines.&lt;br&gt;
+&lt;br&gt;
+The Marquês de Pombal parking lot is one of Yoyoloop's departure spots in Lisbon. From here, you can take one of our premium transfers to Porto, Leiria or Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Details" xml:space="preserve">
+    <value>Blue Line and Yellow Line</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_HowToGet_Title" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Fourth_Title" xml:space="preserve">
+    <value>Marquês de Pombal</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description" xml:space="preserve">
+    <value>Campo Grande has been an important transport area for many years. Most suburban buses from the western region arrive and depart from here. The growing presence of large companies in the area, as well as the Lusófona University of Lisbon and several faculties of the University of Lisbon, further reinforced the importance of properly linking Campo Grande.&lt;br&gt;
+&lt;br&gt;
+Hotel Radisson Blu in Campo Grande is one of Yoyoloop's departure spots in Lisbon. From here, you can take one of our premium transfers to Porto, Leiria or Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
+    <value>Green Line and Yellow Line</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
+    <value>Metro and buses from the western region</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Title" xml:space="preserve">
+    <value>Campo Grande</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description" xml:space="preserve">
+    <value>Gare do Oriente is one of the most important railway and bus stations in Lisbon. Its privileged connection to Lisbon Airport through Avenida de Berlim also contributes to the importance of this iconic area. Every day, Gare do Oriente receives hundreds of thousands of people coming from the outskirts of the capital.&lt;br&gt;
+&lt;br&gt;
+Gare do Oriente is one of Yoyoloop's departure spots in Lisbon. From here, you can take one of our premium transfers to Porto, Leiria or Coimbra.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Details" xml:space="preserve">
+    <value>Red Line</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_HowToGet_Title" xml:space="preserve">
+    <value>Metro, Suburban trains, Suburban buses</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Title" xml:space="preserve">
+    <value>Gare do Oriente</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_SubTitle" xml:space="preserve">
+    <value>Stops in Lisbon</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Stops_Title" xml:space="preserve">
+    <value>LISBON LOOP</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_SubDescription" xml:space="preserve">
+    <value>The Greater Lisbon area has more than 2 million inhabitants and 370 thousand cars driving into the capital every day, generating constant traffic jams.&lt;br&gt;
+&lt;br&gt;
+The alternatives leave a lot to be desired. Buses and trains are slow and suffer delays, and if you come with your own car, you pay more than double for fuel, tolls and parking.&lt;br&gt;
+&lt;br&gt;
+With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or Leiria for the price of a train ticket. Enjoy a faster and more comfortable journey to the city's strategic points, from Saldanha to Gare do Oriente.</value>
+  </data>
+  <data name="StaticPages_Destinos_MainDescription" xml:space="preserve">
+    <value>Popular destinations</value>
+  </data>
+  <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
+    <value>Disrupting intercity mobility, &lt;br&gt;one Loop at a time</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
+    <value>Yoyoloop gives you a ride from Lisbon and Coimbra to Porto. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
+    <value>From Lisbon: 7:30am - 8:30am - 6pm - 7pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
+    <value>From Coimbra: 3pm</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Porto to Lisbon&lt;br/&gt; in just 2 hours and 30 minutes.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_MainDescription" xml:space="preserve">
+    <value>No check-in, no security delays, directly from city-center to city-center.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_MainTitle" xml:space="preserve">
+    <value>Leave your car at home and take a premium transfer to Porto.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_Description" xml:space="preserve">
+    <value>Porto's public transportation network leaves a lot to be desired. Buses and trains are slow and suffer delays, and the Porto Metro only serves the suburbs and part of downtown. Those who come from other cities and takes their own car pay more than double for fuel, tolls and parking.&lt;br&gt;
+&lt;br&gt;
+With Yoyoloop, you can take a premium transfer from Lisbon to Porto for the price of a train ticket. Enjoy a faster and more comfortable journey to Avenida da Boavista, Casa da Música, Trindade, NorteShopping or GaiaShopping.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Description" xml:space="preserve">
+    <value>Avenida da Boavista gathers several office areas in Porto. Due to its size, Yoyoloop created two stops in this avenue: one next to the Crown Plaza Hotel and close to Porto Palácio and Sheraton Porto hotels; and a second stop close to Nossa Senhora do Rosário school.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Details" xml:space="preserve">
+    <value>503 and 504 </value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_HowToGet_Title" xml:space="preserve">
+    <value>STCP Bus:</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fifth_Title" xml:space="preserve">
+    <value>Avenida da Boavista</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_Description" xml:space="preserve">
+    <value>Casa da Música is one of the main concert halls in Porto and one of the city's landmarks. It's located in Avenida da Boavista, one of Porto's main avenues, and is well served by five metro lines. It's one of the three Yoyoloop arrival spots for those coming from Lisbon.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Details" xml:space="preserve">
+    <value>STCP Bus: 203, 208, 507, 704, 803</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_HowToGet_Title" xml:space="preserve">
+    <value>Metro: Casa da Música (line A, B, C, E, F)</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_First_Title" xml:space="preserve">
+    <value>Casa da Música</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Description" xml:space="preserve">
+    <value>The Trindade station is the largest transportation interface in the centre of Porto, a stone's throw away from Avenida dos Aliados, and close to offices, shops and public institutions.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Details" xml:space="preserve">
+    <value>A, B, C, D, E</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_HowToGet_Title" xml:space="preserve">
+    <value>Metro</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Fourth_Title" xml:space="preserve">
+    <value>Trindade</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_Description" xml:space="preserve">
+    <value>GaiaShopping is located in Vila Nova de Gaia, and it's one of the main commercial establishments in the district, with almost 150 stores, a movie theatre and a Continente superstore. It's one of three Yoyoloop arrival spots for those coming from Lisbon.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Details" xml:space="preserve">
+    <value>&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_HowToGet_Title" xml:space="preserve">
+    <value>STCP Bus: 903, 908</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Second_Title" xml:space="preserve">
+    <value>GaiaShopping</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_Description" xml:space="preserve">
+    <value>NorteShopping in Senhora da Hora has more than 260 stores. It is the largest shopping centre in the northern region. Additionally, it has a very important office centre, serving as headquarters for some of the largest national companies. It is very easy to reach, since it's very close to a metro station served by five lines. It's one of three Yoyoloop arrival spots for those coming from Lisbon.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Details" xml:space="preserve">
+    <value>STCP Bus: 205, 504, 506, 507, 601&lt;br&gt;
+Resende Bus: 111, 116, 119, 121, 122, 123, 130</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_HowToGet_Title" xml:space="preserve">
+    <value>Metro: Sete Bicas (line A, B, C, E, F)</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_StopCard_Third_Title" xml:space="preserve">
+    <value>NorteShopping</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_SubTitle" xml:space="preserve">
+    <value>Stops in Porto</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Stops_Title" xml:space="preserve">
+    <value>PORTO LOOP</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_SubDescription" xml:space="preserve">
+    <value>The Greater Porto area has more than 1.787.000 inhabitants. 260 thousand cards drive into the country's second largest city every day, generating constant traffic jams. In a recent study, it was revealed that Porto is the country's worst city to drive in, with more than 27 hours a year spent in traffic — many of them in the constantly congested VCI road.</value>
+  </data>
+  <data name="StaticPages_Destinos_SubDescription" xml:space="preserve">
+    <value>Take a premium transfer for the price of a train ticket</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Accessible_Description" xml:space="preserve">
+    <value>Save your car keys, save your wallet</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Accessible_Title" xml:space="preserve">
+    <value>Affordable</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Conveninent_Description" xml:space="preserve">
+    <value>Convenient pick-ups and drop-offs</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Conveninent_Title" xml:space="preserve">
+    <value>Convenient</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Reliable_Description" xml:space="preserve">
+    <value>Your very own seat, ready on the dot</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Reliable_Title" xml:space="preserve">
+    <value>Reliable</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Sustainable_Description" xml:space="preserve">
+    <value>Less cars, better cities</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Sustainable_Title" xml:space="preserve">
+    <value>Sustainable</value>
+  </data>
+  <data name="StaticPages_Destinos_Why_Title" xml:space="preserve">
+    <value>Why you should ride on a Yoyoloop transfer</value>
+  </data>
+  <data name="StaticPages_FAQ_Questions" xml:space="preserve">
+    <value>Have a question?</value>
+  </data>
+  <data name="StaticPages_FAQ_Questions_HelpLink" xml:space="preserve">
+    <value>Read our FAQs</value>
+  </data>
+  <data name="StaticPages_HowTo_MainDescription" xml:space="preserve">
+    <value>Book your seat online and travel more enjoyably on a non-stop trip with wifi on board for the price of a train ticket</value>
+  </data>
+  <data name="StaticPages_HowTo_MainSubDescription" xml:space="preserve">
+    <value>Beyond online booking, it is possible to buy tickets directly from the Yoyoloop driver, from 15 minutes before departure time onwards.</value>
+  </data>
+  <data name="StaticPages_HowTo_MainTitle" xml:space="preserve">
+    <value>How to ride with Yoyoloop</value>
+  </data>
+  <data name="StaticPages_HowTo_StepFour" xml:space="preserve">
+    <value>4. Remember to refer Yoyoloop to your friends to win unlimited €1 trips.&lt;br&gt;The more friends you gather, the more you earn!</value>
+  </data>
+  <data name="StaticPages_HowTo_StepOne" xml:space="preserve">
+    <value>1. Choose where you want to go to and your favourite departure and arrival spots.</value>
+  </data>
+  <data name="StaticPages_HowTo_StepThree" xml:space="preserve">
+    <value>3. Download your ticket and show it to your driver at the departure spot.</value>
+  </data>
+  <data name="StaticPages_HowTo_StepTwo" xml:space="preserve">
+    <value>2. Safely pay for your ticket with credit card.</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Bus" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Car" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Plane" xml:space="preserve">
+    <value>Airplane</value>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Ride" xml:space="preserve">
+    <value>Traditional rides</value>
+    <comment>@Ricardo - Vamos retirar, certo? @ certo</comment>
+  </data>
+  <data name="StaticPages_Loops_Details_Why_Train" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_APs" xml:space="preserve">
+    <value>→ Av. Fernão de Magalhães&lt;br /&gt;→ Portagem&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Times1" xml:space="preserve">
+    <value>From Lisbon: 8am - 2pm</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Times2" xml:space="preserve">
+    <value>From Porto: 12pm</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Title" xml:space="preserve">
+    <value>one-way trip from €26</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Coimbra&lt;/br&gt;to Lisbon in just 1 hour and 30 minutes.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_MainDescription" xml:space="preserve">
+    <value>Tired of driving back and forth from Lisbon to Coimbra?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_MainTitle" xml:space="preserve">
+    <value>Leave your car at home and take a premium transfer to Coimbra</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_SubDescription" xml:space="preserve">
+    <value>When it comes time to returning home at the end of a day's work or a one-off meeting, there aren't many public transport options from Lisbon to Coimbra.&lt;br&gt;
+&lt;br&gt;
+Buses and trains take too long and have multiple stops, and if you come with your own car, you pay more than double for fuel, tolls and parking.&lt;br&gt;
+&lt;br&gt;
+Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of a train ticket — or 75% less than if you take your own car — with the difference of having a much faster and more comfortable journey in an eight-seater premium transfer.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why" xml:space="preserve">
+    <value>Why you should take a premium transfer between Lisbon and Coimbra instead of other means of transport</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Bus_Reasons" xml:space="preserve">
+    <value>→ Trips take longer&lt;br /&gt;
+→ There are several stops along the way&lt;br /&gt;
+→ Trips are uncomfortable and noisy&lt;br /&gt;
+→ You can only depart from Sete Rios or Oriente&lt;br /&gt;
+→ Wifi frequently does not work and there are no sockets to charge your smartphone&lt;br /&gt;
+→ Your luggage has to be checked and it may take some time to claim it when you arrive&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Car_Reasons" xml:space="preserve">
+    <value>→ You spend 3 to 4 times more money between tolls, fuel, insurance and car wear &lt;br/&gt;
+→ If you travel alone, the trip is not profitable or environmentally friendly&lt;br /&gt;
+→ You can't use your travel time to work or relax&lt;br/&gt;
+→ Difficulty in finding a parking space&lt;br/&gt;
+→ It takes longer if you don't take the highway&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção.</comment>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Description" xml:space="preserve">
+    <value>Why you should take a premium transfer between Lisbon and Coimbra instead of other means of transport</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Ride_Reasons" xml:space="preserve">
+    <value>→ Rely on daily departures &lt;br /&gt;
+→ Enjoy a more comfortable trip for the same price of a bus or train ticket &lt;br /&gt;
+→ Benefit from departure and arrival points in central points of your city &lt;br /&gt;
+→ Enjoy wifi on board to assure your travel time is usefully spent&lt;br /&gt;
+→ Respect the environment by riding on an eight-seater premium transfer &lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons" xml:space="preserve">
+    <value>→ Trips take longer&lt;br /&gt;
+→ There are several stops along the way&lt;br /&gt;
+→ Trips are uncomfortable and noisy&lt;br /&gt;
+→ Delays, breakdowns and strikes happen often&lt;br /&gt;
+→ You can only depart from Oriente or Santa Apolónia&lt;br/&gt;
+→ You can only charge your smartphone in first class&lt;br /&gt;
+→ The arrival spot Coimbra B is not as convenient as Av. Fernão de Magalhães&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_APs" xml:space="preserve">
+    <value>→ Largo da República</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Times1" xml:space="preserve">
+    <value>From Lisbon: 12pm</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Times2" xml:space="preserve">
+    <value>From Leiria: 3pm</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Title" xml:space="preserve">
+    <value>one-way trip from €16</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Leiria to Lisbon&lt;br/&gt; in just 1 hour and 15 minutes.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_MainDescription" xml:space="preserve">
+    <value>Tired of driving back and forth from Leiria to Lisbon?</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_MainTitle" xml:space="preserve">
+    <value>Leave your car at home and take a premium transfer to Leiria</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_SubDescription" xml:space="preserve">
+    <value>For those who live and work in the Leiria area, the only reliable alternative is a car. However, considering tolls, fuel, insurance and car wear, a single car trip can amount to around €50. On arrival, finding a parking spot in Lisbon is another challenge. Unfortunately, investments in improving rail service on the Western Line continue to be postponed.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why" xml:space="preserve">
+    <value>Why you should take a premium transfer between Lisbon and Leiria instead of other means of transport</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Bus_Reasons" xml:space="preserve">
+    <value>→ Bus lines have several stops and take a long time.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Car_Reasons" xml:space="preserve">
+    <value>→ You spend 3 to 4 times more money between tolls, fuel, insurance and car wear &lt;br/&gt;
+→ If you travel alone, the trip is not profitable or environmentally friendly&lt;br /&gt;
+→ You can't use your travel time to work or relax&lt;br/&gt;
+→ Difficulty in finding a parking space&lt;br/&gt;
+→ It takes longer if you don't take the highway&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção. @lorena - OK</comment>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Description" xml:space="preserve">
+    <value>→ Rely on trips from Monday to Friday &lt;br /&gt;
+→ Enjoy a more comfortable trip for the same price of a bus ticket &lt;br /&gt;
+→ Enjoy wifi on board to assure your travel time is usefully spent&lt;br /&gt;
+→ Respect the environment by riding on an eight-seater premium transfer &lt;br /&gt;
+→ Enjoy a direct connection between the centre of Leiria and central areas in Lisbon.&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons" xml:space="preserve">
+    <value>→ You spend 3 to 4 times more money between tolls, fuel, insurance and car wear &lt;br/&gt;
+→ If you travel alone, the trip is not profitable or environmentally friendly&lt;br /&gt;
+→ You can't use your travel time to work or relax&lt;br/&gt;
+→ Difficulty in finding a parking space&lt;br/&gt;
+→ It takes longer if you don't take the highway&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção. @lorena - ok</comment>
+  </data>
+  <data name="StaticPages_Loops_LisboaLeiria_Why_Train_Reasons" xml:space="preserve">
+    <value>→ Delays, breakdowns and strikes happen often&lt;br /&gt;
+→ The Western Line is very degraded&lt;br /&gt;
+→ Trips are noisy and carriages are uncomfortable&lt;br /&gt;
+→ The only arrival spot is Gare do Oriente, so you need to take another transport to your final destination in Lisbon&lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_APs" xml:space="preserve">
+    <value>→ Av. da Boavista &lt;br /&gt;→Casa da Musica&lt;br /&gt;→ GaiaShopping&lt;br /&gt;→NorteShopping&lt;br /&gt;→Trindade</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times1" xml:space="preserve">
+    <value>From Lisbon: 7:30am - 8:30am - 6pm - 7pm</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times2" xml:space="preserve">
+    <value>From Porto: 7:30am - 8:30am - 6pm - 7pm</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
+    <value>one-way trip from €36</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
+    <value>Yoyoloop drives you from Lisbon to Porto in just 2 hours and 30 minutes.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_MainDescription" xml:space="preserve">
+    <value>No check-in, no security line, directly to the city centre.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_MainTitle" xml:space="preserve">
+    <value>Take a premium transfer from Lisbon to Porto for the price of a train ticket.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_SubDescription" xml:space="preserve">
+    <value>When it comes time to returning home at the end of a day's work or a one-off meeting, there are several transportation options from Lisbon to Porto, however, they're not the most viable or the most comfortable.&lt;br&gt;
+&lt;br&gt;
+Buses and trains take too long and have multiple stops, and if you come with your own car, you pay more than double for fuel, tolls and parking.&lt;br&gt;
+&lt;br&gt;
+Contrary to what it may seem at first, the "air bridge" between Lisbon and Porto is not the fastest or the cheapest alternative, due to the requirement of having to arrive early at the airport, the nuisance of waiting in the (sometimes endless) security line, and the inconvenience of taking a taxi or other transport to the city centre.&lt;br&gt;
+&lt;br&gt;
+Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a train ticket — or 75% less than if you take your own car — with the difference of having a much faster and more comfortable journey in an eight-seater premium transfer.</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why" xml:space="preserve">
+    <value>Why you should take a premium transfer between Lisbon and Porto instead of other means of transport</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Bus_Reasons" xml:space="preserve">
+    <value>→ Trips take longer&lt;br /&gt;
+→ There are several stops along the way&lt;br /&gt;
+→ Trips are uncomfortable and noisy&lt;br /&gt;
+→ Wifi frequently does not work and there are no sockets to charge your smartphone&lt;br /&gt;
+→ You can only depart from Ste Rios or Oriente and stop in Campo 24 de Agosto&lt;br /&gt;
+→ Your luggage has to be checked and it may take some time to claim it when you arrive&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Car_Reasons" xml:space="preserve">
+    <value>→ You spend 3 to 4 times more money between tolls, fuel, insurance and car wear &lt;br/&gt;
+→ If you travel alone, the trip is not profitable or environmentally friendly&lt;br /&gt;
+→ You can't use your travel time to work or relax&lt;br/&gt;
+→ Difficulty in finding a parking space&lt;br/&gt;
+→ It takes longer if you don't take the highway&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção.</comment>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Description" xml:space="preserve">
+    <value>→ Rely on four daily trips, two in the morning and two in the afternoon&lt;br /&gt;
+→ Enjoy a more comfortable trip for the same price of a bus and train ticket &lt;br /&gt;
+→ Enjoy a central departure and arrival spots in your city&lt;br /&gt;
+→ Enjoy wifi on board to assure your travel time is usefully spent&lt;br /&gt;
+→ Respect the environment by riding on an eight-seater premium transfer &lt;br /&gt;</value>
+    <comment>@Ricardo - Originalmente, o primeiro ponto diz "partidas de 30 em 30 minutos". Uma vez que o horário foi alterado, foi alterar esta frase</comment>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Plane_Reasons" xml:space="preserve">
+    <value>→ The airplane does not provide internet access&lt;br/&gt;
+→ It's necessary to go through the security line at the airport&lt;br/&gt;
+→ Air traffic at Lisbon airport causes frequent delays&lt;br/&gt;
+→ You must arrive at the airport at least 1 hour in advance&lt;br/&gt;
+→ If you carry a carry-on bag, it may be sent to the hold of the plane&lt;br/&gt;
+→ You need to take a taxi or other alternative transportation to the center of Porto &lt;br/&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Ride_Reasons" xml:space="preserve">
+    <value>→ You spend 3 to 4 times more money between tolls, fuel, insurance and car wear &lt;br/&gt;
+→ If you travel alone, the trip is not profitable or environmentally friendly&lt;br /&gt;
+→ You can't use your travel time to work or relax&lt;br/&gt;
+→ Difficulty in finding a parking space&lt;br/&gt;
+→ It takes longer if you don't take the highway&lt;br/&gt;</value>
+    <comment>@Ricardo - alterei isto para ir ao encontro de carro particular e não de boleias. Convém retirar a secção das "boleias tradicionais" desta secção.</comment>
+  </data>
+  <data name="StaticPages_Loops_LisboaPorto_Why_Train_Reasons" xml:space="preserve">
+    <value>→ Trips take longer&lt;br /&gt;
+→ There are several stops along the way&lt;br /&gt;
+→ Trips are uncomfortable and noisy&lt;br /&gt;
+→ Delays, breakdowns and strikes happen often&lt;br /&gt;
+→ You can only charge your smartphone in first class&lt;br /&gt;
+→ You can only depart from Oriente or Santa Apolónia and arrive in Gaia or Campanhã&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_Book" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_From" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Coimbra" xml:space="preserve">
+    <value>- Av. Fernão de Magalhães&lt;br /&gt;- Portagem&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_APs_Lisboa" xml:space="preserve">
+    <value>- Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra" xml:space="preserve">
+    <value>From Coimbra</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times" xml:space="preserve">
+    <value>8am - 2pm</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa" xml:space="preserve">
+    <value>From Lisbon</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Days" xml:space="preserve">
+    <value>Every day</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times" xml:space="preserve">
+    <value>11am - 4pm</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria" xml:space="preserve">
+    <value>- Praça da República&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_APs_Lisboa" xml:space="preserve">
+    <value>- Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria" xml:space="preserve">
+    <value>From Leiria</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times" xml:space="preserve">
+    <value>3pm</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa" xml:space="preserve">
+    <value>From Lisbon</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa_Times" xml:space="preserve">
+    <value>12pm</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_APs_Lisboa" xml:space="preserve">
+    <value>- Amoreiras&lt;br /&gt;- Campo Grande&lt;br /&gt;- Gare do Oriente&lt;br /&gt;- Marquês de Pombal&lt;br /&gt;- Sete Rios&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_APs_Porto" xml:space="preserve">
+    <value>- Av. da Boavista&lt;br /&gt;- Casa da Música&lt;br /&gt;- GaiaShopping&lt;br /&gt;- NorteShopping&lt;br /&gt;- Trindade&lt;br /&gt;</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa" xml:space="preserve">
+    <value>From Lisbon</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times" xml:space="preserve">
+    <value>7:30am - 8:30am - 6pm - 7pm</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto" xml:space="preserve">
+    <value>From Porto</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Days" xml:space="preserve">
+    <value>Monday to Friday</value>
+  </data>
+  <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times" xml:space="preserve">
+    <value>7:30am - 8:30am - 6pm - 7pm</value>
+  </data>
   <data name="StaticPages_Loops_MainTitle" xml:space="preserve">
-    <value>Disrupting inter-city mobility, &lt;br&gt;one Loop at a time</value>
+    <value>Revolutionising intercity mobility, &lt;br&gt;one loop at a time</value>
   </data>
   <data name="StaticPages_Loops_SubDescription" xml:space="preserve">
-    <value>YoyoLoop has Loops available between Lisbon and Oporto, Coimbra and Leiria.</value>
+    <value>Yoyoloop has loops between Lisbon and Porto, Coimbra and Leiria, and loops from Porto to Coimbra.</value>
   </data>
   <data name="StaticPages_Loops_SubTitle" xml:space="preserve">
-    <value>Loops &amp; Schedules</value>
+    <value>Loops &amp; Schedule</value>
+  </data>
+  <data name="StaticPages_Privacy_Eight" xml:space="preserve">
+    <value>8. How long do we keep your personal data for?&lt;br&gt;
+&lt;br&gt;
+According to the applicable legislation, namely in the field of tax, accounting and contractual liability, data collected through this website shall remain saved for the period of time in which the user is registered and shall be eliminated when the user requests the deletion of said data or the deletion of their registration, according to the following clause.</value>
+  </data>
+  <data name="StaticPages_Privacy_Five" xml:space="preserve">
+    <value>5. Where is the User's data stored? &lt;br&gt;
+&lt;br&gt;
+The Yoyoloop Team stores its clients' and Users' data on servers of a specialised partner located in the European Union. The terms and conditions of said partner can be found here: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
+These servers are protected and maintained according to the highest security standards and in compliance with applicable privacy laws. If you wish to be removed from our database, you may exercise this right by contacting us through the various means available on our website.&lt;br&gt;
+Yoyoloop does not directly store user payment data. It is stored by a specialist partner, Stripe, an online payment processing company for internet businesses. The terms and conditions of said partner can be found here: LINK DO STRIPE &lt;br&gt;
+In order to ensure that the User's data is up-to-date and in compliance, the User can, through the Yoyoloop website: &lt;br&gt;
+&lt;br&gt;
+Update their name.&lt;br&gt;
+Update their address.&lt;br&gt;
+Update their contact information: mobile phone number and email address.&lt;br&gt;
+Update their payment method and billing details.&lt;br&gt;
+Permanently delete their account.&lt;br&gt;</value>
+  </data>
+  <data name="StaticPages_Privacy_Four" xml:space="preserve">
+    <value>4. Who has access to the User's personal data?
+Yoyoloop does not disclose to third parties any personal data of its Customers and Users without their consent, except when required by law.</value>
+  </data>
+  <data name="StaticPages_Privacy_Intro" xml:space="preserve">
+    <value>www.yoyoloop.com is a service of the company Yoyoloop Portugal, Unipessoal, Lda, henceforth referred to as Yoyoloop, an entity headquartered in Avenida da República, nº 50, 2º Piso, 1050-196 Lisbon. This Privacy Policy advises Users of the site about our practices to protect their privacy and personal data and reiterates the authorisations granted to us regarding the collection, use and processing of personal data at the moment of registration on the website as a User:</value>
   </data>
   <data name="StaticPages_Privacy_MainTitle" xml:space="preserve">
-    <value>Privacy policy</value>
+    <value>Privacy Policy</value>
+  </data>
+  <data name="StaticPages_Privacy_Nine" xml:space="preserve">
+    <value>9. Links to other sites&lt;br&gt;
+&lt;br&gt;
+Within the Yoyoloop website, there may be links to third-party websites. In the event that a User follows one of these links, note that each of these websites has its own Privacy Policy and that Yoyoloop does not accept any responsibility or liability regarding these policies.</value>
+  </data>
+  <data name="StaticPages_Privacy_One" xml:space="preserve">
+    <value>1. Overview of this Privacy Policy&lt;br&gt;
+&lt;br&gt;
+This Privacy Policy covers this website, as well as other websites that mention the same policy. The Yoyoloop team respects the User's privacy and processes their personal data according to the new General Data Protection Regulation (GDPR) (Regulation (EU) 2016/679).&lt;br&gt;
+The data collected or provided by the User will not be processed for any purpose other than those specified here.&lt;br&gt;
+Yoyoloop reserves the right to update or modify its Privacy Policy at any time, in particular in order to adapt it to legislative changes.</value>
+  </data>
+  <data name="StaticPages_Privacy_Seven" xml:space="preserve">
+    <value>7. User Rights under the General Data Protection Regulation&lt;br&gt;
+&lt;br&gt;
+The User has the right to access and rectify their data; to data portability; to be forgotten; to limit or oppose him or herself to personal data treatment; and to file a complaint and take legal action.</value>
+  </data>
+  <data name="StaticPages_Privacy_Six" xml:space="preserve">
+    <value>6. Does the Yoyoloop Website use cookies? &lt;br&gt;
+&lt;br&gt;
+The Yoyoloop website uses cookies. Cookies are files that store information on the user's hard drive or browser, allowing websites to recognise it and know they've visited them before. You may configure your browser to refuse cookies, but in that case the website or portions of the website may not function properly. Cookies are used to monitor and analyse the use of the website, allowing Yoyoloop to provide a better user experience.</value>
+  </data>
+  <data name="StaticPages_Privacy_SubTitle" xml:space="preserve">
+    <value>Yoyoloop recognises the importance of protecting your personal data, whatever its nature may be. For this reason, we have developed a set of security measures aimed at protecting your data.</value>
+  </data>
+  <data name="StaticPages_Privacy_Three" xml:space="preserve">
+    <value>3. Does Yoyoloop use personal data for Marketing and Advertising purposes? &lt;br&gt;
+&lt;br&gt;
+Yoyoloop will not use your personal data to send you any unsolicited mail or message for which we have not received your explicit consent. Yoyoloop does not sell or trade your data with third parties.</value>
+  </data>
+  <data name="StaticPages_Privacy_Two" xml:space="preserve">
+    <value>2. For what purpose are the User's personal data stored? &lt;br&gt;
+&lt;br&gt;
+The data collected in the different forms of the website are exclusively for the processing of user requests, for example:&lt;br&gt;
+i) Sending tickets by email;&lt;br&gt;
+ii) Providing technical or commercial support;&lt;br&gt;
+iii) Recovering or requesting a new password;&lt;br&gt;
+iv) Confirmation of account registration.&lt;br&gt;
+The data collected will not be used for any other purpose.</value>
+  </data>
+  <data name="StaticPages_Terms_MainDescription" xml:space="preserve">
+    <value>General conditions for Yoyoloop Users in offers available at www.yoyoloop.com.</value>
   </data>
   <data name="StaticPages_Terms_MainTitle" xml:space="preserve">
-    <value>Terms and conditions</value>
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="StaticPages_Terms_One" xml:space="preserve">
+    <value>1. Overview</value>
+  </data>
+  <data name="StaticPages_Terms_One_One" xml:space="preserve">
+    <value>1.1 Privacy Policy&lt;br&gt;
+Before using the Yoyoloop website or services, we suggest that all Users read and accept our Privacy Policy.</value>
+  </data>
+  <data name="StaticPages_Terms_One_Three" xml:space="preserve">
+    <value>1.3 Acceptance of the Terms of Use &lt;br&gt;
+By accessing this website, the User declares to have read, understood and accepted the Terms of Use described below, without the need for any further consent.</value>
+  </data>
+  <data name="StaticPages_Terms_One_Two" xml:space="preserve">
+    <value>1.2 About the Terms and Conditions &lt;br&gt;
+Yoyoloop reserves the right to add, change or delete any of the Terms of Use of its website and services by updating the content of this page and communicating it to its Users.&lt;br&gt;
+The Yoyoloop Terms and Conditions cover this website, as well as other sites that mention the same policy.</value>
+  </data>
+  <data name="StaticPages_Terms_Three" xml:space="preserve">
+    <value>3. Refunds and complaints</value>
+  </data>
+  <data name="StaticPages_Terms_Three_One" xml:space="preserve">
+    <value>3.1 Refunds
+Users may have access to a refund of a trip, provided that the cancellation is communicated to Yoyoloop at least 48 hours in advance of the date and time of travel. To request a refund, please send an email to reservas@yoyoloop.com. In case the request for refund is made less than 48 hours in advance, the payment of the trip will not be refunded.</value>
+  </data>
+  <data name="StaticPages_Terms_Three_Two" xml:space="preserve">
+    <value>3.2 Complaints
+Yoyoloop has a Complaint Book. If you wish to make a complaint, please send an email to clientes@yoyoloop.com.</value>
+  </data>
+  <data name="StaticPages_Terms_Two" xml:space="preserve">
+    <value>2. Using the Yoyoloop Website and Services</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Five" xml:space="preserve">
+    <value>2.5 General Conditions of Use&lt;br&gt;
+Through this site, Yoyoloop wishes to inform you about the services that it offers. The intellectual property rights over all contents of this site, except those provided by external entities duly identified, are the property of Yoyoloop, including information, tools, graphic design of Internet pages, all its components and all the figures, graphics or texts.
+&lt;br&gt;
+Yoyoloop assumes no responsibility for the damages resulting from any impossibility, delay, suspension or interruption of access to www.yoyoloop.com due to technical failures or other reasons. Yoyoloop does not guarantee that access to the site will not suffer interruptions or disturbances resulting from technical problems.
+&lt;br&gt;
+No part of the www.yoyoloop.com website may be reproduced, entirely or partially, nor may it be rented or sold without the prior permission of Yoyoloop or duly identified external entities that are providers of information.&lt;br&gt;
+&lt;br&gt;Yoyoloop reserves the right to complete, modify or delete the information contained in the pages of the website.
+&lt;br&gt;Yoyoloop can not guarantee the total immunity of its site to hacker attacks and viruses or other intrusion software.
+&lt;br&gt;Some pages of this website use cookies and javascript. Learn more about using cookies here. Inhibition of the use of these components may constitute an obstacle to web navigation and the correct process of simulation and purchase.
+&lt;br&gt;Access or use of www.yoyoloop.com implies acceptance by the User of the above conditions.</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Four" xml:space="preserve">
+    <value>2.4 Prices and availabilities&lt;br&gt;
+The availabilities on the Yoyoloop website are calculated at each moment according to the demand and offer available. After a trip is confirmed, Yoyoloop reserves the right to cancel it at least two (2) hours prior to the departure time, for operational reasons. In case a trip is cancelled by Yoyoloop's own responsibility and initiative, customers with tickets purchased for the trip in question will be refunded. &lt;br&gt; Yoyoloop reserves the right to increase, reduce or maintain prices for a particular trip at any time and without prior notice, in order to ensure the correct operation of the service.</value>
+  </data>
+  <data name="StaticPages_Terms_Two_One" xml:space="preserve">
+    <value>2.1 Copyright&lt;br&gt;
+Texts, images, graphics, downloads, sounds, videos and any other digital content depicted on the website may not be copied, distributed, modified or posted on other websites without the prior written permission of a member of the Yoyoloop team.</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Three" xml:space="preserve">
+    <value>2.3 Bookings on the Yoyoloop website&lt;br&gt;
+Bookings made on the Yoyoloop website are confirmed when the message "Your booking is confirmed" appears on the screen. The customer has the possibility to print the ticket or receive a download link of the ticket in his or her email. Bookings will only be valid for users who confirmed their email address through a link sent via email.</value>
+  </data>
+  <data name="StaticPages_Terms_Two_Two" xml:space="preserve">
+    <value>2.2. User and Customer Obligations&lt;br&gt;
+Access to Yoyoloop's website is limited to persons over the age of 18. Nevertheless, access to certain content and/or participation in Yoyoloop sales may be subject to other age limitations, as indicated in each case. The User may not (i) authorise the use of his or her account by third parties, (ii) allow access to the site through his or her account to persons under the age of 18, (iii) allow persons under the age of 18 to make bookings, unless the minor is accompanied by the account holder. In general, the User may access the site free of charge. The User acknowledges and accepts that access and use of the site is done in a free and conscious way, under his or her sole responsibility. In no case will Yoyoloop be liable for any use that may be made of the site by the User and/or third parties, nor for the damages and losses arising from it. The User pledges to make an adequate and lawful use of the site, in compliance with the applicable legislation, with these General Conditions of Use, with public order and good customs. The User shall refrain from (i) making an unauthorised or fraudulent use of the site; (ii) access or attempt to access restricted website resources; (iii) use the site for illicit or illegal purposes or effects that are contrary to what is established in these General Conditions of Use, to good faith and to public order, in order to harm the rights and interests of third parties, or that in any way may cause damages, disable or overburden or prevent the normal use of the site; (iv) cause damage to the site or systems of its service providers or third parties; (v) introduce or disseminate computer viruses or any other physical or logical systems likely to cause damage to Yoyoloop's systems or that of its suppliers, other Users or third parties, (iv) to attempt to access, use and/or manipulate Yoyoloop, third parties, Service Providers and other Users' data; (vii) reproduce or copy, distribute, allow public access through any means of public communication, transform or modify the Content, unless authorised by the holder of the corresponding rights or if legally permitted; (viii) obtaining or attempting to obtain the Contents, using for different means or procedures different from those that, as the case may be, have been made available for the purpose. The User may only access the site through the authorised means. Yoyoloop shall not be liable if the User does not have a device compatible with the browser versions it supports.</value>
   </data>
   <data name="Stripe_ErrorHandling_CardError_card_declined" xml:space="preserve">
     <value>The card was declined.</value>
@@ -1511,9 +2552,9 @@
     <value>The card number is not a valid credit card number.</value>
   </data>
   <data name="Stripe_ErrorHandling_PaymentMethodValidation_Generic" xml:space="preserve">
-    <value>There was an error in the validation of the payment method</value>
+    <value>There was an error when validating the payment method.</value>
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
-    <value>There was an error in the validation of the payment </value>
+    <value>There was an error when validating the payment.</value>
   </data>
 </root>
