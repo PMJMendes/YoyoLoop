@@ -2608,7 +2608,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ainda não. Os nossos transfers atuais são veículos de oito lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades..
+        ///   Looks up a localized string similar to Ainda não. Os nossos transfers atuais são veículos de cinco lugares Mercedes V-class. Num futuro próximo, serão substituídos por veículos elétricos, de modo a oferecer uma alternativa ainda mais sustentável para o transporte entre as cidades..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Electric_Answer {
             get {
@@ -2662,7 +2662,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to De momento, os nossos transfers são Mercedes V-class com 8 lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos..
+        ///   Looks up a localized string similar to De momento, os nossos transfers são Mercedes V-class com cinco lugares e estofos em pele. Num futuro próximo, serão substituídos por veículos elétricos..
         /// </summary>
         internal static string Help_Topic_YoyoloopCars_Question_Seats_Answer {
             get {
@@ -2797,7 +2797,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo e ao preço do Comboio..
+        ///   Looks up a localized string similar to Reserva o teu lugar num transfer premium, conduzido por um motorista profissional e aproveita uma viagem sem paragens, com wifi a bordo..
         /// </summary>
         internal static string HomePage_SubTitle {
             get {
@@ -4412,7 +4412,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cada um dos nossos shuttles são veículos de luxo de 8 lugares (Mercedes V-class Avantgarde, com estofos em pele). Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem.
+        ///   Looks up a localized string similar to Cada um dos nossos shuttles são veículos de luxo de cinco lugares (Mercedes V-class Avantgarde, com estofos em pele). Todos com wifi a bordo e conduzidos por um motorista profissional que te leva ao teu destino sem paragens para que possas fazer uma viagem mais confortável. As nossas cidades agradecem.
         /// </summary>
         internal static string StaticPages_About_Shuttles_SubTitle {
             get {
@@ -6118,7 +6118,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to → Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de oito lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa..
+        ///   Looks up a localized string similar to → Conta com viagens diárias segunda a sexta-feira&lt;br/&gt;&lt;br/&gt;→ Usufrui de mais conforto por um preço semelhantte ao do autocarro&lt;br/&gt;&lt;br/&gt;→ Desfruta de wifi a bordo para tornar a tua viagem mais útil&lt;br/&gt;&lt;br/&gt;→ Respeita o ambiente ao apanhar boleia de um veículo de cinco lugares&lt;br/&gt;&lt;br/&gt;→ Aproveita uma ligação direta entre o centro de Leiria e as zonas centrais da cidade de Lisboa..
         /// </summary>
         internal static string StaticPages_Loops_LisboaLeiria_Why_Description {
             get {

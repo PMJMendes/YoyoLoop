@@ -333,7 +333,7 @@
     <value>Share</value>
   </data>
   <data name="Confirm_Invite_Description" xml:space="preserve">
-    <value>Book your seat on an eight-seat premium transfer driven by a professional driver, &lt;br&gt; and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
+    <value>Book your seat on an five-seat premium transfer driven by a professional driver, &lt;br&gt; and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
   </data>
   <data name="Confirm_Invite_Title" xml:space="preserve">
     <value>Invite your friends and travel for just €1</value>
@@ -989,7 +989,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Are Yoyoloop vehicles electric?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Electric_Answer" xml:space="preserve">
-    <value>Not yet. Our current transfers are Mercedes V-Class eight-seater vehicles. In the near future, they will be replaced by electric vehicles, in order to offer an even more sustainable alternative for intercity mobility.</value>
+    <value>Not yet. Our current transfers are Mercedes V-Class five-seater vehicles. In the near future, they will be replaced by electric vehicles, in order to offer an even more sustainable alternative for intercity mobility.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Insurance" xml:space="preserve">
     <value>Am I insured when travelling with Yoyoloop?</value>
@@ -1007,7 +1007,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>How many seats does a Yoyoloop vehicle have?</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Seats_Answer" xml:space="preserve">
-    <value>Currently, our transfers are Mercedes V-Class eight-seaters. In the near future, they will be replaced by electric vehicles.</value>
+    <value>Currently, our transfers are Mercedes V-Class five-seaters. In the near future, they will be replaced by electric vehicles.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars_Question_Wifi" xml:space="preserve">
     <value>Do all Yoyoloop vehicles have wifi?</value>
@@ -1052,7 +1052,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Popular Loops</value>
   </data>
   <data name="HomePage_SubTitle" xml:space="preserve">
-    <value>Book your seat on an eight-seat premium transfer driven by a professional driver and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
+    <value>Book your seat on an five-seat premium transfer driven by a professional driver, &lt;br&gt; and enjoy a non-stop trip where you can work comfortably, with wifi on board.</value>
   </data>
   <data name="HomePage_SuggestLink" xml:space="preserve">
     <value>Can't find your city?</value>
@@ -1121,7 +1121,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Reliable</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_Content" xml:space="preserve">
-    <value>Our fleet is made up of eight-seater vehicles. Not only do we take more cars off the road, we also help reduce carbon footprint.</value>
+    <value>Our fleet is made up of five-seater vehicles. Not only do we take more cars off the road, we also help reduce carbon footprint.</value>
   </data>
   <data name="HomePage_Why_Card_Sustainable_SubTitle" xml:space="preserve">
     <value>Less cars,&lt;br&gt; better cities</value>
@@ -1133,7 +1133,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Why you should ride on a Yoyoloop transfer</value>
   </data>
   <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
-    <value>Book your seat on an eight-seat premium transfer driven by a professional driver and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
+    <value>Yoyoloop serviçe is a different "air bridge" between Lisboa and Porto,&lt;br&gt; based on five-seat premium transfers that go on the motorway. </value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
     <value>Going by train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
@@ -1587,7 +1587,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>My account</value>
   </data>
   <data name="StaticPages_About_MainDescription" xml:space="preserve">
-    <value>Disrupting intercity mobility, one Loop at a time.</value>
+    <value>Disrupting intercity mobility, one loop at a time.</value>
   </data>
   <data name="StaticPages_About_MainTitle" xml:space="preserve">
     <value>About us</value>
@@ -1631,7 +1631,7 @@ It is precisely why we created a premium transfer service for the price of a tra
     <value>Reliable</value>
   </data>
   <data name="StaticPages_About_Why_Sustainable_Content" xml:space="preserve">
-    <value>Our fleet is made up of eight-seater vehicles. Not only do we take more cars off the road, we also help reduce carbon footprint.</value>
+    <value>Our fleet is made up of five-seater vehicles. Not only do we take more cars off the road, we also help reduce carbon footprint.</value>
   </data>
   <data name="StaticPages_About_Why_Sustainable_SubTitle" xml:space="preserve">
     <value>Less cars,&lt;br&gt; better cities</value>
@@ -1915,7 +1915,7 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Popular destinations</value>
   </data>
   <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
-    <value>Disrupting intercity mobility, &lt;br&gt;one Loop at a time</value>
+    <value>Yoyoloop serviçe is a different "air bridge" between Lisboa and Porto,&lt;br&gt; based on five-seat premium transfers that go on the motorway. </value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
     <value>Yoyoloop gives you a ride from Lisbon and Coimbra to Porto. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
@@ -1933,10 +1933,10 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Yoyoloop drives you from Porto to Lisbon&lt;br/&gt; in just 2 hours and 30 minutes.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_MainDescription" xml:space="preserve">
-    <value>No check-in, no security delays, directly from city-center to city-center.</value>
+    <value>Come to Porto using a premium transfer directly to the centre of the city, without security lines or need to checkin.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_MainTitle" xml:space="preserve">
-    <value>Leave your car at home and take a premium transfer to Porto.</value>
+    <value>Leave your car at home and forget about the plane or the train.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_Stops_Description" xml:space="preserve">
     <value>Porto's public transportation network leaves a lot to be desired. Buses and trains are slow and suffer delays, and the Porto Metro only serves the suburbs and part of downtown. Those who come from other cities and takes their own car pay more than double for fuel, tolls and parking.&lt;br&gt;
@@ -2014,7 +2014,7 @@ Resende Bus: 111, 116, 119, 121, 122, 123, 130</value>
     <value>The Greater Porto area has more than 1.787.000 inhabitants. 260 thousand cards drive into the country's second largest city every day, generating constant traffic jams. In a recent study, it was revealed that Porto is the country's worst city to drive in, with more than 27 hours a year spent in traffic — many of them in the constantly congested VCI road.</value>
   </data>
   <data name="StaticPages_Destinos_SubDescription" xml:space="preserve">
-    <value>Take a premium transfer for the price of a train ticket</value>
+    <value>Lisbon, Porto, Coimbra and Leiria became Looped cities. &lt;br&gt;Yoyoloop serviçe is a different "air bridge", based on five-seat premium transfers that go on the motorway. </value>
   </data>
   <data name="StaticPages_Destinos_Why_Accessible_Description" xml:space="preserve">
     <value>Save your car keys, save your wallet</value>
@@ -2115,7 +2115,7 @@ Resende Bus: 111, 116, 119, 121, 122, 123, 130</value>
 &lt;br&gt;
 Buses and trains take too long and have multiple stops, and if you come with your own car, you pay more than double for fuel, tolls and parking.&lt;br&gt;
 &lt;br&gt;
-Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of a train ticket — or 75% less than if you take your own car — with the difference of having a much faster and more comfortable journey in an eight-seater premium transfer.</value>
+Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of a train ticket — or 75% less than if you take your own car — with the difference of having a much faster and more comfortable journey in a five-seater premium transfer.</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_Why" xml:space="preserve">
     <value>Why you should take a premium transfer between Lisbon and Coimbra instead of other means of transport</value>
@@ -2144,7 +2144,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of 
 → Enjoy a more comfortable trip for the same price of a bus or train ticket &lt;br /&gt;
 → Benefit from departure and arrival points in central points of your city &lt;br /&gt;
 → Enjoy wifi on board to assure your travel time is usefully spent&lt;br /&gt;
-→ Respect the environment by riding on an eight-seater premium transfer &lt;br /&gt;</value>
+→ Respect the environment by riding on a five-seater premium transfer &lt;br /&gt;</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_Why_Train_Reasons" xml:space="preserve">
     <value>→ Trips take longer&lt;br /&gt;
@@ -2200,7 +2200,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of 
     <value>→ Rely on trips from Monday to Friday &lt;br /&gt;
 → Enjoy a more comfortable trip for the same price of a bus ticket &lt;br /&gt;
 → Enjoy wifi on board to assure your travel time is usefully spent&lt;br /&gt;
-→ Respect the environment by riding on an eight-seater premium transfer &lt;br /&gt;
+→ Respect the environment by riding on a five-seater premium transfer &lt;br /&gt;
 → Enjoy a direct connection between the centre of Leiria and central areas in Lisbon.&lt;br /&gt;</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_Why_Ride_Reasons" xml:space="preserve">
@@ -2248,7 +2248,7 @@ Buses and trains take too long and have multiple stops, and if you come with you
 &lt;br&gt;
 Contrary to what it may seem at first, the "air bridge" between Lisbon and Porto is not the fastest or the cheapest alternative, due to the requirement of having to arrive early at the airport, the nuisance of waiting in the (sometimes endless) security line, and the inconvenience of taking a taxi or other transport to the city centre.&lt;br&gt;
 &lt;br&gt;
-Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a train ticket — or 75% less than if you take your own car — with the difference of having a much faster and more comfortable journey in an eight-seater premium transfer.</value>
+Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a train ticket — or 75% less than if you take your own car — with the difference of having a much faster and more comfortable journey in a five-seater premium transfer.</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_Why" xml:space="preserve">
     <value>Why you should take a premium transfer between Lisbon and Porto instead of other means of transport</value>
@@ -2274,7 +2274,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a 
 → Enjoy a more comfortable trip for the same price of a bus and train ticket &lt;br /&gt;
 → Enjoy a central departure and arrival spots in your city&lt;br /&gt;
 → Enjoy wifi on board to assure your travel time is usefully spent&lt;br /&gt;
-→ Respect the environment by riding on an eight-seater premium transfer &lt;br /&gt;</value>
+→ Respect the environment by riding on a five-seater premium transfer &lt;br /&gt;</value>
     <comment>@Ricardo - Originalmente, o primeiro ponto diz "partidas de 30 em 30 minutos". Uma vez que o horário foi alterado, foi alterar esta frase</comment>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_Why_Plane_Reasons" xml:space="preserve">
