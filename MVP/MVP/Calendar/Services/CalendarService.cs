@@ -35,7 +35,8 @@ namespace MVP.Services
 
             using (var model = new EntityModel())
             {
-                result.Routes = model.Route.Include(r => r.StartRegion.AccessPoints)
+                result.Routes = model.Route.Where(r => r.Active)
+                                           .Include(r => r.StartRegion.AccessPoints)
                                            .Include(r => r.EndRegion.AccessPoints)
                                            .Include(d => d.Departures)
                                            .Include(f => f.Fares)
@@ -106,7 +107,7 @@ namespace MVP.Services
             var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
             var seats = state.Selection.Seats;
             var dayType = GetDayType(date);
-            var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
+            var departures = model.Departure.Where(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                     d => d,
                     t => t.Departure,
@@ -184,7 +185,7 @@ namespace MVP.Services
 
                 var dayType = GetDayType(date);
 
-                var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
+                var departures = model.Departure.Where(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                     .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                         d => d,
                         t => t.Departure,
@@ -197,8 +198,8 @@ namespace MVP.Services
                         {
                             APs = new
                             {
-                                SAP = t == null ? model.AccessPoint.Where(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId).FirstOrDefault() : t.StartAccessPoint,
-                                DAP = t == null ? model.AccessPoint.Where(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId).FirstOrDefault() : t.EndAccessPoint
+                                SAP = t == null ? model.AccessPoint.Where(ap => ap.Active && ap.AccessPointId == state.Selection.SAP.AccessPointId).FirstOrDefault() : t.StartAccessPoint,
+                                DAP = t == null ? model.AccessPoint.Where(ap => ap.Active && ap.AccessPointId == state.Selection.DAP.AccessPointId).FirstOrDefault() : t.EndAccessPoint
                             },
                             Occupancy = t == null ? 0 : t.Bookings.Where(b => b.Status != BookingStatus.CANCELLED).Sum(b => b.Seats),
                             Departure = d.Departure
@@ -281,7 +282,8 @@ namespace MVP.Services
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
                 var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
-                var departures = model.Departure.Where(d => d.Route.RouteId == state.Selection.Route.RouteId &&
+                var departures = model.Departure.Where(d => d.Active &&
+                                                            d.Route.RouteId == state.Selection.Route.RouteId &&
                                                             d.DayType == dayType &&
                                                             d.Time == state.Selection.Time
                                                        )

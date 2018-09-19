@@ -2526,4 +2526,16 @@ Os textos, imagens, gráficos, downloads, sons, vídeos, e qualquer outro conte�
   <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
     <value>Para receberes o teu código promocional só tens que marcar a tua primeira viagem!</value>
   </data>
+  <data name="Account_ConfirmEmail_Login" xml:space="preserve">
+    <value>Faça login para poder confirmar o seu email</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_Error_SecondLine" xml:space="preserve">
+    <value>Tenta outra vez e se o erro persistir, contacta-nos.</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_NullProvider" xml:space="preserve">
+    <value>Não foi possível contactar o serviço de autenticação externo.</value>
+  </data>
+  <data name="Account_RegisterExternalLogin_ProviderError" xml:space="preserve">
+    <value>Ocorreu um erro ao autenticar com o</value>
+  </data>
 </root>

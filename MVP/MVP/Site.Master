@@ -32,7 +32,7 @@
             j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })
-        (window, document, 'script', 'dataLayer', 'GTM-55D9S86');
+        (window, document, 'script', 'dataLayer', '<%= ConfigurationManager.AppSettings["GoogleTagManagerContainer"]%>');
     </script>
     <!-- End Google Tag Manager -->
 
@@ -95,8 +95,8 @@
             </div>
         </div>
 
-        <yoyo:Login ID="login" runat="server" OnSignIn="UserSignIn" />
-        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" />
+        <yoyo:Login ID="login" runat="server" OnSignIn="UserSignIn" OnExternalLogin="ExternalLogin" />
+        <yoyo:Register ID="register" runat="server" OnSignIn="UserSignIn" OnExternalLogin="ExternalLogin" />
         <yoyo:Forgot ID="forgot" runat="server"/>
         <yoyo:Message ID="message" runat="server"/>
 
@@ -285,19 +285,19 @@
                         <div class="footer__second-row row p-5">
                             <div class="col-md-4">Copyright © 2018. Yoyoloop Portugal, Unipessoal, Lda</div>
                             <div class="col-md-4 text-center">
-                                <a class="footer__social" href="#">
+                                <a class="footer__social" href="https://www.facebook.com/yoyoloop.io/">
                                     <img src="/img/facebook.png"
                                         srcset="/img/facebook@2x.png 2x,
                                             /img/facebook@3x.png 3x"
                                         class="facebook p-1">
                                 </a>
-                                <a class="footer__social" href="#">
+                                <a class="footer__social" href="https://www.instagram.com/yoyoloop.io/">
                                     <img src="/img/instagram.png"
                                         srcset="/img/instagram@2x.png 2x,
                                             /img/instagram@3x.png 3x"
                                         class="instagram p-1">
                                 </a>
-                                <a class="footer__social" href="#">
+                                <a class="footer__social" href="https://www.linkedin.com/company/yoyoloop/">
                                     <img src="/img/linkedin-footer.png"
                                         srcset="/img/linkedin-footer@2x.png 2x,
                                             /img/linkedin@-footer3x.png 3x"

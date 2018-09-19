@@ -22,6 +22,24 @@ namespace MVP.Controls {
         protected global::System.Web.UI.UpdatePanel upRegister;
         
         /// <summary>
+        /// btnLoginFacebook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnLoginFacebook;
+        
+        /// <summary>
+        /// btnLoginGoogle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnLoginGoogle;
+        
+        /// <summary>
         /// RegisterErrorMessage control.
         /// </summary>
         /// <remarks>

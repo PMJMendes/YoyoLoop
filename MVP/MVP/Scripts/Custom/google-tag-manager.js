@@ -1,16 +1,20 @@
-﻿function GTM_Transaction(id, fare, mgm, cost, tax, route, date, seats) {
+﻿function GTM_Transaction(id, promocode, fare, mgm, cost, tax, route, type, date, seats) {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'Transaction',
         'transactionId': id,
+        'transactionAffiliation': promocode,
         'transactionFare': fare,
         'transactionMGM': mgm,
         'transactionTotal': cost,
         'transactionTax': tax,
         'transactionProducts': [{
-            'route': route,
+            'sku': route,
+            'name': route,
+            'category': type,
             'date': date,
-            'seats': seats
+            'price': cost,
+            'quantity': seats
         }]
     });
 }

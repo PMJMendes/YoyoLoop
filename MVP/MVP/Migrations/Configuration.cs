@@ -174,6 +174,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("C239AFC3-3854-4373-B037-53B65ED38F85"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan (10,0,0)
@@ -181,6 +182,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("13ED2320-CA13-4864-A30A-B18FE94D562F"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -188,6 +190,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("CA3A9F8A-37CE-4E58-B602-CAD736B28C10"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -195,6 +198,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("317FB75A-F4CD-4759-87DA-1059BB910537"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(11, 0, 0)
@@ -202,6 +206,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("EEF65D19-37D1-46C0-AFC8-890F6C6A5889"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(11, 0, 0)
@@ -209,6 +214,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("F803951C-7AF2-4553-8C6E-D7B602D5B20C"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(11, 0, 0)
@@ -216,6 +222,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D7B75163-EEE8-4038-9258-F6ECED21454A"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(11, 0, 0)
@@ -223,6 +230,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("9278024C-8657-4C41-87DE-573FBF67157F"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(11, 0, 0)
@@ -230,6 +238,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D3DB6ED0-E29B-4D7B-9EAF-21C2A074E9E6"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -237,6 +246,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("7283E3AC-F860-4A70-BC25-F09AABB61ABC"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -244,6 +254,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("8EC44D09-F97D-49AD-B470-BC897B17305A"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -251,6 +262,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("22C72D39-6174-4245-A2C9-76390BB9D6C9"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -258,6 +270,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("21669C6D-29A4-4B72-9413-4233730AC235"),
+                Active = true,
                 Route = lis_lei,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -303,6 +316,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("218F0008-C0D6-4FBF-990E-BF3AA66FAA82"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(8, 30, 0)
@@ -310,6 +324,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("56C94087-E775-489A-A865-CF632B62B509"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(17, 30, 0)
@@ -317,6 +332,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("96579292-35B0-4D54-8372-AAEE19A82DF1"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(19, 30, 0)
@@ -324,6 +340,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("F03ECD3F-818E-4430-B0DD-994ADFC73005"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(21, 30, 0)
@@ -331,6 +348,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("4E3AB471-01DD-48B3-ADF8-6DE5724CB931"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(8, 30, 0)
@@ -338,6 +356,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("E0D5AB65-4427-4935-B5DB-9760878BCA22"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(17, 30, 0)
@@ -345,6 +364,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("35CB5B01-CFE3-4ED7-BE2E-15DFEAB47A5B"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(19, 30, 0)
@@ -352,6 +372,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B6FE8CCE-532A-4FEA-9CCC-760A5D6AF3C8"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(21, 30, 0)
@@ -359,6 +380,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("2B90FD7D-B4F2-4D8A-B77C-F001EADB0657"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(8, 30, 0)
@@ -366,6 +388,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("E32A23BA-DB24-4CC8-8E7F-7E9089A17684"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(17, 30, 0)
@@ -373,6 +396,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("F2EB4CD3-A4E9-482E-A429-D221DF357D88"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(19, 30, 0)
@@ -380,6 +404,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("3EB0632F-CDA6-4C82-966F-9D6225ACE907"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(21, 30, 0)
@@ -387,6 +412,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("5AC6FABC-8DC0-4CDC-A4DC-4DAD955F93CC"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(8, 30, 0)
@@ -394,6 +420,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D037C5D3-0EFD-452D-90B6-EC19D0EFDCDC"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(17, 30, 0)
@@ -401,6 +428,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("6348AE74-6778-4232-AC08-8772F066BC47"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(19, 30, 0)
@@ -408,6 +436,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("FCBED9B4-5694-4249-AA9C-BAD789A31A0E"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(21, 30, 0)
@@ -415,6 +444,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("59F6FE4B-1F1F-4AA0-BD11-6A008C4A3FDD"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(8, 30, 0)
@@ -422,6 +452,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("93CC7F2E-1194-4D2D-837E-76DFA9B72A03"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(17, 30, 0)
@@ -429,6 +460,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("DBFAAF9D-E72E-411A-ADE0-9098A29A7434"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(19, 30, 0)
@@ -436,6 +468,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("37B55232-2B8B-4B32-8D75-8890D1EF6282"),
+                Active = true,
                 Route = lis_cas,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(21, 30, 0)
@@ -481,6 +514,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B20B7C94-C784-450E-B6C2-251B8BD2EAC1"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -488,6 +522,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("6E653093-1261-4CE8-8911-C4B3933DFADA"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -495,6 +530,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("23CB9AA1-9286-4580-9843-6B8ED4675CF7"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(7, 0, 0)
@@ -502,6 +538,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("378EA9E6-7F55-46CA-BAA9-A224C3A671DC"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -509,6 +546,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("F56BA714-394D-42A4-9046-797360FAE28D"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -516,6 +554,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("217AB38F-AE85-4AEE-8ABE-0ECD74DB7F5A"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(7, 0, 0)
@@ -523,6 +562,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("46537013-2B3D-40A5-9F1F-BE409170F126"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -530,6 +570,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("1BD9FB24-3197-421D-92F7-3DBFF78EE802"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -537,6 +578,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("896F4BAB-8280-4588-AFDD-8ABF28B90179"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(7, 0, 0)
@@ -544,6 +586,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("44C6BED1-2AA8-499A-A2FC-DCF19AE259BF"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -551,6 +594,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("5EBCA1DA-6627-473D-8528-4DAC225A85CC"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -558,6 +602,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("29FE4C49-6921-4AD2-9A9C-5EDCFAC0BF4B"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(7, 0, 0)
@@ -565,6 +610,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B0EE3816-4EAF-4AA7-84ED-191EC8D11F0A"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -572,6 +618,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("59E3EA41-FAC2-41D4-AA9F-0C83039040E5"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -579,6 +626,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D2EC84AD-5302-48BE-A34C-42B2A39E98FF"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(7, 0, 0)
@@ -586,6 +634,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("28C2C726-C091-469C-BD86-2048D4A56460"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -593,6 +642,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("6A6DBDCB-F480-4006-9E85-ED4E35A0D1AB"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -600,6 +650,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("378EC022-605C-4271-B043-29094630393A"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(8, 0, 0)
@@ -607,6 +658,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("3774BA3C-B097-4EBA-96F5-2DF1866CA3F4"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(14, 0, 0)
@@ -614,6 +666,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("BE0DF58D-2A69-468D-9FC3-41396B80593C"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(20, 0, 0)
@@ -621,6 +674,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("FB1E0E52-019C-48BB-9BD9-6A066BA83A29"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -628,6 +682,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("DBD69A11-E57D-414E-9F2B-6685522FAD92"),
+                Active = true,
                 Route = lis_coi,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -673,6 +728,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("DF0EF468-BB50-49CE-946C-3CC8CC5B1A8B"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(12, 0, 0)
@@ -680,6 +736,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("93E50282-4509-4A5D-B7E0-FFB96E2A8501"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(17, 0, 0)
@@ -687,6 +744,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("7E2A874A-276D-4742-AB66-676EB86BF027"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(21, 0, 0)
@@ -694,6 +752,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("AF0FA82C-C67A-4BD5-B315-16C1793FE80F"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -701,6 +760,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("1B7D2284-8EEF-4C0E-8EEF-F42D2D7F4F00"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -708,6 +768,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("4AB95A73-2CD4-48A3-BBE2-24CDB40A2E97"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -715,6 +776,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("FF87760E-42D8-446A-AFE3-F3246B873FA4"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -722,6 +784,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("2C753493-ECF5-42A7-8981-D2F1E007EA14"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(15, 0, 0)
@@ -729,6 +792,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("594BE6F6-FE22-454F-9634-84C2A169A2A7"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(17, 0, 0)
@@ -736,6 +800,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("942482F4-9592-4044-9F1A-B8ABBDD6F6B8"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(21, 0, 0)
@@ -743,6 +808,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("3C2E3627-25D6-4929-B78E-0D75694800EA"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(12, 0, 0)
@@ -750,6 +816,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D0535CC9-DD27-4ACE-BD0B-45BA7A6E88FD"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(17, 0, 0)
@@ -757,6 +824,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("2387B344-D36F-4C7F-BC88-185F2B64F525"),
+                Active = true,
                 Route = lei_lis,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(21, 0, 0)
@@ -802,6 +870,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("37ABE582-7061-4C75-A9D5-40A621810EF3"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -809,6 +878,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("4C20A9C3-EACB-40FA-A5E9-67D88F1DBFF2"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.SUNDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -816,6 +886,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("8D36E85F-0475-46B7-8201-B504EB156E90"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -823,6 +894,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("23CC650A-CD4D-4DB1-8B49-B02F9239B2FF"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -830,6 +902,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("1CB2BDB3-E32C-495E-9EC5-EE83AFA3D417"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(22, 0, 0)
@@ -837,6 +910,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("3887410A-AC71-4BAC-82A9-8C143F743FA9"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -844,6 +918,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("C544183E-751E-405A-A699-D19A0DACBC12"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -851,6 +926,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("62BFE003-D0B6-4783-812F-FADB207271B2"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(22, 0, 0)
@@ -858,6 +934,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("991A2B37-A04F-4C64-BDC9-E51DD812391A"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -865,6 +942,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D6E002F0-60B9-449C-9C21-99CBED4566B7"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -872,6 +950,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("DF879FA1-C215-4AB4-B72A-C2EA3B18693B"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(22, 0, 0)
@@ -879,6 +958,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("4B7D1FC0-D2AA-4587-9C88-13579F757960"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -886,6 +966,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("EA04ACDC-A163-43DC-A7AF-D0FCB6E291AF"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -893,6 +974,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("8AAEDCAF-3417-49C7-8C1F-FF5D75B855FF"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(22, 0, 0)
@@ -900,6 +982,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("1A619424-0E56-4E2A-ACE0-7DA57CC32559"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(10, 0, 0)
@@ -907,6 +990,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("D3D77526-F886-4B84-AB17-CDF1BFB8C6D2"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(16, 0, 0)
@@ -914,6 +998,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("BA5347B2-12E7-4B47-9E49-47178ADFB8F2"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(22, 0, 0)
@@ -921,6 +1006,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("0700DD65-6563-4CE4-B4D6-E82EDE23052A"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(11, 0, 0)
@@ -928,6 +1014,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B2552BA4-2B3B-4BA5-8E67-782ADF217D5A"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(17, 0, 0)
@@ -935,6 +1022,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("6E494523-0EFD-41B1-A76E-B10238D45C0D"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(23, 0, 0)
@@ -942,6 +1030,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("2B388801-3BCD-4829-AFF7-189E09B2E658"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(13, 0, 0)
@@ -949,6 +1038,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("991F915B-1C4F-451E-840F-4359269FA068"),
+                Active = true,
                 Route = coi_lis,
                 DayType = DayType.SATURDAY,
                 Time = new TimeSpan(19, 0, 0)
@@ -994,6 +1084,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("9A916926-CB02-4225-8AC3-920F378D4403"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(7, 30, 0)
@@ -1001,6 +1092,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("18DC1646-C35D-4466-B26A-F794D5EA3CA4"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(9, 15, 0)
@@ -1008,6 +1100,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("A01BAD88-A95D-470D-93CA-8BD0BAFEFC51"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(18, 30, 0)
@@ -1015,6 +1108,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("EBA95F31-7B7C-4D51-B29D-A0F7B6E7328D"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.MONDAY,
                 Time = new TimeSpan(20, 30, 0)
@@ -1022,6 +1116,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("1D115F0E-89DE-4347-8D3F-2A330F4D5E1E"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(7, 30, 0)
@@ -1029,6 +1124,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B4EB282B-708B-4989-828B-E6A205056ADF"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(9, 15, 0)
@@ -1036,6 +1132,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("6226473A-BE9D-4B47-9E95-7FCD4C242BE5"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(18, 30, 0)
@@ -1043,6 +1140,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("726EC86D-2D53-428E-AAEA-C8BBBEDDBAEF"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.TUESDAY,
                 Time = new TimeSpan(20, 30, 0)
@@ -1050,6 +1148,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("F04F87FA-183B-452D-88F4-D4AC01CBB343"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(7, 30, 0)
@@ -1057,6 +1156,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("035349FA-BB0F-4E39-B695-ADDF5290B0B5"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(9, 15, 0)
@@ -1064,6 +1164,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("07FED86F-4317-4DF8-9DE7-F8CD04979C0B"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(18, 30, 0)
@@ -1071,6 +1172,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("67927B0C-0D1C-4EE7-A76D-9C7B83C54398"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.WEDNESDAY,
                 Time = new TimeSpan(20, 30, 0)
@@ -1078,6 +1180,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("43301E72-0E14-4154-B045-E6DBEF3BA544"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(7, 30, 0)
@@ -1085,6 +1188,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("8EA5A9E7-A0DC-48F8-913D-8641BDC54ADB"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(9, 15, 0)
@@ -1092,6 +1196,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("64C13A01-C4CD-4BA5-9F24-472D17E0BFC1"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(18, 30, 0)
@@ -1099,6 +1204,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("813E3D37-6383-4EA9-B1B1-006043CB414E"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.THURSDAY,
                 Time = new TimeSpan(20, 30, 0)
@@ -1106,6 +1212,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("037D2A78-01AE-40F1-935F-40F7EA1588DC"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(7, 30, 0)
@@ -1113,6 +1220,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("C56CFF6E-7CBF-430F-BA19-77751A6DA3D6"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(9, 15, 0)
@@ -1120,6 +1228,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("B2CFC733-67E7-4781-B441-5CE185A3ED48"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(18, 30, 0)
@@ -1127,6 +1236,7 @@ namespace MVP.Migrations
             context.Departure.AddOrUpdate(new Departure()
             {
                 DepartureId = Guid.Parse("34EA9E27-5A58-4165-9487-B01A39E28135"),
+                Active = true,
                 Route = cas_lis,
                 DayType = DayType.FRIDAY,
                 Time = new TimeSpan(20, 30, 0)

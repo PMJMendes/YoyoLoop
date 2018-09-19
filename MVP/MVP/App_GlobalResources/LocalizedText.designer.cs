@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Faça login para poder confirmar o seu email.
+        /// </summary>
+        internal static string Account_ConfirmEmail_Login {
+            get {
+                return ResourceManager.GetString("Account_ConfirmEmail_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Obrigado por confirmares o teu email..
         /// </summary>
         internal static string Account_ConfirmEmail_MainTitle {
@@ -84,6 +93,33 @@ namespace Resources {
         internal static string Account_ConfirmEmail_TicketRedirect {
             get {
                 return ResourceManager.GetString("Account_ConfirmEmail_TicketRedirect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tenta outra vez e se o erro persistir, contacta-nos..
+        /// </summary>
+        internal static string Account_RegisterExternalLogin_Error_SecondLine {
+            get {
+                return ResourceManager.GetString("Account_RegisterExternalLogin_Error_SecondLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não foi possível contactar o serviço de autenticação externo..
+        /// </summary>
+        internal static string Account_RegisterExternalLogin_NullProvider {
+            get {
+                return ResourceManager.GetString("Account_RegisterExternalLogin_NullProvider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro ao autenticar com o.
+        /// </summary>
+        internal static string Account_RegisterExternalLogin_ProviderError {
+            get {
+                return ResourceManager.GetString("Account_RegisterExternalLogin_ProviderError", resourceCulture);
             }
         }
         

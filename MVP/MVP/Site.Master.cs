@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
@@ -7,7 +8,9 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 using MVP.Models.Extensions;
+using MVP.Models.Helpers;
 using MVP.Services;
 
 namespace MVP
@@ -15,6 +18,11 @@ namespace MVP
     public partial class SiteMaster : MasterPage
     {
         public event EventHandler<EventArgs> PassSignIn;
+
+        public class ExternalLoginEventArgs : EventArgs
+        {
+            public string Provider;
+        }
 
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
@@ -107,16 +115,48 @@ namespace MVP
             }
         }
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string error = (string)Session["master.error"];
+            if(!string.IsNullOrEmpty(error))
+            {
+                ApplicationHelpers.ShowMessage(Page, error);
+                Session["master.error"] = null;
+            }
+        }
+
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             Response.Redirect("/");
         }
 
-        protected void UserSignIn(object sender, EventArgs e)
+        public void UserSignIn(object sender, EventArgs e)
         {
             GA_Login(Context.User.Identity.GetUserId());
             PassSignIn?.Invoke(this, e);
+        }
+
+        protected void ExternalLogin(object sender, ExternalLoginEventArgs e)
+        {
+            string provider = e.Provider;
+            if (string.IsNullOrEmpty(provider))
+            {
+                return;
+            }
+            string returnUrl = Request.Url.PathAndQuery;
+            string redirectUrl = ResolveUrl(String.Format(CultureInfo.InvariantCulture, "~/Account/RegisterExternalLogin?{0}={1}&returnUrl={2}", IdentityHelper.ProviderNameKey, provider, returnUrl));
+            var properties = new AuthenticationProperties()
+            {
+                RedirectUri = redirectUrl
+            };
+            if (Context.User.Identity.IsAuthenticated)
+            {
+                properties.Dictionary[IdentityHelper.XsrfKey] = Context.User.Identity.GetUserId();
+            }
+            Context.GetOwinContext().Authentication.Challenge(properties, provider);
+            Response.StatusCode = 401;
+            Response.End();
         }
 
         protected void btnChangeLangPortuguese_Click(object sender, EventArgs e)
@@ -137,5 +177,11 @@ namespace MVP
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-LoginKey", "GTM_Login('" + userid + "');", true);
         }
+
+        public void GA_Signup(string id, string email, string name)
+        {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
+        }
+
     }
 }

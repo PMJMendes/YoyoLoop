@@ -18,7 +18,7 @@
                             </div>
                             <div class="row">
                                 <div class="login__facebook-row col-md-6 text-right">
-                                    <button type="button" class="login__with--facebook btn btn-primary">
+                                    <button runat="server" ID="btnLoginFacebook" onserverclick="btnLoginFacebook_ServerClick" type="button" class="login__with--facebook btn btn-primary">
                                         <img src="../img/facebook-login.png"
                                         srcset="../img/facebook-login@2x.png 2x,
                                         ../img/facebook-login@3x.png 3x"
@@ -27,7 +27,7 @@
                                     </button>
                                 </div>
                                 <div class="login__google-row col-md-6 text-left">
-                                    <button type="button" class="login__with--google btn btn-primary">
+                                    <button runat="server" ID="btnLoginGoogle" onserverclick="btnLoginGoogle_ServerClick" type="button" class="login__with--google btn btn-primary">
                                         <img src="../img/google-login.png"
                                         srcset="../img/google-login@2x.png 2x,
                                         ../img/google-login@3x.png 3x"
@@ -100,6 +100,10 @@
                         </div>
                     </div>
             </ContentTemplate>
+            <Triggers>
+                <asp:PostBackTrigger ControlID="btnLoginFacebook" />
+                <asp:PostBackTrigger ControlID="btnLoginGoogle" />
+            </Triggers>
         </asp:UpdatePanel>
     </div>
 </div>
