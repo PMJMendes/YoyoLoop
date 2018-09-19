@@ -739,10 +739,10 @@
 
         <div class="row mb-5">
             <div class="static-page__grid col-md-6 d-flex align-items-center flex-column mt-5 pr-0 mr-0">
-                <img src="/img/boleia.png" srcset="/img/boleia@2x.png 2x, /img/boleia@3x.png 3x">
-                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Ride%>"/></div>
+                <img src="/img/bus.png" srcset="/img/bus@2x.png 2x, /img/bus@3x.png 3x">
+                <div class="static-page__grid__title mt-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_Details_Why_Bus%>"/></div>
                 <div class="static-page__grid__text mt-3">
-                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Ride_Reasons%>"/>
+                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_Why_Bus_Reasons%>"/>
                 </div>
             </div>
 
