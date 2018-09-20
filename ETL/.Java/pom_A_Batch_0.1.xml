@@ -25,7 +25,7 @@
     <talend.project.branch/>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-09-20 104431662</talend.job.date>
+    <talend.job.date>2018-09-20 133338411</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.a_batch_0_1</talend.job.package>
     <talend.job.class>${talend.job.package}.${talend.job.name}</talend.job.class>

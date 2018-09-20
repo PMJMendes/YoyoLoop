@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_String" value="yoyo_dev"/>
-    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/yoyoloop-etl-19set2018v2.xlsx"/>
-    <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_String" value="yoyo"/>
-    <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_Password" value="JNeLCKnmJT+R9poCVIjgrw=="/>
-    <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_String" value="5432"/>
-    <contextParameter comment="" name="Schema" prompt="Schema?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_String" value="public"/>
-    <contextParameter comment="" name="Server" prompt="Server?" promptNeeded="true" repositoryContextId="_2i1u0LeZEei9tc41O36oNw" type="id_String" value="yoyodbinstance.c5auyviawrg9.eu-west-1.rds.amazonaws.com"/>
+    <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyo_prod"/>
+    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/yoyoloop-etl-19set2018v3.xlsx"/>
+    <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyo"/>
+    <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_Password" value="JNeLCKnmJT+R9poCVIjgrw=="/>
+    <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="5432"/>
+    <contextParameter comment="" name="Schema" prompt="Schema?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="public"/>
+    <contextParameter comment="" name="Server" prompt="Server?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyodbinstance.c5auyviawrg9.eu-west-1.rds.amazonaws.com"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>

@@ -27,7 +27,7 @@
     <talend.project.branch></talend.project.branch>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-09-20 104430777</talend.job.date>
+    <talend.job.date>2018-09-20 133337432</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.fares_0_1</talend.job.package>
     <talend.job.name>Fares</talend.job.name>
