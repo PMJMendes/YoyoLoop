@@ -1052,7 +1052,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Loops Populares</value>
   </data>
   <data name="HomePage_SubTitle" xml:space="preserve">
-    <value>Reserve o seu lugar num transfer premium de cinco lugares conduzido por um motorista profissional &lt;br&gt;e aproveite uma viagem onde pode trabalhar, sem paragens, com wifi a bordo.</value>
+    <value>Reserve o seu lugar num transfer premium de cinco lugares conduzido por um motorista profissional e aproveite uma viagem onde pode trabalhar, sem paragens, com wifi a bordo.</value>
   </data>
   <data name="HomePage_SuggestLink" xml:space="preserve">
     <value>Não encontra a sua cidade?</value>
@@ -1133,7 +1133,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
   </data>
   <data name="HomePage_Yoyoloop_MainDescription" xml:space="preserve">
-    <value>O serviço Yoyoloop é uma "ponte aérea" diferente entre Lisboa e o Porto,&lt;br&gt;funcionando com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
+    <value>Uma "ponte aérea" diferente entre Lisboa e Porto, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
     <value>O comboio não o leva diretamente ao destino final, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer premium da Yoyoloop, pode ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar. Tudo isto a preço de comboio.</value>
@@ -1915,7 +1915,7 @@ Com a Yoyoloop, pode apanhar um transfer premium até Lisboa desde o Porto, Coim
     <value>Destinos populares</value>
   </data>
   <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
-    <value>O serviço Yoyoloop é uma "ponte aérea" diferente entre Lisboa e o Porto,&lt;br&gt;que funciona com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
+    <value>Uma "ponte aérea" diferente, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
     <value>A Yoyoloop dá-lhe boleia para o Porto a partir de Lisboa e de Coimbra. Escolha o dia e as horas em que pretende viajar, marque a sua viagem e espere que o nosso motorista profissional o apanhe na sua paragem de escolha.</value>
