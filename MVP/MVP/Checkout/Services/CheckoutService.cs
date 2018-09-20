@@ -702,7 +702,7 @@ namespace MVP.Services
                     body += "<br>MemberGetMember ReferralCode: " + state.Code;
                 }
                 body += "<br>Stripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
-                body += "<br>Valor pago: " + state.Cost.ToString() + "€";
+                body += "<br>Valor pago: " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
                 body += "<br>";
                 body += "<br>DADOS DE FACTURAÇÃO:";
                 body += "<br>Nome: " + state.Invoice.Name;
