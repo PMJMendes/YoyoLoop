@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_EKtD4LOCEei8z7zJyqB1eQ" id="_EKjS4LOCEei8z7zJyqB1eQ" label="LoopedRegions" creationDate="2018-09-08T18:13:04.158+0100" modificationDate="2018-09-13T23:22:30.727+0100" version="0.1" statusCode="" item="_EKtD4rOCEei8z7zJyqB1eQ" displayName="LoopedRegions">
+    <author href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_EKtD4bOCEei8z7zJyqB1eQ" path=""/>
+  <TalendProperties:ProcessItem xmi:id="_EKtD4rOCEei8z7zJyqB1eQ" property="_EKtD4LOCEei8z7zJyqB1eQ" state="_EKtD4bOCEei8z7zJyqB1eQ">
+    <process href="LoopedRegions_0.1.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>
