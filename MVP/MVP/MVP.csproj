@@ -662,6 +662,7 @@
     <Content Include="sass\_message.scss" />
     <Content Include="sass\_spinner.scss" />
     <Content Include="sass\_terms_and_conditions.scss" />
+    <None Include="Properties\PublishProfiles\Yoyo-Prod.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
