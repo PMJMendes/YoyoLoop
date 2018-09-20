@@ -27,7 +27,7 @@
     <talend.project.branch></talend.project.branch>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-09-20 133336256</talend.job.date>
+    <talend.job.date>2018-09-20 154513796</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.accesspoints_0_1</talend.job.package>
     <talend.job.name>AccessPoints</talend.job.name>

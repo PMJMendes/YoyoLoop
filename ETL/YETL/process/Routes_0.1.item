@@ -379,13 +379,13 @@
       <column comment="" key="false" length="-1" name="Duracao" nullable="false" originalDbColumnName="Duration" pattern="" precision="-1" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="creates" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="RouteId" expression="java.util.UUID.randomUUID() " type="id_Object"/>
         <mapperTableEntries name="StartRegion_LoopedRegionId" expression="out2.StartRegion_LoopedRegionId " type="id_Object"/>
         <mapperTableEntries name="EndRegion_LoopedRegionId" expression="out2.EndRegion_LoopedRegionId " type="id_Object"/>
-        <mapperTableEntries name="Activo" expression="true" type="id_Boolean"/>
+        <mapperTableEntries name="Activo" expression="false" type="id_Boolean"/>
         <mapperTableEntries name="Duracao" expression="new org.postgresql.util.PGInterval (&quot;00:00:00&quot;)" type="id_Object"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="out2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
