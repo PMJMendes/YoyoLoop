@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MVP.Models.Extensions;
+using MVP.Models.Helpers;
 
 namespace MVP.Calendar
 {
@@ -134,7 +135,7 @@ namespace MVP.Calendar
             }
             else
             {
-                control.PriceText = slot.Price.ToString() + "€";
+                control.PriceText = slot.Price.ToString("C", ApplicationHelpers.DefaultCulture());
             }
 
             switch (slot.Status)
