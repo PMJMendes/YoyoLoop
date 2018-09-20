@@ -203,21 +203,21 @@
                                 <a OnClick="javascript:$.blockUI()" href="/"><img src="/img/yoyo-logo.png" alt="" class="footer__logo img-responsive"/></a>
                             </div>
                             <div class="footer__column col-md-2">
-                                <p><h2 class="text-uppercase">yoyoloop</h2></p>
+                                <p><h3 class="text-uppercase">yoyoloop</h3></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/About" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_About%>"/></a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/HowTo" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_HowTo%>"/></a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Help/Help" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_Help%>"/></a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Contact" class=""><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Yoyoloop_Contact%>"/></a></p>
                             </div>
                             <div class="footer__column col-md-2">
-                                <p><h2 class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Destinos%>"/></h2></p>
+                                <p><h3 class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Destinos%>"/></h3></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Leiria" class="">&rarr; Leiria</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Coimbra" class="">&rarr; Coimbra</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Porto" class="">&rarr; Porto</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Destinos?Destino=Lisboa" class="">&rarr; Lisboa</a></p>
                             </div>
                             <div class="footer__column col-md-2">
-                                <p><h2 class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Loops%>"/></h2></p>
+                                <p><h3 class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, SiteMaster_Footer_Loops%>"/></h3></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Leiria" class="">Lisboa &rarr; Leiria</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Coimbra" class="">Lisboa &rarr; Coimbra</a></p>
                                 <p><a OnClick="javascript:$.blockUI()" href="/Pages/Loops?Loop=Lisboa-Porto" class="">Lisboa &rarr; Porto</a></p>
