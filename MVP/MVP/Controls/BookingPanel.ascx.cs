@@ -71,7 +71,7 @@ namespace MVP.Controls
             SummaryRepeater.DataSource = PanelData.PriceSummary;
             SummaryRepeater.DataBind();
 
-            if(PanelData.PromoValid)
+            if(PanelData.PromoValid || PanelData.MGM)
             {
                 pnPromocode.Visible = true;
             }
