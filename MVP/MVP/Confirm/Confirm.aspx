@@ -117,18 +117,22 @@
                     <div class="col-md-3 pb-3 d-flex justify-content-center">
                         <asp:LinkButton runat="server" ID="btnEmail" OnClick="btnEmail_Click" CssClass="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnEmail_Text%>"/></asp:LinkButton>
                     </div>
-                    <div class="col-md-3 pb-3 d-flex justify-content-center">
-                        <asp:LinkButton runat="server" ID="btnSMS" OnClick="btnSMS_Click" CssClass="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnSMS_Text%>"/></asp:LinkButton>
-                    </div>
+                    <asp:PlaceHolder runat="server" Visible="false">
+                        <div class="col-md-3 pb-3 d-flex justify-content-center">
+                            <asp:LinkButton runat="server" ID="btnSMS" OnClick="btnSMS_Click" CssClass="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnSMS_Text%>"/></asp:LinkButton>
+                        </div>
+                    </asp:PlaceHolder>
                     <div class="col-md-3 pb-3 d-flex justify-content-center">
                         <a href="/Ticket/Ticket?Id=<%= pageData.BookingId.ToString() %>" target="_blank" class="travel__white-btn text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_btnDownload_Text%>"/></a>
                     </div>
-                    <div class="col-md-3 pb-3 d-flex justify-content-center align-items-center">
-                        <asp:LinkButton runat="server" ID="btnCalendar" OnClick="btnCalendar_Click" class="travel__card__first__text text-uppercase">
-                            <img class="mr-2" src="/img/calendar-black.png" srcset="/img/calendar-black@2x.png 2x, /img/calendar-black@3x.png 3x">
-                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_AddToCalendar%>"/>
-                        </asp:LinkButton>
-                    </div>
+                    <asp:PlaceHolder runat="server" Visible="false">
+                        <div class="col-md-3 pb-3 d-flex justify-content-center align-items-center hide">
+                            <asp:LinkButton runat="server" ID="btnCalendar" OnClick="btnCalendar_Click" class="travel__card__first__text text-uppercase">
+                                <img class="mr-2" src="/img/calendar-black.png" srcset="/img/calendar-black@2x.png 2x, /img/calendar-black@3x.png 3x">
+                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_MyTickets_AddToCalendar%>"/>
+                            </asp:LinkButton>
+                        </div>
+                    </asp:PlaceHolder>
                 </div>
             </div>
             <!-- END OF CONFIRMED EMAIL -->
