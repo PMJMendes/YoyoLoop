@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DropdownMenuButton.ascx.cs" Inherits="MVP.Controls.DropdownMenuButton" %>
 <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">
     <%= SelectedText %>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
