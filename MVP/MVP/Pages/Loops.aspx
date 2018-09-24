@@ -69,7 +69,7 @@
                             <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Leiria%>"/>€</p>
                         </div>
                     </div>
-                    <div class="city-details col-sm-8 cascais">
+                    <div class="city-details col-sm-8 leiria">
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <div class="directions">
@@ -223,7 +223,7 @@
                         <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Porto%>"/>€</p>
                     </div>
     
-                    <div class="city-details col-sm-8 leiria">
+                    <div class="city-details col-sm-8 porto">
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <div class="directions">
@@ -378,7 +378,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-cascais-img">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-leiria-img">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
@@ -521,7 +521,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-cascais-img">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-coimbra-img">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
@@ -664,7 +664,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-cascais-img">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-porto-img">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
