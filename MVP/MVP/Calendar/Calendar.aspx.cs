@@ -247,13 +247,14 @@ namespace MVP.Calendar
 
         public IEnumerable<string> DdlSeats_GetData()
         {
-            return new List<string>  { "1",
-                                       "2",
-                                       "3",
-                                       "4",
-                                       "5",
-                                       "6",
-                                       "7",};
+            int cap = service.GetCapacity();
+            var result = new List<string>();
+
+            for(int x = 1; x <= cap; x++)
+            {
+                result.Add(x.ToString());
+            }
+            return result;
         }
 
         private void GetCalendarData()

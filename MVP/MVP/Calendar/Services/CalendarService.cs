@@ -59,6 +59,15 @@ namespace MVP.Services
             return result;
         }
 
+        public int GetCapacity()
+        {
+            using (var model = new EntityModel())
+            {
+                var capacity = model.Settings.Select(s => s.VehicleCapacity).First();
+                return capacity;
+            }
+        }
+
         public List<DaySlot> GetDaySlots(CalendarDTO state, DateTime startdate, DateTime enddate)
         {
             var result = new List<DaySlot>();
