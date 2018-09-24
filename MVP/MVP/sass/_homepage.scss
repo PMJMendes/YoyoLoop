@@ -101,7 +101,7 @@ $desktop: "(min-width: 1440px)";
         background: black;
         max-width: 315px;
         margin: auto;
-        padding: 0 30px;
+        padding: 0 25px;
         border-radius: 4px;
         box-shadow: 0 0 60px 0 rgba(31, 40, 53, 0.15);
 
@@ -235,13 +235,13 @@ $desktop: "(min-width: 1440px)";
         background: black;
 
         &--image1 {
-            background-image: url('/img/cascaisloop.png');
+            background-image: url('/img/portoLoop.png');
             background-position: center center;
             background-repeat: no-repeat;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: 735px 360px;
+            background-size: 900px 360px;
         }
 
         &--image2 {
@@ -251,7 +251,7 @@ $desktop: "(min-width: 1440px)";
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: 735px 360px;
+            background-size: 900px 360px;
         }
 
         &--image3 {
@@ -261,7 +261,7 @@ $desktop: "(min-width: 1440px)";
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: 735px 360px;
+            background-size: 900px 360px;
         }
 
         &__title {

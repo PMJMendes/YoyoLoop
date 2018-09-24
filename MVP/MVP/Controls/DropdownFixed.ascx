@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DropdownFixed.ascx.cs" Inherits="MVP.Controls.DropdownFixed" %>
 
 <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="DropdownFixed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle text-left destination" type="button" id="DropdownFixed" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">
     <%= SelectedText %>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -16,4 +16,3 @@
         </asp:Repeater>
     </div>
 </div>
-
