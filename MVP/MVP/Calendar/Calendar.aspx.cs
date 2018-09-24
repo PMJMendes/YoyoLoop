@@ -247,13 +247,14 @@ namespace MVP.Calendar
 
         public IEnumerable<string> DdlSeats_GetData()
         {
-            return new List<string>  { "1",
-                                       "2",
-                                       "3",
-                                       "4",
-                                       "5",
-                                       "6",
-                                       "7",};
+            int cap = service.GetCapacity();
+            var result = new List<string>();
+
+            for(int x = 1; x <= cap; x++)
+            {
+                result.Add(x.ToString());
+            }
+            return result;
         }
 
         private void GetCalendarData()
@@ -303,6 +304,7 @@ namespace MVP.Calendar
                 InitializeControls();
                 ProcessQueryString();
                 Session["local.data"] = localData;
+                CheckParams();
             }
         }
 
@@ -382,7 +384,7 @@ namespace MVP.Calendar
                 {
                     ClearBookingPanel();
                 }
-                else if (BookingPanel.Visible)
+                else
                 {
                     UpdateBookingPanel(bookupdate);
                 }
@@ -404,7 +406,10 @@ namespace MVP.Calendar
         private void UpdateBookingPanel(string trigger)
         {
             BookingPanel.Databind(service.GetBookingPanelData(pageData, trigger));
-            BookingPanel.Visible = true;
+            if(trigger == "new")
+            {
+                BookingPanel.Visible = true;
+            }
         }
 
         private void CreateBooking()
@@ -453,7 +458,7 @@ namespace MVP.Calendar
                     Seats = "1",
                     CalSelectedDate = DateTime.Today,
                     CalVisibleDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1),
-                    Promocode = string.Empty,
+                    Promocode = (string)Session["master.promocode"],
                     Time = new TimeSpan(),
                     DepartureId = Guid.Empty
                 }

@@ -470,7 +470,7 @@
     <Content Include="img\lisboa-1.jpg" />
     <Content Include="img\lisboa-2.jpg" />
     <Content Include="img\lisboa.jpg" />
-    <Content Include="img\Lisboa.png" />
+    <Content Include="img\lisboaLoop.png" />
     <Content Include="img\list%402x.png" />
     <Content Include="img\list%403x.png" />
     <Content Include="img\list.png" />
@@ -509,6 +509,7 @@
     <Content Include="img\pontos%402x.png" />
     <Content Include="img\pontos%403x.png" />
     <Content Include="img\pontos.png" />
+    <Content Include="img\portoLoop.png" />
     <Content Include="img\preco%402x.png" />
     <Content Include="img\preco%403x.png" />
     <Content Include="img\preco.png" />

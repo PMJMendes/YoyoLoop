@@ -117,6 +117,15 @@ namespace MVP
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                string promo = Request.QueryString["promo"];
+                if(!string.IsNullOrEmpty(promo))
+                {
+                    Session["master.promocode"] = promo.ToUpper();
+                }
+            }
+
             string error = (string)Session["master.error"];
             if(!string.IsNullOrEmpty(error))
             {
