@@ -53,7 +53,7 @@
                                     </asp:PlaceHolder>
 
                                     <asp:PlaceHolder runat="server" ID="phCardEntry" Visible="false">
-                                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="height:160px;width:100%;border:none" />
+                                        <iframe runat="server" name="ifPayForm" src="Payform.aspx" scrolling="no" style="width:100%;border:none" />
                                         <div class="checkout checkout__billing checkout__billing--checkbox pt-1">
                                             <div class="form-check">
                                                 <input runat="server" ID="cbSaveCard" class="form-check-input" type="checkbox">

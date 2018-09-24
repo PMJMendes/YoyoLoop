@@ -357,8 +357,19 @@
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: 930px 395px;
+                background-size: 1060px 390px;
                 background-image: url('/img/cascaisLoop.png');
+            }
+
+            &--destinies-leiria {
+                color: white;
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 1060px 390px;
+                background-image: url('/img/leiriaLoop.png');
             }
 
             &--destinies-lisboa {
@@ -368,8 +379,8 @@
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: 930px 395px;
-                background-image: url('/img/lisboa.jpg');
+                background-size: 1060px 390px;
+                background-image: url('/img/cascais.jpg');
             }
 
             &--destinies-porto {
@@ -379,7 +390,7 @@
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: 930px 395px;
+                background-size: 1060px 390px;
                 background-image: url('/img/portoLoop.png');
 
                 &--desktop {
@@ -408,7 +419,7 @@
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
-                background-size: 930px 395px;
+                background-size: 1060px 390px;
                 background-image: url('/img/coimbraLoop.png');
 
                 &--desktop {

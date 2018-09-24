@@ -96,7 +96,7 @@
                         </div>
                         <div class="static-page__box-container__first__main-title">Leiria</div>
                     </div>
-                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-cascais p-5 m-0 d-flex justify-content-center align-items-center">
+                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-leiria p-5 m-0 d-flex justify-content-center align-items-center">
                         <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Leiria_Description%>"/>
                     </div>
                 </div>

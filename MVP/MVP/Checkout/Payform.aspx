@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Payform.aspx.cs" Inherits="MVP.Checkout.Payform" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
     <head runat="server">
         <meta charset="utf-8">
@@ -29,14 +29,14 @@
             <input class="checkout__input checkout__input--name" type="text" id="txtCardName" placeholder="" />
                 
             <div class="row checkout__card-info">
-                <div class="col-md-7">
+                <div class="col-md-7" style="max-width:55%">
                     <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Payform_tbCardNumber_Label%>"/></div>
                     <input class="checkout__input checkout__input--card-number" type="text" id="txtCardNumber" placeholder="0000 0000 0000 0000" />
                 </div>
-                <div class="col-md-3 d-flex align-items-end">
+                <div class="col-md-3 d-flex align-items-end" style="max-width:25%">
                     <input class="checkout__input checkout__input--card-expiration" type="text" id="txtCardExpiry" placeholder="MM/YY" />
                 </div>
-                <div class="col-md-2 d-flex align-items-end">
+                <div class="col-md-2 d-flex align-items-end" style="max-width:20%">
                     <input class="checkout__input checkout__input--card-cvv" type="text" id="txtCardSecurityCode" placeholder="CVV" />
                 </div>
             </div>

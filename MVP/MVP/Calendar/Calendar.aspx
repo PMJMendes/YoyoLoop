@@ -79,7 +79,7 @@
                     </div>
                     <div class="row">
                         <!-- IDA E VOLTA -->
-                        <div class="return col col-xs-6 mt-3">
+                        <div class="return col col-xs-6 mt-3 hide">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="cbReturnTrip">
                                 <label class="form-check-label text-uppercase" for="cbReturnTrip">
