@@ -15,7 +15,7 @@
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.bat.classpath>.;../lib/routines.jar;../lib/commons-collections-3.2.2.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/dom4j-1.6.1.jar;../lib/poi-ooxml-schemas-3.11-20141221.jar;../lib/postgresql-9.4-1201.jdbc41.jar;../lib/advancedPersistentLookupLib-1.0.jar;../lib/jboss-serialization.jar;../lib/xmlbeans-2.6.0.jar;../lib/poi-ooxml-3.11-20141221_modified_talend.jar;../lib/trove.jar;../lib/poi-3.11-20141221_modified_talend.jar;../lib/poi-scratchpad-3.11-20141221.jar;promocodes_0_1.jar;</talend.job.bat.classpath>
-    <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
+    <talend.job.applyContextToChildren>true</talend.job.applyContextToChildren>
     <talend.job.version>${project.version}</talend.job.version>
     <talend.job.sh.addition></talend.job.sh.addition>
     <talend.project.name.lowercase>yetl</talend.project.name.lowercase>
@@ -23,11 +23,11 @@
     <talend.project.name>YETL</talend.project.name>
     <talend.product.version>6.3.0.20161026_1219</talend.product.version>
     <talend.job.finalName>promocodes_0_1</talend.job.finalName>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8</talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M</talend.job.jvmargs>
     <talend.project.branch></talend.project.branch>
-    <talend.job.context>Default</talend.job.context>
+    <talend.job.context>Local</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-09-20 154515650</talend.job.date>
+    <talend.job.date>2018-09-26 114826862</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.promocodes_0_1</talend.job.package>
     <talend.job.name>Promocodes</talend.job.name>
