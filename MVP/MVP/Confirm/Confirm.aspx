@@ -165,12 +165,12 @@
             <ContentTemplate>
                 <div class="invitefriends__container invitefriends__container--third invitefriends__container--third--checkout">
 
-                    <textarea class="clipboard hide"><%= pageData.UserMGMCode %></textarea>
+                    <textarea class="clipboard hide"><%= Request.Url.Scheme + "://" + Request.Url.Authority %>?promo=<%= pageData.UserMGMCode %></textarea>
                     <script type="text/javascript">
-                        var FacebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + '<%= Request.Url.Authority %>?promocode=<%= pageData.UserMGMCode %>';
-                        var TwitterShareUrl = 'https://twitter.com/home?status=<%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage1 + " " + pageData.UserMGMCode + " " + Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage2%> ' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority + "?promocode=" + pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage3%>';
-                        var LinkedInShareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + '<%= Request.Url.Authority %>?promocode=<%= pageData.UserMGMCode %>';
-                        var EmailShareUrl = ('mailto:?&subject=&body=' + '<%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage1%> ' + '<%= pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage2%> ' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority + "?promocode=" + pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage3%>').replace(' ', '%20');
+                        var FacebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority %>?promo=<%= pageData.UserMGMCode %>';
+                        var TwitterShareUrl = 'https://twitter.com/home?status=<%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage1 + " " + pageData.UserMGMCode + " " + Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage2%> ' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority + "?promo=" + pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage3%>';
+                        var LinkedInShareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority %>?promocode=<%= pageData.UserMGMCode %>';
+                        var EmailShareUrl = ('mailto:?&subject=&body=' + '<%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage1%> ' + '<%= pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage2%> ' + '<%= Request.Url.Scheme + "://" + Request.Url.Authority + "?promo=" + pageData.UserMGMCode %>' + ' <%= Resources.LocalizedText.Profile_Invite_Promoshare_ShareMessage3%>').replace(' ', '%20');
                     </script>
 
                     <div class="container-fluid d-flex flex-column align-items-center justify-content-center p-4 invitefriends__promocode">
