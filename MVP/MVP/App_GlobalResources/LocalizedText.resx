@@ -701,16 +701,16 @@
     <value>2 H 30</value>
   </data>
   <data name="General_LoopData_Price_Coimbra" xml:space="preserve">
-    <value>26</value>
+    <value>29</value>
   </data>
   <data name="General_LoopData_Price_Leiria" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>36</value>
+    <value>39</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>36</value>
+    <value>39</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>MemberGetMember</value>
@@ -1194,6 +1194,66 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
   </data>
   <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
     <value>Solicitada a recuperação de palavra-passe</value>
+  </data>
+  <data name="Meta_About_Description" xml:space="preserve">
+    <value>Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. Apanhe um dos nossos transfers premium e aproveite uma viagem mais em conta e mais cómoda ao mesmo tempo que ajuda o meio ambiente.</value>
+  </data>
+  <data name="Meta_About_Title" xml:space="preserve">
+    <value>A Revolucionar as Cidades, um Loop de Cada Vez | Yoyoloop</value>
+  </data>
+  <data name="Meta_Calendar_Description" xml:space="preserve">
+    <value>Escolha para que cidade pretende viajar, selecione o seu ponto de partida e chegada, compre o seu bilhete e aproveite a viagem.</value>
+  </data>
+  <data name="Meta_Calendar_Title" xml:space="preserve">
+    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
+  </data>
+  <data name="Meta_Contact_Description" xml:space="preserve">
+    <value>A equipa da Yoyoloop está ao seu dispor. Por favor, entre em contacto connosco através do nosso formulário de contacto.</value>
+  </data>
+  <data name="Meta_Contact_Title" xml:space="preserve">
+    <value>Entre em Contacto Connosco | Yoyoloop</value>
+  </data>
+  <data name="Meta_Destinos_Description" xml:space="preserve">
+    <value>A Yoyoloop é a alternativa perfeita ao carro particular, ao comboio (Alfa Pendular) e ao avião (ponte aérea). Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria.</value>
+  </data>
+  <data name="Meta_Destinos_Title" xml:space="preserve">
+    <value>Transfers Premium de um Centro da Cidade para o Outro | Yoyoloop</value>
+  </data>
+  <data name="Meta_Help_Description" xml:space="preserve">
+    <value>Saiba como reservar uma viagem, como usar códigos promocionais, como usar a sua conta da Yoyoloop, ou veja as nossas perguntas frequentes.</value>
+  </data>
+  <data name="Meta_Help_Title" xml:space="preserve">
+    <value>Precisa de Ajuda com a Yoyoloop?</value>
+  </data>
+  <data name="Meta_Homepage_Description" xml:space="preserve">
+    <value>A Yoyoloop é um serviço de transfer premium alternativo a outros transportes. Apanhe boleia a preço de comboio para Lisboa, Porto, Coimbra e Leiria.</value>
+  </data>
+  <data name="Meta_Homepage_Title" xml:space="preserve">
+    <value>Apanhe um Transfer Premium a Preço de Comboio | Yoyoloop</value>
+  </data>
+  <data name="Meta_HowTo_Description" xml:space="preserve">
+    <value>Viajar num transfer premium da Yoyoloop é muito fácil. Escolha o seu ponto de partida e chegada, compre a sua viagem em segurança, faça o download do seu bilhete e apresente-o ao nosso motorista profissional.</value>
+  </data>
+  <data name="Meta_HowTo_Title" xml:space="preserve">
+    <value>Como Viajar num Transfer Premium da Yoyoloop</value>
+  </data>
+  <data name="Meta_Loops_Description" xml:space="preserve">
+    <value>Com a Yoyoloop, pode ir e vir de Lisboa para o Porto, Coimbra e Leiria num transfer premium e, ainda, viajar entre o Porto e Coimbra.</value>
+  </data>
+  <data name="Meta_Loops_Title" xml:space="preserve">
+    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
+  </data>
+  <data name="Meta_Privacy_Description" xml:space="preserve">
+    <value>Saiba como e porque é que a Yoyoloop usa a sua informação pessoal para reservar um lugar nos nossos loops.</value>
+  </data>
+  <data name="Meta_Privacy_Title" xml:space="preserve">
+    <value>Política de Privacidade | Yoyoloop</value>
+  </data>
+  <data name="Meta_Terms_Description" xml:space="preserve">
+    <value>Leia os termos e condições da Yoyoloop, um serviço de transfer premium alternativo a outros transportes.</value>
+  </data>
+  <data name="Meta_Terms_Title" xml:space="preserve">
+    <value>Termos e Condições | Yoyoloop</value>
   </data>
   <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
     <value>Reserva Já</value>
@@ -2023,6 +2083,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
   </data>
   <data name="StaticPages_Destinos_SubDescription" xml:space="preserve">
     <value>Apanha boleia a preço de autocarro</value>
+    <comment>As cidades de Lisboa, Porto, Coimbra e Leiria estão agora ligadas em loop. Poupe tempo e viaje num transfer premium, de um centro da cidade para o outro.</comment>
   </data>
   <data name="StaticPages_Destinos_Why_Accessible_Description" xml:space="preserve">
     <value>Menos desgaste, mais na carteira</value>
@@ -2542,65 +2603,5 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
-  </data>
-  <data name="Meta_About_Description" xml:space="preserve">
-    <value>Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. Apanhe um dos nossos transfers premium e aproveite uma viagem mais em conta e mais cómoda ao mesmo tempo que ajuda o meio ambiente.</value>
-  </data>
-  <data name="Meta_About_Title" xml:space="preserve">
-    <value>A Revolucionar as Cidades, um Loop de Cada Vez | Yoyoloop</value>
-  </data>
-  <data name="Meta_Calendar_Description" xml:space="preserve">
-    <value>Escolha para que cidade pretende viajar, selecione o seu ponto de partida e chegada, compre o seu bilhete e aproveite a viagem.</value>
-  </data>
-  <data name="Meta_Calendar_Title" xml:space="preserve">
-    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
-  </data>
-  <data name="Meta_Contact_Description" xml:space="preserve">
-    <value>A equipa da Yoyoloop está ao seu dispor. Por favor, entre em contacto connosco através do nosso formulário de contacto.</value>
-  </data>
-  <data name="Meta_Contact_Title" xml:space="preserve">
-    <value>Entre em Contacto Connosco | Yoyoloop</value>
-  </data>
-  <data name="Meta_Destinos_Description" xml:space="preserve">
-    <value>A Yoyoloop é a alternativa perfeita ao comboio, ao autocarro e à ponte aérea. Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria.</value>
-  </data>
-  <data name="Meta_Destinos_Title" xml:space="preserve">
-    <value>Transfers Premium de um Centro da Cidade para o Outro | Yoyoloop</value>
-  </data>
-  <data name="Meta_Help_Description" xml:space="preserve">
-    <value>Saiba como reservar uma viagem, como usar códigos promocionais, como usar a sua conta da Yoyoloop, ou veja as nossas perguntas frequentes.</value>
-  </data>
-  <data name="Meta_Help_Title" xml:space="preserve">
-    <value>Precisa de Ajuda com a Yoyoloop?</value>
-  </data>
-  <data name="Meta_Homepage_Description" xml:space="preserve">
-    <value>A Yoyoloop é um serviço de transfer premium alternativo a outros transportes. Apanhe boleia a preço de comboio para Lisboa, Porto, Coimbra e Leiria.</value>
-  </data>
-  <data name="Meta_Homepage_Title" xml:space="preserve">
-    <value>Apanhe um Transfer Premium a Preço de Comboio | Yoyoloop</value>
-  </data>
-  <data name="Meta_HowTo_Description" xml:space="preserve">
-    <value>Viajar num transfer premium da Yoyoloop é muito fácil. Escolha o seu ponto de partida e chegada, compre a sua viagem em segurança, faça o download do seu bilhete e apresente-o ao nosso motorista profissional.</value>
-  </data>
-  <data name="Meta_HowTo_Title" xml:space="preserve">
-    <value>Como Viajar num Transfer Premium da Yoyoloop</value>
-  </data>
-  <data name="Meta_Loops_Description" xml:space="preserve">
-    <value>Com a Yoyoloop, pode ir e vir de Lisboa para o Porto, Coimbra e Leiria num transfer premium e, ainda, viajar entre o Porto e Coimbra.</value>
-  </data>
-  <data name="Meta_Loops_Title" xml:space="preserve">
-    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
-  </data>
-  <data name="Meta_Privacy_Description" xml:space="preserve">
-    <value>Saiba como e porque é que a Yoyoloop usa a sua informação pessoal para reservar um lugar nos nossos loops.</value>
-  </data>
-  <data name="Meta_Privacy_Title" xml:space="preserve">
-    <value>Política de Privacidade | Yoyoloop</value>
-  </data>
-  <data name="Meta_Terms_Description" xml:space="preserve">
-    <value>Leia os termos e condições da Yoyoloop, um serviço de transfer premium alternativo a outros transportes.</value>
-  </data>
-  <data name="Meta_Terms_Title" xml:space="preserve">
-    <value>Termos e Condições | Yoyoloop</value>
   </data>
 </root>
