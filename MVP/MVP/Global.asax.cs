@@ -10,6 +10,7 @@ using System.Web.Configuration;
 using Stripe;
 using System.Threading;
 using System.Globalization;
+using System.Web.Mvc;
 
 namespace MVP
 {
@@ -28,12 +29,41 @@ namespace MVP
 
         protected void Application_BeginRequest(Object sender, EventArgs e)
         {
+            HttpContextBase currentContext = new HttpContextWrapper(HttpContext.Current);
+            UrlHelper urlHelper = new UrlHelper(HttpContext.Current.Request.RequestContext);
+            RouteData routeData = urlHelper.RouteCollection.GetRouteData(currentContext);
+
+            string lang = routeData?.Values["lang"] as string;
+
+            if(!string.IsNullOrEmpty(lang))
+            {
+                switch(lang)
+                {
+                    case "pt":
+                        Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-PT", false);
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-PT", false);
+                        Response.Cookies["langCookie"].Value = "pt-PT";
+                        Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
+                        return;
+
+                    case "en":
+                        Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US", false);
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US", false);
+                        Response.Cookies["langCookie"].Value = "en-US";
+                        Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
+                        return;
+
+                }
+            }
             HttpCookie langCookie = Request.Cookies["langCookie"];
             if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
             {
                 Thread.CurrentThread.CurrentCulture = new CultureInfo(langCookie.Value, false);
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(langCookie.Value, false);
+                return;
             }
+
+            //browser culture handler
         }
     }
 }

@@ -11,6 +11,9 @@ namespace MVP
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.EnableFriendlyUrls();
+
+            //Language Routing
+            routes.MapPageRoute("Homepage", "{lang}/", "~/Default.aspx");
         }
     }
 }

@@ -99,19 +99,18 @@ namespace MVP
             }
 
             CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
-            HttpCookie langCookie = Request.Cookies["langCookie"];
-            if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
+            string lang = CultureInfo.CurrentUICulture.Name;
+            switch(lang)
             {
-                switch(langCookie.Value)
-                {
-                    case "en-US":
-                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
-                        break;
-                    case "pt-PT":
-                    default:
-                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
-                        break;
-                }
+                case "en-US":
+                    CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
+                    break;
+                case "pt-PT":
+                    CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
+                    break;
+                default:
+                    CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
+                    break;
             }
         }
 
