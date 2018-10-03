@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
+using MVP.Models.Helpers;
 using MVP.Services;
 using static MVP.SiteMaster;
 
@@ -23,7 +24,7 @@ namespace MVP.Controls
                     TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text, out userid);
             if (result.Succeeded)
             {
-                GA_Signup(userid, TbRegisterEmail.Text, TbRegisterName.Text);
+                ApplicationHelpers.GTM_Signup(this, userid, TbRegisterEmail.Text, TbRegisterName.Text);
                 ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "registerPostBackKey", "setTimeout(function(){$.blockUI();__doPostBack('" + UniqueID + "', '');},1);", true);
             }
             else
@@ -45,11 +46,6 @@ namespace MVP.Controls
         void IPostBackEventHandler.RaisePostBackEvent(string e)
         {
             OnSignIn(e);
-        }
-
-        protected void GA_Signup(string id, string email, string name)
-        {
-            ScriptManager.RegisterStartupScript(upRegister, upRegister.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
         }
 
         protected void btnLoginFacebook_ServerClick(object sender, EventArgs e)
