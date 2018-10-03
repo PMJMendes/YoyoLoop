@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Destinos.aspx.cs" Inherits="MVP.Pages.Destinos" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Destinos_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_Destinos_Description%>">
+
     <style type="text/css">
         .homepage__navbar {
             background: none;

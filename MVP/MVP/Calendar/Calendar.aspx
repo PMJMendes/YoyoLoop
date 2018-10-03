@@ -6,7 +6,12 @@
 <%@ Register Src="~/Controls/BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 <%@ Register Src="CalendarTable.ascx" TagPrefix="yoyo" TagName="CalendarTable" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Calendar_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_Calendar_Description%>">
+
     <style type="text/css">
         .homepage__navbar {
             background: none;
@@ -229,6 +234,7 @@
                                     class="EllipseRed">
                                 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_High%>"/>
                             </span>
+                            &nbsp;
                             <span class="pl-2">
                                 <img src="/img/ellipse-yellow.png"
                                     srcset="/img/ellipse-yellow@2x.png 2x,
@@ -236,14 +242,10 @@
                                     class="EllipseRed">
                                 <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_Med%>"/>
                             </span>
-                            <span class="pl-2">
-                                <img src="/img/ellipse-green.png"
-                                    srcset="/img/ellipse-green@2x.png 2x,
-                                    /img/ellipse-green@3x.png 3x"
-                                    class="EllipseRed">
-                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_Low%>"/>
-                            </span>
-                        </div>
+                        &nbsp;&nbsp;<span class="pl-2"><img class="EllipseRed" src="/img/ellipse-green.png" srcset="/img/ellipse-green@2x.png 2x,
+                                    /img/ellipse-green@3x.png 3x">
+                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_CalendarTable_Footer_Ocup_Low%>" />
+                            </img></span> &nbsp;</div>
                     </div> 
                 </asp:panel>
                 <!-- END OF CALENDAR -->
