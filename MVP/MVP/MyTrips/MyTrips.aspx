@@ -3,6 +3,10 @@
 <%@ Register Src="Ticket.ascx" TagPrefix="yoyo" TagName="Ticket" %>
 <%@ Register Src="PastTicket.ascx" TagPrefix="yoyo" TagName="PastTicket" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <meta name="robots" content="noindex, follow">
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
     <div class="travel">

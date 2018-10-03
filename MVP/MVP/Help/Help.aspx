@@ -1,5 +1,13 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Help.aspx.cs" Inherits="MVP.Help.Help" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Help_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_Help_Description%>">
+    <meta name="robots" content="index, follow">
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="help">

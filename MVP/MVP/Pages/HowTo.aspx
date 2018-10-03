@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HowTo.aspx.cs" Inherits="MVP.Pages.HowTo" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_HowTo_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_HowTo_Description%>">
+    <meta name="robots" content="index, follow">
+
     <style type="text/css">
         .homepage__navbar {
             background: none;

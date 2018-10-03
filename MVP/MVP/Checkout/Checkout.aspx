@@ -2,6 +2,10 @@
 
 <%@ Register Src="~/Controls/BookingPanel.ascx" TagPrefix="yoyo" TagName="BookingPanel" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <meta name="robots" content="noindex, follow">
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />

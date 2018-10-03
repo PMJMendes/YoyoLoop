@@ -354,7 +354,7 @@ namespace MVP.Checkout
 
         protected void RedirectToConfirm()
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "window.location.assign('/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "')", true);
+            ApplicationHelpers.ClientRedirect(this, "/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
         }
     }
 }

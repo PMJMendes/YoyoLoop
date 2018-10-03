@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Yoyoloop"  Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Invite.aspx.cs" Inherits="MVP.Profile.Invite" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <meta name="robots" content="noindex, follow">
     <style type="text/css">
         .homepage__navbar {
             background: none

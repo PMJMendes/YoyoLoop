@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Billing.aspx.cs" Inherits="MVP.Profile.Billing" %>
 <%@ Import Namespace="MVP.Profile" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <meta name="robots" content="noindex, follow">
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <input type="hidden" id="StripePublishableKey" value="<%=stripePublishableKey%>" />

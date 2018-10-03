@@ -3202,6 +3202,186 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. Apanhe um dos nossos transfers premium e aproveite uma viagem mais em conta e mais cómoda ao mesmo tempo que ajuda o meio ambiente..
+        /// </summary>
+        internal static string Meta_About_Description {
+            get {
+                return ResourceManager.GetString("Meta_About_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Revolucionar as Cidades, um Loop de Cada Vez | Yoyoloop.
+        /// </summary>
+        internal static string Meta_About_Title {
+            get {
+                return ResourceManager.GetString("Meta_About_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolha para que cidade pretende viajar, selecione o seu ponto de partida e chegada, compre o seu bilhete e aproveite a viagem..
+        /// </summary>
+        internal static string Meta_Calendar_Description {
+            get {
+                return ResourceManager.GetString("Meta_Calendar_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Calendar_Title {
+            get {
+                return ResourceManager.GetString("Meta_Calendar_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A equipa da Yoyoloop está ao seu dispor. Por favor, entre em contacto connosco através do nosso formulário de contacto..
+        /// </summary>
+        internal static string Meta_Contact_Description {
+            get {
+                return ResourceManager.GetString("Meta_Contact_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entre em Contacto Connosco | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Contact_Title {
+            get {
+                return ResourceManager.GetString("Meta_Contact_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop é a alternativa perfeita ao comboio, ao autocarro e à ponte aérea. Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria..
+        /// </summary>
+        internal static string Meta_Destinos_Description {
+            get {
+                return ResourceManager.GetString("Meta_Destinos_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfers Premium de um Centro da Cidade para o Outro | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Destinos_Title {
+            get {
+                return ResourceManager.GetString("Meta_Destinos_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saiba como reservar uma viagem, como usar códigos promocionais, como usar a sua conta da Yoyoloop, ou veja as nossas perguntas frequentes..
+        /// </summary>
+        internal static string Meta_Help_Description {
+            get {
+                return ResourceManager.GetString("Meta_Help_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Precisa de Ajuda com a Yoyoloop?.
+        /// </summary>
+        internal static string Meta_Help_Title {
+            get {
+                return ResourceManager.GetString("Meta_Help_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Yoyoloop é um serviço de transfer premium alternativo a outros transportes. Apanhe boleia a preço de comboio para Lisboa, Porto, Coimbra e Leiria..
+        /// </summary>
+        internal static string Meta_Homepage_Description {
+            get {
+                return ResourceManager.GetString("Meta_Homepage_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apanhe um Transfer Premium a Preço de Comboio | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Homepage_Title {
+            get {
+                return ResourceManager.GetString("Meta_Homepage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viajar num transfer premium da Yoyoloop é muito fácil. Escolha o seu ponto de partida e chegada, compre a sua viagem em segurança, faça o download do seu bilhete e apresente-o ao nosso motorista profissional..
+        /// </summary>
+        internal static string Meta_HowTo_Description {
+            get {
+                return ResourceManager.GetString("Meta_HowTo_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como Viajar num Transfer Premium da Yoyoloop.
+        /// </summary>
+        internal static string Meta_HowTo_Title {
+            get {
+                return ResourceManager.GetString("Meta_HowTo_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Com a Yoyoloop, pode ir e vir de Lisboa para o Porto, Coimbra e Leiria num transfer premium e, ainda, viajar entre o Porto e Coimbra..
+        /// </summary>
+        internal static string Meta_Loops_Description {
+            get {
+                return ResourceManager.GetString("Meta_Loops_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Loops_Title {
+            get {
+                return ResourceManager.GetString("Meta_Loops_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saiba como e porque é que a Yoyoloop usa a sua informação pessoal para reservar um lugar nos nossos loops..
+        /// </summary>
+        internal static string Meta_Privacy_Description {
+            get {
+                return ResourceManager.GetString("Meta_Privacy_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Política de Privacidade | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Privacy_Title {
+            get {
+                return ResourceManager.GetString("Meta_Privacy_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leia os termos e condições da Yoyoloop, um serviço de transfer premium alternativo a outros transportes..
+        /// </summary>
+        internal static string Meta_Terms_Description {
+            get {
+                return ResourceManager.GetString("Meta_Terms_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termos e Condições | Yoyoloop.
+        /// </summary>
+        internal static string Meta_Terms_Title {
+            get {
+                return ResourceManager.GetString("Meta_Terms_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reserva Já.
         /// </summary>
         internal static string MyTrips_Empty_btnBookNow_Text {

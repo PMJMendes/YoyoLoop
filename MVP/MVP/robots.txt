@@ -1,0 +1,4 @@
+﻿User-agent: *
+Disallow: /Calendar/
+Disallow: Update.aspx
+Sitemap: https://www.yoyoloop.com/sitemap.xsl
