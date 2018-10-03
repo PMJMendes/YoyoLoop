@@ -1140,7 +1140,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Uma "ponte aérea" diferente entre Lisboa e Porto, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
-    <value>O comboio não o leva diretamente ao destino final, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer premium da Yoyoloop, pode ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar. Tudo isto a preço de comboio.</value>
+    <value>O comboio Alfa Pendular não o leva diretamente ao destino final, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer premium da Yoyoloop, pode ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar. Tudo isto a preço de comboio.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
     <value>Por motivos de segurança, a Yoyoloop apenas considera uma conta como criada após a confirmação de um endereço de email.</value>
@@ -1979,7 +1979,7 @@ Com a Yoyoloop, pode apanhar um transfer premium até Lisboa desde o Porto, Coim
     <value>Destinos populares</value>
   </data>
   <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
-    <value>A Yoyoloop é a alternativa perfeita à ponte aérea. Poupe tempo e viaje entre Lisboa e o Porto num transfer premium, de um centro da cidade para o outro. Sem check-ins, sem filas de segurança e sem precisar de outros transportes.</value>
+    <value>A Yoyoloop é a alternativa perfeita ao carro individual, à ponte aérea e ao comboio Alfa Pendular. </value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
     <value>A Yoyoloop dá-lhe boleia para o Porto a partir de Lisboa e de Coimbra. Escolha o dia e as horas em que pretende viajar, marque a sua viagem e espere que o nosso motorista profissional o apanhe na sua paragem de escolha.</value>
