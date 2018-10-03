@@ -135,7 +135,7 @@
             </div>
 
             <div class="col-md-6 col-lg-3 pl-0">
-              <div class="homepage__where-to-card homepage__where-to-card--cascais mb-2 d-flex flex-column align-items-center">
+              <div class="homepage__where-to-card homepage__where-to-card--porto mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
                   <div class="homepage__where-to-card__header__city">Porto</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">

@@ -13,43 +13,28 @@
         }
     }
 
-    &__pic-one {
-        background-image: url(/img/inside-car.jpeg) !important;
-        height: 600px;
-    }
-
-    &__pic-two {
-        background-image: url(/img/actor-car.jpeg) !important;
-        height: 600px;
-    }
-
-    &__pic-three {
-        background-image: url(/img/about.jpg) !important;
-        height: 600px;
-    }
-
-    &__pic-four {
-        background-image: url(/img/destino.jpg) !important;
-        height: 600px;
-    }
-
-    &__pic-five {
+    &__pic-loops {
         background-image: url(/img/loop.jpg) !important;
         height: 600px;
     }
 
-    &__pic-six {
-        background-image: url(/img/comofunciona.jpg) !important;
+    &__pic-contactos {
+        background-image: url(/img/contactos.jpg) !important;
         height: 600px;
     }
 
-    &__pic-seven {
-        background-image: url(/img/comoviajar.jpg) !important;
-        height: 100%;
+    &__pic-about {
+        background-image: url(/img/about.jpg) !important;
+        height: 600px;
     }
 
-    &__pic-contactos {
-        background-image: url(/img/contactos.jpg) !important;
+    &__pic-destinos {
+        background-image: url(/img/destino.jpg) !important;
+        height: 600px;
+    }
+
+    &__pic-howto {
+        background-image: url(/img/comofunciona.jpg) !important;
         height: 600px;
     }
 
@@ -336,10 +321,20 @@
                 font-size: 12px;
             }
 
-            &--cascais {
+            &--lisboa {
                 background-image: url('/img/cascais.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
+            }
+
+            &--porto {
+                background-image: url('/img/porto.jpg');
+            }
+
+            &--leiria {
+                background-image: url('/img/leiria.jpg');
+            }
+
+            &--coimbra {
+                background-image: url('/img/coimbra.jpg');
             }
         }
 
@@ -380,7 +375,7 @@
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: 1060px 390px;
-                background-image: url('/img/cascaisLoop.png');
+                background-image: url('/img/lisboaLoop.png');
             }
 
             &--destinies-porto {
@@ -590,28 +585,28 @@
                 height: 600px;
             }
 
+            &__pic-1 {
+                background-image: url(/img/galeria1.png) !important;
+            }
+
             &__pic-2 {
-                background-image: url(/img/contactos.jpg) !important;
+                background-image: url(/img/galeria2.png) !important;
             }
 
             &__pic-3 {
-                background-image: url(/img/destino.jpg) !important;
+                background-image: url(/img/galeria3.png) !important;
             }
 
             &__pic-4 {
-                background-image: url(/img/actor-car.jpeg) !important;
+                background-image: url(/img/galeria4.png) !important;
             }
 
             &__pic-5 {
-                background-image: url(/img/comoviajar.jpg) !important;
+                background-image: url(/img/galeria5.png) !important;
             }
 
             &__pic-6 {
-                background-image: url(/img/comofunciona.jpg) !important;
-            }
-
-            &__pic-7 {
-                background-image: url(/img/loop.jpg) !important;
+                background-image: url(/img/galeria6.png) !important;
             }
         }
     }
