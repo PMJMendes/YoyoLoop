@@ -27,11 +27,10 @@
           <tags>persp.actionSet:org.talend.repository.localprovider.actionSet</tags>
           <tags>persp.actionSet:org.talend.repository.demoprojcet.actionSet</tags>
           <tags>persp.actionSet:org.talend.repository.CreateactionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_JSHxAbN_Eei8z7zJyqB1eQ" selectedElement="_JSHxArN_Eei8z7zJyqB1eQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_JSHxAbN_Eei8z7zJyqB1eQ" selectedElement="_JSHxCLN_Eei8z7zJyqB1eQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_JSHxArN_Eei8z7zJyqB1eQ" containerData="2057" selectedElement="_JSHxA7N_Eei8z7zJyqB1eQ">
               <children xsi:type="basic:PartStack" xmi:id="_JSHxA7N_Eei8z7zJyqB1eQ" elementId="navigatorLayout" containerData="6000" selectedElement="_JSHxBLN_Eei8z7zJyqB1eQ">
                 <tags>newtablook</tags>
-                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_JSHxBLN_Eei8z7zJyqB1eQ" elementId="org.talend.repository.cnf.view" ref="_JR-ARLN_Eei8z7zJyqB1eQ"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_JSHxBbN_Eei8z7zJyqB1eQ" elementId="outlineCodeLayout" containerData="4000" selectedElement="_JSHxBrN_Eei8z7zJyqB1eQ">
@@ -45,6 +44,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_JSHxCrN_Eei8z7zJyqB1eQ" elementId="org.eclipse.ui.editorss" containerData="5689" ref="_JR-AALN_Eei8z7zJyqB1eQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_JSHxC7N_Eei8z7zJyqB1eQ" elementId="bottomLayout" containerData="4311" selectedElement="_JSHxD7N_Eei8z7zJyqB1eQ">
                   <tags>newtablook</tags>
+                  <tags>active</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_JSHxDLN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" ref="_JR-ASLN_Eei8z7zJyqB1eQ"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_JSHxDbN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.ContextsView" ref="_JR-ASbN_Eei8z7zJyqB1eQ"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_JSHxDrN_Eei8z7zJyqB1eQ" elementId="org.talend.designer.core.ui.views.properties.ComponentSettingsView" ref="_JR-ASrN_Eei8z7zJyqB1eQ"/>
@@ -95,8 +95,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_JTdNwLN_Eei8z7zJyqB1eQ" elementId="org.talend.repository.cnf.view">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -167,6 +165,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_EeC2oLOCEei8z7zJyqB1eQ" elementId="org.talend.designer.runprocess.ui.views.processview">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
