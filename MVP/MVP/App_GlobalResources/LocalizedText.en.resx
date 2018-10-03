@@ -2557,4 +2557,64 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
   </data>
+  <data name="Meta_About_Description" xml:space="preserve">
+    <value>We believe cities should amount to more than traffic jams, rush hour and parking lots. Take one of our premium transfers and enjoy a more affordable and comfortable trip while also helping the environment.</value>
+  </data>
+  <data name="Meta_About_Title" xml:space="preserve">
+    <value>Disrupting Intercity Mobility, One Loop at a Time | Yoyoloop</value>
+  </data>
+  <data name="Meta_Calendar_Description" xml:space="preserve">
+    <value>Choose the city you want to travel to, select your departure and arrival spots, buy your ticket and enjoy the ride.</value>
+  </data>
+  <data name="Meta_Calendar_Title" xml:space="preserve">
+    <value>Premium Transfer to Lisbon, Porto, Coimbra and Leiria | Yoyoloop</value>
+  </data>
+  <data name="Meta_Contact_Description" xml:space="preserve">
+    <value>The Yoyoloop team is here to help you. Please contact us through our contact form.</value>
+  </data>
+  <data name="Meta_Contact_Title" xml:space="preserve">
+    <value>Get in Touch with Us | Yoyoloop</value>
+  </data>
+  <data name="Meta_Destinos_Description" xml:space="preserve">
+    <value>Yoyoloop is the perfect alternative to the train, the bus and the air bridge. Take a premium transfer from city centre to city centre between Lisbon, Porto, Coimbra and Leiria, and travel for the price of a train ticket.</value>
+  </data>
+  <data name="Meta_Destinos_Title" xml:space="preserve">
+    <value>Premium Transfers from City Centre to City Centre | Yoyoloop</value>
+  </data>
+  <data name="Meta_Help_Description" xml:space="preserve">
+    <value>Get help with booking a trip, promo codes, your Yoyoloop account, or browse through frequently asked questions.</value>
+  </data>
+  <data name="Meta_Help_Title" xml:space="preserve">
+    <value>Need help with Yoyoloop?</value>
+  </data>
+  <data name="Meta_Homepage_Description" xml:space="preserve">
+    <value>Yoyoloop is a premium transfer service alternative to other transports. Get a ride to Lisbon, Porto, Coimbra, Leiria and back for the price of a train ticket.</value>
+  </data>
+  <data name="Meta_Homepage_Title" xml:space="preserve">
+    <value>Travel on a Premium Transfer for the Price of a Train Ticket | Yoyoloop</value>
+  </data>
+  <data name="Meta_HowTo_Description" xml:space="preserve">
+    <value>Travelling on Yoyoloop's premium transfers is very easy. Choose your departure and arrival spots, safely pay for your trip, download your ticket and show it to our professional driver.</value>
+  </data>
+  <data name="Meta_HowTo_Title" xml:space="preserve">
+    <value>How to Travel on a Premium Transfer | Yoyoloop</value>
+  </data>
+  <data name="Meta_Loops_Description" xml:space="preserve">
+    <value>With Yoyoloop, you can travel to Lisbon from Porto, Coimbra and Leiria and back in a premium transfer. You can also travel between Porto and Coimbra.</value>
+  </data>
+  <data name="Meta_Loops_Title" xml:space="preserve">
+    <value>Premium Transfers to Lisbon, Porto, Coimbra and Leiria | Yoyoloop</value>
+  </data>
+  <data name="Meta_Privacy_Description" xml:space="preserve">
+    <value>Understand how and why Yoyoloop uses your personal information to book a seat on one of our loops.</value>
+  </data>
+  <data name="Meta_Privacy_Title" xml:space="preserve">
+    <value>Privacy Policy | Yoyoloop</value>
+  </data>
+  <data name="Meta_Terms_Description" xml:space="preserve">
+    <value>Read Yoyoloop's terms and conditions, a premium transfer service alternative to other transports.</value>
+  </data>
+  <data name="Meta_Terms_Title" xml:space="preserve">
+    <value>Terms and Conditions | Yoyoloop</value>
+  </data>
 </root>
