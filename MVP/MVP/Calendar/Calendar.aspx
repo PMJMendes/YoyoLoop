@@ -11,6 +11,7 @@
         <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Calendar_Title%>"/>
     </title>
     <meta name="description" content="<%= Resources.LocalizedText.Meta_Calendar_Description%>">
+    <meta name="robots" content="noindex, follow">
 
     <style type="text/css">
         .homepage__navbar {

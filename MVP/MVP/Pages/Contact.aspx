@@ -6,6 +6,7 @@
         <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Contact_Title%>"/>
     </title>
     <meta name="description" content="<%= Resources.LocalizedText.Meta_Contact_Description%>">
+    <meta name="robots" content="index, follow">
 
     <style type="text/css">
         .homepage__navbar {
