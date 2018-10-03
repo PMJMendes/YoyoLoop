@@ -141,7 +141,7 @@ namespace MVP
 
         public void UserSignIn(object sender, EventArgs e)
         {
-            GA_Login(Context.User.Identity.GetUserId());
+            ApplicationHelpers.GTM_Login(this, Context.User.Identity.GetUserId());
             PassSignIn?.Invoke(this, e);
         }
 
@@ -180,16 +180,5 @@ namespace MVP
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
             Response.Redirect(Request.Url.PathAndQuery);
         }
-
-        public void GA_Login(string userid)
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-LoginKey", "GTM_Login('" + userid + "');", true);
-        }
-
-        public void GA_Signup(string id, string email, string name)
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
-        }
-
     }
 }
