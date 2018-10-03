@@ -1762,7 +1762,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 26.
+        ///   Looks up a localized string similar to 29.
         /// </summary>
         internal static string General_LoopData_Price_Coimbra {
             get {
@@ -1771,7 +1771,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 16.
+        ///   Looks up a localized string similar to 18.
         /// </summary>
         internal static string General_LoopData_Price_Leiria {
             get {
@@ -1780,7 +1780,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 36.
+        ///   Looks up a localized string similar to 39.
         /// </summary>
         internal static string General_LoopData_Price_Lisboa {
             get {
@@ -1789,7 +1789,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 36.
+        ///   Looks up a localized string similar to 39.
         /// </summary>
         internal static string General_LoopData_Price_Porto {
             get {
@@ -3256,7 +3256,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A Yoyoloop é a alternativa perfeita ao comboio, ao autocarro e à ponte aérea. Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria..
+        ///   Looks up a localized string similar to A Yoyoloop é a alternativa perfeita ao carro particular, ao comboio (Alfa Pendular) e ao avião (ponte aérea). Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria..
         /// </summary>
         internal static string Meta_Destinos_Description {
             get {

@@ -318,7 +318,7 @@
     <value>Pode cancelar a sua viagem até 48 horas antes da hora de partida. O valor que pagou será transformado em crédito para poder utilizá-lo em futuras viagens.</value>
   </data>
   <data name="Checkout_Promocode_tbPromo_Label" xml:space="preserve">
-    <value>Código promocional</value>
+    <value>Promo code</value>
   </data>
   <data name="Checkout_Promocode_tbPromo_placeholder" xml:space="preserve">
     <value>Inserir código</value>
@@ -479,10 +479,10 @@
     <value>por lugar</value>
   </data>
   <data name="Controls_BookingPanel_Promocode_DontHaveLink" xml:space="preserve">
-    <value>Não tenho código promocional</value>
+    <value>Não tenho promo code</value>
   </data>
   <data name="Controls_BookingPanel_Promocode_HaveLink" xml:space="preserve">
-    <value>Tenho um código promocional</value>
+    <value>Tenho um promo code</value>
   </data>
   <data name="Controls_BookingPanel_Promocode_tbPromo_placeholder" xml:space="preserve">
     <value>Inserir código</value>
@@ -701,22 +701,22 @@
     <value>2 H 30</value>
   </data>
   <data name="General_LoopData_Price_Coimbra" xml:space="preserve">
-    <value>26</value>
+    <value>29</value>
   </data>
   <data name="General_LoopData_Price_Leiria" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>36</value>
+    <value>39</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>36</value>
+    <value>39</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
-    <value>RecomendarAmigo</value>
+    <value>Convite</value>
   </data>
   <data name="General_Promocode" xml:space="preserve">
-    <value>Código promocional</value>
+    <value>Promo code</value>
   </data>
   <data name="General_Seat" xml:space="preserve">
     <value>lugar</value>
@@ -788,32 +788,33 @@
     <value>Descontos e promoções</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM" xml:space="preserve">
-    <value>Como posso reservar as viagens a 1€ e aplicar códigos promocionais?</value>
+    <value>Como posso reservar as viagens a 1€ e aplicar promo codes?</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer" xml:space="preserve">
-    <value>Para usufruir das viagens a 1€ que ganhou por convidar amigos, basta aceder ao seu perfil e clicar em “Convidar amigos”. Nesta secção, pode ver todas as viagens a 1€ que ainda tem por utilizar. Basta clicar em “Reservar” para reservar uma viagem para qualquer destino a 1€.
-Para utilizar um código promocional de um amigo, basta clicar em “Tenho um código promocional” na caixa à direita quando estiver a selecionar a sua viagem. Cole aqui o código, clique em “Reservar” e já está!</value>
+    <value>Para usufruir das viagens a 1€ que ganhou por convidar amigos, basta aceder ao seu perfil e clicar em “Convidar amigos”. Nesta secção, pode ver todas as viagens a 1€ que ainda tem por utilizar. Basta clicar em “Reservar” para reservar uma viagem para qualquer destino a 1€.&lt;br&gt;
+&lt;br&gt;
+Para utilizar um promo code de um amigo, basta clicar em “Tenho um promo code” na caixa à direita quando estiver a selecionar a sua viagem. Cole aqui o código, clique em “Reservar” e já está!</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes" xml:space="preserve">
-    <value>Posso usar dois códigos promocionais para a mesma viagem?</value>
+    <value>Posso usar dois promo codes para a mesma viagem?</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_TwoPromocodes_Answer" xml:space="preserve">
-    <value>Não. Cada código promocional só pode ser descontado para uma viagem.</value>
+    <value>Não. Cada promo code só pode ser descontado para uma viagem.</value>
   </data>
   <data name="Help_Topic_Invite" xml:space="preserve">
     <value>Convidar amigos</value>
   </data>
   <data name="Help_Topic_Invite_Question_FriendsBenefits" xml:space="preserve">
-    <value>O que ganham os meus amigos por viajar com o meu código promocional?</value>
+    <value>O que ganham os meus amigos por viajar com o meu promo code?</value>
   </data>
   <data name="Help_Topic_Invite_Question_FriendsBenefits_Answer" xml:space="preserve">
-    <value>Sempre que partilhar o seu código promocional com os seus amigos, recebe uma viagem a 1€ para qualquer destino da Yoyoloop, assim como os seus amigos.</value>
+    <value>Sempre que partilhar o seu promo code com os seus amigos, recebe uma viagem a 1€ para qualquer destino da Yoyoloop, assim como os seus amigos.</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
-    <value>Posso partilhar o meu código promocional com amigos que já tenham usado a Yoyoloop?</value>
+    <value>Posso partilhar o meu promo code com amigos que já tenham usado a Yoyoloop?</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers_Answer" xml:space="preserve">
-    <value>Não. Os seus códigos promocionais apenas podem ser aplicados na primeira viagem de um novo utilizador.</value>
+    <value>Não. Os seus promo codes apenas podem ser aplicados na primeira viagem de um novo utilizador.</value>
   </data>
   <data name="Help_Topic_Invite_Question_HowManyFriends" xml:space="preserve">
     <value>Quantos amigos posso convidar?</value>
@@ -828,10 +829,10 @@ Para utilizar um código promocional de um amigo, basta clicar em “Tenho um c�
     <value>Por cada amigo que viajar com a Yoyoloop pela primeira vez com o seu código, pode viajar para qualquer destino por apenas 1€!</value>
   </data>
   <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
-    <value>Onde posso partilhar o meu código promocional?</value>
+    <value>Onde posso partilhar o meu promo code?</value>
   </data>
   <data name="Help_Topic_Invite_Question_Share_Answer" xml:space="preserve">
-    <value>Pode enviar o seu código promocional através do Facebook, WhatsApp, Twitter, LinkedIn ou por email. Também pode simplesmente copiar o código e partilhá-lo da forma que preferir com os seus amigos.</value>
+    <value>Pode enviar o seu promo code através do Facebook, WhatsApp, Twitter, LinkedIn ou por email. Também pode simplesmente copiar o código e partilhá-lo da forma que preferir com os seus amigos.</value>
   </data>
   <data name="Help_Topic_Luggage" xml:space="preserve">
     <value>Malas e Bagagens</value>
@@ -936,11 +937,14 @@ Para utilizar um código promocional de um amigo, basta clicar em “Tenho um c�
     <value>Qual é o preço por loop?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
-    <value>Os valores dos bilhetes para os loops atuais são:
-Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem
-Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem
-Lisboa - Leiria / Leiria - Lisboa: desde 16€ por viagem
-Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.
+    <value>Os valores dos bilhetes para os loops atuais são:&lt;br&gt;
+&lt;br&gt;
+Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem&lt;br&gt;
+Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem&lt;br&gt;
+Lisboa - Leiria / Leiria - Lisboa: desde 16€ por viagem&lt;br&gt;
+&lt;br&gt;
+Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
+&lt;br&gt;
 Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, por favor envie um email para empresas@yoyoloop.com.</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_Invoices" xml:space="preserve">
@@ -1189,6 +1193,66 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
   <data name="MasterService_SendResetPassword_Subject" xml:space="preserve">
     <value>Recupere a sua password na Yoyoloop</value>
   </data>
+  <data name="Meta_About_Description" xml:space="preserve">
+    <value>Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. Apanhe um dos nossos transfers premium e aproveite uma viagem mais em conta e mais cómoda ao mesmo tempo que ajuda o meio ambiente.</value>
+  </data>
+  <data name="Meta_About_Title" xml:space="preserve">
+    <value>A Revolucionar as Cidades, um Loop de Cada Vez | Yoyoloop</value>
+  </data>
+  <data name="Meta_Calendar_Description" xml:space="preserve">
+    <value>Escolha para que cidade pretende viajar, selecione o seu ponto de partida e chegada, compre o seu bilhete e aproveite a viagem.</value>
+  </data>
+  <data name="Meta_Calendar_Title" xml:space="preserve">
+    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
+  </data>
+  <data name="Meta_Contact_Description" xml:space="preserve">
+    <value>A equipa da Yoyoloop está ao seu dispor. Por favor, entre em contacto connosco através do nosso formulário de contacto.</value>
+  </data>
+  <data name="Meta_Contact_Title" xml:space="preserve">
+    <value>Entre em Contacto Connosco | Yoyoloop</value>
+  </data>
+  <data name="Meta_Destinos_Description" xml:space="preserve">
+    <value>A Yoyoloop é a alternativa perfeita ao carro particular, ao comboio (Alfa Pendular) e ao avião (ponte aérea). Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria.</value>
+  </data>
+  <data name="Meta_Destinos_Title" xml:space="preserve">
+    <value>Transfers Premium de um Centro da Cidade para o Outro | Yoyoloop</value>
+  </data>
+  <data name="Meta_Help_Description" xml:space="preserve">
+    <value>Saiba como reservar uma viagem, como usar códigos promocionais, como usar a sua conta da Yoyoloop, ou veja as nossas perguntas frequentes.</value>
+  </data>
+  <data name="Meta_Help_Title" xml:space="preserve">
+    <value>Precisa de Ajuda com a Yoyoloop?</value>
+  </data>
+  <data name="Meta_Homepage_Description" xml:space="preserve">
+    <value>A Yoyoloop é um serviço de transfer premium alternativo a outros transportes. Apanhe boleia a preço de comboio para Lisboa, Porto, Coimbra e Leiria.</value>
+  </data>
+  <data name="Meta_Homepage_Title" xml:space="preserve">
+    <value>Apanhe um Transfer Premium a Preço de Comboio | Yoyoloop</value>
+  </data>
+  <data name="Meta_HowTo_Description" xml:space="preserve">
+    <value>Viajar num transfer premium da Yoyoloop é muito fácil. Escolha o seu ponto de partida e chegada, compre a sua viagem em segurança, faça o download do seu bilhete e apresente-o ao nosso motorista profissional.</value>
+  </data>
+  <data name="Meta_HowTo_Title" xml:space="preserve">
+    <value>Como Viajar num Transfer Premium da Yoyoloop</value>
+  </data>
+  <data name="Meta_Loops_Description" xml:space="preserve">
+    <value>Com a Yoyoloop, pode ir e vir de Lisboa para o Porto, Coimbra e Leiria num transfer premium e, ainda, viajar entre o Porto e Coimbra.</value>
+  </data>
+  <data name="Meta_Loops_Title" xml:space="preserve">
+    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
+  </data>
+  <data name="Meta_Privacy_Description" xml:space="preserve">
+    <value>Saiba como e porque é que a Yoyoloop usa a sua informação pessoal para reservar um lugar nos nossos loops.</value>
+  </data>
+  <data name="Meta_Privacy_Title" xml:space="preserve">
+    <value>Política de Privacidade | Yoyoloop</value>
+  </data>
+  <data name="Meta_Terms_Description" xml:space="preserve">
+    <value>Leia os termos e condições da Yoyoloop, um serviço de transfer premium alternativo a outros transportes.</value>
+  </data>
+  <data name="Meta_Terms_Title" xml:space="preserve">
+    <value>Termos e Condições | Yoyoloop</value>
+  </data>
   <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
     <value>Reserve Já</value>
   </data>
@@ -1199,7 +1263,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Reserve a sua primeira viagem com a Yoyoloop!</value>
   </data>
   <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
-    <value>Partilhe o seu código promocional com todos os seus amigos e viaje por apenas 1€!</value>
+    <value>Partilhe o seu promo code com todos os seus amigos e viaje por apenas 1€!</value>
   </data>
   <data name="MyTrips_Invite_How" xml:space="preserve">
     <value>Como viajar por 1€ para qualquer destino</value>
@@ -1211,7 +1275,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Ofereça viagens</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
-    <value>Recomende a Yoyoloop aos seus amigos ao partilhar o seu código promocional</value>
+    <value>Recomende a Yoyoloop aos seus amigos ao partilhar o seu promo code</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Title" xml:space="preserve">
     <value>Recomende a Yoyoloop</value>
@@ -1325,7 +1389,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Copiado</value>
   </data>
   <data name="Profile_Invite_Promoshare_NotEligible" xml:space="preserve">
-    <value>Para receber o seu código promocional só tem de marcar a sua primeira viagem!</value>
+    <value>Para receber o seu promo code só tem de marcar a sua primeira viagem!</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMenu_email" xml:space="preserve">
     <value>Enviar por email</value>
@@ -1349,7 +1413,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>e viaje por apenas 1€.</value>
   </data>
   <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
-    <value>Partilhe o seu código promocional com todos os seus amigos e viaje por apenas 1€!</value>
+    <value>Partilhe o seu promo code com todos os seus amigos e viaje por apenas 1€!</value>
   </data>
   <data name="Profile_Invite_Saved" xml:space="preserve">
     <value>Já poupou</value>
@@ -1361,7 +1425,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Ofereça viagens</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
-    <value>Recomende a Yoyoloop aos seus amigos ao partilhar o seu código promocional</value>
+    <value>Recomende a Yoyoloop aos seus amigos ao partilhar o seu promo code</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Title" xml:space="preserve">
     <value>Recomende a Yoyoloop</value>
@@ -1373,7 +1437,7 @@ Ver quantas viagens a 1€ tem disponível para usufruir.</value>
     <value>Viaje por 1€!</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
-    <value>O comboio não o leva diretamente ao destino final, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer premium da Yoyoloop, pode ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar. Tudo isto a preço de comboio.</value>
+    <value>O comboio Alfa Pendular não o leva diretamente ao destino final, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer premium da Yoyoloop, pode ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar. Tudo isto a preço de comboio.</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Title" xml:space="preserve">
     <value>Porquê apanhar boleia de um transfer da Yoyoloop?</value>
@@ -1915,7 +1979,7 @@ Com a Yoyoloop, pode apanhar um transfer premium até Lisboa desde o Porto, Coim
     <value>Destinos populares</value>
   </data>
   <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
-    <value>Uma "ponte aérea" diferente, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
+    <value>A Yoyoloop é a alternativa perfeita à ponte aérea. Poupe tempo e viaje entre Lisboa e o Porto num transfer premium, de um centro da cidade para o outro. Sem check-ins, sem filas de segurança e sem precisar de outros transportes.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
     <value>A Yoyoloop dá-lhe boleia para o Porto a partir de Lisboa e de Coimbra. Escolha o dia e as horas em que pretende viajar, marque a sua viagem e espere que o nosso motorista profissional o apanhe na sua paragem de escolha.</value>
@@ -2015,6 +2079,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
   </data>
   <data name="StaticPages_Destinos_SubDescription" xml:space="preserve">
     <value>Lisboa, Porto, Coimbra e Leiria passam a estar ligadas em Loop.&lt;br&gt; O serviço Yoyoloop é uma "ponte aérea" diferente, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
+    <comment>As cidades de Lisboa, Porto, Coimbra e Leiria estão agora ligadas em loop. Poupe tempo e viaje num transfer premium, de um centro da cidade para o outro.</comment>
   </data>
   <data name="StaticPages_Destinos_Why_Accessible_Description" xml:space="preserve">
     <value>Menos desgaste, mais na carteira</value>
@@ -2556,65 +2621,5 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento.</value>
-  </data>
-  <data name="Meta_About_Description" xml:space="preserve">
-    <value>Acreditamos que as cidades devem ser mais do que engarrafamentos, horas de ponta e parques de estacionamento. Apanhe um dos nossos transfers premium e aproveite uma viagem mais em conta e mais cómoda ao mesmo tempo que ajuda o meio ambiente.</value>
-  </data>
-  <data name="Meta_About_Title" xml:space="preserve">
-    <value>A Revolucionar as Cidades, um Loop de Cada Vez | Yoyoloop</value>
-  </data>
-  <data name="Meta_Calendar_Description" xml:space="preserve">
-    <value>Escolha para que cidade pretende viajar, selecione o seu ponto de partida e chegada, compre o seu bilhete e aproveite a viagem.</value>
-  </data>
-  <data name="Meta_Calendar_Title" xml:space="preserve">
-    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
-  </data>
-  <data name="Meta_Contact_Description" xml:space="preserve">
-    <value>A equipa da Yoyoloop está ao seu dispor. Por favor, entre em contacto connosco através do nosso formulário de contacto.</value>
-  </data>
-  <data name="Meta_Contact_Title" xml:space="preserve">
-    <value>Entre em Contacto Connosco | Yoyoloop</value>
-  </data>
-  <data name="Meta_Destinos_Description" xml:space="preserve">
-    <value>A Yoyoloop é a alternativa perfeita ao comboio, ao autocarro e à ponte aérea. Apanhe um transfer premium a preço de comboio de um centro da cidade para o outro entre Lisboa, Porto, Coimbra e Leiria.</value>
-  </data>
-  <data name="Meta_Destinos_Title" xml:space="preserve">
-    <value>Transfers Premium de um Centro da Cidade para o Outro | Yoyoloop</value>
-  </data>
-  <data name="Meta_Help_Description" xml:space="preserve">
-    <value>Saiba como reservar uma viagem, como usar códigos promocionais, como usar a sua conta da Yoyoloop, ou veja as nossas perguntas frequentes.</value>
-  </data>
-  <data name="Meta_Help_Title" xml:space="preserve">
-    <value>Precisa de Ajuda com a Yoyoloop?</value>
-  </data>
-  <data name="Meta_Homepage_Description" xml:space="preserve">
-    <value>A Yoyoloop é um serviço de transfer premium alternativo a outros transportes. Apanhe boleia a preço de comboio para Lisboa, Porto, Coimbra e Leiria.</value>
-  </data>
-  <data name="Meta_Homepage_Title" xml:space="preserve">
-    <value>Apanhe um Transfer Premium a Preço de Comboio | Yoyoloop</value>
-  </data>
-  <data name="Meta_HowTo_Description" xml:space="preserve">
-    <value>Viajar num transfer premium da Yoyoloop é muito fácil. Escolha o seu ponto de partida e chegada, compre a sua viagem em segurança, faça o download do seu bilhete e apresente-o ao nosso motorista profissional.</value>
-  </data>
-  <data name="Meta_HowTo_Title" xml:space="preserve">
-    <value>Como Viajar num Transfer Premium da Yoyoloop</value>
-  </data>
-  <data name="Meta_Loops_Description" xml:space="preserve">
-    <value>Com a Yoyoloop, pode ir e vir de Lisboa para o Porto, Coimbra e Leiria num transfer premium e, ainda, viajar entre o Porto e Coimbra.</value>
-  </data>
-  <data name="Meta_Loops_Title" xml:space="preserve">
-    <value>Transfers Premium para Lisboa, Porto, Coimbra e Leiria | Yoyoloop</value>
-  </data>
-  <data name="Meta_Privacy_Description" xml:space="preserve">
-    <value>Saiba como e porque é que a Yoyoloop usa a sua informação pessoal para reservar um lugar nos nossos loops.</value>
-  </data>
-  <data name="Meta_Privacy_Title" xml:space="preserve">
-    <value>Política de Privacidade | Yoyoloop</value>
-  </data>
-  <data name="Meta_Terms_Description" xml:space="preserve">
-    <value>Leia os termos e condições da Yoyoloop, um serviço de transfer premium alternativo a outros transportes.</value>
-  </data>
-  <data name="Meta_Terms_Title" xml:space="preserve">
-    <value>Termos e Condições | Yoyoloop</value>
   </data>
 </root>
