@@ -95,6 +95,13 @@ $desktop: "(min-width: 1440px)";
         border-color: #ff5f6d;
         background-color: #ff5f6d;
         box-shadow: 0px 5px 12px 0 rgba(255, 95, 109, 0.3);
+
+        @media #{$mobile} {
+            width: 60px;
+            height: 30px;
+            font-size: 12px;
+            padding: 0px;
+        }
     }
 
     .navbar-toggler {
@@ -112,6 +119,12 @@ $desktop: "(min-width: 1440px)";
 
     .profile-desktop {
         @media #{$mobile} {
+            display: none;
+        }
+    }
+
+    .profile-mobile {
+        @media #{$desktop} {
             display: none;
         }
     }
