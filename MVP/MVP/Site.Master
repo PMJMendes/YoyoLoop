@@ -294,7 +294,7 @@
                                 <a class="footer__social" href="https://www.linkedin.com/company/yoyoloop/">
                                     <img src="/img/linkedin-footer.png"
                                         srcset="/img/linkedin-footer@2x.png 2x,
-                                            /img/linkedin@-footer3x.png 3x"
+                                            /img/linkedin-footer@3x.png 3x"
                                         class="linkedin p-1">
                                 </a>
                             </div>
