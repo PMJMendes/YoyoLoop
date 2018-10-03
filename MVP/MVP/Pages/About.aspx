@@ -22,7 +22,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <header class="head text-center d-flex pb-5 static-page__pic-three">
+    <header class="head text-center d-flex pb-5 static-page__pic-about">
         <div class="container-fluid d-flex align-items-center">
             
         </div>
@@ -108,25 +108,25 @@
 
         <div class="row static-page__about__grid">
             <div class="col-md-4 mt-1">
+                <div class="static-page__about__size static-page__about__size__pic-1"></div>
+            </div>
+            <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-2"></div>
             </div>
             <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-3"></div>
             </div>
-            <div class="col-md-4 mt-1">
-                <div class="static-page__about__size static-page__about__size__pic-4"></div>
-            </div>
         </div>
 
         <div class="row static-page__about__grid">
+            <div class="col-md-4 mt-1">
+                <div class="static-page__about__size static-page__about__size__pic-4"></div>
+            </div>
             <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-5"></div>
             </div>
             <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-6"></div>
-            </div>
-            <div class="col-md-4 mt-1">
-                <div class="static-page__about__size static-page__about__size__pic-7"></div>
             </div>
         </div>
     </div>

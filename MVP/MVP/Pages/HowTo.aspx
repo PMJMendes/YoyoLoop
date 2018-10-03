@@ -21,7 +21,7 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-        <header class="head text-center d-flex pb-5 pt-5 static-page__pic-six">
+        <header class="head text-center d-flex pb-5 pt-5 static-page__pic-howto">
         <div class="container-fluid d-flex align-items-center pb-5 pt-5">
         </div>
     </header>

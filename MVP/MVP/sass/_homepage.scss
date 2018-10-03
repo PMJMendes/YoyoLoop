@@ -145,6 +145,16 @@ $desktop: "(min-width: 1440px)";
             background-size: 425px 425px;
         }
 
+        &--porto {
+            background-image: url("/img/Porto.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: 425px 425px;
+        }
+
         &__header {
             &__city {
                 font-size: 34px;
