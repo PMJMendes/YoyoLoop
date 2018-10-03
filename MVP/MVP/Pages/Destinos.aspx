@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Destinos.aspx.cs" Inherits="MVP.Pages.Destinos" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Destinos_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_Destinos_Description%>">
+    <meta name="robots" content="index, follow">
+
     <style type="text/css">
         .homepage__navbar {
             background: none;
@@ -21,7 +27,7 @@
 
     <!-- DESTINATIONS -->
     <div class="<%= string.IsNullOrEmpty(localData.Destino) ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-four">
+        <header class="head text-center d-flex pb-5 static-page__pic-destinos">
             <div class="container-fluid d-flex align-items-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_MainTitle%>"/></h1>
             </div>
@@ -168,7 +174,7 @@
 
     <!-- LISBOA -->
     <div class="<%= localData.Destino == "lisboa" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-four">
+        <header class="head text-center d-flex pb-5 static-page__pic-destinos">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Lisboa_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -210,7 +216,7 @@
                         <div class="static-page__box-container__first__main-title">Lisboa</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--lisboa p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
@@ -389,7 +395,7 @@
     
     <!-- PORTO -->
     <div class="<%= localData.Destino == "porto" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-four">
+        <header class="head text-center d-flex pb-5 static-page__pic-destinos">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Porto_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -431,7 +437,7 @@
                         <div class="static-page__box-container__first__main-title">Porto</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--porto p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
@@ -610,7 +616,7 @@
 
     <!-- COIMBRA -->
     <div class="<%= localData.Destino == "coimbra" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-four">
+        <header class="head text-center d-flex pb-5 static-page__pic-destinos">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Coimbra_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -652,7 +658,7 @@
                         <div class="static-page__box-container__first__main-title">Coimbra</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--coimbra p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
@@ -757,7 +763,7 @@
 
     <!-- LEIRIA -->
     <div class="<%= localData.Destino == "leiria" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-four">
+        <header class="head text-center d-flex pb-5 static-page__pic-destinos">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Leiria_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -799,7 +805,7 @@
                         <div class="static-page__box-container__first__main-title">Leiria</div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--leiria p-0 m-0">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">

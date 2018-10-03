@@ -7,20 +7,20 @@ section.yoyoloops {
     padding-bottom: 0;
 
     .loop-desktop {
-        display: flex!important;
+        display: flex !important;
     }
 
     .loop-mobile {
-        display: none!important;
+        display: none !important;
     }
 
     @media #{$mobile} {
         .loop-desktop {
-            display: none!important;
+            display: none !important;
         }
 
         .loop-mobile {
-            display: flex!important;
+            display: flex !important;
         }
     }
 
@@ -89,27 +89,32 @@ section.yoyoloops {
     .cascais {
         background-image: url('/img/cascais.jpg');
         background-repeat: no-repeat;
-        background-size: 100%;
         background-position: center;
-        background-size: cover cover;
+        background-size: cover;
         overflow: hidden;
     }
 
     .coimbra {
         background-image: url('/img/coimbra.jpg');
         background-repeat: no-repeat;
-        background-size: 100%;
         background-position: center;
-        background-size: cover cover;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .porto {
+        background-image: url('/img/porto.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         overflow: hidden;
     }
 
     .leiria {
         background-image: url('/img/leiria.jpg');
         background-repeat: no-repeat;
-        background-size: 100%;
         background-position: center;
-        background-size: cover cover;
+        background-size: cover;
         overflow: hidden;
     }
 
@@ -179,7 +184,7 @@ section.yoyoloops {
                 margin-left: 30%;
 
                 @media (max-width: 768px) {
-                    margin-left:20%
+                    margin-left: 20%
                 }
             }
 
@@ -190,6 +195,7 @@ section.yoyoloops {
             p.timeline-right {
                 color: #ffcc66;
             }
+
             p.day-of-week {
                 color: #ffffff
             }
@@ -222,6 +228,7 @@ section.yoyoloops {
                 padding-right: 10%;
             }
         }
+
         .departures-2 {
             padding-left: 20%;
 
@@ -252,26 +259,31 @@ section.yoyoloops {
 .loop-cascais-img {
     background-image: url('/img/cascais.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     overflow: hidden;
 }
 
 .loop-coimbra-img {
     background-image: url('/img/coimbra.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     overflow: hidden;
 }
 
 .loop-leiria-img {
     background-image: url('/img/leiria.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.loop-porto-img {
+    background-image: url('/img/porto.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
 }

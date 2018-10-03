@@ -428,6 +428,12 @@
     <Content Include="img\friends%402x.png" />
     <Content Include="img\friends%403x.png" />
     <Content Include="img\friends.png" />
+    <Content Include="img\galeria1.png" />
+    <Content Include="img\galeria2.png" />
+    <Content Include="img\galeria3.png" />
+    <Content Include="img\galeria4.png" />
+    <Content Include="img\galeria5.png" />
+    <Content Include="img\galeria6.png" />
     <Content Include="img\google-login%402x.png" />
     <Content Include="img\google-login%403x.png" />
     <Content Include="img\google-login.png" />
@@ -470,6 +476,7 @@
     <Content Include="img\lisboa-1.jpg" />
     <Content Include="img\lisboa-2.jpg" />
     <Content Include="img\lisboa.jpg" />
+    <Content Include="img\Lisboa.png" />
     <Content Include="img\lisboaLoop.png" />
     <Content Include="img\list%402x.png" />
     <Content Include="img\list%403x.png" />
@@ -509,6 +516,8 @@
     <Content Include="img\pontos%402x.png" />
     <Content Include="img\pontos%403x.png" />
     <Content Include="img\pontos.png" />
+    <Content Include="img\porto.jpg" />
+    <Content Include="img\Porto.png" />
     <Content Include="img\portoLoop.png" />
     <Content Include="img\preco%402x.png" />
     <Content Include="img\preco%403x.png" />
@@ -612,6 +621,7 @@
     <Content Include="Profile\Invite.aspx" />
     <Content Include="Profile\Profile.aspx" />
     <Content Include="Profile\Scripts\stripe-createCardToken.js" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Custom\blockUI-extension.js" />
@@ -657,6 +667,9 @@
     <Content Include="sass\_help.scss" />
     <Content Include="sass\_destinos.scss" />
     <Content Include="sass\_yoyoloops.scss" />
+    <Content Include="sitemap-en.xml" />
+    <Content Include="sitemap-pt.xml" />
+    <Content Include="sitemap.xml" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>

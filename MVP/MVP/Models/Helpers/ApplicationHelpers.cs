@@ -30,5 +30,19 @@ namespace MVP.Models.Helpers
             return result;
         }
 
+        public static void GTM_Login(Control control, string userid)
+        {
+            ScriptManager.RegisterStartupScript(control, control.GetType(), "GA-LoginKey", "GTM_Login('" + userid + "');", true);
+        }
+
+        public static void GTM_Signup(Control control, string id, string email, string name)
+        {
+            ScriptManager.RegisterStartupScript(control, control.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
+        }
+
+        public static void ClientRedirect(Control control, string url)
+        {
+            ScriptManager.RegisterStartupScript(control, control.GetType(), "redirectKey", "setTimeout(function(){$.blockUI();window.location.assign('" + url + "');},1);", true);
+        }
     }
 }

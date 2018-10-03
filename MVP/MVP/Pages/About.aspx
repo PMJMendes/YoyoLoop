@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="MVP.Pages.About" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_About_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_About_Description%>">
+    <meta name="robots" content="index, follow">
+
     <style type="text/css">
         .homepage__navbar {
             background: none;
@@ -16,7 +22,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <header class="head text-center d-flex pb-5 static-page__pic-three">
+    <header class="head text-center d-flex pb-5 static-page__pic-about">
         <div class="container-fluid d-flex align-items-center">
             
         </div>
@@ -102,25 +108,25 @@
 
         <div class="row static-page__about__grid">
             <div class="col-md-4 mt-1">
+                <div class="static-page__about__size static-page__about__size__pic-1"></div>
+            </div>
+            <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-2"></div>
             </div>
             <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-3"></div>
             </div>
-            <div class="col-md-4 mt-1">
-                <div class="static-page__about__size static-page__about__size__pic-4"></div>
-            </div>
         </div>
 
         <div class="row static-page__about__grid">
+            <div class="col-md-4 mt-1">
+                <div class="static-page__about__size static-page__about__size__pic-4"></div>
+            </div>
             <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-5"></div>
             </div>
             <div class="col-md-4 mt-1">
                 <div class="static-page__about__size static-page__about__size__pic-6"></div>
-            </div>
-            <div class="col-md-4 mt-1">
-                <div class="static-page__about__size static-page__about__size__pic-7"></div>
             </div>
         </div>
     </div>

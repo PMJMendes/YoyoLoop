@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Loops.aspx.cs" Inherits="MVP.Pages.Loops" %>
 
-<asp:Content ID="CssOverrides" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Loops_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_Loops_Description%>">
+    <meta name="robots" content="index, follow">
+
     <style type="text/css">
         .homepage__navbar {
             background: none;
@@ -26,7 +32,7 @@
 
     <!-- LOOPS -->
     <div class="<%= string.IsNullOrEmpty(localData.Loop) ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-five">
+        <header class="head text-center d-flex pb-5 static-page__pic-loops">
             <div class="container-fluid d-flex align-items-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_MainTitle%>"/></h1>
             </div>
@@ -69,7 +75,7 @@
                             <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Leiria%>"/>€</p>
                         </div>
                     </div>
-                    <div class="city-details col-sm-8 cascais">
+                    <div class="city-details col-sm-8 leiria">
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <div class="directions">
@@ -223,7 +229,7 @@
                         <p class="price"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LoopCard_From%>"/> <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, General_LoopData_Price_Porto%>"/>€</p>
                     </div>
     
-                    <div class="city-details col-sm-8 leiria">
+                    <div class="city-details col-sm-8 porto">
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <div class="directions">
@@ -332,7 +338,7 @@
     
     <!-- LEIRIA -->
     <div class="<%= localData.Loop == "lisboa-leiria" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-one">
+        <header class="head text-center d-flex pb-5 static-page__pic-loops">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaLeiria_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -378,7 +384,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-cascais-img">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-leiria-img">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
@@ -475,7 +481,7 @@
 
     <!-- COIMBRA -->
     <div class="<%= localData.Loop == "lisboa-coimbra" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-one">
+        <header class="head text-center d-flex pb-5 static-page__pic-loops">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaCoimbra_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -521,7 +527,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-cascais-img">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-coimbra-img">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
@@ -618,7 +624,7 @@
     
     <!-- PORTO -->
     <div class="<%= localData.Loop == "lisboa-porto" ? "" : "hide" %>">
-        <header class="head text-center d-flex pb-5 static-page__pic-one">
+        <header class="head text-center d-flex pb-5 static-page__pic-loops">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Loops_LisboaPorto_MainTitle%>"/></h1>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -664,7 +670,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-cascais-img">
+                    <div class="col-md-8 static-page__box-container__schedules p-0 m-0 loop-porto-img">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">
