@@ -658,6 +658,9 @@
     <Content Include="sass\_help.scss" />
     <Content Include="sass\_destinos.scss" />
     <Content Include="sass\_yoyoloops.scss" />
+    <Content Include="sitemap-en.xml" />
+    <Content Include="sitemap-pt.xml" />
+    <Content Include="sitemap.xml" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
