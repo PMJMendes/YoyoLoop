@@ -99,19 +99,18 @@ namespace MVP
             }
 
             CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
-            HttpCookie langCookie = Request.Cookies["langCookie"];
-            if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
+            string lang = CultureInfo.CurrentUICulture.Name;
+            switch(lang)
             {
-                switch(langCookie.Value)
-                {
-                    case "en-US":
-                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
-                        break;
-                    case "pt-PT":
-                    default:
-                        CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
-                        break;
-                }
+                case "en-US":
+                    CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
+                    break;
+                case "pt-PT":
+                    CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
+                    break;
+                default:
+                    CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_English;
+                    break;
             }
         }
 
@@ -142,7 +141,7 @@ namespace MVP
 
         public void UserSignIn(object sender, EventArgs e)
         {
-            GA_Login(Context.User.Identity.GetUserId());
+            ApplicationHelpers.GTM_Login(this, Context.User.Identity.GetUserId());
             PassSignIn?.Invoke(this, e);
         }
 
@@ -181,16 +180,5 @@ namespace MVP
             Response.Cookies["langCookie"].Expires = DateTime.Now.AddDays(20);
             Response.Redirect(Request.Url.PathAndQuery);
         }
-
-        public void GA_Login(string userid)
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-LoginKey", "GTM_Login('" + userid + "');", true);
-        }
-
-        public void GA_Signup(string id, string email, string name)
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "GA-SignupKey", "GTM_Signup('" + id + "','" + email + "','" + name + "');", true);
-        }
-
     }
 }

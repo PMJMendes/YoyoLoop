@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using MVP.Models;
+using MVP.Models.Helpers;
 using System;
 using System.Linq;
 using System.Security.Claims;
@@ -59,7 +60,8 @@ namespace MVP.Account
             {
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                 (this.Master as SiteMaster).UserSignIn(this, new EventArgs());
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                ApplicationHelpers.GTM_Login(this, user.Id);
+                ApplicationHelpers.ClientRedirect(this, Request.QueryString["ReturnUrl"]);
             }
             else if (User.Identity.IsAuthenticated)
             {
@@ -114,12 +116,13 @@ namespace MVP.Account
                     RedirectOnFail(error, returnUrl);
                     return;
                 }
-                (this.Master as SiteMaster).GA_Signup(user.Id, user.Email, user.ContactName);
+                ApplicationHelpers.GTM_Signup(this, user.Id, user.Email, user.ContactName);
                 result = manager.AddLogin(user.Id, loginInfo.Login);
                 if (result.Succeeded)
                 {
                     signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                    IdentityHelper.RedirectToReturnUrl(returnUrl, Response);
+                    ApplicationHelpers.GTM_Login(this, user.Id);
+                    ApplicationHelpers.ClientRedirect(this, returnUrl);
                     return;
                 }
                 else

@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MVP._Default" %>
 <%@ MasterType virtualpath="~/Site.Master" %>
 
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <title>
+        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Meta_Homepage_Title%>"/>
+    </title>
+    <meta name="description" content="<%= Resources.LocalizedText.Meta_Homepage_Description%>">
+    <meta name="robots" content="index, follow">
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <!-- SUGGEST TRIP -->
@@ -127,7 +135,7 @@
             </div>
 
             <div class="col-md-6 col-lg-3 pl-0">
-              <div class="homepage__where-to-card homepage__where-to-card--cascais mb-2 d-flex flex-column align-items-center">
+              <div class="homepage__where-to-card homepage__where-to-card--porto mb-2 d-flex flex-column align-items-center">
                 <div class="homepage__where-to-card__header pt-3 pb-3 w-100 d-flex justify-content-between align-items-center">
                   <div class="homepage__where-to-card__header__city">Porto</div>
                   <div class="homepage__where-to-card__header__price d-flex align-items-center">

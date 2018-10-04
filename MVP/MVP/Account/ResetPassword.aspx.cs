@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using MVP.Models;
+using MVP.Models.Helpers;
 
 namespace MVP.Account
 {
@@ -42,7 +43,7 @@ namespace MVP.Account
 
                     var service = new Services.MasterService();
                     service.ForceLogIn(Context.GetOwinContext(), user.Id);
-                    (this.Master as SiteMaster).GA_Login(user.Id);
+                    ApplicationHelpers.GTM_Login(this, user.Id);
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "redirectKey", "setTimeout(function(){location.href = '/Default.aspx';}, 5000);", true);
                     return;
                 }
