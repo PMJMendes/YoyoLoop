@@ -1708,7 +1708,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string General_LoopData_Capacity_Coimbra {
             get {
@@ -1717,7 +1717,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string General_LoopData_Capacity_Leiria {
             get {
@@ -1726,7 +1726,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string General_LoopData_Capacity_Porto {
             get {
@@ -1762,7 +1762,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 29.
+        ///   Looks up a localized string similar to 26.
         /// </summary>
         internal static string General_LoopData_Price_Coimbra {
             get {

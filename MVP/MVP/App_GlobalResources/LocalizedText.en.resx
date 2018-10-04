@@ -701,7 +701,7 @@
     <value>2 H 30</value>
   </data>
   <data name="General_LoopData_Price_Coimbra" xml:space="preserve">
-    <value>29</value>
+    <value>26</value>
   </data>
   <data name="General_LoopData_Price_Leiria" xml:space="preserve">
     <value>18</value>
@@ -1140,7 +1140,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>A different "air bridge" between Lisboa and Porto, based on five-seat premium transfers that go on the motorway. </value>
   </data>
   <data name="HomePage_Yoyoloop_SubDescription" xml:space="preserve">
-    <value>Going by train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
+    <value>Going by Alfa Pendular train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
   </data>
   <data name="MasterService_SendEmailConfirmation_Body_ConfirmAnswer" xml:space="preserve">
     <value>For data privacy reasons, Yoyoloop only considers an account as created after an email address is confirmed.</value>
@@ -1979,7 +1979,7 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Popular destinations</value>
   </data>
   <data name="StaticPages_Destinos_MainTitle" xml:space="preserve">
-    <value>Yoyoloop is the perfect alternative to the air bridge between Lisboa and Porto. Save time and travel in confort from city center to city center. No check-in, no need to wait in line to get through security.</value>
+    <value>Yoyoloop is the perfect alternative to the individual car, air bridge and comboio Alfa Pendular.</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Description" xml:space="preserve">
     <value>Yoyoloop gives you a ride from Lisbon and Coimbra to Porto. Choose the day and time you want to travel, book your trip, and wait for our professional driver to pick you up at the stop of your choice.</value>
