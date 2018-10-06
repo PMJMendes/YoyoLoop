@@ -707,10 +707,10 @@
     <value>18</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>39</value>
+    <value>29</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>39</value>
+    <value>29</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>Referral</value>
@@ -1875,7 +1875,7 @@ It is precisely why we created a premium transfer service for the price of a tra
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>From Porto: 7:30am - 8:30am - 6pm - 7pm</value>
+    <value>From Porto: 6:30am - 7:00am - 7:30am - 8:00am - 8:30am - 4:00pm - 5:00pm - 6:00pm - 7:00pm</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>From Coimbra: 11am - 4pm</value>
@@ -1988,7 +1988,8 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>From Lisbon: 7:30am - 8:30am - 6pm - 7pm</value>
+    <value>From Lisbon: 6:30am - 7:00am – 7:30am – 8:30am – 16:00pm – 17:00pm – 18:00pm – 19:00pm
+</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>From Coimbra: 3pm</value>
