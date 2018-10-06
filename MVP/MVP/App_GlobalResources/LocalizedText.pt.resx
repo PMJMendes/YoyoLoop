@@ -707,10 +707,10 @@
     <value>18</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>39</value>
+    <value>29</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>39</value>
+    <value>29</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>Convite</value>
@@ -1875,7 +1875,8 @@ Foi por isso que criámos um serviço de transfer premium a preço do comboio, a
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>Saídas do Porto: 7:30 - 8:30 - 18:00 - 19:00</value>
+    <value>Saídas do Porto: 6:30 - 7:00 – 7:30 – 8:30 – 16:00 – 17:00 – 18:00 – 19:00
+</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>Saídas de Coimbra: 11:00 - 16:00</value>
@@ -1988,7 +1989,7 @@ Com a Yoyoloop, pode apanhar um transfer premium até Lisboa desde o Porto, Coim
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00</value>
+    <value>Saídas de Lisboa: 6:30 - 7:00 – 7:30 – 8:30 – 16:00 – 17:00 – 18:00 – 19:00</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>Saídas de Coimbra: 15:00</value>
