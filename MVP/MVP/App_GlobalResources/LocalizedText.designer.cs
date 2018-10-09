@@ -1780,7 +1780,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 29.
+        ///   Looks up a localized string similar to 39.
         /// </summary>
         internal static string General_LoopData_Price_Lisboa {
             get {
@@ -1789,7 +1789,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 29.
+        ///   Looks up a localized string similar to 39.
         /// </summary>
         internal static string General_LoopData_Price_Porto {
             get {
