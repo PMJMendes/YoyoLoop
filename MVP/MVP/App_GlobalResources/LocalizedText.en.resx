@@ -397,7 +397,7 @@
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
-    <value>Thank you for choosing Yoyoloop!</value>
+    <value>Thank you for choosing Yoyoloop!&lt;br&gt;If necessary call us at +351 926 475 250&lt;br&gt;</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_TicketCode" xml:space="preserve">
     <value>Ticket number</value>

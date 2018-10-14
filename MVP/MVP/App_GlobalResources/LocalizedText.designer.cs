@@ -871,7 +871,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Obrigado por escolheres a Yoyoloop!.
+        ///   Looks up a localized string similar to Obrigado por escolheres a Yoyoloop!&lt;br&gt;Se necessário ligue-nos para o +351 926 475 250&lt;br&gt;.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_ThankYou {
             get {
