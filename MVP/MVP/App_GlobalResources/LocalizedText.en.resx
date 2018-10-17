@@ -2623,4 +2623,10 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
   </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
+    <value>Cost Center</value>
+  </data>
+  <data name="General_BankTransfer" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
 </root>

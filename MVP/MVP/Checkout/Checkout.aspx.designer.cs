@@ -112,6 +112,15 @@ namespace MVP.Checkout {
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox cbSaveCard;
         
         /// <summary>
+        /// phBankTransfer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phBankTransfer;
+        
+        /// <summary>
         /// upBillingForm control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace MVP.Checkout {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtInvoiceNIF;
+        
+        /// <summary>
+        /// txtInvoiceCostCenter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtInvoiceCostCenter;
         
         /// <summary>
         /// txtInvoiceAddress control.

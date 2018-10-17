@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVP.Models;
+using MVP.Models.Entities;
 
 namespace MVP.Models
 {
@@ -20,8 +21,11 @@ namespace MVP.Models
 
         public string StripeCustomerId { get; set; }
 
+        public Corporate Company { get; set; }
+
         public string BillingName { get; set; }
         public string BillingCompany { get; set; }
+        public string BillingCostCenter { get; set; }
         public string BillingNIF { get; set; }
         public string BillingAddress { get; set; }
         public string BillingZIP { get; set; }
@@ -37,6 +41,7 @@ namespace MVP.Models
             // Add custom user claims here
             userIdentity.AddClaim(new Claim("ContactName", this.ContactName?.ToString() ?? ""));
             userIdentity.AddClaim(new Claim("Email", this.Email.ToString()));
+            userIdentity.AddClaim(new Claim("Company", this.Company?.CompanyName.ToString() ?? ""));
             return userIdentity;
         }
 

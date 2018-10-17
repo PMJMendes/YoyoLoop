@@ -15,11 +15,15 @@ namespace MVP.Checkout
         public string UserEmail { get; set; }
         public string UserReferredById { get; set; }
         public string UserMGMCode { get; set; }
+        public bool Corporate { get; set; }
+        public Guid CompanyId { get; set; }
+        public string CompanyName { get; set; }
         public BookingStatus BookingStatus { get; set; }
 
         public string BillingName { get; set; }
         public string BillingCompany { get; set; }
         public string BillingNIF { get; set; }
+        public string BillingCostCenter { get; set; }
         public string BillingAdress { get; set; }
         public string BillingZIP { get; set; }
         public string BillingCity { get; set; }
@@ -57,9 +61,14 @@ namespace MVP.Checkout
             public string Name { get; set; }
             public string Company { get; set; }
             public string NIF { get; set; }
+            public string CostCenter { get; set; }
             public string Address { get; set; }
             public string ZIP { get; set; }
             public string City { get; set; }
+
+            public string CompanyId { get; set; }
+            public string CompanyName { get; set; }
+            public string PayMethod { get; set; }
         }
     }
 }

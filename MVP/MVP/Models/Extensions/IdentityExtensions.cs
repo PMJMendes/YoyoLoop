@@ -26,5 +26,11 @@ namespace MVP.Models.Extensions
             var claim = ((ClaimsIdentity)identity).FindFirst("Email");
             return (claim != null) ? claim.Value : string.Empty;
         }
+
+        public static string GetUserCompany(this IIdentity identity)
+        {
+            var claim = ((ClaimsIdentity)identity).FindFirst("Company");
+            return (claim != null) ? claim.Value : string.Empty;
+        }
     }
 }

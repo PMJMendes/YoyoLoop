@@ -19,9 +19,12 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort>44370</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -1046,10 +1049,15 @@
     <Compile Include="Migrations\201809131645357_Departure-Active.Designer.cs">
       <DependentUpon>201809131645357_Departure-Active.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810171117050_Corporate.cs" />
+    <Compile Include="Migrations\201810171117050_Corporate.Designer.cs">
+      <DependentUpon>201810171117050_Corporate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
+    <Compile Include="Models\Entities\Corporate.cs" />
     <Compile Include="Models\Entities\Promocode.cs" />
     <Compile Include="Models\Entities\DayType.cs" />
     <Compile Include="Models\Entities\Departure.cs" />
@@ -1376,6 +1384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809131645357_Departure-Active.resx">
       <DependentUpon>201809131645357_Departure-Active.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810171117050_Corporate.resx">
+      <DependentUpon>201810171117050_Corporate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -127,6 +127,7 @@ namespace MVP.Checkout
             txtInvoiceName.Text = pageData.BillingName;
             txtInvoiceCompany.Text = pageData.BillingCompany;
             txtInvoiceNIF.Text = pageData.BillingNIF;
+            txtInvoiceCostCenter.Text = pageData.BillingCostCenter;
             txtInvoiceAddress.Text = pageData.BillingAdress;
             txtInvoiceZIP.Text = pageData.BillingZIP;
             txtInvoiceCity.Text = pageData.BillingCity;
@@ -146,6 +147,20 @@ namespace MVP.Checkout
                 phPayNew.Visible = true;
                 phCardDisplay.Visible = false;
                 phPay.Visible = false;
+                phBankTransfer.Visible = false;
+            }
+            else if (ddlCardMenu.SelectedValue == "bank_transfer")
+            {
+                //RESUME MAINCONTENT UPDATES from CHILD panels while StripeForm is hidden
+                UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
+                masterpanel.UpdateMode = UpdatePanelUpdateMode.Always;
+                masterpanel.ChildrenAsTriggers = true;
+
+                phCardEntry.Visible = false;
+                phPayNew.Visible = false;
+                phCardDisplay.Visible = false;
+                phBankTransfer.Visible = true;
+                phPay.Visible = true;
             }
             else
             {
@@ -158,6 +173,7 @@ namespace MVP.Checkout
                 phPayNew.Visible = false;
                 phCardDisplay.Visible = true;
                 phPay.Visible = true;
+                phBankTransfer.Visible = false;
                 DisplayCard(ddlCardMenu.SelectedValue);
             }
             upCheckoutPaymentForm.Update();
@@ -170,6 +186,10 @@ namespace MVP.Checkout
             ddlCardMenu.DataSource = pageData.StripeCardList;
             ddlCardMenu.DataBind();
             ddlCardMenu.Width = (pageData.StripeCardList.OrderByDescending(l => l.Text.Length).First().Text.Length) * 10;
+            if (pageData.Corporate)
+            {
+                ddlCardMenu.SelectedValue = "bank_transfer";
+            }
             UpdatePaymentSection();
         }
 
@@ -180,10 +200,23 @@ namespace MVP.Checkout
                 Name = txtInvoiceName.Text,
                 Company = txtInvoiceCompany.Text,
                 NIF = txtInvoiceNIF.Text,
+                CostCenter = txtInvoiceCostCenter.Text,
                 Address = txtInvoiceAddress.Text,
                 ZIP = txtInvoiceZIP.Text,
                 City = txtInvoiceCity.Text
             };
+
+            if(ddlCardMenu.SelectedValue == "bank_transfer")
+            {
+                pageData.Invoice.CompanyId = pageData.CompanyId.ToString();
+                pageData.Invoice.CompanyName = pageData.CompanyName;
+                pageData.Invoice.PayMethod = "bank_transfer";
+            }
+            else
+            {
+                pageData.Invoice.PayMethod = "stripe";
+            }
+
             if (cbSaveDetails.Checked)
             {
                 service.SaveBillingDetails(pageData);
