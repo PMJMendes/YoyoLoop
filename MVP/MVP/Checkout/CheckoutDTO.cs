@@ -16,6 +16,8 @@ namespace MVP.Checkout
         public string UserReferredById { get; set; }
         public string UserMGMCode { get; set; }
         public bool Corporate { get; set; }
+        public Guid CompanyId { get; set; }
+        public string CompanyName { get; set; }
         public BookingStatus BookingStatus { get; set; }
 
         public string BillingName { get; set; }
@@ -63,6 +65,10 @@ namespace MVP.Checkout
             public string Address { get; set; }
             public string ZIP { get; set; }
             public string City { get; set; }
+
+            public string CompanyId { get; set; }
+            public string CompanyName { get; set; }
+            public string PayMethod { get; set; }
         }
     }
 }

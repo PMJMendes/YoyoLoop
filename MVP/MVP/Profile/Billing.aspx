@@ -108,6 +108,10 @@
                                     <button id="btnAddCard" OnClick="createToken(event)" class="mb-5 profile__btn" tabindex="-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_PaymentMethodsForm_btnAddCard_Text%>"/></button>
                                 </asp:PlaceHolder>
 
+                                <asp:PlaceHolder runat="server" ID="phBankTransfer" Visible="false">
+                                    <div class="mt-5 mb-5"></div>
+                                </asp:PlaceHolder>
+
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>

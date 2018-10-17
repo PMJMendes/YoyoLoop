@@ -60,6 +60,16 @@ namespace MVP.Services
         public ProfileDTO GetStripeCustomerData(ProfileDTO state)
         {
             state.StripeCardList = new List<ListItem>();
+
+            if(state.Corporate)
+            {
+                state.StripeCardList.Add(new ListItem
+                {
+                    Value = "bank_transfer",
+                    Text = Resources.LocalizedText.General_BankTransfer
+                });
+            }
+
             if (!string.IsNullOrEmpty(state.StripeCustomerId))
             {
                 state.StripeCustomerDefaultSourceId = stripeCustomerService.Get(state.StripeCustomerId).DefaultSourceId;

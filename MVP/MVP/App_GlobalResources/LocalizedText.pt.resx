@@ -2626,4 +2626,7 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
     <value>Centro de Custos</value>
   </data>
+  <data name="General_BankTransfer" xml:space="preserve">
+    <value>Transferência Bancária</value>
+  </data>
 </root>

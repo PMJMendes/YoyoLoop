@@ -105,6 +105,10 @@ namespace MVP.Profile
             ddlCardMenu.DataSource = pageData.StripeCardList;
             ddlCardMenu.DataBind();
             ddlCardMenu.Width = (pageData.StripeCardList.OrderByDescending(l => l.Text.Length).First().Text.Length) * 10;
+            if(pageData.Corporate)
+            {
+                ddlCardMenu.SelectedValue = "bank_transfer";
+            }
             UpdatePaymentSection();
         }
 
@@ -119,6 +123,18 @@ namespace MVP.Profile
 
                 phCardEntry.Visible = true;
                 phCardDisplay.Visible = false;
+                phBankTransfer.Visible = false;
+            }
+            else if (ddlCardMenu.SelectedValue == "bank_transfer")
+            {
+                //RESUME MAINCONTENT UPDATES from CHILD panels while StripeForm is hidden
+                UpdatePanel masterpanel = Master.FindControl("upMainContent") as UpdatePanel;
+                masterpanel.UpdateMode = UpdatePanelUpdateMode.Always;
+                masterpanel.ChildrenAsTriggers = true;
+
+                phCardEntry.Visible = false;
+                phCardDisplay.Visible = false;
+                phBankTransfer.Visible = true;
             }
             else
             {
@@ -129,6 +145,7 @@ namespace MVP.Profile
 
                 phCardEntry.Visible = false;
                 phCardDisplay.Visible = true;
+                phBankTransfer.Visible = false;
                 DisplayCard(ddlCardMenu.SelectedValue);
             }
             upPaymentMethods.Update();

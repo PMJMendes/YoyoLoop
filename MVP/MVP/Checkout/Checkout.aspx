@@ -66,6 +66,10 @@
                                         </div>
                                     </asp:PlaceHolder>
 
+                                    <asp:PlaceHolder runat="server" ID="phBankTransfer" Visible="false">
+                                        <div class="mt-5 mb-5"></div>
+                                    </asp:PlaceHolder>
+
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 

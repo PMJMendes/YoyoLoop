@@ -1708,6 +1708,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Transferência Bancária.
+        /// </summary>
+        internal static string General_BankTransfer {
+            get {
+                return ResourceManager.GetString("General_BankTransfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 7.
         /// </summary>
         internal static string General_LoopData_Capacity_Coimbra {
