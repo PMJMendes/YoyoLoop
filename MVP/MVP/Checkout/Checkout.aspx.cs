@@ -127,6 +127,7 @@ namespace MVP.Checkout
             txtInvoiceName.Text = pageData.BillingName;
             txtInvoiceCompany.Text = pageData.BillingCompany;
             txtInvoiceNIF.Text = pageData.BillingNIF;
+            txtInvoiceCostCenter.Text = pageData.BillingCostCenter;
             txtInvoiceAddress.Text = pageData.BillingAdress;
             txtInvoiceZIP.Text = pageData.BillingZIP;
             txtInvoiceCity.Text = pageData.BillingCity;
@@ -180,6 +181,7 @@ namespace MVP.Checkout
                 Name = txtInvoiceName.Text,
                 Company = txtInvoiceCompany.Text,
                 NIF = txtInvoiceNIF.Text,
+                CostCenter = txtInvoiceCostCenter.Text,
                 Address = txtInvoiceAddress.Text,
                 ZIP = txtInvoiceZIP.Text,
                 City = txtInvoiceCity.Text

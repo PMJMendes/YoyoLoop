@@ -87,9 +87,17 @@
                                         <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceCompany_Label%>"/></div>
                                         <asp:TextBox runat="server" ID="txtInvoiceCompany" AutoPostback="false" CssClass="checkout__input checkout__input--billing-name" type="text" name="company" autocomplete="on" Tabindex="1" />
 
-                                        <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceNIF_Label%>"/></div>
-                                        <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="false" CssClass="checkout__input checkout__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
-                
+                                        <div class="row ml-0">
+                                            <div class="row ml-0 mr-5 checkout__input--nif">
+                                                <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceNIF_Label%>"/></div>
+                                                <asp:TextBox runat="server" ID="txtInvoiceNIF" AutoPostback="false" CssClass="checkout__input checkout__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
+                                            </div>
+                                            <div class="row ml-0 checkout__input--billing-name <%= pageData.Corporate ? "" : "hide" %>">
+                                                <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingCostCenter_Label%>"/></div>
+                                                <asp:TextBox runat="server" ID="txtInvoiceCostCenter" AutoPostback="false" CssClass="profile__input checkout__input--billing-name" type="text" name="CostCenter" autocomplete="off" Tabindex="0" />
+                                            </div>
+                                        </div>
+
                                         <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceAddress_Label%>"/></div>
                                         <asp:TextBox runat="server" ID="txtInvoiceAddress" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="address" autocomplete="on" Tabindex="0" />
 

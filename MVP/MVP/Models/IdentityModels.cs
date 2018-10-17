@@ -41,7 +41,7 @@ namespace MVP.Models
             // Add custom user claims here
             userIdentity.AddClaim(new Claim("ContactName", this.ContactName?.ToString() ?? ""));
             userIdentity.AddClaim(new Claim("Email", this.Email.ToString()));
-            userIdentity.AddClaim(new Claim("Company", this.Company?.CompanyName.ToString()));
+            userIdentity.AddClaim(new Claim("Company", this.Company?.CompanyName.ToString() ?? ""));
             return userIdentity;
         }
 

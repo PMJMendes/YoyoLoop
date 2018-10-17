@@ -37,7 +37,9 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid);
+                var user = model.Users.Include(u => u.ReferredBy)
+                                      .Include(c => c.Company)
+                                      .FirstOrDefault(u => u.Id == userid);
                 var result = new CheckoutDTO
                 {
                     UserEmail = user.Email,
@@ -45,10 +47,12 @@ namespace MVP.Services
                     StripeCustomerId = user.StripeCustomerId,
                     UserReferredById = user.ReferredBy?.Id,
                     UserMGMCode = user.MGMCode,
+                    Corporate = user.Company?.Active ?? false,
 
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
+                    BillingCostCenter = user.BillingCostCenter,
                     BillingAdress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
                     BillingCity = user.BillingCity,
@@ -659,6 +663,7 @@ namespace MVP.Services
                 user.BillingName = state.Invoice.Name;
                 user.BillingCompany = state.Invoice.Company;
                 user.BillingNIF = state.Invoice.NIF;
+                user.BillingCostCenter = state.Invoice.CostCenter;
                 user.BillingAddress = state.Invoice.Address;
                 user.BillingZIP = state.Invoice.ZIP;
                 user.BillingCity = state.Invoice.City;
@@ -708,6 +713,10 @@ namespace MVP.Services
                 body += "<br>Nome: " + state.Invoice.Name;
                 body += "<br>Empresa: " + state.Invoice.Company;
                 body += "<br>NIF: " + state.Invoice.NIF;
+                if(state.Corporate)
+                {
+                    body += "<br>Centro de Custo: " + state.Invoice.CostCenter;
+                }
                 body += "<br>Morada: " + state.Invoice.Address;
                 body += "<br>Cód. Postal: " + state.Invoice.ZIP;
                 body += "<br>Cidade: " + state.Invoice.City;
