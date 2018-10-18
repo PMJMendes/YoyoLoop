@@ -759,7 +759,14 @@ namespace MVP.Services
                     body += "<br>LISTA DE PASSAGEIROS:";
                     foreach(ListItem item in state.Invoice.Passengers)
                     {
-                        body += "<br>Nome: " + item.Text + " (" + item.Value + ")";
+                        if(!string.IsNullOrEmpty(item.Text))
+                        {
+                            body += "<br>Nome: " + item.Text;
+                            if(!string.IsNullOrEmpty(item.Value))
+                            {
+                                body += " (" + item.Value + ")";
+                            }
+                        }
                     }
                 }
 
