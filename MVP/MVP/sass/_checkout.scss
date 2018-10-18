@@ -187,6 +187,11 @@ $desktop: "(min-width: 1440px)";
             }
         }
 
+        &--passenger {
+            width: 100%;
+            max-width: 275px;
+        }
+
         &--birthday {
             max-width: 190px;
         }

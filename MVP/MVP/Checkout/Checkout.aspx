@@ -102,6 +102,24 @@
                                             </div>
                                         </div>
 
+                                        <!-- Lista de Passageiros -->
+                                        <div class="<%= pageData.Corporate ? "" : "hide" %>">
+                                            <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_PassengerList_Label%>"/></div>
+
+                                            <asp:Repeater runat="server" ID="RepInvoicePassengerList">
+                                                <ItemTemplate>
+                                                    <div class="row ml-0">
+                                                        <div class="row ml-0 mr-5 checkout__input--passenger">
+                                                            <asp:TextBox runat="server" ID="txtInvoicePassengerName" AutoPostback="false" CssClass="checkout__input" type="text" name="name" autocomplete="on" Tabindex="1" placeholder="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceName_Label%>" />
+                                                        </div>
+                                                        <div class="row ml-0 checkout__input--passenger">
+                                                            <asp:TextBox runat="server" ID="txtInvoicePassengerEmail" AutoPostback="false" CssClass="checkout__input" type="text" name="email" autocomplete="on" Tabindex="1" placeholder="Email" />
+                                                        </div>
+                                                    </div>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                        </div>
+
                                         <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceAddress_Label%>"/></div>
                                         <asp:TextBox runat="server" ID="txtInvoiceAddress" AutoPostback="false" CssClass="checkout__input checkout__input--company" type="text" name="address" autocomplete="on" Tabindex="0" />
 

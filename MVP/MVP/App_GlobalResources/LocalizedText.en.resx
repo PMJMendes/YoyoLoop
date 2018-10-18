@@ -2629,4 +2629,7 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="General_BankTransfer" xml:space="preserve">
     <value>Bank Transfer</value>
   </data>
+  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
+    <value>Passenger List</value>
+  </data>
 </root>

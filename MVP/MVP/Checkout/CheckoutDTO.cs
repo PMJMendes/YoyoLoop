@@ -27,6 +27,7 @@ namespace MVP.Checkout
         public string BillingAdress { get; set; }
         public string BillingZIP { get; set; }
         public string BillingCity { get; set; }
+        public List<ListItem> BillingPassengers { get; set; }
 
         public int Seats { get; set; }
         public Fare.FareType FareType { get; set; }
@@ -69,6 +70,8 @@ namespace MVP.Checkout
             public string CompanyId { get; set; }
             public string CompanyName { get; set; }
             public string PayMethod { get; set; }
+
+            public List<ListItem> Passengers { get; set; }
         }
     }
 }

@@ -466,6 +466,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lista de Passageiros.
+        /// </summary>
+        internal static string Checkout_Billing_PassengerList_Label {
+            get {
+                return ResourceManager.GetString("Checkout_Billing_PassengerList_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Morada.
         /// </summary>
         internal static string Checkout_Billing_tbInvoiceAddress_Label {
@@ -3571,7 +3580,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Centro de Custos.
+        ///   Looks up a localized string similar to Centro de Custo.
         /// </summary>
         internal static string Profile_Billing_BillingForm_tbBillingCostCenter_Label {
             get {
