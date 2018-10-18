@@ -2610,4 +2610,7 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="General_BankTransfer" xml:space="preserve">
     <value>Transferência Bancária</value>
   </data>
+  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
+    <value>Lista de Passageiros</value>
+  </data>
 </root>

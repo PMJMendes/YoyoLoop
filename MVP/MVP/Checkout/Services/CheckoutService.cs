@@ -109,6 +109,16 @@ namespace MVP.Services
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
                     state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
                     state.EndAPName = booking.Trip.EndAccessPoint.Name;
+
+                    state.BillingPassengers = new List<ListItem>();
+                    for(int i = 0; i < state.Seats; i++)
+                    {
+                        state.BillingPassengers.Add(new ListItem
+                        {
+                            Text = "",
+                            Value = ""
+                        });
+                    }
                 }
             }
             return state;
@@ -741,6 +751,16 @@ namespace MVP.Services
                     body += "<br>Pagamento por transferência bancária";
                     body += "<br>Empresa: " + state.Invoice.CompanyName + " (" + state.Invoice.CompanyId + ")";
                     body += "<br>Valor a facturar: " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
+                }
+
+                if(state.Corporate)
+                {
+                    body += "<br>";
+                    body += "<br>LISTA DE PASSAGEIROS:";
+                    foreach(ListItem item in state.Invoice.Passengers)
+                    {
+                        body += "<br>Nome: " + item.Text + " (" + item.Value + ")";
+                    }
                 }
 
                 body += "<br>";

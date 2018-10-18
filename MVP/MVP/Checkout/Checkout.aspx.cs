@@ -109,8 +109,8 @@ namespace MVP.Checkout
             if (pageData == null)
             {
                 pageData = service.GetInitialData(User?.Identity.GetUserId());
-                InitializeControls();
                 ProcessQueryString();
+                InitializeControls();
                 Session["checkout.data"] = pageData;
                 UpdateCheckoutPanel();
             }
@@ -128,6 +128,8 @@ namespace MVP.Checkout
             txtInvoiceCompany.Text = pageData.BillingCompany;
             txtInvoiceNIF.Text = pageData.BillingNIF;
             txtInvoiceCostCenter.Text = pageData.BillingCostCenter;
+            RepInvoicePassengerList.DataSource = pageData.BillingPassengers;
+            RepInvoicePassengerList.DataBind();
             txtInvoiceAddress.Text = pageData.BillingAdress;
             txtInvoiceZIP.Text = pageData.BillingZIP;
             txtInvoiceCity.Text = pageData.BillingCity;
@@ -205,6 +207,24 @@ namespace MVP.Checkout
                 ZIP = txtInvoiceZIP.Text,
                 City = txtInvoiceCity.Text
             };
+
+            if(pageData.Corporate)
+            {
+                pageData.Invoice.Passengers = new List<ListItem>();
+                foreach(RepeaterItem item in RepInvoicePassengerList.Items)
+                {
+                    TextBox name = (TextBox)item.FindControl("txtInvoicePassengerName");
+                    TextBox email = (TextBox)item.FindControl("txtInvoicePassengerEmail");
+                    if(name != null && email != null)
+                    {
+                        pageData.Invoice.Passengers.Add(new ListItem
+                        {
+                            Text = name.Text,
+                            Value = email.Text
+                        });
+                    }
+                }
+            }
 
             if(ddlCardMenu.SelectedValue == "bank_transfer")
             {
