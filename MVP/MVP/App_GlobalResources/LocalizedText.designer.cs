@@ -3580,7 +3580,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Centro de Custos.
+        ///   Looks up a localized string similar to Centro de Custo.
         /// </summary>
         internal static string Profile_Billing_BillingForm_tbBillingCostCenter_Label {
             get {

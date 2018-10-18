@@ -753,7 +753,7 @@ namespace MVP.Services
                     body += "<br>Valor a facturar: " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
                 }
 
-                if(state.Corporate)
+                if(state.Corporate && state.Invoice.Passengers.Any(p => !string.IsNullOrEmpty(p.Text)))
                 {
                     body += "<br>";
                     body += "<br>LISTA DE PASSAGEIROS:";
