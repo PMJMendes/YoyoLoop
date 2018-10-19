@@ -29,7 +29,7 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.FirstOrDefault(u => u.Id == userid);
+                var user = model.Users.Include(c => c.Company).FirstOrDefault(u => u.Id == userid);
                 var result = new ProfileDTO
                 {
                     UserId = user.Id,
@@ -40,16 +40,19 @@ namespace MVP.Services
                     //PhoneCountryCode = user.PhoneCountryCode,
                     PhoneNumber = user.PhoneNumber,
                     PhoneNumberConfirmed = user.PhoneNumberConfirmed,
+                    Corporate = user.Company?.Active ?? false,
 
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
+                    BillingCostCenter = user.BillingCostCenter,
                     BillingAddress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
                     BillingCity = user.BillingCity,
 
                     StripeCustomerId = user.StripeCustomerId
                 };
+
                 return result;
             }
         }
@@ -57,6 +60,16 @@ namespace MVP.Services
         public ProfileDTO GetStripeCustomerData(ProfileDTO state)
         {
             state.StripeCardList = new List<ListItem>();
+
+            if(state.Corporate)
+            {
+                state.StripeCardList.Add(new ListItem
+                {
+                    Value = "bank_transfer",
+                    Text = Resources.LocalizedText.General_BankTransfer
+                });
+            }
+
             if (!string.IsNullOrEmpty(state.StripeCustomerId))
             {
                 state.StripeCustomerDefaultSourceId = stripeCustomerService.Get(state.StripeCustomerId).DefaultSourceId;
@@ -265,6 +278,7 @@ namespace MVP.Services
                 user.BillingName = state.BillingName;
                 user.BillingCompany = state.BillingCompany;
                 user.BillingNIF = state.BillingNIF;
+                user.BillingCostCenter = state.BillingCostCenter;
                 user.BillingAddress = state.BillingAddress;
                 user.BillingZIP = state.BillingZIP;
                 user.BillingCity = state.BillingCity;
