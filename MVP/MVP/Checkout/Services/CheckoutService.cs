@@ -37,7 +37,9 @@ namespace MVP.Services
         {
             using (var model = new EntityModel())
             {
-                var user = model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid);
+                var user = model.Users.Include(u => u.ReferredBy)
+                                      .Include(c => c.Company)
+                                      .FirstOrDefault(u => u.Id == userid);
                 var result = new CheckoutDTO
                 {
                     UserEmail = user.Email,
@@ -45,16 +47,25 @@ namespace MVP.Services
                     StripeCustomerId = user.StripeCustomerId,
                     UserReferredById = user.ReferredBy?.Id,
                     UserMGMCode = user.MGMCode,
+                    Corporate = user.Company?.Active ?? false,
 
                     BillingName = user.BillingName,
                     BillingCompany = user.BillingCompany,
                     BillingNIF = user.BillingNIF,
+                    BillingCostCenter = user.BillingCostCenter,
                     BillingAdress = user.BillingAddress,
                     BillingZIP = user.BillingZIP,
                     BillingCity = user.BillingCity,
 
                     Code = string.Empty
                 };
+
+                if (result.Corporate)
+                {
+                    result.CompanyId = user.Company.CorporateId;
+                    result.CompanyName = user.Company.CompanyName;
+                }
+
                 return result;
             }
         }
@@ -98,6 +109,16 @@ namespace MVP.Services
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
                     state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
                     state.EndAPName = booking.Trip.EndAccessPoint.Name;
+
+                    state.BillingPassengers = new List<ListItem>();
+                    for(int i = 0; i < state.Seats; i++)
+                    {
+                        state.BillingPassengers.Add(new ListItem
+                        {
+                            Text = "",
+                            Value = ""
+                        });
+                    }
                 }
             }
             return state;
@@ -189,6 +210,16 @@ namespace MVP.Services
         public CheckoutDTO GetStripeCustomerData(CheckoutDTO state)
         {
             state.StripeCardList = new List<ListItem>();
+
+            if (state.Corporate)
+            {
+                state.StripeCardList.Add(new ListItem
+                {
+                    Value = "bank_transfer",
+                    Text = Resources.LocalizedText.General_BankTransfer
+                });
+            }
+
             if (!string.IsNullOrEmpty(state.StripeCustomerId))
             {
                 state.StripeCustomerDefaultSourceId = stripeCustomerService.Get(state.StripeCustomerId).DefaultSourceId;
@@ -304,36 +335,43 @@ namespace MVP.Services
                     }
                 }
 
-                var myCharge = new StripeChargeCreateOptions
+                if(source != "bank_transfer")
                 {
-                    Amount = (int)(state.Cost * 100),
-                    Currency = "EUR",
-                    Description = state.BookingId.ToString(),
-                    SourceTokenOrExistingSourceId = source
-                };
-
-                if(!string.IsNullOrEmpty(state.StripeCustomerId) && source.Substring(0, 3) != "tok")
-                {
-                    myCharge.CustomerId = state.StripeCustomerId;
-                }
-
-                try
-                {
-                    var stripeCharge = stripeChargeService.Create(myCharge);
-                    if(stripeCharge != null)
+                    var myCharge = new StripeChargeCreateOptions
                     {
-                        state.StripeChargeID = stripeCharge.Id;
+                        Amount = (int)(state.Cost * 100),
+                        Currency = "EUR",
+                        Description = state.BookingId.ToString(),
+                        SourceTokenOrExistingSourceId = source
+                    };
+
+                    if (!string.IsNullOrEmpty(state.StripeCustomerId) && source.Substring(0, 3) != "tok")
+                    {
+                        myCharge.CustomerId = state.StripeCustomerId;
+                    }
+
+                    try
+                    {
+                        var stripeCharge = stripeChargeService.Create(myCharge);
+                        if (stripeCharge != null)
+                        {
+                            state.StripeChargeID = stripeCharge.Id;
+                        }
+                    }
+                    catch (StripeException ex)
+                    {
+                        StripeError stripeError = ex.StripeError;
+                        error = StripeErrorHandler(stripeError.Code);
+                        if (string.IsNullOrEmpty(error))
+                        {
+                            error = Resources.LocalizedText.Stripe_ErrorHandling_ProcessPayment_Generic;
+                        }
+                        return false;
                     }
                 }
-                catch (StripeException ex)
+                else
                 {
-                    StripeError stripeError = ex.StripeError;
-                    error = StripeErrorHandler(stripeError.Code);
-                    if(string.IsNullOrEmpty(error))
-                    {
-                        error = Resources.LocalizedText.Stripe_ErrorHandling_ProcessPayment_Generic;
-                    }
-                    return false;
+                    state.StripeChargeID = state.CompanyId.ToString();
                 }
 
                 // Charge sucessful
@@ -659,6 +697,7 @@ namespace MVP.Services
                 user.BillingName = state.Invoice.Name;
                 user.BillingCompany = state.Invoice.Company;
                 user.BillingNIF = state.Invoice.NIF;
+                user.BillingCostCenter = state.Invoice.CostCenter;
                 user.BillingAddress = state.Invoice.Address;
                 user.BillingZIP = state.Invoice.ZIP;
                 user.BillingCity = state.Invoice.City;
@@ -701,13 +740,45 @@ namespace MVP.Services
                     body += "<br>MemberGetMember Referral: Sim";
                     body += "<br>MemberGetMember ReferralCode: " + state.Code;
                 }
-                body += "<br>Stripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
-                body += "<br>Valor pago: " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
+
+                if(state.Invoice.PayMethod == "stripe")
+                {
+                    body += "<br>Stripe link: " + WebConfigurationManager.AppSettings["StripePaymentsURL"] + state.StripeChargeID;
+                    body += "<br>Valor pago: " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
+                }
+                else if(state.Invoice.PayMethod == "bank_transfer")
+                {
+                    body += "<br>Pagamento por transferência bancária";
+                    body += "<br>Empresa: " + state.Invoice.CompanyName + " (" + state.Invoice.CompanyId + ")";
+                    body += "<br>Valor a facturar: " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
+                }
+
+                if(state.Corporate && state.Invoice.Passengers.Any(p => !string.IsNullOrEmpty(p.Text)))
+                {
+                    body += "<br>";
+                    body += "<br>LISTA DE PASSAGEIROS:";
+                    foreach(ListItem item in state.Invoice.Passengers)
+                    {
+                        if(!string.IsNullOrEmpty(item.Text))
+                        {
+                            body += "<br>Nome: " + item.Text;
+                            if(!string.IsNullOrEmpty(item.Value))
+                            {
+                                body += " (" + item.Value + ")";
+                            }
+                        }
+                    }
+                }
+
                 body += "<br>";
                 body += "<br>DADOS DE FACTURAÇÃO:";
                 body += "<br>Nome: " + state.Invoice.Name;
                 body += "<br>Empresa: " + state.Invoice.Company;
                 body += "<br>NIF: " + state.Invoice.NIF;
+                if(state.Corporate)
+                {
+                    body += "<br>Centro de Custo: " + state.Invoice.CostCenter;
+                }
                 body += "<br>Morada: " + state.Invoice.Address;
                 body += "<br>Cód. Postal: " + state.Invoice.ZIP;
                 body += "<br>Cidade: " + state.Invoice.City;

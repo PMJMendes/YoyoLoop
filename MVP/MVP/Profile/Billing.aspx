@@ -32,12 +32,21 @@
                                     <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingCompany_Label%>"/></div>
                                     <asp:TextBox runat="server" ID="txtBillingCompany" AutoPostback="false" CssClass="profile__input profile__input--company" type="text" name="company" autocomplete="on" Tabindex="0" />
 
-                                    <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingNIF_Label%>"/></div>
-                                    <asp:TextBox runat="server" ID="txtBillingNIF" AutoPostback="false" CssClass="profile__input profile__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
-                                    <div class="profile__input--validator">
-                                        <asp:RequiredFieldValidator runat="server" ValidationGroup="BillingDetails" ControlToValidate="txtBillingNIF" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage%>" />
-                                        <asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="BillingDetails" ControlToValidate="txtBillingNIF" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage%>"/>
+                                    <div class="row ml-0">
+                                        <div class="row ml-0 mr-5 profile__input--nif">
+                                            <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingNIF_Label%>"/></div>
+                                            <asp:TextBox runat="server" ID="txtBillingNIF" AutoPostback="false" CssClass="profile__input profile__input--nif" type="text" name="NIF" autocomplete="on" Tabindex="0" placeholder="000 000 000" />
+                                            <div class="profile__input--validator">
+                                                <asp:RequiredFieldValidator runat="server" ValidationGroup="BillingDetails" ControlToValidate="txtBillingNIF" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingNIF_Validator_ErrorMessage%>" />
+                                                <asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="BillingDetails" ControlToValidate="txtBillingNIF" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingNIF_NumberValidator_ErrorMessage%>"/>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-0 profile__input--company <%= pageData.Corporate ? "" : "hide" %>">
+                                            <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingCostCenter_Label%>"/></div>
+                                            <asp:TextBox runat="server" ID="txtBillingCostCenter" AutoPostback="false" CssClass="profile__input profile__input--company" type="text" name="CostCenter" autocomplete="off" Tabindex="0" />
+                                        </div>
                                     </div>
+
                                     <div class="profile__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_BillingForm_tbBillingAddress_Label%>"/></div>
                                     <asp:TextBox runat="server" ID="txtBillingAddress" AutoPostback="false" CssClass="profile__input profile__input--company" type="text" name="address" autocomplete="on" Tabindex="0" />
                                     <div class="profile__input--validator">
@@ -97,6 +106,10 @@
                                     <iframe runat="server" name="ifPayForm" src="/Checkout/Payform.aspx" scrolling="no" style="height:160px;width:100%;border:none" />
                                     <div class="mt-4 mb-5 profile__separator"></div>
                                     <button id="btnAddCard" OnClick="createToken(event)" class="mb-5 profile__btn" tabindex="-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Profile_Billing_PaymentMethodsForm_btnAddCard_Text%>"/></button>
+                                </asp:PlaceHolder>
+
+                                <asp:PlaceHolder runat="server" ID="phBankTransfer" Visible="false">
+                                    <div class="mt-5 mb-5"></div>
                                 </asp:PlaceHolder>
 
                             </ContentTemplate>

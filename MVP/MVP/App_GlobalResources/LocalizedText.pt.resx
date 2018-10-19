@@ -2623,4 +2623,13 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento.</value>
   </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
+    <value>Centro de Custo</value>
+  </data>
+  <data name="General_BankTransfer" xml:space="preserve">
+    <value>Transferência Bancária</value>
+  </data>
+  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
+    <value>Lista de Passageiros</value>
+  </data>
 </root>
