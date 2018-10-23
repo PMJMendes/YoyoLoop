@@ -50,7 +50,7 @@ namespace MVP.Calendar
         protected void Page_Load(object sender, EventArgs e)
         {
             InitData();
-            service.CheckPending();
+            service.CheckPending(User?.Identity.IsAuthenticated == true ? User.Identity.GetUserId() : string.Empty);
         }
 
         protected void UserSignIn(object sender, EventArgs e)
