@@ -355,14 +355,14 @@ namespace MVP.Services
             }
         }
 
-        public void CheckPending()
+        public void CheckPending(string user_id)
         {
             using (var model = new EntityModel())
             {
                 TimeSpan timeout = model.Settings.Select(s => s.BookTimeout).First();
                 foreach (Booking b in model.Booking.Where(b => b.Status == BookingStatus.PENDING))
                 {
-                    if(DateTime.Now - b.CreationTime > timeout)
+                    if(DateTime.Now - b.CreationTime > timeout || b.UserId == user_id)
                     {
                         UpdateBooking(b.BookingId, BookingStatus.CANCELLED);
                     }
