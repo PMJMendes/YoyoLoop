@@ -153,7 +153,7 @@ namespace MVP.Controls
         {
             OnPromoChanged(new PromoEnteredEventArgs
             {
-                Promocode = tbPromo.Text.ToUpper()
+                Promocode = tbPromo.Text.ToUpper().Trim()
             });
         }
 
