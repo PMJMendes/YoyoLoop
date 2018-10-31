@@ -257,6 +257,9 @@
   <data name="Checkout_Billing_cbSaveDetails_Label" xml:space="preserve">
     <value>Guardar detalhes de facturação</value>
   </data>
+  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
+    <value>Lista de Passageiros</value>
+  </data>
   <data name="Checkout_Billing_tbInvoiceAddress_Label" xml:space="preserve">
     <value>Morada</value>
   </data>
@@ -681,6 +684,9 @@
   </data>
   <data name="DownloadTicket_ErrorMessage" xml:space="preserve">
     <value>Não foi possivel encontrar o teu bilhete.</value>
+  </data>
+  <data name="General_BankTransfer" xml:space="preserve">
+    <value>Transferência Bancária</value>
   </data>
   <data name="General_LoopData_Capacity_Coimbra" xml:space="preserve">
     <value>7</value>
@@ -1315,6 +1321,9 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
   <data name="Profile_Billing_BillingForm_tbBillingCompany_Label" xml:space="preserve">
     <value>Nome da Empresa</value>
   </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
+    <value>Centro de Custo</value>
+  </data>
   <data name="Profile_Billing_BillingForm_tbBillingName_Label" xml:space="preserve">
     <value>Nome</value>
   </data>
@@ -1877,7 +1886,7 @@ Foi por isso que criámos um serviço de transfer ao preço do comboio, alternat
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>Saídas do Porto 6:30 - 7:00 – 7:30 – 8:30 – 16:00 – 17:00 – 18:00 – 19:00</value>
+    <value>Saídas do Porto 6:30 - 7:00 – 7:30 – 8:30 – 14:00 – 17:00 – 18:30 – 21:00</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>Saídas de Coimbra 11:00 - 16:00</value>
@@ -1991,7 +2000,7 @@ Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coi
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>Saídas de Lisboa: 6:30 - 7:00 – 7:30 – 8:30 – 16:00 – 17:00 – 18:00 – 19:00</value>
+    <value>Saídas de Lisboa: 6:30 - 7:00 – 7:30 – 8:30 – 14:00 – 17:00 – 18:30 – 21:00</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>Saídas de Coimbra: 15:00</value>
@@ -2603,14 +2612,5 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
-  </data>
-  <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
-    <value>Centro de Custo</value>
-  </data>
-  <data name="General_BankTransfer" xml:space="preserve">
-    <value>Transferência Bancária</value>
-  </data>
-  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
-    <value>Lista de Passageiros</value>
   </data>
 </root>

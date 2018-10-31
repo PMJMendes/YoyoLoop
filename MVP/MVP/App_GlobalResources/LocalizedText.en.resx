@@ -257,6 +257,9 @@
   <data name="Checkout_Billing_cbSaveDetails_Label" xml:space="preserve">
     <value>Save billing details</value>
   </data>
+  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
+    <value>Passenger List</value>
+  </data>
   <data name="Checkout_Billing_tbInvoiceAddress_Label" xml:space="preserve">
     <value>Address</value>
   </data>
@@ -681,6 +684,9 @@
   </data>
   <data name="DownloadTicket_ErrorMessage" xml:space="preserve">
     <value>We couldn't find your ticket.</value>
+  </data>
+  <data name="General_BankTransfer" xml:space="preserve">
+    <value>Bank Transfer</value>
   </data>
   <data name="General_LoopData_Capacity_Coimbra" xml:space="preserve">
     <value>5</value>
@@ -1313,6 +1319,9 @@ Check how many €1 trips you have yet to enjoy.</value>
   <data name="Profile_Billing_BillingForm_tbBillingCompany_Label" xml:space="preserve">
     <value>Company Name</value>
   </data>
+  <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
+    <value>Cost Center</value>
+  </data>
   <data name="Profile_Billing_BillingForm_tbBillingName_Label" xml:space="preserve">
     <value>Name</value>
   </data>
@@ -1875,7 +1884,7 @@ It is precisely why we created a premium transfer service for the price of a tra
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>From Porto: 6:30am - 7:00am - 7:30am - 8:00am - 8:30am - 4:00pm - 5:00pm - 6:00pm - 7:00pm</value>
+    <value>From Porto: 6:30am - 7:00am - 7:30am - 8:00am - 8:30am - 2:00pm - 5:00pm - 6:30pm - 9:00pm</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>From Coimbra: 11am - 4pm</value>
@@ -1988,7 +1997,7 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>From Lisbon: 6:30am - 7:00am – 7:30am – 8:30am – 16:00pm – 17:00pm – 18:00pm – 19:00pm
+    <value>From Lisbon: 6:30am - 7:00am – 7:30am – 8:30am – 2:00pm – 5:00pm – 6:30pm – 9:00pm
 </value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
@@ -2622,14 +2631,5 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
-  </data>
-  <data name="Profile_Billing_BillingForm_tbBillingCostCenter_Label" xml:space="preserve">
-    <value>Cost Center</value>
-  </data>
-  <data name="General_BankTransfer" xml:space="preserve">
-    <value>Bank Transfer</value>
-  </data>
-  <data name="Checkout_Billing_PassengerList_Label" xml:space="preserve">
-    <value>Passenger List</value>
   </data>
 </root>
