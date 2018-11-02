@@ -332,7 +332,7 @@ namespace MVP.Checkout
 
         protected void tbPromo_TextChanged(object sender, EventArgs e)
         {
-            pageData.Promocode = tbPromo.Text.ToUpper();
+            pageData.Promocode = tbPromo.Text.ToUpper().Trim();
             pageData = service.CheckPromo(pageData);
             UpdateCheckoutPanel();
             if (pageData.Promocode == string.Empty && pageData.Code == string.Empty)
