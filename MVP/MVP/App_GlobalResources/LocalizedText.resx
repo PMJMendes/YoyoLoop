@@ -740,7 +740,7 @@
     <value>terminado em</value>
   </data>
   <data name="General_StripeCard_Card_New" xml:space="preserve">
-    <value>Novo cartão de crédito</value>
+    <value>Novo cartão de crédito ou de débito</value>
   </data>
   <data name="Help_CantFind" xml:space="preserve">
     <value>Não encontras a tua pergunta?</value>

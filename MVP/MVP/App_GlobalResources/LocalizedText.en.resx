@@ -740,7 +740,7 @@
     <value>expired in</value>
   </data>
   <data name="General_StripeCard_Card_New" xml:space="preserve">
-    <value>New credit card</value>
+    <value>New credit or debit card</value>
   </data>
   <data name="Help_CantFind" xml:space="preserve">
     <value>Can't find your question?</value>

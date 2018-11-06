@@ -1879,7 +1879,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Novo cartão de crédito.
+        ///   Looks up a localized string similar to Novo cartão de crédito ou de débito.
         /// </summary>
         internal static string General_StripeCard_Card_New {
             get {
