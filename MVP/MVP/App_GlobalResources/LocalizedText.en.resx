@@ -1098,7 +1098,7 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Book</value>
   </data>
   <data name="HomePage_WhereToCard_When_Everyday" xml:space="preserve">
-    <value>Every day</value>
+    <value>Every working day</value>
   </data>
   <data name="HomePage_WhereToGo" xml:space="preserve">
     <value>Where do you want to go?</value>
@@ -1884,10 +1884,10 @@ It is precisely why we created a premium transfer service for the price of a tra
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>From Porto: 6:30am - 7:00am - 7:30am - 8:00am - 8:30am - 2:00pm - 5:00pm - 6:30pm - 9:00pm</value>
+    <value>From Porto: 6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
-    <value>From Coimbra: 11am - 4pm</value>
+    <value>From Coimbra: 2:00pm</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime" xml:space="preserve">
     <value>Yoyoloop drives you from Porto to Lisbon in just 2 hours and 30 minutes.</value>
@@ -1997,8 +1997,7 @@ With Yoyoloop, you can take a premium transfer to Lisbon from Porto, Coimbra or 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>From Lisbon: 6:30am - 7:00am – 7:30am – 8:30am – 2:00pm – 5:00pm – 6:30pm – 9:00pm
-</value>
+    <value>From Lisbon: 6:00am - 7:00am – 5:00pm – 6:30pm</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>From Coimbra: 3pm</value>
@@ -2299,13 +2298,13 @@ Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times1" xml:space="preserve">
-    <value>From Lisbon: 7:30am - 8:30am - 6pm - 7pm</value>
+    <value>From Lisbon: 6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times2" xml:space="preserve">
-    <value>From Porto: 7:30am - 8:30am - 6pm - 7pm</value>
+    <value>From Porto: 6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
-    <value>one-way trip from €36</value>
+    <value>one-way trip from €39</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
     <value>Yoyoloop drives you from Lisbon to Porto in just 2 hours and 30 minutes.</value>
@@ -2395,7 +2394,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times" xml:space="preserve">
-    <value>8am - 2pm</value>
+    <value>2:00 PM</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa" xml:space="preserve">
     <value>From Lisbon</value>
@@ -2404,7 +2403,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a 
     <value>Every day</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times" xml:space="preserve">
-    <value>11am - 4pm</value>
+    <value>12:00 PM</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria" xml:space="preserve">
     <value>- Praça da República&lt;br /&gt;</value>
@@ -2419,7 +2418,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times" xml:space="preserve">
-    <value>3pm</value>
+    <value>2:00pm</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa" xml:space="preserve">
     <value>From Lisbon</value>
@@ -2443,7 +2442,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times" xml:space="preserve">
-    <value>7:30am - 8:30am - 6pm - 7pm</value>
+    <value>6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto" xml:space="preserve">
     <value>From Porto</value>
@@ -2452,7 +2451,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Porto for the price of a 
     <value>Monday to Friday</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times" xml:space="preserve">
-    <value>7:30am - 8:30am - 6pm - 7pm</value>
+    <value>6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Loops_MainTitle" xml:space="preserve">
     <value>Revolutionising intercity mobility, &lt;br&gt;one loop at a time</value>
