@@ -709,7 +709,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convida amigos e viaja por apenas 1€.
+        ///   Looks up a localized string similar to Convida amigos e ganha vouchers de 20€ por cada amigo.
         /// </summary>
         internal static string Confirm_Invite_Title {
             get {
@@ -853,7 +853,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convida amigos e viaja por apenas 1€.
+        ///   Looks up a localized string similar to Convida amigos e ganha vouchers de 20€.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_Invite {
             get {
@@ -2042,7 +2042,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como posso reservar as viagens a 1€ e os códigos promocionais?.
+        ///   Looks up a localized string similar to Como posso reservar as viagens usando os vouchers de 20€ e os códigos promocionais?.
         /// </summary>
         internal static string Help_Topic_DiscountAndPromo_Question_PromoAndMGM {
             get {
@@ -2051,10 +2051,9 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Para usufruir das viagens a 1€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todas as viagens a 1€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem para qualquer destino a 1€.&lt;br&gt;
+        ///   Looks up a localized string similar to Para usufruir dos vouchers de 20€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todos os vouchers de 20€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem entre Lisboa e Porto com um desconto de 20€. Para os restantes destinos o voucher é de 10€.&lt;br&gt;
         ///&lt;br&gt;
-        ///Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a tua viagem. Cola aqui o código, clica em “Reservar” e já está!
-        ///.
+        ///Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a t [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer {
             get {
@@ -2099,7 +2098,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da Yoyoloop..
+        ///   Looks up a localized string similar to Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham um voucher de 20€ para viajar com a Yoyoloop entre Lisboa e o Porto. Para os restantes destinos os vouchers são de 10€..
         /// </summary>
         internal static string Help_Topic_Invite_Question_FriendsBenefits_Answer {
             get {
@@ -2135,7 +2134,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Podes convidar todos os amigos que quiseres! Quantos mais amigos convidares, mais viagens a 1€ ganhas assim que eles viajarem pela primeira vez..
+        ///   Looks up a localized string similar to Podes convidar todos os amigos que quiseres! Quantos mais amigos convidares, mais vouchers de 20€ ganhas assim que eles viajarem pela primeira vez..
         /// </summary>
         internal static string Help_Topic_Invite_Question_HowManyFriends_Answer {
             get {
@@ -2153,7 +2152,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!.
+        ///   Looks up a localized string similar to Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, ganhas um voucher de 20€ para usar numa viagem entre Lisboa e o Porto!.
         /// </summary>
         internal static string Help_Topic_Invite_Question_MyBenefits_Answer {
             get {
@@ -2581,7 +2580,7 @@ namespace Resources {
         ///Verificar a tua conta corrente e o crédito atual;&lt;br&gt;
         ///Ver viagens futuras e viagens anteriores;&lt;br&gt;
         ///Convidar amigos para a Yoyoloop;&lt;br&gt;
-        ///Ver quantas viagens a €1 tens disponível para usufruir..
+        ///Ver quantos vouchers de 20€ tens disponível para usufruir..
         /// </summary>
         internal static string Help_Topic_UserDashboard_Question_WhatCanIDo_Answer {
             get {
@@ -3427,7 +3426,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!.
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e ganha vouchers de 20€!.
         /// </summary>
         internal static string MyTrips_Invite_Code_Title {
             get {
@@ -3436,7 +3435,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Como viajar por 1€ para qualquer destino.
+        ///   Looks up a localized string similar to Como ganhar vouchers de 20€ para viajar entre Lisboa e Porto.
         /// </summary>
         internal static string MyTrips_Invite_How {
             get {
@@ -3445,7 +3444,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 1€..
+        ///   Looks up a localized string similar to Os teus amigos viajam entre Lisboa e o Porto com desconto de 20€..
         /// </summary>
         internal static string MyTrips_Invite_OfferTrips_Description {
             get {
@@ -3454,7 +3453,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oferece viagens.
+        ///   Looks up a localized string similar to Oferece vouchers de 20€.
         /// </summary>
         internal static string MyTrips_Invite_OfferTrips_Title {
             get {
@@ -3481,7 +3480,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Viaja por 1€!.
+        ///   Looks up a localized string similar to Aproveita 20€ de desconto!.
         /// </summary>
         internal static string MyTrips_Invite_Travel_Title {
             get {
@@ -3490,7 +3489,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        ///   Looks up a localized string similar to Recebe um voucher de 20€ para viajar entre Lisboa e Porto por cada amigo que utilizar a Yoyoloop pela primeira vez.
         /// </summary>
         internal static string MyTrips_Invite_Travel_Title_Description {
             get {
@@ -3760,7 +3759,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convida os teus amigos e viaja por apenas 1€.
+        ///   Looks up a localized string similar to Convida os teus amigos e vouchers de 20€.
         /// </summary>
         internal static string Profile_Invite_MainTitle {
             get {
@@ -3778,7 +3777,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to viagens de 1€ para aproveitar.
+        ///   Looks up a localized string similar to vouchers de 20€ para aproveitar.
         /// </summary>
         internal static string Profile_Invite_MGMTrips2 {
             get {
@@ -3877,7 +3876,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to e viaja a 1€..
+        ///   Looks up a localized string similar to e ganha vouchers de 20€..
         /// </summary>
         internal static string Profile_Invite_Promoshare_ShareMessage3 {
             get {
@@ -3886,7 +3885,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!.
+        ///   Looks up a localized string similar to Partilha o teu código promocional com todos os teus amigos e ganha vouchers de 20€!.
         /// </summary>
         internal static string Profile_Invite_Promoshare_Title {
             get {
@@ -3904,7 +3903,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Os teus amigos viajam para qualquer destino por apenas 1€.
+        ///   Looks up a localized string similar to Os teus amigos viajam entre Lisboa e Porto tendo 20€ de desconto.
         /// </summary>
         internal static string Profile_Invite_Why_Offer_Description {
             get {
@@ -3913,7 +3912,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oferece viagens.
+        ///   Looks up a localized string similar to Oferece vouchers de 20€.
         /// </summary>
         internal static string Profile_Invite_Why_Offer_Title {
             get {
@@ -3940,7 +3939,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez.
+        ///   Looks up a localized string similar to Recebe um voucher de 20€ para viajar entre Lisboa e Porto por cada amigo que utilizar a Yoyoloop pela primeira vez.
         /// </summary>
         internal static string Profile_Invite_Why_Travel_Description {
             get {
@@ -3949,7 +3948,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Viaja por 1€!.
+        ///   Looks up a localized string similar to Ganha 20€!.
         /// </summary>
         internal static string Profile_Invite_Why_Travel_Title {
             get {
@@ -5980,7 +5979,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
+        ///   Looks up a localized string similar to 4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha vouchers de 20€ ilimitados. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!.
         /// </summary>
         internal static string StaticPages_HowTo_StepFour {
             get {

@@ -339,7 +339,7 @@
     <value>Reserva o teu lugar num transfer de sete lugares conduzido por um motorista profissional e &lt;br&gt; aproveita uma viagem sem paragens, com wifi a bordo e a preço de comboio.</value>
   </data>
   <data name="Confirm_Invite_Title" xml:space="preserve">
-    <value>Convida amigos e viaja por apenas 1€</value>
+    <value>Convida amigos e ganha vouchers de 20€ por cada amigo</value>
   </data>
   <data name="Confirm_InvoiceSend" xml:space="preserve">
     <value>Vamos enviar a tua fatura para</value>
@@ -388,7 +388,7 @@
     <value>Preço Final</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
-    <value>Convida amigos e viaja por apenas 1€</value>
+    <value>Convida amigos e ganha vouchers de 20€</value>
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
@@ -795,10 +795,10 @@ Para mais informações, contacte-nos por favor em empresas@Yoyoloop.com.</value
     <value>Descontos e promoções</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM" xml:space="preserve">
-    <value>Como posso reservar as viagens a 1€ e os códigos promocionais?</value>
+    <value>Como posso reservar as viagens usando os vouchers de 20€ e os códigos promocionais?</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer" xml:space="preserve">
-    <value>Para usufruir das viagens a 1€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todas as viagens a 1€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem para qualquer destino a 1€.&lt;br&gt;
+    <value>Para usufruir dos vouchers de 20€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todos os vouchers de 20€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem entre Lisboa e Porto com um desconto de 20€. Para os restantes destinos o voucher é de 10€.&lt;br&gt;
 &lt;br&gt;
 Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a tua viagem. Cola aqui o código, clica em “Reservar” e já está!
 </value>
@@ -816,7 +816,7 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>O que ganham os meus amigos por viajar com o meu código promocional?</value>
   </data>
   <data name="Help_Topic_Invite_Question_FriendsBenefits_Answer" xml:space="preserve">
-    <value>Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham uma viagem a 1€ para qualquer destino da Yoyoloop.</value>
+    <value>Sempre que partilhares o teu código promocional com os teus amigos, tanto tu como eles ganham um voucher de 20€ para viajar com a Yoyoloop entre Lisboa e o Porto. Para os restantes destinos os vouchers são de 10€.</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
     <value>Posso partilhar o meu código promocional com amigos que já tenham usado a Yoyoloop?</value>
@@ -828,13 +828,13 @@ Para utilizares um código promocional de um amigo, basta clicares em “Tenho u
     <value>Quantos amigos posso convidar?</value>
   </data>
   <data name="Help_Topic_Invite_Question_HowManyFriends_Answer" xml:space="preserve">
-    <value>Podes convidar todos os amigos que quiseres! Quantos mais amigos convidares, mais viagens a 1€ ganhas assim que eles viajarem pela primeira vez.</value>
+    <value>Podes convidar todos os amigos que quiseres! Quantos mais amigos convidares, mais vouchers de 20€ ganhas assim que eles viajarem pela primeira vez.</value>
   </data>
   <data name="Help_Topic_Invite_Question_MyBenefits" xml:space="preserve">
     <value>O que é que eu ganho?</value>
   </data>
   <data name="Help_Topic_Invite_Question_MyBenefits_Answer" xml:space="preserve">
-    <value>Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, podes viajar para qualquer destino por apenas 1€!</value>
+    <value>Por cada amigo que viajar com a Yoyoloop pela primeira vez com o teu código, ganhas um voucher de 20€ para usar numa viagem entre Lisboa e o Porto!</value>
   </data>
   <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
     <value>Onde posso partilhar o meu código promocional?</value>
@@ -986,7 +986,7 @@ Adicionar, atualizar ou eliminar dados de pagamento;&lt;br&gt;
 Verificar a tua conta corrente e o crédito atual;&lt;br&gt;
 Ver viagens futuras e viagens anteriores;&lt;br&gt;
 Convidar amigos para a Yoyoloop;&lt;br&gt;
-Ver quantas viagens a €1 tens disponível para usufruir.</value>
+Ver quantos vouchers de 20€ tens disponível para usufruir.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars" xml:space="preserve">
     <value>Veículos Yoyoloop</value>
@@ -1271,16 +1271,16 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Reserva a tua primeira viagem com a Yoyoloop!</value>
   </data>
   <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
-    <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!</value>
+    <value>Partilha o teu código promocional com todos os teus amigos e ganha vouchers de 20€!</value>
   </data>
   <data name="MyTrips_Invite_How" xml:space="preserve">
-    <value>Como viajar por 1€ para qualquer destino</value>
+    <value>Como ganhar vouchers de 20€ para viajar entre Lisboa e Porto</value>
   </data>
   <data name="MyTrips_Invite_OfferTrips_Description" xml:space="preserve">
-    <value>Os teus amigos viajam para qualquer destino por apenas 1€.</value>
+    <value>Os teus amigos viajam entre Lisboa e o Porto com desconto de 20€.</value>
   </data>
   <data name="MyTrips_Invite_OfferTrips_Title" xml:space="preserve">
-    <value>Oferece viagens</value>
+    <value>Oferece vouchers de 20€</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
     <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
@@ -1289,10 +1289,10 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Recomenda a Yoyoloop</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
-    <value>Viaja por 1€!</value>
+    <value>Aproveita 20€ de desconto!</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
-    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
+    <value>Recebe um voucher de 20€ para viajar entre Lisboa e Porto por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
   </data>
   <data name="MyTrips_MainTitle" xml:space="preserve">
     <value>As Minhas Viagens</value>
@@ -1382,13 +1382,13 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>O cartão foi actualizado com sucesso</value>
   </data>
   <data name="Profile_Invite_MainTitle" xml:space="preserve">
-    <value>Convida os teus amigos e viaja por apenas 1€</value>
+    <value>Convida os teus amigos e vouchers de 20€</value>
   </data>
   <data name="Profile_Invite_MGMTrips1" xml:space="preserve">
     <value>Ainda tens</value>
   </data>
   <data name="Profile_Invite_MGMTrips2" xml:space="preserve">
-    <value>viagens de 1€ para aproveitar</value>
+    <value>vouchers de 20€ para aproveitar</value>
   </data>
   <data name="Profile_Invite_Promoshare_btnCopyLink_Text" xml:space="preserve">
     <value>Copiar Link</value>
@@ -1421,19 +1421,19 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>em</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
-    <value>e viaja a 1€.</value>
+    <value>e ganha vouchers de 20€.</value>
   </data>
   <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
-    <value>Partilha o teu código promocional com todos os teus amigos e viaja por apenas 1€!</value>
+    <value>Partilha o teu código promocional com todos os teus amigos e ganha vouchers de 20€!</value>
   </data>
   <data name="Profile_Invite_Saved" xml:space="preserve">
     <value>Já poupaste</value>
   </data>
   <data name="Profile_Invite_Why_Offer_Description" xml:space="preserve">
-    <value>Os teus amigos viajam para qualquer destino por apenas 1€</value>
+    <value>Os teus amigos viajam entre Lisboa e Porto tendo 20€ de desconto</value>
   </data>
   <data name="Profile_Invite_Why_Offer_Title" xml:space="preserve">
-    <value>Oferece viagens</value>
+    <value>Oferece vouchers de 20€</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
     <value>Recomenda a Yoyoloop aos teus amigos ao partilhar o teu código promocional</value>
@@ -1442,10 +1442,10 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Recomenda a Yoyoloop</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
-    <value>Recebe uma viagem a 1€ para qualquer destino por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
+    <value>Recebe um voucher de 20€ para viajar entre Lisboa e Porto por cada amigo que utilizar a Yoyoloop pela primeira vez</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
-    <value>Viaja por 1€!</value>
+    <value>Ganha 20€!</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
     <value>O comboio não te leva ao destino final directamente, há atrasos constantes nos voos e não compensa levar o carro vazio. Com um transfer da Yoyoloop, podes ir para Lisboa, Porto, Coimbra e Leiria sem paragens, com conforto para trabalhar ou relaxar e ao preço do Comboio.</value>
@@ -2137,7 +2137,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
     <value>como apanhar boleia da Yoyoloop?</value>
   </data>
   <data name="StaticPages_HowTo_StepFour" xml:space="preserve">
-    <value>4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha viagens ilimitadas a 1€. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!</value>
+    <value>4 - Lembra-te de partilhar a Yoyoloop com os teus amigos e ganha vouchers de 20€ ilimitados. &lt;br&gt;Quantos mais amigos se juntarem, mais ganhas!</value>
   </data>
   <data name="StaticPages_HowTo_StepOne" xml:space="preserve">
     <value>1 - Escolhe onde queres ir e o teu ponto de partida e chegada preferidos.</value>
@@ -2563,7 +2563,7 @@ Não é permitida a reprodução total ou parcial de qualquer informação ou co
   </data>
   <data name="StaticPages_Terms_Two_Four" xml:space="preserve">
     <value>2.4 Preços e disponibilidades&lt;br&gt;
-As disponibilidades que constam no site da Yoyoloop são calculados em cada momento de acordo acom a procura e oferta disponíveis. depois de uma viagem confirmada, a Yoyoloop reserva-se o direito de cancelar a mesma num prazo mínimo de 2 horas antes da hora de partida, por razões operacionais. No caso da viagem ser cancelada por responsabilidade e iniciativa da Yoyoloop, os clientes com bilhetes comprados para a viagem em causa serão reembolsados do svalores anteriormente pagos. &lt;br&gt; A Yoyoloop reserva-se o direito de aumentar, reduzir ou manters os preços para determinada viagem em qualquer altura e sem aviso prévio, de forma a garantir o correcto funcionamento do serviço.</value>
+As disponibilidades que constam no site da Yoyoloop são calculados em cada momento de acordo acom a procura e oferta disponíveis. depois de uma viagem confirmada, a Yoyoloop reserva-se o direito de cancelar a mesma num prazo mínimo de 2 horas antes da hora de partida, por razões operacionais. No caso da viagem ser cancelada por responsabilidade e iniciativa da Yoyoloop, os clientes com bilhetes comprados para a viagem em causa serão reembolsados do svalores anteriormente pagos. &lt;br&gt; A Yoyoloop reserva-se o direito de aumentar, reduzir ou manters os preços para determinada viagem em qualquer altura e sem aviso prévio, de forma a garantir o correcto funcionamento do serviço. &lt;br&gt;  A promoção de convidar amigos com vouchers de 20€ tem validade até 15 de Janeiro de 2019. Após essa data não será possível angariar novos vouchers de 20€ na conta de cliente. Os vouchers já angariados até essa data poderam ser utilizados num preíodo de 6 messes a contar da data do final da promoção.</value>
   </data>
   <data name="StaticPages_Terms_Two_One" xml:space="preserve">
     <value>2.1 Direitos de Autor&lt;br&gt;
