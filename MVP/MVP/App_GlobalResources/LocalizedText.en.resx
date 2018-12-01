@@ -2631,4 +2631,7 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
+    <value>To see the location on a map click the stop name</value>
+  </data>
 </root>

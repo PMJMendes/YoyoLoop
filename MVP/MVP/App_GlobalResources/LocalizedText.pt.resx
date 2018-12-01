@@ -2631,4 +2631,7 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento.</value>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
+    <value>Para visualizar o local no mapa clique no nome da paragem</value>
+  </data>
 </root>
