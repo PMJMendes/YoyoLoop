@@ -177,7 +177,8 @@
           </div>
 
           <div class="row justify-content-center mb-5">
-            <img class="img-responsive illustration" src="/img/illustration.png">
+            <img class="img-responsive illustration <%= Master.CurrentLanguage == Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese ? "" : "hide" %>" src="/img/infografia_pt.png">
+            <img class="img-responsive illustration <%= Master.CurrentLanguage == Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese ? "hide" : "" %>" src="/img/infografia_en.png">
           </div>
         </div>
       </div>
