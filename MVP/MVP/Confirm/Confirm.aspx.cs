@@ -87,6 +87,10 @@ namespace MVP.Confirm
                     callbackUrl += "&bookid=" + pageData.BookingId;
                     service.SendUnconfirmedTicket(pageData, callbackUrl);
                 }
+                else if(Request.QueryString["New"] == "true")
+                {
+                    service.SendTicket(pageData);
+                }
             }
             else
             {
