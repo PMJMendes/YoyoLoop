@@ -880,7 +880,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Para visualizar o local no mapa clique no nome da paragem.
+        ///   Looks up a localized string similar to Clique no nome da paragem para visualizar no mapa.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_SeeOnMap {
             get {

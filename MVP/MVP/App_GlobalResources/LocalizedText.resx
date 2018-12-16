@@ -399,6 +399,9 @@
     <value>Lugares</value>
     <comment>repetido</comment>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
+    <value>Clique no nome da paragem para visualizar no mapa</value>
+  </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
     <value>Obrigado por escolheres a Yoyoloop!&lt;br&gt;Se necessário ligue-nos para o +351 926 475 250&lt;br&gt;</value>
   </data>
@@ -2612,8 +2615,5 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
-  </data>
-  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
-    <value>Para visualizar o local no mapa clique no nome da paragem</value>
   </data>
 </root>
