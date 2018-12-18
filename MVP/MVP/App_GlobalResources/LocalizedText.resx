@@ -399,6 +399,9 @@
     <value>Lugares</value>
     <comment>repetido</comment>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
+    <value>Clique no nome da paragem para visualizar no mapa</value>
+  </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
     <value>Obrigado por escolheres a Yoyoloop!&lt;br&gt;Se necessário ligue-nos para o +351 926 475 250&lt;br&gt;</value>
   </data>
