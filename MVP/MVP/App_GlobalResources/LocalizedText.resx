@@ -1100,7 +1100,7 @@ Ver quantas viagens a €1 tens disponível para usufruir.</value>
     <value>Reservar</value>
   </data>
   <data name="HomePage_WhereToCard_When_Everyday" xml:space="preserve">
-    <value>Todos os dias</value>
+    <value>Todos os dias úteis</value>
   </data>
   <data name="HomePage_WhereToGo" xml:space="preserve">
     <value>Para onde queres ir?</value>
@@ -1886,10 +1886,10 @@ Foi por isso que criámos um serviço de transfer ao preço do comboio, alternat
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>Saídas do Porto 6:30 - 7:00 – 7:30 – 8:30 – 14:00 – 17:00 – 18:30 – 21:00</value>
+    <value>Saídas do Porto 6:00 - 7:00 – 17:00 – 18:30</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2" xml:space="preserve">
-    <value>Saídas de Coimbra 11:00 - 16:00</value>
+    <value>Saídas de Coimbra 14:00</value>
   </data>
   <data name="StaticPages_Destinos_Lisboa_LoopCard_Schedules_TravelTime" xml:space="preserve">
     <value>O transfer da Yoyoloop leva-te do Porto até Lisboa em duas horas e meia.</value>
@@ -2000,7 +2000,7 @@ Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coi
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times1" xml:space="preserve">
-    <value>Saídas de Lisboa: 6:30 - 7:00 – 7:30 – 8:30 – 14:00 – 17:00 – 18:30 – 21:00</value>
+    <value>Saídas de Lisboa: 6:00 - 7:00 – 17:00 – 18:30</value>
   </data>
   <data name="StaticPages_Destinos_Porto_LoopCard_Schedules_Times2" xml:space="preserve">
     <value>Saídas de Coimbra: 15:00</value>
@@ -2285,13 +2285,13 @@ A Yoyoloop oferece-te boleia entre Lisboa e Coimbra, sem paragens e a preço de 
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times1" xml:space="preserve">
-    <value>Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00</value>
+    <value>Saídas de Lisboa: 6:00 - 7:00 - 17:00 - 18:30</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Times2" xml:space="preserve">
-    <value>Saídas do Porto: 7:30 - 8:30 - 18:00 - 19:00</value>
+    <value>Saídas do Porto: 6:00 - 7:00 - 17:00 - 18:30</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
-    <value>desde 36€ por viagem</value>
+    <value>desde 39€ por viagem</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
     <value>O transfer da Yoyoloop leva-te de Lisboa até ao Porto em duas horas e meia.</value>
@@ -2378,7 +2378,7 @@ A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times" xml:space="preserve">
-    <value>8:00 - 14:00</value>
+    <value>14:00</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa" xml:space="preserve">
     <value>Saidas de Lisboa</value>
@@ -2387,7 +2387,7 @@ A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>Todos os dias</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times" xml:space="preserve">
-    <value>11:00 - 16:00</value>
+    <value>12:00</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaLeiria_APs_Leiria" xml:space="preserve">
     <value>- Praça de República&lt;br /&gt;</value>
@@ -2402,7 +2402,7 @@ A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times" xml:space="preserve">
-    <value>15:00</value>
+    <value>14:00</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Lisboa" xml:space="preserve">
     <value>Saidas de Lisboa</value>
@@ -2426,7 +2426,7 @@ A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times" xml:space="preserve">
-    <value>7:30 - 8:30 - 18:00 - 19:00</value>
+    <value>6:00 - 7:00 - 17:00 - 18:30</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto" xml:space="preserve">
     <value>Saidas do Porto</value>
@@ -2435,7 +2435,7 @@ A Yoyoloop oferece-te boleia entre Lisboa e o Porto, sem paragens e a preço de 
     <value>Dias úteis</value>
   </data>
   <data name="StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times" xml:space="preserve">
-    <value>7:30  -  8:00  -  9:30  -  10:30</value>
+    <value>6:00 - 7:00 - 17:00 - 18:30</value>
   </data>
   <data name="StaticPages_Loops_MainTitle" xml:space="preserve">
     <value>A Revolucionar a mobilidade entre cidades, &lt;br&gt;um Loop de cada vez</value>

@@ -2923,7 +2923,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Todos os dias.
+        ///   Looks up a localized string similar to Todos os dias úteis.
         /// </summary>
         internal static string HomePage_WhereToCard_When_Everyday {
             get {
@@ -5269,7 +5269,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Saídas do Porto 6:30 - 7:00 – 7:30 – 8:30 – 14:00 – 17:00 – 18:30 – 21:00.
+        ///   Looks up a localized string similar to Saídas do Porto 6:00 - 7:00 – 17:00 – 18:30.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times1 {
             get {
@@ -5278,7 +5278,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Saídas de Coimbra 11:00 - 16:00.
+        ///   Looks up a localized string similar to Saídas de Coimbra 14:00.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_LoopCard_Schedules_Times2 {
             get {
@@ -5580,7 +5580,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Saídas de Lisboa: 6:30 - 7:00 – 7:30 – 8:30 – 14:00 – 17:00 – 18:30 – 21:00.
+        ///   Looks up a localized string similar to Saídas de Lisboa: 6:00 - 7:00 – 17:00 – 18:30.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_LoopCard_Schedules_Times1 {
             get {
@@ -6370,7 +6370,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Saídas de Lisboa: 7:30 - 8:30 - 18:00 - 19:00.
+        ///   Looks up a localized string similar to Saídas de Lisboa: 6:00 - 7:00 - 17:00 - 18:30.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times1 {
             get {
@@ -6379,7 +6379,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Saídas do Porto: 7:30 - 8:30 - 18:00 - 19:00.
+        ///   Looks up a localized string similar to Saídas do Porto: 6:00 - 7:00 - 17:00 - 18:30.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Times2 {
             get {
@@ -6388,7 +6388,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to desde 36€ por viagem.
+        ///   Looks up a localized string similar to desde 39€ por viagem.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Title {
             get {
@@ -6576,7 +6576,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 8:00 - 14:00.
+        ///   Looks up a localized string similar to 14:00.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Coimbra_Times {
             get {
@@ -6603,7 +6603,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 11:00 - 16:00.
+        ///   Looks up a localized string similar to 12:00.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaCoimbra_Departures_Lisboa_Times {
             get {
@@ -6648,7 +6648,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 15:00.
+        ///   Looks up a localized string similar to 14:00.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaLeiria_Departures_Leiria_Times {
             get {
@@ -6720,7 +6720,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:30 - 8:30 - 18:00 - 19:00.
+        ///   Looks up a localized string similar to 6:00 - 7:00 - 17:00 - 18:30.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Lisboa_Times {
             get {
@@ -6747,7 +6747,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 7:30  -  8:00  -  9:30  -  10:30.
+        ///   Looks up a localized string similar to 6:00 - 7:00 - 17:00 - 18:30.
         /// </summary>
         internal static string StaticPages_Loops_LoopCard_LisboaPorto_Departures_Porto_Times {
             get {
