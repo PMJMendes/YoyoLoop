@@ -407,7 +407,7 @@ namespace MVP.Checkout
 
         protected void RedirectToConfirm()
         {
-            ApplicationHelpers.ClientRedirect(this, "/Confirm/Confirm?Id=" + pageData.BookingId.ToString());
+            ApplicationHelpers.ClientRedirect(this, "/Confirm/Confirm?Id=" + pageData.BookingId.ToString() + "&New=true");
         }
     }
 }

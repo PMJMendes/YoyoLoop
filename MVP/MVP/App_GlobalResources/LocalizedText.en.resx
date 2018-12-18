@@ -399,6 +399,9 @@
     <value>Seats</value>
     <comment>repetido</comment>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
+    <value>Click on the name of the stop to see the location on a map</value>
+  </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
     <value>Thank you for choosing Yoyoloop!&lt;br&gt;If necessary call us at +351 926 475 250&lt;br&gt;</value>
   </data>

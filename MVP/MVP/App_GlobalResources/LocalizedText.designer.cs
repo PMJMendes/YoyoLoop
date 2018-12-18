@@ -880,6 +880,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clique no nome da paragem para visualizar no mapa.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_SeeOnMap {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_SeeOnMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Obrigado por escolheres a Yoyoloop!&lt;br&gt;Se necessário ligue-nos para o +351 926 475 250&lt;br&gt;.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_ThankYou {
