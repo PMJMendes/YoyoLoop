@@ -339,7 +339,7 @@
     <value>Book your seat on an five-seat premium transfer driven by a professional driver, &lt;br&gt; and enjoy a non-stop trip where you can work confortably, with wifi on board for the price of a train ticket.</value>
   </data>
   <data name="Confirm_Invite_Title" xml:space="preserve">
-    <value>Invite your friends and travel for just €1</value>
+    <value>Invite your friends win 20€ vouchers per friend</value>
   </data>
   <data name="Confirm_InvoiceSend" xml:space="preserve">
     <value>We will send your invoice to</value>
@@ -388,7 +388,7 @@
     <value>Final price</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Invite" xml:space="preserve">
-    <value>Invite your friends and travel for just €1</value>
+    <value>Invite your friends and win €20 vouchers</value>
     <comment>repetido</comment>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_Origin" xml:space="preserve">
@@ -398,6 +398,9 @@
   <data name="Confirm_Service_SendTicket_Email_Body_Seats" xml:space="preserve">
     <value>Seats</value>
     <comment>repetido</comment>
+  </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_SeeOnMap" xml:space="preserve">
+    <value>Click on the name of the stop to see the location on a map</value>
   </data>
   <data name="Confirm_Service_SendTicket_Email_Body_ThankYou" xml:space="preserve">
     <value>Thank you for choosing Yoyoloop!&lt;br&gt;If necessary call us at +351 926 475 250&lt;br&gt;</value>
@@ -794,10 +797,10 @@
     <value>Discounts and sales</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM" xml:space="preserve">
-    <value>How can I book €1 trips and how can I apply a promo code?</value>
+    <value>How can I book trips using 20€ vouchers and how can I apply a promo code?</value>
   </data>
   <data name="Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer" xml:space="preserve">
-    <value>To book the €1 trips you won for inviting your friends, you only need to access your account and click on "Invite friends". This is where you can see all the €1 trips you still have available. You only need to click on "Book" to book a €1 for any destination.&lt;br&gt;
+    <value>To use the 20€ vouchers that you have won for inviting your friends, you only need to access your account and click on "Invite friends". This is where you can see all the €20 vouchers you still have available. You only need to click on "Book" to get a 20€ discount between Lisbon and Porto. The discount is 10€ for any other destination.&lt;br&gt;
 &lt;br&gt;
 To use a friend's promo code, you simply need to click on "I have a promo code" on the box on the right side of your screen when you're selecting your trip. Paste your code, click on "Book" and you're done!</value>
   </data>
@@ -814,7 +817,7 @@ To use a friend's promo code, you simply need to click on "I have a promo code" 
     <value>What do my friends earn for booking with my promode?</value>
   </data>
   <data name="Help_Topic_Invite_Question_FriendsBenefits_Answer" xml:space="preserve">
-    <value>Every time you share your promo code with your friends, you receive a €1 trip for any Yoyoloop destination, as will your friends.</value>
+    <value>Every time you share your promo code with your friends, you receive a €20 voucher to use on a trip between Lisbon and Porto, as will your friends. The vouchers are 10€ for all other destinations.</value>
   </data>
   <data name="Help_Topic_Invite_Question_GiftToYoyoUsers" xml:space="preserve">
     <value>Can I share my promo codes with friends who have already used Yoyoloop?</value>
@@ -826,13 +829,13 @@ To use a friend's promo code, you simply need to click on "I have a promo code" 
     <value>How many friends can I invite?</value>
   </data>
   <data name="Help_Topic_Invite_Question_HowManyFriends_Answer" xml:space="preserve">
-    <value>You can invite as many as you like! The more friends you invite, the more €1 trips you win as soon as they travel for the first time.</value>
+    <value>You can invite as many as you like! The more friends you invite, the more €20 vouchers you win as soon as they travel for the first time.</value>
   </data>
   <data name="Help_Topic_Invite_Question_MyBenefits" xml:space="preserve">
     <value>What do I earn?</value>
   </data>
   <data name="Help_Topic_Invite_Question_MyBenefits_Answer" xml:space="preserve">
-    <value>For each friend who travels with Yoyoloop for the first time with your promo code, you can travel to any destination for just €1!</value>
+    <value>For each friend who travels with Yoyoloop for the first time with your promo code, you win a 20€ voucher to be used to travel between Lisbon and Porto!</value>
   </data>
   <data name="Help_Topic_Invite_Question_Share" xml:space="preserve">
     <value>Where can I share my promo code?</value>
@@ -984,7 +987,7 @@ Add, update or delete payment details;&lt;br&gt;
 Check your current account and current credit;&lt;br&gt;
 See future and past trips;&lt;br&gt;
 Invite friends to use Yoyoloop;&lt;br&gt;
-Check how many €1 trips you have yet to enjoy.</value>
+Check how many €20 vouchers you have yet to enjoy.</value>
   </data>
   <data name="Help_Topic_YoyoloopCars" xml:space="preserve">
     <value>Yoyoloop vehicles</value>
@@ -1269,16 +1272,16 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Book your first trip with Yoyoloop!</value>
   </data>
   <data name="MyTrips_Invite_Code_Title" xml:space="preserve">
-    <value>Share your promo code with all your friends and travel for just €1!</value>
+    <value>Share your promo code with all your friends and win 20€ vouchers!</value>
   </data>
   <data name="MyTrips_Invite_How" xml:space="preserve">
-    <value>How to travel for €1 for any destination</value>
+    <value>How to win 20€ vouchers to travel between Lisbon and Porto</value>
   </data>
   <data name="MyTrips_Invite_OfferTrips_Description" xml:space="preserve">
-    <value>Your friends travel to any destination for just €1.</value>
+    <value>Your friends travel between Lisbon and Porto with a 20€ discount.</value>
   </data>
   <data name="MyTrips_Invite_OfferTrips_Title" xml:space="preserve">
-    <value>Give €1 trips</value>
+    <value>Give €20 vouchers</value>
   </data>
   <data name="MyTrips_Invite_Recommend_Description" xml:space="preserve">
     <value>Refer Yoyoloop to your friends by sharing your promo code</value>
@@ -1287,10 +1290,10 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Refer Yoyoloop</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title" xml:space="preserve">
-    <value>Travel for €1!</value>
+    <value>Enjoy a 20€ discount!</value>
   </data>
   <data name="MyTrips_Invite_Travel_Title_Description" xml:space="preserve">
-    <value>Win a €1 trip to any destination for each friend of yours who uses Yoyoloop for the first time</value>
+    <value>Win a €20 voucher to travel between Lisbon and Porto for each friend of yours who uses Yoyoloop for the first time</value>
   </data>
   <data name="MyTrips_MainTitle" xml:space="preserve">
     <value>My Trips</value>
@@ -1380,13 +1383,13 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Your card was updated successfully </value>
   </data>
   <data name="Profile_Invite_MainTitle" xml:space="preserve">
-    <value>Invite your friends and travel for just €1</value>
+    <value>Invite your friends and win €20 vouchers</value>
   </data>
   <data name="Profile_Invite_MGMTrips1" xml:space="preserve">
     <value>You still have</value>
   </data>
   <data name="Profile_Invite_MGMTrips2" xml:space="preserve">
-    <value>€1 trips to enjoy</value>
+    <value>€20 vouchers to enjoy</value>
   </data>
   <data name="Profile_Invite_Promoshare_btnCopyLink_Text" xml:space="preserve">
     <value>Copy link</value>
@@ -1419,19 +1422,19 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>on</value>
   </data>
   <data name="Profile_Invite_Promoshare_ShareMessage3" xml:space="preserve">
-    <value>and travel for just €1.</value>
+    <value>and win 20€ vouchers.</value>
   </data>
   <data name="Profile_Invite_Promoshare_Title" xml:space="preserve">
-    <value>Share your promo code with all your friends and travel for just €1!</value>
+    <value>Share your promo code with all your friends and win €20 vouchers!</value>
   </data>
   <data name="Profile_Invite_Saved" xml:space="preserve">
     <value>You've already saved</value>
   </data>
   <data name="Profile_Invite_Why_Offer_Description" xml:space="preserve">
-    <value>Your friends can travel to any destination for just €1</value>
+    <value>Your friends can travel between Lisbon and Oporto saving €20 per trip</value>
   </data>
   <data name="Profile_Invite_Why_Offer_Title" xml:space="preserve">
-    <value>Give €1 trips</value>
+    <value>Give €20 vouchers</value>
   </data>
   <data name="Profile_Invite_Why_Recommend_Description" xml:space="preserve">
     <value>Share your promo code with your friends to refer Yoyoloop</value>
@@ -1440,10 +1443,10 @@ Check how many €1 trips you have yet to enjoy.</value>
     <value>Refer Yoyoloop</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Description" xml:space="preserve">
-    <value>Win a trip for €1 to any destination for each friend who uses Yoyoloop for the first time</value>
+    <value>Win a €20 voucher to travel between Lisbon and Porto for each friend who uses Yoyoloop for the first time</value>
   </data>
   <data name="Profile_Invite_Why_Travel_Title" xml:space="preserve">
-    <value>Travel for €1!</value>
+    <value>Win €20!</value>
   </data>
   <data name="Profile_Invite_YoyoloopWhy_Description" xml:space="preserve">
     <value>Going by Alfa Pendular train doesn't directly take you to your final destination, flights suffer constant delays, and taking your own car by yourself doesn't pay off. With a Yoyoloop premium transfer, you can comfortably go to Lisbon, Porto, Coimbra and Leiria without any stops, and assure your travel time is usefully spent working or simply relaxing. All this for the price of a train ticket.</value>
@@ -2133,7 +2136,7 @@ Resende Bus: 111, 116, 119, 121, 122, 123, 130</value>
     <value>How to ride with Yoyoloop</value>
   </data>
   <data name="StaticPages_HowTo_StepFour" xml:space="preserve">
-    <value>4. Remember to refer Yoyoloop to your friends to win unlimited €1 trips.&lt;br&gt;The more friends you gather, the more you earn!</value>
+    <value>4. Remember to refer Yoyoloop to your friends to win unlimited €20 vouchers.&lt;br&gt;The more friends you gather, the more you earn!</value>
   </data>
   <data name="StaticPages_HowTo_StepOne" xml:space="preserve">
     <value>1. Choose where you want to go to and your favourite departure and arrival spots.</value>
@@ -2581,7 +2584,7 @@ No part of the www.yoyoloop.com website may be reproduced, entirely or partially
   </data>
   <data name="StaticPages_Terms_Two_Four" xml:space="preserve">
     <value>2.4 Prices and availabilities&lt;br&gt;
-The availabilities on the Yoyoloop website are calculated at each moment according to the demand and offer available. After a trip is confirmed, Yoyoloop reserves the right to cancel it at least two (2) hours prior to the departure time, for operational reasons. In case a trip is cancelled by Yoyoloop's own responsibility and initiative, customers with tickets purchased for the trip in question will be refunded. &lt;br&gt; Yoyoloop reserves the right to increase, reduce or maintain prices for a particular trip at any time and without prior notice, in order to ensure the correct operation of the service.</value>
+The availabilities on the Yoyoloop website are calculated at each moment according to the demand and offer available. After a trip is confirmed, Yoyoloop reserves the right to cancel it at least two (2) hours prior to the departure time, for operational reasons. In case a trip is cancelled by Yoyoloop's own responsibility and initiative, customers with tickets purchased for the trip in question will be refunded. &lt;br&gt; Yoyoloop reserves the right to increase, reduce or maintain prices for a particular trip at any time and without prior notice, in order to ensure the correct operation of the service.&lt;br&gt;  The promotion wo win 20€ vouchers by refering friends will end on January 15th 2019. After this date, it will still be possible to use the 20€ vouchers to book trips for a maximum period of 6 months after the end date of the promotion.</value>
   </data>
   <data name="StaticPages_Terms_Two_One" xml:space="preserve">
     <value>2.1 Copyright&lt;br&gt;

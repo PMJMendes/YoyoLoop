@@ -27,7 +27,7 @@ namespace MVP
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
-        protected string CurrentLanguage;
+        public string CurrentLanguage;
 
         protected void Page_Init(object sender, EventArgs e)
         {

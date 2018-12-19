@@ -173,12 +173,14 @@
           </div>
           
           <div class="row justify-content-center mb-5">
-            <div class="homepage__yoyoloop-sub-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_Yoyoloop_SubDescription%>"/></div>
+            <img class="img-responsive illustration <%= Master.CurrentLanguage == Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese ? "" : "hide" %>" src="/img/infografia_pt.png">
+            <img class="img-responsive illustration <%= Master.CurrentLanguage == Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese ? "hide" : "" %>" src="/img/infografia_en.png">
           </div>
 
           <div class="row justify-content-center mb-5">
-            <img class="img-responsive illustration" src="/img/illustration.png">
+            <div class="homepage__yoyoloop-sub-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, HomePage_Yoyoloop_SubDescription%>"/></div>
           </div>
+
         </div>
       </div>
 

@@ -99,6 +99,7 @@ namespace MVP.Services
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Date + ": " + state.StartTime.ToString("F");
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Origin + ": " + state.StartRegionName + " (<a href='" + state.StartAPLocation + "'>" + state.StartAPName + "</a>)";
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Destination + ": " + state.EndRegionName + " (<a href='" + state.EndAPLocation + "'>" + state.EndAPName + "</a>)";
+                body += "<br /><small>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_SeeOnMap + "</small>";
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Seats + ": " + state.Seats.ToString();
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_FinalCost + ": " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
                 body += "<br />";
