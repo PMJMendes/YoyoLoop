@@ -38,7 +38,7 @@ namespace MVP.Services
         {
             var manager = context.GetUserManager<ApplicationUserManager>();
             var signInManager = context.Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = email, Email = email, ContactName = contactname };
+            var user = new ApplicationUser() { UserName = email, Email = email, ContactName = contactname, CreationDate = DateTime.Now };
             IdentityResult result = manager.Create(user, password);
             if (result.Succeeded)
             {
