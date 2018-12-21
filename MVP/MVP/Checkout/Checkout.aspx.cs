@@ -262,8 +262,13 @@ namespace MVP.Checkout
                 {
                     pageData.Code = query["Code"];
                 }
-                pageData = service.GetBooking(id, pageData);
-                if(pageData == null)
+                string error;
+                pageData = service.GetBooking(id, pageData, out error);
+                if (error == "phone")
+                {
+                    ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                }
+                if (pageData == null)
                 {
                     // temp blank values to stop page from crashing during debugging
                     pageData = new CheckoutDTO
@@ -333,7 +338,13 @@ namespace MVP.Checkout
         protected void tbPromo_TextChanged(object sender, EventArgs e)
         {
             pageData.Promocode = tbPromo.Text.ToUpper().Trim();
-            pageData = service.CheckPromo(pageData);
+            string error;
+            pageData = service.CheckPromo(pageData, out error);
+            if (error == "phone")
+            {
+                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+            }
+
             UpdateCheckoutPanel();
             if (pageData.Promocode == string.Empty && pageData.Code == string.Empty)
             {

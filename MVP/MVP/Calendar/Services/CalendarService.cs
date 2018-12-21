@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using MVP.Controls;
 using MVP.Profile.Services;
+using MVP.Models.Helpers;
 
 namespace MVP.Services
 {
@@ -232,8 +233,9 @@ namespace MVP.Services
             }
         }
 
-        public CalendarDTO CheckPromo(CalendarDTO state)
+        public CalendarDTO CheckPromo(CalendarDTO state, out string error)
         {
+            error = string.Empty;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
@@ -255,7 +257,16 @@ namespace MVP.Services
                         {
                             if(model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == state.UserId).ReferredBy == null)
                             {
-                                state.Selection.MGM = true;
+                                string phone = model.Users.FirstOrDefault(u => u.Id == state.UserId).PhoneNumber;
+                                if (!string.IsNullOrEmpty(phone))
+                                {
+                                    state.Selection.MGM = true;
+                                }
+                                else
+                                {
+                                    state.Selection.MGM = false;
+                                    error = "phone";
+                                }
                             }
                             else
                             {
