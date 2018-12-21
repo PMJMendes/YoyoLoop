@@ -1055,6 +1055,10 @@
     <Compile Include="Migrations\201810171117050_Corporate.Designer.cs">
       <DependentUpon>201810171117050_Corporate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812211618400_ApplicationUser-CreationDate.cs" />
+    <Compile Include="Migrations\201812211618400_ApplicationUser-CreationDate.Designer.cs">
+      <DependentUpon>201812211618400_ApplicationUser-CreationDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1389,6 +1393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810171117050_Corporate.resx">
       <DependentUpon>201810171117050_Corporate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812211618400_ApplicationUser-CreationDate.resx">
+      <DependentUpon>201812211618400_ApplicationUser-CreationDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
