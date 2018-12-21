@@ -34,11 +34,11 @@ namespace MVP.Services
             signinManager.SignIn(user, false, false);
         }
 
-        public IdentityResult CreateUser (IOwinContext context, Func<string, string, string> genCallbackUrl, string email, string password, string contactname, out string userid)
+        public IdentityResult CreateUser (IOwinContext context, Func<string, string, string> genCallbackUrl, string email, string password, string contactname, string phonenumber, out string userid)
         {
             var manager = context.GetUserManager<ApplicationUserManager>();
             var signInManager = context.Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = email, Email = email, ContactName = contactname, CreationDate = DateTime.Now };
+            var user = new ApplicationUser() { UserName = email, Email = email, ContactName = contactname, PhoneNumber = phonenumber, CreationDate = DateTime.Now };
             IdentityResult result = manager.Create(user, password);
             if (result.Succeeded)
             {

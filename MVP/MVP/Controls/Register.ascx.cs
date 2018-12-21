@@ -21,7 +21,7 @@ namespace MVP.Controls
             string userid;
             IdentityResult result = service.CreateUser(Context.GetOwinContext(),
                     (code, id) => IdentityHelper.GetUserConfirmationRedirectUrl(code, id, Request),
-                    TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text, out userid);
+                    TbRegisterEmail.Text, TbRegisterPassword.Text, TbRegisterName.Text, tbRegisterPhoneNumber.Text, out userid);
             if (result.Succeeded)
             {
                 ApplicationHelpers.GTM_Signup(this, userid, TbRegisterEmail.Text, TbRegisterName.Text);
