@@ -233,9 +233,9 @@ namespace MVP.Services
             }
         }
 
-        public CalendarDTO CheckPromo(CalendarDTO state, out string error)
+        public CalendarDTO CheckPromo(CalendarDTO state, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
@@ -265,7 +265,7 @@ namespace MVP.Services
                                 else
                                 {
                                     state.Selection.MGM = false;
-                                    error = "phone";
+                                    error = MasterService.ErrorCode.NOPHONE;
                                 }
                             }
                             else

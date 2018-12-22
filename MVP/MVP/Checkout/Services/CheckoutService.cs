@@ -70,9 +70,9 @@ namespace MVP.Services
             }
         }
 
-        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state, out string error)
+        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 var booking = model.Booking.Where(b => b.BookingId == id)
@@ -268,9 +268,9 @@ namespace MVP.Services
             return result;
         }
 
-        public bool CheckMGMCode(string userid, string code, out string error)
+        public bool CheckMGMCode(string userid, string code, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 if (model.Users.Any(u => u.MGMCode == code && u.Id != userid) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
@@ -282,7 +282,7 @@ namespace MVP.Services
                     }
                     else
                     {
-                        error = "phone";
+                        error = MasterService.ErrorCode.NOPHONE;
                         return false;
                     }
                 }
@@ -293,9 +293,9 @@ namespace MVP.Services
             }
         }
 
-        public CheckoutDTO CheckPromo(CheckoutDTO state, out string error)
+        public CheckoutDTO CheckPromo(CheckoutDTO state, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
