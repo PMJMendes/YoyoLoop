@@ -6,13 +6,13 @@
         <asp:Repeater ID="APGroupRepeater" runat="server" OnItemDataBound="APGroupRepeater_ItemDataBound">
             <ItemTemplate>
                 <asp:Panel runat="server" ID="pnAccordionHeader" CssClass="row pt-0 pr-4 pl-4 accordion">
-                    <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label header-label--destination mb-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Controls_Popover_Header_DestinationLabel%>"/></div>
-                    <div class="col-12 text-nowrap access-point mb-2">
-                        <asp:Label runat="server" ID="EndAP"/>
-                    </div>
                     <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label header-label--start mb-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Controls_Popover_Header_OriginLabel%>"/></div>
                     <div class="col-12 text-nowrap access-point mb-2">
                         <asp:Label runat="server" ID="StartAP"/>
+                    </div>
+                    <div class="col-6 d-flex align-items-end text-uppercase text-nowrap header-label header-label--destination mb-1"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Controls_Popover_Header_DestinationLabel%>"/></div>
+                    <div class="col-12 text-nowrap access-point mb-2">
+                        <asp:Label runat="server" ID="EndAP"/>
                     </div>
                 </asp:Panel>   
                 
