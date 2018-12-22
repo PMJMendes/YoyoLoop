@@ -2616,4 +2616,7 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento</value>
   </data>
+  <data name="MGM_NoPhone_ErrorMessage" xml:space="preserve">
+    <value>Para usufruir do seu voucher de €20 necessita de um número de telemóvel válido.&lt;br&gt;Pode adicionar o seu número de telemóvel no seu perfil.</value>
+  </data>
 </root>

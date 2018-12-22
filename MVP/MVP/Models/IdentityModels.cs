@@ -18,6 +18,7 @@ namespace MVP.Models
         // YOYOLOOP EXTENDED PROPERTIES
         public string ContactName { get; set; }
         public DateTime BirthDate { get; set; }
+        public DateTime CreationDate { get; set; }
 
         public string StripeCustomerId { get; set; }
 

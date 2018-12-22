@@ -373,7 +373,12 @@ namespace MVP.Calendar
                 if (pageData.Selection.Promocode != localData.Values.Promocode) // New promocode
                 {
                     pageData.Selection.Promocode = localData.Values.Promocode;
-                    pageData = service.CheckPromo(pageData);
+                    string error;
+                    pageData = service.CheckPromo(pageData, out error);
+                    if(error == "phone")
+                    {
+                        ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                    }
                     bookupdate = "promo";
                 }
             }
