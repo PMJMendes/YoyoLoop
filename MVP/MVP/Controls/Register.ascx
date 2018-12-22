@@ -81,6 +81,7 @@
                                             <option value="351">+351</option>
                                         </select>
                                         <asp:TextBox runat="server" ID="tbRegisterPhoneNumber" AutoPostBack="false" CssClass="form-control login__input login__input__phone--number" type="text" autocomplete="tel-national" Tabindex="0" placeholder="<%$ Resources:LocalizedText, Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label%>" />
+                                        <div class="login__input__phone--note"><asp:Label runat="server" CssClass="" Text="<%$ Resources:LocalizedText, Controls_Register_tbRegisterPhoneNumber_Note %>"/></div>
                                         <asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="Register" ControlToValidate="tbRegisterPhoneNumber" CssClass="text-danger" Style="white-space:normal" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage%>"/>
                                     </div>
                                 </div>
