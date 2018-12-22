@@ -97,7 +97,7 @@ namespace MVP.Services
                     state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
                     state.Promocode = booking.Promocode?.Code ?? (!string.IsNullOrEmpty(state.Code) ? state.Code : string.Empty);
-                    state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
+                    state.PromoValid = (int)booking.FareType >= (int)Fare.FareType.PROMOTIONAL ? true : false;
                     if (booking.MGM)
                     {
                         state.UserMGM = CheckUserMGM(state.UserId);
@@ -186,7 +186,7 @@ namespace MVP.Services
                 });
             }
 
-            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            if ((int)paneldata.FareType >= (int)Fare.FareType.PROMOTIONAL)
             {
                 if (paneldata.MGM || paneldata.UserMGM)
                 {
@@ -316,7 +316,7 @@ namespace MVP.Services
                         state.Code = string.Empty;
                         if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
                         {
-                            state.FareType = Fare.FareType.PROMOTIONAL;
+                            state.FareType = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode).FareType;
                             state.PromoValid = true;
                         }
                         else
