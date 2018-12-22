@@ -10,13 +10,13 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>pom_routines.xml</module>
-    <module>pom_Departures_0.1.xml</module>
-    <module>pom_LoopedRegions_0.1.xml</module>
-    <module>pom_Routes_0.1.xml</module>
-    <module>pom_Fares_0.1.xml</module>
-    <module>pom_AccessPoints_0.1.xml</module>
-    <module>pom_Promocodes_0.1.xml</module>
-    <module>pom_A_Batch_0.1.xml</module>
+    <module>pom_Routes_0.2.xml</module>
+    <module>pom_Fares_0.2.xml</module>
+    <module>pom_LoopedRegions_0.2.xml</module>
+    <module>pom_Departures_0.2.xml</module>
+    <module>pom_AccessPoints_0.2.xml</module>
+    <module>pom_Promocodes_0.2.xml</module>
+    <module>pom_A_Batch_0.2.xml</module>
   </modules>
   <properties>
     <encoding>UTF-8</encoding>

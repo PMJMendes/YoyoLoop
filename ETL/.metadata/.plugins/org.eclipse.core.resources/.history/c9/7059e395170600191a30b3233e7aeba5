@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_ZWL20LZ6EeiEqNgTec4Ifg" id="_ZWCF0LZ6EeiEqNgTec4Ifg" label="Fares" creationDate="2018-12-22T18:29:55.161+0000" modificationDate="2018-12-22T18:29:55.161+0000" version="0.2" statusCode="" item="_ZWL20rZ6EeiEqNgTec4Ifg" displayName="Fares">
+    <author href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_ZWL20bZ6EeiEqNgTec4Ifg" path="" locked="true" lockDate="2018-12-22T18:29:52.801+0000">
+    <locker href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:ItemState>
+  <TalendProperties:ProcessItem xmi:id="_ZWL20rZ6EeiEqNgTec4Ifg" property="_ZWL20LZ6EeiEqNgTec4Ifg" state="_ZWL20bZ6EeiEqNgTec4Ifg">
+    <process href="Fares_0.2.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_EKtD4LOCEei8z7zJyqB1eQ" id="_spoSMLeSEei9tc41O36oNw" label="Promocodes" creationDate="2018-12-22T17:50:04.883+0000" modificationDate="2018-12-22T18:03:06.981+0000" version="0.2" statusCode="" item="_EKtD4rOCEei8z7zJyqB1eQ" displayName="Promocodes">
+    <author href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_spyDMLeSEei9tc41O36oNw" path="" locked="true" lockDate="2018-12-22T17:50:26.763+0000">
+    <locker href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+  </TalendProperties:ItemState>
+  <TalendProperties:ProcessItem xmi:id="_EKtD4rOCEei8z7zJyqB1eQ" property="_EKtD4LOCEei8z7zJyqB1eQ" state="_spyDMLeSEei9tc41O36oNw">
+    <process href="Promocodes_0.2.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>
