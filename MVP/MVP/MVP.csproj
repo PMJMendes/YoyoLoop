@@ -1059,6 +1059,10 @@
     <Compile Include="Migrations\201812211618400_ApplicationUser-CreationDate.Designer.cs">
       <DependentUpon>201812211618400_ApplicationUser-CreationDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812221144000_AccessPoint-Departure-DurationModifier.cs" />
+    <Compile Include="Migrations\201812221144000_AccessPoint-Departure-DurationModifier.Designer.cs">
+      <DependentUpon>201812221144000_AccessPoint-Departure-DurationModifier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1396,6 +1400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812211618400_ApplicationUser-CreationDate.resx">
       <DependentUpon>201812211618400_ApplicationUser-CreationDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812221144000_AccessPoint-Departure-DurationModifier.resx">
+      <DependentUpon>201812221144000_AccessPoint-Departure-DurationModifier.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

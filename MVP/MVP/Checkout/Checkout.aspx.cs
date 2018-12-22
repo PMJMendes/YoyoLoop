@@ -284,6 +284,7 @@ namespace MVP.Checkout
                         PromoValid = false,
                         Cost = 0,
                         StartTime = new DateTime(),
+                        ArrivalTime = new DateTime(),
                         StartRegionName = "Região de Origem",
                         StartAPName = "Paragem de Origem",
                         EndRegionName = "Região de Destino",
