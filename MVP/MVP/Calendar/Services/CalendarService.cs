@@ -279,7 +279,7 @@ namespace MVP.Services
                         state.Selection.MGM = false;
                         if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Selection.Promocode))
                         {
-                            state.Selection.FareType = Fare.FareType.PROMOTIONAL;
+                            state.Selection.FareType = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Selection.Promocode).FareType;
                         }
                         else
                         {
@@ -325,7 +325,7 @@ namespace MVP.Services
                     StandardPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == (lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD)).Price,
                     Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
                     Promocode = state.Selection.Promocode,
-                    PromoValid = state.Selection.FareType == Fare.FareType.PROMOTIONAL ? true : false,
+                    PromoValid = (int)state.Selection.FareType >= (int)Fare.FareType.PROMOTIONAL ? true : false,
                     MGM = state.Selection.MGM,
                     UserMGM = state.UserMGM,
                     MGMPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price,

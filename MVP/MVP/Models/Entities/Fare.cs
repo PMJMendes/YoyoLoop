@@ -17,7 +17,10 @@ namespace MVP.Models.Entities
             STANDARD,
             LASTMINUTE,
             MEMBERGETMEMBER,
-            PROMOTIONAL
+            PROMOTIONAL,
+            FREE,
+            SPECIAL1,
+            SPECIAL2
         }
     }
 }
