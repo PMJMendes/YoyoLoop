@@ -32,6 +32,7 @@ namespace MVP.Services
                 TicketCode = "#MYTICKETYO",
                 TicketURL = "#",
                 StartTime = DateTime.Now,
+                ArrivalTime = DateTime.Now,
                 StartRegionName = "Start Region",
                 StartAPName = "Start AP",
                 StartAPLocation = "#",
@@ -48,6 +49,8 @@ namespace MVP.Services
             {
                 var booking = model.Booking.Where(b => b.BookingId == id && b.Status == BookingStatus.BOOKED)
                                            .Include(t => t.Trip)
+                                           .Include(d => d.Trip.Departure)
+                                           .Include(r => r.Trip.Departure.Route)
                                            .Include(sap => sap.Trip.StartAccessPoint)
                                            .Include(dap => dap.Trip.EndAccessPoint)
                                            .Include(sr => sr.Trip.StartAccessPoint.Region)
@@ -73,6 +76,11 @@ namespace MVP.Services
                         TicketCode = booking.TicketCode,
                         TicketURL = "#",
                         StartTime = booking.Trip.StartTime,
+                        ArrivalTime = booking.Trip.StartTime +
+                                      (model.Route.FirstOrDefault(r => r.RouteId == booking.Trip.Departure.Route.RouteId)?.Duration ?? TimeSpan.Zero) +
+                                      (model.Departure.FirstOrDefault(d => d.DepartureId == booking.Trip.Departure.DepartureId)?.DurationModifier ?? TimeSpan.Zero) +
+                                      (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.StartAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero) +
+                                      (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.EndAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero),
                         StartRegionName = booking.Trip.StartAccessPoint.Region.Name,
                         StartAPName = booking.Trip.StartAccessPoint.Name,
                         StartAPLocation = booking.Trip.StartAccessPoint.GoogleLocation,

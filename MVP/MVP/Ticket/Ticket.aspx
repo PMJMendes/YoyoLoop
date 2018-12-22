@@ -98,7 +98,7 @@
 
                                   <div class="travel__card__first__text">
                                     <img class="mr-2" src="/img/clock-black.png" srcset="/img/clock-black@2x.png 2x, /img/clock-black@3x.png 3x">
-                                    <%= pageData.StartTime.ToString("HH\\:mm") %>
+                                    <%= pageData.StartTime.ToString("HH\\:mm") %> &rarr; <%= pageData.ArrivalTime.ToString("HH\\:mm") %>
                                   </div>
 
                                   <div class="travel__card__first__text">

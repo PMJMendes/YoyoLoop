@@ -61,6 +61,7 @@ namespace MVP.Confirm
                         TicketCode = "#MYTICKETYO",
                         TicketURL = "#",
                         StartTime = DateTime.Now,
+                        ArrivalTime = DateTime.Now,
                         StartRegionName = "Start Region",
                         StartAPName = "Start AP",
                         EndRegionName = "End Region",

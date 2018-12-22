@@ -13,6 +13,7 @@ namespace MVP.Ticket
         public string TicketCode { get; set; }
 
         public DateTime StartTime { get; set; }
+        public DateTime ArrivalTime { get; set; }
         public string StartRegionName { get; set; }
         public string StartAPName { get; set; }
         public string EndRegionName { get; set; }
