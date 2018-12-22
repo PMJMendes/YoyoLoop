@@ -76,11 +76,7 @@ namespace MVP.Services
                         TicketCode = booking.TicketCode,
                         TicketURL = "#",
                         StartTime = booking.Trip.StartTime,
-                        ArrivalTime = booking.Trip.StartTime +
-                                      (model.Route.FirstOrDefault(r => r.RouteId == booking.Trip.Departure.Route.RouteId)?.Duration ?? TimeSpan.Zero) +
-                                      (model.Departure.FirstOrDefault(d => d.DepartureId == booking.Trip.Departure.DepartureId)?.DurationModifier ?? TimeSpan.Zero) +
-                                      (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.StartAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero) +
-                                      (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.EndAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero),
+                        ArrivalTime = booking.Trip.CalcArrivalTime(),
                         StartRegionName = booking.Trip.StartAccessPoint.Region.Name,
                         StartAPName = booking.Trip.StartAccessPoint.Name,
                         StartAPLocation = booking.Trip.StartAccessPoint.GoogleLocation,

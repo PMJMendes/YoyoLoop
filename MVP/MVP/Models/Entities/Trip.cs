@@ -19,6 +19,15 @@ namespace MVP.Models.Entities
 
         public Vehicle Vehicle { get; set; }
         public Driver Driver { get; set; }
+
+        public DateTime CalcArrivalTime()
+        {
+            return StartTime +
+                   Departure.Route.Duration +
+                   Departure.DurationModifier +
+                   StartAccessPoint.DurationModifier +
+                   EndAccessPoint.DurationModifier;
+        }
     }
 
     public enum TripStatus

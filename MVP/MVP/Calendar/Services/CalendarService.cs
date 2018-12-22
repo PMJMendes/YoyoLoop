@@ -331,10 +331,10 @@ namespace MVP.Services
                     MGMPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price,
                     StartTime = starttime,
                     ArrivalTime = starttime +
-                                  (model.Route.FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId)?.Duration ?? TimeSpan.Zero) +
+                                  (state.Selection.Route?.Duration ?? TimeSpan.Zero) +
                                   (model.Departure.FirstOrDefault(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType && d.Time == state.Selection.Time)?.DurationModifier ?? TimeSpan.Zero) +
-                                  (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId)?.DurationModifier ?? TimeSpan.Zero) +
-                                  (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)?.DurationModifier ?? TimeSpan.Zero),
+                                  (state.Selection.SAP?.DurationModifier ?? TimeSpan.Zero) +
+                                  (state.Selection.DAP?.DurationModifier ?? TimeSpan.Zero),
                     StartRegionName = state.Selection.Route.StartRegion.Name,
                     StartAPName = state.Selection.SAP.Name,
                     EndRegionName = state.Selection.Route.EndRegion.Name,

@@ -106,11 +106,7 @@ namespace MVP.Services
                     state.MGMPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
                     state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (booking.Seats - 1)) : state.Price * booking.Seats;
                     state.StartTime = booking.Trip.StartTime;
-                    state.ArrivalTime = booking.Trip.StartTime +
-                                        (model.Route.FirstOrDefault(r => r.RouteId == booking.Trip.Departure.Route.RouteId)?.Duration ?? TimeSpan.Zero) +
-                                        (model.Departure.FirstOrDefault(d => d.DepartureId == booking.Trip.Departure.DepartureId)?.DurationModifier ?? TimeSpan.Zero) +
-                                        (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.StartAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero) +
-                                        (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.EndAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero);
+                    state.ArrivalTime = booking.Trip.CalcArrivalTime();
                     state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
                     state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
