@@ -214,13 +214,13 @@ namespace MVP.Checkout
                 foreach(RepeaterItem item in RepInvoicePassengerList.Items)
                 {
                     TextBox name = (TextBox)item.FindControl("txtInvoicePassengerName");
-                    TextBox email = (TextBox)item.FindControl("txtInvoicePassengerEmail");
-                    if(name != null && email != null)
+                    TextBox phone = (TextBox)item.FindControl("txtInvoicePassengerPhone");
+                    if(name != null && phone != null)
                     {
                         pageData.Invoice.Passengers.Add(new ListItem
                         {
                             Text = name.Text,
-                            Value = email.Text
+                            Value = phone.Text
                         });
                     }
                 }

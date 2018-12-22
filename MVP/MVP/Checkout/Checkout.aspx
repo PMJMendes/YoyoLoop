@@ -113,7 +113,7 @@
                                                             <asp:TextBox runat="server" ID="txtInvoicePassengerName" AutoPostback="false" CssClass="checkout__input" type="text" name="name" autocomplete="on" Tabindex="1" placeholder="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceName_Label%>" />
                                                         </div>
                                                         <div class="row ml-0 checkout__input--passenger">
-                                                            <asp:TextBox runat="server" ID="txtInvoicePassengerEmail" AutoPostback="false" CssClass="checkout__input" type="text" name="email" autocomplete="on" Tabindex="1" placeholder="Email" />
+                                                            <asp:TextBox runat="server" ID="txtInvoicePassengerPhone" AutoPostback="false" CssClass="checkout__input" type="text" name="phone" autocomplete="on" Tabindex="1" placeholder="<%$ Resources:LocalizedText, Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label%>" />
                                                         </div>
                                                     </div>
                                                 </ItemTemplate>
