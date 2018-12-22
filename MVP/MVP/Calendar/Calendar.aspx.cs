@@ -353,7 +353,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
-                    pageData.Selection.FareType = (int)pageData.Selection.FareType >= (int)Fare.FareType.PROMOTIONAL ? pageData.Selection.FareType : pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
+                    pageData.Selection.FareType = pageData.Selection.FareType.IsPromocode() ? pageData.Selection.FareType : pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
                     bookupdate = "date";
                 }
 
