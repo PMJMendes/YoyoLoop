@@ -116,7 +116,7 @@ namespace MVP.Services
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
             var seats = state.Selection.Seats;
-            var dayType = GetDayType(date);
+            var dayType = GetDayType(date, model);
             var departures = model.Departure.Where(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                     d => d,
@@ -176,11 +176,18 @@ namespace MVP.Services
             return result;
         }
 
-        public DayType GetDayType(DateTime date)
+        public DayType GetDayType(DateTime date, EntityModel model)
         {
-            // right now only returns day of week, eventually will check for holidays/eves
-
-            return (DayType)date.DayOfWeek;
+            date = date.Date;
+            var result = model.Dates.SingleOrDefault(d => d.Date == date)?.DayType ?? null;
+            if(result == null)
+            {
+                return (DayType)date.DayOfWeek;
+            }
+            else
+            {
+                return result.Value;
+            }
         }
 
         public List<APGroup> GetTimeSlots(CalendarDTO state)
@@ -193,7 +200,7 @@ namespace MVP.Services
                 bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
                 var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
-                var dayType = GetDayType(date);
+                var dayType = GetDayType(date, model);
 
                 var departures = model.Departure.Where(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                     .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
@@ -293,11 +300,10 @@ namespace MVP.Services
 
         public BookingPanelDTO GetBookingPanelData(CalendarDTO state, string trigger)
         {
-            var starttime = state.Selection.Date + state.Selection.Time;
-            var dayType = GetDayType(state.Selection.Date);
-
             using (var model = new EntityModel())
             {
+                var starttime = state.Selection.Date + state.Selection.Time;
+                var dayType = GetDayType(state.Selection.Date, model);
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
                 var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
@@ -437,7 +443,7 @@ namespace MVP.Services
 
         private Trip CreateTrip(CalendarDTO state, EntityModel model)
         {
-            DayType daytype = GetDayType(state.Selection.Date);
+            DayType daytype = GetDayType(state.Selection.Date, model);
             return new Trip
             {
                 TripId = Guid.NewGuid(),
