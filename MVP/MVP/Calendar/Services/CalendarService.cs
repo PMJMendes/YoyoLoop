@@ -325,7 +325,7 @@ namespace MVP.Services
                     StandardPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == (lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD)).Price,
                     Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
                     Promocode = state.Selection.Promocode,
-                    PromoValid = state.Selection.FareType.IsPromocode() ? true : false,
+                    PromoValid = state.Selection.FareType.IsPromocode(),
                     MGM = state.Selection.MGM,
                     UserMGM = state.UserMGM,
                     MGMPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price,
