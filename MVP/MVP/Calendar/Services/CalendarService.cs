@@ -178,16 +178,7 @@ namespace MVP.Services
 
         public DayType GetDayType(DateTime date, EntityModel model)
         {
-            date = date.Date;
-            var result = model.Dates.SingleOrDefault(d => d.Date == date)?.DayType ?? null;
-            if(result == null)
-            {
-                return (DayType)date.DayOfWeek;
-            }
-            else
-            {
-                return result.Value;
-            }
+            return model.Dates.SingleOrDefault(d => d.Date == date.Date)?.DayType ?? (DayType)date.DayOfWeek;
         }
 
         public List<APGroup> GetTimeSlots(CalendarDTO state)
