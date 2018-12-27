@@ -126,6 +126,38 @@ $desktop: "(min-width: 1440px)";
             background-color: #ffffff;
             border: solid 1px rgba(102, 115, 134, 0.2);
         }
+
+        &__phone {
+            white-space: nowrap;
+
+            &--prefix {
+                display: inline-block;
+                width: 20%;
+                height: 2.3rem;
+
+                @media #{$mobile} {
+                    display: none;
+                }
+            }
+
+            &--number {
+                display: inline-block;
+                width: 79%;
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+            }
+
+            &--note {
+                white-space: normal;
+                width: 100%;
+                text-align: center;
+                margin: auto;
+                font-size: 10px;
+                color: #667386;
+            }
+        }
     }
 
     &__forgot-password {

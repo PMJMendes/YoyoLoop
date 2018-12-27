@@ -1055,11 +1055,28 @@
     <Compile Include="Migrations\201810171117050_Corporate.Designer.cs">
       <DependentUpon>201810171117050_Corporate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812211618400_ApplicationUser-CreationDate.cs" />
+    <Compile Include="Migrations\201812211618400_ApplicationUser-CreationDate.Designer.cs">
+      <DependentUpon>201812211618400_ApplicationUser-CreationDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812221144000_AccessPoint-Departure-DurationModifier.cs" />
+    <Compile Include="Migrations\201812221144000_AccessPoint-Departure-DurationModifier.Designer.cs">
+      <DependentUpon>201812221144000_AccessPoint-Departure-DurationModifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812221417232_Promocode-FareType.cs" />
+    <Compile Include="Migrations\201812221417232_Promocode-FareType.Designer.cs">
+      <DependentUpon>201812221417232_Promocode-FareType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812231352406_Dates.cs" />
+    <Compile Include="Migrations\201812231352406_Dates.Designer.cs">
+      <DependentUpon>201812231352406_Dates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
     <Compile Include="Models\Entities\Booking.cs" />
     <Compile Include="Models\Entities\Corporate.cs" />
+    <Compile Include="Models\Entities\Dates.cs" />
     <Compile Include="Models\Entities\Promocode.cs" />
     <Compile Include="Models\Entities\DayType.cs" />
     <Compile Include="Models\Entities\Departure.cs" />
@@ -1389,6 +1406,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810171117050_Corporate.resx">
       <DependentUpon>201810171117050_Corporate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812211618400_ApplicationUser-CreationDate.resx">
+      <DependentUpon>201812211618400_ApplicationUser-CreationDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812221144000_AccessPoint-Departure-DurationModifier.resx">
+      <DependentUpon>201812221144000_AccessPoint-Departure-DurationModifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812221417232_Promocode-FareType.resx">
+      <DependentUpon>201812221417232_Promocode-FareType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812231352406_Dates.resx">
+      <DependentUpon>201812231352406_Dates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

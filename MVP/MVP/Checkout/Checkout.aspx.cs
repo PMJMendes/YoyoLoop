@@ -214,13 +214,13 @@ namespace MVP.Checkout
                 foreach(RepeaterItem item in RepInvoicePassengerList.Items)
                 {
                     TextBox name = (TextBox)item.FindControl("txtInvoicePassengerName");
-                    TextBox email = (TextBox)item.FindControl("txtInvoicePassengerEmail");
-                    if(name != null && email != null)
+                    TextBox phone = (TextBox)item.FindControl("txtInvoicePassengerPhone");
+                    if(name != null && phone != null)
                     {
                         pageData.Invoice.Passengers.Add(new ListItem
                         {
                             Text = name.Text,
-                            Value = email.Text
+                            Value = phone.Text
                         });
                     }
                 }
@@ -262,8 +262,18 @@ namespace MVP.Checkout
                 {
                     pageData.Code = query["Code"];
                 }
-                pageData = service.GetBooking(id, pageData);
-                if(pageData == null)
+                MasterService.ErrorCode error;
+                pageData = service.GetBooking(id, pageData, out error);
+                if (error != MasterService.ErrorCode.OK)
+                {
+                    switch (error)
+                    {
+                        case MasterService.ErrorCode.NOPHONE:
+                            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                            break;
+                    }
+                }
+                if (pageData == null)
                 {
                     // temp blank values to stop page from crashing during debugging
                     pageData = new CheckoutDTO
@@ -279,6 +289,7 @@ namespace MVP.Checkout
                         PromoValid = false,
                         Cost = 0,
                         StartTime = new DateTime(),
+                        ArrivalTime = new DateTime(),
                         StartRegionName = "Região de Origem",
                         StartAPName = "Paragem de Origem",
                         EndRegionName = "Região de Destino",
@@ -333,7 +344,17 @@ namespace MVP.Checkout
         protected void tbPromo_TextChanged(object sender, EventArgs e)
         {
             pageData.Promocode = tbPromo.Text.ToUpper().Trim();
-            pageData = service.CheckPromo(pageData);
+            MasterService.ErrorCode error;
+            pageData = service.CheckPromo(pageData, out error);
+            if (error != MasterService.ErrorCode.OK)
+            {
+                switch (error)
+                {
+                    case MasterService.ErrorCode.NOPHONE:
+                        ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                        break;
+                }
+            }
             UpdateCheckoutPanel();
             if (pageData.Promocode == string.Empty && pageData.Code == string.Empty)
             {

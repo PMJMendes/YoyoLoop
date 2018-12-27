@@ -16,6 +16,7 @@ namespace MVP.Confirm
         public string TicketURL { get; set; }
 
         public DateTime StartTime { get; set; }
+        public DateTime ArrivalTime { get; set; }
         public string StartRegionName { get; set; }
         public string StartAPName { get; set; }
         public string StartAPLocation { get; set; }

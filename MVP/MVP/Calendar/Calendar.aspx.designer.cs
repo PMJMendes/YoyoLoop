@@ -13,24 +13,6 @@ namespace MVP.Calendar {
     public partial class Calendar {
         
         /// <summary>
-        /// DdlEndRegion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlEndRegion;
-        
-        /// <summary>
-        /// DdlEndAP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MVP.Controls.DropdownMenuButton DdlEndAP;
-        
-        /// <summary>
         /// DdlStartRegion control.
         /// </summary>
         /// <remarks>
@@ -47,6 +29,24 @@ namespace MVP.Calendar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MVP.Controls.DropdownMenuButton DdlStartAP;
+        
+        /// <summary>
+        /// DdlEndRegion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Controls.DropdownMenuButton DdlEndRegion;
+        
+        /// <summary>
+        /// DdlEndAP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MVP.Controls.DropdownMenuButton DdlEndAP;
         
         /// <summary>
         /// DdlSeats control.

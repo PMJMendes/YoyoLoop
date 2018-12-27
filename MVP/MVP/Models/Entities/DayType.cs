@@ -15,6 +15,7 @@ namespace MVP.Models.Entities
         FRIDAY,
         SATURDAY,
         HOLIDAY,
-        HOLIDAYEVE
+        HOLIDAYEVE,
+        BLOCKED
     }
 }

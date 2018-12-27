@@ -38,7 +38,7 @@
                                         /img/clock@3x.png 3x"
                                         class="clock">
                                 </div>
-                                <div class="col-8"><strong><asp:label runat="server" ID="LbTime"><%= PanelData.StartTime.ToString("HH\\:mm") %></asp:label></strong></div>
+                                <div class="col-8"><strong><asp:label runat="server" ID="LbTime"><%= PanelData.StartTime.ToString("HH\\:mm") %> &rarr; <%= PanelData.ArrivalTime.ToString("HH\\:mm") %></asp:label></strong></div>
                             </div>
 
                             <!--PREÇO-->

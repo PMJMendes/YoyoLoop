@@ -55,6 +55,7 @@ namespace MVP.Controls
                 Promocode = string.Empty,
                 PromoValid = false,
                 StartTime = DateTime.MinValue,
+                ArrivalTime = DateTime.MinValue,
                 StartRegionName = "REGIAO DE ORIGEM",
                 StartAPName = "Paragem de origem",
                 EndRegionName = "REGIAO DE DESTINO",

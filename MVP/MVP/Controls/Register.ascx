@@ -76,6 +76,14 @@
                                         <asp:RequiredFieldValidator runat="server" ValidationGroup="Register" ControlToValidate="TbRegisterConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmPassword_Validator_ErrorMessage%>" /> <!-- I need a css for this -->
                                         <asp:CompareValidator runat="server" ValidationGroup="Register" ControlToCompare="TbRegisterPassword" ControlToValidate="TbRegisterConfirmPassword" CssClass="text-danger" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Controls_Register_tbRegisterConfirmPassword_CompareValidator_ErrorMessage%>" /> <!-- I need a css for this -->
                                     </div>
+                                    <div class="form-group login__input__phone">
+                                        <select class="form-control login__input login__input__phone--prefix" tabindex="-1">
+                                            <option value="351">+351</option>
+                                        </select>
+                                        <asp:TextBox runat="server" ID="tbRegisterPhoneNumber" AutoPostBack="false" CssClass="form-control login__input login__input__phone--number" type="text" autocomplete="tel-national" Tabindex="0" placeholder="<%$ Resources:LocalizedText, Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label%>" />
+                                        <div class="login__input__phone--note"><asp:Label runat="server" CssClass="" Text="<%$ Resources:LocalizedText, Controls_Register_tbRegisterPhoneNumber_Note %>"/></div>
+                                        <asp:CompareValidator runat="server" Type="Integer" Operator="DataTypeCheck" ValidationGroup="Register" ControlToValidate="tbRegisterPhoneNumber" CssClass="text-danger" Style="white-space:normal" Display="Dynamic" ErrorMessage="<%$ Resources:LocalizedText, Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_CompareValidator_ErrorMessage%>"/>
+                                    </div>
                                 </div>
                             </div>
 

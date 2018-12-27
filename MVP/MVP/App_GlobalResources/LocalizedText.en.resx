@@ -2634,4 +2634,10 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
   </data>
+  <data name="MGM_NoPhone_ErrorMessage" xml:space="preserve">
+    <value>To use your €20 voucher you need a valid phone number.&lt;br&gt;You may add your number on your profile.</value>
+  </data>
+  <data name="Controls_Register_tbRegisterPhoneNumber_Note" xml:space="preserve">
+    <value>Important so we can contact you at the moment of your departure</value>
+  </data>
 </root>

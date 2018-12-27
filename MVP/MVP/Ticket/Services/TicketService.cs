@@ -18,6 +18,7 @@ namespace MVP.Services
                 Cost = 0,
                 TicketCode = "#MYTICKETYO",
                 StartTime = DateTime.Now,
+                ArrivalTime = DateTime.Now,
                 StartRegionName = "Start Region",
                 StartAPName = "Start AP",
                 EndRegionName = "End Region",
@@ -32,6 +33,8 @@ namespace MVP.Services
             {
                 var booking = model.Booking.Where(b => b.BookingId == id && b.Status == BookingStatus.BOOKED)
                                            .Include(t => t.Trip)
+                                           .Include(d => d.Trip.Departure)
+                                           .Include(r => r.Trip.Departure.Route)
                                            .Include(sap => sap.Trip.StartAccessPoint)
                                            .Include(dap => dap.Trip.EndAccessPoint)
                                            .Include(sr => sr.Trip.StartAccessPoint.Region)
@@ -50,6 +53,7 @@ namespace MVP.Services
                         Cost = booking.Cost,
                         TicketCode = booking.TicketCode,
                         StartTime = booking.Trip.StartTime,
+                        ArrivalTime = booking.Trip.CalcArrivalTime(),
                         StartRegionName = booking.Trip.StartAccessPoint.Region.Name,
                         StartAPName = booking.Trip.StartAccessPoint.Name,
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,

@@ -104,7 +104,10 @@
 
                                         <!-- Lista de Passageiros -->
                                         <div class="<%= pageData.Corporate ? "" : "hide" %>">
-                                            <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_PassengerList_Label%>"/></div>
+                                            <div class="checkout__label">
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_PassengerList_Label%>"/>
+                                                <span class="ml-1 login__input__phone--note">(<asp:Label runat="server" CssClass="" Text="<%$ Resources:LocalizedText, Controls_Register_tbRegisterPhoneNumber_Note %>"/>)</span>
+                                            </div>
 
                                             <asp:Repeater runat="server" ID="RepInvoicePassengerList">
                                                 <ItemTemplate>
@@ -113,11 +116,12 @@
                                                             <asp:TextBox runat="server" ID="txtInvoicePassengerName" AutoPostback="false" CssClass="checkout__input" type="text" name="name" autocomplete="on" Tabindex="1" placeholder="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceName_Label%>" />
                                                         </div>
                                                         <div class="row ml-0 checkout__input--passenger">
-                                                            <asp:TextBox runat="server" ID="txtInvoicePassengerEmail" AutoPostback="false" CssClass="checkout__input" type="text" name="email" autocomplete="on" Tabindex="1" placeholder="Email" />
+                                                            <asp:TextBox runat="server" ID="txtInvoicePassengerPhone" AutoPostback="false" CssClass="checkout__input" type="text" name="phone" autocomplete="on" Tabindex="1" placeholder="<%$ Resources:LocalizedText, Profile_PersonalDetails_ProfileDataForm_tbPhoneNumber_Label%>" />
                                                         </div>
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:Repeater>
+                                            
                                         </div>
 
                                         <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceAddress_Label%>"/></div>

@@ -49,19 +49,6 @@
 
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
-                        <!-- DESTINO -->
-                        <div class="col-lg-4 col-md-4 text-left">
-                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_DestinationDropdown_Label%>"/></span>
-                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_DestinationDropdown_SelectionPrompt%>" OnItemSelected="DdlEndRegion_ItemSelected" />
-                        </div>
-                        <!-- PARAGENS -->
-                        <div class="col-lg-8 col-md-8 mx-auto text-left">
-                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_Label%>"/></span>
-                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndAP" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_SelectionPrompt%>" OnItemSelected="DdlEndAP_ItemSelected" />
-                        </div>
-                    </div>
-
-                    <div class="row mt-3">
                         <!-- ORIGEM -->
                         <div class="col-lg-4 col-md-4 text-left">
                             <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_OriginDropdown_Label%>"/></span>
@@ -71,6 +58,19 @@
                         <div class="col-lg-8 col-md-8 mx-auto text-left">
                             <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_Label%>"/></span>
                             <yoyo:DropdownMenuButton runat="server" ID="DdlStartAP" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_SelectionPrompt%>" OnItemSelected="DdlStartAP_ItemSelected" />
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <!-- DESTINO -->
+                        <div class="col-lg-4 col-md-4 text-left">
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_DestinationDropdown_Label%>"/></span>
+                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndRegion" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_DestinationDropdown_SelectionPrompt%>" OnItemSelected="DdlEndRegion_ItemSelected" />
+                        </div>
+                        <!-- PARAGENS -->
+                        <div class="col-lg-8 col-md-8 mx-auto text-left">
+                            <span class="text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_Label%>"/></span>
+                            <yoyo:DropdownMenuButton runat="server" ID="DdlEndAP" SelectionPrompt="<%$ Resources:LocalizedText, Calendar_Header_APDropdown_SelectionPrompt%>" OnItemSelected="DdlEndAP_ItemSelected" />
                         </div>
                     </div>
                 </div>

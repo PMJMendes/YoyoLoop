@@ -105,7 +105,7 @@ namespace MVP.Account
         {
             var manager = context.GetUserManager<ApplicationUserManager>();
             var signInManager = context.GetUserManager<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = email, Email = email, ContactName = name, EmailConfirmed = true };
+            var user = new ApplicationUser() { UserName = email, Email = email, ContactName = name, EmailConfirmed = true, CreationDate = DateTime.Now };
             IdentityResult result = manager.Create(user);
             if (result.Succeeded)
             {

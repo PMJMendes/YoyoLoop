@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using MVP.Controls;
 using MVP.Profile.Services;
+using MVP.Models.Helpers;
 
 namespace MVP.Services
 {
@@ -115,7 +116,7 @@ namespace MVP.Services
             bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
             var threshold = DateTime.Now.TimeOfDay + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
             var seats = state.Selection.Seats;
-            var dayType = GetDayType(date);
+            var dayType = GetDayType(date, model);
             var departures = model.Departure.Where(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                 .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
                     d => d,
@@ -175,11 +176,9 @@ namespace MVP.Services
             return result;
         }
 
-        public DayType GetDayType(DateTime date)
+        public DayType GetDayType(DateTime date, EntityModel model)
         {
-            // right now only returns day of week, eventually will check for holidays/eves
-
-            return (DayType)date.DayOfWeek;
+            return model.Dates.SingleOrDefault(d => d.Date == date.Date)?.DayType ?? (DayType)date.DayOfWeek;
         }
 
         public List<APGroup> GetTimeSlots(CalendarDTO state)
@@ -192,7 +191,7 @@ namespace MVP.Services
                 bool lastminute = Math.Ceiling((date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
                 var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
 
-                var dayType = GetDayType(date);
+                var dayType = GetDayType(date, model);
 
                 var departures = model.Departure.Where(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType)
                     .GroupJoin(model.Trip.Where(t => t.Status != TripStatus.CANCELLED && DbFunctions.TruncateTime(t.StartTime) == date),
@@ -232,8 +231,9 @@ namespace MVP.Services
             }
         }
 
-        public CalendarDTO CheckPromo(CalendarDTO state)
+        public CalendarDTO CheckPromo(CalendarDTO state, out MasterService.ErrorCode error)
         {
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
@@ -255,7 +255,16 @@ namespace MVP.Services
                         {
                             if(model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == state.UserId).ReferredBy == null)
                             {
-                                state.Selection.MGM = true;
+                                string phone = model.Users.FirstOrDefault(u => u.Id == state.UserId).PhoneNumber;
+                                if (!string.IsNullOrEmpty(phone))
+                                {
+                                    state.Selection.MGM = true;
+                                }
+                                else
+                                {
+                                    state.Selection.MGM = false;
+                                    error = MasterService.ErrorCode.NOPHONE;
+                                }
                             }
                             else
                             {
@@ -268,7 +277,7 @@ namespace MVP.Services
                         state.Selection.MGM = false;
                         if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Selection.Promocode))
                         {
-                            state.Selection.FareType = Fare.FareType.PROMOTIONAL;
+                            state.Selection.FareType = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Selection.Promocode).FareType;
                         }
                         else
                         {
@@ -282,11 +291,10 @@ namespace MVP.Services
 
         public BookingPanelDTO GetBookingPanelData(CalendarDTO state, string trigger)
         {
-            var starttime = state.Selection.Date + state.Selection.Time;
-            var dayType = GetDayType(state.Selection.Date);
-
             using (var model = new EntityModel())
             {
+                var starttime = state.Selection.Date + state.Selection.Time;
+                var dayType = GetDayType(state.Selection.Date, model);
                 int capacity = model.Settings.Select(s => s.VehicleCapacity).First();
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
                 var threshold = DateTime.Now + model.Settings.Select(s => s.MinTimeBookLastMinute).First();
@@ -314,11 +322,16 @@ namespace MVP.Services
                     StandardPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == (lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD)).Price,
                     Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
                     Promocode = state.Selection.Promocode,
-                    PromoValid = state.Selection.FareType == Fare.FareType.PROMOTIONAL ? true : false,
+                    PromoValid = state.Selection.FareType.IsPromocode(),
                     MGM = state.Selection.MGM,
                     UserMGM = state.UserMGM,
                     MGMPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price,
                     StartTime = starttime,
+                    ArrivalTime = starttime +
+                                  (state.Selection.Route?.Duration ?? TimeSpan.Zero) +
+                                  (model.Departure.FirstOrDefault(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType && d.Time == state.Selection.Time)?.DurationModifier ?? TimeSpan.Zero) +
+                                  (state.Selection.SAP?.DurationModifier ?? TimeSpan.Zero) +
+                                  (state.Selection.DAP?.DurationModifier ?? TimeSpan.Zero),
                     StartRegionName = state.Selection.Route.StartRegion.Name,
                     StartAPName = state.Selection.SAP.Name,
                     EndRegionName = state.Selection.Route.EndRegion.Name,
@@ -421,7 +434,7 @@ namespace MVP.Services
 
         private Trip CreateTrip(CalendarDTO state, EntityModel model)
         {
-            DayType daytype = GetDayType(state.Selection.Date);
+            DayType daytype = GetDayType(state.Selection.Date, model);
             return new Trip
             {
                 TripId = Guid.NewGuid(),

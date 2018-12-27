@@ -353,7 +353,7 @@ namespace MVP.Calendar
                 if (pageData.Selection.Date != localData.Values.CalSelectedDate) // New date
                 {
                     pageData.Selection.Date = localData.Values.CalSelectedDate;
-                    pageData.Selection.FareType = pageData.Selection.FareType == Fare.FareType.PROMOTIONAL ? Fare.FareType.PROMOTIONAL : pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
+                    pageData.Selection.FareType = pageData.Selection.FareType.IsPromocode() ? pageData.Selection.FareType : pageData.DaySlots.Where(d => d.Day == pageData.Selection.Date).Select(p => p.FareType).First();
                     bookupdate = "date";
                 }
 
@@ -373,7 +373,17 @@ namespace MVP.Calendar
                 if (pageData.Selection.Promocode != localData.Values.Promocode) // New promocode
                 {
                     pageData.Selection.Promocode = localData.Values.Promocode;
-                    pageData = service.CheckPromo(pageData);
+                    MasterService.ErrorCode error;
+                    pageData = service.CheckPromo(pageData, out error);
+                    if(error != MasterService.ErrorCode.OK)
+                    {
+                        switch(error)
+                        {
+                            case MasterService.ErrorCode.NOPHONE:
+                                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                                break;
+                        }
+                    }
                     bookupdate = "promo";
                 }
             }

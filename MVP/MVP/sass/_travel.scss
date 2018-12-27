@@ -226,6 +226,17 @@ $desktop: "(min-width: 1440px)";
                 text-decoration: underline;
             }
 
+            &__footnote {
+                margin-top: 10px;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                font-weight: bold;
+                line-height: 1.3;
+                color: #535e7b;
+            }
+
             &__location {
                 font-size: 14px;
                 font-weight: normal;

@@ -32,14 +32,14 @@
                                 <div class="travel__card__first__from">
                                     <div class="travel__card__first__point"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Origin%>"/></div>
                                     <div class="travel__card__first__city"><%= pageData.StartRegionName.ToUpper() %></div>
-                                    <div class="travel__card__first__area"><%= pageData.StartAPName %></div>
+                                    <div class="travel__card__first__area"><a class="travel__card__first__area" target="_blank" href="<%= pageData.StartAPLocation %>"><%= pageData.StartAPName %></a></div>
                                     <div class="travel__card__first__location"><%= "<br>" %></div>
                                 </div>
 
                                 <div class="travel__card__first__to mt-3">
                                     <div class="travel__card__first__point"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Controls_Ticket_Destination%>"/></div>
                                     <div class="travel__card__first__city"><%= pageData.EndRegionName.ToUpper() %></div>
-                                    <div class="travel__card__first__area"><%= pageData.EndAPName %></div>
+                                    <div class="travel__card__first__area"><a class="travel__card__first__area" target="_blank" href="<%= pageData.EndAPLocation %>"><%= pageData.EndAPName %></a></div>
                                     <div class="travel__card__first__location"><%= "<br>" %></div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
 
                                 <div class="travel__card__first__text">
                                     <img class="mr-2" src="/img/clock-black.png" srcset="/img/clock-black@2x.png 2x, /img/clock-black@3x.png 3x">
-                                    <%= pageData.StartTime.ToString("HH\\:mm") %>
+                                    <%= pageData.StartTime.ToString("HH\\:mm") %> &rarr; <%= pageData.ArrivalTime.ToString("HH\\:mm") %>
                                 </div>
 
                                 <div class="travel__card__first__text">
@@ -92,6 +92,9 @@
                                 </div>
                                 <!-- END OF HIDE -->
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="travel__card__first__footnote"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Confirm_Service_SendTicket_Email_Body_SeeOnMap%>"/></div>
                         </div>
                     </div>
                   

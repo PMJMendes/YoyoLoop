@@ -70,8 +70,9 @@ namespace MVP.Services
             }
         }
 
-        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state)
+        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state, out MasterService.ErrorCode error)
         {
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 var booking = model.Booking.Where(b => b.BookingId == id)
@@ -96,15 +97,16 @@ namespace MVP.Services
                     state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
                     state.Promocode = booking.Promocode?.Code ?? (!string.IsNullOrEmpty(state.Code) ? state.Code : string.Empty);
-                    state.PromoValid = booking.FareType == Fare.FareType.PROMOTIONAL ? true : false;
+                    state.PromoValid = booking.FareType.IsPromocode();
                     if (booking.MGM)
                     {
                         state.UserMGM = CheckUserMGM(state.UserId);
-                        state.MGM = CheckMGMCode(state.UserId, state.Code);
+                        state.MGM = CheckMGMCode(state.UserId, state.Code, out error);
                     }
                     state.MGMPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
                     state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (booking.Seats - 1)) : state.Price * booking.Seats;
                     state.StartTime = booking.Trip.StartTime;
+                    state.ArrivalTime = booking.Trip.CalcArrivalTime();
                     state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
                     state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
@@ -152,6 +154,7 @@ namespace MVP.Services
                 UserMGM = state.UserMGM,
                 MGMPrice = state.MGMPrice,
                 StartTime = state.StartTime,
+                ArrivalTime = state.ArrivalTime,
                 StartRegionName = state.StartRegionName,
                 StartAPName = state.StartAPName,
                 EndRegionName = state.EndRegionName,
@@ -179,7 +182,7 @@ namespace MVP.Services
                 });
             }
 
-            if (paneldata.FareType == Fare.FareType.PROMOTIONAL)
+            if (paneldata.FareType.IsPromocode())
             {
                 if (paneldata.MGM || paneldata.UserMGM)
                 {
@@ -261,13 +264,23 @@ namespace MVP.Services
             return result;
         }
 
-        public bool CheckMGMCode(string userid, string code)
+        public bool CheckMGMCode(string userid, string code, out MasterService.ErrorCode error)
         {
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 if (model.Users.Any(u => u.MGMCode == code && u.Id != userid) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
                 {
-                    return true;
+                    string phone = model.Users.FirstOrDefault(u => u.Id == userid).PhoneNumber;
+                    if (!string.IsNullOrEmpty(phone))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        error = MasterService.ErrorCode.NOPHONE;
+                        return false;
+                    }
                 }
                 else
                 {
@@ -276,8 +289,9 @@ namespace MVP.Services
             }
         }
 
-        public CheckoutDTO CheckPromo(CheckoutDTO state)
+        public CheckoutDTO CheckPromo(CheckoutDTO state, out MasterService.ErrorCode error)
         {
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
@@ -291,14 +305,14 @@ namespace MVP.Services
                 }
                 else
                 {
-                    state.MGM = CheckMGMCode(state.UserId, state.Promocode);
+                    state.MGM = CheckMGMCode(state.UserId, state.Promocode, out error);
 
-                    if(!state.MGM)
+                    if (!state.MGM)
                     {
                         state.Code = string.Empty;
                         if (model.Promocode.Any(p => p.Active && p.StartDate <= DateTime.Today && p.EndDate >= DateTime.Today && p.Code.ToUpper() == state.Promocode.ToUpper()))
                         {
-                            state.FareType = Fare.FareType.PROMOTIONAL;
+                            state.FareType = model.Promocode.FirstOrDefault(p => p.Code.ToUpper() == state.Promocode).FareType;
                             state.PromoValid = true;
                         }
                         else
