@@ -262,11 +262,16 @@ namespace MVP.Checkout
                 {
                     pageData.Code = query["Code"];
                 }
-                string error;
+                MasterService.ErrorCode error;
                 pageData = service.GetBooking(id, pageData, out error);
-                if (error == "phone")
+                if (error != MasterService.ErrorCode.OK)
                 {
-                    ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                    switch (error)
+                    {
+                        case MasterService.ErrorCode.NOPHONE:
+                            ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                            break;
+                    }
                 }
                 if (pageData == null)
                 {
@@ -339,13 +344,17 @@ namespace MVP.Checkout
         protected void tbPromo_TextChanged(object sender, EventArgs e)
         {
             pageData.Promocode = tbPromo.Text.ToUpper().Trim();
-            string error;
+            MasterService.ErrorCode error;
             pageData = service.CheckPromo(pageData, out error);
-            if (error == "phone")
+            if (error != MasterService.ErrorCode.OK)
             {
-                ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                switch (error)
+                {
+                    case MasterService.ErrorCode.NOPHONE:
+                        ApplicationHelpers.ShowMessage(this, Resources.LocalizedText.MGM_NoPhone_ErrorMessage);
+                        break;
+                }
             }
-
             UpdateCheckoutPanel();
             if (pageData.Promocode == string.Empty && pageData.Code == string.Empty)
             {

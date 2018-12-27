@@ -1564,6 +1564,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Importante para o contactarmos no momento da partida da sua viagem.
+        /// </summary>
+        internal static string Controls_Register_tbRegisterPhoneNumber_Note {
+            get {
+                return ResourceManager.GetString("Controls_Register_tbRegisterPhoneNumber_Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Para receberes o teu bilhete,&lt;br&gt;primeiro precisamos dos teus dados.
         /// </summary>
         internal static string Controls_Register_WithEmail {

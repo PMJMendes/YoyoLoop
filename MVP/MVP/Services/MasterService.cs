@@ -16,6 +16,12 @@ namespace MVP.Services
 {
     public class MasterService
     {
+        public enum ErrorCode
+        {
+            OK,
+            NOPHONE
+        }
+
         public SignInStatus LogIn (IOwinContext context, string email, string password, bool rememberme)
         {
             var manager = context.GetUserManager<ApplicationUserManager>();

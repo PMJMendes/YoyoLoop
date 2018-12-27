@@ -233,9 +233,9 @@ namespace MVP.Services
             }
         }
 
-        public CalendarDTO CheckPromo(CalendarDTO state, out string error)
+        public CalendarDTO CheckPromo(CalendarDTO state, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.Selection.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();
@@ -265,7 +265,7 @@ namespace MVP.Services
                                 else
                                 {
                                     state.Selection.MGM = false;
-                                    error = "phone";
+                                    error = MasterService.ErrorCode.NOPHONE;
                                 }
                             }
                             else
@@ -325,16 +325,16 @@ namespace MVP.Services
                     StandardPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == (lastminute ? Fare.FareType.LASTMINUTE : Fare.FareType.STANDARD)).Price,
                     Price = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == state.Selection.FareType).Price,
                     Promocode = state.Selection.Promocode,
-                    PromoValid = (int)state.Selection.FareType >= (int)Fare.FareType.PROMOTIONAL ? true : false,
+                    PromoValid = state.Selection.FareType.IsPromocode(),
                     MGM = state.Selection.MGM,
                     UserMGM = state.UserMGM,
                     MGMPrice = model.Route.Include(r => r.Fares).FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId).Fares.FirstOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price,
                     StartTime = starttime,
                     ArrivalTime = starttime +
-                                  (model.Route.FirstOrDefault(r => r.RouteId == state.Selection.Route.RouteId)?.Duration ?? TimeSpan.Zero) +
+                                  (state.Selection.Route?.Duration ?? TimeSpan.Zero) +
                                   (model.Departure.FirstOrDefault(d => d.Active && d.Route.RouteId == state.Selection.Route.RouteId && d.DayType == dayType && d.Time == state.Selection.Time)?.DurationModifier ?? TimeSpan.Zero) +
-                                  (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == state.Selection.SAP.AccessPointId)?.DurationModifier ?? TimeSpan.Zero) +
-                                  (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == state.Selection.DAP.AccessPointId)?.DurationModifier ?? TimeSpan.Zero),
+                                  (state.Selection.SAP?.DurationModifier ?? TimeSpan.Zero) +
+                                  (state.Selection.DAP?.DurationModifier ?? TimeSpan.Zero),
                     StartRegionName = state.Selection.Route.StartRegion.Name,
                     StartAPName = state.Selection.SAP.Name,
                     EndRegionName = state.Selection.Route.EndRegion.Name,

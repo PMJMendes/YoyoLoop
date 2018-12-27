@@ -104,7 +104,10 @@
 
                                         <!-- Lista de Passageiros -->
                                         <div class="<%= pageData.Corporate ? "" : "hide" %>">
-                                            <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_PassengerList_Label%>"/></div>
+                                            <div class="checkout__label">
+                                                <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_PassengerList_Label%>"/>
+                                                <span class="ml-1 login__input__phone--note">(<asp:Label runat="server" CssClass="" Text="<%$ Resources:LocalizedText, Controls_Register_tbRegisterPhoneNumber_Note %>"/>)</span>
+                                            </div>
 
                                             <asp:Repeater runat="server" ID="RepInvoicePassengerList">
                                                 <ItemTemplate>
@@ -118,6 +121,7 @@
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:Repeater>
+                                            
                                         </div>
 
                                         <div class="checkout__label"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, Checkout_Billing_tbInvoiceAddress_Label%>"/></div>

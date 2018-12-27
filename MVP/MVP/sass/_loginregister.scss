@@ -148,6 +148,15 @@ $desktop: "(min-width: 1440px)";
                     width: 100%;
                 }
             }
+
+            &--note {
+                white-space: normal;
+                width: 100%;
+                text-align: center;
+                margin: auto;
+                font-size: 10px;
+                color: #667386;
+            }
         }
     }
 

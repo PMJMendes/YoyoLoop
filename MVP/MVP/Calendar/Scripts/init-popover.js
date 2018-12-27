@@ -9,7 +9,7 @@
 
             var panel = this.nextElementSibling;
             if ($(panel).hasClass('show')) {
-                $(panel).removeClass('show')
+                $(panel).removeClass('show');
             } else {
                 this.classList.toggle("active");
                 $(panel).addClass('show');

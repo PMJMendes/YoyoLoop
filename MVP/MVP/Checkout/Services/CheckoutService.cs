@@ -70,9 +70,9 @@ namespace MVP.Services
             }
         }
 
-        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state, out string error)
+        public CheckoutDTO GetBooking(Guid id, CheckoutDTO state, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 var booking = model.Booking.Where(b => b.BookingId == id)
@@ -97,7 +97,7 @@ namespace MVP.Services
                     state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
                     state.Promocode = booking.Promocode?.Code ?? (!string.IsNullOrEmpty(state.Code) ? state.Code : string.Empty);
-                    state.PromoValid = (int)booking.FareType >= (int)Fare.FareType.PROMOTIONAL ? true : false;
+                    state.PromoValid = booking.FareType.IsPromocode();
                     if (booking.MGM)
                     {
                         state.UserMGM = CheckUserMGM(state.UserId);
@@ -106,11 +106,7 @@ namespace MVP.Services
                     state.MGMPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.MEMBERGETMEMBER).Price;
                     state.Cost = state.MGM || state.UserMGM ? state.MGMPrice + (state.Price * (booking.Seats - 1)) : state.Price * booking.Seats;
                     state.StartTime = booking.Trip.StartTime;
-                    state.ArrivalTime = booking.Trip.StartTime +
-                                        (model.Route.FirstOrDefault(r => r.RouteId == booking.Trip.Departure.Route.RouteId)?.Duration ?? TimeSpan.Zero) +
-                                        (model.Departure.FirstOrDefault(d => d.DepartureId == booking.Trip.Departure.DepartureId)?.DurationModifier ?? TimeSpan.Zero) +
-                                        (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.StartAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero) +
-                                        (model.AccessPoint.FirstOrDefault(ap => ap.AccessPointId == booking.Trip.EndAccessPoint.AccessPointId)?.DurationModifier ?? TimeSpan.Zero);
+                    state.ArrivalTime = booking.Trip.CalcArrivalTime();
                     state.StartRegionName = booking.Trip.StartAccessPoint.Region.Name;
                     state.StartAPName = booking.Trip.StartAccessPoint.Name;
                     state.EndRegionName = booking.Trip.EndAccessPoint.Region.Name;
@@ -186,7 +182,7 @@ namespace MVP.Services
                 });
             }
 
-            if ((int)paneldata.FareType >= (int)Fare.FareType.PROMOTIONAL)
+            if (paneldata.FareType.IsPromocode())
             {
                 if (paneldata.MGM || paneldata.UserMGM)
                 {
@@ -268,9 +264,9 @@ namespace MVP.Services
             return result;
         }
 
-        public bool CheckMGMCode(string userid, string code, out string error)
+        public bool CheckMGMCode(string userid, string code, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 if (model.Users.Any(u => u.MGMCode == code && u.Id != userid) && model.Users.Include(u => u.ReferredBy).FirstOrDefault(u => u.Id == userid).ReferredBy == null)
@@ -282,7 +278,7 @@ namespace MVP.Services
                     }
                     else
                     {
-                        error = "phone";
+                        error = MasterService.ErrorCode.NOPHONE;
                         return false;
                     }
                 }
@@ -293,9 +289,9 @@ namespace MVP.Services
             }
         }
 
-        public CheckoutDTO CheckPromo(CheckoutDTO state, out string error)
+        public CheckoutDTO CheckPromo(CheckoutDTO state, out MasterService.ErrorCode error)
         {
-            error = string.Empty;
+            error = MasterService.ErrorCode.OK;
             using (var model = new EntityModel())
             {
                 bool lastminute = Math.Ceiling((state.StartTime.Date - DateTime.Today).TotalDays) < model.Settings.Select(s => s.LastMinuteThreshold).First();

@@ -23,4 +23,19 @@ namespace MVP.Models.Entities
             SPECIAL2
         }
     }
+
+    public static class FareExtentions
+    {
+        public static bool IsPromocode(this Fare.FareType type)
+        {
+            if (type >= Fare.FareType.PROMOTIONAL)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }

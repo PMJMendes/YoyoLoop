@@ -49,11 +49,8 @@ namespace MVP.Calendar
                 var startlabel = (Label)header.FindControl("StartAP");
                 var endlabel = (Label)header.FindControl("EndAP");
                 var control = (Repeater)e.Item.FindControl("RowRepeater");
-                if(e.Item.ItemIndex == 0)
-                {
-                    header.CssClass += " active";
-                    panel.CssClass += " show";
-                }
+                header.CssClass += " active";
+                panel.CssClass += " show";
                 startlabel.Text = slot.StartAPName;
                 endlabel.Text = slot.EndAPName; 
                 control.DataSource = slot.Times.Select((x, i) => new { Index = i, Value = x })
