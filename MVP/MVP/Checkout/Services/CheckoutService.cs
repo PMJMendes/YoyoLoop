@@ -97,7 +97,7 @@ namespace MVP.Services
                     state.StandardPrice = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == Fare.FareType.STANDARD).Price;
                     state.Price = booking.Trip.Departure.Route.Fares.SingleOrDefault(f => f.Type == booking.FareType).Price;
                     state.Promocode = booking.Promocode?.Code ?? (!string.IsNullOrEmpty(state.Code) ? state.Code : string.Empty);
-                    state.PromoValid = booking.FareType.IsPromocode() ? true : false;
+                    state.PromoValid = booking.FareType.IsPromocode();
                     if (booking.MGM)
                     {
                         state.UserMGM = CheckUserMGM(state.UserId);
