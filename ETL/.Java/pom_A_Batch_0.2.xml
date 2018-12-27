@@ -23,9 +23,9 @@
     <talend.job.finalName>a_batch_0_2</talend.job.finalName>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.project.branch/>
-    <talend.job.context>Local</talend.job.context>
+    <talend.job.context>Dev</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-12-22 185946043</talend.job.date>
+    <talend.job.date>2018-12-22 204302032</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.a_batch_0_2</talend.job.package>
     <talend.job.class>${talend.job.package}.${talend.job.name}</talend.job.class>

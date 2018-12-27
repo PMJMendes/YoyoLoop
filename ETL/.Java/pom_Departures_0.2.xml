@@ -27,7 +27,7 @@
     <talend.project.branch></talend.project.branch>
     <talend.job.context>Local</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.date>2018-12-22 185945602</talend.job.date>
+    <talend.job.date>2018-12-22 204301174</talend.job.date>
     <current.resources.dir>${basedir}/src/main/resources</current.resources.dir>
     <talend.job.package>yetl.departures_0_2</talend.job.package>
     <talend.job.name>Departures</talend.job.name>
