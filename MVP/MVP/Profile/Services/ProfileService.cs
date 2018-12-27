@@ -264,7 +264,11 @@ namespace MVP.Services
             {
                 var user = model.Users.FirstOrDefault(u => u.Id == state.UserId);
                 user.ContactName = state.ContactName;
-                user.BirthDate = DateTime.Parse(state.BirthDate);
+                DateTime birthdate;
+                if(DateTime.TryParse(state.BirthDate, out birthdate))
+                {
+                    user.BirthDate = birthdate;
+                }
                 user.PhoneNumber = state.PhoneNumber;
                 model.SaveChanges();
             }
