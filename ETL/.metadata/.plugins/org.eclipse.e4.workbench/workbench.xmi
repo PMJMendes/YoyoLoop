@@ -45,7 +45,6 @@
                 <children xsi:type="basic:PartStack" xmi:id="_5I5CvQ-LEem-fr4ogZo2Xw" elementId="bottomLayout" containerData="5152" selectedElement="_5I5CwQ-LEem-fr4ogZo2Xw">
                   <tags>newtablook</tags>
                   <tags>active</tags>
-                  <tags>noFocus</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_5I5Cvg-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" ref="_5I5Dmg-LEem-fr4ogZo2Xw"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_5I5Cvw-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.views.ContextsView" ref="_5I5DnQ-LEem-fr4ogZo2Xw"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_5I5CwA-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.views.properties.ComponentSettingsView" ref="_5I5DoA-LEem-fr4ogZo2Xw"/>
@@ -136,7 +135,7 @@
       </menus>
       <toolbar xmi:id="_5I5DmQ-LEem-fr4ogZo2Xw" elementId="org.eclipse.gef.ui.palette_view"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_5I5Dmg-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Job(A_Batch 0.2)" iconURI="platform:/plugin/org.talend.common.ui.runtime/icons1/process_icon.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_5I5Dmg-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.views.jobsettings.JobSettingsView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Job" iconURI="platform:/plugin/org.talend.common.ui.runtime/icons1/process_icon.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
@@ -166,11 +165,12 @@
       </menus>
       <toolbar xmi:id="_5I5Dog-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.views.properties.ComponentSettingsView" visible="false"/>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_5I5Dow-LEem-fr4ogZo2Xw" elementId="org.talend.designer.runprocess.ui.views.processview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Run (Job A_Batch)" iconURI="platform:/plugin/org.talend.designer.runprocess/icons/process_view.png" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_5I5Dow-LEem-fr4ogZo2Xw" elementId="org.talend.designer.runprocess.ui.views.processview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Run job" iconURI="platform:/plugin/org.talend.designer.runprocess/icons/process_view.png" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Talend</tags>
       <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_5I5DpA-LEem-fr4ogZo2Xw" elementId="org.talend.designer.runprocess.ui.views.processview">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -180,15 +180,9 @@
     <trimBars xmi:id="_5I5Dpg-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.main.toolbar" contributorURI="platform:/plugin/org.eclipse.ui.workbench">
       <children xsi:type="menu:ToolBar" xmi:id="_5I5Dpw-LEem-fr4ogZo2Xw" elementId="!!!ApplicationActionBarAdvisor.save!!!">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5DqA-LEem-fr4ogZo2Xw" elementId="save">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5DqQ-LEem-fr4ogZo2Xw" elementId="org.talend.rcp.CoolItemLinks">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5Dqg-LEem-fr4ogZo2Xw">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5Dqw-LEem-fr4ogZo2Xw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -196,108 +190,33 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5Dxg-LEem-fr4ogZo2Xw" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5Dxw-LEem-fr4ogZo2Xw" elementId="debug">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5DyA-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5DyQ-LEem-fr4ogZo2Xw" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5Dyg-LEem-fr4ogZo2Xw" elementId="Search">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5Dyw-LEem-fr4ogZo2Xw" elementId="org.eclipse.search.OpenSearchDialogPage">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5DzA-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.edit.text.actionSet.annotationNavigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5DzQ-LEem-fr4ogZo2Xw" elementId="history.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5Dzg-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5Dzw-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D0A-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.edit.text.actionSet.navigation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D0Q-LEem-fr4ogZo2Xw" elementId="history.group">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D0g-LEem-fr4ogZo2Xw" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D0w-LEem-fr4ogZo2Xw" elementId="org.talend.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D1A-LEem-fr4ogZo2Xw" elementId="debug">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D1Q-LEem-fr4ogZo2Xw" elementId="org.talend.designer.core.ui.action.OpenJobAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D1g-LEem-fr4ogZo2Xw" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D1w-LEem-fr4ogZo2Xw" elementId="org.talend.repository.CreateactionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D2A-LEem-fr4ogZo2Xw" elementId="Default">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D2Q-LEem-fr4ogZo2Xw" elementId="org.talend.repository.repositoryitem.createJob">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D2g-LEem-fr4ogZo2Xw" elementId="org.talend.repository.actionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D2w-LEem-fr4ogZo2Xw" elementId="Default">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D3A-LEem-fr4ogZo2Xw" elementId="org.talend.repository.projectsettings">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D3Q-LEem-fr4ogZo2Xw" elementId="org.talend.repository.updateModifications">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D3g-LEem-fr4ogZo2Xw" elementId="org.talend.repository.exportProjects">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D3w-LEem-fr4ogZo2Xw" elementId="org.talend.repository.bootTalendActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D4A-LEem-fr4ogZo2Xw" elementId="Default">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D4Q-LEem-fr4ogZo2Xw" elementId="org.talend.repository.bootTalendAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D4g-LEem-fr4ogZo2Xw" elementId="org.talend.repository.demoprojcet.actionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D4w-LEem-fr4ogZo2Xw" elementId="Default">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D5A-LEem-fr4ogZo2Xw" elementId="org.talend.repository.actions.importDemo">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D5Q-LEem-fr4ogZo2Xw" elementId="org.talend.repository.localprovider.actionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D5g-LEem-fr4ogZo2Xw" elementId="Default">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D5w-LEem-fr4ogZo2Xw" elementId="org.talend.repository.localprovider.ui.actions.ExportItemAction">
-          <tags>Opaque</tags>
-        </children>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_5I5D6A-LEem-fr4ogZo2Xw" elementId="org.talend.repository.items.importexport.ui.actions.ImportItemsAction">
-          <tags>Opaque</tags>
-        </children>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5I5D6Q-LEem-fr4ogZo2Xw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -628,7 +628,7 @@ public class TMapMainJava {
         	expression = convertFunction.replace("${0}", expression);
         	
         	String pattern = null;
-        	if(JavaTypesManager.STRING.getId().equals(source_talend_type) && JavaTypesManager.DATE.getId().equals(target_talend_type)) {
+        	if((JavaTypesManager.STRING.getId().equals(source_talend_type)||JavaTypesManager.OBJECT.getId().equals(source_talend_type)) && JavaTypesManager.DATE.getId().equals(target_talend_type)) {
         		if(targetColumn!=null) {
         			pattern = targetColumn.getPattern();
         		}
@@ -831,7 +831,7 @@ for(JavaType sourceType : commonTypes) {
         }
         
         String function = null;
-        if("Date".equals(targetTypeToGenerate) && "String".equals(sourceTypeToGenerate)) {
+        if("Date".equals(targetTypeToGenerate) && ("String".equals(sourceTypeToGenerate)||"Object".equals(sourceTypeToGenerate))) {
         	function = contact("routines.system.TypeConvert.", sourceTypeToGenerate, "2", targetTypeToGenerate, "(${0}, ${1})");
         } else if("String".equals(targetTypeToGenerate) && "Date".equals(sourceTypeToGenerate)) {
         	function = contact("routines.system.TypeConvert.", sourceTypeToGenerate, "2", targetTypeToGenerate, "(${0}, ${1})");

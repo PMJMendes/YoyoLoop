@@ -251,7 +251,7 @@ public class TMapEndJava {
         	expression = convertFunction.replace("${0}", expression);
         	
         	String pattern = null;
-        	if(JavaTypesManager.STRING.getId().equals(source_talend_type) && JavaTypesManager.DATE.getId().equals(target_talend_type)) {
+        	if((JavaTypesManager.STRING.getId().equals(source_talend_type)||JavaTypesManager.OBJECT.getId().equals(source_talend_type)) && JavaTypesManager.DATE.getId().equals(target_talend_type)) {
         		if(targetColumn!=null) {
         			pattern = targetColumn.getPattern();
         		}

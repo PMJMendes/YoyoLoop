@@ -53,7 +53,7 @@ public class Subprocess_footerJava
   protected final String TEXT_26 = NL + "\t\t\t\t\t\t\t";
   protected final String TEXT_27 = "Process(globalMap); " + NL + "\t\t\t\t\t\t";
   protected final String TEXT_28 = NL + NL + NL + NL + "\t" + NL + "\t\t\t}catch(java.lang.Exception e){\t" + NL + "\t\t\t\t";
-  protected final String TEXT_29 = NL + "\t\t\t\t    if(!(e instanceof TalendException)){" + NL + "\t\t\t\t\t   log.fatal(currentComponent + \" \" + e.getMessage());" + NL + "\t\t\t\t\t}" + NL + "\t\t\t\t";
+  protected final String TEXT_29 = NL + "\t\t\t\t    if(!(e instanceof TalendException)){" + NL + "\t\t\t\t\t   log.fatal(currentComponent + \" \" + e.getMessage(),e);" + NL + "\t\t\t\t\t}" + NL + "\t\t\t\t";
   protected final String TEXT_30 = NL + "\t\t\t\tTalendException te = new TalendException(e, currentComponent, globalMap);" + NL + "\t\t\t\t";
   protected final String TEXT_31 = NL + "\t\t\t\t\tte.setVirtualComponentName(currentVirtualComponent);" + NL + "\t\t\t\t";
   protected final String TEXT_32 = NL + "\t\t\t\t\tif(resourceMap.get(\"finish_";

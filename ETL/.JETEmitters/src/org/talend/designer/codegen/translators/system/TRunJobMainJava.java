@@ -125,224 +125,238 @@ public class TRunJobMainJava
   protected final String TEXT_91 = ".put(\"";
   protected final String TEXT_92 = "\", ";
   protected final String TEXT_93 = ".";
-  protected final String TEXT_94 = ");" + NL + "\t\t";
-  protected final String TEXT_95 = " " + NL + "\t\tjava.util.Enumeration<?> propertyNames_";
-  protected final String TEXT_96 = " = ";
-  protected final String TEXT_97 = ".propertyNames();" + NL + "\t\twhile (propertyNames_";
-  protected final String TEXT_98 = ".hasMoreElements()) {" + NL + "\t\t\tString key_";
-  protected final String TEXT_99 = " = (String) propertyNames_";
-  protected final String TEXT_100 = ".nextElement();" + NL + "\t\t\tObject value_";
-  protected final String TEXT_101 = " = (Object) ";
-  protected final String TEXT_102 = ".get(key_";
-  protected final String TEXT_103 = ");       " + NL + "\t\t\tparaList_";
-  protected final String TEXT_104 = ".add(\"--context_param \" + key_";
-  protected final String TEXT_105 = " + \"=\" + value_";
-  protected final String TEXT_106 = ");" + NL + "\t\t\t";
-  protected final String TEXT_107 = NL + "\t\t\tif(parametersToEncrypt_";
-  protected final String TEXT_108 = " .contains(key_";
-  protected final String TEXT_109 = ") && value_";
-  protected final String TEXT_110 = " != null) {" + NL + "\t\t\t\tparaListForLog_";
+  protected final String TEXT_94 = ");" + NL + "\t\t\tparaList_";
+  protected final String TEXT_95 = ".add(\"--context_type \" + \"";
+  protected final String TEXT_96 = "\" + \"=\" + \"";
+  protected final String TEXT_97 = "\");" + NL + "\t\t";
+  protected final String TEXT_98 = " " + NL + "\t\tjava.util.Enumeration<?> propertyNames_";
+  protected final String TEXT_99 = " = ";
+  protected final String TEXT_100 = ".propertyNames();" + NL + "\t\twhile (propertyNames_";
+  protected final String TEXT_101 = ".hasMoreElements()) {" + NL + "\t\t\tString key_";
+  protected final String TEXT_102 = " = (String) propertyNames_";
+  protected final String TEXT_103 = ".nextElement();" + NL + "\t\t\tObject value_";
+  protected final String TEXT_104 = " = (Object) ";
+  protected final String TEXT_105 = ".get(key_";
+  protected final String TEXT_106 = ");" + NL + "\t\t\tif(value_";
+  protected final String TEXT_107 = "!=null) {  " + NL + "\t\t\t\tparaList_";
+  protected final String TEXT_108 = ".add(\"--context_param \" + key_";
+  protected final String TEXT_109 = " + \"=\" + value_";
+  protected final String TEXT_110 = ");" + NL + "\t\t\t} else {" + NL + "\t\t\t\tparaList_";
   protected final String TEXT_111 = ".add(\"--context_param \" + key_";
-  protected final String TEXT_112 = " + \"=\" + routines.system.PasswordEncryptUtil.encryptPassword(String.valueOf(value_";
-  protected final String TEXT_113 = ")));" + NL + "\t\t\t} else {" + NL + "\t\t\t\tparaListForLog_";
-  protected final String TEXT_114 = ".add(\"--context_param \" + key_";
-  protected final String TEXT_115 = " + \"=\" + value_";
-  protected final String TEXT_116 = ");" + NL + "\t\t\t}" + NL + "\t\t\t";
-  protected final String TEXT_117 = NL + "\t\t}" + NL + "\t\t";
-  protected final String TEXT_118 = NL + NL + "\tObject obj_";
-  protected final String TEXT_119 = " = null;" + NL + "" + NL + "\t";
-  protected final String TEXT_120 = NL + "\t\tobj_";
-  protected final String TEXT_121 = " = ";
-  protected final String TEXT_122 = ";" + NL + "\t\tparaList_";
-  protected final String TEXT_123 = ".add(\"--context_param ";
-  protected final String TEXT_124 = "=\" + RuntimeUtils.tRunJobConvertContext(obj_";
-  protected final String TEXT_125 = "));" + NL + "\t\t";
-  protected final String TEXT_126 = NL + "\t\tif(parametersToEncrypt_";
-  protected final String TEXT_127 = " .contains(\"";
-  protected final String TEXT_128 = "\") && obj_";
-  protected final String TEXT_129 = " != null) {" + NL + "\t\t\tparaListForLog_";
+  protected final String TEXT_112 = " + \"=\" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);" + NL + "\t\t\t}" + NL + "\t\t\t";
+  protected final String TEXT_113 = NL + "\t\t\tif(parametersToEncrypt_";
+  protected final String TEXT_114 = " .contains(key_";
+  protected final String TEXT_115 = ") && value_";
+  protected final String TEXT_116 = " != null) {" + NL + "\t\t\t\tparaListForLog_";
+  protected final String TEXT_117 = ".add(\"--context_param \" + key_";
+  protected final String TEXT_118 = " + \"=\" + routines.system.PasswordEncryptUtil.encryptPassword(String.valueOf(value_";
+  protected final String TEXT_119 = ")));" + NL + "\t\t\t} else {" + NL + "\t\t\t\tparaListForLog_";
+  protected final String TEXT_120 = ".add(\"--context_param \" + key_";
+  protected final String TEXT_121 = " + \"=\" + value_";
+  protected final String TEXT_122 = ");" + NL + "\t\t\t}" + NL + "\t\t\t";
+  protected final String TEXT_123 = NL + "\t\t}" + NL + "\t\t";
+  protected final String TEXT_124 = NL + NL + "\tObject obj_";
+  protected final String TEXT_125 = " = null;" + NL + "" + NL + "\t";
+  protected final String TEXT_126 = NL + "\t\tobj_";
+  protected final String TEXT_127 = " = ";
+  protected final String TEXT_128 = ";" + NL + "\t\tif(obj_";
+  protected final String TEXT_129 = "!=null) {" + NL + "\t\t\tparaList_";
   protected final String TEXT_130 = ".add(\"--context_param ";
-  protected final String TEXT_131 = "=\" + routines.system.PasswordEncryptUtil.encryptPassword(String.valueOf(RuntimeUtils.tRunJobConvertContext(obj_";
-  protected final String TEXT_132 = "))));" + NL + "\t\t} else {" + NL + "\t\t\tparaListForLog_";
+  protected final String TEXT_131 = "=\" + RuntimeUtils.tRunJobConvertContext(obj_";
+  protected final String TEXT_132 = "));" + NL + "\t\t} else {" + NL + "\t\t\tparaList_";
   protected final String TEXT_133 = ".add(\"--context_param ";
-  protected final String TEXT_134 = "=\" + RuntimeUtils.tRunJobConvertContext(obj_";
-  protected final String TEXT_135 = "));" + NL + "\t\t}" + NL + "\t\t";
-  protected final String TEXT_136 = NL + "\t\tparentContextMap_";
-  protected final String TEXT_137 = ".put(\"";
-  protected final String TEXT_138 = "\", obj_";
-  protected final String TEXT_139 = ");" + NL + "\t";
-  protected final String TEXT_140 = NL + "\t";
-  protected final String TEXT_141 = NL + "\t\tSystem.out.println(\"";
-  protected final String TEXT_142 = " in ";
-  protected final String TEXT_143 = " call ";
-  protected final String TEXT_144 = "\"+";
-  protected final String TEXT_145 = "+\"";
-  protected final String TEXT_146 = " with:\\n\\n\" + paraListForLog_";
-  protected final String TEXT_147 = " + \"\\n\");" + NL + "\t";
-  protected final String TEXT_148 = NL + "\t\t";
-  protected final String TEXT_149 = " childJob_";
-  protected final String TEXT_150 = " = new ";
-  protected final String TEXT_151 = "();" + NL + "\t    // pass DataSources" + NL + "\t    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_";
-  protected final String TEXT_152 = " = (java.util.Map<String, routines.system.TalendDataSource>) globalMap" + NL + "\t            .get(KEY_DB_DATASOURCES);" + NL + "\t    if (null != talendDataSources_";
-  protected final String TEXT_153 = ") {" + NL + "\t        java.util.Map<String, javax.sql.DataSource> dataSources_";
-  protected final String TEXT_154 = " = new java.util.HashMap<String, javax.sql.DataSource>();" + NL + "\t        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_";
-  protected final String TEXT_155 = " : talendDataSources_";
-  protected final String TEXT_156 = NL + "\t\t\t        .entrySet()) {" + NL + "\t            dataSources_";
-  protected final String TEXT_157 = ".put(talendDataSourceEntry_";
-  protected final String TEXT_158 = ".getKey()," + NL + "\t                    talendDataSourceEntry_";
-  protected final String TEXT_159 = ".getValue().getRawDataSource());" + NL + "\t        }" + NL + "\t        childJob_";
-  protected final String TEXT_160 = ".setDataSources(dataSources_";
-  protected final String TEXT_161 = ");" + NL + "\t    }" + NL + "\t\t";
-  protected final String TEXT_162 = "  " + NL + "\t\t\tchildJob_";
-  protected final String TEXT_163 = ".parentContextMap = parentContextMap_";
-  protected final String TEXT_164 = ";" + NL + "\t\t";
-  protected final String TEXT_165 = "  " + NL + "\t\t";
-  protected final String TEXT_166 = NL + "\t\t\tlog.info(\"";
-  protected final String TEXT_167 = " - The child job '";
-  protected final String TEXT_168 = "\"+";
-  protected final String TEXT_169 = "+\"";
-  protected final String TEXT_170 = "' starts on the version '";
-  protected final String TEXT_171 = "' with the context '";
-  protected final String TEXT_172 = "'.\");" + NL + "\t\t";
-  protected final String TEXT_173 = NL + "\t\tString[][] childReturn_";
-  protected final String TEXT_174 = " = childJob_";
-  protected final String TEXT_175 = ".runJob((String[]) paraList_";
-  protected final String TEXT_176 = ".toArray(new String[paraList_";
-  protected final String TEXT_177 = ".size()]));" + NL + "\t\t";
+  protected final String TEXT_134 = "=\" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);" + NL + "\t\t}" + NL + "\t\t";
+  protected final String TEXT_135 = NL + "\t\tif(parametersToEncrypt_";
+  protected final String TEXT_136 = " .contains(\"";
+  protected final String TEXT_137 = "\") && obj_";
+  protected final String TEXT_138 = " != null) {" + NL + "\t\t\tparaListForLog_";
+  protected final String TEXT_139 = ".add(\"--context_param ";
+  protected final String TEXT_140 = "=\" + routines.system.PasswordEncryptUtil.encryptPassword(String.valueOf(RuntimeUtils.tRunJobConvertContext(obj_";
+  protected final String TEXT_141 = "))));" + NL + "\t\t} else {" + NL + "\t\t\tparaListForLog_";
+  protected final String TEXT_142 = ".add(\"--context_param ";
+  protected final String TEXT_143 = "=\" + RuntimeUtils.tRunJobConvertContext(obj_";
+  protected final String TEXT_144 = "));" + NL + "\t\t}" + NL + "\t\t";
+  protected final String TEXT_145 = NL + "\t\tparentContextMap_";
+  protected final String TEXT_146 = ".put(\"";
+  protected final String TEXT_147 = "\", obj_";
+  protected final String TEXT_148 = ");" + NL + "\t";
+  protected final String TEXT_149 = NL + "\t";
+  protected final String TEXT_150 = NL + "\t\tSystem.out.println(\"";
+  protected final String TEXT_151 = " in ";
+  protected final String TEXT_152 = " call ";
+  protected final String TEXT_153 = "\"+";
+  protected final String TEXT_154 = "+\"";
+  protected final String TEXT_155 = " with:\\n\\n\" + paraListForLog_";
+  protected final String TEXT_156 = " + \"\\n\");" + NL + "\t";
+  protected final String TEXT_157 = NL + "\t\t";
+  protected final String TEXT_158 = " childJob_";
+  protected final String TEXT_159 = " = new ";
+  protected final String TEXT_160 = "();";
+  protected final String TEXT_161 = NL + "        childJob_";
+  protected final String TEXT_162 = ".setEndpointRegistry(registry);";
+  protected final String TEXT_163 = NL + "\t    // pass DataSources" + NL + "\t    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_";
+  protected final String TEXT_164 = " = (java.util.Map<String, routines.system.TalendDataSource>) globalMap" + NL + "\t            .get(KEY_DB_DATASOURCES);" + NL + "\t    if (null != talendDataSources_";
+  protected final String TEXT_165 = ") {" + NL + "\t        java.util.Map<String, javax.sql.DataSource> dataSources_";
+  protected final String TEXT_166 = " = new java.util.HashMap<String, javax.sql.DataSource>();" + NL + "\t        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_";
+  protected final String TEXT_167 = " : talendDataSources_";
+  protected final String TEXT_168 = NL + "\t\t\t        .entrySet()) {" + NL + "\t            dataSources_";
+  protected final String TEXT_169 = ".put(talendDataSourceEntry_";
+  protected final String TEXT_170 = ".getKey()," + NL + "\t                    talendDataSourceEntry_";
+  protected final String TEXT_171 = ".getValue().getRawDataSource());" + NL + "\t        }" + NL + "\t        childJob_";
+  protected final String TEXT_172 = ".setDataSources(dataSources_";
+  protected final String TEXT_173 = ");" + NL + "\t    }" + NL + "\t\t";
+  protected final String TEXT_174 = "  " + NL + "\t\t\tchildJob_";
+  protected final String TEXT_175 = ".parentContextMap = parentContextMap_";
+  protected final String TEXT_176 = ";" + NL + "\t\t";
+  protected final String TEXT_177 = "  " + NL + "\t\t";
   protected final String TEXT_178 = NL + "\t\t\tlog.info(\"";
   protected final String TEXT_179 = " - The child job '";
   protected final String TEXT_180 = "\"+";
   protected final String TEXT_181 = "+\"";
-  protected final String TEXT_182 = "' is done.\");" + NL + "\t\t";
-  protected final String TEXT_183 = NL + "\t  \t";
-  protected final String TEXT_184 = NL + "\t\t\t\t((java.util.Map)threadLocal.get()).put(\"errorCode\", childJob_";
-  protected final String TEXT_185 = ".getErrorCode());" + NL + "\t\t\t";
-  protected final String TEXT_186 = NL + "\t\t\t\terrorCode = childJob_";
-  protected final String TEXT_187 = ".getErrorCode();" + NL + "\t\t    ";
-  protected final String TEXT_188 = NL + "\t            " + NL + "\t    \tif(childJob_";
-  protected final String TEXT_189 = ".getErrorCode() == null){" + NL + "\t\t\t\tglobalMap.put(\"";
-  protected final String TEXT_190 = "_CHILD_RETURN_CODE\", childJob_";
-  protected final String TEXT_191 = ".getStatus() != null && (\"failure\").equals(childJob_";
-  protected final String TEXT_192 = ".getStatus()) ? 1 : 0);" + NL + "\t    \t}else{" + NL + "\t\t\t\tglobalMap.put(\"";
-  protected final String TEXT_193 = "_CHILD_RETURN_CODE\", childJob_";
-  protected final String TEXT_194 = ".getErrorCode());" + NL + "\t\t    }" + NL + "\t\t    if (childJob_";
-  protected final String TEXT_195 = ".getExceptionStackTrace() != null) { " + NL + "\t\t    \tglobalMap.put(\"";
-  protected final String TEXT_196 = "_CHILD_EXCEPTION_STACKTRACE\", childJob_";
-  protected final String TEXT_197 = ".getExceptionStackTrace());" + NL + "\t\t    }" + NL + "\t  " + NL + "\t\t\t";
-  protected final String TEXT_198 = " " + NL + "\t\t\t\tif (childJob_";
-  protected final String TEXT_199 = ".getErrorCode() != null || (\"failure\").equals(childJob_";
-  protected final String TEXT_200 = ".getStatus())) {" + NL + "\t        \t\tthrow new RuntimeException(\"Child job running failed\");" + NL + "\t\t\t\t}" + NL + "\t\t\t";
-  protected final String TEXT_201 = NL + "\t  \t";
-  protected final String TEXT_202 = NL + "\t\t\tfor (String[] item_";
-  protected final String TEXT_203 = " : childReturn_";
-  protected final String TEXT_204 = ") { " + NL + "\t\t\t\tif(childJob_";
-  protected final String TEXT_205 = ".hastBufferOutputComponent() || ";
-  protected final String TEXT_206 = "){" + NL + "\t\t\t    \t";
-  protected final String TEXT_207 = "\t\t" + NL + "\t\t\t\t\t\tif(";
-  protected final String TEXT_208 = " < item_";
-  protected final String TEXT_209 = ".length){\t\t\t\t" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_210 = NL + "\t\t\t\t           \t\t";
-  protected final String TEXT_211 = ".";
-  protected final String TEXT_212 = " = item_";
-  protected final String TEXT_213 = "[";
-  protected final String TEXT_214 = "];" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_215 = NL + "\t\t\t\t           \t\t";
-  protected final String TEXT_216 = ".";
-  protected final String TEXT_217 = " = ParserUtils.parseTo_Date(item_";
-  protected final String TEXT_218 = "[";
-  protected final String TEXT_219 = "], ";
-  protected final String TEXT_220 = ");" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_221 = "\t\t\t\t\t\t\t" + NL + "\t\t\t           \t\t\t";
-  protected final String TEXT_222 = ".";
-  protected final String TEXT_223 = " = item_";
-  protected final String TEXT_224 = "[";
-  protected final String TEXT_225 = "].getBytes();" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_226 = NL + "\t\t\t           \t\t\t";
-  protected final String TEXT_227 = ".";
-  protected final String TEXT_228 = " = ParserUtils.parseTo_";
-  protected final String TEXT_229 = "(item_";
-  protected final String TEXT_230 = "[";
-  protected final String TEXT_231 = "], \",\");" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_232 = NL + "\t\t\t           \t\t\t";
-  protected final String TEXT_233 = ".";
-  protected final String TEXT_234 = " = ParserUtils.parseTo_";
-  protected final String TEXT_235 = "(item_";
-  protected final String TEXT_236 = "[";
-  protected final String TEXT_237 = "]);" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_238 = NL + "\t\t           \t\t}else{" + NL + "\t\t\t           \t\t";
-  protected final String TEXT_239 = ".";
-  protected final String TEXT_240 = " = ";
-  protected final String TEXT_241 = ";" + NL + "\t\t           \t\t}" + NL + "\t\t\t\t\t";
-  protected final String TEXT_242 = NL + "\t\t\t\t\t\t} else {" + NL + "\t\t\t\t\t\t";
-  protected final String TEXT_243 = NL + "\t\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_244 = ".";
-  protected final String TEXT_245 = " = ";
-  protected final String TEXT_246 = ".";
-  protected final String TEXT_247 = ";" + NL + "\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_248 = NL + "\t\t\t\t}" + NL + "\t\t";
-  protected final String TEXT_249 = NL + "\t\tRuntime runtime_";
-  protected final String TEXT_250 = " = Runtime.getRuntime();" + NL + "\t\tfinal Process ps_";
-  protected final String TEXT_251 = ";" + NL + "\t\tps_";
-  protected final String TEXT_252 = " = runtime_";
-  protected final String TEXT_253 = ".exec((String[])paraList_";
-  protected final String TEXT_254 = ".toArray(new String[paraList_";
-  protected final String TEXT_255 = ".size()]));" + NL + "" + NL + "\t\tThread normal_";
-  protected final String TEXT_256 = " = new Thread() {" + NL + "\t\t\tpublic void run() {" + NL + "\t\t\t\ttry {" + NL + "\t\t\t\t\tjava.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_";
-  protected final String TEXT_257 = ".getInputStream()));" + NL + "\t\t\t\t\tString line = \"\";" + NL + "\t\t\t\t\ttry {" + NL + "\t\t\t\t\t\twhile((line = reader.readLine()) != null) {" + NL + "\t\t\t\t\t\tSystem.out.println(line);" + NL + "\t\t\t\t\t\t}" + NL + "\t\t\t\t\t} finally {" + NL + "\t\t\t\t\treader.close();" + NL + "\t\t\t\t\t}" + NL + "\t\t\t\t} catch(java.io.IOException ioe) {" + NL + "\t\t\t\t\t";
-  protected final String TEXT_258 = NL + "\t\t\t\t\t\tlog.error(\"";
-  protected final String TEXT_259 = " - \" + ioe.getMessage());" + NL + "\t\t\t\t\t";
-  protected final String TEXT_260 = NL + "\t\t\t\t\tioe.printStackTrace();" + NL + "\t\t\t\t}" + NL + "\t    \t}" + NL + "  \t\t};" + NL + "\t\t";
-  protected final String TEXT_261 = NL + "\t\t\tlog.info(\"";
-  protected final String TEXT_262 = " - The child job '";
-  protected final String TEXT_263 = "\"+";
-  protected final String TEXT_264 = "+\"";
-  protected final String TEXT_265 = "' starts on the version '";
-  protected final String TEXT_266 = "' with the context '";
-  protected final String TEXT_267 = "'.\");" + NL + "\t\t";
-  protected final String TEXT_268 = NL + "\t\tnormal_";
-  protected final String TEXT_269 = ".start();" + NL + "\t\t";
-  protected final String TEXT_270 = NL + "\t\t\tlog.info(\"";
-  protected final String TEXT_271 = " - The child job '";
-  protected final String TEXT_272 = "\"+";
-  protected final String TEXT_273 = "+\"";
-  protected final String TEXT_274 = "' is done.\");" + NL + "\t\t";
-  protected final String TEXT_275 = NL + NL + "\t\tfinal StringBuffer errorMsg_";
-  protected final String TEXT_276 = " = new StringBuffer();" + NL + "\t\tThread error_";
-  protected final String TEXT_277 = " = new Thread() {" + NL + "\t\t\tpublic void run() {" + NL + "\t\t\t\ttry {" + NL + "\t\t\t\t\tjava.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_";
-  protected final String TEXT_278 = ".getErrorStream()));" + NL + "\t\t\t\t\tString line = \"\";" + NL + "        \t\t\ttry {" + NL + "          \t\t\t\twhile((line = reader.readLine()) != null) {" + NL + "            \t\t\t\terrorMsg_";
-  protected final String TEXT_279 = ".append(line).append(\"\\n\");" + NL + "          \t\t\t\t}" + NL + "        \t\t\t} finally {" + NL + "          \t\t\t\treader.close();" + NL + "        \t\t\t}" + NL + "      \t\t\t} catch(java.io.IOException ioe) {" + NL + "\t\t\t\t\t";
-  protected final String TEXT_280 = NL + "\t\t\t\t\t\tlog.error(\"";
-  protected final String TEXT_281 = " - \" + ioe.getMessage());" + NL + "\t\t\t\t\t";
-  protected final String TEXT_282 = NL + "\t\t\t        ioe.printStackTrace();" + NL + "      \t\t\t}" + NL + "    \t\t}" + NL + "\t\t};" + NL + "\t\terror_";
-  protected final String TEXT_283 = ".start();" + NL + "" + NL + "\t\t//0 indicates normal termination\t" + NL + "\t\tint result_";
-  protected final String TEXT_284 = " = ps_";
-  protected final String TEXT_285 = ".waitFor();" + NL + "\t\tnormal_";
-  protected final String TEXT_286 = ".join(10000);" + NL + "\t\terror_";
-  protected final String TEXT_287 = ".join(10000);" + NL + "  " + NL + "\t\tglobalMap.put(\"";
-  protected final String TEXT_288 = "_CHILD_RETURN_CODE\",result_";
-  protected final String TEXT_289 = ");" + NL + "\t\tif(result_";
-  protected final String TEXT_290 = " != 0){" + NL + "   \t\t\tglobalMap.put(\"";
-  protected final String TEXT_291 = "_CHILD_EXCEPTION_STACKTRACE\",errorMsg_";
-  protected final String TEXT_292 = ".toString());" + NL + "\t\t\t";
-  protected final String TEXT_293 = "  " + NL + "\t    \t\tthrow new RuntimeException(\"Child job returns \" + result_";
-  protected final String TEXT_294 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
-  protected final String TEXT_295 = ".toString());" + NL + "\t\t\t";
-  protected final String TEXT_296 = NL + "\t\t\t\t";
-  protected final String TEXT_297 = NL + "\t\t\t\t\tlog.error(\"";
-  protected final String TEXT_298 = " - Child job returns \" + result_";
-  protected final String TEXT_299 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
-  protected final String TEXT_300 = ".toString());" + NL + "\t\t\t\t";
-  protected final String TEXT_301 = NL + "\t\t\t\tSystem.err.println(\"Child job returns \" + result_";
-  protected final String TEXT_302 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
-  protected final String TEXT_303 = ".toString());" + NL + "\t\t\t";
-  protected final String TEXT_304 = NL + "  \t\t}" + NL + "" + NL + "\t\t";
-  protected final String TEXT_305 = NL + "\t\t\t\t";
-  protected final String TEXT_306 = NL + "\t\t\t\t\tlog.error(\"";
-  protected final String TEXT_307 = " - Child job returns \" + result_";
+  protected final String TEXT_182 = "' starts on the version '";
+  protected final String TEXT_183 = "' with the context '";
+  protected final String TEXT_184 = "'.\");" + NL + "\t\t";
+  protected final String TEXT_185 = NL + "\t\tString[][] childReturn_";
+  protected final String TEXT_186 = " = childJob_";
+  protected final String TEXT_187 = ".runJob((String[]) paraList_";
+  protected final String TEXT_188 = ".toArray(new String[paraList_";
+  protected final String TEXT_189 = ".size()]));" + NL + "\t\t";
+  protected final String TEXT_190 = NL + "\t\t\tlog.info(\"";
+  protected final String TEXT_191 = " - The child job '";
+  protected final String TEXT_192 = "\"+";
+  protected final String TEXT_193 = "+\"";
+  protected final String TEXT_194 = "' is done.\");" + NL + "\t\t";
+  protected final String TEXT_195 = NL + "\t  \t";
+  protected final String TEXT_196 = NL + "\t\t\t\t((java.util.Map)threadLocal.get()).put(\"errorCode\", childJob_";
+  protected final String TEXT_197 = ".getErrorCode());" + NL + "\t\t\t";
+  protected final String TEXT_198 = NL + "\t\t\t\terrorCode = childJob_";
+  protected final String TEXT_199 = ".getErrorCode();" + NL + "\t\t    ";
+  protected final String TEXT_200 = NL + "\t            " + NL + "\t    \tif(childJob_";
+  protected final String TEXT_201 = ".getErrorCode() == null){" + NL + "\t\t\t\tglobalMap.put(\"";
+  protected final String TEXT_202 = "_CHILD_RETURN_CODE\", childJob_";
+  protected final String TEXT_203 = ".getStatus() != null && (\"failure\").equals(childJob_";
+  protected final String TEXT_204 = ".getStatus()) ? 1 : 0);" + NL + "\t    \t}else{" + NL + "\t\t\t\tglobalMap.put(\"";
+  protected final String TEXT_205 = "_CHILD_RETURN_CODE\", childJob_";
+  protected final String TEXT_206 = ".getErrorCode());" + NL + "\t\t    }" + NL + "\t\t    if (childJob_";
+  protected final String TEXT_207 = ".getExceptionStackTrace() != null) { " + NL + "\t\t    \tglobalMap.put(\"";
+  protected final String TEXT_208 = "_CHILD_EXCEPTION_STACKTRACE\", childJob_";
+  protected final String TEXT_209 = ".getExceptionStackTrace());" + NL + "\t\t    }" + NL + "\t  " + NL + "\t\t\t";
+  protected final String TEXT_210 = " " + NL + "\t\t\t\tif (childJob_";
+  protected final String TEXT_211 = ".getErrorCode() != null || (\"failure\").equals(childJob_";
+  protected final String TEXT_212 = ".getStatus())) {" + NL + "\t        \t\tthrow new RuntimeException(\"Child job running failed.\\n\"+childJob_";
+  protected final String TEXT_213 = ".getException().getClass().getName() + \": \" + childJob_";
+  protected final String TEXT_214 = ".getException().getMessage());" + NL + "\t\t\t\t}" + NL + "\t\t\t";
+  protected final String TEXT_215 = NL + "\t  \t";
+  protected final String TEXT_216 = NL + "\t\t\tfor (String[] item_";
+  protected final String TEXT_217 = " : childReturn_";
+  protected final String TEXT_218 = ") { " + NL + "\t\t\t\tif(childJob_";
+  protected final String TEXT_219 = ".hastBufferOutputComponent() || ";
+  protected final String TEXT_220 = "){" + NL + "\t\t\t    \t";
+  protected final String TEXT_221 = "\t\t" + NL + "\t\t\t\t\t\tif(";
+  protected final String TEXT_222 = " < item_";
+  protected final String TEXT_223 = ".length){\t\t\t\t" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_224 = NL + "\t\t\t\t           \t\t";
+  protected final String TEXT_225 = ".";
+  protected final String TEXT_226 = " = item_";
+  protected final String TEXT_227 = "[";
+  protected final String TEXT_228 = "];" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_229 = NL + "\t\t\t\t           \t\t";
+  protected final String TEXT_230 = ".";
+  protected final String TEXT_231 = " = ParserUtils.parseTo_Date(item_";
+  protected final String TEXT_232 = "[";
+  protected final String TEXT_233 = "], ";
+  protected final String TEXT_234 = ");" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_235 = "\t\t\t\t\t\t\t" + NL + "\t\t\t           \t\t\t";
+  protected final String TEXT_236 = ".";
+  protected final String TEXT_237 = " = item_";
+  protected final String TEXT_238 = "[";
+  protected final String TEXT_239 = "].getBytes();" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_240 = NL + "\t\t\t           \t\t\t";
+  protected final String TEXT_241 = ".";
+  protected final String TEXT_242 = " = ParserUtils.parseTo_";
+  protected final String TEXT_243 = "(item_";
+  protected final String TEXT_244 = "[";
+  protected final String TEXT_245 = "], \",\");" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_246 = NL + "\t\t\t           \t\t\t";
+  protected final String TEXT_247 = ".";
+  protected final String TEXT_248 = " = ParserUtils.parseTo_";
+  protected final String TEXT_249 = "(item_";
+  protected final String TEXT_250 = "[";
+  protected final String TEXT_251 = "]);" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_252 = NL + "\t\t           \t\t}else{" + NL + "\t\t\t           \t\t";
+  protected final String TEXT_253 = ".";
+  protected final String TEXT_254 = " = ";
+  protected final String TEXT_255 = ";" + NL + "\t\t           \t\t}" + NL + "\t\t\t\t\t";
+  protected final String TEXT_256 = NL + "\t\t\t\t\t\t} else {" + NL + "\t\t\t\t\t\t";
+  protected final String TEXT_257 = NL + "\t\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_258 = ".";
+  protected final String TEXT_259 = " = ";
+  protected final String TEXT_260 = ".";
+  protected final String TEXT_261 = ";" + NL + "\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_262 = NL + "\t\t\t\t}" + NL + "\t\t";
+  protected final String TEXT_263 = NL + "\t\tRuntime runtime_";
+  protected final String TEXT_264 = " = Runtime.getRuntime();" + NL + "\t\tfinal Process ps_";
+  protected final String TEXT_265 = ";" + NL + "\t\tps_";
+  protected final String TEXT_266 = " = runtime_";
+  protected final String TEXT_267 = ".exec((String[])paraList_";
+  protected final String TEXT_268 = ".toArray(new String[paraList_";
+  protected final String TEXT_269 = ".size()]));" + NL + "" + NL + "\t\tThread normal_";
+  protected final String TEXT_270 = " = new Thread() {" + NL + "\t\t\tpublic void run() {" + NL + "\t\t\t\ttry {" + NL + "\t\t\t\t\tjava.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_";
+  protected final String TEXT_271 = ".getInputStream()));" + NL + "\t\t\t\t\tString line = \"\";" + NL + "\t\t\t\t\ttry {" + NL + "\t\t\t\t\t\twhile((line = reader.readLine()) != null) {" + NL + "\t\t\t\t\t\tSystem.out.println(line);" + NL + "\t\t\t\t\t\t}" + NL + "\t\t\t\t\t} finally {" + NL + "\t\t\t\t\treader.close();" + NL + "\t\t\t\t\t}" + NL + "\t\t\t\t} catch(java.io.IOException ioe) {" + NL + "\t\t\t\t\t";
+  protected final String TEXT_272 = NL + "\t\t\t\t\t\tlog.error(\"";
+  protected final String TEXT_273 = " - \" + ioe.getMessage());" + NL + "\t\t\t\t\t";
+  protected final String TEXT_274 = NL + "\t\t\t\t\tioe.printStackTrace();" + NL + "\t\t\t\t}" + NL + "\t    \t}" + NL + "  \t\t};" + NL + "\t\t";
+  protected final String TEXT_275 = NL + "\t\t\tlog.info(\"";
+  protected final String TEXT_276 = " - The child job '";
+  protected final String TEXT_277 = "\"+";
+  protected final String TEXT_278 = "+\"";
+  protected final String TEXT_279 = "' starts on the version '";
+  protected final String TEXT_280 = "' with the context '";
+  protected final String TEXT_281 = "'.\");" + NL + "\t\t";
+  protected final String TEXT_282 = NL + "\t\tnormal_";
+  protected final String TEXT_283 = ".start();" + NL + "\t\t";
+  protected final String TEXT_284 = NL + "\t\t\tlog.info(\"";
+  protected final String TEXT_285 = " - The child job '";
+  protected final String TEXT_286 = "\"+";
+  protected final String TEXT_287 = "+\"";
+  protected final String TEXT_288 = "' is done.\");" + NL + "\t\t";
+  protected final String TEXT_289 = NL + NL + "\t\tfinal StringBuffer errorMsg_";
+  protected final String TEXT_290 = " = new StringBuffer();" + NL + "\t\tThread error_";
+  protected final String TEXT_291 = " = new Thread() {" + NL + "\t\t\tpublic void run() {" + NL + "\t\t\t\ttry {" + NL + "\t\t\t\t\tjava.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_";
+  protected final String TEXT_292 = ".getErrorStream()));" + NL + "\t\t\t\t\tString line = \"\";" + NL + "        \t\t\ttry {" + NL + "          \t\t\t\twhile((line = reader.readLine()) != null) {" + NL + "            \t\t\t\terrorMsg_";
+  protected final String TEXT_293 = ".append(line).append(\"\\n\");" + NL + "          \t\t\t\t}" + NL + "        \t\t\t} finally {" + NL + "          \t\t\t\treader.close();" + NL + "        \t\t\t}" + NL + "      \t\t\t} catch(java.io.IOException ioe) {" + NL + "\t\t\t\t\t";
+  protected final String TEXT_294 = NL + "\t\t\t\t\t\tlog.error(\"";
+  protected final String TEXT_295 = " - \" + ioe.getMessage());" + NL + "\t\t\t\t\t";
+  protected final String TEXT_296 = NL + "\t\t\t        ioe.printStackTrace();" + NL + "      \t\t\t}" + NL + "    \t\t}" + NL + "\t\t};" + NL + "\t\terror_";
+  protected final String TEXT_297 = ".start();" + NL + "" + NL + "\t\t//0 indicates normal termination\t" + NL + "\t\tint result_";
+  protected final String TEXT_298 = " = ps_";
+  protected final String TEXT_299 = ".waitFor();" + NL + "\t\tnormal_";
+  protected final String TEXT_300 = ".join(10000);" + NL + "\t\terror_";
+  protected final String TEXT_301 = ".join(10000);" + NL + "  " + NL + "\t\tglobalMap.put(\"";
+  protected final String TEXT_302 = "_CHILD_RETURN_CODE\",result_";
+  protected final String TEXT_303 = ");" + NL + "\t\tif(result_";
+  protected final String TEXT_304 = " != 0){" + NL + "   \t\t\tglobalMap.put(\"";
+  protected final String TEXT_305 = "_CHILD_EXCEPTION_STACKTRACE\",errorMsg_";
+  protected final String TEXT_306 = ".toString());" + NL + "\t\t\t";
+  protected final String TEXT_307 = "  " + NL + "\t    \t\tthrow new RuntimeException(\"Child job returns \" + result_";
   protected final String TEXT_308 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
-  protected final String TEXT_309 = ".toString());" + NL + "\t\t\t\t";
-  protected final String TEXT_310 = NL + "  \t\t\t\tSystem.err.println(\"when tRunJob runs in an independent process, it can't extract datas from tBufferOutput of child job.\"); " + NL + "\t\t\t";
-  protected final String TEXT_311 = NL;
+  protected final String TEXT_309 = ".toString());" + NL + "\t\t\t";
+  protected final String TEXT_310 = NL + "\t\t\t\t";
+  protected final String TEXT_311 = NL + "\t\t\t\t\tlog.error(\"";
+  protected final String TEXT_312 = " - Child job returns \" + result_";
+  protected final String TEXT_313 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
+  protected final String TEXT_314 = ".toString());" + NL + "\t\t\t\t";
+  protected final String TEXT_315 = NL + "\t\t\t\tSystem.err.println(\"Child job returns \" + result_";
+  protected final String TEXT_316 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
+  protected final String TEXT_317 = ".toString());" + NL + "\t\t\t";
+  protected final String TEXT_318 = NL + "  \t\t}" + NL + "" + NL + "\t\t";
+  protected final String TEXT_319 = NL + "\t\t\t\t";
+  protected final String TEXT_320 = NL + "\t\t\t\t\tlog.error(\"";
+  protected final String TEXT_321 = " - Child job returns \" + result_";
+  protected final String TEXT_322 = " + \". It doesn't terminate normally.\\n\" + errorMsg_";
+  protected final String TEXT_323 = ".toString());" + NL + "\t\t\t\t";
+  protected final String TEXT_324 = NL + "  \t\t\t\tSystem.err.println(\"when tRunJob runs in an independent process, it can't extract datas from tBufferOutput of child job.\"); " + NL + "\t\t\t";
+  protected final String TEXT_325 = NL;
 
   public String generate(Object argument)
   {
@@ -485,7 +499,7 @@ String inputConnName = null;
 	}else{
 		try {
 			if(useIndependentProcess){
-		    	commandLineWindows = ProcessorUtilities.getCommandLine("win32",true, process, context,org.talend.designer.runprocess.IProcessor.NO_STATISTICS,org.talend.designer.runprocess.IProcessor.NO_TRACES, codeOptions);
+		    	commandLineWindows = ProcessorUtilities.getCommandLine("win32", false, true, process, context,org.talend.designer.runprocess.IProcessor.NO_STATISTICS,org.talend.designer.runprocess.IProcessor.NO_TRACES, codeOptions);
 		    	// remove the 2 fist lines
 		    	if (commandLineWindows.length > 0 && ProcessorUtilities.isExportConfig()){
 		    		int tmpSize = commandLineWindows.length - 2;
@@ -493,7 +507,7 @@ String inputConnName = null;
 		    		System.arraycopy(commandLineWindows, 2, tmp, 0, tmpSize);
 		    		commandLineWindows = tmp;
 	    		}
-		    	commandLineUnix = ProcessorUtilities.getCommandLine("linux",true, process, context,org.talend.designer.runprocess.IProcessor.NO_STATISTICS,org.talend.designer.runprocess.IProcessor.NO_TRACES, codeOptions);
+		    	commandLineUnix = ProcessorUtilities.getCommandLine("linux", false, true, process, context,org.talend.designer.runprocess.IProcessor.NO_STATISTICS,org.talend.designer.runprocess.IProcessor.NO_TRACES, codeOptions);
 	    		// remove the 2 first lines
 				if (commandLineUnix.length > 0 && ProcessorUtilities.isExportConfig()){
 					int tmpSize = commandLineUnix.length - 2;
@@ -756,35 +770,33 @@ String inputConnName = null;
     stringBuffer.append(TEXT_93);
     stringBuffer.append(ctxParamName );
     stringBuffer.append(TEXT_94);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_95);
+    stringBuffer.append(ctxParam.getName());
+    stringBuffer.append(TEXT_96);
+    stringBuffer.append(ctxParam.getType());
+    stringBuffer.append(TEXT_97);
     
 		}
 		
-    stringBuffer.append(TEXT_95);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_96);
-    stringBuffer.append(localContext);
-    stringBuffer.append(TEXT_97);
-    stringBuffer.append(cid );
     stringBuffer.append(TEXT_98);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_99);
-    stringBuffer.append(cid );
+    stringBuffer.append(localContext);
     stringBuffer.append(TEXT_100);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_101);
-    stringBuffer.append(localContext);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_102);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_103);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_104);
-    stringBuffer.append(cid );
+    stringBuffer.append(localContext);
     stringBuffer.append(TEXT_105);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_106);
-    
-			if(printParameter) {
-			
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_107);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_108);
@@ -796,7 +808,9 @@ String inputConnName = null;
     stringBuffer.append(TEXT_111);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_112);
-    stringBuffer.append(cid );
+    
+			if(printParameter) {
+			
     stringBuffer.append(TEXT_113);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_114);
@@ -804,16 +818,28 @@ String inputConnName = null;
     stringBuffer.append(TEXT_115);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_116);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_117);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_118);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_119);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_120);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_121);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_122);
     
 			}
 			
-    stringBuffer.append(TEXT_117);
+    stringBuffer.append(TEXT_123);
     
 	}//111111
 	
-    stringBuffer.append(TEXT_118);
+    stringBuffer.append(TEXT_124);
     stringBuffer.append(cid);
-    stringBuffer.append(TEXT_119);
+    stringBuffer.append(TEXT_125);
     
 	for (int i=0; i<contextParams.size(); i++) {
 		Map<String, String> contextParam = contextParams.get(i);
@@ -824,22 +850,10 @@ String inputConnName = null;
 			value = value.replace("context.","localContext.");
 		}
 		
-    stringBuffer.append(TEXT_120);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_121);
-    stringBuffer.append(value );
-    stringBuffer.append(TEXT_122);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_123);
-    stringBuffer.append(name );
-    stringBuffer.append(TEXT_124);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_125);
-     if(printParameter){ 
     stringBuffer.append(TEXT_126);
-    stringBuffer.append(cid );
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_127);
-    stringBuffer.append(name );
+    stringBuffer.append(value );
     stringBuffer.append(TEXT_128);
     stringBuffer.append(cid);
     stringBuffer.append(TEXT_129);
@@ -853,102 +867,104 @@ String inputConnName = null;
     stringBuffer.append(TEXT_133);
     stringBuffer.append(name );
     stringBuffer.append(TEXT_134);
-    stringBuffer.append(cid);
+     if(printParameter){ 
     stringBuffer.append(TEXT_135);
-     } 
-    stringBuffer.append(TEXT_136);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_137);
+    stringBuffer.append(TEXT_136);
     stringBuffer.append(name );
-    stringBuffer.append(TEXT_138);
+    stringBuffer.append(TEXT_137);
     stringBuffer.append(cid);
+    stringBuffer.append(TEXT_138);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_139);
-    
-	}
-	
+    stringBuffer.append(name );
     stringBuffer.append(TEXT_140);
-    if(printParameter){
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_141);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_142);
-    stringBuffer.append(currentProcess.getName() );
+    stringBuffer.append(name );
     stringBuffer.append(TEXT_143);
+    stringBuffer.append(cid);
+    stringBuffer.append(TEXT_144);
+     } 
+    stringBuffer.append(TEXT_145);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_146);
+    stringBuffer.append(name );
+    stringBuffer.append(TEXT_147);
+    stringBuffer.append(cid);
+    stringBuffer.append(TEXT_148);
+    
+	}
+	
+    stringBuffer.append(TEXT_149);
+    if(printParameter){
+    stringBuffer.append(TEXT_150);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_151);
+    stringBuffer.append(currentProcess.getName() );
+    stringBuffer.append(TEXT_152);
     if(!useDynamicJob){
     stringBuffer.append(childJob );
     }else{
-    stringBuffer.append(TEXT_144);
+    stringBuffer.append(TEXT_153);
     stringBuffer.append(dynamicJobName);
-    stringBuffer.append(TEXT_145);
+    stringBuffer.append(TEXT_154);
     }
-    stringBuffer.append(TEXT_146);
+    stringBuffer.append(TEXT_155);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_147);
+    stringBuffer.append(TEXT_156);
     
 	}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
 	if (!useIndependentProcess){//AAAAAAAAAAAA
 	
-    stringBuffer.append(TEXT_148);
-    stringBuffer.append(childJob );
-    stringBuffer.append(TEXT_149);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_150);
-    stringBuffer.append(childJob );
-    stringBuffer.append(TEXT_151);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_152);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_153);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_154);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_155);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_156);
-    stringBuffer.append(cid);
     stringBuffer.append(TEXT_157);
-    stringBuffer.append(cid);
+    stringBuffer.append(childJob );
     stringBuffer.append(TEXT_158);
-    stringBuffer.append(cid);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_159);
-    stringBuffer.append(cid );
+    stringBuffer.append(childJob );
     stringBuffer.append(TEXT_160);
-    stringBuffer.append(cid);
+    
+            if (ProcessorUtilities.isEsbJob(process, version)) {
+        
     stringBuffer.append(TEXT_161);
-    if(originalContext){
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_162);
-    stringBuffer.append(cid );
+    
+            }
+        
     stringBuffer.append(TEXT_163);
-    stringBuffer.append(cid );
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_164);
-    }
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_165);
-    if(isLog4jEnabled){
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_166);
     stringBuffer.append(cid);
     stringBuffer.append(TEXT_167);
-    if(!useDynamicJob){
-    stringBuffer.append(childJob );
-    }else{
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_168);
-    stringBuffer.append(dynamicJobName);
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_169);
-    }
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_170);
-    stringBuffer.append(version);
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_171);
-    stringBuffer.append(context);
-    stringBuffer.append(TEXT_172);
-    }
-    stringBuffer.append(TEXT_173);
     stringBuffer.append(cid );
+    stringBuffer.append(TEXT_172);
+    stringBuffer.append(cid);
+    stringBuffer.append(TEXT_173);
+    if(originalContext){
     stringBuffer.append(TEXT_174);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_175);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_176);
-    stringBuffer.append(cid );
+    }
     stringBuffer.append(TEXT_177);
     if(isLog4jEnabled){
     stringBuffer.append(TEXT_178);
@@ -962,48 +978,78 @@ String inputConnName = null;
     stringBuffer.append(TEXT_181);
     }
     stringBuffer.append(TEXT_182);
-    }
+    stringBuffer.append(version);
     stringBuffer.append(TEXT_183);
+    stringBuffer.append(context);
+    stringBuffer.append(TEXT_184);
+    }
+    stringBuffer.append(TEXT_185);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_186);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_187);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_188);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_189);
+    if(isLog4jEnabled){
+    stringBuffer.append(TEXT_190);
+    stringBuffer.append(cid);
+    stringBuffer.append(TEXT_191);
+    if(!useDynamicJob){
+    stringBuffer.append(childJob );
+    }else{
+    stringBuffer.append(TEXT_192);
+    stringBuffer.append(dynamicJobName);
+    stringBuffer.append(TEXT_193);
+    }
+    stringBuffer.append(TEXT_194);
+    }
+    stringBuffer.append(TEXT_195);
     
 		if (childJob != null) {
 	    	if (isRunInMultiThread){
     		
-    stringBuffer.append(TEXT_184);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_185);
-    }else {
-    stringBuffer.append(TEXT_186);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_187);
-    }
-    stringBuffer.append(TEXT_188);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_189);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_190);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_191);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_192);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_193);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_194);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_195);
-    stringBuffer.append(cid );
     stringBuffer.append(TEXT_196);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_197);
-    if (dieOnError) { 
+    }else {
     stringBuffer.append(TEXT_198);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_199);
-    stringBuffer.append(cid );
+    }
     stringBuffer.append(TEXT_200);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_201);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_202);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_203);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_204);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_205);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_206);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_207);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_208);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_209);
+    if (dieOnError) { 
+    stringBuffer.append(TEXT_210);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_211);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_212);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_213);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_214);
     }
 		}
-    stringBuffer.append(TEXT_201);
+    stringBuffer.append(TEXT_215);
     
 
 		String firstConnName = null; 
@@ -1024,15 +1070,15 @@ String inputConnName = null;
 			blockCodes.add(new BlockCode("C_01"));
 			((org.talend.core.model.process.AbstractNode) node).setBlocksCodeToClose(blockCodes);
 	    	
-    stringBuffer.append(TEXT_202);
+    stringBuffer.append(TEXT_216);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_203);
+    stringBuffer.append(TEXT_217);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_204);
+    stringBuffer.append(TEXT_218);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_205);
+    stringBuffer.append(TEXT_219);
     stringBuffer.append(inConnNull);
-    stringBuffer.append(TEXT_206);
+    stringBuffer.append(TEXT_220);
     
 					int columnSize = columns.size();
 					for (int i = 0; i < columnSize; i++) {//a
@@ -1042,80 +1088,80 @@ String inputConnName = null;
 						JavaType javaType = JavaTypesManager.getJavaTypeFromId(column.getTalendType());
 						String patternValue = column.getPattern() == null || column.getPattern().trim().length() == 0 ? null : column.getPattern();
 			        	
-    stringBuffer.append(TEXT_207);
-    stringBuffer.append(i );
-    stringBuffer.append(TEXT_208);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_209);
-    if(javaType == JavaTypesManager.STRING || javaType == JavaTypesManager.OBJECT) {
-    stringBuffer.append(TEXT_210);
-    stringBuffer.append(firstConnName );
-    stringBuffer.append(TEXT_211);
-    stringBuffer.append(label );
-    stringBuffer.append(TEXT_212);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_213);
-    stringBuffer.append(i );
-    stringBuffer.append(TEXT_214);
-    } else if(javaType == JavaTypesManager.DATE) {
-    stringBuffer.append(TEXT_215);
-    stringBuffer.append(firstConnName );
-    stringBuffer.append(TEXT_216);
-    stringBuffer.append(label );
-    stringBuffer.append(TEXT_217);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_218);
-    stringBuffer.append(i );
-    stringBuffer.append(TEXT_219);
-    stringBuffer.append( patternValue );
-    stringBuffer.append(TEXT_220);
-    } else if(javaType == JavaTypesManager.BYTE_ARRAY){
     stringBuffer.append(TEXT_221);
-    stringBuffer.append(firstConnName );
+    stringBuffer.append(i );
     stringBuffer.append(TEXT_222);
-    stringBuffer.append(label );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_223);
-    stringBuffer.append(cid );
+    if(javaType == JavaTypesManager.STRING || javaType == JavaTypesManager.OBJECT) {
     stringBuffer.append(TEXT_224);
-    stringBuffer.append(i );
+    stringBuffer.append(firstConnName );
     stringBuffer.append(TEXT_225);
-    }else if(javaType == JavaTypesManager.LIST) {
+    stringBuffer.append(label );
     stringBuffer.append(TEXT_226);
-    stringBuffer.append(firstConnName );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_227);
-    stringBuffer.append(label );
+    stringBuffer.append(i );
     stringBuffer.append(TEXT_228);
-    stringBuffer.append( typeToGenerate );
+    } else if(javaType == JavaTypesManager.DATE) {
     stringBuffer.append(TEXT_229);
-    stringBuffer.append(cid );
+    stringBuffer.append(firstConnName );
     stringBuffer.append(TEXT_230);
-    stringBuffer.append(i );
+    stringBuffer.append(label );
     stringBuffer.append(TEXT_231);
-    } else {
-    stringBuffer.append(TEXT_232);
-    stringBuffer.append(firstConnName );
-    stringBuffer.append(TEXT_233);
-    stringBuffer.append(label );
-    stringBuffer.append(TEXT_234);
-    stringBuffer.append( typeToGenerate );
-    stringBuffer.append(TEXT_235);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_236);
+    stringBuffer.append(TEXT_232);
     stringBuffer.append(i );
-    stringBuffer.append(TEXT_237);
-    }
-    stringBuffer.append(TEXT_238);
+    stringBuffer.append(TEXT_233);
+    stringBuffer.append( patternValue );
+    stringBuffer.append(TEXT_234);
+    } else if(javaType == JavaTypesManager.BYTE_ARRAY){
+    stringBuffer.append(TEXT_235);
     stringBuffer.append(firstConnName );
-    stringBuffer.append(TEXT_239);
+    stringBuffer.append(TEXT_236);
     stringBuffer.append(label );
+    stringBuffer.append(TEXT_237);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_238);
+    stringBuffer.append(i );
+    stringBuffer.append(TEXT_239);
+    }else if(javaType == JavaTypesManager.LIST) {
     stringBuffer.append(TEXT_240);
-    stringBuffer.append(JavaTypesManager.getDefaultValueFromJavaType(typeToGenerate));
+    stringBuffer.append(firstConnName );
     stringBuffer.append(TEXT_241);
+    stringBuffer.append(label );
+    stringBuffer.append(TEXT_242);
+    stringBuffer.append( typeToGenerate );
+    stringBuffer.append(TEXT_243);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_244);
+    stringBuffer.append(i );
+    stringBuffer.append(TEXT_245);
+    } else {
+    stringBuffer.append(TEXT_246);
+    stringBuffer.append(firstConnName );
+    stringBuffer.append(TEXT_247);
+    stringBuffer.append(label );
+    stringBuffer.append(TEXT_248);
+    stringBuffer.append( typeToGenerate );
+    stringBuffer.append(TEXT_249);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_250);
+    stringBuffer.append(i );
+    stringBuffer.append(TEXT_251);
+    }
+    stringBuffer.append(TEXT_252);
+    stringBuffer.append(firstConnName );
+    stringBuffer.append(TEXT_253);
+    stringBuffer.append(label );
+    stringBuffer.append(TEXT_254);
+    stringBuffer.append(JavaTypesManager.getDefaultValueFromJavaType(typeToGenerate));
+    stringBuffer.append(TEXT_255);
     
 					}//a
 					if (inConnNull==false && propagateData) {//d
 					
-    stringBuffer.append(TEXT_242);
+    stringBuffer.append(TEXT_256);
     
 						for (IConnection conn : node.getOutgoingConnections()) {
 							if (conn.getLineStyle().hasConnectionCategory(IConnectionCategory.MAIN)) {
@@ -1124,15 +1170,15 @@ String inputConnName = null;
 									for (IMetadataColumn outputCol : outputMetadataTable.getListColumns()) { 
 										if (inputCols.contains(outputCol.getLabel())) {
 										
-    stringBuffer.append(TEXT_243);
+    stringBuffer.append(TEXT_257);
     stringBuffer.append(conn.getName() );
-    stringBuffer.append(TEXT_244);
+    stringBuffer.append(TEXT_258);
     stringBuffer.append(outputCol.getLabel() );
-    stringBuffer.append(TEXT_245);
+    stringBuffer.append(TEXT_259);
     stringBuffer.append(inputConnName );
-    stringBuffer.append(TEXT_246);
+    stringBuffer.append(TEXT_260);
     stringBuffer.append(outputCol.getLabel() );
-    stringBuffer.append(TEXT_247);
+    stringBuffer.append(TEXT_261);
     
 										}
 									}
@@ -1142,7 +1188,7 @@ String inputConnName = null;
 						}
 					}//d
 					
-    stringBuffer.append(TEXT_248);
+    stringBuffer.append(TEXT_262);
     
 		}//b  
 	} else { //AAAAAAAAAAAA
@@ -1150,90 +1196,62 @@ String inputConnName = null;
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 	// use independent process to run subjob
 	
-    stringBuffer.append(TEXT_249);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_250);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_251);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_252);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_253);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_254);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_255);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_256);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_257);
-    if(isLog4jEnabled){
-    stringBuffer.append(TEXT_258);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_259);
-    }
-    stringBuffer.append(TEXT_260);
-    if(isLog4jEnabled){
-    stringBuffer.append(TEXT_261);
-    stringBuffer.append(cid);
-    stringBuffer.append(TEXT_262);
-    if(!useDynamicJob){
-    stringBuffer.append(childJob );
-    }else{
     stringBuffer.append(TEXT_263);
-    stringBuffer.append(dynamicJobName);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_264);
-    }
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_265);
-    stringBuffer.append(version);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_266);
-    stringBuffer.append(context);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_267);
-    }
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_268);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_269);
-    if(isLog4jEnabled){
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_270);
-    stringBuffer.append(cid);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_271);
-    if(!useDynamicJob){
-    stringBuffer.append(childJob );
-    }else{
+    if(isLog4jEnabled){
     stringBuffer.append(TEXT_272);
-    stringBuffer.append(dynamicJobName);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_273);
     }
     stringBuffer.append(TEXT_274);
-    }
-    stringBuffer.append(TEXT_275);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_276);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_277);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_278);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_279);
     if(isLog4jEnabled){
+    stringBuffer.append(TEXT_275);
+    stringBuffer.append(cid);
+    stringBuffer.append(TEXT_276);
+    if(!useDynamicJob){
+    stringBuffer.append(childJob );
+    }else{
+    stringBuffer.append(TEXT_277);
+    stringBuffer.append(dynamicJobName);
+    stringBuffer.append(TEXT_278);
+    }
+    stringBuffer.append(TEXT_279);
+    stringBuffer.append(version);
     stringBuffer.append(TEXT_280);
-    stringBuffer.append(cid );
+    stringBuffer.append(context);
     stringBuffer.append(TEXT_281);
     }
     stringBuffer.append(TEXT_282);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_283);
-    stringBuffer.append(cid );
+    if(isLog4jEnabled){
     stringBuffer.append(TEXT_284);
-    stringBuffer.append(cid );
+    stringBuffer.append(cid);
     stringBuffer.append(TEXT_285);
-    stringBuffer.append(cid );
+    if(!useDynamicJob){
+    stringBuffer.append(childJob );
+    }else{
     stringBuffer.append(TEXT_286);
-    stringBuffer.append(cid );
+    stringBuffer.append(dynamicJobName);
     stringBuffer.append(TEXT_287);
-    stringBuffer.append(cid );
+    }
     stringBuffer.append(TEXT_288);
-    stringBuffer.append(cid );
+    }
     stringBuffer.append(TEXT_289);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_290);
@@ -1241,15 +1259,15 @@ String inputConnName = null;
     stringBuffer.append(TEXT_291);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_292);
-    if (dieOnError) { 
-    stringBuffer.append(TEXT_293);
     stringBuffer.append(cid );
+    stringBuffer.append(TEXT_293);
+    if(isLog4jEnabled){
     stringBuffer.append(TEXT_294);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_295);
-    }else{
+    }
     stringBuffer.append(TEXT_296);
-    if(isLog4jEnabled){
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_297);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_298);
@@ -1257,14 +1275,42 @@ String inputConnName = null;
     stringBuffer.append(TEXT_299);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_300);
-    }
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_301);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_302);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_303);
-    }
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_304);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_305);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_306);
+    if (dieOnError) { 
+    stringBuffer.append(TEXT_307);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_308);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_309);
+    }else{
+    stringBuffer.append(TEXT_310);
+    if(isLog4jEnabled){
+    stringBuffer.append(TEXT_311);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_312);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_313);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_314);
+    }
+    stringBuffer.append(TEXT_315);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_316);
+    stringBuffer.append(cid );
+    stringBuffer.append(TEXT_317);
+    }
+    stringBuffer.append(TEXT_318);
     
 		String firstConnName = null; 
 		if(outConns != null && outConns.size() > 0) {
@@ -1278,23 +1324,23 @@ String inputConnName = null;
 		if(firstConnName != null) {//b
 	    	if(inConns == null || inConns.size() == 0){//c
 			
-    stringBuffer.append(TEXT_305);
+    stringBuffer.append(TEXT_319);
     if(isLog4jEnabled){
-    stringBuffer.append(TEXT_306);
+    stringBuffer.append(TEXT_320);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_307);
+    stringBuffer.append(TEXT_321);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_308);
+    stringBuffer.append(TEXT_322);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_309);
+    stringBuffer.append(TEXT_323);
     }
-    stringBuffer.append(TEXT_310);
+    stringBuffer.append(TEXT_324);
     
 			}//c
 		}//b  
 	}//AAAAAAAAAAAA
 	
-    stringBuffer.append(TEXT_311);
+    stringBuffer.append(TEXT_325);
     return stringBuffer.toString();
   }
 }

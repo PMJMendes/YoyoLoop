@@ -128,7 +128,7 @@ try {
     stringBuffer.append(cid);
     stringBuffer.append(TEXT_11);
     
-			commandLine = ProcessorUtilities.getCommandLine("win32",true, childJobIds[i], context,org.talend.designer.runprocess.IProcessor.NO_STATISTICS,org.talend.designer.runprocess.IProcessor.NO_TRACES, codeOptions);
+			commandLine = ProcessorUtilities.getCommandLine("win32", false, true, childJobIds[i], context,org.talend.designer.runprocess.IProcessor.NO_STATISTICS,org.talend.designer.runprocess.IProcessor.NO_TRACES, codeOptions);
 			
 			    // remove the frontal 2 lines
 			    if (commandLine.length > 0 && ProcessorUtilities.isExportConfig()){
