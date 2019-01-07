@@ -4,10 +4,10 @@
     <contextParameter xmi:id="_d2BgscFmEein1fOzNJxe6g" comment="" name="Port" prompt="Port?" promptNeeded="true" type="id_String" value="5432"/>
     <contextParameter xmi:id="_d2BgssFmEein1fOzNJxe6g" comment="" name="Database" prompt="Database?" promptNeeded="true" type="id_String" value="yolo-mvp"/>
     <contextParameter xmi:id="_d2Bgs8FmEein1fOzNJxe6g" comment="" name="Schema" prompt="Schema?" promptNeeded="true" type="id_String" value="public"/>
-    <contextParameter xmi:id="_d2BgtMFmEein1fOzNJxe6g" comment="" name="Login" prompt="Login?" promptNeeded="true" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_d2BgtMFmEein1fOzNJxe6g" comment="" name="Login" prompt="Login?" promptNeeded="true" type="id_String" value="yolo"/>
     <contextParameter xmi:id="_d2BgtcFmEein1fOzNJxe6g" comment="" name="Server" prompt="Server?" promptNeeded="true" type="id_String" value="localhost"/>
-    <contextParameter xmi:id="_d2BgtsFmEein1fOzNJxe6g" comment="" name="Password" prompt="Password?" promptNeeded="true" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
-    <contextParameter xmi:id="_d2Bgt8FmEein1fOzNJxe6g" comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/YoyoLoop-etl-v2.xlsx"/>
+    <contextParameter xmi:id="_d2BgtsFmEein1fOzNJxe6g" comment="" name="Password" prompt="Password?" promptNeeded="true" type="id_Password" value="jHYOmNeBJxnQWptB4Rj7Hg=="/>
+    <contextParameter xmi:id="_d2Bgt8FmEein1fOzNJxe6g" comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" type="id_String" value="G:\REPOS\YoyoLoop\ETL\Ficheiros/YoyoLoop-etl-v2-23Dec2018-v50.xlsx"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_TQhoAMFuEeiS68lzM5Ju9A" confirmationNeeded="false" name="Prod">
     <contextParameter xmi:id="_TQhoAcFuEeiS68lzM5Ju9A" comment="" name="Port" prompt="Port?" promptNeeded="true" type="id_String" value="5432"/>
@@ -16,7 +16,7 @@
     <contextParameter xmi:id="_TQhoBMFuEeiS68lzM5Ju9A" comment="" name="Login" prompt="Login?" promptNeeded="true" type="id_String" value="yoyo"/>
     <contextParameter xmi:id="_TQhoBcFuEeiS68lzM5Ju9A" comment="" name="Server" prompt="Server?" promptNeeded="true" type="id_String" value="yoyodbinstance.c5auyviawrg9.eu-west-1.rds.amazonaws.com"/>
     <contextParameter xmi:id="_TQhoBsFuEeiS68lzM5Ju9A" comment="" name="Password" prompt="Password?" promptNeeded="true" type="id_Password" value="JNeLCKnmJT+R9poCVIjgrw=="/>
-    <contextParameter xmi:id="_TQhoB8FuEeiS68lzM5Ju9A" comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/YoyoLoop-etl-v2.xlsx"/>
+    <contextParameter xmi:id="_TQhoB8FuEeiS68lzM5Ju9A" comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" type="id_String" value="G:\REPOS\YoyoLoop\ETL\Ficheiros/YoyoLoop-etl-v2-23Dec2018-v50.xlsx"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_d2BgwMFmEein1fOzNJxe6g" confirmationNeeded="false" name="Dev">
     <contextParameter xmi:id="_d2BgwcFmEein1fOzNJxe6g" comment="" name="Port" prompt="Port?" promptNeeded="true" type="id_String" value="5432"/>
@@ -25,6 +25,6 @@
     <contextParameter xmi:id="_d2BgxMFmEein1fOzNJxe6g" comment="" name="Login" prompt="Login?" promptNeeded="true" type="id_String" value="yoyo"/>
     <contextParameter xmi:id="_d2BgxcFmEein1fOzNJxe6g" comment="" name="Server" prompt="Server?" promptNeeded="true" type="id_String" value="yoyodbinstance.c5auyviawrg9.eu-west-1.rds.amazonaws.com"/>
     <contextParameter xmi:id="_d2BgxsFmEein1fOzNJxe6g" comment="" name="Password" prompt="Password?" promptNeeded="true" type="id_Password" value="JNeLCKnmJT+R9poCVIjgrw=="/>
-    <contextParameter xmi:id="_d2Bgx8FmEein1fOzNJxe6g" comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/YoyoLoop-etl-v2.xlsx"/>
+    <contextParameter xmi:id="_d2Bgx8FmEein1fOzNJxe6g" comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" type="id_String" value="G:\REPOS\YoyoLoop\ETL\Ficheiros/YoyoLoop-etl-v2-23Dec2018-v50.xlsx"/>
   </talendfile:ContextType>
 </xmi:XMI>

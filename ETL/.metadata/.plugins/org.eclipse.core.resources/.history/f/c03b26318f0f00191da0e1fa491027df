@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_ZWL20LZ6EeiEqNgTec4Ifg" id="_ZWCF0LZ6EeiEqNgTec4Ifg" label="Fares" version="0.2" statusCode="" item="_ZWL20rZ6EeiEqNgTec4Ifg" displayName="Fares">
+    <author href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+    <additionalProperties xmi:id="_y-AAAA-GEemBCcxaF0EzSA" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_y-AAAQ-GEemBCcxaF0EzSA" key="created_product_version" value="6.3.0.20161026_1219"/>
+    <additionalProperties xmi:id="_y-AAAg-GEemBCcxaF0EzSA" key="created_date" value="2018-12-22T18:29:55.161+0000"/>
+    <additionalProperties xmi:id="_y-AAAw-GEemBCcxaF0EzSA" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_y-AABA-GEemBCcxaF0EzSA" key="modified_product_version" value="6.3.0.20161026_1219"/>
+    <additionalProperties xmi:id="_y-AABQ-GEemBCcxaF0EzSA" key="modified_date" value="2018-12-22T18:31:41.926+0000"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_ZWL20bZ6EeiEqNgTec4Ifg" path=""/>
+  <TalendProperties:ProcessItem xmi:id="_ZWL20rZ6EeiEqNgTec4Ifg" property="_ZWL20LZ6EeiEqNgTec4Ifg" state="_ZWL20bZ6EeiEqNgTec4Ifg">
+    <process href="Fares_0.2.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>

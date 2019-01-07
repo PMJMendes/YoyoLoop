@@ -266,7 +266,7 @@ public class Subprocess_headerJava
   protected final String TEXT_232 = NL + "\t\tString iterateId = \"\";" + NL + "\t";
   protected final String TEXT_233 = NL + "\t";
   protected final String TEXT_234 = NL + "\t\tint iterateLoop = 0;" + NL + "\t";
-  protected final String TEXT_235 = NL + "\tString currentComponent = \"\";" + NL + "\tjava.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();" + NL + "" + NL + "\ttry {" + NL + "" + NL + "\t\t\tString currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();" + NL + "\t\t\tboolean resumeIt = currentMethodName.equals(resumeEntryMethodName);" + NL + "\t\t\tif( resumeEntryMethodName == null || resumeIt || globalResumeTicket){//start the resume" + NL + "\t\t\t\tglobalResumeTicket = true;" + NL;
+  protected final String TEXT_235 = NL + "\tString currentComponent = \"\";" + NL + "\tjava.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();" + NL + "" + NL + "\ttry {" + NL + "\t\t\t// TDI-39566 avoid throwing an useless Exception" + NL + "\t\t\tboolean resumeIt = true;" + NL + "\t\t\tif (globalResumeTicket == false && resumeEntryMethodName != null) {" + NL + "\t\t\t\tString currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();" + NL + "\t\t\t\tresumeIt = resumeEntryMethodName.equals(currentMethodName);" + NL + "\t\t\t}" + NL + "\t\t\tif (resumeIt || globalResumeTicket) { //start the resume" + NL + "\t\t\t\tglobalResumeTicket = true;" + NL;
   protected final String TEXT_236 = NL + "    \t\t\t//resumeUtil.addLog(\"CHECKPOINT\", \"CONNECTION:";
   protected final String TEXT_237 = ":";
   protected final String TEXT_238 = ":";
@@ -451,7 +451,7 @@ public class Subprocess_headerJava
 								}
 
 								// for tRecordMatching
-								if(conn.getTarget().getUniqueName().startsWith("tRecordMatching")){
+								if(conn.getTarget().getUniqueName().indexOf("tRecordMatching")>-1){
 									List<Map<String, String>> joinKeys = (List<Map<String,String>>)ElementParameterParser.getObjectValue(conn.getTarget(), "__BLOCKING_DEFINITION__");
 									for(Map<String, String> joinKeyLine : joinKeys){
 										String lookupKey = joinKeyLine.get("LOOKUP_COLUMN");
