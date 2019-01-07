@@ -2,16 +2,16 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Local" jobType="Standard">
   <context confirmationNeeded="false" name="Local">
     <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yolo-mvp"/>
-    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/YoyoLoop-etl-v2.xlsx"/>
-    <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="postgres"/>
-    <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="G:\REPOS\YoyoLoop\ETL\Ficheiros/YoyoLoop-etl-v2-23Dec2018-v50.xlsx"/>
+    <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yolo"/>
+    <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_Password" value="jHYOmNeBJxnQWptB4Rj7Hg=="/>
     <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="5432"/>
     <contextParameter comment="" name="Schema" prompt="Schema?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="public"/>
     <contextParameter comment="" name="Server" prompt="Server?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="localhost"/>
   </context>
   <context confirmationNeeded="false" name="Prod">
     <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyo_prod"/>
-    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/YoyoLoop-etl-v2.xlsx"/>
+    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="G:\REPOS\YoyoLoop\ETL\Ficheiros/YoyoLoop-etl-v2-23Dec2018-v50.xlsx"/>
     <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyo"/>
     <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_Password" value="JNeLCKnmJT+R9poCVIjgrw=="/>
     <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="5432"/>
@@ -20,7 +20,7 @@
   </context>
   <context confirmationNeeded="false" name="Dev">
     <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyo_dev"/>
-    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="C:/Local/LocalDev/Yoyo Loop/ETL/Ficheiros/YoyoLoop-etl-v2.xlsx"/>
+    <contextParameter comment="" name="ExcelPath" prompt="ExcelPath?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="G:\REPOS\YoyoLoop\ETL\Ficheiros/YoyoLoop-etl-v2-23Dec2018-v50.xlsx"/>
     <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="yoyo"/>
     <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_Password" value="JNeLCKnmJT+R9poCVIjgrw=="/>
     <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="true" repositoryContextId="_3-EsMLzHEei5bbPetrqGZg" type="id_String" value="5432"/>
@@ -129,6 +129,7 @@
     <routinesParameter id="_FzBz8LN_Eei8z7zJyqB1eQ" name="TalendDataGenerator"/>
     <routinesParameter id="_FzLk8LN_Eei8z7zJyqB1eQ" name="TalendDate"/>
     <routinesParameter id="_FzUu4LN_Eei8z7zJyqB1eQ" name="TalendString"/>
+    <routinesParameter id="_zHQpsA-GEemBCcxaF0EzSA" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>

@@ -30,234 +30,233 @@ public class TAggregateInMainJava
   protected final String TEXT_4 = NL + "            log.";
   protected final String TEXT_5 = "(\"";
   protected final String TEXT_6 = " - \" ";
-  protected final String TEXT_7 = " + ";
-  protected final String TEXT_8 = " ";
+  protected final String TEXT_7 = " + (";
+  protected final String TEXT_8 = ") ";
   protected final String TEXT_9 = ");";
-  protected final String TEXT_10 = NL + "    \tclass BytesLimit65535_";
-  protected final String TEXT_11 = "{" + NL + "    \t\tpublic void limitLog4jByte() throws Exception{" + NL + "    \t\t\t";
-  protected final String TEXT_12 = NL + "            StringBuilder ";
-  protected final String TEXT_13 = " = new StringBuilder();";
-  protected final String TEXT_14 = NL + "            ";
-  protected final String TEXT_15 = ".append(\"Parameters:\");";
-  protected final String TEXT_16 = NL + "                    ";
-  protected final String TEXT_17 = ".append(\"";
-  protected final String TEXT_18 = "\" + \" = \" + String.valueOf(";
-  protected final String TEXT_19 = ").substring(0, 4) + \"...\");     ";
-  protected final String TEXT_20 = NL + "                    ";
-  protected final String TEXT_21 = ".append(\"";
-  protected final String TEXT_22 = "\" + \" = \" + ";
-  protected final String TEXT_23 = ");";
-  protected final String TEXT_24 = NL + "                ";
-  protected final String TEXT_25 = ".append(\" | \");";
-  protected final String TEXT_26 = NL + "    \t\t}" + NL + "    \t}" + NL + "    \t" + NL + "        new BytesLimit65535_";
-  protected final String TEXT_27 = "().limitLog4jByte();";
-  protected final String TEXT_28 = NL + "            StringBuilder ";
-  protected final String TEXT_29 = " = new StringBuilder();    ";
-  protected final String TEXT_30 = NL + "                    ";
-  protected final String TEXT_31 = ".append(";
-  protected final String TEXT_32 = ".";
-  protected final String TEXT_33 = ");";
-  protected final String TEXT_34 = NL + "                    if(";
-  protected final String TEXT_35 = ".";
-  protected final String TEXT_36 = " == null){";
-  protected final String TEXT_37 = NL + "                        ";
-  protected final String TEXT_38 = ".append(\"<null>\");" + NL + "                    }else{";
-  protected final String TEXT_39 = NL + "                        ";
-  protected final String TEXT_40 = ".append(";
-  protected final String TEXT_41 = ".";
-  protected final String TEXT_42 = ");" + NL + "                    }   ";
-  protected final String TEXT_43 = NL + "                ";
-  protected final String TEXT_44 = ".append(\"|\");";
-  protected final String TEXT_45 = NL + "            \t\t\t\t    ";
-  protected final String TEXT_46 = ".";
-  protected final String TEXT_47 = " = aggregated_row_";
-  protected final String TEXT_48 = ".";
-  protected final String TEXT_49 = ";" + NL + "            \t\t\t\t    ";
-  protected final String TEXT_50 = NL + "            \t\t\t\t    String s_";
+  protected final String TEXT_10 = NL + "            if (log.isDebugEnabled()) {" + NL + "                class BytesLimit65535_";
+  protected final String TEXT_11 = "{" + NL + "                    public void limitLog4jByte() throws Exception{" + NL + "                    StringBuilder ";
+  protected final String TEXT_12 = " = new StringBuilder();";
+  protected final String TEXT_13 = NL + "                    ";
+  protected final String TEXT_14 = ".append(\"Parameters:\");";
+  protected final String TEXT_15 = NL + "                            ";
+  protected final String TEXT_16 = ".append(\"";
+  protected final String TEXT_17 = "\" + \" = \" + String.valueOf(";
+  protected final String TEXT_18 = ").substring(0, 4) + \"...\");     ";
+  protected final String TEXT_19 = NL + "                            ";
+  protected final String TEXT_20 = ".append(\"";
+  protected final String TEXT_21 = "\" + \" = \" + ";
+  protected final String TEXT_22 = ");";
+  protected final String TEXT_23 = NL + "                        ";
+  protected final String TEXT_24 = ".append(\" | \");";
+  protected final String TEXT_25 = NL + "                    } " + NL + "                } " + NL + "            new BytesLimit65535_";
+  protected final String TEXT_26 = "().limitLog4jByte();" + NL + "            }";
+  protected final String TEXT_27 = NL + "            StringBuilder ";
+  protected final String TEXT_28 = " = new StringBuilder();    ";
+  protected final String TEXT_29 = NL + "                    ";
+  protected final String TEXT_30 = ".append(";
+  protected final String TEXT_31 = ".";
+  protected final String TEXT_32 = ");";
+  protected final String TEXT_33 = NL + "                    if(";
+  protected final String TEXT_34 = ".";
+  protected final String TEXT_35 = " == null){";
+  protected final String TEXT_36 = NL + "                        ";
+  protected final String TEXT_37 = ".append(\"<null>\");" + NL + "                    }else{";
+  protected final String TEXT_38 = NL + "                        ";
+  protected final String TEXT_39 = ".append(";
+  protected final String TEXT_40 = ".";
+  protected final String TEXT_41 = ");" + NL + "                    }   ";
+  protected final String TEXT_42 = NL + "                ";
+  protected final String TEXT_43 = ".append(\"|\");";
+  protected final String TEXT_44 = NL + "            \t\t\t\t    ";
+  protected final String TEXT_45 = ".";
+  protected final String TEXT_46 = " = aggregated_row_";
+  protected final String TEXT_47 = ".";
+  protected final String TEXT_48 = ";" + NL + "            \t\t\t\t    ";
+  protected final String TEXT_49 = NL + "            \t\t\t\t    String s_";
+  protected final String TEXT_50 = "_";
   protected final String TEXT_51 = "_";
-  protected final String TEXT_52 = "_";
-  protected final String TEXT_53 = " = String.valueOf(aggregated_row_";
-  protected final String TEXT_54 = ".";
-  protected final String TEXT_55 = ");" + NL + "            \t\t\t\t    ";
-  protected final String TEXT_56 = ".";
-  protected final String TEXT_57 = " = ";
-  protected final String TEXT_58 = "s_";
+  protected final String TEXT_52 = " = String.valueOf(aggregated_row_";
+  protected final String TEXT_53 = ".";
+  protected final String TEXT_54 = ");" + NL + "            \t\t\t\t    ";
+  protected final String TEXT_55 = ".";
+  protected final String TEXT_56 = " = ";
+  protected final String TEXT_57 = "s_";
+  protected final String TEXT_58 = "_";
   protected final String TEXT_59 = "_";
-  protected final String TEXT_60 = "_";
-  protected final String TEXT_61 = "s_";
+  protected final String TEXT_60 = "s_";
+  protected final String TEXT_61 = "_";
   protected final String TEXT_62 = "_";
-  protected final String TEXT_63 = "_";
-  protected final String TEXT_64 = ".getBytes()";
-  protected final String TEXT_65 = "(\"null\").equals(s_";
+  protected final String TEXT_63 = ".getBytes()";
+  protected final String TEXT_64 = "(\"null\").equals(s_";
+  protected final String TEXT_65 = "_";
   protected final String TEXT_66 = "_";
-  protected final String TEXT_67 = "_";
-  protected final String TEXT_68 = ") ? null : ParserUtils.parseTo_Date(s_";
+  protected final String TEXT_67 = ") ? null : ParserUtils.parseTo_Date(s_";
+  protected final String TEXT_68 = "_";
   protected final String TEXT_69 = "_";
-  protected final String TEXT_70 = "_";
-  protected final String TEXT_71 = ", ";
-  protected final String TEXT_72 = ")";
-  protected final String TEXT_73 = "ParserUtils.parseTo_";
-  protected final String TEXT_74 = "(s_";
+  protected final String TEXT_70 = ", ";
+  protected final String TEXT_71 = ")";
+  protected final String TEXT_72 = "ParserUtils.parseTo_";
+  protected final String TEXT_73 = "(s_";
+  protected final String TEXT_74 = "_";
   protected final String TEXT_75 = "_";
-  protected final String TEXT_76 = "_";
-  protected final String TEXT_77 = ")";
-  protected final String TEXT_78 = ";" + NL + "            \t\t\t\t    ";
-  protected final String TEXT_79 = NL + "                                if(aggregated_row_";
-  protected final String TEXT_80 = ".";
-  protected final String TEXT_81 = "_count > 0){" + NL + "                                \t";
-  protected final String TEXT_82 = NL + "\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_83 = ".";
-  protected final String TEXT_84 = " = aggregated_row_";
-  protected final String TEXT_85 = ".";
-  protected final String TEXT_86 = "_sum.divide(new BigDecimal(String.valueOf(aggregated_row_";
-  protected final String TEXT_87 = ".";
-  protected final String TEXT_88 = "_count)), ";
-  protected final String TEXT_89 = ", BigDecimal.ROUND_HALF_UP)" + NL + "\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_90 = NL + "\t    \t\t\t\t\t\t\t\t\t.";
-  protected final String TEXT_91 = "Value()" + NL + "\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_92 = NL + "\t    \t\t\t\t\t\t\t\t;" + NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_93 = NL + "\t    \t\t\t\t\t\t\t\tdouble ";
-  protected final String TEXT_94 = "_";
-  protected final String TEXT_95 = "_temp = (double) aggregated_row_";
-  protected final String TEXT_96 = ".";
-  protected final String TEXT_97 = "_sum / (double) aggregated_row_";
-  protected final String TEXT_98 = ".";
-  protected final String TEXT_99 = "_count;" + NL + "\t    \t\t\t\t\t\t\t\t" + NL + "\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_100 = NL + "\t\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_101 = ".";
-  protected final String TEXT_102 = " = String.valueOf(";
-  protected final String TEXT_103 = "_";
-  protected final String TEXT_104 = "_temp);" + NL + "\t\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_105 = ".";
-  protected final String TEXT_106 = " = (";
-  protected final String TEXT_107 = ") ";
-  protected final String TEXT_108 = "_";
-  protected final String TEXT_109 = "_temp;" + NL + "\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_110 = NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_111 = NL + "                                } else {" + NL + "                                \t\tString count = \"0\";" + NL + "   \t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_112 = NL + "    \t\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_113 = ".";
-  protected final String TEXT_114 = " = count;" + NL + "    \t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_115 = NL + "    \t\t    \t\t\t\t\t\t\t";
-  protected final String TEXT_116 = ".";
-  protected final String TEXT_117 = " = ParserUtils.parseTo_";
-  protected final String TEXT_118 = "(count);" + NL + "    \t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_119 = NL + "                                }";
-  protected final String TEXT_120 = NL + "\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_121 = ".";
-  protected final String TEXT_122 = " = new BigDecimal(aggregated_row_";
-  protected final String TEXT_123 = ".count);" + NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_124 = ".";
-  protected final String TEXT_125 = " = new BigDecimal(aggregated_row_";
-  protected final String TEXT_126 = ".";
-  protected final String TEXT_127 = "_clmCount);" + NL + "\t\t\t\t\t\t\t\t";
-  protected final String TEXT_128 = ".";
-  protected final String TEXT_129 = " = String.valueOf(aggregated_row_";
-  protected final String TEXT_130 = ".count);" + NL + "\t    \t\t\t\t\t\t\t\t  ";
-  protected final String TEXT_131 = ".";
-  protected final String TEXT_132 = " = String.valueOf(aggregated_row_";
-  protected final String TEXT_133 = ".";
-  protected final String TEXT_134 = "_clmCount);" + NL + "\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_135 = ".";
-  protected final String TEXT_136 = " = (";
-  protected final String TEXT_137 = ") aggregated_row_";
-  protected final String TEXT_138 = ".count;" + NL + "\t                                \t";
-  protected final String TEXT_139 = ".";
-  protected final String TEXT_140 = " = (";
-  protected final String TEXT_141 = ") aggregated_row_";
-  protected final String TEXT_142 = ".";
-  protected final String TEXT_143 = "_clmCount;" + NL + "\t                                \t";
-  protected final String TEXT_144 = NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_145 = ".";
-  protected final String TEXT_146 = " = new BigDecimal(aggregated_row_";
-  protected final String TEXT_147 = ".distinctValues_";
-  protected final String TEXT_148 = ".size());" + NL + "\t\t\t\t\t\t\t\t";
-  protected final String TEXT_149 = ".";
-  protected final String TEXT_150 = " = String.valueOf(aggregated_row_";
-  protected final String TEXT_151 = ".distinctValues_";
-  protected final String TEXT_152 = ".size());" + NL + "\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_153 = ".";
-  protected final String TEXT_154 = " = (";
-  protected final String TEXT_155 = ") aggregated_row_";
-  protected final String TEXT_156 = ".distinctValues_";
-  protected final String TEXT_157 = ".size();" + NL + "\t                                \t";
-  protected final String TEXT_158 = ".";
-  protected final String TEXT_159 = " = String.valueOf(aggregated_row_";
-  protected final String TEXT_160 = ".";
-  protected final String TEXT_161 = "_";
-  protected final String TEXT_162 = ");" + NL + "\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_163 = NL + "    \t\t\t\t\t\t\t\tif(aggregated_row_";
-  protected final String TEXT_164 = ".";
-  protected final String TEXT_165 = "_";
-  protected final String TEXT_166 = " != null) {" + NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_167 = ".";
-  protected final String TEXT_168 = " = aggregated_row_";
-  protected final String TEXT_169 = ".";
-  protected final String TEXT_170 = "_";
-  protected final String TEXT_171 = ".";
-  protected final String TEXT_172 = "Value();" + NL + "\t\t\t\t\t\t\t\t\t\t" + NL + "    \t\t\t\t\t\t\t\t}else{" + NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_173 = NL + "    \t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_174 = ".";
-  protected final String TEXT_175 = " = null;" + NL + "    \t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_176 = NL + "    \t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_177 = ".";
-  protected final String TEXT_178 = " = 0;" + NL + "    \t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_179 = NL + "    \t\t\t\t\t\t\t\t}" + NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_180 = ".";
-  protected final String TEXT_181 = " = aggregated_row_";
-  protected final String TEXT_182 = ".";
-  protected final String TEXT_183 = "_";
-  protected final String TEXT_184 = ";" + NL + "                                \t";
-  protected final String TEXT_185 = NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_186 = ".";
-  protected final String TEXT_187 = " = aggregated_row_";
-  protected final String TEXT_188 = ".";
-  protected final String TEXT_189 = "_";
-  protected final String TEXT_190 = ".toString();" + NL + "\t    \t\t\t\t\t\t";
-  protected final String TEXT_191 = NL + "    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_192 = ".";
-  protected final String TEXT_193 = " = aggregated_row_";
-  protected final String TEXT_194 = ".";
-  protected final String TEXT_195 = "_";
-  protected final String TEXT_196 = ";" + NL + "    \t\t\t\t\t\t\t";
-  protected final String TEXT_197 = "double result_";
+  protected final String TEXT_76 = ")";
+  protected final String TEXT_77 = ";" + NL + "            \t\t\t\t    ";
+  protected final String TEXT_78 = NL + "                                if(aggregated_row_";
+  protected final String TEXT_79 = ".";
+  protected final String TEXT_80 = "_count > 0){" + NL + "                                \t";
+  protected final String TEXT_81 = NL + "\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_82 = ".";
+  protected final String TEXT_83 = " = aggregated_row_";
+  protected final String TEXT_84 = ".";
+  protected final String TEXT_85 = "_sum.divide(new BigDecimal(String.valueOf(aggregated_row_";
+  protected final String TEXT_86 = ".";
+  protected final String TEXT_87 = "_count)), ";
+  protected final String TEXT_88 = ", BigDecimal.ROUND_HALF_UP)" + NL + "\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_89 = NL + "\t    \t\t\t\t\t\t\t\t\t.";
+  protected final String TEXT_90 = "Value()" + NL + "\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_91 = NL + "\t    \t\t\t\t\t\t\t\t;" + NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_92 = NL + "\t    \t\t\t\t\t\t\t\tdouble ";
+  protected final String TEXT_93 = "_";
+  protected final String TEXT_94 = "_temp = (double) aggregated_row_";
+  protected final String TEXT_95 = ".";
+  protected final String TEXT_96 = "_sum / (double) aggregated_row_";
+  protected final String TEXT_97 = ".";
+  protected final String TEXT_98 = "_count;" + NL + "\t    \t\t\t\t\t\t\t\t" + NL + "\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_99 = NL + "\t\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_100 = ".";
+  protected final String TEXT_101 = " = String.valueOf(";
+  protected final String TEXT_102 = "_";
+  protected final String TEXT_103 = "_temp);" + NL + "\t\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_104 = ".";
+  protected final String TEXT_105 = " = (";
+  protected final String TEXT_106 = ") ";
+  protected final String TEXT_107 = "_";
+  protected final String TEXT_108 = "_temp;" + NL + "\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_109 = NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_110 = NL + "                                } else {" + NL + "                                \t\tString count = \"0\";" + NL + "   \t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_111 = NL + "    \t\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_112 = ".";
+  protected final String TEXT_113 = " = count;" + NL + "    \t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_114 = NL + "    \t\t    \t\t\t\t\t\t\t";
+  protected final String TEXT_115 = ".";
+  protected final String TEXT_116 = " = ParserUtils.parseTo_";
+  protected final String TEXT_117 = "(count);" + NL + "    \t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_118 = NL + "                                }";
+  protected final String TEXT_119 = NL + "\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_120 = ".";
+  protected final String TEXT_121 = " = new BigDecimal(aggregated_row_";
+  protected final String TEXT_122 = ".count);" + NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_123 = ".";
+  protected final String TEXT_124 = " = new BigDecimal(aggregated_row_";
+  protected final String TEXT_125 = ".";
+  protected final String TEXT_126 = "_clmCount);" + NL + "\t\t\t\t\t\t\t\t";
+  protected final String TEXT_127 = ".";
+  protected final String TEXT_128 = " = String.valueOf(aggregated_row_";
+  protected final String TEXT_129 = ".count);" + NL + "\t    \t\t\t\t\t\t\t\t  ";
+  protected final String TEXT_130 = ".";
+  protected final String TEXT_131 = " = String.valueOf(aggregated_row_";
+  protected final String TEXT_132 = ".";
+  protected final String TEXT_133 = "_clmCount);" + NL + "\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_134 = ".";
+  protected final String TEXT_135 = " = (";
+  protected final String TEXT_136 = ") aggregated_row_";
+  protected final String TEXT_137 = ".count;" + NL + "\t                                \t";
+  protected final String TEXT_138 = ".";
+  protected final String TEXT_139 = " = (";
+  protected final String TEXT_140 = ") aggregated_row_";
+  protected final String TEXT_141 = ".";
+  protected final String TEXT_142 = "_clmCount;" + NL + "\t                                \t";
+  protected final String TEXT_143 = NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_144 = ".";
+  protected final String TEXT_145 = " = new BigDecimal(aggregated_row_";
+  protected final String TEXT_146 = ".distinctValues_";
+  protected final String TEXT_147 = ".size());" + NL + "\t\t\t\t\t\t\t\t";
+  protected final String TEXT_148 = ".";
+  protected final String TEXT_149 = " = String.valueOf(aggregated_row_";
+  protected final String TEXT_150 = ".distinctValues_";
+  protected final String TEXT_151 = ".size());" + NL + "\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_152 = ".";
+  protected final String TEXT_153 = " = (";
+  protected final String TEXT_154 = ") aggregated_row_";
+  protected final String TEXT_155 = ".distinctValues_";
+  protected final String TEXT_156 = ".size();" + NL + "\t                                \t";
+  protected final String TEXT_157 = ".";
+  protected final String TEXT_158 = " = String.valueOf(aggregated_row_";
+  protected final String TEXT_159 = ".";
+  protected final String TEXT_160 = "_";
+  protected final String TEXT_161 = ");" + NL + "\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_162 = NL + "    \t\t\t\t\t\t\t\tif(aggregated_row_";
+  protected final String TEXT_163 = ".";
+  protected final String TEXT_164 = "_";
+  protected final String TEXT_165 = " != null) {" + NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_166 = ".";
+  protected final String TEXT_167 = " = aggregated_row_";
+  protected final String TEXT_168 = ".";
+  protected final String TEXT_169 = "_";
+  protected final String TEXT_170 = ".";
+  protected final String TEXT_171 = "Value();" + NL + "\t\t\t\t\t\t\t\t\t\t" + NL + "    \t\t\t\t\t\t\t\t}else{" + NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_172 = NL + "    \t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_173 = ".";
+  protected final String TEXT_174 = " = null;" + NL + "    \t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_175 = NL + "    \t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_176 = ".";
+  protected final String TEXT_177 = " = 0;" + NL + "    \t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_178 = NL + "    \t\t\t\t\t\t\t\t}" + NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_179 = ".";
+  protected final String TEXT_180 = " = aggregated_row_";
+  protected final String TEXT_181 = ".";
+  protected final String TEXT_182 = "_";
+  protected final String TEXT_183 = ";" + NL + "                                \t";
+  protected final String TEXT_184 = NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_185 = ".";
+  protected final String TEXT_186 = " = aggregated_row_";
+  protected final String TEXT_187 = ".";
+  protected final String TEXT_188 = "_";
+  protected final String TEXT_189 = ".toString();" + NL + "\t    \t\t\t\t\t\t";
+  protected final String TEXT_190 = NL + "    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_191 = ".";
+  protected final String TEXT_192 = " = aggregated_row_";
+  protected final String TEXT_193 = ".";
+  protected final String TEXT_194 = "_";
+  protected final String TEXT_195 = ";" + NL + "    \t\t\t\t\t\t\t";
+  protected final String TEXT_196 = "double result_";
+  protected final String TEXT_197 = "_";
   protected final String TEXT_198 = "_";
-  protected final String TEXT_199 = "_";
-  protected final String TEXT_200 = " = utilClass_";
-  protected final String TEXT_201 = ".sd(aggregated_row_";
-  protected final String TEXT_202 = ".";
-  protected final String TEXT_203 = "_";
-  protected final String TEXT_204 = ".toArray(new Double[0]));" + NL + "\t\t    \t\t\t\t\t\t\tif(((Double)result_";
+  protected final String TEXT_199 = " = utilClass_";
+  protected final String TEXT_200 = ".sd(aggregated_row_";
+  protected final String TEXT_201 = ".";
+  protected final String TEXT_202 = "_";
+  protected final String TEXT_203 = ".toArray(new Double[0]));" + NL + "\t\t    \t\t\t\t\t\t\tif(((Double)result_";
+  protected final String TEXT_204 = "_";
   protected final String TEXT_205 = "_";
-  protected final String TEXT_206 = "_";
-  protected final String TEXT_207 = ").equals((Double)Double.NaN)) {" + NL + "\t\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_208 = ".";
-  protected final String TEXT_209 = " = null;" + NL + "\t\t    \t\t\t\t\t\t\t} else {" + NL + "\t\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_210 = ".";
-  protected final String TEXT_211 = " = new BigDecimal(result_";
+  protected final String TEXT_206 = ").equals((Double)Double.NaN)) {" + NL + "\t\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_207 = ".";
+  protected final String TEXT_208 = " = null;" + NL + "\t\t    \t\t\t\t\t\t\t} else {" + NL + "\t\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_209 = ".";
+  protected final String TEXT_210 = " = new BigDecimal(result_";
+  protected final String TEXT_211 = "_";
   protected final String TEXT_212 = "_";
-  protected final String TEXT_213 = "_";
-  protected final String TEXT_214 = ");" + NL + "\t\t    \t\t\t\t\t\t\t}" + NL + "\t\t\t\t\t\t\t\t\t\t" + NL + "\t\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_215 = ".";
-  protected final String TEXT_216 = " = (";
-  protected final String TEXT_217 = ") utilClass_";
-  protected final String TEXT_218 = ".sd(aggregated_row_";
-  protected final String TEXT_219 = ".";
-  protected final String TEXT_220 = "_";
-  protected final String TEXT_221 = ".toArray(new Double[0]));" + NL + "\t    \t\t\t\t\t\t\t\t";
-  protected final String TEXT_222 = ".";
-  protected final String TEXT_223 = " = String.valueOf(utilClass_";
-  protected final String TEXT_224 = ".sd(aggregated_row_";
-  protected final String TEXT_225 = ".";
-  protected final String TEXT_226 = "_";
-  protected final String TEXT_227 = ".toArray(new Double[0])));" + NL + "\t\t\t\t\t\t\t\t\t";
-  protected final String TEXT_228 = NL + "                                ";
-  protected final String TEXT_229 = ".";
-  protected final String TEXT_230 = " = aggregated_row_";
-  protected final String TEXT_231 = ".";
-  protected final String TEXT_232 = "_";
-  protected final String TEXT_233 = ";";
-  protected final String TEXT_234 = NL;
+  protected final String TEXT_213 = ");" + NL + "\t\t    \t\t\t\t\t\t\t}" + NL + "\t\t\t\t\t\t\t\t\t\t" + NL + "\t\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_214 = ".";
+  protected final String TEXT_215 = " = (";
+  protected final String TEXT_216 = ") utilClass_";
+  protected final String TEXT_217 = ".sd(aggregated_row_";
+  protected final String TEXT_218 = ".";
+  protected final String TEXT_219 = "_";
+  protected final String TEXT_220 = ".toArray(new Double[0]));" + NL + "\t    \t\t\t\t\t\t\t\t";
+  protected final String TEXT_221 = ".";
+  protected final String TEXT_222 = " = String.valueOf(utilClass_";
+  protected final String TEXT_223 = ".sd(aggregated_row_";
+  protected final String TEXT_224 = ".";
+  protected final String TEXT_225 = "_";
+  protected final String TEXT_226 = ".toArray(new Double[0])));" + NL + "\t\t\t\t\t\t\t\t\t";
+  protected final String TEXT_227 = NL + "                                ";
+  protected final String TEXT_228 = ".";
+  protected final String TEXT_229 = " = aggregated_row_";
+  protected final String TEXT_230 = ".";
+  protected final String TEXT_231 = "_";
+  protected final String TEXT_232 = ";";
+  protected final String TEXT_233 = NL;
 
   public String generate(Object argument)
   {
@@ -275,7 +274,7 @@ class BasicLogUtil{
     public BasicLogUtil(org.talend.core.model.process.INode node){
         this.node = node;
         String cidx = this.node.getUniqueName();
-        if(cidx.matches("^.*?tAmazonAuroraOutput_\\d+_out$")){
+        if(cidx.matches("^.*?tAmazonAuroraOutput_\\d+_out$") || cidx.matches("^.*?tDBOutput_\\d+_out$")){
              cidx = cidx.substring(0,cidx.length()-4);// 4 ==> "_out".length();
         }
         this.cid = cidx;
@@ -377,109 +376,113 @@ class LogUtil extends BasicLogUtil{
     
     public void logCompSetting(){
     
+    
+        if(log4jEnabled){
+        
     stringBuffer.append(TEXT_10);
     stringBuffer.append(cid);
     stringBuffer.append(TEXT_11);
-    
-       			 if(log4jEnabled){
-       			 
+    stringBuffer.append(var("log4jParamters"));
     stringBuffer.append(TEXT_12);
-    stringBuffer.append(var("log4jParamters"));
     stringBuffer.append(TEXT_13);
+    stringBuffer.append(var("log4jParamters"));
     stringBuffer.append(TEXT_14);
-    stringBuffer.append(var("log4jParamters"));
+    
+                    java.util.Set<org.talend.core.model.process.EParameterFieldType> ignoredParamsTypes = new java.util.HashSet<org.talend.core.model.process.EParameterFieldType>(); 
+                    ignoredParamsTypes.addAll(
+                        java.util.Arrays.asList(
+                            org.talend.core.model.process.EParameterFieldType.SCHEMA_TYPE,
+                            org.talend.core.model.process.EParameterFieldType.LABEL,
+                            org.talend.core.model.process.EParameterFieldType.EXTERNAL,
+                            org.talend.core.model.process.EParameterFieldType.MAPPING_TYPE,
+                            org.talend.core.model.process.EParameterFieldType.IMAGE,
+                            org.talend.core.model.process.EParameterFieldType.TNS_EDITOR,
+                            org.talend.core.model.process.EParameterFieldType.WSDL2JAVA,
+                            org.talend.core.model.process.EParameterFieldType.GENERATEGRAMMARCONTROLLER,
+                            org.talend.core.model.process.EParameterFieldType.GENERATE_SURVIVORSHIP_RULES_CONTROLLER,
+                            org.talend.core.model.process.EParameterFieldType.REFRESH_REPORTS,
+                            org.talend.core.model.process.EParameterFieldType.BROWSE_REPORTS,
+                            org.talend.core.model.process.EParameterFieldType.PALO_DIM_SELECTION,
+                            org.talend.core.model.process.EParameterFieldType.GUESS_SCHEMA,
+                            org.talend.core.model.process.EParameterFieldType.MATCH_RULE_IMEX_CONTROLLER,
+                            org.talend.core.model.process.EParameterFieldType.MEMO_PERL,
+                            org.talend.core.model.process.EParameterFieldType.DBTYPE_LIST,
+                            org.talend.core.model.process.EParameterFieldType.VERSION,
+                            org.talend.core.model.process.EParameterFieldType.TECHNICAL,
+                            org.talend.core.model.process.EParameterFieldType.ICON_SELECTION,
+                            org.talend.core.model.process.EParameterFieldType.JAVA_COMMAND,
+                            org.talend.core.model.process.EParameterFieldType.TREE_TABLE,
+                            org.talend.core.model.process.EParameterFieldType.VALIDATION_RULE_TYPE,
+                            org.talend.core.model.process.EParameterFieldType.DCSCHEMA,
+                            org.talend.core.model.process.EParameterFieldType.SURVIVOR_RELATION,
+                            org.talend.core.model.process.EParameterFieldType.REST_RESPONSE_SCHEMA_TYPE
+                            )
+                    );
+                    for(org.talend.core.model.process.IElementParameter ep : org.talend.core.model.utils.NodeUtil.getDisplayedParameters(node)){
+                        if(!ep.isLog4JEnabled() || ignoredParamsTypes.contains(ep.getFieldType())){
+                            continue;
+                        }
+                        String name = ep.getName();
+                        if(org.talend.core.model.process.EParameterFieldType.PASSWORD.equals(ep.getFieldType())){
+                            String epName = "__" + name + "__";
+                            String password = "";
+                            if(org.talend.core.model.process.ElementParameterParser.canEncrypt(node, epName)){
+                                password = org.talend.core.model.process.ElementParameterParser.getEncryptedValue(node, epName);
+                            }else{
+                                String passwordValue = org.talend.core.model.process.ElementParameterParser.getValue(node, epName);
+                                if (passwordValue == null || "".equals(passwordValue.trim())) {// for the value which empty
+                                    passwordValue = "\"\"";
+                                } 
+                                password = "routines.system.PasswordEncryptUtil.encryptPassword(" + passwordValue + ")";
+                            } 
+                            
     stringBuffer.append(TEXT_15);
-    
-            java.util.Set<org.talend.core.model.process.EParameterFieldType> ignoredParamsTypes = new java.util.HashSet<org.talend.core.model.process.EParameterFieldType>(); 
-            ignoredParamsTypes.addAll(
-                java.util.Arrays.asList(
-                    org.talend.core.model.process.EParameterFieldType.SCHEMA_TYPE,
-                    org.talend.core.model.process.EParameterFieldType.LABEL,
-                    org.talend.core.model.process.EParameterFieldType.EXTERNAL,
-                    org.talend.core.model.process.EParameterFieldType.MAPPING_TYPE,
-                    org.talend.core.model.process.EParameterFieldType.IMAGE,
-                    org.talend.core.model.process.EParameterFieldType.TNS_EDITOR,
-                    org.talend.core.model.process.EParameterFieldType.WSDL2JAVA,
-                    org.talend.core.model.process.EParameterFieldType.GENERATEGRAMMARCONTROLLER,
-                    org.talend.core.model.process.EParameterFieldType.GENERATE_SURVIVORSHIP_RULES_CONTROLLER,
-                    org.talend.core.model.process.EParameterFieldType.REFRESH_REPORTS,
-                    org.talend.core.model.process.EParameterFieldType.BROWSE_REPORTS,
-                    org.talend.core.model.process.EParameterFieldType.PALO_DIM_SELECTION,
-                    org.talend.core.model.process.EParameterFieldType.GUESS_SCHEMA,
-                    org.talend.core.model.process.EParameterFieldType.MATCH_RULE_IMEX_CONTROLLER,
-                    org.talend.core.model.process.EParameterFieldType.MEMO_PERL,
-                    org.talend.core.model.process.EParameterFieldType.DBTYPE_LIST,
-                    org.talend.core.model.process.EParameterFieldType.VERSION,
-                    org.talend.core.model.process.EParameterFieldType.TECHNICAL,
-                    org.talend.core.model.process.EParameterFieldType.ICON_SELECTION,
-                    org.talend.core.model.process.EParameterFieldType.JAVA_COMMAND,
-                    org.talend.core.model.process.EParameterFieldType.TREE_TABLE,
-                    org.talend.core.model.process.EParameterFieldType.VALIDATION_RULE_TYPE,
-                    org.talend.core.model.process.EParameterFieldType.DCSCHEMA,
-                    org.talend.core.model.process.EParameterFieldType.SURVIVOR_RELATION,
-                    org.talend.core.model.process.EParameterFieldType.REST_RESPONSE_SCHEMA_TYPE
-                    )
-            );
-            for(org.talend.core.model.process.IElementParameter ep : org.talend.core.model.utils.NodeUtil.getDisplayedParameters(node)){
-                if(!ep.isLog4JEnabled() || ignoredParamsTypes.contains(ep.getFieldType())){
-                    continue;
-                }
-                String name = ep.getName();
-                if(org.talend.core.model.process.EParameterFieldType.PASSWORD.equals(ep.getFieldType())){
-                    String epName = "__" + name + "__";
-                    String password = "";
-                    if(org.talend.core.model.process.ElementParameterParser.canEncrypt(node, epName)){
-                        password = org.talend.core.model.process.ElementParameterParser.getEncryptedValue(node, epName);
-                    }else{
-                        String passwordValue = org.talend.core.model.process.ElementParameterParser.getValue(node, epName);
-                        if (passwordValue == null || "".equals(passwordValue.trim())) {// for the value which empty
-                            passwordValue = "\"\"";
-                        } 
-                        password = "routines.system.PasswordEncryptUtil.encryptPassword(" + passwordValue + ")";
-                    } 
-                    
+    stringBuffer.append(var("log4jParamters"));
     stringBuffer.append(TEXT_16);
-    stringBuffer.append(var("log4jParamters"));
+    stringBuffer.append(name);
     stringBuffer.append(TEXT_17);
-    stringBuffer.append(name);
-    stringBuffer.append(TEXT_18);
     stringBuffer.append(password);
+    stringBuffer.append(TEXT_18);
+    
+                        }else{
+                            String value = org.talend.core.model.utils.NodeUtil.getNormalizeParameterValue(node, ep);
+                            if(value.length()>10000){
+                            value = org.talend.core.model.utils.NodeUtil.replaceCRLFInMEMO_SQL(value);
+                            }
+                            
     stringBuffer.append(TEXT_19);
-    
-                }else{
-                    String value = org.talend.core.model.utils.NodeUtil.getNormalizeParameterValue(node, ep);
-                    
+    stringBuffer.append(var("log4jParamters"));
     stringBuffer.append(TEXT_20);
-    stringBuffer.append(var("log4jParamters"));
-    stringBuffer.append(TEXT_21);
     stringBuffer.append(name);
-    stringBuffer.append(TEXT_22);
+    stringBuffer.append(TEXT_21);
     stringBuffer.append(value);
+    stringBuffer.append(TEXT_22);
+    
+                        }   
+                        
     stringBuffer.append(TEXT_23);
-    
-                }   
-                
-    stringBuffer.append(TEXT_24);
     stringBuffer.append(var("log4jParamters"));
+    stringBuffer.append(TEXT_24);
+    
+                    }
+                    debug(var("log4jParamters")); 
+                    
     stringBuffer.append(TEXT_25);
-    
-            }
-        }
-		debug(var("log4jParamters"));
-		
-    stringBuffer.append(TEXT_26);
     stringBuffer.append(cid);
-    stringBuffer.append(TEXT_27);
+    stringBuffer.append(TEXT_26);
     
-    }
+        } 
+        
+    
+    } 
     
     //no use for now, because we log the data by rowStruct
     public void traceData(String rowStruct, java.util.List<org.talend.core.model.metadata.IMetadataColumn> columnList, String nbline){
         if(log4jEnabled){
         
-    stringBuffer.append(TEXT_28);
+    stringBuffer.append(TEXT_27);
     stringBuffer.append(var("log4jSb"));
-    stringBuffer.append(TEXT_29);
+    stringBuffer.append(TEXT_28);
     
             for(org.talend.core.model.metadata.IMetadataColumn column : columnList){
                 org.talend.core.model.metadata.types.JavaType javaType = org.talend.core.model.metadata.types.JavaTypesManager.getJavaTypeFromId(column.getTalendType());
@@ -487,37 +490,37 @@ class LogUtil extends BasicLogUtil{
                 boolean isPrimit = org.talend.core.model.metadata.types.JavaTypesManager.isJavaPrimitiveType(column.getTalendType(), column.isNullable());
                 if(isPrimit){
                 
-    stringBuffer.append(TEXT_30);
+    stringBuffer.append(TEXT_29);
     stringBuffer.append(var("log4jSb"));
-    stringBuffer.append(TEXT_31);
+    stringBuffer.append(TEXT_30);
     stringBuffer.append(rowStruct);
-    stringBuffer.append(TEXT_32);
+    stringBuffer.append(TEXT_31);
     stringBuffer.append(columnName);
-    stringBuffer.append(TEXT_33);
+    stringBuffer.append(TEXT_32);
     
                 }else{
                 
+    stringBuffer.append(TEXT_33);
+    stringBuffer.append(rowStruct);
     stringBuffer.append(TEXT_34);
-    stringBuffer.append(rowStruct);
+    stringBuffer.append(columnName);
     stringBuffer.append(TEXT_35);
-    stringBuffer.append(columnName);
     stringBuffer.append(TEXT_36);
+    stringBuffer.append(var("log4jSb"));
     stringBuffer.append(TEXT_37);
-    stringBuffer.append(var("log4jSb"));
     stringBuffer.append(TEXT_38);
-    stringBuffer.append(TEXT_39);
     stringBuffer.append(var("log4jSb"));
-    stringBuffer.append(TEXT_40);
+    stringBuffer.append(TEXT_39);
     stringBuffer.append(rowStruct);
-    stringBuffer.append(TEXT_41);
+    stringBuffer.append(TEXT_40);
     stringBuffer.append(columnName);
-    stringBuffer.append(TEXT_42);
+    stringBuffer.append(TEXT_41);
     
                 }
                 
-    stringBuffer.append(TEXT_43);
+    stringBuffer.append(TEXT_42);
     stringBuffer.append(var("log4jSb"));
-    stringBuffer.append(TEXT_44);
+    stringBuffer.append(TEXT_43);
     
             }
         }
@@ -676,86 +679,86 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
             				}
             				if(sameType){
             				    
-    stringBuffer.append(TEXT_45);
+    stringBuffer.append(TEXT_44);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_46);
+    stringBuffer.append(TEXT_45);
     stringBuffer.append(outputGroupColumn );
-    stringBuffer.append(TEXT_47);
+    stringBuffer.append(TEXT_46);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_48);
+    stringBuffer.append(TEXT_47);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_49);
+    stringBuffer.append(TEXT_48);
       					
             				}else{
             				    
-    stringBuffer.append(TEXT_50);
+    stringBuffer.append(TEXT_49);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_51);
+    stringBuffer.append(TEXT_50);
     stringBuffer.append(outputGroupColumn );
+    stringBuffer.append(TEXT_51);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_52);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_53);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_54);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_55);
+    stringBuffer.append(TEXT_54);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_56);
+    stringBuffer.append(TEXT_55);
     stringBuffer.append(outputGroupColumn );
-    stringBuffer.append(TEXT_57);
+    stringBuffer.append(TEXT_56);
     
     							if(outputJavaType == JavaTypesManager.STRING || outputJavaType == JavaTypesManager.OBJECT) {
     								
-    stringBuffer.append(TEXT_58);
+    stringBuffer.append(TEXT_57);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_59);
+    stringBuffer.append(TEXT_58);
     stringBuffer.append(outputGroupColumn );
-    stringBuffer.append(TEXT_60);
+    stringBuffer.append(TEXT_59);
     stringBuffer.append(cid );
     
     							}else if(outputJavaType == JavaTypesManager.BYTE_ARRAY){
     								
-    stringBuffer.append(TEXT_61);
+    stringBuffer.append(TEXT_60);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_62);
+    stringBuffer.append(TEXT_61);
     stringBuffer.append(outputGroupColumn );
-    stringBuffer.append(TEXT_63);
+    stringBuffer.append(TEXT_62);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_64);
+    stringBuffer.append(TEXT_63);
     
     							} else if(outputJavaType == JavaTypesManager.DATE) {
     								
+    stringBuffer.append(TEXT_64);
+    stringBuffer.append(inputColumn );
     stringBuffer.append(TEXT_65);
-    stringBuffer.append(inputColumn );
+    stringBuffer.append(outputGroupColumn );
     stringBuffer.append(TEXT_66);
-    stringBuffer.append(outputGroupColumn );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_67);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_68);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_69);
+    stringBuffer.append(TEXT_68);
     stringBuffer.append(outputGroupColumn );
-    stringBuffer.append(TEXT_70);
+    stringBuffer.append(TEXT_69);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_71);
+    stringBuffer.append(TEXT_70);
     stringBuffer.append( patternValue );
-    stringBuffer.append(TEXT_72);
+    stringBuffer.append(TEXT_71);
     
     							} else {
     								
-    stringBuffer.append(TEXT_73);
+    stringBuffer.append(TEXT_72);
     stringBuffer.append( outputTypeToGenerate );
-    stringBuffer.append(TEXT_74);
+    stringBuffer.append(TEXT_73);
     stringBuffer.append(inputColumn );
-    stringBuffer.append(TEXT_75);
+    stringBuffer.append(TEXT_74);
     stringBuffer.append(outputGroupColumn );
-    stringBuffer.append(TEXT_76);
+    stringBuffer.append(TEXT_75);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_77);
+    stringBuffer.append(TEXT_76);
     
     							}
             				    
-    stringBuffer.append(TEXT_78);
+    stringBuffer.append(TEXT_77);
     
     						}
     						continue next_column;
@@ -840,131 +843,131 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
                            		 }               				
 
                 			    
-    stringBuffer.append(TEXT_79);
+    stringBuffer.append(TEXT_78);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_80);
+    stringBuffer.append(TEXT_79);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_81);
+    stringBuffer.append(TEXT_80);
     
 									if(outputIsBigDecimal || forceUseBigDecimal) {
 									
-    stringBuffer.append(TEXT_82);
+    stringBuffer.append(TEXT_81);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_82);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_83);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_84);
-    stringBuffer.append(cid );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_85);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_86);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_87);
+    stringBuffer.append(TEXT_86);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_88);
+    stringBuffer.append(TEXT_87);
     stringBuffer.append(pre );
-    stringBuffer.append(TEXT_89);
+    stringBuffer.append(TEXT_88);
      if(!outputIsBigDecimal) {
-    stringBuffer.append(TEXT_90);
+    stringBuffer.append(TEXT_89);
     stringBuffer.append(primitiveOutputType);
-    stringBuffer.append(TEXT_91);
+    stringBuffer.append(TEXT_90);
      } 
-    stringBuffer.append(TEXT_92);
+    stringBuffer.append(TEXT_91);
     
 									} else {
 									
-    stringBuffer.append(TEXT_93);
+    stringBuffer.append(TEXT_92);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_93);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_94);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_95);
-    stringBuffer.append(cid );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_96);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_97);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_98);
+    stringBuffer.append(TEXT_97);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_99);
+    stringBuffer.append(TEXT_98);
      
 	    								if(outputIsString) {
 	    								
 		    								
+    stringBuffer.append(TEXT_99);
+    stringBuffer.append( outputConn.getName() );
     stringBuffer.append(TEXT_100);
-    stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_101);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_102);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_103);
+    stringBuffer.append(TEXT_102);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_104);
+    stringBuffer.append(TEXT_103);
     
 											
 										} else {
 		    							
 		    								
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_104);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_105);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_106);
     stringBuffer.append(primitiveOutputType);
-    stringBuffer.append(TEXT_107);
+    stringBuffer.append(TEXT_106);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_108);
+    stringBuffer.append(TEXT_107);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_109);
+    stringBuffer.append(TEXT_108);
     
 										
 										}
 										
-    stringBuffer.append(TEXT_110);
+    stringBuffer.append(TEXT_109);
     
     								}
     								
-    stringBuffer.append(TEXT_111);
+    stringBuffer.append(TEXT_110);
      
     	    								if(outputIsString) {
     		    						
-    stringBuffer.append(TEXT_112);
+    stringBuffer.append(TEXT_111);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_113);
+    stringBuffer.append(TEXT_112);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_114);
+    stringBuffer.append(TEXT_113);
     
     										} else {
     		    						
-    stringBuffer.append(TEXT_115);
+    stringBuffer.append(TEXT_114);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_116);
+    stringBuffer.append(TEXT_115);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_117);
+    stringBuffer.append(TEXT_116);
     stringBuffer.append( outputTypeToGenerate );
-    stringBuffer.append(TEXT_118);
+    stringBuffer.append(TEXT_117);
     
     										}
     									
-    stringBuffer.append(TEXT_119);
+    stringBuffer.append(TEXT_118);
     
                 			}  // T_InMain_AggR_617
                 			else if(function.equals(COUNT)) { // T_InMain_AggR_638
                 			
 								if(outputIsBigDecimal) {
 								
+    stringBuffer.append(TEXT_119);
+    stringBuffer.append( outputConn.getName() );
     stringBuffer.append(TEXT_120);
-    stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_121);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_122);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_123);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_123);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_124);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_125);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_126);
+    stringBuffer.append(TEXT_125);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_127);
+    stringBuffer.append(TEXT_126);
     
 								} else {
             			
@@ -972,42 +975,42 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
 									
 	    								
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_127);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_128);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_129);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_130);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_130);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_131);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_132);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_133);
+    stringBuffer.append(TEXT_132);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_134);
+    stringBuffer.append(TEXT_133);
     
 										
 									} else {
 	    							
 	                                	
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_134);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_135);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(primitiveOutputType);
     stringBuffer.append(TEXT_136);
-    stringBuffer.append(primitiveOutputType);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_137);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_138);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_138);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_139);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_140);
     stringBuffer.append(primitiveOutputType);
-    stringBuffer.append(TEXT_141);
+    stringBuffer.append(TEXT_140);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_142);
+    stringBuffer.append(TEXT_141);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_143);
+    stringBuffer.append(TEXT_142);
     
 									
 									}
@@ -1018,15 +1021,15 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
                 			
 								if(outputIsBigDecimal) {
 								
-    stringBuffer.append(TEXT_144);
+    stringBuffer.append(TEXT_143);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_144);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_145);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_146);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_147);
+    stringBuffer.append(TEXT_146);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_148);
+    stringBuffer.append(TEXT_147);
     
 								} else {
             			
@@ -1034,28 +1037,28 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
 									
 	    								
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_148);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_149);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_150);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_151);
+    stringBuffer.append(TEXT_150);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_152);
+    stringBuffer.append(TEXT_151);
     
 										
 									} else {
 	    							
 	                                	
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_152);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_153);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_154);
     stringBuffer.append(primitiveOutputType);
-    stringBuffer.append(TEXT_155);
+    stringBuffer.append(TEXT_154);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_156);
+    stringBuffer.append(TEXT_155);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_157);
+    stringBuffer.append(TEXT_156);
     
 									
 									}
@@ -1068,70 +1071,70 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
 								
     								
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_157);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_158);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_159);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_160);
+    stringBuffer.append(TEXT_159);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_161);
+    stringBuffer.append(TEXT_160);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_162);
+    stringBuffer.append(TEXT_161);
     
 									
 								} else if(forceUseBigDecimal && !outputIsBigDecimal) {
 
     								
+    stringBuffer.append(TEXT_162);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_163);
-    stringBuffer.append(cid );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_164);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(function );
     stringBuffer.append(TEXT_165);
-    stringBuffer.append(function );
-    stringBuffer.append(TEXT_166);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_166);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_167);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_168);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_169);
+    stringBuffer.append(TEXT_168);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_170);
+    stringBuffer.append(TEXT_169);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_171);
+    stringBuffer.append(TEXT_170);
     stringBuffer.append(primitiveOutputType);
-    stringBuffer.append(TEXT_172);
+    stringBuffer.append(TEXT_171);
     
     									if(!JavaTypesManager.isJavaPrimitiveType(outputJavaType, outputColumn.isNullable())){// is Object
-    stringBuffer.append(TEXT_173);
+    stringBuffer.append(TEXT_172);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_174);
+    stringBuffer.append(TEXT_173);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_175);
+    stringBuffer.append(TEXT_174);
     
     									}else{
-    stringBuffer.append(TEXT_176);
+    stringBuffer.append(TEXT_175);
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_177);
+    stringBuffer.append(TEXT_176);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_178);
+    stringBuffer.append(TEXT_177);
     }
-    stringBuffer.append(TEXT_179);
+    stringBuffer.append(TEXT_178);
     
 								
 								} else {
     							
                                 	
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_179);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_180);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_181);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_182);
+    stringBuffer.append(TEXT_181);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_183);
+    stringBuffer.append(TEXT_182);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_184);
+    stringBuffer.append(TEXT_183);
     
 								
 								}
@@ -1139,32 +1142,32 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
     						} // T_InMain_AggR_618 
     						else if(function.equals(LIST)) { // T_InMain_AggR_679
     							
-    stringBuffer.append(TEXT_185);
+    stringBuffer.append(TEXT_184);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_185);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_186);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_187);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_188);
+    stringBuffer.append(TEXT_187);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_189);
+    stringBuffer.append(TEXT_188);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_190);
+    stringBuffer.append(TEXT_189);
      
     						}  // T_InMain_AggR_679
     						else if(("list_object").equals(function)) { // T_InMain_AggR_619
     							
-    stringBuffer.append(TEXT_191);
+    stringBuffer.append(TEXT_190);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_191);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_192);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_193);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_194);
+    stringBuffer.append(TEXT_193);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_195);
+    stringBuffer.append(TEXT_194);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_196);
+    stringBuffer.append(TEXT_195);
      
     						}  // T_InMain_AggR_619
     						else if(function.equals(STD_DEV)) { // T_InMain_AggR_620
@@ -1175,60 +1178,60 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
 									if(outputIsBigDecimal) {
 										
 		    							
-    stringBuffer.append(TEXT_197);
+    stringBuffer.append(TEXT_196);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_198);
+    stringBuffer.append(TEXT_197);
     stringBuffer.append(function );
+    stringBuffer.append(TEXT_198);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_199);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_200);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_201);
-    stringBuffer.append(cid );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_202);
-    stringBuffer.append(outOperation );
+    stringBuffer.append(function );
     stringBuffer.append(TEXT_203);
-    stringBuffer.append(function );
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_204);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_205);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_206);
+    stringBuffer.append(TEXT_205);
     stringBuffer.append(cid );
+    stringBuffer.append(TEXT_206);
+    stringBuffer.append( outputConn.getName() );
     stringBuffer.append(TEXT_207);
-    stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_208);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_209);
+    stringBuffer.append(TEXT_208);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_209);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_210);
     stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_211);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_212);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_213);
+    stringBuffer.append(TEXT_212);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_214);
+    stringBuffer.append(TEXT_213);
     
 										
 									} else {
 	            			
 	    								
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_215);
+    stringBuffer.append(TEXT_214);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_216);
+    stringBuffer.append(TEXT_215);
     stringBuffer.append(primitiveOutputType);
+    stringBuffer.append(TEXT_216);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_217);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_218);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_219);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_220);
+    stringBuffer.append(TEXT_219);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_221);
+    stringBuffer.append(TEXT_220);
     
     								 		
 									}
@@ -1239,17 +1242,17 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
 								
 									
     stringBuffer.append( outputConn.getName() );
-    stringBuffer.append(TEXT_222);
+    stringBuffer.append(TEXT_221);
     stringBuffer.append(outOperation );
+    stringBuffer.append(TEXT_222);
+    stringBuffer.append(cid );
     stringBuffer.append(TEXT_223);
     stringBuffer.append(cid );
     stringBuffer.append(TEXT_224);
-    stringBuffer.append(cid );
-    stringBuffer.append(TEXT_225);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_226);
+    stringBuffer.append(TEXT_225);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_227);
+    stringBuffer.append(TEXT_226);
     
 									
     							} // T_InMain_AggR_622
@@ -1259,17 +1262,17 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
     						else { // T_InMain_AggR_636
     							
 								
-    stringBuffer.append(TEXT_228);
+    stringBuffer.append(TEXT_227);
     stringBuffer.append( outputConn.getName() );
+    stringBuffer.append(TEXT_228);
+    stringBuffer.append(outOperation );
     stringBuffer.append(TEXT_229);
-    stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_230);
     stringBuffer.append(cid );
-    stringBuffer.append(TEXT_231);
+    stringBuffer.append(TEXT_230);
     stringBuffer.append(outOperation );
-    stringBuffer.append(TEXT_232);
+    stringBuffer.append(TEXT_231);
     stringBuffer.append(function );
-    stringBuffer.append(TEXT_233);
+    stringBuffer.append(TEXT_232);
     
                                 
     							
@@ -1288,7 +1291,7 @@ if (mestadataTableListOut!=null && mestadataTableListOut.size()>0) { // T_InMain
 	} // T_InMain_AggR_601
 } // T_InMain_AggR_600
 
-    stringBuffer.append(TEXT_234);
+    stringBuffer.append(TEXT_233);
     return stringBuffer.toString();
   }
 }

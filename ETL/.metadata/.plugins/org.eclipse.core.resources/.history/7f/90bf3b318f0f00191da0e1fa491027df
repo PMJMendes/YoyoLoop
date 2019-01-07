@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_EKtD4LOCEei8z7zJyqB1eQ" id="_EKjS4LOCEei8z7zJyqB1eQ" label="LoopedRegions" version="0.1" statusCode="" item="_EKtD4rOCEei8z7zJyqB1eQ" displayName="LoopedRegions">
+    <author href="../talend.project#_FrlvMLN_Eei8z7zJyqB1eQ"/>
+    <additionalProperties xmi:id="_y_9H0A-GEemBCcxaF0EzSA" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_y_9H0Q-GEemBCcxaF0EzSA" key="created_product_version" value="6.3.0.20161026_1219"/>
+    <additionalProperties xmi:id="_y_9u4A-GEemBCcxaF0EzSA" key="created_date" value="2018-09-08T18:13:04.158+0100"/>
+    <additionalProperties xmi:id="_y_9u4Q-GEemBCcxaF0EzSA" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="_y_9u4g-GEemBCcxaF0EzSA" key="modified_product_version" value="6.3.0.20161026_1219"/>
+    <additionalProperties xmi:id="_y_9u4w-GEemBCcxaF0EzSA" key="modified_date" value="2018-12-22T18:03:01.834+0000"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_EKtD4bOCEei8z7zJyqB1eQ" path=""/>
+  <TalendProperties:ProcessItem xmi:id="_EKtD4rOCEei8z7zJyqB1eQ" property="_EKtD4LOCEei8z7zJyqB1eQ" state="_EKtD4bOCEei8z7zJyqB1eQ">
+    <process href="LoopedRegions_0.1.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>
