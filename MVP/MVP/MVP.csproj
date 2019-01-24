@@ -1071,6 +1071,10 @@
     <Compile Include="Migrations\201812231352406_Dates.Designer.cs">
       <DependentUpon>201812231352406_Dates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901240901089_ApplicationUser-Type.cs" />
+    <Compile Include="Migrations\201901240901089_ApplicationUser-Type.Designer.cs">
+      <DependentUpon>201901240901089_ApplicationUser-Type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
     <Compile Include="Models\Entities\AccessPointHost.cs" />
@@ -1418,6 +1422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812231352406_Dates.resx">
       <DependentUpon>201812231352406_Dates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240901089_ApplicationUser-Type.resx">
+      <DependentUpon>201901240901089_ApplicationUser-Type.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
