@@ -1,0 +1,92 @@
+﻿<%@ Page Title="ADMIN CP" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AssignDriver.aspx.cs" Inherits="MVP.BackOffice.AssignDriver" %>
+
+<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
+    <meta name="robots" content="noindex, nofollow">
+
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 15px 5px 15px;
+        }
+        td {
+            padding: 10px 15px 10px 15px;
+        }
+        th {
+            text-align: center;
+            min-width: 200px;
+        }
+     </style>
+
+</asp:Content>
+
+<asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="profile">
+        <div class="profile__container profile__container--first">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="profile__main-title"><asp:Literal runat="server" Text="YOYOLOOP ADMIN CP"/></h1>
+
+                        <h2 class="profile__sub-title"><asp:Literal runat="server" Text="Driver Assignment"/></h2>
+
+                        <asp:UpdatePanel runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <div style="min-height:300px">
+                                    <asp:Repeater runat="server" ID="RepTrips" OnItemDataBound="RepTrips_ItemDataBound">
+                                        <HeaderTemplate>
+                                            <table>
+                                                <tr>
+                                                    <th>Time</th>
+                                                    <th>Start</th>
+                                                    <th>End</th>
+                                                    <th>Driver</th>
+                                                </tr>
+                                            </HeaderTemplate>
+
+                                        <ItemTemplate>
+                                            <tr>
+                                                <td><asp:Label runat="server" ID="lbTime" /></td>
+                                                <td><asp:Label runat="server" ID="lbStart" /></td>
+                                                <td><asp:Label runat="server" ID="lbEnd" /></td>
+                                                <td><asp:DropDownList runat="server" ID="ddlDriver" Style="padding: 5px 10px 5px 10px;width:100%"/></td>
+                                            </tr>
+                                        </ItemTemplate>
+
+                                        <FooterTemplate>
+                                            </table>
+                                        </FooterTemplate>
+                                    </asp:Repeater>
+                                    <asp:button runat="server" ID="btnSave" OnClick="btnSave_Click" CssClass="mt-4 mb-5 profile__btn" Text="SAVE" />
+                                </div>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:PostBackTrigger ControlID="btnSave" />
+                            </Triggers>
+                        </asp:UpdatePanel>
+                    </div>
+
+                    <div class="col-md-4 left-menu">
+                        <div class="d-flex flex-column align-items-center text-left profile__menu sticky">
+                            <a OnClick="javascript:$.blockUI()" href="/BackOffice/Office" class="profile__menu__link">
+                                <asp:Literal runat="server" Text="Admin CP"/>
+                            </a>
+                            <div class="mt-3 mb-3 profile__menu__separator"></div>
+                            <a OnClick="return false" href="/BackOffice/Routes" class="profile__menu__link">
+                                <asp:Literal runat="server" Text="Routes"/>
+                            </a>
+                            <div class="mt-3 mb-3 profile__menu__separator"></div>
+                            <a OnClick="return false" href="/BackOffice/AccessPoints" class="profile__menu__link">
+                                <asp:Literal runat="server" Text="Access Points"/>
+                            </a>
+                            <div class="mt-3 mb-3 profile__menu__separator"></div>
+                            <a OnClick="javascript:$.blockUI()" href="/BackOffice/AssignDriver" class="profile__menu__link profile__menu__link--selected">
+                                <asp:Literal runat="server" Text="Assign Drivers"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</asp:Content>

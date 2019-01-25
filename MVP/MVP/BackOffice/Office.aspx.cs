@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using MVP.Services;
 using MVP.Models;
 using MVP.Models.Entities;
+using MVP.Models.Extensions;
 
 namespace MVP.BackOffice
 {
@@ -18,10 +19,12 @@ namespace MVP.BackOffice
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            InitData();
+            if (User?.Identity.IsAdmin() == false)
+            {
+                Response.Redirect("/");
+            }
 
-            // TEMP REDIRECT TO MAKE PAGE NON-BROWSABLE
-            Response.Redirect("/");
+            InitData();
         }
 
         private void InitData()

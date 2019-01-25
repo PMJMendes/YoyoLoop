@@ -28,6 +28,7 @@ namespace MVP
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
         public string CurrentLanguage;
+        public bool Admin;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -84,6 +85,7 @@ namespace MVP
                 // Set Anti-XSRF token
                 ViewState[AntiXsrfTokenKey] = Page.ViewStateUserKey;
                 ViewState[AntiXsrfUserNameKey] = Context.User.Identity.Name ?? String.Empty;
+
             }
             else
             {
@@ -97,6 +99,8 @@ namespace MVP
                     throw new InvalidOperationException(Resources.LocalizedText.SiteMaster_Errors_AntiXSRF);
                 }
             }
+
+            Admin = Context.User?.Identity.IsAdmin() ?? false;
 
             CurrentLanguage = Resources.LocalizedText.SiteMaster_Footer_Language_Portuguese;
             string lang = CultureInfo.CurrentUICulture.Name;
