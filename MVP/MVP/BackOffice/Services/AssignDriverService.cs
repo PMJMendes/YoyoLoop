@@ -11,6 +11,8 @@ namespace MVP.Services
 {
     public class AssignDriverService
     {
+        private readonly MasterService masterService = new MasterService();
+
         public AssignDriverDTO GetInitialData()
         {
             var result = new AssignDriverDTO
@@ -57,6 +59,8 @@ namespace MVP.Services
         public int UpdateTrips(AssignDriverDTO state)
         {
             int result = 0;
+            List<Trip> updatedtrips = new List<Trip>();
+
             using (var model = new EntityModel())
             {
                 foreach(TripDetail td in state.Trips)
@@ -72,11 +76,25 @@ namespace MVP.Services
                             {
                                 model.Trip.Single(t => t.TripId == td.TripID).Driver = driver;
                                 model.SaveChanges();
+                                if(trip.StartTime > DateTime.Now && trip.StartTime.Date < DateTime.Now.AddDays(2).Date)
+                                {
+                                    updatedtrips.Add(model.Trip.Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
+                                                               .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
+                                                               .Include(t => t.Driver)
+                                                               .Include(t => t.Bookings)
+                                                               .Include(t => t.Departure)
+                                                               .Single(t => t.TripId == td.TripID));
+                                }
                                 result++;
                             }
                         }
                     }
                 }
+            }
+
+            if (updatedtrips.Any())
+            {
+                masterService.SendTripDetails(updatedtrips);
             }
             return result;
         }
