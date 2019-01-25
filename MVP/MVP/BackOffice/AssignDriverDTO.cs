@@ -22,5 +22,13 @@ namespace MVP.BackOffice
         public string EndRegion;
         public string EndAP;
         public ListItem Driver;
+        public List<BookingDetail> Bookings;
+    }
+
+    public class BookingDetail
+    {
+        public string User;
+        public string Seats;
+        public string Cost;
     }
 }

@@ -35,9 +35,28 @@ namespace MVP.Services
                                       .Include(ap => ap.StartAccessPoint.Region)
                                       .Include(ap => ap.EndAccessPoint.Region)
                                       .Include(t => t.Driver)
+                                      .Include(t => t.Bookings)
                                       .Where(t => t.Status == TripStatus.BOOKED && t.StartTime > DateTime.Now);
                 foreach (Trip t in trips)
                 {
+                    var bookings = new List<BookingDetail>();
+
+                    foreach(Booking b in t.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
+                    {
+                        string username;
+                        using (var usermodel = new EntityModel())
+                        {
+                            username = usermodel.Users.Single(u => u.Id == b.UserId).UserName;
+                        };
+                        var bd = new BookingDetail
+                        {
+                            User = username,
+                            Seats = b.Seats.ToString(),
+                            Cost = b.Cost.ToString()
+                        };
+                        bookings.Add(bd);
+                    }
+
                     var trip = new TripDetail
                     {
                         TripID = t.TripId,
@@ -46,7 +65,8 @@ namespace MVP.Services
                         StartAP = t.StartAccessPoint.Name,
                         EndRegion = t.EndAccessPoint.Region.Name,
                         EndAP = t.EndAccessPoint.Name,
-                        Driver = new ListItem(t.Driver?.Name ?? String.Empty, t.Driver?.DriverId.ToString() ?? string.Empty)
+                        Driver = new ListItem(t.Driver?.Name ?? String.Empty, t.Driver?.DriverId.ToString() ?? string.Empty),
+                        Bookings = bookings
                     };
                     result.Trips.Add(trip);
                 }
