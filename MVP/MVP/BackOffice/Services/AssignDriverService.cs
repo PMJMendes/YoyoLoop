@@ -54,8 +54,9 @@ namespace MVP.Services
             return result;
         }
 
-        public void UpdateTrips(AssignDriverDTO state)
+        public int UpdateTrips(AssignDriverDTO state)
         {
+            int result = 0;
             using (var model = new EntityModel())
             {
                 foreach(TripDetail td in state.Trips)
@@ -67,12 +68,17 @@ namespace MVP.Services
                         {
                             var trip = model.Trip.Single(t => t.TripId == td.TripID);
                             var driver = model.Driver.FirstOrDefault(d => d.DriverId == driverid);
-                            trip.Driver = driver;
+                            if(trip.Driver?.DriverId != driverid)
+                            {
+                                model.Trip.Single(t => t.TripId == td.TripID).Driver = driver;
+                                model.SaveChanges();
+                                result++;
+                            }
                         }
                     }
                 }
-                model.SaveChanges();
             }
+            return result;
         }
     }
 }

@@ -8,6 +8,7 @@ using MVP.Services;
 using MVP.Models;
 using MVP.Models.Entities;
 using MVP.Models.Extensions;
+using MVP.Models.Helpers;
 
 namespace MVP.BackOffice
 {
@@ -25,8 +26,6 @@ namespace MVP.BackOffice
             }
 
             InitData();
-            RepTrips.DataSource = pageData.Trips;
-            RepTrips.DataBind();
         }
 
         private void InitData()
@@ -41,6 +40,8 @@ namespace MVP.BackOffice
             {
                 pageData = service.GetInitialData();
                 Session["assigndriver.data"] = pageData;
+                RepTrips.DataSource = pageData.Trips;
+                RepTrips.DataBind();
             }
         }
 
@@ -49,10 +50,12 @@ namespace MVP.BackOffice
             if(e.Item.DataItem != null)
             {
                 var trip = (TripDetail)e.Item.DataItem;
+                var tripid = (Label)e.Item.FindControl("lbTripID");
                 var time = (Label)e.Item.FindControl("lbTime");
                 var start = (Label)e.Item.FindControl("lbStart");
                 var end = (Label)e.Item.FindControl("lbEnd");
                 var driver = (DropDownList)e.Item.FindControl("ddlDriver");
+                tripid.Text = trip.TripID.ToString();
                 time.Text = trip.StartTime.ToString();
                 start.Text = trip.StartRegion + " (" + trip.StartAP + ")";
                 end.Text = trip.EndRegion + " (" + trip.EndAP + ")";
@@ -67,9 +70,31 @@ namespace MVP.BackOffice
             }
         }
 
+        protected void RepTrips_ItemCreated(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                DropDownList driver = e.Item.FindControl("ddlDriver") as DropDownList;
+                if(driver != null)
+                {
+                    driver.SelectedIndexChanged += ddlDriver_SelectedIndexChanged;
+                }
+            }
+        }
+
+        protected void ddlDriver_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var driver = (DropDownList)sender;
+            var repeater = (RepeaterItem)driver.Parent;
+            var tripid = (Label)repeater.FindControl("lbTripID");
+            int tripindex = pageData.Trips.FindIndex(t => t.TripID.ToString() == tripid.Text);
+            pageData.Trips[tripindex].Driver = driver.SelectedItem;
+        }
+
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            service.UpdateTrips(pageData);
+            int changes = service.UpdateTrips(pageData);
+            ApplicationHelpers.ShowMessage(this, changes.ToString() + " trips have been updated.");
         }
     }
 }

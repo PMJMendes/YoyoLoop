@@ -30,10 +30,10 @@
 
                         <h2 class="profile__sub-title"><asp:Literal runat="server" Text="Driver Assignment"/></h2>
 
-                        <asp:UpdatePanel runat="server" UpdateMode="Conditional">
+                        <asp:UpdatePanel runat="server" UpdateMode="Always">
                             <ContentTemplate>
                                 <div style="min-height:300px">
-                                    <asp:Repeater runat="server" ID="RepTrips" OnItemDataBound="RepTrips_ItemDataBound">
+                                    <asp:Repeater runat="server" ID="RepTrips" OnItemDataBound="RepTrips_ItemDataBound" OnItemCreated="RepTrips_ItemCreated">
                                         <HeaderTemplate>
                                             <table>
                                                 <tr>
@@ -46,10 +46,13 @@
 
                                         <ItemTemplate>
                                             <tr>
-                                                <td><asp:Label runat="server" ID="lbTime" /></td>
+                                                <td>
+                                                    <asp:Label runat="server" ID="lbTripID" Visible="false" />
+                                                    <asp:Label runat="server" ID="lbTime" />
+                                                </td>
                                                 <td><asp:Label runat="server" ID="lbStart" /></td>
                                                 <td><asp:Label runat="server" ID="lbEnd" /></td>
-                                                <td><asp:DropDownList runat="server" ID="ddlDriver" Style="padding: 5px 10px 5px 10px;width:100%"/></td>
+                                                <td><asp:DropDownList runat="server" ID="ddlDriver" AutoPostBack="true" DataTextField="Text" DataValueField="Value" OnSelectedIndexChanged="ddlDriver_SelectedIndexChanged" Style="padding: 5px 10px 5px 10px;width:100%"/></td>
                                             </tr>
                                         </ItemTemplate>
 
@@ -60,9 +63,6 @@
                                     <asp:button runat="server" ID="btnSave" OnClick="btnSave_Click" CssClass="mt-4 mb-5 profile__btn" Text="SAVE" />
                                 </div>
                             </ContentTemplate>
-                            <Triggers>
-                                <asp:PostBackTrigger ControlID="btnSave" />
-                            </Triggers>
                         </asp:UpdatePanel>
                     </div>
 
