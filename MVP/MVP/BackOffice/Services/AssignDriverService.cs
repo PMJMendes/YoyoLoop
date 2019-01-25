@@ -50,7 +50,7 @@ namespace MVP.Services
                 }
             }
 
-            result.Trips.OrderBy(t => t.StartTime);
+            result.Trips = result.Trips.OrderBy(t => t.StartTime).ToList();
             return result;
         }
 

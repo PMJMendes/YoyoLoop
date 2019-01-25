@@ -99,8 +99,8 @@ namespace MVP.BackOffice
         protected void btnSave_Click(object sender, EventArgs e)
         {
             int changes = service.UpdateTrips(pageData);
-            ApplicationHelpers.ShowMessage(this, changes.ToString() + " trips have been updated.");
             InitializeRepeaters();
+            ApplicationHelpers.ShowMessage(this, changes.ToString() + " trips have been updated.");
         }
     }
 }
