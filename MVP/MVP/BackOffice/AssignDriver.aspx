@@ -30,7 +30,7 @@
 
                         <h2 class="profile__sub-title"><asp:Literal runat="server" Text="Driver Assignment"/></h2>
 
-                        <asp:UpdatePanel runat="server" UpdateMode="Always">
+                        <asp:UpdatePanel runat="server" ID="upDrivers" UpdateMode="Always">
                             <ContentTemplate>
                                 <div style="min-height:300px">
                                     <asp:Repeater runat="server" ID="RepTrips" OnItemDataBound="RepTrips_ItemDataBound" OnItemCreated="RepTrips_ItemCreated">

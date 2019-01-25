@@ -13,6 +13,15 @@ namespace MVP.BackOffice {
     public partial class AssignDriver {
         
         /// <summary>
+        /// upDrivers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upDrivers;
+        
+        /// <summary>
         /// RepTrips control.
         /// </summary>
         /// <remarks>

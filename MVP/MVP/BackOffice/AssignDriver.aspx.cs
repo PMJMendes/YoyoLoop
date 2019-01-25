@@ -40,9 +40,14 @@ namespace MVP.BackOffice
             {
                 pageData = service.GetInitialData();
                 Session["assigndriver.data"] = pageData;
-                RepTrips.DataSource = pageData.Trips;
-                RepTrips.DataBind();
+                InitializeRepeaters();
             }
+        }
+
+        private void InitializeRepeaters()
+        {
+            RepTrips.DataSource = pageData.Trips;
+            RepTrips.DataBind();
         }
 
         protected void RepTrips_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -95,6 +100,7 @@ namespace MVP.BackOffice
         {
             int changes = service.UpdateTrips(pageData);
             ApplicationHelpers.ShowMessage(this, changes.ToString() + " trips have been updated.");
+            InitializeRepeaters();
         }
     }
 }
