@@ -2,12 +2,36 @@
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <meta name="robots" content="noindex, nofollow">
+    <style type="text/css">
+        @media screen and (max-width: 1279.99px) {
+            .desktop {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            .mobile {
+                display: none;
+            }
+        }
+     </style>
 </asp:Content>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="profile">
         <div class="profile__container profile__container--first">
-            <div class="container-fluid">
+            <div class="container-fluid mobile">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="profile__main-title"><asp:Literal runat="server" Text="YOYOLOOP ADMIN CP"/></h1>
+
+                        <h2 class="profile__sub-title"><asp:Literal runat="server" Text="The admin CP requires a minimum screen width of 1280px"/></h2>
+
+                        <div class="row" style="min-height:300px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid desktop">
                 <div class="row">
                     <div class="col-md-8">
                         <h1 class="profile__main-title"><asp:Literal runat="server" Text="YOYOLOOP ADMIN CP"/></h1>

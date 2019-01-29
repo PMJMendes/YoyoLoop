@@ -25,7 +25,7 @@
         <div class="profile__container profile__container--first">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <h1 class="profile__main-title"><asp:Literal runat="server" Text="YOYOLOOP ADMIN CP"/></h1>
 
                         <h2 class="profile__sub-title"><asp:Literal runat="server" Text="Driver Assignment"/></h2>
@@ -35,7 +35,7 @@
                                 <div style="min-height:300px">
                                     <asp:Repeater runat="server" ID="RepTrips" OnItemDataBound="RepTrips_ItemDataBound" OnItemCreated="RepTrips_ItemCreated">
                                         <HeaderTemplate>
-                                            <table>
+                                            <table style="width:90%">
                                                 <tr>
                                                     <th style="min-width:0px;border:0px"></th>
                                                     <th>Time</th>
@@ -97,7 +97,7 @@
                         </asp:UpdatePanel>
                     </div>
 
-                    <div class="col-md-4 left-menu">
+                    <div class="col-md-2 left-menu">
                         <div class="d-flex flex-column align-items-center text-left profile__menu sticky">
                             <a OnClick="javascript:$.blockUI()" href="/BackOffice/Office" class="profile__menu__link">
                                 <asp:Literal runat="server" Text="Admin CP"/>
