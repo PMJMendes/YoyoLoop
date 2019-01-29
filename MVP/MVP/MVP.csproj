@@ -242,6 +242,7 @@
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="BackOffice\AssignDriver.aspx" />
     <Content Include="BackOffice\Office.aspx" />
     <Content Include="Calendar\Scripts\init-popover.js" />
     <Content Include="Checkout\Payform.aspx" />
@@ -799,6 +800,14 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BackOffice\AssignDriver.aspx.cs">
+      <DependentUpon>AssignDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\AssignDriver.aspx.designer.cs">
+      <DependentUpon>AssignDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\AssignDriverDTO.cs" />
     <Compile Include="BackOffice\Office.aspx.cs">
       <DependentUpon>Office.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -807,6 +816,7 @@
       <DependentUpon>Office.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackOffice\OfficeDTO.cs" />
+    <Compile Include="BackOffice\Services\AssignDriverService.cs" />
     <Compile Include="BackOffice\Services\OfficeService.cs" />
     <Compile Include="Checkout\Payform.aspx.cs">
       <DependentUpon>Payform.aspx</DependentUpon>
@@ -1070,6 +1080,14 @@
     <Compile Include="Migrations\201812231352406_Dates.cs" />
     <Compile Include="Migrations\201812231352406_Dates.Designer.cs">
       <DependentUpon>201812231352406_Dates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240901089_ApplicationUser-Type.cs" />
+    <Compile Include="Migrations\201901240901089_ApplicationUser-Type.Designer.cs">
+      <DependentUpon>201901240901089_ApplicationUser-Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241101402_Driver-Details.cs" />
+    <Compile Include="Migrations\201901241101402_Driver-Details.Designer.cs">
+      <DependentUpon>201901241101402_Driver-Details.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entities\AccessPoint.cs" />
@@ -1418,6 +1436,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812231352406_Dates.resx">
       <DependentUpon>201812231352406_Dates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240901089_ApplicationUser-Type.resx">
+      <DependentUpon>201901240901089_ApplicationUser-Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241101402_Driver-Details.resx">
+      <DependentUpon>201901241101402_Driver-Details.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

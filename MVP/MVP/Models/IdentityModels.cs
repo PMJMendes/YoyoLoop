@@ -16,6 +16,7 @@ namespace MVP.Models
     public class ApplicationUser : IdentityUser
     {
         // YOYOLOOP EXTENDED PROPERTIES
+        public UserType Type { get; set; }
         public string ContactName { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime CreationDate { get; set; }
@@ -43,12 +44,20 @@ namespace MVP.Models
             userIdentity.AddClaim(new Claim("ContactName", this.ContactName?.ToString() ?? ""));
             userIdentity.AddClaim(new Claim("Email", this.Email.ToString()));
             userIdentity.AddClaim(new Claim("Company", this.Company?.CompanyName.ToString() ?? ""));
+            userIdentity.AddClaim(new Claim("UserType", this.Type.ToString()));
             return userIdentity;
         }
 
         public Task<ClaimsIdentity> GenerateUserIdentityAsync(ApplicationUserManager manager)
         {
             return Task.FromResult(GenerateUserIdentity(manager));
+        }
+
+        public enum UserType
+        {
+            USER,
+            SUPERUSER,
+            ADMIN
         }
     }
 
