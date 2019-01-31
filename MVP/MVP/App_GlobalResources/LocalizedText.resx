@@ -2622,4 +2622,7 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="Controls_Register_tbRegisterPhoneNumber_Note" xml:space="preserve">
     <value>Importante para o contactarmos no momento da partida da sua viagem</value>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_DriverContact" xml:space="preserve">
+    <value>Contacto do Motorista</value>
+  </data>
 </root>
