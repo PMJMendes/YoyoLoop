@@ -49,6 +49,7 @@ namespace MVP.Services
             {
                 var booking = model.Booking.Where(b => b.BookingId == id && b.Status == BookingStatus.BOOKED)
                                            .Include(t => t.Trip)
+                                           .Include(t => t.Trip.Driver)
                                            .Include(d => d.Trip.Departure)
                                            .Include(r => r.Trip.Departure.Route)
                                            .Include(sap => sap.Trip.StartAccessPoint)
@@ -83,6 +84,8 @@ namespace MVP.Services
                         EndRegionName = booking.Trip.EndAccessPoint.Region.Name,
                         EndAPName = booking.Trip.EndAccessPoint.Name,
                         EndAPLocation = booking.Trip.EndAccessPoint.GoogleLocation,
+                        DriverName = booking.Trip.Driver?.Name ?? string.Empty,
+                        DriverPhone = booking.Trip.Driver?.Phone ?? string.Empty,
                         InviteURL = "#"
                     };
                     return result;
@@ -107,6 +110,14 @@ namespace MVP.Services
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Seats + ": " + state.Seats.ToString();
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_FinalCost + ": " + state.Cost.ToString("C", ApplicationHelpers.DefaultCulture());
                 body += "<br />";
+
+                if (!string.IsNullOrEmpty(state.DriverName))
+                {
+                    body += "<br />" + "<strong><u>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_DriverContact + ":</u></strong>";
+                    body += "<br />" + "<strong>" + state.DriverName + ": " + state.DriverPhone + "</strong>";
+                    body += "<br />";
+                }
+
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_AccessTicket + " <a href='" + state.TicketURL + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
                 body += "<br />";
                 body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Invite + " <a href='" + state.InviteURL + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
