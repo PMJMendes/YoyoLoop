@@ -253,7 +253,7 @@ namespace MVP.Services
             {
                 foreach (Trip t in trips.Where(t => t.Driver != null ))
                 {
-                    foreach (Booking b in t.Bookings)
+                    foreach (Booking b in t.Bookings.Where(b => b.Status == BookingStatus.BOOKED))
                     {
                         SendClientTripDetails(t, b, model.Users.FirstOrDefault(u => u.Id == b.UserId).Email);
                     }
