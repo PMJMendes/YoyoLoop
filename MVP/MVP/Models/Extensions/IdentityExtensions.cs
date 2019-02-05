@@ -32,5 +32,11 @@ namespace MVP.Models.Extensions
             var claim = ((ClaimsIdentity)identity).FindFirst("Company");
             return (claim != null) ? claim.Value : string.Empty;
         }
+
+        public static bool IsAdmin (this IIdentity identity)
+        {
+            var claim = ((ClaimsIdentity)identity).FindFirst("UserType");
+            return (claim != null) ? (claim.Value == ApplicationUser.UserType.ADMIN.ToString()) ? true : false : false;
+        }
     }
 }

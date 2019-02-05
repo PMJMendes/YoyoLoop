@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
+using System.Threading;
 using System.Web;
 using System.Web.Configuration;
 using Microsoft.AspNet.Identity;
@@ -189,12 +191,15 @@ namespace MVP.Services
             var tomorrow = DateTime.Today.AddDays(1);
             List<Trip> trips = model.Trip.Include(t => t.StartAccessPoint).Include(ap => ap.StartAccessPoint.Region)
                                          .Include(t => t.EndAccessPoint).Include(ap => ap.EndAccessPoint.Region)
+                                         .Include(t => t.Driver)
                                          .Include(t => t.Bookings)
+                                         .Include(t => t.Departure)
                                          .Where(t => DbFunctions.TruncateTime(t.StartTime) == tomorrow && t.Status == TripStatus.BOOKED).ToList();
             if(SendDailyList(tomorrow, trips, model.Settings.Select(s => s.VehicleCapacity).First()))
             {
                 model.UpdateService.First().LastDaily = DateTime.Today;
             }
+            SendTripDetails(trips);
         }
 
         private void Cleanup(EntityModel model)
@@ -240,6 +245,60 @@ namespace MVP.Services
                     }
                 }
             }
+        }
+
+        public void SendTripDetails(List<Trip> trips)
+        {
+            using (var model = new EntityModel())
+            {
+                foreach (Trip t in trips.Where(t => t.Driver != null ))
+                {
+                    foreach (Booking b in t.Bookings)
+                    {
+                        SendClientTripDetails(t, b, model.Users.FirstOrDefault(u => u.Id == b.UserId).Email);
+                    }
+                }
+            }
+        }
+
+        public void SendClientTripDetails(Trip trip, Booking booking, string useremail)
+        {
+            // WE HAVE NO WAY OF STORING USER LANGUAGE SO WE'RE SETTING THREAD TO PT FOR NOW
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-PT", false);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-PT", false);
+
+            SmtpClient client = new SmtpClient();
+            using (MailMessage msg = new MailMessage())
+            {
+                msg.IsBodyHtml = true;
+                msg.Subject = "Detalhes da sua viagem de amanhã com a YoYoLoop";
+
+                string body = "Estimado(a) cliente,";
+                body += "<br />" + "junto enviamos os detalhes da sua viagem de amanhã com a " + "<a href='https://www.yoyoloop.com/'>YoYoLoop</a>.<br />";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Date + ": " + trip.StartTime.ToString("F");
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Origin + ": " + trip.StartAccessPoint.Region.Name + " (<a href='" + trip.StartAccessPoint.GoogleLocation + "'>" + trip.StartAccessPoint.Name + "</a>)";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Destination + ": " + trip.EndAccessPoint.Region.Name + " (<a href='" + trip.EndAccessPoint.GoogleLocation + "'>" + trip.EndAccessPoint.Name + "</a>)";
+                body += "<br /><small>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_SeeOnMap + "</small>";
+                body += "<br />";
+                body += "<br />" + "<strong><u>Contacto do Motorista:</u></strong>";
+                body += "<br />" + "<strong>" + trip.Driver.Name + ": " + trip.Driver.Phone + "</strong>";
+                body += "<br />";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_AccessTicket + " <a href='https://www.yoyoloop.com/Ticket/Ticket?Id=" + booking.BookingId + "'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
+                body += "<br />";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_Invite + " <a href='https://www.yoyoloop.com/Profile/Invite'>" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_HereLink + "</a>.";
+                body += "<br />";
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_ThankYou;
+                body += "<br />" + Resources.LocalizedText.Confirm_Service_SendTicket_Email_Body_YoyoloopTeam;
+
+                msg.Body = body;
+
+                msg.To.Add(useremail);
+                msg.ReplyToList.Add(WebConfigurationManager.AppSettings["ReservationsProviderEmail"]);
+                msg.Bcc.Add(WebConfigurationManager.AppSettings["EmailServiceBlindCopy"]);
+
+                client.Send(msg);
+            }
+
         }
 
         public bool SendDailyList(DateTime date, List<Trip> trips, int capacity)

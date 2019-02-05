@@ -12,6 +12,8 @@ namespace MVP.Models.Entities
         public bool Active { get; set; }
 
         public string Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
         public List<DriverAvailability> Availability { get; set; }
 
         public class DriverAvailability

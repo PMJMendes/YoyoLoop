@@ -24,6 +24,9 @@ namespace MVP.Confirm
         public string EndAPName { get; set; }
         public string EndAPLocation { get; set; }
 
+        public string DriverName { get; set; }
+        public string DriverPhone { get; set; }
+
         public string UserEmail { get; set; }
         public bool UserEmailConfirmed { get; set; }
         public string UserContactName { get; set; }

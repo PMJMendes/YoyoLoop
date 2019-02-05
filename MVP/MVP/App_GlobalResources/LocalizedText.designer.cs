@@ -844,6 +844,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contacto do Motorista.
+        /// </summary>
+        internal static string Confirm_Service_SendTicket_Email_Body_DriverContact {
+            get {
+                return ResourceManager.GetString("Confirm_Service_SendTicket_Email_Body_DriverContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Preço Final.
         /// </summary>
         internal static string Confirm_Service_SendTicket_Email_Body_FinalCost {
