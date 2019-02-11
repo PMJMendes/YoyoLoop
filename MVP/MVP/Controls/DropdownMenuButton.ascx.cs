@@ -11,10 +11,10 @@ namespace MVP.Controls
     {
         public class ItemSelectedEventArgs : EventArgs
         {
-            public object Item { get; set; }
+            public ListItem Item { get; set; }
         }
 
-        public string SelectedText
+        protected string SelectedText
         {
             get
             {
@@ -27,7 +27,7 @@ namespace MVP.Controls
             }
         }
 
-        public string SelectionPrompt
+        protected string SelectionPrompt
         {
             get
             {
@@ -40,7 +40,7 @@ namespace MVP.Controls
             }
         }
 
-        public IEnumerable<ListItem> DataSource
+        protected IEnumerable<ListItem> DataSource
         {
             get
             {
@@ -55,20 +55,62 @@ namespace MVP.Controls
 
         public event EventHandler<ItemSelectedEventArgs> ItemSelected;
 
-        public void ListDataBind()
+        public Func<IEnumerable<ListItem>> DataSourceGetter;
+
+
+        protected void ListDataBind()
         {
             ItemRepeater.DataBind();
         }
 
         protected void ItemRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            this.SelectedText = e.CommandName;
-            OnItemSelected((string)e.CommandArgument);
+            var selectedItem = new ListItem(e.CommandName, (string)e.CommandArgument);
+            this.SelectedText = selectedItem.Text;
+            OnItemSelected(selectedItem);
         }
 
-        protected void OnItemSelected(object item)
+        protected void OnItemSelected(ListItem item)
         {
             ItemSelected?.Invoke(this, new ItemSelectedEventArgs() { Item = item });
         }
+
+        public void LoadDataSource()
+        {
+            this.DataSource = DataSourceGetter();
+            this.ListDataBind();
+        }
+
+        public ListItem SelectFirst()
+        {
+            // ensure data source is up to date
+            LoadDataSource();
+            // then select first, if any
+            if (this.DataSource.Count() > 0)
+            {
+                var item = this.DataSource.First();
+                this.SelectedText = item.Text;
+                OnItemSelected(item);
+                return item;
+            } else
+            {
+                this.SelectedText = "";
+                ItemSelected?.Invoke(this, new ItemSelectedEventArgs() { Item = new ListItem("","") });
+            }
+            return null;
+        }
+
+        public ListItem SelectByValue(String value)
+        {
+            // ensure data source is up to date
+            LoadDataSource();
+            // then select item by value
+            ListItem item = this.DataSource.Where(i => i.Value == value).Single();
+            this.SelectedText = item.Text;
+            this.OnItemSelected(item);
+            return item;
+        }
+
+
     }
 }

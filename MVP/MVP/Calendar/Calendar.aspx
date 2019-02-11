@@ -37,7 +37,8 @@
                         <img src="/img/red-dot.png" alt="" class="img-responsive">
                     </div>
                     <div class="switch">
-                        <img src="/img/switch@2x.png" alt="" class="img-responsive">
+                        <asp:Button runat="server" id="switchBtnPostback" style="display:none" OnClick="switchBtnPostback_Click" />
+                        <img src="/img/switch@2x.png" alt="" class="img-responsive" onclick="document.getElementById('<%= switchBtnPostback.ClientID %>').click()">
                     </div>
                     <div class="path">
                         <img src="/img/path@2x.png" alt="" class="img-responsive">
