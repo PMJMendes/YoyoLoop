@@ -6,9 +6,11 @@
             return $(source).removeClass('hide');
         },
         trigger: 'manual',
-        placement: 'auto'
+        placement: 'bottom',
+        flip: 'bottom',
+        fallbackPlacement: ['bottom']
     });
     $(target).popover('show');
 
     initPopover();
-};
+}
