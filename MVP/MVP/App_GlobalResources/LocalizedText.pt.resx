@@ -384,6 +384,9 @@
     <value>Destino</value>
     <comment>repetido</comment>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_DriverContact" xml:space="preserve">
+    <value>Contacto do Motorista</value>
+  </data>
   <data name="Confirm_Service_SendTicket_Email_Body_FinalCost" xml:space="preserve">
     <value>Preço final</value>
   </data>
@@ -634,6 +637,9 @@
     <value>O campo password é obrigatório.</value>
     <comment>repetido</comment>
   </data>
+  <data name="Controls_Register_tbRegisterPhoneNumber_Note" xml:space="preserve">
+    <value>Importante para o contactarmos no momento da partida da sua viagem</value>
+  </data>
   <data name="Controls_Register_WithEmail" xml:space="preserve">
     <value>Para receber o seu bilhete,&lt;br&gt;precisamos de alguns dos seus dados</value>
   </data>
@@ -713,13 +719,13 @@
     <value>26</value>
   </data>
   <data name="General_LoopData_Price_Leiria" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>39</value>
+    <value>45</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>39</value>
+    <value>45</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>Convite</value>
@@ -946,15 +952,15 @@ Para utilizar um promo code de um amigo, basta clicar em “Tenho um promo code�
     <value>Qual é o preço por loop?</value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
-    <value>Os valores dos bilhetes para os loops atuais são:&lt;br&gt;
+    <value>Os valores dos bilhetes para os Loops atuais são os seguintes:&lt;br&gt;
 &lt;br&gt;
-Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem&lt;br&gt;
-Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem&lt;br&gt;
-Lisboa - Leiria / Leiria - Lisboa: desde 16€ por viagem&lt;br&gt;
+Lisboa - Porto / Porto - Lisboa: desde 45€ por viagem&lt;br&gt;
+Lisboa - Coimbra / Coimbra - Lisboa: desde 30€ por viagem&lt;br&gt;
+Lisboa - Leiria / Leiria- Lisboa: desde 22€ por viagem&lt;br&gt;
 &lt;br&gt;
 Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
 &lt;br&gt;
-Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, por favor envie um email para empresas@yoyoloop.com.</value>
+Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloop.com . </value>
   </data>
   <data name="Help_Topic_TripsAndLoops_Question_Invoices" xml:space="preserve">
     <value>Emitem fatura com número de contribuinte?</value>
@@ -1261,6 +1267,9 @@ Ver quantos vouchers de 20€ tem disponível para usufruir.</value>
   </data>
   <data name="Meta_Terms_Title" xml:space="preserve">
     <value>Termos e Condições | Yoyoloop</value>
+  </data>
+  <data name="MGM_NoPhone_ErrorMessage" xml:space="preserve">
+    <value>Para usufruir do seu voucher de €20 necessita de um número de telemóvel válido.&lt;br&gt;Pode adicionar o seu número de telemóvel no seu perfil.</value>
   </data>
   <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
     <value>Reserve Já</value>
@@ -2176,7 +2185,7 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
     <value>Saída do Porto: 12:00</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Title" xml:space="preserve">
-    <value>desde 26€ por viagem de ida</value>
+    <value>desde 30€ por viagem de ida</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime" xml:space="preserve">
     <value>O transfer da Yoyoloop leva-o de Coimbra até &lt;br/&gt;Lisboa em apenas 1h30m.</value>
@@ -2245,7 +2254,7 @@ A Yoyoloop oferece-lhe boleia entre Lisboa e Coimbra, sem paragens e a preço de
     <value>Saídas de Leiria: 15:00</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Title" xml:space="preserve">
-    <value>Desde 16€ por viagem de ida</value>
+    <value>Desde 22€ por viagem de ida</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime" xml:space="preserve">
     <value>O transfer da Yoyoloop leva-o de Leiria até &lt;br/&gt;Lisboa em apenas 1h15m.</value>
@@ -2307,7 +2316,7 @@ A Yoyoloop oferece-lhe boleia entre Lisboa e Coimbra, sem paragens e a preço de
     <value>Saídas do Porto: 6:00 - 7:00 - 17:00 - 18:30</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
-    <value>desde 39€ por viagem</value>
+    <value>desde 45€ por viagem</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
     <value>O transfer da Yoyoloop leva-o de Lisboa até ao Porto em apenas 2h30m.</value>
@@ -2633,14 +2642,5 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento.</value>
-  </data>
-  <data name="MGM_NoPhone_ErrorMessage" xml:space="preserve">
-    <value>Para usufruir do seu voucher de €20 necessita de um número de telemóvel válido.&lt;br&gt;Pode adicionar o seu número de telemóvel no seu perfil.</value>
-  </data>
-  <data name="Controls_Register_tbRegisterPhoneNumber_Note" xml:space="preserve">
-    <value>Importante para o contactarmos no momento da partida da sua viagem</value>
-  </data>
-  <data name="Confirm_Service_SendTicket_Email_Body_DriverContact" xml:space="preserve">
-    <value>Contacto do Motorista</value>
   </data>
 </root>
