@@ -2643,4 +2643,16 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>Ocorreu um erro ao efectuar o pagamento.</value>
   </data>
+  <data name="StaticPages_Destinos_Coimbra_Description" xml:space="preserve">
+    <value>Com mais de 100 mil habitantes e sendo um importante polo universitário, Coimbra gera um movimento constante de estudantes e profissionais com Lisboa e também com o Porto.</value>
+  </data>
+  <data name="StaticPages_Destinos_Leiria_Description" xml:space="preserve">
+    <value>A cidade de Leiria é o ponto central de uma região Oeste com grande dinamismo empresarial. A cidade é bem servida de auto-estradas, mas infelizmente as ligações de comboio e autocarro deixam muito a desejar.</value>
+  </data>
+  <data name="StaticPages_Destinos_Lisboa_Description" xml:space="preserve">
+    <value>Com mais de 2 milhões de habitantes na Grande Lisboa, &lt;br&gt;todos os dias entram 370 mil carros na capital num constante pára-arranca.</value>
+  </data>
+  <data name="StaticPages_Destinos_Porto_Description" xml:space="preserve">
+    <value>Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. </value>
+  </data>
 </root>
