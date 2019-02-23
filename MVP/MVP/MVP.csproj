@@ -266,6 +266,7 @@
     <Content Include="Controls\Forgot.ascx" />
     <Content Include="Controls\Login.ascx" />
     <Content Include="Controls\Message.ascx" />
+    <Content Include="Controls\WhyUseYoyoLoop.ascx" />
     <Content Include="Controls\Register.ascx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -910,6 +911,9 @@
     </Compile>
     <Compile Include="Controls\Message.ascx.designer.cs">
       <DependentUpon>Message.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WhyUseYoyoLoop.ascx.designer.cs">
+      <DependentUpon>WhyUseYoyoLoop.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Register.ascx.cs">
       <DependentUpon>Register.ascx</DependentUpon>
