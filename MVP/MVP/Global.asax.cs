@@ -29,12 +29,22 @@ namespace MVP
 
         protected void Application_BeginRequest(Object sender, EventArgs e)
         {
+            HttpCookie langCookie = Request.Cookies["langCookie"];
+            if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(langCookie.Value, false);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(langCookie.Value, false);
+            } else
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-PT", false);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-PT", false);
+            }
+
             HttpContextBase currentContext = new HttpContextWrapper(HttpContext.Current);
             UrlHelper urlHelper = new UrlHelper(HttpContext.Current.Request.RequestContext);
             RouteData routeData = urlHelper.RouteCollection.GetRouteData(currentContext);
 
             string lang = routeData?.Values["lang"] as string;
-
             if(!string.IsNullOrEmpty(lang))
             {
                 switch(lang)
@@ -54,13 +64,6 @@ namespace MVP
                         return;
 
                 }
-            }
-            HttpCookie langCookie = Request.Cookies["langCookie"];
-            if (langCookie != null && !string.IsNullOrEmpty(langCookie.Value))
-            {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo(langCookie.Value, false);
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo(langCookie.Value, false);
-                return;
             }
 
             //browser culture handler
