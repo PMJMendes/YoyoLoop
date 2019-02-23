@@ -2104,7 +2104,6 @@ Autocarro Resende: 111, 116, 119, 121, 122, 123, 130</value>
   </data>
   <data name="StaticPages_Destinos_SubDescription" xml:space="preserve">
     <value>Apanha boleia a preço de autocarro</value>
-    <comment>As cidades de Lisboa, Porto, Coimbra e Leiria estão agora ligadas em loop. Poupe tempo e viaje num transfer premium, de um centro da cidade para o outro.</comment>
   </data>
   <data name="StaticPages_Destinos_Why_Accessible_Description" xml:space="preserve">
     <value>Menos desgaste, mais na carteira</value>
@@ -2636,5 +2635,17 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   </data>
   <data name="StaticPages_Destinos_Porto_Description" xml:space="preserve">
     <value>Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. </value>
+  </data>
+  <data name="StaticPages_Cities__Card_Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StaticPages_Cities__MainDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StaticPages_Cities__MainTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StaticPages_Cities__SubDescription" xml:space="preserve">
+    <value />
   </data>
 </root>

@@ -4791,6 +4791,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string StaticPages_Cities__Card_Title {
+            get {
+                return ResourceManager.GetString("StaticPages_Cities__Card_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string StaticPages_Cities__MainDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Cities__MainDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string StaticPages_Cities__MainTitle {
+            get {
+                return ResourceManager.GetString("StaticPages_Cities__MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string StaticPages_Cities__SubDescription {
+            get {
+                return ResourceManager.GetString("StaticPages_Cities__SubDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reservas.
         /// </summary>
         internal static string StaticPages_Contact_Bookings {

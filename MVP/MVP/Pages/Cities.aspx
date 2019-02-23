@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cities.aspx.cs" Inherits="MVP.Pages.Cities" %>
 
 <%@ Import Namespace="MVP.Pages" %>
-<%@ Register Src="~/Controls/Literal.ascx" TagPrefix="yoyo" TagName="Literal" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <title>
@@ -34,27 +33,27 @@
     <div>
         <header class="head text-center d-flex pb-5 static-page__pic-destinos">
             <div class="container-fluid d-flex align-items-center">
-                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_MainTitle%>"/></h1>
+                <h1 class="static-page__main-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Cities__MainTitle%>"/></h1>
             </div>
         </header>
 
         <div class="homepage__container static-page__center-container">
-            <div class="container-fluid d-flex flex-column justify-content-center">
-                <div class="row justify-content-center mb-5">
+            <div class="container-fluid d-flex flex-column align-items-center">
+                <div class="row  align-items-center mb-5">
                     <div class="homepage__yoyoloop text-uppercase">YOYOLOOP</div>
                 </div>
 
-                <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_MainDescription%>"/></div>
+                <div class="row  align-items-center mb-5">
+                    <div class="homepage__yoyoloop-main-description"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Cities__MainDescription%>"/></div>
                 </div>
 
-                <div class="row justify-content-center mb-5">
+                <div class="row  align-items-center mb-5">
                     <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
                 </div>
             
-                <div class="row justify-content-center mb-5">
+                <div class="row  align-items-center mb-5">
                     <div class="static-page__first__sub-description">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_SubDescription%>"/>
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Cities__SubDescription%>"/>
                     </div>
                 </div>
             </div>
@@ -63,81 +62,22 @@
         <asp:Repeater runat="server" DataSource="<%# AllCities %>">
             <ItemTemplate>
                 <a OnClick="javascript:$.blockUI()" href="/Pages/Cities?City=<%# Eval("Name") %>" tabindex="-1" >
-                    <div class="homepage__container static-page__box-container p-0 mt-5">
-                        <div class="row">
-                            <div class="col-md-5 static-page__box-container__first d-flex flex-column justify-content-center pl-5">
-                                <div class="static-page__box-container__first__sub-title">
+                        <div class="d-flex flex-wrap <%# (Container.ItemIndex % 2) == 0 ? "flex-row" : "flex-row flex-md-row-reverse" %>">
+                            <div class="col-12 col-md-5 d-flex flex-column justify-content-center <%# (Container.ItemIndex % 2) == 0 ? "align-items-start pl-5" : "align-items-end pr-5" %> static-page__box-container__first">
+                                <div class="p-0 static-page__box-container__first__sub-title">
                                     <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Title%>"/>
+                                    <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Cities__Card_Title%>"/>
                                 </div>
-                                <div class="static-page__box-container__first__main-title"><%# Eval("Name") %></div>
+                                <div class="p-0 static-page__box-container__first__main-title"><%# Eval("Name") %></div>
                             </div>
 
-                            <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-lisboa p-5 m-0 d-flex justify-content-center align-items-center">
+                            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center static-page__box-container__second static-page__box-container__second--destinies-lisboa p-5 m-0">
                                 <%# ((Cities)Container.Page).CityText((String)Eval("Name"), "Description") %>
                             </div>
                         </div>
-                    </div>
                 </a>
             </ItemTemplate>
         </asp:Repeater>
-
-        <a OnClick="javascript:$.blockUI()" href="/Pages/Cities?City=Porto" tabindex="-1" >
-            <div class="homepage__container static-page__box-container p-0">
-                <div class="row">
-                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-porto static-page__box-container__second--destinies-porto--desktop p-5 m-0 d-flex justify-content-center align-items-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Porto_Description%>"/>
-                    </div>
-                    <div class="col-md-5 static-page__box-container__first d-flex flex-column justify-content-center align-items-end pr-5">
-                        <div class="static-page__box-container__first__sub-title">
-                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Title%>"/>
-                            <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                        </div>
-                        <div class="static-page__box-container__first__main-title">Porto</div>
-                    </div>
-                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-porto static-page__box-container__second--destinies-porto--mobile p-5 m-0 d-flex justify-content-center align-items-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Porto_Description%>"/>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <a OnClick="javascript:$.blockUI()" href="/Pages/Cities?City=Leiria" tabindex="-1" >
-            <div class="homepage__container static-page__box-container p-0">
-                <div class="row">
-                    <div class="col-md-5 static-page__box-container__first d-flex flex-column justify-content-center pl-5">
-                        <div class="static-page__box-container__first__sub-title">
-                            <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Title%>"/>
-                        </div>
-                        <div class="static-page__box-container__first__main-title">Leiria</div>
-                    </div>
-                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-leiria p-5 m-0 d-flex justify-content-center align-items-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Leiria_Description%>"/>
-                    </div>
-                </div>
-            </div>
-        </a>
-        
-        <a OnClick="javascript:$.blockUI()" href="/Pages/Cities?City=Coimbra" tabindex="-1" >
-            <div class="homepage__container static-page__box-container p-0 mb-5">
-                <div class="row">
-                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-coimbra static-page__box-container__second--destinies-coimbra--desktop p-5 m-0 d-flex justify-content-center align-items-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Coimbra_Description%>"/>
-                    </div>
-                    <div class="col-md-5 static-page__box-container__first d-flex flex-column justify-content-center align-items-end pr-5">
-                        <div class="static-page__box-container__first__sub-title">
-                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Title%>"/>
-                            <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
-                        </div>
-                        <div class="static-page__box-container__first__main-title">Coimbra</div>
-                    </div>
-                    <div class="col-md-7 static-page__box-container__second static-page__box-container__second--destinies-coimbra static-page__box-container__second--destinies-coimbra--mobile p-5 m-0 d-flex justify-content-center align-items-center">
-                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_DestinationCard_Coimbra_Description%>"/>
-                    </div>
-                </div>
-            </div>   
-        </a>
 
         <div class="homepage__container homepage__container--forth">
             <div class="container-fluid d-flex flex-column justify-content-center">

@@ -2643,4 +2643,16 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
   </data>
+  <data name="StaticPages_Cities__Card_Title" xml:space="preserve">
+    <value>Departures from</value>
+  </data>
+  <data name="StaticPages_Cities__MainDescription" xml:space="preserve">
+    <value>Popular destinations</value>
+  </data>
+  <data name="StaticPages_Cities__MainTitle" xml:space="preserve">
+    <value>Yoyoloop is the perfect alternative to the individual car, air bridge and comboio Alfa Pendular.</value>
+  </data>
+  <data name="StaticPages_Cities__SubDescription" xml:space="preserve">
+    <value>Lisbon, Porto, Coimbra and Leiria became Looped cities. &lt;br&gt;Yoyoloop serviçe is a different "air bridge", based on five-seat premium transfers that go on the motorway. </value>
+  </data>
 </root>

@@ -2655,4 +2655,16 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="StaticPages_Destinos_Porto_Description" xml:space="preserve">
     <value>Com mais de 1.787.000 habitantes no Grande Porto, todos os dias entram 260 mil carros na segunda maior cidade do país num constante pára-arranca. </value>
   </data>
+  <data name="StaticPages_Cities__Card_Title" xml:space="preserve">
+    <value>Partidas de</value>
+  </data>
+  <data name="StaticPages_Cities__MainDescription" xml:space="preserve">
+    <value>Destinos populares</value>
+  </data>
+  <data name="StaticPages_Cities__MainTitle" xml:space="preserve">
+    <value>A Yoyoloop é a alternativa perfeita ao carro individual, à ponte aérea e ao comboio Alfa Pendular.</value>
+  </data>
+  <data name="StaticPages_Cities__SubDescription" xml:space="preserve">
+    <value>Lisboa, Porto, Coimbra e Leiria passam a estar ligadas em Loop.&lt;br&gt; O serviço Yoyoloop é uma "ponte aérea" diferente, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
+  </data>
 </root>
