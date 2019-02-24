@@ -1825,7 +1825,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 45.
+        ///   Looks up a localized string similar to 44.
         /// </summary>
         internal static string General_LoopData_Price_Lisboa {
             get {
@@ -1834,7 +1834,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 45.
+        ///   Looks up a localized string similar to 44.
         /// </summary>
         internal static string General_LoopData_Price_Porto {
             get {
@@ -2514,7 +2514,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Os valores dos bilhetes para os Loops atuais são os seguintes:&lt;br&gt;
         ///&lt;br&gt;
-        ///Lisboa - Porto / Porto - Lisboa: desde 45€ por viagem&lt;br&gt;
+        ///Lisboa - Porto / Porto - Lisboa: desde 44€ por viagem&lt;br&gt;
         ///Lisboa - Coimbra / Coimbra - Lisboa: desde 30€ por viagem&lt;br&gt;
         ///Lisboa - Leiria / Leiria- Lisboa: desde 22€ por viagem&lt;br&gt;
         ///&lt;br&gt;
@@ -6423,7 +6423,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to desde 45€ por viagem.
+        ///   Looks up a localized string similar to desde 44€ por viagem.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Title {
             get {

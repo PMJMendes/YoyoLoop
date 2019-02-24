@@ -722,10 +722,10 @@
     <value>22</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>45</value>
+    <value>44</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>45</value>
+    <value>44</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>Convite</value>
@@ -954,7 +954,7 @@ Para utilizar um promo code de um amigo, basta clicar em “Tenho um promo code�
   <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
     <value>Os valores dos bilhetes para os Loops atuais são os seguintes:&lt;br&gt;
 &lt;br&gt;
-Lisboa - Porto / Porto - Lisboa: desde 45€ por viagem&lt;br&gt;
+Lisboa - Porto / Porto - Lisboa: desde 44€ por viagem&lt;br&gt;
 Lisboa - Coimbra / Coimbra - Lisboa: desde 30€ por viagem&lt;br&gt;
 Lisboa - Leiria / Leiria- Lisboa: desde 22€ por viagem&lt;br&gt;
 &lt;br&gt;
@@ -2316,7 +2316,7 @@ A Yoyoloop oferece-lhe boleia entre Lisboa e Coimbra, sem paragens e a preço de
     <value>Saídas do Porto: 6:00 - 7:00 - 17:00 - 18:30</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
-    <value>desde 45€ por viagem</value>
+    <value>desde 44€ por viagem</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
     <value>O transfer da Yoyoloop leva-o de Lisboa até ao Porto em apenas 2h30m.</value>
