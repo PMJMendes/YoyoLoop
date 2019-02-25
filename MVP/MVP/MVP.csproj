@@ -686,6 +686,7 @@
     <Content Include="sass\_spinner.scss" />
     <Content Include="sass\_terms_and_conditions.scss" />
     <None Include="Properties\PublishProfiles\Yoyo-Prod.pubxml" />
+    <Content Include="sass\_why_section.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1229,6 +1230,7 @@
     <Compile Include="Calendar\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Services\LoopService.cs" />
     <Compile Include="Services\CityService.cs" />
     <Compile Include="Services\MasterService.cs" />
     <Compile Include="Ticket\Services\TicketService.cs" />

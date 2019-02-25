@@ -2655,4 +2655,7 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   <data name="StaticPages_Cities__SubDescription" xml:space="preserve">
     <value>Lisbon, Porto, Coimbra and Leiria became Looped cities. &lt;br&gt;Yoyoloop serviçe is a different "air bridge", based on five-seat premium transfers that go on the motorway. </value>
   </data>
+  <data name="StaticPages_Cities_Details_LoopCard_Schedules_To" xml:space="preserve">
+    <value>To</value>
+  </data>
 </root>

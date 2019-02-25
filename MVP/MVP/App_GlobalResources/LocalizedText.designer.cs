@@ -4793,6 +4793,15 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string StaticPages_Cities_Details_LoopCard_Schedules_To {
+            get {
+                return ResourceManager.GetString("StaticPages_Cities_Details_LoopCard_Schedules_To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string StaticPages_Cities__Card_Title {
             get {
                 return ResourceManager.GetString("StaticPages_Cities__Card_Title", resourceCulture);

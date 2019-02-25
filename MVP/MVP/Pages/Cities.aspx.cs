@@ -17,9 +17,18 @@ namespace MVP.Pages
         public List<LoopedRegion> AllCities;
 
         public String SelectedCity;
+
+        public class DestinationTimes
+        {
+            public String Name { get; set; }
+            public List<TimeSpan> Times { get; set; }
+        }
+        public List<DestinationTimes> SelectedCityDestinationTimes;
         public List<AccessPoint> SelectedCityStops;
 
         private CityService cities = new CityService();
+        private LoopService loops = new LoopService();
+        private ScheduleService scheduleService = new ScheduleService();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,6 +40,9 @@ namespace MVP.Pages
                 {
                     SelectedCity = city.Name;
                     SelectedCityStops = cities.GetCityLoops(cityParam);
+
+                    var cityRoutes = loops.GetRoutesFrom(city.LoopedRegionId);
+                    SelectedCityDestinationTimes = cityRoutes.Select(destinationTimes).OrderBy(dt => dt.Name).ToList();
                 } else
                 {
                     AllCities = cities.GetCities();
@@ -38,6 +50,15 @@ namespace MVP.Pages
 
                 this.DataBind();
             }
+        }
+
+        private DestinationTimes destinationTimes(Route route)
+        {
+            return new DestinationTimes()
+            {
+                Name = route.EndRegion.Name,
+                Times = scheduleService.GetAvailableTimes(route.RouteId).OrderBy(time => time).ToList()
+            };
         }
 
         public String CityText(String city, String key)

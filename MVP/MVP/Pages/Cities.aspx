@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Yoyoloop" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cities.aspx.cs" Inherits="MVP.Pages.Cities" %>
 
+<%@ Register Src="~/Controls/WhyUseYoyoLoop.ascx" TagPrefix="yoyo" TagName="WhyUseYoyoLoop" %>
+
 <%@ Import Namespace="MVP.Pages" %>
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
@@ -40,7 +42,7 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column align-items-center">
                 <div class="row  align-items-center mb-5">
-                    <div class="homepage__yoyoloop text-uppercase">YOYOLOOP</div>
+                    <div class="homepage__yoyoloop-title text-uppercase">YOYOLOOP</div>
                 </div>
 
                 <div class="row  align-items-center mb-5">
@@ -71,8 +73,8 @@
                                 <div class="p-0 static-page__box-container__first__main-title"><%# Eval("Name") %></div>
                             </div>
 
-                            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center static-page__box-container__second static-page__box-container__second--destinies-lisboa p-5 m-0">
-                                <%# ((Cities)Container.Page).CityText((String)Eval("Name"), "Description") %>
+                            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center static-page__box-container__second static-page__box-container__second--city-<%# Eval("Name")?.ToString().ToLower() %> p-5 m-0">
+                                <%# ((Cities)Container.Page).CityText(Eval("Name").ToString(), "Description") %>
                             </div>
                         </div>
                 </a>
@@ -80,44 +82,7 @@
         </asp:Repeater>
 
         <div class="homepage__container homepage__container--forth">
-            <div class="container-fluid d-flex flex-column justify-content-center">
-                <div class="row justify-content-center mb-5">
-                    <div class="homepage__why-catch-ride"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Title%>"/></div>
-                </div>
-                <div class="row row-no-padding">
-                    <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
-                        <div class="homepage__why-card__image mb-4">
-                            <img src="/img/acessivel.png" srcset="/img/acessivel@2x.png 2x, /img/acessivel@3x.png 3x">
-                        </div>
-                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Accessible_Title%>"/></div>
-                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Accessible_Description%>"/></div>
-                    </div>
-
-                    <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
-                        <div class="homepage__why-card__image mb-4">
-                            <img src="/img/conveniente.png" srcset="/img/conveniente@2x.png 2x, /img/conveniente@3x.png 3x">
-                        </div>
-                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Conveninent_Title%>"/></div>
-                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Conveninent_Description%>"/></div>
-                    </div>
-
-                    <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
-                        <div class="homepage__why-card__image mb-4">
-                            <img src="/img/fiavel.png" srcset="/img/fiavel@2x.png 2x, /img/fiavel@3x.png 3x">
-                        </div>
-                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Reliable_Title%>"/></div>
-                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Reliable_Description%>"/></div>
-                    </div>
-
-                    <div class="homepage__why-card col-md-3 d-flex flex-column align-items-center">
-                        <div class="homepage__why-card__image mb-4">
-                            <img src="/img/sustentavel.png" srcset="/img/sustentavel@2x.png 2x, /img/sustentavel@3x.png 3x">
-                        </div>
-                        <div class="homepage__why-card__title mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Sustainable_Title%>"/></div>
-                        <div class="homepage__why-card__content mb-3"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Why_Sustainable_Description%>"/></div>
-                    </div>
-                </div>
-            </div>
+            <yoyo:WhyUseYoyoLoop runat="server"/>
         </div>
     </div>
     <!-- END OF DESTINATIONS -->
@@ -130,7 +95,9 @@
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <h1 class="static-page__main-title"><%# CityText(SelectedCity, "MainTitle") %></h1>
                 <div class="row justify-content-center mt-5 mb-5">
-                    <a OnClick="javascript:$.blockUI()" href="/Pages/Cities" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" ><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/></a>
+                    <a OnClick="javascript:$.blockUI()" href="/Pages/Cities" class="btn btn-default static-page__destination-btn static-page__destination-btn--white" tabindex="-1" >
+                        <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_btnBack_text%>"/>
+                    </a>
                 </div>
             </div>
         </header>
@@ -138,17 +105,14 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Title%>"/></div>
+                    <div class="homepage__yoyoloop-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_Title%>"/></div>
                 </div>
-
                 <div class="row justify-content-center mb-5">
-                <div class="homepage__yoyoloop-main-description"><%# CityText(SelectedCity, "MainDescription") %></div>
+                    <div class="homepage__yoyoloop-main-description"><%# CityText(SelectedCity, "MainDescription") %></div>
                 </div>
-
                 <div class="row justify-content-center mb-5">
-                <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
+                    <img src="/img/loopico.png" srcset="/img/loopico@2x.png 2x, /img/loopico@3x.png 3x">
                 </div>
-            
                 <div class="row justify-content-center mb-5">
                     <div class="static-page__first__sub-description"><%# CityText(SelectedCity, "SubDescription") %></div>
                 </div>
@@ -166,38 +130,48 @@
                         <div class="static-page__box-container__first__main-title"><%# SelectedCity %></div>
                     </div>
 
-                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--lisboa p-0 m-0">
+                    <div class="col-md-8 static-page__box-container__schedules static-page__box-container__schedules--<%# SelectedCity?.ToLower() %> p-0 m-0">
                         <div class="row">
-                            <div class="col-md-6 d-flex align-items-center flex-column pt-4">
+<%--                            <div class="col-md-6 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/bus-white.png" srcset="/img/bus-white@2x.png 2x, /img/bus-white@3x.png 3x">
                                 <div class="static-page__box-container__schedules__label pt-3 pb-3">
                                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Stops%>"/>
                                 </div>
                                 <div class="static-page__box-container__schedules__text text-center"><%# CityText(SelectedCity, "LoopCard_Description") %></div>
-                            </div>
+                            </div>--%>
     
-                            <div class="col-md-6 d-flex align-items-center flex-column pt-4">
+                            <div class="col-md-12 d-flex align-items-center flex-column pt-4">
                                 <img src="/img/horarios.png" srcset="/img/horarios@2x.png 2x, /img/horarios@3x.png 3x">
                                 <div class="static-page__box-container__schedules__label pt-3 pb-3">
                                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_Schedules%>"/>
                                 </div>
-                        
+<%--                        
                                 <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">
                                     <%# CityText(SelectedCity, "LoopCard_Schedules_Days") %>
-                               </div>
-                                <span class="static-page__box-container__schedules__time">
-                                    <%# CityText(SelectedCity, "LoopCard_Schedules_Times1") %>
-                                </span>
-                                <span class="static-page__box-container__schedules__time mb-3">
-                                    <%# CityText(SelectedCity, "LoopCard_Schedules_Times2") %>
-                                </span>
+                               </div>--%>
 
-                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">
+                                <div class="row w-100">
+                                <asp:Repeater runat="server" DataSource="<%# SelectedCityDestinationTimes %>">
+                                <ItemTemplate>
+                                    <div class="col-md-4 d-flex align-items-center flex-column">
+                                        <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">
+                                            <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Cities_Details_LoopCard_Schedules_To %>"/> <%# Eval("Name") %>
+                                        </div>
+                                        <div class="static-page__box-container__schedules__time pb-4">
+                                            <%# String.Join(" - ", ((List<TimeSpan>)Eval("Times")).Select(t => t.ToString(@"hh\:mm"))) %>
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                                </asp:Repeater>
+                                </div>
+
+<%--                                <div class="static-page__box-container__schedules__text text-uppercase" style="font-weight: 600">
+
                                     <asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_Destinos_Details_LoopCard_TravelTime%>"/>
                                </div>
                                 <div class="static-page__box-container__schedules__text text-center pb-2">
                                     <%# CityText(SelectedCity, "LoopCard_Schedules_TravelTime") %>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -208,7 +182,7 @@
         <div class="homepage__container static-page__center-container">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <div class="row justify-content-center mb-5">
-                    <div class="homepage__yoyoloop">
+                    <div class="homepage__yoyoloop-title">
                         <%# CityText(SelectedCity, "Stops_Title") %>
                     </div>
                 </div>
@@ -233,7 +207,7 @@
 
         <asp:Repeater ID="CityStopRepeater" runat="server" DataSource="<%# SelectedCityStops %>">
             <ItemTemplate>
-                <div class="row static-page__box2 d-flex align-items-center justify-content-center ml-5 mr-5">
+                <div class="row static-page__box2 d-flex align-items-center justify-content-center ml-5 mr-5 mt-5">
                     <div class="col-md-4 m-0 p-0 static-page__box2__image static-page__box2--image<%# (Container.ItemIndex % 2) + 1 %> d-flex align-items-center justify-content-center flex-column">
                         <asp:PlaceHolder id="PlaceHolder1" runat="server" visible='<%# (Container.ItemIndex % 2) == 0 %>'>
                             <img src="/img/stopred.png" srcset="/img/stopred@2x.png 2x, /img/stopred@3x.png 3x">

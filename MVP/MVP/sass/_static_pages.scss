@@ -285,7 +285,6 @@
         }
 
         &__schedules {
-            background-image: url('/img/cascais.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
@@ -340,7 +339,7 @@
                 max-height: 320px;
             }
 
-            &--destinies-cascais {
+            &--city-cascais {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -351,7 +350,7 @@
                 background-image: url('/img/cascaisLoop.png');
             }
 
-            &--destinies-leiria {
+            &--city-leiria {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -362,7 +361,7 @@
                 background-image: url('/img/leiriaLoop.png');
             }
 
-            &--destinies-lisboa {
+            &--city-lisboa {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -373,7 +372,7 @@
                 background-image: url('/img/lisboaLoop.png');
             }
 
-            &--destinies-porto {
+            &--city-porto {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -384,7 +383,7 @@
                 background-image: url('/img/portoLoop.png');
             }
 
-            &--destinies-coimbra {
+            &--city-coimbra {
                 color: white;
                 background-position: center center;
                 background-repeat: no-repeat;

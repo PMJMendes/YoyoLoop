@@ -31,7 +31,7 @@
     <div class="homepage__container static-page__center-container">
         <div class="container-fluid d-flex flex-column justify-content-center">
             <div class="row justify-content-center mb-5">
-            <div class="homepage__yoyoloop"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_About_MainTitle%>"/></div>
+            <div class="homepage__yoyoloop-title"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_About_MainTitle%>"/></div>
             </div>
 
             <div class="row justify-content-center mb-5">

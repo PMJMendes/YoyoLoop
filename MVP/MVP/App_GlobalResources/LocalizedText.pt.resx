@@ -2667,4 +2667,7 @@ O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o a
   <data name="StaticPages_Cities__SubDescription" xml:space="preserve">
     <value>Lisboa, Porto, Coimbra e Leiria passam a estar ligadas em Loop.&lt;br&gt; O serviço Yoyoloop é uma "ponte aérea" diferente, com base em transfers premium de cinco lugares que circulam na autoestrada.</value>
   </data>
+  <data name="StaticPages_Cities_Details_LoopCard_Schedules_To" xml:space="preserve">
+    <value>Saídas para</value>
+  </data>
 </root>

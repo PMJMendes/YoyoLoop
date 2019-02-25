@@ -29,7 +29,7 @@
     <div class="homepage__container static-page__center-container">
         <div class="container-fluid d-flex flex-column justify-content-center">
             <div class="row justify-content-center mb-5">
-            <div class="homepage__yoyoloop text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_HowTo_MainTitle%>"/></div>
+            <div class="homepage__yoyoloop-title text-uppercase"><asp:Literal runat="server" Text="<%$ Resources:LocalizedText, StaticPages_HowTo_MainTitle%>"/></div>
             </div>
 
             <div class="row justify-content-center mb-5">
