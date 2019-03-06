@@ -722,10 +722,10 @@
     <value>22</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>45</value>
+    <value>44</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>45</value>
+    <value>44</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>Referral</value>
@@ -954,7 +954,7 @@ To use a friend's promo code, you simply need to click on "I have a promo code" 
   <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
     <value>Ticket prices for our current loops are:&lt;br&gt;
 &lt;br&gt;
-Lisbon - Porto / Porto - Lisbon: from €45 per trip&lt;br&gt;
+Lisbon - Porto / Porto - Lisbon: from €44 per trip&lt;br&gt;
 Lisbon - Coimbra / Coimbra - Lisbon: from €30 per trip&lt;br&gt;
 Lisbon - Leiria / Leiria - Lisbon: from €22 per trip&lt;br&gt;
 &lt;br&gt;
@@ -2316,7 +2316,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of 
     <value>From Porto: 6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
-    <value>one-way trip from €45</value>
+    <value>one-way trip from €44</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
     <value>Yoyoloop drives you from Lisbon to Porto in just 2 hours and 30 minutes.</value>
