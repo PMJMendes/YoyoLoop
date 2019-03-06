@@ -384,6 +384,9 @@
     <value>To</value>
     <comment>repetido</comment>
   </data>
+  <data name="Confirm_Service_SendTicket_Email_Body_DriverContact" xml:space="preserve">
+    <value>Driver Contact</value>
+  </data>
   <data name="Confirm_Service_SendTicket_Email_Body_FinalCost" xml:space="preserve">
     <value>Final price</value>
   </data>
@@ -634,6 +637,9 @@
     <value>The password field is required.</value>
     <comment>repetido</comment>
   </data>
+  <data name="Controls_Register_tbRegisterPhoneNumber_Note" xml:space="preserve">
+    <value>Important so we can contact you at the moment of your departure</value>
+  </data>
   <data name="Controls_Register_WithEmail" xml:space="preserve">
     <value>Before receiving your ticket&lt;br&gt;we need to know a few details</value>
   </data>
@@ -713,13 +719,13 @@
     <value>26</value>
   </data>
   <data name="General_LoopData_Price_Leiria" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="General_LoopData_Price_Lisboa" xml:space="preserve">
-    <value>39</value>
+    <value>45</value>
   </data>
   <data name="General_LoopData_Price_Porto" xml:space="preserve">
-    <value>39</value>
+    <value>45</value>
   </data>
   <data name="General_MGMPromo" xml:space="preserve">
     <value>Referral</value>
@@ -948,9 +954,9 @@ To use a friend's promo code, you simply need to click on "I have a promo code" 
   <data name="Help_Topic_TripsAndLoops_Question_HowMuch_Answer" xml:space="preserve">
     <value>Ticket prices for our current loops are:&lt;br&gt;
 &lt;br&gt;
-Lisbon - Porto / Porto - Lisbon: from €36 per trip&lt;br&gt;
-Lisbon - Coimbra / Coimbra - Lisbon: from €26 per trip&lt;br&gt;
-Lisbon - Leiria / Leiria - Lisbon: from €16 per trip&lt;br&gt;
+Lisbon - Porto / Porto - Lisbon: from €45 per trip&lt;br&gt;
+Lisbon - Coimbra / Coimbra - Lisbon: from €30 per trip&lt;br&gt;
+Lisbon - Leiria / Leiria - Lisbon: from €22 per trip&lt;br&gt;
 &lt;br&gt;
 Ocasionally, some or all loops can be on sale.&lt;br&gt;
 &lt;br&gt;
@@ -1261,6 +1267,9 @@ Check how many €20 vouchers you have yet to enjoy.</value>
   </data>
   <data name="Meta_Terms_Title" xml:space="preserve">
     <value>Terms and Conditions | Yoyoloop</value>
+  </data>
+  <data name="MGM_NoPhone_ErrorMessage" xml:space="preserve">
+    <value>To use your €20 voucher you need a valid phone number.&lt;br&gt;You may add your number on your profile.</value>
   </data>
   <data name="MyTrips_Empty_btnBookNow_Text" xml:space="preserve">
     <value>Book Now</value>
@@ -2176,7 +2185,7 @@ Resende Bus: 111, 116, 119, 121, 122, 123, 130</value>
     <value>From Porto: 12pm</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_LoopCard_Title" xml:space="preserve">
-    <value>one-way trip from €26</value>
+    <value>one-way trip from €30</value>
   </data>
   <data name="StaticPages_Loops_LisboaCoimbra_LoopCard__TravelTime" xml:space="preserve">
     <value>Yoyoloop drives you from Coimbra&lt;/br&gt;to Lisbon in just 1 hour and 30 minutes.</value>
@@ -2245,7 +2254,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of 
     <value>From Leiria: 3pm</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_LoopCard_Title" xml:space="preserve">
-    <value>one-way trip from €16</value>
+    <value>one-way trip from €22</value>
   </data>
   <data name="StaticPages_Loops_LisboaLeiria_LoopCard__TravelTime" xml:space="preserve">
     <value>Yoyoloop drives you from Leiria to Lisbon&lt;br/&gt; in just 1 hour and 15 minutes.</value>
@@ -2307,7 +2316,7 @@ Yoyoloop gives you a stop-free ride between Lisbon and Coimbra for the price of 
     <value>From Porto: 6:00am - 7:00am - 5:00pm - 6:30pm</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard_Title" xml:space="preserve">
-    <value>one-way trip from €39</value>
+    <value>one-way trip from €45</value>
   </data>
   <data name="StaticPages_Loops_LisboaPorto_LoopCard__TravelTime" xml:space="preserve">
     <value>Yoyoloop drives you from Lisbon to Porto in just 2 hours and 30 minutes.</value>
@@ -2633,14 +2642,5 @@ Access to Yoyoloop's website is limited to persons over the age of 18. Neverthel
   </data>
   <data name="Stripe_ErrorHandling_ProcessPayment_Generic" xml:space="preserve">
     <value>There was an error when validating the payment.</value>
-  </data>
-  <data name="MGM_NoPhone_ErrorMessage" xml:space="preserve">
-    <value>To use your €20 voucher you need a valid phone number.&lt;br&gt;You may add your number on your profile.</value>
-  </data>
-  <data name="Controls_Register_tbRegisterPhoneNumber_Note" xml:space="preserve">
-    <value>Important so we can contact you at the moment of your departure</value>
-  </data>
-  <data name="Confirm_Service_SendTicket_Email_Body_DriverContact" xml:space="preserve">
-    <value>Driver Contact</value>
   </data>
 </root>

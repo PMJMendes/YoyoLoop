@@ -1816,7 +1816,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 18.
+        ///   Looks up a localized string similar to 22.
         /// </summary>
         internal static string General_LoopData_Price_Leiria {
             get {
@@ -1825,7 +1825,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 39.
+        ///   Looks up a localized string similar to 45.
         /// </summary>
         internal static string General_LoopData_Price_Lisboa {
             get {
@@ -1834,7 +1834,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 39.
+        ///   Looks up a localized string similar to 45.
         /// </summary>
         internal static string General_LoopData_Price_Porto {
             get {
@@ -2080,7 +2080,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Para usufruir dos vouchers de 20€ que ganhaste por convidar amigos, basta acederes ao teu perfil e clicar em “Convidar amigos”. Nesta secção, podes ver todos os vouchers de 20€ que ainda tens por utilizar. Basta clicares em “Reservar” para reservar uma viagem entre Lisboa e Porto com um desconto de 20€. Para os restantes destinos o voucher é de 10€.&lt;br&gt;
         ///&lt;br&gt;
-        ///Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a [rest of string was truncated]&quot;;.
+        ///Para utilizares um código promocional de um amigo, basta clicares em “Tenho um código promocional” na caixa à direita quando estiveres a selecionar a t [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Help_Topic_DiscountAndPromo_Question_PromoAndMGM_Answer {
             get {
@@ -2514,13 +2514,13 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Os valores dos bilhetes para os Loops atuais são os seguintes:&lt;br&gt;
         ///&lt;br&gt;
-        ///Lisboa - Porto / Porto - Lisboa: desde 36€ por viagem&lt;br&gt;
-        ///Lisboa - Coimbra / Coimbra - Lisboa: desde 26€ por viagem&lt;br&gt;
-        ///Lisboa - Leiria / Leiria- Lisboa: desde 16€ por viagem&lt;br&gt;
+        ///Lisboa - Porto / Porto - Lisboa: desde 45€ por viagem&lt;br&gt;
+        ///Lisboa - Coimbra / Coimbra - Lisboa: desde 30€ por viagem&lt;br&gt;
+        ///Lisboa - Leiria / Leiria- Lisboa: desde 22€ por viagem&lt;br&gt;
         ///&lt;br&gt;
         ///Ocasionalmente, poderão existir campanhas e promoções para todos ou alguns loops.&lt;br&gt;
         ///&lt;br&gt;
-        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloo [rest of string was truncated]&quot;;.
+        ///Existem preços especiais para clientes empresariais que estabeleçam parcerias com a Yoyoloop. Para saber mais, envia por favor um email para empresas@Yoyoloop.com . .
         /// </summary>
         internal static string Help_Topic_TripsAndLoops_Question_HowMuch_Answer {
             get {
@@ -5360,7 +5360,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Além de ser a zona de residência do Jardim Zoológico de Lisboa, Sete Rios é conhecido por ser outra das mais importantes estações ferroviárias e rodoviárias da cidade. É especialmente importante para quem vem da linha de Sintra e da Margem Sul, assim como para quem chega de autocarro vindo de todos os cantos do país, especialmente da zona sul e região oeste.&lt;br&gt;
         ///&lt;br&gt;
-        ///Sete Rios é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria [rest of string was truncated]&quot;;.
+        ///Sete Rios é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Leiria,  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Fifth_Description {
             get {
@@ -5398,7 +5398,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to As Torres das Amoreiras são um dos edifícios mais icónicos da cidade de Lisboa. Apesar de ser uma zona residencial de excelência e um das principais pólos de escritórios da capital, a zona das Amoreiras não está devidamente servida pela rede de transportes da cidade, especialmente pelo Metropolitano de Lisboa. É um incómodo para os residentes lisboetas, mas é ainda mais doloroso para quem vem dos arredores da capital.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Torre 3 das Amoreiras é um dos pontos de partida da Yoyoloop na cidade de Lis [rest of string was truncated]&quot;;.
+        ///A Torre 3 das Amoreiras é um dos pontos de partida da Yoyoloop na cidade de Lisbo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_First_Description {
             get {
@@ -5474,7 +5474,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to O Campo Grande é, desde há muitos anos, uma zona de transportes importante. É aqui que chegam a maior parte dos autocarros suburbanos provenientes da região Oeste. A crescente presença de grandes empresas na zona, assim como a Universidade Lusófona de Lisboa e várias faculdades da Universidade de Lisboa nas proximidades, reforçou ainda mais a importância de ligar devidamente o Campo Grande.&lt;br&gt;
         ///&lt;br&gt;
-        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui qu [rest of string was truncated]&quot;;.
+        ///O Hotel Radisson Blu no Campo Grande é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Second_Description {
             get {
@@ -5512,7 +5512,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to A Gare do Oriente é uma das mais importantes estações ferroviárias e rodoviárias da cidade de Lisboa. A sua ligação privilegiada ao Aeroporto de Lisboa pela Avenida de Berlim também contribui para a importância desta zona icónica. Todos os dias, a Gare do Oriente recebe centenas de milhares de pessoas provenientes de vários pontos dos arredores da capital.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Gare do Oriente é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto,  [rest of string was truncated]&quot;;.
+        ///A Gare do Oriente é um dos pontos de partida da Yoyoloop na cidade de Lisboa e é aqui que podes apanhar um dos nossos transfers para o Porto, Le [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_Stops_StopCard_Third_Description {
             get {
@@ -5570,7 +5570,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///As alternativas deixam a desejar. Os autocarros e os comboios são demorados, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem [rest of string was truncated]&quot;;.
+        ///Com a Yoyoloop, podes apanhar um transfer premium até Lisboa desde o Porto, Coimbra, Leiria, ao preço do comboio. Aproveita uma viagem mai [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Lisboa_SubDescription {
             get {
@@ -5662,7 +5662,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to A rede de transportes públicos do Porto deixa a desejar. Os autocarros e os comboios são demorados e o Metro do Porto serve apenas os subúrbios e uma faixa do centro da cidade. Para quem vem de outras cidades, as boleias tradicionais não são certas e, se levares o teu próprio carro, pagas mais do dobro do preço entre combustível, portagens e estacionamento.&lt;br&gt;
         ///&lt;br&gt;
-        ///Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais r [rest of string was truncated]&quot;;.
+        ///Com a Yoyoloop, podes apanhar um transfer de sete lugares desde Lisboa até ao Porto ao mesmo preço que o comboio. Aproveita uma viagem mais ráp [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Destinos_Porto_Stops_Description {
             get {
@@ -6132,7 +6132,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to desde 26€ por viagem de ida.
+        ///   Looks up a localized string similar to desde 30€ por viagem de ida.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_LoopCard_Title {
             get {
@@ -6172,7 +6172,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está ninguém à procura.&lt;br&gt;
         ///&lt;br&gt;
-        ///A Yoyoloop ofere [rest of string was truncated]&quot;;.
+        ///A Yoyoloop oferece-t [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaCoimbra_SubDescription {
             get {
@@ -6288,7 +6288,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Desde 16€ por viagem de ida.
+        ///   Looks up a localized string similar to Desde 22€ por viagem de ida.
         /// </summary>
         internal static string StaticPages_Loops_LisboaLeiria_LoopCard_Title {
             get {
@@ -6423,7 +6423,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to desde 39€ por viagem.
+        ///   Looks up a localized string similar to desde 45€ por viagem.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_LoopCard_Title {
             get {
@@ -6461,7 +6461,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to Quando chega a hora de voltar a casa no final de um dia de trabalho ou ao fim de uma semana de aulas na faculdade, há vários transportes de Lisboa para o Porto, mas não são os mais viáveis, nem os mais confortáveis.&lt;br&gt;
         ///&lt;br&gt;
-        ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está [rest of string was truncated]&quot;;.
+        ///Os autocarros e os comboios demoram demasiado tempo e têm várias paragens, as boleias tradicionais podem não ir pelo caminho mais rápido e, se levares o teu próprio carro, pagas mais do dobro do preço, especialmente quando à última da hora perguntas se alguém quer boleia e já não está n [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Loops_LisboaPorto_SubDescription {
             get {
@@ -6832,7 +6832,7 @@ namespace Resources {
         ///   Looks up a localized string similar to 5. Onde são guardados os dados do Utilizador?&lt;br&gt;
         ///&lt;br&gt;
         ///A equipa da Yoyoloop guarda os dados dos seus clientes e Utilizadores em servidores de um parceiro especialista localizados na União Europeia - Os termos e condições do nosso parceiro podem ser encontrados no link seguinte: https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ &lt;br&gt;
-        ///Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Ca [rest of string was truncated]&quot;;.
+        ///Estes servidores são protegidos e mantidos de acordo com os mais elevados standards de segurança e por forma a respeitar as leis de privacidade aplicáveis. Caso  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Five {
             get {
@@ -6884,7 +6884,7 @@ namespace Resources {
         ///&lt;br&gt;
         ///A presente política de privacidade abrange este website, assim como outros sites que mencionam a mesma política. A equipa da Yoyoloop respeita a privacidade do Utilizador e processa os seus dados pessoais de acordo com o novo regulamento geral de proteção de dados (GDPR) (Regulamento (UE) 2016/679).&lt;br&gt;
         ///Os dados recolhidos ou fornecidos pelo utilizador não serão processados para quaisquer outros fins que não os aqui especificados. &lt;br&gt;
-        ///A Yoyoloop reserva [rest of string was truncated]&quot;;.
+        ///A Yoyoloop reserva-se  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_One {
             get {
@@ -6906,7 +6906,7 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to 6. A Yoyoloop utiliza cookies no seu Website?&lt;br&gt;
         ///&lt;br&gt;
-        ///O website da Yoyoloop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à  [rest of string was truncated]&quot;;.
+        ///O website da Yoyoloop utiliza cookies. Os cookies são ficheiros que armazenam informações no disco rígido ou browser do Utilizador, permitindo que os websites o reconheçam e saibam que já os visitou anteriormente. O Utilizador pode configurar o seu browser para recusar os cookies, porém nesse caso, o website ou partes do mesmo podem não funcionar corretamente. Os cookies são utilizados para monitorizar e analisar a utilização do website, permitindo à Yo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Privacy_Six {
             get {
@@ -7049,7 +7049,7 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 2.5 Condições gerais de utilização&lt;br&gt;
-        ///Através deste site, a Yoyoloop , pretende informá-lo sobre os serviços que disponibiliza. Os direitos de propriedade intelectual sobre todos os conteúdos deste site, exceto os que sejam fornecidos por entidades externas devidamente identificadas, são pertença da Yoyoloop, incluindo as informações, as ferramentas, o desenho gráfico das páginas na Internet, com todos os seus componentes, e todas as figuras, gráficos ou textos. &lt;br&gt;A Yoyoloop não assume qualquer responsa [rest of string was truncated]&quot;;.
+        ///Através deste site, a Yoyoloop , pretende informá-lo sobre os serviços que disponibiliza. Os direitos de propriedade intelectual sobre todos os conteúdos deste site, exceto os que sejam fornecidos por entidades externas devidamente identificadas, são pertença da Yoyoloop, incluindo as informações, as ferramentas, o desenho gráfico das páginas na Internet, com todos os seus componentes, e todas as figuras, gráficos ou textos. &lt;br&gt;A Yoyoloop não assume qualquer responsab [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Terms_Two_Five {
             get {
@@ -7059,7 +7059,7 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 2.4 Preços e disponibilidades&lt;br&gt;
-        ///As disponibilidades que constam no site da Yoyoloop são calculados em cada momento de acordo acom a procura e oferta disponíveis. depois de uma viagem confirmada, a Yoyoloop reserva-se o direito de cancelar a mesma num prazo mínimo de 2 horas antes da hora de partida, por razões operacionais. No caso da viagem ser cancelada por responsabilidade e iniciativa da Yoyoloop, os clientes com bilhetes comprados para a viagem em causa serão reembolsados do svalores anteriormente p [rest of string was truncated]&quot;;.
+        ///As disponibilidades que constam no site da Yoyoloop são calculados em cada momento de acordo acom a procura e oferta disponíveis. depois de uma viagem confirmada, a Yoyoloop reserva-se o direito de cancelar a mesma num prazo mínimo de 2 horas antes da hora de partida, por razões operacionais. No caso da viagem ser cancelada por responsabilidade e iniciativa da Yoyoloop, os clientes com bilhetes comprados para a viagem em causa serão reembolsados do svalores anteriormente pa [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Terms_Two_Four {
             get {
@@ -7089,7 +7089,7 @@ namespace Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to 2.2. Deveres do Utilizador e Cliente&lt;br&gt;
-        ///O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o anteriormente referido, o acesso a determinados conteúdos e/ou a participação em promoções da Yoyoloop poderá estar sujeita a outras limitações de idade, consoante seja indicado em cada caso. O Utilizador não poderá (i) autorizar a utilização da sua conta por terceiros, (ii) permitir o acesso à ao site através da sua conta a menores de 18 anos, (iii) permitir que pessoas menores de 18 anos  [rest of string was truncated]&quot;;.
+        ///O acesso ao site da Yoyoloop é limitado a maiores de 18 anos. Não obstante o anteriormente referido, o acesso a determinados conteúdos e/ou a participação em promoções da Yoyoloop poderá estar sujeita a outras limitações de idade, consoante seja indicado em cada caso. O Utilizador não poderá (i) autorizar a utilização da sua conta por terceiros, (ii) permitir o acesso à ao site através da sua conta a menores de 18 anos, (iii) permitir que pessoas menores de 18 anos e [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string StaticPages_Terms_Two_Two {
             get {
